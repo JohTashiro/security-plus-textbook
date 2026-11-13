@@ -161,7 +161,27 @@ def t(key: str, **kwargs) -> str:
     return i18n(ja, en, es)
 
 
-SETTINGS_NAV = f"""
+# lang code -> (flag file, accessible name)
+FLAGS = {"ja": ("jp.svg", "日本語"), "en": ("gb.svg", "English"), "es": ("es.svg", "Español")}
+
+
+def brand_flags(prefix: str) -> str:
+    """One flag per language; CSS shows only the active one."""
+    return "".join(
+        f'<img class="brand-flag" data-i18n="{lang}" src="{prefix}flags/{file}" alt="{name}">'
+        for lang, (file, name) in FLAGS.items()
+    )
+
+
+def settings_nav(prefix: str) -> str:
+    def lang_btn(lang: str, label: str) -> str:
+        file, _ = FLAGS[lang]
+        return (
+            f'<button type="button" class="lang-btn" data-lang-btn="{lang}">'
+            f'<img class="lang-flag" src="{prefix}flags/{file}" alt="">{label}</button>'
+        )
+
+    return f"""
   <section class="nav-section settings" aria-label="設定">
     <h2>{t("settings")}</h2>
     <label class="switch-row">
@@ -175,9 +195,9 @@ SETTINGS_NAV = f"""
       <span class="switch" aria-hidden="true"></span>
     </label>
     <div class="lang-row" role="group" aria-label="{UI['language'][0]} / {UI['language'][1]} / {UI['language'][2]}">
-      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
-      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
-      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+      {lang_btn("ja", "日本語")}
+      {lang_btn("en", "EN")}
+      {lang_btn("es", "ES")}
     </div>
   </section>"""
 
@@ -363,7 +383,7 @@ def domain_nav(active: str, *, show_search: bool = True, quiz_anchor: str | None
 
     return f"""
 <aside class="sidebar" id="sidebar">
-  <a class="brand" href="../index.html">Security+ Textbook<span>Domain {esc(DATA["domain"])}</span></a>
+  <a class="brand" href="../index.html">{brand_flags("../")}Security+ Textbook<span>Domain {esc(DATA["domain"])}</span></a>
   {back}{search}
   <nav class="nav-section">
     <h2>Domain {esc(DATA["domain"])}</h2>
@@ -373,7 +393,7 @@ def domain_nav(active: str, *, show_search: bool = True, quiz_anchor: str | None
     <h2>{t("tools")}</h2>
     {extra}
     <a href="map.html"{map_cls}>Domain {esc(DATA["domain"])} {t("domain_map")}</a>
-  </nav>{SETTINGS_NAV}
+  </nav>{settings_nav("../")}
 </aside>
 """
 
@@ -637,7 +657,7 @@ def root_sidebar(*, map_active: bool = False) -> str:
     map_cls = ' class="active"' if map_active else ""
     return f"""
 <aside class="sidebar" id="sidebar">
-  <a class="brand" href="index.html">Security+ Textbook<span>SY0-701</span></a>
+  <a class="brand" href="index.html">{brand_flags("")}Security+ Textbook<span>SY0-701</span></a>
   <nav class="nav-section">
     <h2>{t("domains_nav")}</h2>
     {''.join(nav_links)}
@@ -645,7 +665,7 @@ def root_sidebar(*, map_active: bool = False) -> str:
   <nav class="nav-section">
     <h2>{t("map_nav")}</h2>
     <a href="map.html"{map_cls}>{t("full_map")}</a>
-  </nav>{SETTINGS_NAV}
+  </nav>{settings_nav("")}
 </aside>"""
 
 
