@@ -24,6 +24,18 @@
               "examples": [
                 "重要インフラ攻撃",
                 "APT"
+              ],
+              "es": "Actor patrocinado por un Estado",
+              "name_en": "Nation-state actor",
+              "one_liner_en": "The most powerful attacker, **backed by a government**",
+              "one_liner_es": "El atacante más poderoso, **respaldado por un Estado**",
+              "examples_en": [
+                "Attacks on critical infrastructure",
+                "APT"
+              ],
+              "examples_es": [
+                "Ataques a infraestructuras críticas",
+                "APT"
               ]
             },
             {
@@ -34,6 +46,17 @@
               "one_liner": "**金銭目的**で組織化された犯罪集団",
               "examples": [
                 "ランサムウェア集団",
+                "SamSam"
+              ],
+              "es": "Crimen organizado",
+              "one_liner_en": "A criminal group organized **for money**",
+              "one_liner_es": "Grupo criminal organizado **para obtener dinero**",
+              "examples_en": [
+                "Ransomware gangs",
+                "SamSam"
+              ],
+              "examples_es": [
+                "Bandas de ransomware",
                 "SamSam"
               ]
             },
@@ -47,6 +70,19 @@
                 "サイト改ざん",
                 "情報の暴露",
                 "アノニマス"
+              ],
+              "es": "Hacktivista",
+              "one_liner_en": "Attacks to push a **political or social cause**",
+              "one_liner_es": "Ataca para defender una **causa política o social**",
+              "examples_en": [
+                "Website defacement",
+                "Leaking information",
+                "Anonymous"
+              ],
+              "examples_es": [
+                "Desfiguración de sitios web",
+                "Filtración de información",
+                "Anonymous"
               ]
             },
             {
@@ -58,9 +94,22 @@
               "examples": [
                 "総当たりツール",
                 "公開スクリプト"
+              ],
+              "es": "Atacante sin experiencia",
+              "one_liner_en": "An amateur who **relies on existing tools**",
+              "one_liner_es": "Un aficionado que **depende de herramientas existentes**",
+              "examples_en": [
+                "Brute-force tools",
+                "Public scripts"
+              ],
+              "examples_es": [
+                "Herramientas de fuerza bruta",
+                "Scripts públicos"
               ]
             }
-          ]
+          ],
+          "title_en": "External attackers (who attacks from outside)",
+          "title_es": "Atacantes externos (quién ataca desde fuera)"
         },
         {
           "id": "insiders",
@@ -75,6 +124,17 @@
               "examples": [
                 "経理システムで横領",
                 "元社員の持ち出し"
+              ],
+              "es": "Amenaza interna",
+              "one_liner_en": "An insider who abuses **legitimate access**",
+              "one_liner_es": "Un miembro interno que abusa de un **acceso legítimo**",
+              "examples_en": [
+                "Embezzlement via the accounting system",
+                "Data taken by a former employee"
+              ],
+              "examples_es": [
+                "Malversación mediante el sistema contable",
+                "Datos sustraídos por un exempleado"
               ]
             },
             {
@@ -86,9 +146,22 @@
               "examples": [
                 "無許可のクラウド",
                 "私物アプリ"
+              ],
+              "es": "TI en la sombra (shadow IT)",
+              "one_liner_en": "Devices and software **not approved** by IT",
+              "one_liner_es": "Dispositivos y software **no aprobados** por TI",
+              "examples_en": [
+                "Unapproved cloud services",
+                "Personal apps"
+              ],
+              "examples_es": [
+                "Servicios en la nube no autorizados",
+                "Aplicaciones personales"
               ]
             }
-          ]
+          ],
+          "title_en": "Insider threats (risks from inside the organization)",
+          "title_es": "Amenazas internas (riesgos desde dentro de la organización)"
         },
         {
           "id": "attributes",
@@ -103,6 +176,17 @@
               "examples": [
                 "従業員・パートナー",
                 "外部ハッカー"
+              ],
+              "es": "Interno / externo",
+              "one_liner_en": "Splits threats by whether they're **inside or outside** the organization",
+              "one_liner_es": "Clasifica las amenazas según estén **dentro o fuera** de la organización",
+              "examples_en": [
+                "Employees and partners",
+                "Outside hackers"
+              ],
+              "examples_es": [
+                "Empleados y socios",
+                "Hackers externos"
               ]
             },
             {
@@ -114,6 +198,17 @@
               "examples": [
                 "国家＝豊富",
                 "素人＝乏しい"
+              ],
+              "es": "Recursos / financiación",
+              "one_liner_en": "How much **money, people and equipment** an attacker has",
+              "one_liner_es": "Cuánto **dinero, personal y equipo** tiene el atacante",
+              "examples_en": [
+                "Nation-state = plentiful",
+                "Amateur = scarce"
+              ],
+              "examples_es": [
+                "Estado = abundantes",
+                "Aficionado = escasos"
               ]
             },
             {
@@ -125,9 +220,22 @@
               "examples": [
                 "国家＝高",
                 "素人＝低"
+              ],
+              "es": "Nivel de sofisticación / capacidad",
+              "one_liner_en": "How high an attacker's **technical skill and capability** are",
+              "one_liner_es": "Qué tan alta es la **habilidad técnica y capacidad** del atacante",
+              "examples_en": [
+                "Nation-state = high",
+                "Amateur = low"
+              ],
+              "examples_es": [
+                "Estado = alta",
+                "Aficionado = baja"
               ]
             }
-          ]
+          ],
+          "title_en": "Threat actor attributes (how to compare them)",
+          "title_es": "Atributos de los actores de amenazas (cómo compararlos)"
         },
         {
           "id": "motive-target",
@@ -142,6 +250,17 @@
               "examples": [
                 "顧客情報の転売",
                 "内部情報の暴露"
+              ],
+              "es": "Exfiltración de datos",
+              "one_liner_en": "**Taking sensitive data out**",
+              "one_liner_es": "**Sacar datos confidenciales** fuera",
+              "examples_en": [
+                "Reselling customer data",
+                "Leaking internal information"
+              ],
+              "examples_es": [
+                "Reventa de datos de clientes",
+                "Filtración de información interna"
               ]
             },
             {
@@ -153,6 +272,17 @@
               "examples": [
                 "設計図の入手",
                 "技術情報の盗用"
+              ],
+              "es": "Espionaje",
+              "one_liner_en": "Stealing secrets for **competitive advantage**",
+              "one_liner_es": "Robar secretos para obtener **ventaja competitiva**",
+              "examples_en": [
+                "Obtaining blueprints",
+                "Stealing technical information"
+              ],
+              "examples_es": [
+                "Obtención de planos",
+                "Robo de información técnica"
               ]
             },
             {
@@ -164,9 +294,22 @@
               "examples": [
                 "DDoS攻撃",
                 "ECサイト停止"
+              ],
+              "es": "Interrupción del servicio",
+              "one_liner_en": "Interferes by **making services unusable**",
+              "one_liner_es": "Perjudica **dejando los servicios inutilizables**",
+              "examples_en": [
+                "DDoS attacks",
+                "Taking an online store offline"
+              ],
+              "examples_es": [
+                "Ataques DDoS",
+                "Caída de una tienda en línea"
               ]
             }
-          ]
+          ],
+          "title_en": "Motives targeting data and operations (what they steal or stop)",
+          "title_es": "Motivos contra datos y operaciones (qué roban o detienen)"
         },
         {
           "id": "motive-money",
@@ -181,6 +324,17 @@
               "examples": [
                 "ランサムウェア",
                 "改ざんして復旧料要求"
+              ],
+              "es": "Chantaje",
+              "one_liner_en": "Uses leverage to **coerce the victim**",
+              "one_liner_es": "Usa un punto débil para **coaccionar a la víctima**",
+              "examples_en": [
+                "Ransomware",
+                "Defacing a site and demanding a fee to restore it"
+              ],
+              "examples_es": [
+                "Ransomware",
+                "Alterar un sitio y exigir un pago para restaurarlo"
               ]
             },
             {
@@ -193,9 +347,24 @@
                 "フィッシング",
                 "不正送金",
                 "身代金"
+              ],
+              "es": "Beneficio económico",
+              "one_liner_en": "The end goal is **making money**",
+              "one_liner_es": "El objetivo final es **obtener dinero**",
+              "examples_en": [
+                "Phishing",
+                "Fraudulent transfers",
+                "Ransom"
+              ],
+              "examples_es": [
+                "Phishing",
+                "Transferencias fraudulentas",
+                "Rescate"
               ]
             }
-          ]
+          ],
+          "title_en": "Financial motives (how they make money)",
+          "title_es": "Motivos económicos (cómo obtienen dinero)"
         },
         {
           "id": "motive-belief",
@@ -210,6 +379,17 @@
               "examples": [
                 "アノニマス",
                 "動物愛護の攻撃"
+              ],
+              "es": "Creencias filosóficas / políticas",
+              "one_liner_en": "Attacks driven by **ideology or political views**",
+              "one_liner_es": "Ataques motivados por **ideología o posturas políticas**",
+              "examples_en": [
+                "Anonymous",
+                "Animal-rights attacks"
+              ],
+              "examples_es": [
+                "Anonymous",
+                "Ataques por los derechos de los animales"
               ]
             },
             {
@@ -221,6 +401,17 @@
               "examples": [
                 "内部告発",
                 "ウィキリークス"
+              ],
+              "es": "Ético",
+              "one_liner_en": "An ethical drive to **right a wrong**",
+              "one_liner_es": "Un motivo ético para **corregir una injusticia**",
+              "examples_en": [
+                "Whistleblowing",
+                "WikiLeaks"
+              ],
+              "examples_es": [
+                "Denuncia interna",
+                "WikiLeaks"
               ]
             },
             {
@@ -232,6 +423,17 @@
               "examples": [
                 "解雇された元社員",
                 "不満を持つ顧客"
+              ],
+              "es": "Venganza",
+              "one_liner_en": "Retaliation to **settle a grudge**",
+              "one_liner_es": "Represalia para **saldar un rencor**",
+              "examples_en": [
+                "A fired former employee",
+                "A disgruntled customer"
+              ],
+              "examples_es": [
+                "Un exempleado despedido",
+                "Un cliente descontento"
               ]
             },
             {
@@ -243,11 +445,28 @@
               "examples": [
                 "LulzSec",
                 "無差別攻撃"
+              ],
+              "es": "Disrupción / caos",
+              "one_liner_en": "Pranksters who enjoy **chaos for its own sake**",
+              "one_liner_es": "Bromistas que disfrutan del **caos por sí mismo**",
+              "examples_en": [
+                "LulzSec",
+                "Indiscriminate attacks"
+              ],
+              "examples_es": [
+                "LulzSec",
+                "Ataques indiscriminados"
               ]
             }
-          ]
+          ],
+          "title_en": "Belief and emotional motives (why they decide to attack)",
+          "title_es": "Motivos de creencias y emociones (por qué deciden atacar)"
         }
-      ]
+      ],
+      "title_en": "Threat actors and motivations",
+      "title_es": "Actores de amenazas y motivaciones",
+      "blurb_en": "Who attacks, with what capabilities, and why",
+      "blurb_es": "Quién ataca, con qué capacidades y por qué"
     },
     {
       "id": "B-2",
@@ -270,6 +489,19 @@
                 "標的型メール攻撃",
                 "悪性添付ファイル",
                 "ビジネスメール詐欺"
+              ],
+              "es": "Correo electrónico",
+              "one_liner_en": "Intrusion that uses **email** as the carrier",
+              "one_liner_es": "Intrusión que usa el **correo electrónico** como portador",
+              "examples_en": [
+                "Targeted email attacks",
+                "Malicious attachments",
+                "Business email compromise"
+              ],
+              "examples_es": [
+                "Ataques dirigidos por correo",
+                "Adjuntos maliciosos",
+                "Compromiso del correo empresarial"
               ]
             },
             {
@@ -281,6 +513,17 @@
               "examples": [
                 "偽のログイン確認SMS",
                 "OTP詐取のURL"
+              ],
+              "es": "SMS",
+              "one_liner_en": "A vector that uses **text messages**",
+              "one_liner_es": "Vector que usa **mensajes de texto**",
+              "examples_en": [
+                "Fake login-confirmation texts",
+                "URLs that phish OTPs"
+              ],
+              "examples_es": [
+                "SMS falsos de confirmación de inicio de sesión",
+                "URL que roban códigos OTP"
               ]
             },
             {
@@ -293,9 +536,24 @@
                 "友人を装うマルウェア",
                 "偽の公式アカウント",
                 "投資詐欺メッセージ"
+              ],
+              "es": "Mensajería instantánea (IM)",
+              "one_liner_en": "Abuses **messenger apps**",
+              "one_liner_es": "Abusa de **aplicaciones de mensajería**",
+              "examples_en": [
+                "Malware posing as a friend",
+                "Fake official accounts",
+                "Investment scam messages"
+              ],
+              "examples_es": [
+                "Malware que se hace pasar por un amigo",
+                "Cuentas oficiales falsas",
+                "Mensajes de estafas de inversión"
               ]
             }
-          ]
+          ],
+          "title_en": "Message-based (messages as the channel)",
+          "title_es": "Basados en mensajes (los mensajes como canal)"
         },
         {
           "id": "media",
@@ -310,6 +568,17 @@
               "examples": [
                 "ステガノグラフィ",
                 "マルウェア入りミーム"
+              ],
+              "es": "Basado en imágenes",
+              "one_liner_en": "Hides malware in **image files**",
+              "one_liner_es": "Oculta malware en **archivos de imagen**",
+              "examples_en": [
+                "Steganography",
+                "Malware-laden memes"
+              ],
+              "examples_es": [
+                "Esteganografía",
+                "Memes con malware"
               ]
             },
             {
@@ -321,6 +590,17 @@
               "examples": [
                 "偽装PDF・Word",
                 "クラウド共有の不正ファイル"
+              ],
+              "es": "Basado en archivos",
+              "one_liner_en": "Gets victims to **open malicious files**",
+              "one_liner_es": "Consigue que la víctima **abra archivos maliciosos**",
+              "examples_en": [
+                "Disguised PDF/Word files",
+                "Malicious files on cloud shares"
+              ],
+              "examples_es": [
+                "PDF/Word disfrazados",
+                "Archivos maliciosos en carpetas compartidas en la nube"
               ]
             },
             {
@@ -332,6 +612,17 @@
               "examples": [
                 "銀行を名乗る電話",
                 "公的機関を装う電話"
+              ],
+              "es": "Llamada de voz",
+              "one_liner_en": "Targets information or money via **phone calls**",
+              "one_liner_es": "Busca información o dinero mediante **llamadas telefónicas**",
+              "examples_en": [
+                "Calls claiming to be the bank",
+                "Calls posing as a government agency"
+              ],
+              "examples_es": [
+                "Llamadas que dicen ser del banco",
+                "Llamadas que suplantan a un organismo público"
               ]
             },
             {
@@ -343,9 +634,22 @@
               "examples": [
                 "駐車場に置かれたUSB",
                 "業務用を装うUSB"
+              ],
+              "es": "Dispositivo extraíble",
+              "one_liner_en": "Uses physical media such as **USB drives**",
+              "one_liner_es": "Usa medios físicos como **memorias USB**",
+              "examples_en": [
+                "USB drives left in a parking lot",
+                "USB drives disguised as work devices"
+              ],
+              "examples_es": [
+                "Memorias USB abandonadas en un aparcamiento",
+                "Memorias USB disfrazadas de material de trabajo"
               ]
             }
-          ]
+          ],
+          "title_en": "Files and media (content or devices as the carrier)",
+          "title_es": "Archivos y medios (contenido o dispositivos como portador)"
         },
         {
           "id": "system",
@@ -361,6 +665,19 @@
                 "Windows XP",
                 "BlueKeep",
                 "Flash Player"
+              ],
+              "es": "Sistemas y aplicaciones sin soporte",
+              "one_liner_en": "Products **out of support** that no longer get patches",
+              "one_liner_es": "Productos **sin soporte** que ya no reciben parches",
+              "examples_en": [
+                "Windows XP",
+                "BlueKeep",
+                "Flash Player"
+              ],
+              "examples_es": [
+                "Windows XP",
+                "BlueKeep",
+                "Flash Player"
               ]
             },
             {
@@ -372,6 +689,17 @@
               "examples": [
                 "LANケーブルへの割り込み",
                 "空きポートへの接続"
+              ],
+              "es": "Red cableada",
+              "one_liner_en": "Exploits an insecure **wired LAN**",
+              "one_liner_es": "Aprovecha una **LAN cableada** insegura",
+              "examples_en": [
+                "Tapping a LAN cable",
+                "Plugging into an unused port"
+              ],
+              "examples_es": [
+                "Intervenir un cable de red",
+                "Conectarse a un puerto libre"
               ]
             },
             {
@@ -384,6 +712,19 @@
                 "ウォードライビング",
                 "不正AP（Rogue AP）",
                 "暗号化なしWi-Fi"
+              ],
+              "es": "Red inalámbrica",
+              "one_liner_en": "Exploits an insecure **wireless LAN**",
+              "one_liner_es": "Aprovecha una **red inalámbrica** insegura",
+              "examples_en": [
+                "Wardriving",
+                "Rogue AP",
+                "Unencrypted Wi-Fi"
+              ],
+              "examples_es": [
+                "Wardriving",
+                "AP no autorizado (rogue AP)",
+                "Wi-Fi sin cifrar"
               ]
             },
             {
@@ -395,6 +736,17 @@
               "examples": [
                 "ブルースナーフィング",
                 "ウェアラブルの傍受"
+              ],
+              "es": "Bluetooth",
+              "one_liner_en": "Exploits weak **Bluetooth** authentication",
+              "one_liner_es": "Aprovecha la autenticación débil de **Bluetooth**",
+              "examples_en": [
+                "Bluesnarfing",
+                "Intercepting wearables"
+              ],
+              "examples_es": [
+                "Bluesnarfing",
+                "Interceptación de wearables"
               ]
             },
             {
@@ -407,6 +759,19 @@
                 "HTTPS 443番",
                 "SMTP 25",
                 "ポートスキャン"
+              ],
+              "es": "Puertos de servicio abiertos",
+              "one_liner_en": "**Open service ports** become a way in",
+              "one_liner_es": "Los **puertos de servicio abiertos** se convierten en una entrada",
+              "examples_en": [
+                "HTTPS port 443",
+                "SMTP 25",
+                "Port scanning"
+              ],
+              "examples_es": [
+                "HTTPS puerto 443",
+                "SMTP 25",
+                "Escaneo de puertos"
               ]
             },
             {
@@ -419,9 +784,24 @@
                 "admin/admin",
                 "Miraiボットネット",
                 "初期設定のルーター"
+              ],
+              "es": "Credenciales predeterminadas",
+              "one_liner_en": "**Factory-default usernames and passwords** left unchanged",
+              "one_liner_es": "**Usuarios y contraseñas de fábrica** sin cambiar",
+              "examples_en": [
+                "admin/admin",
+                "Mirai botnet",
+                "Routers on default settings"
+              ],
+              "examples_es": [
+                "admin/admin",
+                "Botnet Mirai",
+                "Routers con la configuración de fábrica"
               ]
             }
-          ]
+          ],
+          "title_en": "Systems and networks (weak points on your side)",
+          "title_es": "Sistemas y redes (puntos débiles propios)"
         },
         {
           "id": "supply-chain",
@@ -436,6 +816,17 @@
               "examples": [
                 "IT保守の委託先",
                 "複数顧客の一括管理"
+              ],
+              "es": "Proveedores de servicios gestionados (MSP)",
+              "one_liner_en": "Attacked through an **outsourced IT operator**",
+              "one_liner_es": "Ataque a través de un **operador de TI externalizado**",
+              "examples_en": [
+                "Outsourced IT maintenance",
+                "Managing many customers at once"
+              ],
+              "examples_es": [
+                "Mantenimiento de TI externalizado",
+                "Gestión conjunta de muchos clientes"
               ]
             },
             {
@@ -447,9 +838,22 @@
               "examples": [
                 "NotPetya",
                 "改ざんされた更新"
+              ],
+              "es": "Proveedores",
+              "one_liner_en": "Intrusion starting from a **product supplier**",
+              "one_liner_es": "Intrusión que parte del **proveedor de un producto**",
+              "examples_en": [
+                "NotPetya",
+                "Tampered updates"
+              ],
+              "examples_es": [
+                "NotPetya",
+                "Actualizaciones manipuladas"
               ]
             }
-          ]
+          ],
+          "title_en": "Supply chain (via contractors and partners)",
+          "title_es": "Cadena de suministro (a través de proveedores y socios)"
         },
         {
           "id": "human",
@@ -464,6 +868,17 @@
               "examples": [
                 "偽の請求書メール",
                 "偽ログインページ"
+              ],
+              "es": "Phishing",
+              "one_liner_en": "**Email fraud** posing as a real organization",
+              "one_liner_es": "**Fraude por correo** que suplanta a una organización real",
+              "examples_en": [
+                "Fake invoice emails",
+                "Fake login pages"
+              ],
+              "examples_es": [
+                "Correos de facturas falsas",
+                "Páginas de inicio de sesión falsas"
               ]
             },
             {
@@ -475,6 +890,17 @@
               "examples": [
                 "銀行を名乗る電話",
                 "税務署を装う電話"
+              ],
+              "es": "Vishing",
+              "one_liner_en": "Phishing by **phone**",
+              "one_liner_es": "Phishing por **teléfono**",
+              "examples_en": [
+                "Calls claiming to be the bank",
+                "Calls posing as the tax office"
+              ],
+              "examples_es": [
+                "Llamadas que dicen ser del banco",
+                "Llamadas que suplantan a Hacienda"
               ]
             },
             {
@@ -486,6 +912,17 @@
               "examples": [
                 "不在通知を装うSMS",
                 "OTP入力を促すSMS"
+              ],
+              "es": "Smishing",
+              "one_liner_en": "Phishing by **SMS**",
+              "one_liner_es": "Phishing por **SMS**",
+              "examples_en": [
+                "Fake missed-delivery texts",
+                "Texts asking you to enter an OTP"
+              ],
+              "examples_es": [
+                "SMS falsos de entrega fallida",
+                "SMS que piden introducir un OTP"
               ]
             },
             {
@@ -497,6 +934,17 @@
               "examples": [
                 "SNSの偽ニュース",
                 "評判を落とすデマ"
+              ],
+              "es": "Desinformación / información errónea",
+              "one_liner_en": "Manipulates decisions with **false information**",
+              "one_liner_es": "Manipula las decisiones con **información falsa**",
+              "examples_en": [
+                "Fake news on social media",
+                "Rumors to damage a reputation"
+              ],
+              "examples_es": [
+                "Noticias falsas en redes sociales",
+                "Rumores para dañar la reputación"
               ]
             },
             {
@@ -508,6 +956,17 @@
               "examples": [
                 "経営者を装う送金指示",
                 "偽のITサポート電話"
+              ],
+              "es": "Suplantación de identidad",
+              "one_liner_en": "Deceives by posing as **another person or organization**",
+              "one_liner_es": "Engaña haciéndose pasar por **otra persona u organización**",
+              "examples_en": [
+                "Payment orders posing as an executive",
+                "Fake IT support calls"
+              ],
+              "examples_es": [
+                "Órdenes de pago que suplantan a un directivo",
+                "Llamadas falsas de soporte técnico"
               ]
             },
             {
@@ -519,6 +978,17 @@
               "examples": [
                 "幹部を装う送金指示",
                 "偽の振込先変更"
+              ],
+              "es": "Compromiso del correo empresarial (BEC)",
+              "one_liner_en": "Executive-impersonating **emails that trigger fraudulent transfers**",
+              "one_liner_es": "**Correos que suplantan a directivos** para provocar transferencias fraudulentas",
+              "examples_en": [
+                "Payment orders posing as an executive",
+                "Fake bank-account change notices"
+              ],
+              "examples_es": [
+                "Órdenes de pago que suplantan a un directivo",
+                "Avisos falsos de cambio de cuenta bancaria"
               ]
             },
             {
@@ -530,6 +1000,17 @@
               "examples": [
                 "宅配業者を装う",
                 "ピギーバック"
+              ],
+              "es": "Pretexting",
+              "one_liner_en": "Gains trust with a **plausible cover story**",
+              "one_liner_es": "Gana confianza con una **excusa creíble**",
+              "examples_en": [
+                "Posing as a delivery driver",
+                "Piggybacking"
+              ],
+              "examples_es": [
+                "Hacerse pasar por repartidor",
+                "Piggybacking"
               ]
             },
             {
@@ -541,6 +1022,17 @@
               "examples": [
                 "技術情報サイト改ざん",
                 "業界ニュースサイト"
+              ],
+              "es": "Ataque de abrevadero (watering hole)",
+              "one_liner_en": "Compromises **sites the target often visits**",
+              "one_liner_es": "Compromete **sitios que la víctima visita a menudo**",
+              "examples_en": [
+                "Compromised tech information site",
+                "Industry news site"
+              ],
+              "examples_es": [
+                "Sitio de información técnica comprometido",
+                "Sitio de noticias del sector"
               ]
             },
             {
@@ -552,6 +1044,17 @@
               "examples": [
                 "Amazonを装うメール",
                 "銀行ロゴの偽サイト"
+              ],
+              "es": "Suplantación de marca",
+              "one_liner_en": "Deceives by posing as a legitimate **brand**",
+              "one_liner_es": "Engaña haciéndose pasar por una **marca** legítima",
+              "examples_en": [
+                "Emails posing as Amazon",
+                "Fake sites with bank logos"
+              ],
+              "examples_es": [
+                "Correos que suplantan a Amazon",
+                "Sitios falsos con logotipos de bancos"
               ]
             },
             {
@@ -563,11 +1066,28 @@
               "examples": [
                 "amazom.com",
                 "g00gle.com"
+              ],
+              "es": "Typosquatting",
+              "one_liner_en": "Look-alike domains that bank on **typos**",
+              "one_liner_es": "Dominios parecidos que aprovechan los **errores de escritura**",
+              "examples_en": [
+                "amazom.com",
+                "g00gle.com"
+              ],
+              "examples_es": [
+                "amazom.com",
+                "g00gle.com"
               ]
             }
-          ]
+          ],
+          "title_en": "Social engineering (vectors that target people)",
+          "title_es": "Ingeniería social (vectores dirigidos a personas)"
         }
-      ]
+      ],
+      "title_en": "Threat vectors and attack surfaces",
+      "title_es": "Vectores de amenaza y superficies de ataque",
+      "blurb_en": "Where and how attacks get in",
+      "blurb_es": "Por dónde y cómo entran los ataques"
     },
     {
       "id": "B-3",
@@ -589,6 +1109,17 @@
               "examples": [
                 "入力欄へのコード注入",
                 "eval() の悪用"
+              ],
+              "es": "Inyección en memoria",
+              "one_liner_en": "Slips malicious code into **memory**",
+              "one_liner_es": "Introduce código malicioso en la **memoria**",
+              "examples_en": [
+                "Code injected into an input field",
+                "Abusing eval()"
+              ],
+              "examples_es": [
+                "Código inyectado en un campo de entrada",
+                "Abuso de eval()"
               ]
             },
             {
@@ -600,6 +1131,17 @@
               "examples": [
                 "ログアウト後のセッション",
                 "競合状態"
+              ],
+              "es": "Tiempo de uso (TOU)",
+              "one_liner_en": "State changes between the check and **the time of use**",
+              "one_liner_es": "El estado cambia entre la comprobación y **el momento de uso**",
+              "examples_en": [
+                "Session still alive after logout",
+                "Race condition"
+              ],
+              "examples_es": [
+                "Sesión activa tras cerrar sesión",
+                "Condición de carrera"
               ]
             },
             {
@@ -611,6 +1153,17 @@
               "examples": [
                 "ファイル差し替え",
                 "二重送金"
+              ],
+              "es": "Tiempo de comprobación (TOC)",
+              "one_liner_en": "Changes slipped in **after the permission check**",
+              "one_liner_es": "Cambios introducidos **tras la comprobación de permisos**",
+              "examples_en": [
+                "Swapping a file",
+                "Double transfer"
+              ],
+              "examples_es": [
+                "Sustitución de un archivo",
+                "Transferencia duplicada"
               ]
             },
             {
@@ -622,6 +1175,17 @@
               "examples": [
                 "偽アプリの自動更新",
                 "マルウェア入り更新"
+              ],
+              "es": "Actualización maliciosa",
+              "one_liner_en": "Installs malware disguised as a **legitimate update**",
+              "one_liner_es": "Instala malware disfrazado de **actualización legítima**",
+              "examples_en": [
+                "Auto-update of a fake app",
+                "Update containing malware"
+              ],
+              "examples_es": [
+                "Actualización automática de una aplicación falsa",
+                "Actualización con malware"
               ]
             },
             {
@@ -633,6 +1197,17 @@
               "examples": [
                 "' OR 1=1 --",
                 "検索欄からの全件取得"
+              ],
+              "es": "Inyección SQL (SQLi)",
+              "one_liner_en": "Manipulates the database with **malicious SQL**",
+              "one_liner_es": "Manipula la base de datos con **SQL malicioso**",
+              "examples_en": [
+                "' OR 1=1 --",
+                "Dumping all records via a search box"
+              ],
+              "examples_es": [
+                "' OR 1=1 --",
+                "Extraer todos los registros desde un buscador"
               ]
             },
             {
@@ -644,9 +1219,22 @@
               "examples": [
                 "<script>の埋め込み",
                 "掲示板への悪性投稿"
+              ],
+              "es": "Cross-site scripting (XSS)",
+              "one_liner_en": "Runs malicious scripts in the visitor's **browser**",
+              "one_liner_es": "Ejecuta scripts maliciosos en el **navegador** del visitante",
+              "examples_en": [
+                "Embedding <script>",
+                "Malicious posts on a forum"
+              ],
+              "examples_es": [
+                "Inserción de <script>",
+                "Publicaciones maliciosas en un foro"
               ]
             }
-          ]
+          ],
+          "title_en": "Applications (weaknesses in code and input)",
+          "title_es": "Aplicaciones (debilidades del código y de la entrada)"
         },
         {
           "id": "os-hardware",
@@ -661,6 +1249,17 @@
               "examples": [
                 "EternalBlue",
                 "未適用の緊急パッチ"
+              ],
+              "es": "Basada en el sistema operativo (SO)",
+              "one_liner_en": "Vulnerabilities **in the OS itself**",
+              "one_liner_es": "Vulnerabilidades **en el propio SO**",
+              "examples_en": [
+                "EternalBlue",
+                "Unapplied critical patches"
+              ],
+              "examples_es": [
+                "EternalBlue",
+                "Parches críticos sin aplicar"
               ]
             },
             {
@@ -672,6 +1271,17 @@
               "examples": [
                 "Broadpwn",
                 "改ざんされたFW更新"
+              ],
+              "es": "Firmware",
+              "one_liner_en": "Vulnerabilities in **software that controls hardware**",
+              "one_liner_es": "Vulnerabilidades en el **software que controla el hardware**",
+              "examples_en": [
+                "Broadpwn",
+                "Tampered firmware updates"
+              ],
+              "examples_es": [
+                "Broadpwn",
+                "Actualizaciones de firmware manipuladas"
               ]
             },
             {
@@ -682,6 +1292,15 @@
               "one_liner": "**メーカーサポート終了**で修正されない",
               "examples": [
                 "Windows 7 の継続利用"
+              ],
+              "es": "Fin de vida (EOL)",
+              "one_liner_en": "**Vendor support has ended**, so nothing gets fixed",
+              "one_liner_es": "**Ha terminado el soporte del fabricante**, así que no se corrige nada",
+              "examples_en": [
+                "Still running Windows 7"
+              ],
+              "examples_es": [
+                "Seguir usando Windows 7"
               ]
             },
             {
@@ -694,9 +1313,25 @@
                 "XP搭載の古いATM",
                 "フロッピーディスク",
                 "VHSテープ"
+              ],
+              "es": "Hardware heredado",
+              "name_en": "Legacy hardware",
+              "one_liner_en": "**Old equipment** that can't take current patches",
+              "one_liner_es": "**Equipos antiguos** que no admiten los parches actuales",
+              "examples_en": [
+                "Old ATMs running XP",
+                "Floppy disks",
+                "VHS tapes"
+              ],
+              "examples_es": [
+                "Cajeros antiguos con XP",
+                "Disquetes",
+                "Cintas VHS"
               ]
             }
-          ]
+          ],
+          "title_en": "OS and hardware (weaknesses in platforms and devices)",
+          "title_es": "SO y hardware (debilidades de plataformas y dispositivos)"
         },
         {
           "id": "virtualization-cloud",
@@ -711,6 +1346,17 @@
               "examples": [
                 "ゲスト→ホスト侵入",
                 "ZombieLoad"
+              ],
+              "es": "Escape de máquina virtual (VM)",
+              "one_liner_en": "Breaks out of a VM **to the host**",
+              "one_liner_es": "Rompe el aislamiento de una VM **hacia el host**",
+              "examples_en": [
+                "Guest → host intrusion",
+                "ZombieLoad"
+              ],
+              "examples_es": [
+                "Intrusión invitado → host",
+                "ZombieLoad"
               ]
             },
             {
@@ -721,6 +1367,15 @@
               "one_liner": "再割当リソースの**残存データ**が漏れる",
               "examples": [
                 "未消去メモリの再割当"
+              ],
+              "es": "Reutilización de recursos",
+              "one_liner_en": "**Leftover data** in reassigned resources leaks",
+              "one_liner_es": "Se filtran **datos residuales** de recursos reasignados",
+              "examples_en": [
+                "Reassigning memory that wasn't wiped"
+              ],
+              "examples_es": [
+                "Reasignación de memoria sin borrar"
               ]
             },
             {
@@ -732,9 +1387,22 @@
               "examples": [
                 "テナント間データ漏えい",
                 "責任分担の曖昧さ"
+              ],
+              "es": "Específicas de la nube",
+              "one_liner_en": "Cloud-only weaknesses such as **multi-tenancy**",
+              "one_liner_es": "Debilidades propias de la nube, como la **multitenencia**",
+              "examples_en": [
+                "Data leaks between tenants",
+                "Unclear shared responsibility"
+              ],
+              "examples_es": [
+                "Fugas de datos entre inquilinos",
+                "Responsabilidad compartida poco clara"
               ]
             }
-          ]
+          ],
+          "title_en": "Virtualization and cloud (weaknesses in shared infrastructure)",
+          "title_es": "Virtualización y nube (debilidades de la infraestructura compartida)"
         },
         {
           "id": "supply-chain",
@@ -750,6 +1418,19 @@
                 "事業者の設定ミス",
                 "ハイパーバイザー欠陥",
                 "事業者の内部不正"
+              ],
+              "es": "Proveedor de servicios",
+              "one_liner_en": "**Provider-side management failures** spill over to customers",
+              "one_liner_es": "Los **fallos de gestión del proveedor** afectan a los clientes",
+              "examples_en": [
+                "Provider misconfiguration",
+                "Hypervisor flaw",
+                "Insider abuse at the provider"
+              ],
+              "examples_es": [
+                "Configuración errónea del proveedor",
+                "Fallo del hipervisor",
+                "Abuso interno en el proveedor"
               ]
             },
             {
@@ -759,6 +1440,17 @@
               "en": "Hardware provider",
               "one_liner": "**CPU等の設計・実装**に起因する",
               "examples": [
+                "Spectre",
+                "Meltdown"
+              ],
+              "es": "Proveedor de hardware",
+              "one_liner_en": "Caused by the **design or implementation of CPUs** and other hardware",
+              "one_liner_es": "Causadas por el **diseño o la implementación de CPU** y otro hardware",
+              "examples_en": [
+                "Spectre",
+                "Meltdown"
+              ],
+              "examples_es": [
                 "Spectre",
                 "Meltdown"
               ]
@@ -772,9 +1464,22 @@
               "examples": [
                 "SolarWinds事件",
                 "改ざんされた正規更新"
+              ],
+              "es": "Proveedor de software",
+              "one_liner_en": "Weaknesses in **third-party software** spread to you",
+              "one_liner_es": "Las debilidades del **software de terceros** se propagan a ti",
+              "examples_en": [
+                "The SolarWinds incident",
+                "Tampered legitimate updates"
+              ],
+              "examples_es": [
+                "El incidente de SolarWinds",
+                "Actualizaciones legítimas manipuladas"
               ]
             }
-          ]
+          ],
+          "title_en": "Supply chain (weaknesses from providers)",
+          "title_es": "Cadena de suministro (debilidades causadas por proveedores)"
         },
         {
           "id": "crypto-config",
@@ -789,6 +1494,17 @@
               "examples": [
                 "SSL 2.0 の使用",
                 "鍵の不用意な公開"
+              ],
+              "es": "Criptográficas",
+              "one_liner_en": "Weaknesses from **weak crypto** or poor key management",
+              "one_liner_es": "Debilidades por **cifrado débil** o mala gestión de claves",
+              "examples_en": [
+                "Using SSL 2.0",
+                "Carelessly exposed keys"
+              ],
+              "examples_es": [
+                "Uso de SSL 2.0",
+                "Claves expuestas por descuido"
               ]
             },
             {
@@ -800,11 +1516,28 @@
               "examples": [
                 "ストレージ誤公開",
                 "初期設定のまま"
+              ],
+              "es": "Configuración errónea",
+              "one_liner_en": "Weaknesses from **configuration mistakes** or default settings",
+              "one_liner_es": "Debilidades por **errores de configuración** o ajustes de fábrica",
+              "examples_en": [
+                "Storage accidentally made public",
+                "Left on default settings"
+              ],
+              "examples_es": [
+                "Almacenamiento expuesto por error",
+                "Dejado con la configuración de fábrica"
               ]
             }
-          ]
+          ],
+          "title_en": "Cryptography and configuration (operational weaknesses)",
+          "title_es": "Criptografía y configuración (debilidades operativas)"
         }
-      ]
+      ],
+      "title_en": "Types of vulnerabilities",
+      "title_es": "Tipos de vulnerabilidades",
+      "blurb_en": "Weaknesses in apps, OSes, hardware and the cloud",
+      "blurb_es": "Debilidades en aplicaciones, SO, hardware y la nube"
     },
     {
       "id": "B-4",
@@ -826,6 +1559,17 @@
               "examples": [
                 "WannaCry",
                 "請求書を装う添付"
+              ],
+              "es": "Ransomware",
+              "one_liner_en": "Encrypts data and demands a **ransom**",
+              "one_liner_es": "Cifra los datos y exige un **rescate**",
+              "examples_en": [
+                "WannaCry",
+                "Attachments posing as invoices"
+              ],
+              "examples_es": [
+                "WannaCry",
+                "Adjuntos que se hacen pasar por facturas"
               ]
             },
             {
@@ -836,6 +1580,17 @@
               "one_liner": "**正規ソフトを装って**侵入・潜伏",
               "examples": [
                 "取引先を装う添付",
+                "RAT"
+              ],
+              "es": "Troyano",
+              "one_liner_en": "Gets in and hides by **posing as legitimate software**",
+              "one_liner_es": "Entra y se oculta **haciéndose pasar por software legítimo**",
+              "examples_en": [
+                "Attachments posing as a business partner",
+                "RAT"
+              ],
+              "examples_es": [
+                "Adjuntos que suplantan a un socio comercial",
                 "RAT"
               ]
             },
@@ -848,6 +1603,17 @@
               "examples": [
                 "社内PCに一斉感染",
                 "脆弱性経由の拡散"
+              ],
+              "es": "Gusano",
+              "one_liner_en": "**Self-replicates** across the network",
+              "one_liner_es": "Se **autorreplica** por la red",
+              "examples_en": [
+                "Mass infection of office PCs",
+                "Spreading via a vulnerability"
+              ],
+              "examples_es": [
+                "Infección masiva de los PC de la oficina",
+                "Propagación a través de una vulnerabilidad"
               ]
             },
             {
@@ -859,6 +1625,17 @@
               "examples": [
                 "無料ツールバー同梱",
                 "閲覧履歴の送信"
+              ],
+              "es": "Spyware",
+              "one_liner_en": "Hides and **secretly collects** user information",
+              "one_liner_es": "Se oculta y **recopila en secreto** información del usuario",
+              "examples_en": [
+                "Bundled with free toolbars",
+                "Sending browsing history"
+              ],
+              "examples_es": [
+                "Incluido en barras de herramientas gratuitas",
+                "Envío del historial de navegación"
               ]
             },
             {
@@ -870,6 +1647,17 @@
               "examples": [
                 "新品PCの付属アプリ",
                 "中古PCの残存アプリ"
+              ],
+              "es": "Bloatware",
+              "one_liner_en": "Unwanted **preinstalled** software",
+              "one_liner_es": "Software innecesario **preinstalado**",
+              "examples_en": [
+                "Bundled apps on a new PC",
+                "Leftover apps on a used PC"
+              ],
+              "examples_es": [
+                "Aplicaciones incluidas en un PC nuevo",
+                "Aplicaciones que quedan en un PC usado"
               ]
             },
             {
@@ -881,6 +1669,17 @@
               "examples": [
                 "ホテルのレンタルPC",
                 "USB型キーロガー"
+              ],
+              "es": "Keylogger",
+              "one_liner_en": "**Records keystrokes** to steal information",
+              "one_liner_es": "**Registra las pulsaciones** para robar información",
+              "examples_en": [
+                "Hotel rental PCs",
+                "USB keyloggers"
+              ],
+              "examples_es": [
+                "PC de alquiler en hoteles",
+                "Keyloggers USB"
               ]
             },
             {
@@ -892,6 +1691,17 @@
               "examples": [
                 "退職後にデータ消去",
                 "特定日時に起動"
+              ],
+              "es": "Bomba lógica",
+              "one_liner_en": "Malicious code that fires **when a condition is met**",
+              "one_liner_es": "Código malicioso que se activa **cuando se cumple una condición**",
+              "examples_en": [
+                "Deleting data after the author leaves",
+                "Triggering at a set date and time"
+              ],
+              "examples_es": [
+                "Borrar datos tras la salida del autor",
+                "Activarse en una fecha y hora concretas"
               ]
             },
             {
@@ -903,9 +1713,22 @@
               "examples": [
                 "カーネル改ざん",
                 "マルウェアの隠蔽"
+              ],
+              "es": "Rootkit",
+              "one_liner_en": "Seizes **admin privileges** at the OS core and hides",
+              "one_liner_es": "Toma **privilegios de administrador** en el núcleo del SO y se oculta",
+              "examples_en": [
+                "Kernel tampering",
+                "Hiding other malware"
+              ],
+              "examples_es": [
+                "Manipulación del kernel",
+                "Ocultación de otro malware"
               ]
             }
-          ]
+          ],
+          "title_en": "Malware (types of malicious software)",
+          "title_es": "Malware (tipos de software malicioso)"
         },
         {
           "id": "physical-network",
@@ -920,6 +1743,17 @@
               "examples": [
                 "入館カードの複製",
                 "非接触IC読取"
+              ],
+              "es": "Clonación RFID",
+              "one_liner_en": "Reads an RFID tag and **copies** it",
+              "one_liner_es": "Lee una etiqueta RFID y la **copia**",
+              "examples_en": [
+                "Copying an entry badge",
+                "Reading contactless cards"
+              ],
+              "examples_es": [
+                "Copia de una tarjeta de acceso",
+                "Lectura de tarjetas sin contacto"
               ]
             },
             {
@@ -931,6 +1765,17 @@
               "examples": [
                 "ECサイト停止",
                 "増幅・反射型"
+              ],
+              "es": "Denegación de servicio distribuida (DDoS)",
+              "one_liner_en": "Knocks services offline with **massive traffic** from many sources",
+              "one_liner_es": "Tumba servicios con **tráfico masivo** desde muchas fuentes",
+              "examples_en": [
+                "Taking an online store offline",
+                "Amplified and reflected attacks"
+              ],
+              "examples_es": [
+                "Caída de una tienda en línea",
+                "Ataques amplificados y reflejados"
               ]
             },
             {
@@ -942,6 +1787,17 @@
               "examples": [
                 "DNSスプーフィング",
                 "キャッシュポイズニング"
+              ],
+              "es": "Ataques DNS",
+              "one_liner_en": "Fakes name resolution to **send users to fake sites**",
+              "one_liner_es": "Falsea la resolución de nombres para **llevar a sitios falsos**",
+              "examples_en": [
+                "DNS spoofing",
+                "Cache poisoning"
+              ],
+              "examples_es": [
+                "Suplantación DNS",
+                "Envenenamiento de caché"
               ]
             },
             {
@@ -953,6 +1809,17 @@
               "examples": [
                 "イービルツイン",
                 "公衆Wi-Fiの盗聴"
+              ],
+              "es": "Ataques inalámbricos",
+              "one_liner_en": "Intrusion and eavesdropping via **wireless LAN** weaknesses",
+              "one_liner_es": "Intrusión y escucha aprovechando debilidades de la **red inalámbrica**",
+              "examples_en": [
+                "Evil twin",
+                "Eavesdropping on public Wi-Fi"
+              ],
+              "examples_es": [
+                "Gemelo malvado (evil twin)",
+                "Escucha en Wi-Fi pública"
               ]
             },
             {
@@ -964,6 +1831,17 @@
               "examples": [
                 "セッションハイジャック",
                 "中間者攻撃"
+              ],
+              "es": "Ataque en ruta (on-path)",
+              "one_liner_en": "Intercepts or alters traffic **on the communication path**",
+              "one_liner_es": "Intercepta o altera el tráfico **en la ruta de comunicación**",
+              "examples_en": [
+                "Session hijacking",
+                "Man-in-the-middle attack"
+              ],
+              "examples_es": [
+                "Secuestro de sesión",
+                "Ataque de intermediario"
               ]
             },
             {
@@ -975,9 +1853,22 @@
               "examples": [
                 "傍受したID/PW再送",
                 "パスザハッシュ"
+              ],
+              "es": "Reproducción de credenciales",
+              "one_liner_en": "Resends sniffed **credentials** to impersonate a user",
+              "one_liner_es": "Reenvía **credenciales** interceptadas para suplantar a un usuario",
+              "examples_en": [
+                "Resending an intercepted username/password",
+                "Pass the hash"
+              ],
+              "examples_es": [
+                "Reenvío de usuario y contraseña interceptados",
+                "Pass the hash"
               ]
             }
-          ]
+          ],
+          "title_en": "Physical and network attacks (which path they target)",
+          "title_es": "Ataques físicos y de red (qué vía atacan)"
         },
         {
           "id": "application",
@@ -993,6 +1884,19 @@
                 "SQLインジェクション",
                 "' OR 1=1 --",
                 "OSコマンド注入"
+              ],
+              "es": "Inyección",
+              "one_liner_en": "Inserts **malicious code** into input",
+              "one_liner_es": "Inserta **código malicioso** en la entrada",
+              "examples_en": [
+                "SQL injection",
+                "' OR 1=1 --",
+                "OS command injection"
+              ],
+              "examples_es": [
+                "Inyección SQL",
+                "' OR 1=1 --",
+                "Inyección de comandos del SO"
               ]
             },
             {
@@ -1004,6 +1908,17 @@
               "examples": [
                 "送金リクエスト再送",
                 "同じ操作の反復"
+              ],
+              "es": "Ataque de repetición",
+              "one_liner_en": "Abuses intercepted traffic by **resending it**",
+              "one_liner_es": "Abusa del tráfico interceptado **reenviándolo**",
+              "examples_en": [
+                "Resending a transfer request",
+                "Repeating the same operation"
+              ],
+              "examples_es": [
+                "Reenvío de una solicitud de transferencia",
+                "Repetición de la misma operación"
               ]
             },
             {
@@ -1015,6 +1930,17 @@
               "examples": [
                 "ゼロデイで管理者化",
                 "一般→管理者"
+              ],
+              "es": "Escalada de privilegios",
+              "one_liner_en": "Illegitimately gains **higher privileges** than intended",
+              "one_liner_es": "Obtiene ilegítimamente **más privilegios** de los debidos",
+              "examples_en": [
+                "Becoming admin via a zero-day",
+                "Standard user → admin"
+              ],
+              "examples_es": [
+                "Hacerse administrador con un día cero",
+                "Usuario estándar → administrador"
               ]
             },
             {
@@ -1026,9 +1952,22 @@
               "examples": [
                 "../etc/passwd",
                 "DL機能の悪用"
+              ],
+              "es": "Recorrido de directorios",
+              "one_liner_en": "Uses **../** to reach private files higher up",
+              "one_liner_es": "Usa **../** para llegar a archivos privados de niveles superiores",
+              "examples_en": [
+                "../etc/passwd",
+                "Abusing a download feature"
+              ],
+              "examples_es": [
+                "../etc/passwd",
+                "Abuso de una función de descarga"
               ]
             }
-          ]
+          ],
+          "title_en": "Application attacks (exploiting app flaws)",
+          "title_es": "Ataques a aplicaciones (explotan fallos de la aplicación)"
         },
         {
           "id": "crypto-password",
@@ -1043,6 +1982,17 @@
               "examples": [
                 "TLS→旧SSLへ",
                 "POODLE"
+              ],
+              "es": "Ataque de degradación",
+              "one_liner_en": "Forces a switch to an **old, weak protocol**",
+              "one_liner_es": "Fuerza el cambio a un **protocolo antiguo y débil**",
+              "examples_en": [
+                "TLS → old SSL",
+                "POODLE"
+              ],
+              "examples_es": [
+                "TLS → SSL antiguo",
+                "POODLE"
               ]
             },
             {
@@ -1054,6 +2004,17 @@
               "examples": [
                 "MD5の衝突",
                 "SHA-1の衝突"
+              ],
+              "es": "Ataque de colisión",
+              "one_liner_en": "Produces **the same hash** from different inputs",
+              "one_liner_es": "Produce **el mismo hash** a partir de entradas distintas",
+              "examples_en": [
+                "MD5 collisions",
+                "SHA-1 collisions"
+              ],
+              "examples_es": [
+                "Colisiones de MD5",
+                "Colisiones de SHA-1"
               ]
             },
             {
@@ -1065,6 +2026,17 @@
               "examples": [
                 "23人で一致率50%超",
                 "短いハッシュ値"
+              ],
+              "es": "Ataque de cumpleaños",
+              "one_liner_en": "Finds collisions using the **birthday paradox**",
+              "one_liner_es": "Busca colisiones usando la **paradoja del cumpleaños**",
+              "examples_en": [
+                "23 people → over 50% chance of a match",
+                "Short hash values"
+              ],
+              "examples_es": [
+                "23 personas → más del 50 % de coincidencia",
+                "Valores de hash cortos"
               ]
             },
             {
@@ -1076,6 +2048,17 @@
               "examples": [
                 "銀行ログインへの試行",
                 "自動化ツール"
+              ],
+              "es": "Fuerza bruta",
+              "one_liner_en": "Tries **every combination** exhaustively",
+              "one_liner_es": "Prueba **todas las combinaciones** una por una",
+              "examples_en": [
+                "Attempts on a bank login",
+                "Automated tools"
+              ],
+              "examples_es": [
+                "Intentos contra el inicio de sesión de un banco",
+                "Herramientas automatizadas"
               ]
             },
             {
@@ -1087,9 +2070,22 @@
               "examples": [
                 "123456を全員に試行",
                 "qwerty"
+              ],
+              "es": "Rociado de contraseñas (password spraying)",
+              "one_liner_en": "Tries a few weak passwords against **many accounts**",
+              "one_liner_es": "Prueba pocas contraseñas débiles contra **muchas cuentas**",
+              "examples_en": [
+                "Trying 123456 on everyone",
+                "qwerty"
+              ],
+              "examples_es": [
+                "Probar 123456 con todos",
+                "qwerty"
               ]
             }
-          ]
+          ],
+          "title_en": "Cryptographic and password attacks (breaking crypto and authentication)",
+          "title_es": "Ataques criptográficos y de contraseñas (rompen el cifrado y la autenticación)"
         },
         {
           "id": "indicators",
@@ -1104,6 +2100,17 @@
               "examples": [
                 "複数アカウント同時ロック",
                 "総当たりの痕跡"
+              ],
+              "es": "Bloqueo de cuenta",
+              "one_liner_en": "Accounts **automatically locked** after failed logins",
+              "one_liner_es": "Cuentas **bloqueadas automáticamente** tras inicios de sesión fallidos",
+              "examples_en": [
+                "Several accounts locked at once",
+                "Traces of brute force"
+              ],
+              "examples_es": [
+                "Varias cuentas bloqueadas a la vez",
+                "Rastros de fuerza bruta"
               ]
             },
             {
@@ -1114,6 +2121,15 @@
               "one_liner": "同一アカウントが**同時に**複数ログイン",
               "examples": [
                 "東京とNYで同時ログイン"
+              ],
+              "es": "Uso simultáneo de sesiones",
+              "one_liner_en": "One account logged in **at the same time** in several places",
+              "one_liner_es": "Una cuenta con sesión iniciada **a la vez** en varios lugares",
+              "examples_en": [
+                "Simultaneous logins from Tokyo and New York"
+              ],
+              "examples_es": [
+                "Inicios de sesión simultáneos desde Tokio y Nueva York"
               ]
             },
             {
@@ -1125,6 +2141,17 @@
               "examples": [
                 "禁止国IPへの通信",
                 "プロキシの遮断ログ"
+              ],
+              "es": "Contenido bloqueado",
+              "one_liner_en": "Attempts to reach **forbidden destinations**",
+              "one_liner_es": "Intentos de acceder a **destinos prohibidos**",
+              "examples_en": [
+                "Traffic to IPs in blocked countries",
+                "Proxy block logs"
+              ],
+              "examples_es": [
+                "Tráfico hacia IP de países bloqueados",
+                "Registros de bloqueo del proxy"
               ]
             },
             {
@@ -1135,6 +2162,15 @@
               "one_liner": "**移動不可能な短時間**で遠隔地ログイン",
               "examples": [
                 "東京の10分後にNY"
+              ],
+              "es": "Viaje imposible",
+              "one_liner_en": "Logins from distant places **too close together** to travel between",
+              "one_liner_es": "Inicios de sesión desde lugares lejanos **demasiado seguidos** para viajar entre ellos",
+              "examples_en": [
+                "New York 10 minutes after Tokyo"
+              ],
+              "examples_es": [
+                "Nueva York 10 minutos después de Tokio"
               ]
             },
             {
@@ -1146,6 +2182,17 @@
               "examples": [
                 "DDoSでCPU急上昇",
                 "帯域の逼迫"
+              ],
+              "es": "Consumo de recursos",
+              "one_liner_en": "CPU and other resources used **abnormally heavily**",
+              "one_liner_es": "CPU y otros recursos usados de forma **anormalmente alta**",
+              "examples_en": [
+                "CPU spike from a DDoS",
+                "Saturated bandwidth"
+              ],
+              "examples_es": [
+                "Pico de CPU por un DDoS",
+                "Ancho de banda saturado"
               ]
             },
             {
@@ -1157,6 +2204,17 @@
               "examples": [
                 "顧客DBが暗号化",
                 "ランサムウェア被害"
+              ],
+              "es": "Inaccesibilidad de recursos",
+              "one_liner_en": "Usual resources **suddenly can't be reached**",
+              "one_liner_es": "Recursos habituales que **de repente no se pueden usar**",
+              "examples_en": [
+                "Customer database encrypted",
+                "Ransomware damage"
+              ],
+              "examples_es": [
+                "Base de datos de clientes cifrada",
+                "Daños por ransomware"
               ]
             },
             {
@@ -1168,11 +2226,28 @@
               "examples": [
                 "深夜の大量アクセス",
                 "休日のログイン"
+              ],
+              "es": "Registros fuera de ciclo",
+              "one_liner_en": "Logs appear at **unusual times**",
+              "one_liner_es": "Aparecen registros a **horas inusuales**",
+              "examples_en": [
+                "Heavy access late at night",
+                "Logins on holidays"
+              ],
+              "examples_es": [
+                "Accesos masivos de madrugada",
+                "Inicios de sesión en festivos"
               ]
             }
-          ]
+          ],
+          "title_en": "Indicators (signs of an attack)",
+          "title_es": "Indicadores (señales de un ataque)"
         }
-      ]
+      ],
+      "title_en": "Indicators of malicious activity",
+      "title_es": "Indicadores de actividad maliciosa",
+      "blurb_en": "Spot malware, attack techniques and signs of trouble",
+      "blurb_es": "Detecta malware, técnicas de ataque e indicios de anomalías"
     },
     {
       "id": "B-5",
@@ -1194,6 +2269,17 @@
               "examples": [
                 "部署別セグメント",
                 "VLAN"
+              ],
+              "es": "Segmentación",
+              "one_liner_en": "**Splits the network** to contain damage",
+              "one_liner_es": "**Divide la red** para contener los daños",
+              "examples_en": [
+                "Per-department segments",
+                "VLAN"
+              ],
+              "examples_es": [
+                "Segmentos por departamento",
+                "VLAN"
               ]
             },
             {
@@ -1205,6 +2291,17 @@
               "examples": [
                 "ルーターのACL",
                 "SSHを特定IPのみ許可"
+              ],
+              "es": "Lista de control de acceso (ACL)",
+              "one_liner_en": "A **set of allow/deny rules**",
+              "one_liner_es": "Un **conjunto de reglas de permitir/denegar**",
+              "examples_en": [
+                "Router ACLs",
+                "Allowing SSH only from specific IPs"
+              ],
+              "examples_es": [
+                "ACL de routers",
+                "Permitir SSH solo desde IP concretas"
               ]
             },
             {
@@ -1216,6 +2313,17 @@
               "examples": [
                 "閲覧のみ／編集可",
                 "管理者権限の制限"
+              ],
+              "es": "Permisos",
+              "one_liner_en": "Assigns **what users and devices may do**",
+              "one_liner_es": "Asigna **lo que pueden hacer** usuarios y dispositivos",
+              "examples_en": [
+                "Read-only vs. editable",
+                "Limiting admin rights"
+              ],
+              "examples_es": [
+                "Solo lectura o edición",
+                "Limitar los derechos de administrador"
               ]
             },
             {
@@ -1227,6 +2335,17 @@
               "examples": [
                 "仮想マシンでの閲覧",
                 "サンドボックス"
+              ],
+              "es": "Aislamiento",
+              "one_liner_en": "Separates things to **contain the damage**",
+              "one_liner_es": "Separa para **contener los daños**",
+              "examples_en": [
+                "Browsing inside a VM",
+                "Sandbox"
+              ],
+              "examples_es": [
+                "Navegar dentro de una VM",
+                "Sandbox"
               ]
             },
             {
@@ -1238,9 +2357,22 @@
               "examples": [
                 "人事情報は人事部のみ",
                 "一般ユーザー運用"
+              ],
+              "es": "Mínimo privilegio",
+              "one_liner_en": "Grants **only the minimum** permissions needed",
+              "one_liner_es": "Concede **solo los permisos mínimos** necesarios",
+              "examples_en": [
+                "HR data for HR only",
+                "Working as a standard user"
+              ],
+              "examples_es": [
+                "Datos de RR. HH. solo para RR. HH.",
+                "Trabajar como usuario estándar"
               ]
             }
-          ]
+          ],
+          "title_en": "Narrow the scope (limit access and blast radius)",
+          "title_es": "Reducir el alcance (limitar el acceso y el impacto)"
         },
         {
           "id": "harden",
@@ -1255,6 +2387,17 @@
               "examples": [
                 "Windows Update",
                 "Patch Tuesday"
+              ],
+              "es": "Aplicación de parches",
+              "one_liner_en": "Applies updates to **fix vulnerabilities**",
+              "one_liner_es": "Aplica actualizaciones para **corregir vulnerabilidades**",
+              "examples_en": [
+                "Windows Update",
+                "Patch Tuesday"
+              ],
+              "examples_es": [
+                "Windows Update",
+                "Patch Tuesday"
               ]
             },
             {
@@ -1266,6 +2409,17 @@
               "examples": [
                 "HTTPS（TLS）",
                 "ディスク暗号化"
+              ],
+              "es": "Cifrado",
+              "one_liner_en": "**Unreadable** even if stolen",
+              "one_liner_es": "**Ilegible** aunque lo roben",
+              "examples_en": [
+                "HTTPS (TLS)",
+                "Disk encryption"
+              ],
+              "examples_es": [
+                "HTTPS (TLS)",
+                "Cifrado de disco"
               ]
             },
             {
@@ -1277,9 +2431,22 @@
               "examples": [
                 "MDM",
                 "パスワードポリシー適用"
+              ],
+              "es": "Aplicación de la configuración",
+              "one_liner_en": "**Centrally manages** settings and blocks ad-hoc changes",
+              "one_liner_es": "**Gestiona de forma centralizada** la configuración e impide cambios por libre",
+              "examples_en": [
+                "MDM",
+                "Enforcing password policies"
+              ],
+              "examples_es": [
+                "MDM",
+                "Aplicación de políticas de contraseñas"
               ]
             }
-          ]
+          ],
+          "title_en": "Reduce weaknesses (system hardening)",
+          "title_es": "Reducir debilidades (bastionado del sistema)"
         },
         {
           "id": "operate",
@@ -1294,6 +2461,17 @@
               "examples": [
                 "通信量の監視",
                 "ログ監視"
+              ],
+              "es": "Supervisión",
+              "one_liner_en": "**Watches continuously** to catch anomalies early",
+              "one_liner_es": "**Vigila de forma continua** para detectar anomalías pronto",
+              "examples_en": [
+                "Traffic monitoring",
+                "Log monitoring"
+              ],
+              "examples_es": [
+                "Supervisión del tráfico",
+                "Supervisión de registros"
               ]
             },
             {
@@ -1305,11 +2483,32 @@
               "examples": [
                 "データ完全消去",
                 "ディスク物理破壊"
+              ],
+              "es": "Retirada (decommissioning)",
+              "one_liner_en": "**Disposes of** unneeded assets properly",
+              "one_liner_es": "**Desecha correctamente** los activos que ya no se usan",
+              "examples_en": [
+                "Secure data erasure",
+                "Physically destroying disks"
+              ],
+              "examples_es": [
+                "Borrado seguro de datos",
+                "Destrucción física de discos"
               ]
             }
-          ]
+          ],
+          "title_en": "Watch and dispose (operations and lifecycle)",
+          "title_es": "Vigilar y desechar (operación y ciclo de vida)"
         }
-      ]
+      ],
+      "title_en": "Mitigation techniques",
+      "title_es": "Técnicas de mitigación",
+      "blurb_en": "Techniques to protect the enterprise",
+      "blurb_es": "Técnicas para proteger la empresa"
     }
-  ]
+  ],
+  "title_en": "Threats, Vulnerabilities & Mitigations",
+  "title_es": "Amenazas, vulnerabilidades y mitigaciones",
+  "intro_en": "Domain 2 systematically covers attackers (threat actors) and their methods, system vulnerabilities, and the signs of an attack, then finishes with the mitigations that contain them.",
+  "intro_es": "El dominio 2 estudia de forma sistemática a los atacantes (actores de amenazas) y sus métodos, las vulnerabilidades de los sistemas y los indicios de un ataque, y termina con las mitigaciones que los contienen."
 }

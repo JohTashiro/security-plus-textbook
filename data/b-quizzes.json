@@ -10,7 +10,23 @@
         "内部脅威者"
       ],
       "answer": 1,
-      "explain": "重要インフラを狙う長期・大規模な作戦は、高度な技術と豊富なリソースを持つ国家支援型攻撃者の典型である。"
+      "explain": "重要インフラを狙う長期・大規模な作戦は、高度な技術と豊富なリソースを持つ国家支援型攻撃者の典型である。",
+      "stem_en": "A country's power grid and transportation systems were shut down at the same time by advanced malware prepared over several years. Analysts concluded the attackers invested enormous manpower and money. Which threat actor is most likely?",
+      "choices_en": [
+        "Hacktivist",
+        "Nation-state actor",
+        "Unskilled attacker",
+        "Insider threat"
+      ],
+      "explain_en": "Long-running, large-scale operations against critical infrastructure are typical of nation-state actors, who have advanced skills and abundant resources.",
+      "stem_es": "La red eléctrica y los sistemas de transporte de un país se detuvieron a la vez por un malware avanzado preparado durante años. Los analistas concluyeron que los atacantes invirtieron enormes recursos humanos y económicos. ¿Qué actor de amenazas es el más probable?",
+      "choices_es": [
+        "Hacktivista",
+        "Actor patrocinado por un Estado",
+        "Atacante sin experiencia",
+        "Amenaza interna"
+      ],
+      "explain_es": "Las operaciones largas y a gran escala contra infraestructuras críticas son típicas de actores patrocinados por Estados, con gran capacidad técnica y abundantes recursos."
     },
     {
       "term": "b-1-unskilled-attacker",
@@ -22,7 +38,23 @@
         "スキルに乏しい攻撃者"
       ],
       "answer": 3,
-      "explain": "技術力が低く既存のツールに頼り、個人的な動機で動くのはスキルに乏しい攻撃者である。"
+      "explain": "技術力が低く既存のツールに頼り、個人的な動機で動くのはスキルに乏しい攻撃者である。",
+      "stem_en": "Someone with no programming experience downloaded a password brute-force tool shared online and attacked a company's login page out of curiosity. Which description fits this attacker best?",
+      "choices_en": [
+        "Organized crime",
+        "Nation-state actor",
+        "Hacktivist",
+        "Unskilled attacker"
+      ],
+      "explain_en": "Low technical skill, reliance on existing tools and personal motives describe an unskilled attacker.",
+      "stem_es": "Una persona sin experiencia en programación descargó una herramienta de fuerza bruta de contraseñas publicada en internet y atacó por curiosidad la página de inicio de sesión de una empresa. ¿Qué descripción encaja mejor con este atacante?",
+      "choices_es": [
+        "Crimen organizado",
+        "Actor patrocinado por un Estado",
+        "Hacktivista",
+        "Atacante sin experiencia"
+      ],
+      "explain_es": "Poca habilidad técnica, dependencia de herramientas existentes y motivos personales describen a un atacante sin experiencia."
     },
     {
       "term": "b-1-hacktivist",
@@ -34,7 +66,23 @@
         "シャドーIT"
       ],
       "answer": 0,
-      "explain": "社会的・政治的な主張のためにサイト改ざんを行い、金銭を目的としないのはハクティビストの特徴である。"
+      "explain": "社会的・政治的な主張のためにサイト改ざんを行い、金銭を目的としないのはハクティビストの特徴である。",
+      "stem_en": "The website of a chemical maker that ignores environmental rules was defaced with the message \"Exposing the crimes of companies that destroy the environment.\" No money was demanded. Who is the most likely attacker?",
+      "choices_en": [
+        "Hacktivist",
+        "Organized crime",
+        "Insider threat",
+        "Shadow IT"
+      ],
+      "explain_en": "Defacing a site to push a social or political cause, with no financial aim, is characteristic of hacktivists.",
+      "stem_es": "El sitio web de una química que ignora la normativa ambiental fue desfigurado con el mensaje «Denunciamos los crímenes de las empresas que destruyen el medio ambiente». No se pidió dinero. ¿Quién es el atacante más probable?",
+      "choices_es": [
+        "Hacktivista",
+        "Crimen organizado",
+        "Amenaza interna",
+        "TI en la sombra"
+      ],
+      "explain_es": "Desfigurar un sitio para defender una causa social o política, sin buscar dinero, es propio de los hacktivistas."
     },
     {
       "term": "b-1-insider-threat",
@@ -46,7 +94,23 @@
         "組織犯罪"
       ],
       "answer": 2,
-      "explain": "組織内部の人物が正規のアクセス権を悪用して損害を与えているため、内部脅威者に該当する。"
+      "explain": "組織内部の人物が正規のアクセス権を悪用して損害を与えているため、内部脅威者に該当する。",
+      "stem_en": "An accountant with a grudge against the company used the system access granted for their job to transfer company funds into their own account. How is this threat classified?",
+      "choices_en": [
+        "Shadow IT",
+        "Unskilled attacker",
+        "Insider threat",
+        "Organized crime"
+      ],
+      "explain_en": "Someone inside the organization is abusing legitimate access to cause harm, so this is an insider threat.",
+      "stem_es": "Un contable resentido con la empresa usó el acceso al sistema que tenía por su trabajo para transferir fondos de la empresa a su propia cuenta. ¿Cómo se clasifica esta amenaza?",
+      "choices_es": [
+        "TI en la sombra",
+        "Atacante sin experiencia",
+        "Amenaza interna",
+        "Crimen organizado"
+      ],
+      "explain_es": "Alguien de dentro de la organización abusa de un acceso legítimo para causar daño, así que es una amenaza interna."
     },
     {
       "term": "b-1-organized-crime",
@@ -58,7 +122,23 @@
         "組織犯罪"
       ],
       "answer": 3,
-      "explain": "金銭目的で組織化され、高度な技術と資金で大規模攻撃を行うのは組織犯罪（例: SamSam）である。"
+      "explain": "金銭目的で組織化され、高度な技術と資金で大規模攻撃を行うのは組織犯罪（例: SamSam）である。",
+      "stem_en": "A hacker group with clearly divided roles repeatedly hit U.S. municipalities and infrastructure with ransomware, collecting millions of dollars in ransom. Which threat actor fits best?",
+      "choices_en": [
+        "Hacktivist",
+        "Unskilled attacker",
+        "Insider threat",
+        "Organized crime"
+      ],
+      "explain_en": "Organized for profit and using advanced skills and funding for large-scale attacks: that's organized crime (e.g., SamSam).",
+      "stem_es": "Un grupo de hackers con funciones bien repartidas atacó repetidamente con ransomware a municipios e infraestructuras de EE. UU. y cobró millones de dólares en rescates. ¿Qué actor de amenazas encaja mejor?",
+      "choices_es": [
+        "Hacktivista",
+        "Atacante sin experiencia",
+        "Amenaza interna",
+        "Crimen organizado"
+      ],
+      "explain_es": "Organizado con fines de lucro y con capacidad técnica y financiación para ataques a gran escala: es crimen organizado (p. ej., SamSam)."
     },
     {
       "term": "b-1-shadow-it",
@@ -70,7 +150,23 @@
         "スパイ行為"
       ],
       "answer": 0,
-      "explain": "IT部門やポリシーで承認されていないソフトウェアの利用はシャドーITであり、悪意がなくても漏えいリスクを生む。"
+      "explain": "IT部門やポリシーで承認されていないソフトウェアの利用はシャドーITであり、悪意がなくても漏えいリスクを生む。",
+      "stem_en": "To work more efficiently, a salesperson used a free cloud CRM app without telling IT and entered customer contacts and deal details into it. Which term best describes this risk?",
+      "choices_en": [
+        "Shadow IT",
+        "Insider threat",
+        "Data exfiltration",
+        "Espionage"
+      ],
+      "explain_en": "Using software not approved by IT or policy is shadow IT, and it creates leak risks even without malicious intent.",
+      "stem_es": "Para trabajar más rápido, un comercial usó sin avisar a TI una aplicación CRM gratuita en la nube e introdujo en ella contactos de clientes y detalles de operaciones. ¿Qué término describe mejor este riesgo?",
+      "choices_es": [
+        "TI en la sombra",
+        "Amenaza interna",
+        "Exfiltración de datos",
+        "Espionaje"
+      ],
+      "explain_es": "Usar software no aprobado por TI ni por la política es TI en la sombra, y crea riesgo de fugas aunque no haya mala intención."
     },
     {
       "term": "b-1-shadow-it",
@@ -82,7 +178,23 @@
         "外部の攻撃者として法執行機関に通報する"
       ],
       "answer": 1,
-      "explain": "シャドーITは業務効率化という正当な理由で生じることが多いため、利便性とセキュリティのバランスを取ることが重要とされる。"
+      "explain": "シャドーITは業務効率化という正当な理由で生じることが多いため、利便性とセキュリティのバランスを取ることが重要とされる。",
+      "stem_en": "Which approach to shadow IT best matches the spirit of the lesson?",
+      "choices_en": [
+        "Discipline users as insider threats",
+        "Balance employee convenience with security",
+        "Permanently ban all cloud services",
+        "Report them to law enforcement as external attackers"
+      ],
+      "explain_en": "Shadow IT often arises for legitimate efficiency reasons, so balancing convenience and security is key.",
+      "stem_es": "¿Qué enfoque ante la TI en la sombra se ajusta mejor al espíritu de la lección?",
+      "choices_es": [
+        "Sancionar a los usuarios como amenazas internas",
+        "Equilibrar la comodidad de los empleados con la seguridad",
+        "Prohibir para siempre todos los servicios en la nube",
+        "Denunciarlos a la policía como atacantes externos"
+      ],
+      "explain_es": "La TI en la sombra suele surgir por motivos legítimos de eficiencia, así que lo clave es equilibrar comodidad y seguridad."
     },
     {
       "term": "b-1-internal-external",
@@ -94,7 +206,23 @@
         "動機"
       ],
       "answer": 2,
-      "explain": "脅威の発生源が組織の内側か外側かで分けるのは「内部と外部」の属性である。"
+      "explain": "脅威の発生源が組織の内側か外側かで分けるのは「内部と外部」の属性である。",
+      "stem_en": "A security officer evaluates threats by splitting them into \"those arising from employees and partners\" and \"those arising from outside hackers and spies.\" Which attribute is being used?",
+      "choices_en": [
+        "Resources/funding",
+        "Sophistication/capability",
+        "Internal/external",
+        "Motivation"
+      ],
+      "explain_en": "Splitting by whether the source is inside or outside the organization is the internal/external attribute.",
+      "stem_es": "Un responsable de seguridad evalúa las amenazas dividiéndolas en «las que surgen de empleados y socios» y «las que surgen de hackers y espías externos». ¿Qué atributo está usando?",
+      "choices_es": [
+        "Recursos / financiación",
+        "Sofisticación / capacidad",
+        "Interno / externo",
+        "Motivación"
+      ],
+      "explain_es": "Dividir según el origen esté dentro o fuera de la organización es el atributo interno/externo."
     },
     {
       "term": "b-1-resources-funding",
@@ -106,7 +234,23 @@
         "シャドーIT"
       ],
       "answer": 0,
-      "explain": "技術・人材・装備をそろえ長期作戦を展開できるかどうかは、資金力とリソースの観点である。"
+      "explain": "技術・人材・装備をそろえ長期作戦を展開できるかどうかは、資金力とリソースの観点である。",
+      "stem_en": "An attacker employs many skilled engineers, has dedicated equipment, and can sustain long, large-scale operations. Which attribute most directly describes this?",
+      "choices_en": [
+        "Resources/funding",
+        "Internal/external",
+        "Chaos",
+        "Shadow IT"
+      ],
+      "explain_en": "Whether an attacker can field skills, people and equipment for long operations is a matter of resources and funding.",
+      "stem_es": "Un atacante cuenta con muchos ingenieros expertos, equipo especializado y puede mantener operaciones largas y a gran escala. ¿Qué atributo describe esto más directamente?",
+      "choices_es": [
+        "Recursos / financiación",
+        "Interno / externo",
+        "Caos",
+        "TI en la sombra"
+      ],
+      "explain_es": "Que un atacante pueda reunir conocimientos, personal y equipo para operaciones largas es cuestión de recursos y financiación."
     },
     {
       "term": "b-1-sophistication",
@@ -118,7 +262,23 @@
         "国家支援型攻撃者"
       ],
       "answer": 3,
-      "explain": "国家支援型攻撃者は洗練さも能力も高い。ハクティビストは集団によって幅があり、スキルに乏しい攻撃者は低い。"
+      "explain": "国家支援型攻撃者は洗練さも能力も高い。ハクティビストは集団によって幅があり、スキルに乏しい攻撃者は低い。",
+      "stem_en": "Comparing threat actors by sophistication and capability, which is generally rated highest?",
+      "choices_en": [
+        "Unskilled attacker",
+        "Shadow IT",
+        "Hacktivist",
+        "Nation-state actor"
+      ],
+      "explain_en": "Nation-state actors are highly sophisticated and capable. Hacktivists vary by group, and unskilled attackers rate low.",
+      "stem_es": "Al comparar actores de amenazas por sofisticación y capacidad, ¿cuál se considera en general el más alto?",
+      "choices_es": [
+        "Atacante sin experiencia",
+        "TI en la sombra",
+        "Hacktivista",
+        "Actor patrocinado por un Estado"
+      ],
+      "explain_es": "Los actores patrocinados por Estados son muy sofisticados y capaces. Los hacktivistas varían según el grupo y los atacantes sin experiencia puntúan bajo."
     },
     {
       "term": "b-1-sophistication",
@@ -130,7 +290,23 @@
         "洗練さは国家支援型攻撃者と同程度である"
       ],
       "answer": 1,
-      "explain": "スキルに乏しい攻撃者は洗練さの度合いが低いが、既存のツールや情報で攻撃が可能なため甘く見てはいけない。"
+      "explain": "スキルに乏しい攻撃者は洗練さの度合いが低いが、既存のツールや情報で攻撃が可能なため甘く見てはいけない。",
+      "stem_en": "Which statement about unskilled attackers is most accurate in terms of sophistication and capability?",
+      "choices_en": [
+        "Highly sophisticated but poorly funded",
+        "Low sophistication, but not to be dismissed, since online information and tools let them attack",
+        "Low sophistication, so they needn't be considered a threat",
+        "As sophisticated as nation-state actors"
+      ],
+      "explain_en": "Unskilled attackers have low sophistication, but existing tools and information let them attack, so don't underestimate them.",
+      "stem_es": "¿Qué afirmación sobre los atacantes sin experiencia es más acertada en cuanto a sofisticación y capacidad?",
+      "choices_es": [
+        "Muy sofisticados pero con poca financiación",
+        "Poco sofisticados, pero no hay que menospreciarlos, porque la información y las herramientas de internet les permiten atacar",
+        "Poco sofisticados, así que no hace falta considerarlos una amenaza",
+        "Tan sofisticados como los actores patrocinados por Estados"
+      ],
+      "explain_es": "Los atacantes sin experiencia son poco sofisticados, pero las herramientas e información existentes les permiten atacar, así que no hay que subestimarlos."
     },
     {
       "term": "b-1-data-exfiltration",
@@ -142,7 +318,23 @@
         "倫理観"
       ],
       "answer": 2,
-      "explain": "機密情報を不正に持ち出すこと自体が焦点であり、データ窃取（Data exfiltration）に該当する。"
+      "explain": "機密情報を不正に持ち出すこと自体が焦点であり、データ窃取（Data exfiltration）に該当する。",
+      "stem_en": "An employee about to leave copied customer lists and design drawings to a USB drive and sold them to the competitor they were joining. What motive fits this act best?",
+      "choices_en": [
+        "Service disruption",
+        "Chaos",
+        "Data exfiltration",
+        "Ethical"
+      ],
+      "explain_en": "The focus is the unauthorized removal of confidential information itself, which is data exfiltration.",
+      "stem_es": "Un empleado a punto de irse copió listas de clientes y planos de diseño en una memoria USB y los vendió a la competidora a la que se iba. ¿Qué motivo encaja mejor?",
+      "choices_es": [
+        "Interrupción del servicio",
+        "Caos",
+        "Exfiltración de datos",
+        "Ético"
+      ],
+      "explain_es": "Lo central es sacar sin autorización información confidencial, es decir, exfiltración de datos."
     },
     {
       "term": "b-1-espionage",
@@ -154,7 +346,23 @@
         "哲学的・政治的信念"
       ],
       "answer": 1,
-      "explain": "競争優位を得るために他社の知的財産や機密を盗み見るのはスパイ行為（Espionage）である。"
+      "explain": "競争優位を得るために他社の知的財産や機密を盗み見るのはスパイ行為（Espionage）である。",
+      "stem_en": "To cut R&D costs, a startup launched an attack to secretly obtain a major company's manufacturing processes and sales strategy for a new product. What is the motive?",
+      "choices_en": [
+        "Revenge",
+        "Espionage",
+        "Blackmail",
+        "Philosophical/political beliefs"
+      ],
+      "explain_en": "Stealing another company's IP and secrets for competitive advantage is espionage.",
+      "stem_es": "Para ahorrar en I+D, una startup lanzó un ataque para obtener en secreto los procesos de fabricación y la estrategia comercial del nuevo producto de una gran empresa. ¿Cuál es el motivo?",
+      "choices_es": [
+        "Venganza",
+        "Espionaje",
+        "Chantaje",
+        "Creencias filosóficas / políticas"
+      ],
+      "explain_es": "Robar la propiedad intelectual y los secretos de otra empresa para obtener ventaja competitiva es espionaje."
     },
     {
       "term": "b-1-service-disruption",
@@ -166,7 +374,23 @@
         "倫理観"
       ],
       "answer": 0,
-      "explain": "DDoS攻撃でサービスを使えなくし業務を妨げることが目的なので、サービス妨害に該当する。"
+      "explain": "DDoS攻撃でサービスを使えなくし業務を妨げることが目的なので、サービス妨害に該当する。",
+      "stem_en": "During a sale, a rival's online store was flooded with requests and became unreachable, losing sales. No money was demanded. What is the most likely motive?",
+      "choices_en": [
+        "Service disruption",
+        "Data exfiltration",
+        "Blackmail",
+        "Ethical"
+      ],
+      "explain_en": "The goal is to make the service unusable with a DDoS and interfere with business, so it's service disruption.",
+      "stem_es": "Durante unas rebajas, la tienda en línea de un competidor recibió una avalancha de solicitudes, quedó inaccesible y perdió ventas. No se pidió dinero. ¿Cuál es el motivo más probable?",
+      "choices_es": [
+        "Interrupción del servicio",
+        "Exfiltración de datos",
+        "Chantaje",
+        "Ético"
+      ],
+      "explain_es": "El objetivo es dejar el servicio inutilizable con un DDoS y perjudicar el negocio, así que es interrupción del servicio."
     },
     {
       "term": "b-1-blackmail",
@@ -178,7 +402,23 @@
         "脅迫"
       ],
       "answer": 3,
-      "explain": "被害を人質に取り要求を飲ませようと脅す構図は脅迫（Blackmail）である。"
+      "explain": "被害を人質に取り要求を飲ませようと脅す構図は脅迫（Blackmail）である。",
+      "stem_en": "An attacker defaced a company website and then said, \"Pay the specified amount if you want it restored.\" What most directly describes the motive?",
+      "choices_en": [
+        "Chaos",
+        "Espionage",
+        "Service disruption",
+        "Blackmail"
+      ],
+      "explain_en": "Holding the damage hostage and threatening the victim into compliance is blackmail.",
+      "stem_es": "Un atacante desfiguró el sitio web de una empresa y luego dijo: «Paga la cantidad indicada si quieres que lo restauremos». ¿Qué describe más directamente el motivo?",
+      "choices_es": [
+        "Caos",
+        "Espionaje",
+        "Interrupción del servicio",
+        "Chantaje"
+      ],
+      "explain_es": "Tomar el daño como rehén y amenazar a la víctima para que ceda es chantaje."
     },
     {
       "term": "b-1-financial-gain",
@@ -190,7 +430,23 @@
         "復讐"
       ],
       "answer": 2,
-      "explain": "盗んだ認証情報で不正送金を行い、お金を得ることが目的なので金銭的利益に該当する。"
+      "explain": "盗んだ認証情報で不正送金を行い、お金を得ることが目的なので金銭的利益に該当する。",
+      "stem_en": "An attacker stole online banking credentials with a phishing email and made fraudulent transfers from the victim's account. What is the motive?",
+      "choices_en": [
+        "Ethical",
+        "Philosophical/political beliefs",
+        "Financial gain",
+        "Revenge"
+      ],
+      "explain_en": "The aim is to get money by making fraudulent transfers with stolen credentials, so it's financial gain.",
+      "stem_es": "Un atacante robó credenciales de banca en línea con un correo de phishing e hizo transferencias fraudulentas desde la cuenta de la víctima. ¿Cuál es el motivo?",
+      "choices_es": [
+        "Ético",
+        "Creencias filosóficas / políticas",
+        "Beneficio económico",
+        "Venganza"
+      ],
+      "explain_es": "El objetivo es conseguir dinero con transferencias fraudulentas usando credenciales robadas, así que es beneficio económico."
     },
     {
       "term": "b-1-financial-gain",
@@ -202,7 +458,23 @@
         "ランサムウェアは倫理観に基づく攻撃の代表例である"
       ],
       "answer": 0,
-      "explain": "動機は重なり合うものであり、ランサムウェアは脅迫であると同時に最終的には金銭的利益を狙っている。"
+      "explain": "動機は重なり合うものであり、ランサムウェアは脅迫であると同時に最終的には金銭的利益を狙っている。",
+      "stem_en": "Which best describes the relationship between ransomware and motives?",
+      "choices_en": [
+        "It is a blackmail technique, and financial gain is the underlying motive",
+        "Motives are always single, and ransomware is only service disruption",
+        "Ransomware is limited to attacks aimed at chaos",
+        "Ransomware is a classic example of an ethically motivated attack"
+      ],
+      "explain_en": "Motives overlap: ransomware is blackmail, and ultimately it is after financial gain.",
+      "stem_es": "¿Qué describe mejor la relación entre el ransomware y los motivos?",
+      "choices_es": [
+        "Es una técnica de chantaje y, en el fondo, el motivo es el beneficio económico",
+        "Los motivos son siempre únicos y el ransomware es solo interrupción del servicio",
+        "El ransomware se limita a ataques que buscan el caos",
+        "El ransomware es un ejemplo típico de ataque por motivos éticos"
+      ],
+      "explain_es": "Los motivos se solapan: el ransomware es chantaje y, en última instancia, busca beneficio económico."
     },
     {
       "term": "b-1-philosophical-political",
@@ -214,7 +486,23 @@
         "データ窃取"
       ],
       "answer": 1,
-      "explain": "理念や政治的主張に基づき、それに反する組織を攻撃するのは哲学的・政治的信念による動機で、ハクティビストに典型的である。"
+      "explain": "理念や政治的主張に基づき、それに反する組織を攻撃するのは哲学的・政治的信念による動機で、ハクティビストに典型的である。",
+      "stem_en": "A hacker group championing free speech launched a DDoS on government sites to criticize an authoritarian regime. What is the group's motive?",
+      "choices_en": [
+        "Financial gain",
+        "Philosophical/political beliefs",
+        "Revenge",
+        "Data exfiltration"
+      ],
+      "explain_en": "Attacking organizations that oppose one's ideals or political views is driven by philosophical/political beliefs, typical of hacktivists.",
+      "stem_es": "Un grupo de hackers que defiende la libertad de expresión lanzó un DDoS contra sitios del gobierno para criticar a un régimen autoritario. ¿Cuál es su motivo?",
+      "choices_es": [
+        "Beneficio económico",
+        "Creencias filosóficas / políticas",
+        "Venganza",
+        "Exfiltración de datos"
+      ],
+      "explain_es": "Atacar a organizaciones contrarias a los propios ideales o posturas políticas responde a creencias filosóficas o políticas, típico de los hacktivistas."
     },
     {
       "term": "b-1-ethical",
@@ -226,7 +514,23 @@
         "倫理観"
       ],
       "answer": 3,
-      "explain": "不正を正す・情報公開は正しいという道義的信念に基づく行動であり、倫理観（Ethical）の動機に該当する。"
+      "explain": "不正を正す・情報公開は正しいという道義的信念に基づく行動であり、倫理観（Ethical）の動機に該当する。",
+      "stem_en": "Believing \"it is right to expose an organization's wrongdoing,\" a person published a large volume of a political campaign's emails through a whistleblowing site. What motive fits best?",
+      "choices_en": [
+        "Chaos",
+        "Financial gain",
+        "Blackmail",
+        "Ethical"
+      ],
+      "explain_en": "Acting on a moral conviction that wrongs should be corrected and information made public is an ethical motive.",
+      "stem_es": "Convencida de que «es correcto sacar a la luz las irregularidades de una organización», una persona publicó un gran volumen de correos de una campaña política a través de un sitio de filtraciones. ¿Qué motivo encaja mejor?",
+      "choices_es": [
+        "Caos",
+        "Beneficio económico",
+        "Chantaje",
+        "Ético"
+      ],
+      "explain_es": "Actuar por la convicción moral de corregir injusticias y hacer pública la información es un motivo ético."
     },
     {
       "term": "b-1-revenge",
@@ -238,7 +542,23 @@
         "混沌"
       ],
       "answer": 1,
-      "explain": "解雇への恨みを晴らすための報復であり、内部脅威者と結び付きやすい復讐の動機に該当する。"
+      "explain": "解雇への恨みを晴らすための報復であり、内部脅威者と結び付きやすい復讐の動機に該当する。",
+      "stem_en": "A fired former sysadmin used an account that hadn't been disabled to break into the old workplace's server and delete business data. What is the most likely motive?",
+      "choices_en": [
+        "Espionage",
+        "Revenge",
+        "Philosophical/political beliefs",
+        "Chaos"
+      ],
+      "explain_en": "It's retaliation to settle a grudge over the firing — a revenge motive often tied to insider threats.",
+      "stem_es": "Un exadministrador de sistemas despedido usó una cuenta que no se había desactivado para entrar en el servidor de su antiguo trabajo y borrar datos del negocio. ¿Cuál es el motivo más probable?",
+      "choices_es": [
+        "Espionaje",
+        "Venganza",
+        "Creencias filosóficas / políticas",
+        "Caos"
+      ],
+      "explain_es": "Es una represalia para saldar el rencor por el despido: un motivo de venganza ligado a menudo a las amenazas internas."
     },
     {
       "term": "b-1-chaos",
@@ -250,7 +570,23 @@
         "スパイ行為"
       ],
       "answer": 2,
-      "explain": "明確な目的がなく、混乱を引き起こすこと自体を楽しむのは混沌（Disruption/chaos）の動機である（例: LulzSec）。"
+      "explain": "明確な目的がなく、混乱を引き起こすこと自体を楽しむのは混沌（Disruption/chaos）の動機である（例: LulzSec）。",
+      "stem_en": "With no particular cause and no money demands, a hacker group indiscriminately attacked companies and agencies, leaked secrets, and laughed at the resulting turmoil. What motive fits best?",
+      "choices_en": [
+        "Ethical",
+        "Financial gain",
+        "Chaos",
+        "Espionage"
+      ],
+      "explain_en": "Having no clear goal and enjoying the disruption itself is the chaos motive (e.g., LulzSec).",
+      "stem_es": "Sin una causa concreta ni exigencias de dinero, un grupo de hackers atacaba indiscriminadamente a empresas y organismos, filtraba secretos y se divertía con el caos resultante. ¿Qué motivo encaja mejor?",
+      "choices_es": [
+        "Ético",
+        "Beneficio económico",
+        "Caos",
+        "Espionaje"
+      ],
+      "explain_es": "No tener un objetivo claro y disfrutar del propio desorden es el motivo del caos (p. ej., LulzSec)."
     },
     {
       "term": "b-1-insider-threat",
@@ -262,7 +598,23 @@
         "ネットワークやシステムへの正規のアクセス権を持っているため"
       ],
       "answer": 3,
-      "explain": "内部脅威者は最初から正規のアクセス権を持つため、侵入の手間なく重大な損害を与え得る。"
+      "explain": "内部脅威者は最初から正規のアクセス権を持つため、侵入の手間なく重大な損害を与え得る。",
+      "stem_en": "What is the biggest reason insider threats tend to cause more serious damage than external attackers?",
+      "choices_en": [
+        "They receive ample funding from a state",
+        "They only use existing attack tools",
+        "They use devices not approved by IT",
+        "They have legitimate access to networks and systems"
+      ],
+      "explain_en": "Insiders already have legitimate access, so they can do serious damage without having to break in.",
+      "stem_es": "¿Cuál es la principal razón por la que las amenazas internas suelen causar más daño que los atacantes externos?",
+      "choices_es": [
+        "Reciben abundante financiación de un Estado",
+        "Solo usan herramientas de ataque existentes",
+        "Usan dispositivos no aprobados por TI",
+        "Tienen acceso legítimo a las redes y los sistemas"
+      ],
+      "explain_es": "Los internos ya tienen acceso legítimo, así que pueden causar daños graves sin necesidad de entrar por la fuerza."
     }
   ],
   "B-2": [
@@ -276,7 +628,23 @@
         "VPN・NAC・ポートセキュリティ"
       ],
       "answer": 1,
-      "explain": "SPF・DKIM・DMARC はなりすましメール対策で、認証されていないサーバーからの送信を検出・拒否できる。"
+      "explain": "SPF・DKIM・DMARC はなりすましメール対策で、認証されていないサーバーからの送信を検出・拒否できる。",
+      "stem_en": "A security officer noticed emails spoofing the company domain being sent from unauthenticated external servers. Which set of measures lets receivers verify that the sending domain is legitimate?",
+      "choices_en": [
+        "WPA3 / EAP / RADIUS",
+        "SPF / DKIM / DMARC",
+        "HTTP / HTTPS / SMTP",
+        "VPN / NAC / port security"
+      ],
+      "explain_en": "SPF, DKIM and DMARC counter spoofed email and can detect and reject mail from unauthenticated servers.",
+      "stem_es": "Un responsable de seguridad detectó correos que suplantaban el dominio de la empresa enviados desde servidores externos no autenticados. ¿Qué conjunto de medidas permite al receptor verificar que el dominio remitente es legítimo?",
+      "choices_es": [
+        "WPA3 / EAP / RADIUS",
+        "SPF / DKIM / DMARC",
+        "HTTP / HTTPS / SMTP",
+        "VPN / NAC / seguridad de puertos"
+      ],
+      "explain_es": "SPF, DKIM y DMARC combaten la suplantación del correo y pueden detectar y rechazar mensajes de servidores no autenticados."
     },
     {
       "term": "b-2-email",
@@ -288,7 +656,23 @@
         "Eメール"
       ],
       "answer": 3,
-      "explain": "添付ファイル付きのメールを媒介にしているため、脅威ベクトルは Eメール（メッセージベース）である。"
+      "explain": "添付ファイル付きのメールを媒介にしているため、脅威ベクトルは Eメール（メッセージベース）である。",
+      "stem_en": "An employee opened an attachment in an email posing as a business partner, and their device was infected with ransomware. What threat vector (medium) was used?",
+      "choices_en": [
+        "Removable device",
+        "Voice call",
+        "Open service ports",
+        "Email"
+      ],
+      "explain_en": "The attack was carried by an email with an attachment, so the threat vector is email (message-based).",
+      "stem_es": "Un empleado abrió el adjunto de un correo que suplantaba a un socio comercial y su equipo se infectó con ransomware. ¿Qué vector de amenaza (medio) se usó?",
+      "choices_es": [
+        "Dispositivo extraíble",
+        "Llamada de voz",
+        "Puertos de servicio abiertos",
+        "Correo electrónico"
+      ],
+      "explain_es": "El ataque llegó en un correo con adjunto, así que el vector es el correo electrónico (basado en mensajes)."
     },
     {
       "term": "b-2-sms",
@@ -300,7 +684,23 @@
         "画像ファイルにしか情報を埋め込めない"
       ],
       "answer": 0,
-      "explain": "SMS は送受信者間でメッセージが暗号化されないため、OTP を狙った詐欺などに悪用されやすい。"
+      "explain": "SMS は送受信者間でメッセージが暗号化されないため、OTP を狙った詐欺などに悪用されやすい。",
+      "stem_en": "An employee's phone received a short message to their phone number saying, \"This is Amazon. Please confirm your login,\" with a URL asking for a one-time password. Which characteristic of this medium did the lesson emphasize?",
+      "choices_en": [
+        "Messages are not encrypted between sender and recipient",
+        "It is always end-to-end encrypted",
+        "It can only be sent from official accounts",
+        "It can only embed information in image files"
+      ],
+      "explain_en": "SMS isn't encrypted between sender and recipient, making it easy to abuse for OTP scams.",
+      "stem_es": "El móvil de un empleado recibió un mensaje corto a su número que decía «Somos Amazon. Confirma tu inicio de sesión», con una URL que pedía una contraseña de un solo uso. ¿Qué característica de este medio destacó la lección?",
+      "choices_es": [
+        "Los mensajes no se cifran entre remitente y destinatario",
+        "Siempre tiene cifrado de extremo a extremo",
+        "Solo puede enviarse desde cuentas oficiales",
+        "Solo puede incrustar información en archivos de imagen"
+      ],
+      "explain_es": "El SMS no se cifra entre remitente y destinatario, por lo que es fácil abusar de él en estafas de OTP."
     },
     {
       "term": "b-2-im",
@@ -312,7 +712,23 @@
         "無線ネットワーク"
       ],
       "answer": 2,
-      "explain": "LINE や Messenger などのメッセンジャーアプリを悪用した攻撃はインスタントメッセージング（IM）経由である。"
+      "explain": "LINE や Messenger などのメッセンジャーアプリを悪用した攻撃はインスタントメッセージング（IM）経由である。",
+      "stem_en": "A friend's LINE account sent a file saying \"Check out this photo,\" and opening it caused a malware infection. The friend's account had been hijacked. What is the threat vector?",
+      "choices_en": [
+        "SMS",
+        "Voice call",
+        "Instant messaging",
+        "Wireless network"
+      ],
+      "explain_en": "Attacks abusing messenger apps like LINE or Messenger come through instant messaging (IM).",
+      "stem_es": "La cuenta de LINE de un amigo envió un archivo con el texto «Mira esta foto» y al abrirlo se produjo una infección de malware. La cuenta del amigo había sido secuestrada. ¿Cuál es el vector de amenaza?",
+      "choices_es": [
+        "SMS",
+        "Llamada de voz",
+        "Mensajería instantánea",
+        "Red inalámbrica"
+      ],
+      "explain_es": "Los ataques que abusan de apps de mensajería como LINE o Messenger llegan por mensajería instantánea (IM)."
     },
     {
       "term": "b-2-image",
@@ -324,7 +740,23 @@
         "デフォルトパスワードの変更"
       ],
       "answer": 1,
-      "explain": "画像ベースの攻撃には、画像ファイルの無害化とユーザー教育が有効な対策とされる。"
+      "explain": "画像ベースの攻撃には、画像ファイルの無害化とユーザー教育が有効な対策とされる。",
+      "stem_en": "A popular meme spreading on social media had malware embedded in a way that's invisible at a glance. Which countermeasure for this vector was mentioned in the lesson?",
+      "choices_en": [
+        "Running port scans",
+        "Sanitizing image files and educating users",
+        "Turning off Bluetooth discoverability",
+        "Changing default passwords"
+      ],
+      "explain_en": "For image-based attacks, sanitizing image files and educating users are effective countermeasures.",
+      "stem_es": "Un meme popular que circulaba por redes sociales llevaba malware incrustado de forma imperceptible a simple vista. ¿Qué contramedida para este vector se mencionó en la lección?",
+      "choices_es": [
+        "Realizar escaneos de puertos",
+        "Sanear los archivos de imagen y formar a los usuarios",
+        "Desactivar la visibilidad de Bluetooth",
+        "Cambiar las contraseñas predeterminadas"
+      ],
+      "explain_es": "Para los ataques basados en imágenes, sanear los archivos de imagen y formar a los usuarios son contramedidas eficaces."
     },
     {
       "term": "b-2-file",
@@ -336,7 +768,23 @@
         "ファイル"
       ],
       "answer": 3,
-      "explain": "無害に見える PDF などの悪意あるファイルを開かせる手口は、ファイルベースの脅威ベクトルである。"
+      "explain": "無害に見える PDF などの悪意あるファイルを開かせる手口は、ファイルベースの脅威ベクトルである。",
+      "stem_en": "An attacker placed malware disguised as \"invoice.pdf\" in cloud storage and sent a share link to get employees to open it. Which threat vector does this mainly abuse?",
+      "choices_en": [
+        "Image",
+        "Voice call",
+        "Unsupported systems",
+        "File"
+      ],
+      "explain_en": "Getting people to open malicious files that look harmless, such as PDFs, is a file-based threat vector.",
+      "stem_es": "Un atacante colocó en el almacenamiento en la nube un malware disfrazado de «factura.pdf» y envió un enlace compartido para que los empleados lo abrieran. ¿Qué vector de amenaza aprovecha principalmente?",
+      "choices_es": [
+        "Imagen",
+        "Llamada de voz",
+        "Sistemas sin soporte",
+        "Archivo"
+      ],
+      "explain_es": "Conseguir que se abran archivos maliciosos de aspecto inofensivo, como PDF, es un vector basado en archivos."
     },
     {
       "term": "b-2-voice-call",
@@ -348,7 +796,23 @@
         "リムーバブルデバイス"
       ],
       "answer": 0,
-      "explain": "音声通話を使って機密情報や金銭を得ようとするのはボイスコールの脅威ベクトルである。"
+      "explain": "音声通話を使って機密情報や金銭を得ようとするのはボイスコールの脅威ベクトルである。",
+      "stem_en": "An attacker called an employee claiming to be a government agency and, under the pretext of verifying account details, demanded a bank transfer. What medium (threat vector) was used?",
+      "choices_en": [
+        "Voice call",
+        "Instant messaging",
+        "Email",
+        "Removable device"
+      ],
+      "explain_en": "Using phone calls to obtain sensitive information or money is the voice call threat vector.",
+      "stem_es": "Un atacante llamó a un empleado haciéndose pasar por un organismo público y, con la excusa de verificar datos bancarios, le exigió una transferencia. ¿Qué medio (vector de amenaza) se usó?",
+      "choices_es": [
+        "Llamada de voz",
+        "Mensajería instantánea",
+        "Correo electrónico",
+        "Dispositivo extraíble"
+      ],
+      "explain_es": "Usar llamadas telefónicas para obtener información sensible o dinero es el vector de llamada de voz."
     },
     {
       "term": "b-2-removable-device",
@@ -360,7 +824,23 @@
         "無線 AP の SSID を非表示にする"
       ],
       "answer": 2,
-      "explain": "リムーバブルデバイス経由の感染には、使用を制限・禁止し許可済み機器のみ例外的に認める対策が有効。"
+      "explain": "リムーバブルデバイス経由の感染には、使用を制限・禁止し許可済み機器のみ例外的に認める対策が有効。",
+      "stem_en": "Several USB drives bearing the company logo were left in the parking lot; an employee plugged one into a work PC and got infected. What is the best way to prevent a repeat?",
+      "choices_en": [
+        "Configure DMARC on the mail server",
+        "Close port 443 on the web server",
+        "Restrict removable media so only approved devices can be used",
+        "Hide the wireless AP's SSID"
+      ],
+      "explain_en": "For infections via removable devices, restricting or banning their use and allowing only approved devices as exceptions is effective.",
+      "stem_es": "Se encontraron varias memorias USB con el logotipo de la empresa en el aparcamiento; un empleado conectó una a un PC de la oficina y se infectó. ¿Cuál es la mejor forma de evitar que se repita?",
+      "choices_es": [
+        "Configurar DMARC en el servidor de correo",
+        "Cerrar el puerto 443 del servidor web",
+        "Restringir los medios extraíbles para que solo se puedan usar dispositivos aprobados",
+        "Ocultar el SSID del punto de acceso inalámbrico"
+      ],
+      "explain_es": "Ante infecciones por dispositivos extraíbles, es eficaz restringir o prohibir su uso y permitir solo dispositivos aprobados como excepción."
     },
     {
       "term": "b-2-unsupported",
@@ -372,7 +852,23 @@
         "SMS が暗号化されないから"
       ],
       "answer": 1,
-      "explain": "サポート終了製品は既知の脆弱性に対するパッチが提供されず、攻撃者に悪用されやすい。"
+      "explain": "サポート終了製品は既知の脆弱性に対するパッチが提供されず、攻撃者に悪用されやすい。",
+      "stem_en": "A factory kept using a Windows XP control PC, and it was breached through a known RDP vulnerability. What was the main reason this PC was especially dangerous?",
+      "choices_en": [
+        "It still had its default password",
+        "No patches are released to fix known vulnerabilities",
+        "Bluetooth was always on",
+        "SMS is not encrypted"
+      ],
+      "explain_en": "Products out of support get no patches for known vulnerabilities, so attackers can easily exploit them.",
+      "stem_es": "Una fábrica seguía usando un PC de control con Windows XP y fue atacada mediante una vulnerabilidad conocida de RDP. ¿Cuál fue la principal razón de que este PC fuera tan peligroso?",
+      "choices_es": [
+        "Seguía con la contraseña predeterminada",
+        "No se publican parches que corrijan las vulnerabilidades conocidas",
+        "El Bluetooth estaba siempre activado",
+        "El SMS no está cifrado"
+      ],
+      "explain_es": "Los productos sin soporte no reciben parches para vulnerabilidades conocidas, así que los atacantes pueden explotarlos fácilmente."
     },
     {
       "term": "b-2-wired",
@@ -384,7 +880,23 @@
         "有線ネットワーク／スイッチのポートセキュリティ未設定"
       ],
       "answer": 3,
-      "explain": "スイッチのポートセキュリティが不十分だと、物理ポートへの不正接続で有線ネットワークに侵入される。"
+      "explain": "スイッチのポートセキュリティが不十分だと、物理ポートへの不正接続で有線ネットワークに侵入される。",
+      "stem_en": "A visitor plugged their own laptop into an unused LAN port in a meeting room and got straight onto the internal network. Which combination of threat vector and related misconfiguration fits best?",
+      "choices_en": [
+        "Wireless network / WPA2 not configured",
+        "Bluetooth / pairing not rejected",
+        "Open ports / port 80 open on the firewall",
+        "Wired network / switch port security not configured"
+      ],
+      "explain_en": "With weak switch port security, an unauthorized connection to a physical port gives access to the wired network.",
+      "stem_es": "Un visitante conectó su portátil a un puerto LAN libre de una sala de reuniones y accedió directamente a la red interna. ¿Qué combinación de vector de amenaza y fallo de configuración encaja mejor?",
+      "choices_es": [
+        "Red inalámbrica / WPA2 sin configurar",
+        "Bluetooth / emparejamiento sin rechazar",
+        "Puertos abiertos / puerto 80 abierto en el cortafuegos",
+        "Red cableada / seguridad de puertos del switch sin configurar"
+      ],
+      "explain_es": "Si la seguridad de puertos del switch es débil, una conexión no autorizada a un puerto físico da acceso a la red cableada."
     },
     {
       "term": "b-2-wireless",
@@ -396,7 +908,23 @@
         "ブルースナーフィング"
       ],
       "answer": 0,
-      "explain": "正規 AP に似せた不正 AP を設置して通信を盗聴・認証情報を窃取するのは Rogue AP（無線ネットワークの脅威）である。"
+      "explain": "正規 AP に似せた不正 AP を設置して通信を盗聴・認証情報を窃取するのは Rogue AP（無線ネットワークの脅威）である。",
+      "stem_en": "An attacker set up an access point in a café with a name very similar to the corporate Wi-Fi, led employees who connected to a fake login page, and stole their credentials. What is this technique?",
+      "choices_en": [
+        "Rogue access point",
+        "Wardriving",
+        "Typosquatting",
+        "Bluesnarfing"
+      ],
+      "explain_en": "Setting up an unauthorized AP that mimics a legitimate one to eavesdrop and steal credentials is a rogue AP (a wireless network threat).",
+      "stem_es": "Un atacante instaló en una cafetería un punto de acceso con un nombre muy parecido al de la Wi-Fi corporativa, llevó a los empleados que se conectaban a una página de inicio de sesión falsa y robó sus credenciales. ¿Qué técnica es?",
+      "choices_es": [
+        "Punto de acceso no autorizado (rogue AP)",
+        "Wardriving",
+        "Typosquatting",
+        "Bluesnarfing"
+      ],
+      "explain_es": "Instalar un AP no autorizado que imita a uno legítimo para escuchar el tráfico y robar credenciales es un rogue AP (amenaza de red inalámbrica)."
     },
     {
       "term": "b-2-wireless",
@@ -408,7 +936,23 @@
         "水飲み場攻撃"
       ],
       "answer": 2,
-      "explain": "移動しながら無線 LAN AP を探し回り、暗号化されていない AP に侵入する行為はウォードライビング。"
+      "explain": "移動しながら無線 LAN AP を探し回り、暗号化されていない AP に侵入する行為はウォードライビング。",
+      "stem_en": "What do you call driving around town searching for wireless networks with a laptop, finding unencrypted access points, and connecting without permission?",
+      "choices_en": [
+        "Piggybacking",
+        "Port scanning",
+        "Wardriving",
+        "Watering hole attack"
+      ],
+      "explain_en": "Moving around hunting for wireless APs and breaking into unencrypted ones is wardriving.",
+      "stem_es": "¿Cómo se llama recorrer la ciudad en coche buscando redes inalámbricas con un portátil, encontrar puntos de acceso sin cifrar y conectarse sin permiso?",
+      "choices_es": [
+        "Piggybacking",
+        "Escaneo de puertos",
+        "Wardriving",
+        "Ataque de abrevadero"
+      ],
+      "explain_es": "Desplazarse buscando AP inalámbricos y colarse en los que no están cifrados es wardriving."
     },
     {
       "term": "b-2-bluetooth",
@@ -420,7 +964,23 @@
         "検出可能状態を常にオンにしておく"
       ],
       "answer": 3,
-      "explain": "Bluetooth は検出可能性をオフにすることが推奨される。常にオンにするのは逆効果。"
+      "explain": "Bluetooth は検出可能性をオフにすることが推奨される。常にオンにするのは逆効果。",
+      "stem_en": "At an airport, a stranger's device connected to a smartphone left in discoverable mode and stole its contacts. Which is LEAST appropriate as a countermeasure for this vector?",
+      "choices_en": [
+        "Don't pair with anything but trusted devices",
+        "Reject connection requests from unknown devices",
+        "Turn Bluetooth off when not in use",
+        "Keep discoverable mode on at all times"
+      ],
+      "explain_en": "Turning off Bluetooth discoverability is recommended; keeping it on all the time is counterproductive.",
+      "stem_es": "En un aeropuerto, el dispositivo de un desconocido se conectó a un smartphone en modo visible y robó sus contactos. ¿Cuál es la contramedida MENOS adecuada para este vector?",
+      "choices_es": [
+        "No emparejar con dispositivos que no sean de confianza",
+        "Rechazar solicitudes de conexión de dispositivos desconocidos",
+        "Desactivar el Bluetooth cuando no se use",
+        "Mantener siempre activado el modo visible"
+      ],
+      "explain_es": "Se recomienda desactivar la visibilidad de Bluetooth; mantenerla siempre activada es contraproducente."
     },
     {
       "term": "b-2-open-ports",
@@ -432,7 +992,23 @@
         "タイポスクワッティング／ドメイン名"
       ],
       "answer": 0,
-      "explain": "攻撃者はポートスキャンで開いているポートと脆弱性を探り、そこを突破口に侵入する。"
+      "explain": "攻撃者はポートスキャンで開いているポートと脆弱性を探り、そこを突破口に侵入する。",
+      "stem_en": "Before breaking in, an attacker wants to learn which services the target server is listening on and what vulnerabilities they have. Which pair of first action and targeted attack surface is most likely?",
+      "choices_en": [
+        "Port scanning / open ports",
+        "Wardriving / wireless network",
+        "Steganography / images",
+        "Typosquatting / domain names"
+      ],
+      "explain_en": "Attackers use port scans to find open ports and vulnerabilities, then use them as a way in.",
+      "stem_es": "Antes de entrar, un atacante quiere saber qué servicios escucha el servidor objetivo y qué vulnerabilidades tienen. ¿Qué par de primera acción y superficie de ataque es más probable?",
+      "choices_es": [
+        "Escaneo de puertos / puertos abiertos",
+        "Wardriving / red inalámbrica",
+        "Esteganografía / imágenes",
+        "Typosquatting / nombres de dominio"
+      ],
+      "explain_es": "Los atacantes usan escaneos de puertos para encontrar puertos abiertos y vulnerabilidades, y luego los usan como entrada."
     },
     {
       "term": "b-2-default-credentials",
@@ -444,7 +1020,23 @@
         "インスタントメッセージング"
       ],
       "answer": 1,
-      "explain": "Mirai などの IoT ボットネットは、初期設定の ID・パスワードを変更していない機器を突いて構築された。"
+      "explain": "Mirai などの IoT ボットネットは、初期設定の ID・パスワードを変更していない機器を突いて構築された。",
+      "stem_en": "Large numbers of security cameras connected to the internet with \"admin/admin\" were hijacked and used for DDoS as part of a huge botnet. Which attack surface was the main cause?",
+      "choices_en": [
+        "Unsupported systems",
+        "Default credentials",
+        "Vendors",
+        "Instant messaging"
+      ],
+      "explain_en": "IoT botnets like Mirai were built by exploiting devices whose default usernames and passwords were never changed.",
+      "stem_es": "Gran cantidad de cámaras de seguridad conectadas a internet con «admin/admin» fueron secuestradas y usadas para DDoS como parte de una enorme botnet. ¿Qué superficie de ataque fue la causa principal?",
+      "choices_es": [
+        "Sistemas sin soporte",
+        "Credenciales predeterminadas",
+        "Proveedores",
+        "Mensajería instantánea"
+      ],
+      "explain_es": "Botnets IoT como Mirai se formaron aprovechando dispositivos cuyos usuarios y contraseñas de fábrica nunca se cambiaron."
     },
     {
       "term": "b-2-msp",
@@ -456,7 +1048,23 @@
         "ボイスコール"
       ],
       "answer": 0,
-      "explain": "MSP は複数顧客の IT を一括管理するため、MSP が攻撃されると利用している多くの企業に影響が及ぶ。"
+      "explain": "MSP は複数顧客の IT を一括管理するため、MSP が攻撃されると利用している多くの企業に影響が及ぶ。",
+      "stem_en": "An IT operations contractor was compromised, and ransomware was pushed at once to dozens of customer environments the contractor managed remotely. What was the attack surface?",
+      "choices_en": [
+        "Managed service provider (MSP)",
+        "Wireless network",
+        "Removable device",
+        "Voice call"
+      ],
+      "explain_en": "An MSP manages IT for many customers at once, so an attack on the MSP affects many of the companies using it.",
+      "stem_es": "Un proveedor externo de operaciones de TI fue comprometido y se distribuyó ransomware a la vez a decenas de entornos de clientes que gestionaba en remoto. ¿Cuál fue la superficie de ataque?",
+      "choices_es": [
+        "Proveedor de servicios gestionados (MSP)",
+        "Red inalámbrica",
+        "Dispositivo extraíble",
+        "Llamada de voz"
+      ],
+      "explain_es": "Un MSP gestiona la TI de muchos clientes a la vez, así que un ataque contra él afecta a muchas de las empresas que lo usan."
     },
     {
       "term": "b-2-vendor",
@@ -468,7 +1076,23 @@
         "有線ネットワーク"
       ],
       "answer": 2,
-      "explain": "ベンダーの製品・アップデートを通じて自組織に侵入されるサプライチェーン攻撃の典型例である。"
+      "explain": "ベンダーの製品・アップデートを通じて自組織に侵入されるサプライチェーン攻撃の典型例である。",
+      "stem_en": "Malware was slipped into a legitimate update of widely used accounting software, and the government agencies and companies using it were hit all at once (NotPetya, 2017). What was the starting point of this attack?",
+      "choices_en": [
+        "Default credentials",
+        "Watering hole attack",
+        "Vendor (supply chain)",
+        "Wired network"
+      ],
+      "explain_en": "This is a classic supply chain attack, where intruders get in through a vendor's product or update.",
+      "stem_es": "Se introdujo malware en una actualización legítima de un software de contabilidad muy usado, y los organismos públicos y empresas que lo tenían se vieron afectados a la vez (NotPetya, 2017). ¿Cuál fue el punto de partida del ataque?",
+      "choices_es": [
+        "Credenciales predeterminadas",
+        "Ataque de abrevadero",
+        "Proveedor (cadena de suministro)",
+        "Red cableada"
+      ],
+      "explain_es": "Es un ataque típico a la cadena de suministro, en el que se entra a través del producto o la actualización de un proveedor."
     },
     {
       "term": "b-2-phishing",
@@ -480,7 +1104,23 @@
         "フィッシング"
       ],
       "answer": 3,
-      "explain": "実在組織を装ったメールで偽サイトに誘導し、認証情報を盗むのはフィッシングである。"
+      "explain": "実在組織を装ったメールで偽サイトに誘導し、認証情報を盗むのはフィッシングである。",
+      "stem_en": "An email posing as a major online store said, \"Unauthorized access detected. Change your password now,\" and its link led to a lookalike site where the victim entered their ID and password. What attack is this?",
+      "choices_en": [
+        "Vishing",
+        "Smishing",
+        "Watering hole attack",
+        "Phishing"
+      ],
+      "explain_en": "Luring people to a fake site with an email posing as a real organization to steal credentials is phishing.",
+      "stem_es": "Un correo que suplantaba a una gran tienda en línea decía «Se ha detectado un acceso no autorizado. Cambia tu contraseña ya», y su enlace llevaba a un sitio idéntico donde la víctima introdujo su usuario y contraseña. ¿Qué ataque es?",
+      "choices_es": [
+        "Vishing",
+        "Smishing",
+        "Ataque de abrevadero",
+        "Phishing"
+      ],
+      "explain_es": "Atraer a la gente a un sitio falso con un correo que suplanta a una organización real para robar credenciales es phishing."
     },
     {
       "term": "b-2-vishing",
@@ -492,7 +1132,23 @@
         "ブランドインパーソネーション"
       ],
       "answer": 1,
-      "explain": "Voice と Phishing の造語であるビッシングは、電話で公的機関や銀行を装い暗証番号などを聞き出す手口。"
+      "explain": "Voice と Phishing の造語であるビッシングは、電話で公的機関や銀行を装い暗証番号などを聞き出す手口。",
+      "stem_en": "Someone claiming to be from the bank called and said, \"Fraudulent transactions were found, so you must change your PIN immediately,\" and the victim gave out their PIN. What technique is this?",
+      "choices_en": [
+        "Smishing",
+        "Vishing",
+        "Pretexting",
+        "Brand impersonation"
+      ],
+      "explain_en": "Vishing (voice + phishing) uses phone calls posing as banks or authorities to extract PINs and similar data.",
+      "stem_es": "Alguien que decía ser del banco llamó y dijo: «Hemos detectado transacciones fraudulentas, debe cambiar su PIN de inmediato», y la víctima dio su PIN. ¿Qué técnica es?",
+      "choices_es": [
+        "Smishing",
+        "Vishing",
+        "Pretexting",
+        "Suplantación de marca"
+      ],
+      "explain_es": "El vishing (voz + phishing) usa llamadas que suplantan a bancos u organismos para obtener PIN y datos similares."
     },
     {
       "term": "b-2-smishing",
@@ -504,7 +1160,23 @@
         "ビジネスメール詐欺"
       ],
       "answer": 0,
-      "explain": "SMS を使ったフィッシングはスミッシング（SMS＋Phishing）と呼ばれる。"
+      "explain": "SMS を使ったフィッシングはスミッシング（SMS＋Phishing）と呼ばれる。",
+      "stem_en": "A short message to a mobile phone said, \"We tried to deliver your package but you were out, so we took it back,\" with a URL leading to a fake site asking for card details. What attack is this?",
+      "choices_en": [
+        "Smishing",
+        "Vishing",
+        "Typosquatting",
+        "Business email compromise"
+      ],
+      "explain_en": "Phishing via SMS is called smishing (SMS + phishing).",
+      "stem_es": "Un mensaje corto a un móvil decía «Intentamos entregar su paquete, pero no estaba; lo hemos devuelto», con una URL que llevaba a un sitio falso que pedía los datos de la tarjeta. ¿Qué ataque es?",
+      "choices_es": [
+        "Smishing",
+        "Vishing",
+        "Typosquatting",
+        "Compromiso del correo empresarial"
+      ],
+      "explain_es": "El phishing por SMS se llama smishing (SMS + phishing)."
     },
     {
       "term": "b-2-misinformation",
@@ -516,7 +1188,23 @@
         "プリテキシング"
       ],
       "answer": 2,
-      "explain": "欺く意図をもって虚偽情報を流し、人の判断を操作するのは偽情報（Disinformation）である。"
+      "explain": "欺く意図をもって虚偽情報を流し、人の判断を操作するのは偽情報（Disinformation）である。",
+      "stem_en": "To push down a competitor's stock price, an attacker deliberately spread false posts on social media claiming \"a massive data breach occurred.\" Which attack vector fits best?",
+      "choices_en": [
+        "Watering hole attack",
+        "Brand impersonation",
+        "Disinformation",
+        "Pretexting"
+      ],
+      "explain_en": "Spreading false information with intent to deceive and manipulate people's judgment is disinformation.",
+      "stem_es": "Para hundir la cotización de un competidor, un atacante difundió a propósito en redes sociales publicaciones falsas que decían «se ha producido una enorme filtración de datos». ¿Qué vector de ataque encaja mejor?",
+      "choices_es": [
+        "Ataque de abrevadero",
+        "Suplantación de marca",
+        "Desinformación",
+        "Pretexting"
+      ],
+      "explain_es": "Difundir información falsa con intención de engañar y manipular el juicio de la gente es desinformación."
     },
     {
       "term": "b-2-impersonation",
@@ -528,7 +1216,23 @@
         "ウォードライビング"
       ],
       "answer": 1,
-      "explain": "信頼される人物・担当者を装って指示に従わせる手口はなりすまし（Impersonation）である。"
+      "explain": "信頼される人物・担当者を装って指示に従わせる手口はなりすまし（Impersonation）である。",
+      "stem_en": "Someone claiming to be Microsoft support called saying, \"A virus was detected on your PC; we'll remove it remotely.\" The victim installed a remote-access tool as instructed and the PC was taken over. Which term most broadly describes this technique?",
+      "choices_en": [
+        "Typosquatting",
+        "Impersonation",
+        "Watering hole attack",
+        "Wardriving"
+      ],
+      "explain_en": "Posing as a trusted person or staff member to get people to follow instructions is impersonation.",
+      "stem_es": "Alguien que decía ser del soporte de Microsoft llamó diciendo «Hemos detectado un virus en su PC; lo eliminaremos en remoto». La víctima instaló una herramienta de acceso remoto como le indicaron y le tomaron el control del PC. ¿Qué término describe esta técnica de forma más general?",
+      "choices_es": [
+        "Typosquatting",
+        "Suplantación de identidad",
+        "Ataque de abrevadero",
+        "Wardriving"
+      ],
+      "explain_es": "Hacerse pasar por una persona o empleado de confianza para que la víctima siga instrucciones es suplantación de identidad."
     },
     {
       "term": "b-2-bec",
@@ -540,7 +1244,23 @@
         "ビジネスメール詐欺（BEC）"
       ],
       "answer": 3,
-      "explain": "経営幹部や取引先になりすましたメールで不正送金させるのはビジネスメール詐欺（BEC）である。"
+      "explain": "経営幹部や取引先になりすましたメールで不正送金させるのはビジネスメール詐欺（BEC）である。",
+      "stem_en": "An accountant received an email in the CEO's name saying, \"I'm traveling — please urgently wire this supplier payment to this account,\" and sent the money. The sender address closely resembled the CEO's. Which term is most specific to this attack?",
+      "choices_en": [
+        "Vishing",
+        "Smishing",
+        "Brand impersonation",
+        "Business email compromise (BEC)"
+      ],
+      "explain_en": "Getting victims to make fraudulent transfers via emails impersonating executives or partners is business email compromise (BEC).",
+      "stem_es": "Un contable recibió un correo en nombre del CEO que decía «Estoy de viaje; transfiere urgentemente el pago de este proveedor a esta cuenta», y envió el dinero. La dirección del remitente se parecía mucho a la del CEO. ¿Qué término es más específico para este ataque?",
+      "choices_es": [
+        "Vishing",
+        "Smishing",
+        "Suplantación de marca",
+        "Compromiso del correo empresarial (BEC)"
+      ],
+      "explain_es": "Lograr transferencias fraudulentas mediante correos que suplantan a directivos o socios es el compromiso del correo empresarial (BEC)."
     },
     {
       "term": "b-2-bec",
@@ -552,7 +1272,23 @@
         "比較"
       ],
       "answer": 0,
-      "explain": "Compromise はセキュリティ文脈で「侵害」を意味し、ビジネスメールが悪用・侵害される詐欺を指す。"
+      "explain": "Compromise はセキュリティ文脈で「侵害」を意味し、ビジネスメールが悪用・侵害される詐欺を指す。",
+      "stem_en": "In BEC (Business Email Compromise), what does \"compromise\" mean?",
+      "choices_en": [
+        "A breach (being compromised)",
+        "A mutual concession",
+        "Compression",
+        "Comparison"
+      ],
+      "explain_en": "In a security context, \"compromise\" means a breach — the scam abuses a compromised business email.",
+      "stem_es": "En BEC (Business Email Compromise), ¿qué significa «compromise»?",
+      "choices_es": [
+        "Una intrusión o vulneración",
+        "Una concesión mutua (llegar a un acuerdo)",
+        "Compresión",
+        "Comparación"
+      ],
+      "explain_es": "En seguridad, «compromise» significa vulneración: la estafa abusa de un correo empresarial vulnerado."
     },
     {
       "term": "b-2-pretexting",
@@ -564,7 +1300,23 @@
         "タイポスクワッティング"
       ],
       "answer": 2,
-      "explain": "もっともらしい口実（pretext）で信頼を得て目的を達成するのがプリテキシング。同行入館の行為自体はピギーバック。"
+      "explain": "もっともらしい口実（pretext）で信頼を得て目的を達成するのがプリテキシング。同行入館の行為自体はピギーバック。",
+      "stem_en": "Posing as a courier — \"Urgent package, could you sign for it?\" — an attacker stood at the headquarters entrance and slipped in when an employee opened the door. Which term describes the attacker preparing the delivery-driver story to gain trust?",
+      "choices_en": [
+        "Watering hole attack",
+        "Phishing",
+        "Pretexting",
+        "Typosquatting"
+      ],
+      "explain_en": "Gaining trust with a plausible pretext to achieve a goal is pretexting. The act of following someone in is piggybacking.",
+      "stem_es": "Haciéndose pasar por mensajero («Paquete urgente, ¿me lo firma?»), un atacante esperó en la entrada de la sede y se coló cuando un empleado abrió la puerta. ¿Qué término describe que el atacante preparara la historia del repartidor para ganarse la confianza?",
+      "choices_es": [
+        "Ataque de abrevadero",
+        "Phishing",
+        "Pretexting",
+        "Typosquatting"
+      ],
+      "explain_es": "Ganarse la confianza con una excusa creíble para lograr un objetivo es pretexting. El acto de entrar detrás de alguien es piggybacking."
     },
     {
       "term": "b-2-pretexting",
@@ -576,7 +1328,23 @@
         "ポートスキャン"
       ],
       "answer": 0,
-      "explain": "誰かの後ろに張り付いて一緒に入り込む物理的な侵入手口はピギーバックと呼ばれる。"
+      "explain": "誰かの後ろに張り付いて一緒に入り込む物理的な侵入手口はピギーバックと呼ばれる。",
+      "stem_en": "An attacker followed closely behind a legitimate employee and passed through the security gate with them. Which act, which the lesson pairs with pretexting, is this?",
+      "choices_en": [
+        "Piggybacking",
+        "Wardriving",
+        "Bluesnarfing",
+        "Port scanning"
+      ],
+      "explain_en": "Physically getting in by sticking right behind someone is called piggybacking.",
+      "stem_es": "Un atacante siguió de cerca a un empleado legítimo y cruzó con él el torno de seguridad. ¿Qué acto, que la lección relaciona con el pretexting, es este?",
+      "choices_es": [
+        "Piggybacking",
+        "Wardriving",
+        "Bluesnarfing",
+        "Escaneo de puertos"
+      ],
+      "explain_es": "Entrar físicamente pegándose justo detrás de alguien se llama piggybacking."
     },
     {
       "term": "b-2-watering-hole",
@@ -588,7 +1356,23 @@
         "水飲み場攻撃"
       ],
       "answer": 3,
-      "explain": "標的がよく訪れる正規サイトを改ざんして待ち伏せるのは水飲み場攻撃（Watering hole）である。"
+      "explain": "標的がよく訪れる正規サイトを改ざんして待ち伏せるのは水飲み場攻撃（Watering hole）である。",
+      "stem_en": "An industry tech blog that a semiconductor maker's engineers read daily was compromised so that merely viewing it caused a malware infection. What technique is this?",
+      "choices_en": [
+        "Typosquatting",
+        "Brand impersonation",
+        "Phishing",
+        "Watering hole attack"
+      ],
+      "explain_en": "Compromising a legitimate site the targets frequent and lying in wait is a watering hole attack.",
+      "stem_es": "Un blog técnico del sector que los ingenieros de un fabricante de semiconductores leían a diario fue comprometido de modo que solo con visitarlo se infectaba el equipo. ¿Qué técnica es?",
+      "choices_es": [
+        "Typosquatting",
+        "Suplantación de marca",
+        "Phishing",
+        "Ataque de abrevadero"
+      ],
+      "explain_es": "Comprometer un sitio legítimo que las víctimas frecuentan y esperarlas allí es un ataque de abrevadero."
     },
     {
       "term": "b-2-brand-impersonation",
@@ -600,7 +1384,23 @@
         "ウォードライビング"
       ],
       "answer": 1,
-      "explain": "正規のブランドやサービスを装ってユーザーをだますのはブランドインパーソネーションである。"
+      "explain": "正規のブランドやサービスを装ってユーザーをだますのはブランドインパーソネーションである。",
+      "stem_en": "Fake login pages using your company's exact logo and colors, along with \"verify your account\" emails, are circulating and stealing customer credentials. Which technique abuses your corporate image this way?",
+      "choices_en": [
+        "Default credentials",
+        "Brand impersonation",
+        "Vishing",
+        "Wardriving"
+      ],
+      "explain_en": "Deceiving users by posing as a legitimate brand or service is brand impersonation.",
+      "stem_es": "Circulan páginas de inicio de sesión falsas con el logotipo y los colores exactos de tu empresa, junto con correos de «verifica tu cuenta», que roban credenciales de clientes. ¿Qué técnica abusa así de la imagen corporativa?",
+      "choices_es": [
+        "Credenciales predeterminadas",
+        "Suplantación de marca",
+        "Vishing",
+        "Wardriving"
+      ],
+      "explain_es": "Engañar a los usuarios haciéndose pasar por una marca o servicio legítimos es suplantación de marca."
     },
     {
       "term": "b-2-typosquatting",
@@ -612,7 +1412,23 @@
         "Rogue AP／Wi-Fi を無効化する"
       ],
       "answer": 1,
-      "explain": "打ち間違いを狙った紛らわしいドメイン登録はタイポスクワッティング。ブックマークや正しい URL の直接入力が有効。"
+      "explain": "打ち間違いを狙った紛らわしいドメイン登録はタイポスクワッティング。ブックマークや正しい URL の直接入力が有効。",
+      "stem_en": "Meaning to type \"amazon.com,\" a user typed \"amazom.com\" and entered card details on a fake site the attacker had registered. Which option pairs this technique with an effective user-side countermeasure?",
+      "choices_en": [
+        "Watering hole attack / update the browser",
+        "Typosquatting / access via bookmarks",
+        "Smishing / block SMS",
+        "Rogue AP / disable Wi-Fi"
+      ],
+      "explain_en": "Registering confusable domains to catch typos is typosquatting. Bookmarks or typing the correct URL directly help.",
+      "stem_es": "Queriendo escribir «amazon.com», un usuario tecleó «amazom.com» e introdujo los datos de su tarjeta en un sitio falso registrado por el atacante. ¿Qué opción combina esta técnica con una contramedida eficaz para el usuario?",
+      "choices_es": [
+        "Ataque de abrevadero / actualizar el navegador",
+        "Typosquatting / acceder desde marcadores",
+        "Smishing / bloquear SMS",
+        "Rogue AP / desactivar la Wi-Fi"
+      ],
+      "explain_es": "Registrar dominios confusos para aprovechar errores de escritura es typosquatting. Ayudan los marcadores o escribir directamente la URL correcta."
     },
     {
       "term": "b-2-typosquatting",
@@ -624,7 +1440,23 @@
         "タイポスクワッティングは USB メモリを使った物理的な攻撃である"
       ],
       "answer": 2,
-      "explain": "水飲み場攻撃は標的が訪れる正規サイトを改ざんし、タイポスクワッティングは打ち間違いを狙った別ドメインに偽サイトを立てる。"
+      "explain": "水飲み場攻撃は標的が訪れる正規サイトを改ざんし、タイポスクワッティングは打ち間違いを狙った別ドメインに偽サイトを立てる。",
+      "stem_en": "Which best explains the difference between a watering hole attack and typosquatting?",
+      "choices_en": [
+        "Watering hole attacks use phone calls; typosquatting uses SMS",
+        "Both compromise the legitimate site itself",
+        "A watering hole attack compromises a legitimate site; typosquatting sets up a fake site on a look-alike domain",
+        "Typosquatting is a physical attack using USB drives"
+      ],
+      "explain_en": "A watering hole attack compromises a legitimate site the target visits; typosquatting puts a fake site on a different domain that catches typos.",
+      "stem_es": "¿Qué explica mejor la diferencia entre un ataque de abrevadero y el typosquatting?",
+      "choices_es": [
+        "El abrevadero usa llamadas y el typosquatting usa SMS",
+        "Ambos comprometen el propio sitio legítimo",
+        "El abrevadero compromete un sitio legítimo; el typosquatting monta un sitio falso en un dominio parecido",
+        "El typosquatting es un ataque físico con memorias USB"
+      ],
+      "explain_es": "El abrevadero compromete un sitio legítimo que visita la víctima; el typosquatting monta un sitio falso en otro dominio que aprovecha los errores de escritura."
     }
   ],
   "B-3": [
@@ -638,7 +1470,23 @@
         "VMエスケープ"
       ],
       "answer": 1,
-      "explain": "メモリ領域に悪意あるコードを潜り込ませて実行させるのはメモリインジェクション。DBやVM分離は関係しない。"
+      "explain": "メモリ領域に悪意あるコードを潜り込ませて実行させるのはメモリインジェクション。DBやVM分離は関係しない。",
+      "stem_en": "An analyst found traces of an attacker's code written into the memory of a running legitimate process and executed with that process's privileges. Which vulnerability/attack fits best?",
+      "choices_en": [
+        "SQL injection",
+        "Memory injection",
+        "Resource reuse",
+        "VM escape"
+      ],
+      "explain_en": "Slipping malicious code into memory and running it is memory injection. Databases and VM isolation aren't involved.",
+      "stem_es": "Un analista encontró rastros de código de un atacante escrito en la memoria de un proceso legítimo en ejecución y ejecutado con los privilegios de ese proceso. ¿Qué vulnerabilidad o ataque encaja mejor?",
+      "choices_es": [
+        "Inyección SQL",
+        "Inyección en memoria",
+        "Reutilización de recursos",
+        "Escape de VM"
+      ],
+      "explain_es": "Introducir código malicioso en la memoria y ejecutarlo es inyección en memoria. No intervienen bases de datos ni el aislamiento de VM."
     },
     {
       "term": "b-3-time-of-use",
@@ -650,7 +1498,23 @@
         "タイムオブユース（TOU）"
       ],
       "answer": 3,
-      "explain": "確認後から使用時までの間にリソースの状態が変わることで生じる競合状態はタイムオブユース（TOU）。"
+      "explain": "確認後から使用時までの間にリソースの状態が変わることで生じる競合状態はタイムオブユース（TOU）。",
+      "stem_en": "A program checks a file's state and then waits a few seconds before actually using it. During that gap the state changed, so different content was processed than was checked. What is this vulnerability called?",
+      "choices_en": [
+        "Malicious update",
+        "Misconfiguration",
+        "Memory injection",
+        "Time-of-use (TOU)"
+      ],
+      "explain_en": "A race condition where the resource's state changes between the check and its use is time-of-use (TOU).",
+      "stem_es": "Un programa comprueba el estado de un archivo y espera unos segundos antes de usarlo. En ese intervalo el estado cambió y se procesó un contenido distinto del comprobado. ¿Cómo se llama esta vulnerabilidad?",
+      "choices_es": [
+        "Actualización maliciosa",
+        "Configuración errónea",
+        "Inyección en memoria",
+        "Tiempo de uso (TOU)"
+      ],
+      "explain_es": "Una condición de carrera en la que el estado del recurso cambia entre la comprobación y su uso es el tiempo de uso (TOU)."
     },
     {
       "term": "b-3-time-of-check",
@@ -662,7 +1526,23 @@
         "エンドオブライフ"
       ],
       "answer": 0,
-      "explain": "権限や条件のチェック後、アクセス（処理）前に割り込まれて結果が覆るのはタイムオブチェック（TOC）の競合状態。"
+      "explain": "権限や条件のチェック後、アクセス（処理）前に割り込まれて結果が覆るのはタイムオブチェック（TOC）の競合状態。",
+      "stem_en": "In a banking system, right after a balance check passed and before processing finished, another transfer request cut in, and two transfers went through on a single balance. What best explains the cause?",
+      "choices_en": [
+        "A time-of-check (TOC) race condition",
+        "Cross-site scripting",
+        "A cryptographic vulnerability",
+        "End of life"
+      ],
+      "explain_en": "Being interrupted after a permission or condition check but before access, so the result is overturned, is a time-of-check (TOC) race condition.",
+      "stem_es": "En un sistema bancario, justo después de superar la comprobación de saldo y antes de terminar el proceso, se coló otra solicitud de transferencia y se hicieron dos transferencias con un solo saldo. ¿Qué explica mejor la causa?",
+      "choices_es": [
+        "Una condición de carrera de tiempo de comprobación (TOC)",
+        "Cross-site scripting",
+        "Una vulnerabilidad criptográfica",
+        "Fin de vida"
+      ],
+      "explain_es": "Que algo se interponga tras comprobar un permiso o condición pero antes del acceso, invalidando el resultado, es una condición de carrera TOC."
     },
     {
       "term": "b-3-time-of-check",
@@ -674,7 +1554,23 @@
         "ファームウェアの脆弱性"
       ],
       "answer": 2,
-      "explain": "権限チェックと実際のアクセスの間に攻撃者が割り込み内容を変更するのがタイムオブチェック（TOC）。"
+      "explain": "権限チェックと実際のアクセスの間に攻撃者が割り込み内容を変更するのがタイムオブチェック（TOC）。",
+      "stem_en": "Right after a program checked a file's permissions and decided it could be opened, an attacker swapped the file for another and bypassed access control. What is this?",
+      "choices_en": [
+        "Resource reuse",
+        "OS-based vulnerability",
+        "Time-of-check (TOC)",
+        "Firmware vulnerability"
+      ],
+      "explain_en": "An attacker cutting in between the permission check and the actual access to change the content is time-of-check (TOC).",
+      "stem_es": "Justo después de que un programa comprobara los permisos de un archivo y decidiera que podía abrirse, un atacante lo sustituyó por otro y eludió el control de acceso. ¿Qué es esto?",
+      "choices_es": [
+        "Reutilización de recursos",
+        "Vulnerabilidad del SO",
+        "Tiempo de comprobación (TOC)",
+        "Vulnerabilidad de firmware"
+      ],
+      "explain_es": "Que un atacante se interponga entre la comprobación de permisos y el acceso real para cambiar el contenido es tiempo de comprobación (TOC)."
     },
     {
       "term": "b-3-malicious-update",
@@ -686,7 +1582,23 @@
         "誤った設定による脆弱性"
       ],
       "answer": 2,
-      "explain": "正規のソフトウェア更新を装って不正プログラムを導入させるのは悪意のあるアップデート（Malicious update）。"
+      "explain": "正規のソフトウェア更新を装って不正プログラムを導入させるのは悪意のあるアップデート（Malicious update）。",
+      "stem_en": "A user installed an app from an app store that imitated a legitimate one; later, the app's auto-update downloaded an update file containing malware. What technique is this?",
+      "choices_en": [
+        "SQL injection",
+        "VM escape",
+        "Malicious update",
+        "Misconfiguration vulnerability"
+      ],
+      "explain_en": "Installing malicious programs disguised as legitimate software updates is a malicious update.",
+      "stem_es": "Un usuario instaló desde una tienda de aplicaciones una app que imitaba a una legítima; después, la actualización automática descargó un archivo con malware. ¿Qué técnica es?",
+      "choices_es": [
+        "Inyección SQL",
+        "Escape de VM",
+        "Actualización maliciosa",
+        "Vulnerabilidad por configuración errónea"
+      ],
+      "explain_es": "Instalar programas maliciosos disfrazados de actualizaciones legítimas es una actualización maliciosa."
     },
     {
       "term": "b-3-os-based",
@@ -698,7 +1610,23 @@
         "SSL 2.0 への切り替え"
       ],
       "answer": 0,
-      "explain": "OSベースの脆弱性には最新のセキュリティパッチ適用と、不要なサービス・機能の無効化による攻撃対象の最小化が有効。"
+      "explain": "OSベースの脆弱性には最新のセキュリティパッチ適用と、不要なサービス・機能の無効化による攻撃対象の最小化が有効。",
+      "stem_en": "An OS vendor released an emergency patch for a vulnerability that allows arbitrary code execution if exploited. Which combination best reduces the risk from this kind of vulnerability?",
+      "choices_en": [
+        "Apply the latest patches and disable unneeded services",
+        "Introduce parameterized queries",
+        "Zero out VM memory",
+        "Switch to SSL 2.0"
+      ],
+      "explain_en": "For OS-based vulnerabilities, applying the latest security patches and minimizing the attack surface by disabling unneeded services and features is effective.",
+      "stem_es": "Un fabricante de SO publicó un parche de emergencia para una vulnerabilidad que permite ejecutar código arbitrario. ¿Qué combinación reduce mejor el riesgo de este tipo de vulnerabilidad?",
+      "choices_es": [
+        "Aplicar los últimos parches y desactivar los servicios innecesarios",
+        "Introducir consultas parametrizadas",
+        "Poner a cero la memoria de las VM",
+        "Cambiar a SSL 2.0"
+      ],
+      "explain_es": "Para las vulnerabilidades del SO, es eficaz aplicar los últimos parches de seguridad y minimizar la superficie de ataque desactivando servicios y funciones innecesarios."
     },
     {
       "term": "b-3-sql-injection",
@@ -710,7 +1638,23 @@
         "SQLインジェクション／パラメータ化クエリ"
       ],
       "answer": 3,
-      "explain": "常に真となる条件を注入してDBに不正なクエリを発行させるのはSQLインジェクション。入力値を命令ではなく値として扱うパラメータ化クエリが有効。"
+      "explain": "常に真となる条件を注入してDBに不正なクエリを発行させるのはSQLインジェクション。入力値を命令ではなく値として扱うパラメータ化クエリが有効。",
+      "stem_en": "Entering \"' OR 1=1 --\" in a shopping site's product search box displayed every product and all member information. Which option pairs this attack with its most effective countermeasure?",
+      "choices_en": [
+        "XSS / escaping on output",
+        "TOC / locking the process",
+        "Memory injection / memory protection",
+        "SQL injection / parameterized queries"
+      ],
+      "explain_en": "Injecting an always-true condition to make the DB run an illegitimate query is SQL injection. Parameterized queries, which treat input as values rather than commands, are effective.",
+      "stem_es": "Al introducir «' OR 1=1 --» en el buscador de productos de una tienda en línea se mostraron todos los productos y la información de todos los socios. ¿Qué opción combina este ataque con su contramedida más eficaz?",
+      "choices_es": [
+        "XSS / escapar la salida",
+        "TOC / bloquear el proceso",
+        "Inyección en memoria / protección de memoria",
+        "Inyección SQL / consultas parametrizadas"
+      ],
+      "explain_es": "Inyectar una condición siempre verdadera para que la BD ejecute una consulta ilegítima es inyección SQL. Son eficaces las consultas parametrizadas, que tratan la entrada como valores y no como órdenes."
     },
     {
       "term": "b-3-xss",
@@ -722,7 +1666,23 @@
         "タイムオブユース"
       ],
       "answer": 1,
-      "explain": "Webサイトに潜り込ませたスクリプトを訪問者のブラウザ上で実行させるのはXSS。SQLiはサーバー側のDBを狙う。"
+      "explain": "Webサイトに潜り込ませたスクリプトを訪問者のブラウザ上で実行させるのはXSS。SQLiはサーバー側のDBを狙う。",
+      "stem_en": "A comment containing a <script> tag was posted on a forum, and the attacker's script ran in the browsers of other users who viewed the page. What vulnerability is this?",
+      "choices_en": [
+        "SQL injection",
+        "Cross-site scripting (XSS)",
+        "Malicious update",
+        "Time-of-use"
+      ],
+      "explain_en": "Running a script planted on a website in visitors' browsers is XSS. SQLi targets the server-side DB.",
+      "stem_es": "Se publicó en un foro un comentario con una etiqueta <script>, y el script del atacante se ejecutó en los navegadores de otros usuarios que vieron la página. ¿Qué vulnerabilidad es?",
+      "choices_es": [
+        "Inyección SQL",
+        "Cross-site scripting (XSS)",
+        "Actualización maliciosa",
+        "Tiempo de uso"
+      ],
+      "explain_es": "Ejecutar en el navegador de los visitantes un script plantado en un sitio web es XSS. La SQLi ataca la BD del servidor."
     },
     {
       "term": "b-3-xss",
@@ -734,7 +1694,23 @@
         "確認と使用の時間差を突く"
       ],
       "answer": 0,
-      "explain": "XSSは悪意あるスクリプト（主にJavaScript）を閲覧者のブラウザで実行させる攻撃。DBへの不正SQLはSQLインジェクション。"
+      "explain": "XSSは悪意あるスクリプト（主にJavaScript）を閲覧者のブラウザで実行させる攻撃。DBへの不正SQLはSQLインジェクション。",
+      "stem_en": "A dev team is sorting out the difference between SQL injection and XSS. Which describes XSS correctly?",
+      "choices_en": [
+        "It targets the viewer's browser, mainly running JavaScript",
+        "It targets the DB, running malicious SQL",
+        "It reaches the host OS from inside a VM",
+        "It exploits the gap between check and use"
+      ],
+      "explain_en": "XSS makes malicious scripts (mainly JavaScript) run in the viewer's browser. Malicious SQL against a DB is SQL injection.",
+      "stem_es": "Un equipo de desarrollo está aclarando la diferencia entre la inyección SQL y el XSS. ¿Qué describe correctamente el XSS?",
+      "choices_es": [
+        "Ataca el navegador del visitante, ejecutando sobre todo JavaScript",
+        "Ataca la BD, ejecutando SQL malicioso",
+        "Llega al SO del host desde dentro de una VM",
+        "Aprovecha el intervalo entre comprobación y uso"
+      ],
+      "explain_es": "El XSS hace que se ejecuten scripts maliciosos (sobre todo JavaScript) en el navegador del visitante. El SQL malicioso contra una BD es inyección SQL."
     },
     {
       "term": "b-3-firmware",
@@ -746,7 +1722,23 @@
         "リソースの再利用"
       ],
       "answer": 2,
-      "explain": "ハードウェアを制御するソフトウェア（ファームウェア）の欠陥であり、Broadpwn のようなファームウェアの脆弱性に当たる。"
+      "explain": "ハードウェアを制御するソフトウェア（ファームウェア）の欠陥であり、Broadpwn のようなファームウェアの脆弱性に当たる。",
+      "stem_en": "A flaw was found in the control software of a Wi-Fi chipset used in many smartphones: just sending crafted Wi-Fi packets allows remote arbitrary code execution. How is this vulnerability classified?",
+      "choices_en": [
+        "Cloud-specific vulnerability",
+        "Misconfiguration vulnerability",
+        "Firmware vulnerability",
+        "Resource reuse"
+      ],
+      "explain_en": "It's a flaw in the software that controls hardware (firmware) — a firmware vulnerability like Broadpwn.",
+      "stem_es": "Se descubrió un fallo en el software de control de un chipset Wi-Fi presente en muchos smartphones: basta con enviar paquetes Wi-Fi manipulados para ejecutar código arbitrario en remoto. ¿Cómo se clasifica esta vulnerabilidad?",
+      "choices_es": [
+        "Vulnerabilidad específica de la nube",
+        "Vulnerabilidad por configuración errónea",
+        "Vulnerabilidad de firmware",
+        "Reutilización de recursos"
+      ],
+      "explain_es": "Es un fallo del software que controla el hardware (firmware): una vulnerabilidad de firmware como Broadpwn."
     },
     {
       "term": "b-3-end-of-life",
@@ -758,7 +1750,23 @@
         "メモリインジェクション"
       ],
       "answer": 1,
-      "explain": "製造メーカーのサポート終了によりパッチやファームウェア更新が提供されなくなるのはエンドオブライフ。計画的な交換・廃棄が重要。"
+      "explain": "製造メーカーのサポート終了によりパッチやファームウェア更新が提供されなくなるのはエンドオブライフ。計画的な交換・廃棄が重要。",
+      "stem_en": "A company keeps using OSes and devices whose vendor support has ended, and no security updates at all are provided for newly found vulnerabilities. What best describes this risk?",
+      "choices_en": [
+        "Time-of-check",
+        "End of life (EOL)",
+        "Service provider vulnerability",
+        "Memory injection"
+      ],
+      "explain_en": "When vendor support ends and patches and firmware updates stop, that's end of life. Planned replacement and disposal matter.",
+      "stem_es": "Una empresa sigue usando SO y dispositivos cuyo soporte del fabricante ha terminado, y no recibe ninguna actualización de seguridad para las vulnerabilidades nuevas. ¿Qué describe mejor este riesgo?",
+      "choices_es": [
+        "Tiempo de comprobación",
+        "Fin de vida (EOL)",
+        "Vulnerabilidad del proveedor de servicios",
+        "Inyección en memoria"
+      ],
+      "explain_es": "Cuando termina el soporte del fabricante y dejan de llegar parches y actualizaciones de firmware, es el fin de vida. Es importante planificar su sustitución y retirada."
     },
     {
       "term": "b-3-legacy",
@@ -770,7 +1778,23 @@
         "レガシーハードウェア"
       ],
       "answer": 3,
-      "explain": "古い機器のため最新パッチや新しいソフトを適用できないのはレガシーハードウェアの脆弱性。"
+      "explain": "古い機器のため最新パッチや新しいソフトを適用できないのはレガシーハードウェアの脆弱性。",
+      "stem_en": "A bank's old ATMs run Windows XP and lack the memory and storage to install a newer OS or security software. Which vulnerability best describes this?",
+      "choices_en": [
+        "Malicious update",
+        "Cryptographic vulnerability",
+        "VM escape",
+        "Legacy hardware"
+      ],
+      "explain_en": "Old equipment that can't take current patches or new software is a legacy hardware vulnerability.",
+      "stem_es": "Los cajeros antiguos de un banco funcionan con Windows XP y no tienen memoria ni almacenamiento para instalar un SO más nuevo o software de seguridad. ¿Qué vulnerabilidad lo describe mejor?",
+      "choices_es": [
+        "Actualización maliciosa",
+        "Vulnerabilidad criptográfica",
+        "Escape de VM",
+        "Hardware heredado"
+      ],
+      "explain_es": "Los equipos antiguos que no admiten parches actuales ni software nuevo son una vulnerabilidad de hardware heredado."
     },
     {
       "term": "b-3-vm-escape",
@@ -782,7 +1806,23 @@
         "VMエスケープ"
       ],
       "answer": 3,
-      "explain": "VM内部から分離を突破してホストシステムへ不正アクセスするのがVMエスケープ。"
+      "explain": "VM内部から分離を突破してホストシステムへ不正アクセスするのがVMエスケープ。",
+      "stem_en": "A cloud provider's investigation found that an attacker had broken out of the virtualization isolation of their own guest VM and accessed the host OS and other customers' VMs. What attack is this?",
+      "choices_en": [
+        "Resource reuse",
+        "Time-of-use",
+        "Misconfiguration vulnerability",
+        "VM escape"
+      ],
+      "explain_en": "Breaking isolation from inside a VM to gain unauthorized access to the host is VM escape.",
+      "stem_es": "La investigación de un proveedor de nube reveló que un atacante había roto el aislamiento de virtualización de su propia VM invitada y accedido al SO del host y a las VM de otros clientes. ¿Qué ataque es?",
+      "choices_es": [
+        "Reutilización de recursos",
+        "Tiempo de uso",
+        "Vulnerabilidad por configuración errónea",
+        "Escape de VM"
+      ],
+      "explain_es": "Romper el aislamiento desde dentro de una VM para acceder sin autorización al host es un escape de VM."
     },
     {
       "term": "b-3-resource-reuse",
@@ -794,7 +1834,23 @@
         "エンドオブライフ"
       ],
       "answer": 0,
-      "explain": "再割り当てされたリソースに前の利用者のデータが残存して漏えいするのはリソースの再利用。分離の突破（VMエスケープ）ではない。"
+      "explain": "再割り当てされたリソースに前の利用者のデータが残存して漏えいするのはリソースの再利用。分離の突破（VMエスケープ）ではない。",
+      "stem_en": "A VM that handled sensitive data was shut down, and its memory was assigned to another VM. Because the memory hadn't been wiped, the earlier data could be read from the new VM. What vulnerability is this?",
+      "choices_en": [
+        "Resource reuse",
+        "VM escape",
+        "Memory injection",
+        "End of life"
+      ],
+      "explain_en": "Leftover data from a previous user leaking through reassigned resources is resource reuse — not breaking isolation (VM escape).",
+      "stem_es": "Una VM que manejaba datos sensibles se apagó y su memoria se asignó a otra VM. Como la memoria no se había borrado, los datos anteriores podían leerse desde la nueva VM. ¿Qué vulnerabilidad es?",
+      "choices_es": [
+        "Reutilización de recursos",
+        "Escape de VM",
+        "Inyección en memoria",
+        "Fin de vida"
+      ],
+      "explain_es": "Que se filtren datos de un usuario anterior a través de recursos reasignados es reutilización de recursos, no una ruptura del aislamiento (escape de VM)."
     },
     {
       "term": "b-3-cloud-specific",
@@ -806,7 +1862,23 @@
         "入力フォームのエスケープ処理"
       ],
       "answer": 2,
-      "explain": "マルチテナントに起因するテナント間データ漏えいはクラウド固有の脆弱性。責任共有モデルでデータの所在と管理責任を明確にすることが重要。"
+      "explain": "マルチテナントに起因するテナント間データ漏えいはクラウド固有の脆弱性。責任共有モデルでデータの所在と管理責任を明確にすることが重要。",
+      "stem_en": "In an environment where several companies share the same cloud platform, one customer's data could be viewed from another tenant. Which effort is most relevant to reducing this risk?",
+      "choices_en": [
+        "Disabling SSL 2.0",
+        "An ATM replacement plan",
+        "Clarifying management responsibility and data location under the shared responsibility model",
+        "Escaping input forms"
+      ],
+      "explain_en": "Cross-tenant data leaks caused by multi-tenancy are a cloud-specific vulnerability. Clarifying data location and responsibilities under the shared responsibility model is key.",
+      "stem_es": "En un entorno donde varias empresas comparten la misma plataforma en la nube, los datos de un cliente podían verse desde otro inquilino. ¿Qué medida es más pertinente para reducir este riesgo?",
+      "choices_es": [
+        "Desactivar SSL 2.0",
+        "Un plan de sustitución de cajeros",
+        "Aclarar las responsabilidades de gestión y la ubicación de los datos según el modelo de responsabilidad compartida",
+        "Escapar los formularios de entrada"
+      ],
+      "explain_es": "Las fugas de datos entre inquilinos por la multitenencia son una vulnerabilidad específica de la nube. Es clave aclarar la ubicación de los datos y las responsabilidades según el modelo de responsabilidad compartida."
     },
     {
       "term": "b-3-service-provider",
@@ -818,7 +1890,23 @@
         "レガシーハードウェア"
       ],
       "answer": 1,
-      "explain": "利用者の設定ではなく、事業者が管理するシステム・ネットワークの不備が原因なのでサービスプロバイダーに起因する脆弱性。"
+      "explain": "利用者の設定ではなく、事業者が管理するシステム・ネットワークの不備が原因なのでサービスプロバイダーに起因する脆弱性。",
+      "stem_en": "Your company configured access control on its cloud properly, but a management failure on the provider's side let authentication be bypassed and your data leaked. How is this vulnerability best classified?",
+      "choices_en": [
+        "Hardware provider",
+        "Service provider",
+        "Software provider",
+        "Legacy hardware"
+      ],
+      "explain_en": "The cause is a flaw in systems and networks managed by the provider, not the customer's settings, so it's a service provider vulnerability.",
+      "stem_es": "Tu empresa configuró bien el control de acceso en la nube, pero un fallo de gestión del proveedor permitió eludir la autenticación y se filtraron tus datos. ¿Cómo se clasifica mejor esta vulnerabilidad?",
+      "choices_es": [
+        "Proveedor de hardware",
+        "Proveedor de servicios",
+        "Proveedor de software",
+        "Hardware heredado"
+      ],
+      "explain_es": "La causa es un fallo en sistemas y redes gestionados por el proveedor, no en la configuración del cliente, así que es una vulnerabilidad del proveedor de servicios."
     },
     {
       "term": "b-3-hardware-provider",
@@ -830,7 +1918,23 @@
         "OSベースの脆弱性"
       ],
       "answer": 0,
-      "explain": "Spectre／Meltdown のように、CPU等のハードウェアの設計・実装そのものが原因なのはハードウェアプロバイダー起因の脆弱性。"
+      "explain": "Spectre／Meltdown のように、CPU等のハードウェアの設計・実装そのものが原因なのはハードウェアプロバイダー起因の脆弱性。",
+      "stem_en": "Design flaws in products from the major CPU vendors were found to let data be read from memory regions that should be inaccessible, raising fears of leaks between customers in the cloud. Which category is this?",
+      "choices_en": [
+        "Hardware provider vulnerability",
+        "Misconfiguration vulnerability",
+        "Malicious update",
+        "OS-based vulnerability"
+      ],
+      "explain_en": "When the design or implementation of CPUs and other hardware is itself the cause, as with Spectre/Meltdown, it's a hardware provider vulnerability.",
+      "stem_es": "Se descubrió que fallos de diseño en productos de los principales fabricantes de CPU permitían leer datos de zonas de memoria que deberían ser inaccesibles, lo que hizo temer fugas entre clientes en la nube. ¿A qué categoría pertenece?",
+      "choices_es": [
+        "Vulnerabilidad del proveedor de hardware",
+        "Vulnerabilidad por configuración errónea",
+        "Actualización maliciosa",
+        "Vulnerabilidad del SO"
+      ],
+      "explain_es": "Cuando la causa es el propio diseño o implementación de las CPU y otro hardware, como en Spectre/Meltdown, es una vulnerabilidad del proveedor de hardware."
     },
     {
       "term": "b-3-software-provider",
@@ -842,7 +1946,23 @@
         "ソフトウェアプロバイダー起因の脆弱性"
       ],
       "answer": 3,
-      "explain": "SolarWinds Orion 事件のように、サードパーティ製ソフトウェアの提供元に起因する問題が自組織に波及するのはソフトウェアプロバイダー起因の脆弱性。"
+      "explain": "SolarWinds Orion 事件のように、サードパーティ製ソフトウェアの提供元に起因する問題が自組織に波及するのはソフトウェアプロバイダー起因の脆弱性。",
+      "stem_en": "An attacker inserted a backdoor into a legitimate update from an IT monitoring software vendor, compromising the many government agencies and companies using that software. Which vulnerability does this case best illustrate?",
+      "choices_en": [
+        "Cloud-specific vulnerability",
+        "Resource reuse",
+        "End of life",
+        "Software provider vulnerability"
+      ],
+      "explain_en": "When a problem originating with a third-party software supplier spreads to your organization, as in the SolarWinds Orion incident, it's a software provider vulnerability.",
+      "stem_es": "Un atacante insertó una puerta trasera en una actualización legítima de un proveedor de software de monitorización de TI, comprometiendo a los numerosos organismos y empresas que lo usaban. ¿Qué vulnerabilidad ilustra mejor este caso?",
+      "choices_es": [
+        "Vulnerabilidad específica de la nube",
+        "Reutilización de recursos",
+        "Fin de vida",
+        "Vulnerabilidad del proveedor de software"
+      ],
+      "explain_es": "Cuando un problema originado en un proveedor de software de terceros se propaga a tu organización, como en el incidente de SolarWinds Orion, es una vulnerabilidad del proveedor de software."
     },
     {
       "term": "b-3-cryptographic",
@@ -854,7 +1974,23 @@
         "VMエスケープ"
       ],
       "answer": 1,
-      "explain": "脆弱な暗号プロトコル・アルゴリズムの使用は暗号化の脆弱性。TLS（1.2／1.3）への移行が必要。"
+      "explain": "脆弱な暗号プロトコル・アルゴリズムの使用は暗号化の脆弱性。TLS（1.2／1.3）への移行が必要。",
+      "stem_en": "An audit found that an internal web server still allowed SSL 2.0 connections, creating a risk of eavesdropping and tampering via man-in-the-middle attacks. Which vulnerability does this finding indicate?",
+      "choices_en": [
+        "Time-of-use",
+        "Cryptographic vulnerability",
+        "Firmware vulnerability",
+        "VM escape"
+      ],
+      "explain_en": "Using weak cryptographic protocols or algorithms is a cryptographic vulnerability; moving to TLS (1.2/1.3) is necessary.",
+      "stem_es": "Una auditoría detectó que un servidor web interno aún permitía conexiones SSL 2.0, con riesgo de escucha y manipulación mediante ataques de intermediario. ¿Qué vulnerabilidad indica este hallazgo?",
+      "choices_es": [
+        "Tiempo de uso",
+        "Vulnerabilidad criptográfica",
+        "Vulnerabilidad de firmware",
+        "Escape de VM"
+      ],
+      "explain_es": "Usar protocolos o algoritmos criptográficos débiles es una vulnerabilidad criptográfica; hay que migrar a TLS (1.2/1.3)."
     },
     {
       "term": "b-3-misconfiguration",
@@ -866,7 +2002,23 @@
         "ハードウェアプロバイダー起因の脆弱性"
       ],
       "answer": 2,
-      "explain": "利用者側のアクセス権限の設定ミスによる情報公開は誤った設定（Misconfiguration）による脆弱性。初期設定のままの機器も狙われやすい。"
+      "explain": "利用者側のアクセス権限の設定ミスによる情報公開は誤った設定（Misconfiguration）による脆弱性。初期設定のままの機器も狙われやすい。",
+      "stem_en": "An employee accidentally set a confidential cloud storage folder to \"public,\" making it accessible to anyone on the internet. Which vulnerability fits best?",
+      "choices_en": [
+        "Service provider vulnerability",
+        "SQL injection",
+        "Misconfiguration vulnerability",
+        "Hardware provider vulnerability"
+      ],
+      "explain_en": "Exposure caused by a customer-side permission mistake is a misconfiguration vulnerability. Devices left on default settings are also easy targets.",
+      "stem_es": "Un empleado configuró por error como «pública» una carpeta confidencial del almacenamiento en la nube, accesible para cualquiera en internet. ¿Qué vulnerabilidad encaja mejor?",
+      "choices_es": [
+        "Vulnerabilidad del proveedor de servicios",
+        "Inyección SQL",
+        "Vulnerabilidad por configuración errónea",
+        "Vulnerabilidad del proveedor de hardware"
+      ],
+      "explain_es": "La exposición causada por un error de permisos del lado del cliente es una vulnerabilidad por configuración errónea. Los dispositivos con la configuración de fábrica también son blancos fáciles."
     }
   ],
   "B-4": [
@@ -880,7 +2032,23 @@
         "ブロートウェア"
       ],
       "answer": 2,
-      "explain": "ファイルを暗号化し、復旧と引き換えに金銭を要求するのはランサムウェアの典型的な挙動。"
+      "explain": "ファイルを暗号化し、復旧と引き換えに金銭を要求するのはランサムウェアの典型的な挙動。",
+      "stem_en": "Right after an accountant opened an \"invoice\" attached to an email, files on the shared folder could no longer be opened and the screen said, \"Pay in cryptocurrency if you want them decrypted.\" Which malware is most likely?",
+      "choices_en": [
+        "Spyware",
+        "Logic bomb",
+        "Ransomware",
+        "Bloatware"
+      ],
+      "explain_en": "Encrypting files and demanding money in exchange for recovery is classic ransomware behavior.",
+      "stem_es": "Justo después de que una contable abriera una «factura» adjunta en un correo, los archivos de la carpeta compartida dejaron de abrirse y la pantalla decía «Paga en criptomonedas si quieres descifrarlos». ¿Qué malware es más probable?",
+      "choices_es": [
+        "Spyware",
+        "Bomba lógica",
+        "Ransomware",
+        "Bloatware"
+      ],
+      "explain_es": "Cifrar archivos y exigir dinero a cambio de recuperarlos es el comportamiento típico del ransomware."
     },
     {
       "term": "b-4-trojan",
@@ -892,7 +2060,23 @@
         "ブロートウェア"
       ],
       "answer": 0,
-      "explain": "正規のファイル・ソフトを装って侵入し、自己増殖せず潜伏するのはトロイの木馬の特徴。"
+      "explain": "正規のファイル・ソフトを装って侵入し、自己増殖せず潜伏するのはトロイの木馬の特徴。",
+      "stem_en": "Opening what looked like a legitimate document attached to an email posing as a business partner left something hiding on the device, without spreading over the network, that kept sending confidential information outside. What fits best?",
+      "choices_en": [
+        "Trojan",
+        "Worm",
+        "Rootkit",
+        "Bloatware"
+      ],
+      "explain_en": "Getting in disguised as legitimate files or software and lurking without self-replicating is characteristic of a Trojan.",
+      "stem_es": "Al abrir lo que parecía un documento legítimo adjunto a un correo que suplantaba a un socio comercial, algo quedó oculto en el equipo, sin propagarse por la red, y siguió enviando información confidencial al exterior. ¿Qué encaja mejor?",
+      "choices_es": [
+        "Troyano",
+        "Gusano",
+        "Rootkit",
+        "Bloatware"
+      ],
+      "explain_es": "Entrar disfrazado de archivo o software legítimo y ocultarse sin autorreplicarse es característico de un troyano."
     },
     {
       "term": "b-4-worm",
@@ -904,7 +2088,23 @@
         "ワーム"
       ],
       "answer": 3,
-      "explain": "自らコピーを作り、脆弱性を通じてネットワーク上に自動的に拡散するのはワーム。"
+      "explain": "自らコピーを作り、脆弱性を通じてネットワーク上に自動的に拡散するのはワーム。",
+      "stem_en": "Starting from one infected PC, infection spread without any user action to nearly every PC in the company by exploiting an OS vulnerability, halting operations. What is the most likely cause?",
+      "choices_en": [
+        "Keylogger",
+        "Trojan",
+        "Logic bomb",
+        "Worm"
+      ],
+      "explain_en": "Copying itself and spreading automatically across the network through vulnerabilities is a worm.",
+      "stem_es": "A partir de un PC infectado, la infección se propagó sin intervención de los usuarios a casi todos los PC de la empresa aprovechando una vulnerabilidad del SO y paralizó la actividad. ¿Cuál es la causa más probable?",
+      "choices_es": [
+        "Keylogger",
+        "Troyano",
+        "Bomba lógica",
+        "Gusano"
+      ],
+      "explain_es": "Copiarse a sí mismo y propagarse automáticamente por la red mediante vulnerabilidades es propio de un gusano."
     },
     {
       "term": "b-4-spyware",
@@ -916,7 +2116,23 @@
         "ランサムウェア"
       ],
       "answer": 1,
-      "explain": "無料ソフトなどに紛れて潜み、利用者の情報を密かに収集・送信するのはスパイウェア。"
+      "explain": "無料ソフトなどに紛れて潜み、利用者の情報を密かに収集・送信するのはスパイウェア。",
+      "stem_en": "After installing a free browser toolbar, pop-up ads increased, and browsing history and search keywords were found being sent to an outside server. What fits best?",
+      "choices_en": [
+        "Rootkit",
+        "Spyware",
+        "Worm",
+        "Ransomware"
+      ],
+      "explain_en": "Hiding in free software and secretly collecting and sending user information is spyware.",
+      "stem_es": "Tras instalar una barra de herramientas gratuita para el navegador, aumentaron los anuncios emergentes y se descubrió que el historial y las búsquedas se enviaban a un servidor externo. ¿Qué encaja mejor?",
+      "choices_es": [
+        "Rootkit",
+        "Spyware",
+        "Gusano",
+        "Ransomware"
+      ],
+      "explain_es": "Ocultarse en software gratuito y recopilar y enviar en secreto información del usuario es spyware."
     },
     {
       "term": "b-4-bloatware",
@@ -928,7 +2144,23 @@
         "トロイの木馬"
       ],
       "answer": 2,
-      "explain": "新品デバイスにプリインストールされ、リソースを圧迫する不要なソフトはブロートウェア。"
+      "explain": "新品デバイスにプリインストールされ、リソースを圧迫する不要なソフトはブロートウェア。",
+      "stem_en": "A newly purchased laptop came with many preinstalled apps you don't plan to use, eating memory and disk space and slowing it down. What is this called?",
+      "choices_en": [
+        "Spyware",
+        "Logic bomb",
+        "Bloatware",
+        "Trojan"
+      ],
+      "explain_en": "Unneeded software preinstalled on new devices that strains resources is bloatware.",
+      "stem_es": "Un portátil recién comprado venía con muchas aplicaciones preinstaladas que no piensas usar, que consumen memoria y disco y lo ralentizan. ¿Cómo se llama esto?",
+      "choices_es": [
+        "Spyware",
+        "Bomba lógica",
+        "Bloatware",
+        "Troyano"
+      ],
+      "explain_es": "El software innecesario preinstalado en dispositivos nuevos que consume recursos es bloatware."
     },
     {
       "term": "b-4-keylogger",
@@ -940,7 +2172,23 @@
         "ロジックボム"
       ],
       "answer": 0,
-      "explain": "キーボード入力を記録してパスワードなどを盗むのはキーロガー。"
+      "explain": "キーボード入力を記録してパスワードなどを盗むのはキーロガー。",
+      "stem_en": "An employee logged into webmail on a shared PC at a hotel on a business trip, and the next day the account was taken over by a third party. The shared PC was recording every keystroke. What had been planted?",
+      "choices_en": [
+        "Keylogger",
+        "Bloatware",
+        "Worm",
+        "Logic bomb"
+      ],
+      "explain_en": "Recording keyboard input to steal passwords and the like is a keylogger.",
+      "stem_es": "Un empleado inició sesión en su correo web desde un PC compartido de un hotel durante un viaje, y al día siguiente un tercero se apoderó de la cuenta. El PC compartido registraba todas las pulsaciones. ¿Qué se había instalado?",
+      "choices_es": [
+        "Keylogger",
+        "Bloatware",
+        "Gusano",
+        "Bomba lógica"
+      ],
+      "explain_es": "Registrar lo que se teclea para robar contraseñas y similares es un keylogger."
     },
     {
       "term": "b-4-logic-bomb",
@@ -952,7 +2200,23 @@
         "ロジックボム"
       ],
       "answer": 3,
-      "explain": "特定の日時や条件を引き金に発動し、それまでは普通のプログラムに見えるのはロジックボム。内部犯行の典型例。"
+      "explain": "特定の日時や条件を引き金に発動し、それまでは普通のプログラムに見えるのはロジックボム。内部犯行の典型例。",
+      "stem_en": "In a core system maintained by a developer who had left, every database record was suddenly deleted on a specific date three months after their departure. There had been no suspicious behavior before. What is most likely?",
+      "choices_en": [
+        "Worm",
+        "Spyware",
+        "Rootkit",
+        "Logic bomb"
+      ],
+      "explain_en": "Triggered by a specific date or condition and looking like a normal program until then: a logic bomb, a classic insider attack.",
+      "stem_es": "En un sistema central mantenido por un desarrollador que se había ido, todos los registros de la base de datos se borraron de repente en una fecha concreta, tres meses después de su marcha. Antes no hubo ningún comportamiento sospechoso. ¿Qué es lo más probable?",
+      "choices_es": [
+        "Gusano",
+        "Spyware",
+        "Rootkit",
+        "Bomba lógica"
+      ],
+      "explain_es": "Se activa en una fecha o condición concreta y hasta entonces parece un programa normal: una bomba lógica, un ataque interno típico."
     },
     {
       "term": "b-4-rootkit",
@@ -964,7 +2228,23 @@
         "ブロートウェア"
       ],
       "answer": 1,
-      "explain": "OSの中核に入り込み管理者権限を奪い、不正活動や他のマルウェアを隠蔽するのはルートキット。"
+      "explain": "OSの中核に入り込み管理者権限を奪い、不正活動や他のマルウェアを隠蔽するのはルートキット。",
+      "stem_en": "Information had been leaking from a server for a long time, but regular antivirus found nothing. Investigation showed the OS kernel had been altered and malicious processes hidden with admin privileges. What is this?",
+      "choices_en": [
+        "Keylogger",
+        "Rootkit",
+        "Trojan",
+        "Bloatware"
+      ],
+      "explain_en": "Burrowing into the OS core, seizing admin privileges, and hiding malicious activity and other malware is a rootkit.",
+      "stem_es": "Un servidor llevaba mucho tiempo filtrando información, pero el antivirus habitual no detectaba nada. La investigación mostró que se había alterado el kernel del SO y ocultado procesos maliciosos con privilegios de administrador. ¿Qué es?",
+      "choices_es": [
+        "Keylogger",
+        "Rootkit",
+        "Troyano",
+        "Bloatware"
+      ],
+      "explain_es": "Introducirse en el núcleo del SO, hacerse con privilegios de administrador y ocultar la actividad maliciosa y otro malware es un rootkit."
     },
     {
       "term": "b-4-rfid-cloning",
@@ -976,7 +2256,23 @@
         "リプレイ攻撃"
       ],
       "answer": 0,
-      "explain": "RFIDタグのデータを盗み取って別のタグに書き込み、複製を作るのはRFIDクローニング。"
+      "explain": "RFIDタグのデータを盗み取って別のタグに書き込み、複製を作るのはRFIDクローニング。",
+      "stem_en": "Someone used a card reader near an employee to read their smart-card entry badge, wrote the data to another card, and could then open the door at any time. What attack is this?",
+      "choices_en": [
+        "RFID cloning",
+        "Wireless attack",
+        "On-path attack",
+        "Replay attack"
+      ],
+      "explain_en": "Stealing an RFID tag's data and writing it to another tag to make a copy is RFID cloning.",
+      "stem_es": "Alguien usó un lector cerca de un empleado para leer su tarjeta de acceso con chip, grabó los datos en otra tarjeta y así podía abrir la puerta cuando quisiera. ¿Qué ataque es?",
+      "choices_es": [
+        "Clonación RFID",
+        "Ataque inalámbrico",
+        "Ataque en ruta",
+        "Ataque de repetición"
+      ],
+      "explain_es": "Robar los datos de una etiqueta RFID y grabarlos en otra para hacer una copia es clonación RFID."
     },
     {
       "term": "b-4-ddos",
@@ -988,7 +2284,23 @@
         "リプレイ攻撃"
       ],
       "answer": 2,
-      "explain": "多数の発信元から大量のトラフィックを集中させてサービスを停止させるのはDDoS攻撃。"
+      "explain": "多数の発信元から大量のトラフィックを集中させてサービスを停止させるのはDDoS攻撃。",
+      "stem_en": "An online store was hit at once by huge numbers of requests from many IP addresses worldwide; the servers couldn't keep up and the site was down for hours. The attacker used vulnerable servers as stepping stones to amplify the traffic. What attack is this?",
+      "choices_en": [
+        "Brute force attack",
+        "DNS attack",
+        "DDoS attack",
+        "Replay attack"
+      ],
+      "explain_en": "Concentrating massive traffic from many sources to take down a service is a DDoS attack.",
+      "stem_es": "Una tienda en línea recibió a la vez enormes cantidades de solicitudes desde muchas IP de todo el mundo; los servidores no dieron abasto y el sitio estuvo caído durante horas. El atacante usó servidores vulnerables como trampolín para amplificar el tráfico. ¿Qué ataque es?",
+      "choices_es": [
+        "Ataque de fuerza bruta",
+        "Ataque DNS",
+        "Ataque DDoS",
+        "Ataque de repetición"
+      ],
+      "explain_es": "Concentrar tráfico masivo desde muchas fuentes para tumbar un servicio es un ataque DDoS."
     },
     {
       "term": "b-4-dns-attack",
@@ -1000,7 +2312,23 @@
         "インジェクション攻撃"
       ],
       "answer": 1,
-      "explain": "DNSの応答を偽り、ドメイン名を偽サイトのIPアドレスへ対応付けて誘導するのはDNS攻撃（DNSスプーフィング）。"
+      "explain": "DNSの応答を偽り、ドメイン名を偽サイトのIPアドレスへ対応付けて誘導するのはDNS攻撃（DNSスプーフィング）。",
+      "stem_en": "Even though users typed the correct URL into their browsers, a lookalike fake site appeared. Investigation showed name-resolution responses had been swapped for a fake IP address. What attack is this?",
+      "choices_en": [
+        "Directory traversal",
+        "DNS attack",
+        "Downgrade attack",
+        "Injection attack"
+      ],
+      "explain_en": "Faking DNS responses to map a domain to a fake site's IP address and lure users is a DNS attack (DNS spoofing).",
+      "stem_es": "Aunque los usuarios escribían la URL correcta en el navegador, aparecía un sitio falso idéntico. La investigación mostró que las respuestas de resolución de nombres se habían cambiado por una IP falsa. ¿Qué ataque es?",
+      "choices_es": [
+        "Recorrido de directorios",
+        "Ataque DNS",
+        "Ataque de degradación",
+        "Ataque de inyección"
+      ],
+      "explain_es": "Falsear las respuestas DNS para asociar un dominio a la IP de un sitio falso y atraer a los usuarios es un ataque DNS (suplantación DNS)."
     },
     {
       "term": "b-4-wireless",
@@ -1012,7 +2340,23 @@
         "ワイヤレス攻撃（イービルツイン）"
       ],
       "answer": 3,
-      "explain": "正規アクセスポイントと同じSSIDの偽APで通信を傍受するのはイービルツインで、ワイヤレス攻撃に当たる。"
+      "explain": "正規アクセスポイントと同じSSIDの偽APで通信を傍受するのはイービルツインで、ワイヤレス攻撃に当たる。",
+      "stem_en": "In a café, a strong signal with the same SSID as the usual public Wi-Fi was being broadcast, and the attacker intercepted all traffic of users who connected. How is this attack best classified?",
+      "choices_en": [
+        "RFID cloning",
+        "DDoS attack",
+        "DNS attack",
+        "Wireless attack (evil twin)"
+      ],
+      "explain_en": "Intercepting traffic with a fake AP using the same SSID as the legitimate one is an evil twin, a wireless attack.",
+      "stem_es": "En una cafetería se emitía una señal potente con el mismo SSID que la Wi-Fi pública habitual, y el atacante interceptaba todo el tráfico de quienes se conectaban. ¿Cómo se clasifica mejor este ataque?",
+      "choices_es": [
+        "Clonación RFID",
+        "Ataque DDoS",
+        "Ataque DNS",
+        "Ataque inalámbrico (gemelo malvado)"
+      ],
+      "explain_es": "Interceptar el tráfico con un AP falso que usa el mismo SSID que el legítimo es un gemelo malvado (evil twin), un ataque inalámbrico."
     },
     {
       "term": "b-4-on-path",
@@ -1024,7 +2368,23 @@
         "衝突攻撃"
       ],
       "answer": 0,
-      "explain": "通信経路上に入り込み傍受・改ざんするのがオンパス攻撃（中間者攻撃）で、セッションハイジャックはその代表例。"
+      "explain": "通信経路上に入り込み傍受・改ざんするのがオンパス攻撃（中間者攻撃）で、セッションハイジャックはその代表例。",
+      "stem_en": "On a website that puts session IDs in URL parameters, an attacker cut into the traffic between user and server, stole the session ID, and acted as the user. What attack is this?",
+      "choices_en": [
+        "On-path attack",
+        "Password spraying",
+        "Privilege escalation",
+        "Collision attack"
+      ],
+      "explain_en": "Getting onto the communication path to intercept or alter traffic is an on-path (man-in-the-middle) attack; session hijacking is a typical example.",
+      "stem_es": "En un sitio web que incluye el ID de sesión en los parámetros de la URL, un atacante se interpuso en el tráfico entre usuario y servidor, robó el ID de sesión y actuó como el usuario. ¿Qué ataque es?",
+      "choices_es": [
+        "Ataque en ruta",
+        "Rociado de contraseñas",
+        "Escalada de privilegios",
+        "Ataque de colisión"
+      ],
+      "explain_es": "Situarse en la ruta de comunicación para interceptar o alterar el tráfico es un ataque en ruta (de intermediario); el secuestro de sesión es un ejemplo típico."
     },
     {
       "term": "b-4-credential-replay",
@@ -1036,7 +2396,23 @@
         "ダウングレード攻撃"
       ],
       "answer": 2,
-      "explain": "傍受した認証情報を再送信してなりすましログインするのはクレデンシャルリプレイ。推測ではなく盗聴した情報を使う点がブルートフォースと異なる。"
+      "explain": "傍受した認証情報を再送信してなりすましログインするのはクレデンシャルリプレイ。推測ではなく盗聴した情報を使う点がブルートフォースと異なる。",
+      "stem_en": "On an unencrypted internal web app, an attacker sniffed usernames and passwords crossing the network and logged in by sending them as-is. What best describes this attack?",
+      "choices_en": [
+        "Password spraying",
+        "Brute force attack",
+        "Credential replay",
+        "Downgrade attack"
+      ],
+      "explain_en": "Resending intercepted credentials to log in as someone else is credential replay. Unlike brute force, it uses sniffed information rather than guesses.",
+      "stem_es": "En una aplicación web interna sin cifrar, un atacante capturó los usuarios y contraseñas que circulaban por la red e inició sesión enviándolos tal cual. ¿Qué describe mejor este ataque?",
+      "choices_es": [
+        "Rociado de contraseñas",
+        "Ataque de fuerza bruta",
+        "Reproducción de credenciales",
+        "Ataque de degradación"
+      ],
+      "explain_es": "Reenviar credenciales interceptadas para iniciar sesión como otra persona es reproducción de credenciales. A diferencia de la fuerza bruta, usa información capturada, no conjeturas."
     },
     {
       "term": "b-4-injection",
@@ -1048,7 +2424,23 @@
         "インジェクション攻撃"
       ],
       "answer": 3,
-      "explain": "常に真となる条件を挿入してSQLを改変するのはSQLインジェクション。対策は入力のバリデーションやパラメータ化クエリ。"
+      "explain": "常に真となる条件を挿入してSQLを改変するのはSQLインジェクション。対策は入力のバリデーションやパラメータ化クエリ。",
+      "stem_en": "Web app logs showed the string \"' OR 1=1 --\" entered into the search box, returning every customer record in the database. What attack is this?",
+      "choices_en": [
+        "Directory traversal",
+        "Replay attack",
+        "Collision attack",
+        "Injection attack"
+      ],
+      "explain_en": "Altering SQL by inserting an always-true condition is SQL injection. Countermeasures are input validation and parameterized queries.",
+      "stem_es": "Los registros de una aplicación web mostraban la cadena «' OR 1=1 --» introducida en el buscador, que devolvió todos los clientes de la base de datos. ¿Qué ataque es?",
+      "choices_es": [
+        "Recorrido de directorios",
+        "Ataque de repetición",
+        "Ataque de colisión",
+        "Ataque de inyección"
+      ],
+      "explain_es": "Alterar el SQL insertando una condición siempre verdadera es inyección SQL. Las contramedidas son validar la entrada y usar consultas parametrizadas."
     },
     {
       "term": "b-4-replay",
@@ -1060,7 +2452,23 @@
         "権限昇格攻撃"
       ],
       "answer": 1,
-      "explain": "正当な通信を傍受して再送信し、同じ操作を繰り返させるのはリプレイ攻撃。1回限りのトークンで再送を無効化できる。"
+      "explain": "正当な通信を傍受して再送信し、同じ操作を繰り返させるのはリプレイ攻撃。1回限りのトークンで再送を無効化できる。",
+      "stem_en": "In online banking, a legitimate user's transfer request (with the destination account and amount) was intercepted and saved, then resent many times later, repeating the fraudulent transfer. For which attack are one-time tokens an effective countermeasure?",
+      "choices_en": [
+        "Injection attack",
+        "Replay attack",
+        "DDoS attack",
+        "Privilege escalation"
+      ],
+      "explain_en": "Intercepting legitimate traffic and resending it to repeat the same operation is a replay attack. One-time tokens make resent requests invalid.",
+      "stem_es": "En la banca en línea, se interceptó y guardó la solicitud de transferencia de un usuario legítimo (con la cuenta de destino y el importe) y después se reenvió muchas veces, repitiendo la transferencia fraudulenta. ¿Contra qué ataque son eficaces los tokens de un solo uso?",
+      "choices_es": [
+        "Ataque de inyección",
+        "Ataque de repetición",
+        "Ataque DDoS",
+        "Escalada de privilegios"
+      ],
+      "explain_es": "Interceptar tráfico legítimo y reenviarlo para repetir la misma operación es un ataque de repetición. Los tokens de un solo uso invalidan las solicitudes reenviadas."
     },
     {
       "term": "b-4-privilege-escalation",
@@ -1072,7 +2480,23 @@
         "ブルートフォース攻撃 ― 多要素認証"
       ],
       "answer": 0,
-      "explain": "本来より高い権限を不正に取得するのは権限昇格攻撃で、最小権限の原則とアクセス制御の設計が対策となる。"
+      "explain": "本来より高い権限を不正に取得するのは権限昇格攻撃で、最小権限の原則とアクセス制御の設計が対策となる。",
+      "stem_en": "An attacker with only standard user rights sent a crafted request exploiting an unpatched app vulnerability and became able to run admin-only functions. Which option pairs this attack with its most important countermeasure?",
+      "choices_en": [
+        "Privilege escalation — principle of least privilege",
+        "Replay attack — one-time tokens",
+        "Collision attack — secure hash functions",
+        "Brute force — multifactor authentication"
+      ],
+      "explain_en": "Illegitimately gaining higher privileges than intended is privilege escalation; least privilege and access-control design are the countermeasures.",
+      "stem_es": "Un atacante con derechos de usuario estándar envió una solicitud manipulada que explotaba una vulnerabilidad sin parchear y pudo ejecutar funciones reservadas a administradores. ¿Qué opción combina este ataque con su contramedida más importante?",
+      "choices_es": [
+        "Escalada de privilegios — principio de mínimo privilegio",
+        "Ataque de repetición — tokens de un solo uso",
+        "Ataque de colisión — funciones hash seguras",
+        "Fuerza bruta — autenticación multifactor"
+      ],
+      "explain_es": "Obtener ilegítimamente más privilegios de los debidos es escalada de privilegios; el mínimo privilegio y un buen diseño del control de acceso son las contramedidas."
     },
     {
       "term": "b-4-directory-traversal",
@@ -1084,7 +2508,23 @@
         "権限昇格攻撃"
       ],
       "answer": 2,
-      "explain": "「../」で上位ディレクトリへさかのぼり、公開されていないファイルを取得しようとするのはディレクトリトラバーサル。"
+      "explain": "「../」で上位ディレクトリへさかのぼり、公開されていないファイルを取得しようとするのはディレクトリトラバーサル。",
+      "stem_en": "The access log of a file-download feature recorded the request \"download?file=../../../etc/passwd\". What attack is this?",
+      "choices_en": [
+        "Injection attack",
+        "On-path attack",
+        "Directory traversal",
+        "Privilege escalation"
+      ],
+      "explain_en": "Using \"../\" to climb to parent directories and grab non-public files is directory traversal.",
+      "stem_es": "El registro de acceso de una función de descarga de archivos registró la solicitud «download?file=../../../etc/passwd». ¿Qué ataque es?",
+      "choices_es": [
+        "Ataque de inyección",
+        "Ataque en ruta",
+        "Recorrido de directorios",
+        "Escalada de privilegios"
+      ],
+      "explain_es": "Usar «../» para subir a directorios superiores y obtener archivos no públicos es recorrido de directorios."
     },
     {
       "term": "b-4-downgrade",
@@ -1096,7 +2536,23 @@
         "リプレイ攻撃"
       ],
       "answer": 1,
-      "explain": "強力な暗号方式から古く脆弱な方式へ強制的に切り替えさせるのはダウングレード攻撃。"
+      "explain": "強力な暗号方式から古く脆弱な方式へ強制的に切り替えさせるのはダウングレード攻撃。",
+      "stem_en": "An attacker cut into traffic with a web server that still supports old SSL for compatibility, forced client and server onto an old, weak protocol, and broke the encryption. What attack is this?",
+      "choices_en": [
+        "Birthday attack",
+        "Downgrade attack",
+        "DNS attack",
+        "Replay attack"
+      ],
+      "explain_en": "Forcing a switch from strong encryption to an old, weak method is a downgrade attack.",
+      "stem_es": "Un atacante se interpuso en el tráfico con un servidor web que aún admite SSL antiguo por compatibilidad, obligó a cliente y servidor a usar un protocolo viejo y débil y rompió el cifrado. ¿Qué ataque es?",
+      "choices_es": [
+        "Ataque de cumpleaños",
+        "Ataque de degradación",
+        "Ataque DNS",
+        "Ataque de repetición"
+      ],
+      "explain_es": "Forzar el cambio de un cifrado fuerte a un método antiguo y débil es un ataque de degradación."
     },
     {
       "term": "b-4-collision",
@@ -1108,7 +2564,23 @@
         "衝突攻撃"
       ],
       "answer": 3,
-      "explain": "異なる入力から同じハッシュ値を作り出して悪用するのは衝突攻撃。古いハッシュ関数ほど衝突を作られやすい。"
+      "explain": "異なる入力から同じハッシュ値を作り出して悪用するのは衝突攻撃。古いハッシュ関数ほど衝突を作られやすい。",
+      "stem_en": "An attacker created a tampered document with the same MD5 hash as the legitimate one and slipped past the hash-based integrity check. What attack is this?",
+      "choices_en": [
+        "Downgrade attack",
+        "Password spraying",
+        "Directory traversal",
+        "Collision attack"
+      ],
+      "explain_en": "Producing the same hash from different inputs and abusing it is a collision attack. Older hash functions are easier to collide.",
+      "stem_es": "Un atacante creó un documento manipulado con el mismo hash MD5 que el legítimo y burló la comprobación de integridad basada en hash. ¿Qué ataque es?",
+      "choices_es": [
+        "Ataque de degradación",
+        "Rociado de contraseñas",
+        "Recorrido de directorios",
+        "Ataque de colisión"
+      ],
+      "explain_es": "Producir el mismo hash a partir de entradas distintas y aprovecharlo es un ataque de colisión. Las funciones hash antiguas son más fáciles de colisionar."
     },
     {
       "term": "b-4-birthday",
@@ -1120,7 +2592,23 @@
         "リプレイ攻撃"
       ],
       "answer": 0,
-      "explain": "誕生日のパラドックスに基づいて衝突を効率的に探すのはバースデイ攻撃。対策は安全で十分な長さのハッシュ値。"
+      "explain": "誕生日のパラドックスに基づいて衝突を効率的に探すのはバースデイ攻撃。対策は安全で十分な長さのハッシュ値。",
+      "stem_en": "Which attack uses the probability fact that \"with 23 people, the chance two share a birthday exceeds 50%\" to find hash collisions with few attempts?",
+      "choices_en": [
+        "Birthday attack",
+        "Brute force attack",
+        "Downgrade attack",
+        "Replay attack"
+      ],
+      "explain_en": "Efficiently searching for collisions based on the birthday paradox is a birthday attack. The countermeasure is secure hashes of sufficient length.",
+      "stem_es": "¿Qué ataque usa el dato probabilístico de que «con 23 personas, la probabilidad de que dos cumplan años el mismo día supera el 50 %» para encontrar colisiones de hash con pocos intentos?",
+      "choices_es": [
+        "Ataque de cumpleaños",
+        "Ataque de fuerza bruta",
+        "Ataque de degradación",
+        "Ataque de repetición"
+      ],
+      "explain_es": "Buscar colisiones de forma eficiente basándose en la paradoja del cumpleaños es un ataque de cumpleaños. La contramedida son hashes seguros y de longitud suficiente."
     },
     {
       "term": "b-4-brute-force",
@@ -1132,7 +2620,23 @@
         "入力値のバリデーション ― インジェクション攻撃"
       ],
       "answer": 2,
-      "explain": "1アカウントに膨大な組み合わせを総当たりで試すのはブルートフォース攻撃で、長いパスワードと多要素認証が有効。"
+      "explain": "1アカウントに膨大な組み合わせを総当たりで試すのはブルートフォース攻撃で、長いパスワードと多要素認証が有効。",
+      "stem_en": "Against one user's account, an automated tool rapidly tried tens of thousands of candidate passwords one after another. Which pairing is most effective against this attack?",
+      "choices_en": [
+        "One-time tokens — replay attack",
+        "DNSSEC — DNS attack",
+        "Long passwords and multifactor authentication — brute force attack",
+        "Input validation — injection attack"
+      ],
+      "explain_en": "Trying a huge number of combinations against one account is a brute force attack; long passwords and MFA are effective.",
+      "stem_es": "Contra la cuenta de un usuario, una herramienta automatizada probó rápidamente decenas de miles de contraseñas candidatas una tras otra. ¿Qué combinación es más eficaz contra este ataque?",
+      "choices_es": [
+        "Tokens de un solo uso — ataque de repetición",
+        "DNSSEC — ataque DNS",
+        "Contraseñas largas y autenticación multifactor — ataque de fuerza bruta",
+        "Validación de la entrada — ataque de inyección"
+      ],
+      "explain_es": "Probar una enorme cantidad de combinaciones contra una cuenta es un ataque de fuerza bruta; las contraseñas largas y la MFA son eficaces."
     },
     {
       "term": "b-4-password-spraying",
@@ -1144,7 +2648,23 @@
         "バースデイ攻撃"
       ],
       "answer": 1,
-      "explain": "多数のアカウントに少数の弱いパスワードを試し、1アカウントあたりの試行を抑えてロックアウトを回避するのはパスワードスプレー攻撃。"
+      "explain": "多数のアカウントに少数の弱いパスワードを試し、1アカウントあたりの試行を抑えてロックアウトを回避するのはパスワードスプレー攻撃。",
+      "stem_en": "Authentication logs showed that from one external IP, only a few passwords such as \"123456\" and \"qwerty\" were tried against each of 500 employee accounts. Failures per account stayed below the lockout threshold. What attack is this?",
+      "choices_en": [
+        "Brute force attack",
+        "Password spraying",
+        "Credential replay",
+        "Birthday attack"
+      ],
+      "explain_en": "Trying a few weak passwords on many accounts, keeping attempts per account low to avoid lockout, is password spraying.",
+      "stem_es": "Los registros de autenticación mostraban que, desde una IP externa, se probaron solo unas pocas contraseñas como «123456» y «qwerty» contra cada una de 500 cuentas de empleados. Los fallos por cuenta quedaron por debajo del umbral de bloqueo. ¿Qué ataque es?",
+      "choices_es": [
+        "Ataque de fuerza bruta",
+        "Rociado de contraseñas",
+        "Reproducción de credenciales",
+        "Ataque de cumpleaños"
+      ],
+      "explain_es": "Probar pocas contraseñas débiles en muchas cuentas, con pocos intentos por cuenta para evitar el bloqueo, es rociado de contraseñas."
     },
     {
       "term": "b-4-account-lockout",
@@ -1156,7 +2676,23 @@
         "アカウントのロックアウト"
       ],
       "answer": 3,
-      "explain": "複数アカウントが短期間にロックされるのはアカウントのロックアウトの兆候で、ブルートフォースやパスワードスプレーを示唆する。"
+      "explain": "複数アカウントが短期間にロックされるのはアカウントのロックアウトの兆候で、ブルートフォースやパスワードスプレーを示唆する。",
+      "stem_en": "On Monday morning the help desk got a string of \"I can't log in\" calls from several departments; dozens of accounts had been automatically locked after repeated failed logins. Which indicator is this mainly?",
+      "choices_en": [
+        "Out-of-cycle logging",
+        "Resource inaccessibility",
+        "Blocked content",
+        "Account lockout"
+      ],
+      "explain_en": "Many accounts locked in a short time is the account lockout indicator, suggesting brute force or password spraying.",
+      "stem_es": "El lunes por la mañana, el servicio de asistencia recibió una serie de llamadas de «no puedo iniciar sesión» de varios departamentos; decenas de cuentas se habían bloqueado automáticamente tras repetidos intentos fallidos. ¿Qué indicador es principalmente?",
+      "choices_es": [
+        "Registros fuera de ciclo",
+        "Inaccesibilidad de recursos",
+        "Contenido bloqueado",
+        "Bloqueo de cuenta"
+      ],
+      "explain_es": "Muchas cuentas bloqueadas en poco tiempo es el indicador de bloqueo de cuenta, que sugiere fuerza bruta o rociado de contraseñas."
     },
     {
       "term": "b-4-concurrent-session",
@@ -1168,7 +2704,23 @@
         "アカウントのロックアウト"
       ],
       "answer": 0,
-      "explain": "同一アカウントで複数の場所・デバイスから同時にセッションが確立されているのはセッションの同時使用で、認証情報の窃取や不正共有を示唆する。"
+      "explain": "同一アカウントで複数の場所・デバイスから同時にセッションが確立されているのはセッションの同時使用で、認証情報の窃取や不正共有を示唆する。",
+      "stem_en": "The SIEM detected valid sessions for one user account established at the same time from the Tokyo office and a New York hotel. Which indicator is this?",
+      "choices_en": [
+        "Concurrent session usage",
+        "Out-of-cycle logging",
+        "Resource consumption",
+        "Account lockout"
+      ],
+      "explain_en": "One account with simultaneous sessions from several places or devices is concurrent session usage, suggesting stolen or improperly shared credentials.",
+      "stem_es": "El SIEM detectó sesiones válidas de una misma cuenta establecidas a la vez desde la oficina de Tokio y un hotel de Nueva York. ¿Qué indicador es?",
+      "choices_es": [
+        "Uso simultáneo de sesiones",
+        "Registros fuera de ciclo",
+        "Consumo de recursos",
+        "Bloqueo de cuenta"
+      ],
+      "explain_es": "Una cuenta con sesiones simultáneas desde varios lugares o dispositivos es uso simultáneo de sesiones, y sugiere credenciales robadas o compartidas indebidamente."
     },
     {
       "term": "b-4-blocked-content",
@@ -1180,7 +2732,23 @@
         "セッションの同時使用"
       ],
       "answer": 2,
-      "explain": "セキュリティツールに阻止された宛先への繰り返しのアクセス試行はブロックされたコンテンツの兆候で、マルウェア感染や情報漏えいの意図を疑う。"
+      "explain": "セキュリティツールに阻止された宛先への繰り返しのアクセス試行はブロックされたコンテンツの兆候で、マルウェア感染や情報漏えいの意図を疑う。",
+      "stem_en": "Web proxy logs showed an employee's PC repeatedly being blocked from reaching IP ranges in a country known as an attack source and set as forbidden. Which indicator is this?",
+      "choices_en": [
+        "Impossible travel",
+        "Resource inaccessibility",
+        "Blocked content",
+        "Concurrent session usage"
+      ],
+      "explain_en": "Repeated attempts to reach destinations stopped by security tools are the blocked content indicator; suspect a malware infection or intent to exfiltrate.",
+      "stem_es": "Los registros del proxy web mostraban que el PC de un empleado era bloqueado repetidamente al intentar llegar a rangos de IP de un país conocido como origen de ataques y configurado como prohibido. ¿Qué indicador es?",
+      "choices_es": [
+        "Viaje imposible",
+        "Inaccesibilidad de recursos",
+        "Contenido bloqueado",
+        "Uso simultáneo de sesiones"
+      ],
+      "explain_es": "Los intentos repetidos de llegar a destinos detenidos por las herramientas de seguridad son el indicador de contenido bloqueado; hay que sospechar una infección por malware o intención de exfiltrar datos."
     },
     {
       "term": "b-4-impossible-travel",
@@ -1192,7 +2760,23 @@
         "リソースの消費"
       ],
       "answer": 1,
-      "explain": "地理的に離れた場所から、移動不可能な短時間で連続してログインしているのは不可能な旅行。直ちにパスワードをリセットする。"
+      "explain": "地理的に離れた場所から、移動不可能な短時間で連続してログインしているのは不可能な旅行。直ちにパスワードをリセットする。",
+      "stem_en": "An account logged in from Tokyo at 9:00 and from London at 9:20. The logins weren't simultaneous, but traveling between them in that time is physically impossible. Which indicator is this?",
+      "choices_en": [
+        "Out-of-cycle logging",
+        "Impossible travel",
+        "Blocked content",
+        "Resource consumption"
+      ],
+      "explain_en": "Consecutive logins from distant places too close together to travel between is impossible travel. Reset the password immediately.",
+      "stem_es": "Una cuenta inició sesión desde Tokio a las 9:00 y desde Londres a las 9:20. No fueron simultáneos, pero es físicamente imposible viajar entre ambos lugares en ese tiempo. ¿Qué indicador es?",
+      "choices_es": [
+        "Registros fuera de ciclo",
+        "Viaje imposible",
+        "Contenido bloqueado",
+        "Consumo de recursos"
+      ],
+      "explain_es": "Inicios de sesión consecutivos desde lugares lejanos demasiado seguidos para viajar entre ellos son un viaje imposible. Restablece la contraseña de inmediato."
     },
     {
       "term": "b-4-resource-consumption",
@@ -1204,7 +2788,23 @@
         "リソースの消費"
       ],
       "answer": 3,
-      "explain": "CPUやメモリが通常より著しく多く消費されるのはリソースの消費の兆候で、DDoSなどを示唆する。原因のプロセスやトラフィックを特定する。"
+      "explain": "CPUやメモリが通常より著しく多く消費されるのはリソースの消費の兆候で、DDoSなどを示唆する。原因のプロセスやトラフィックを特定する。",
+      "stem_en": "A web server's responses suddenly slowed, and the monitoring screen showed CPU and memory pinned near 100%. There's no business reason such as a sale. Which indicator should the administrator suspect first?",
+      "choices_en": [
+        "Account lockout",
+        "Blocked content",
+        "Impossible travel",
+        "Resource consumption"
+      ],
+      "explain_en": "CPU or memory used far above normal is the resource consumption indicator, suggesting something like a DDoS. Identify the responsible process or traffic.",
+      "stem_es": "Las respuestas de un servidor web se ralentizaron de golpe y la pantalla de supervisión mostraba la CPU y la memoria casi al 100 %. No hay ningún motivo de negocio, como unas rebajas. ¿Qué indicador debe sospechar primero el administrador?",
+      "choices_es": [
+        "Bloqueo de cuenta",
+        "Contenido bloqueado",
+        "Viaje imposible",
+        "Consumo de recursos"
+      ],
+      "explain_es": "Un uso de CPU o memoria muy por encima de lo normal es el indicador de consumo de recursos y sugiere algo como un DDoS. Identifica el proceso o el tráfico responsable."
     },
     {
       "term": "b-4-resource-inaccessibility",
@@ -1216,7 +2816,23 @@
         "セッションの同時使用"
       ],
       "answer": 0,
-      "explain": "通常使えるリソースに突然アクセスできなくなるのはリソースへのアクセス不能の兆候で、この場合はランサムウェアが原因。"
+      "explain": "通常使えるリソースに突然アクセスできなくなるのはリソースへのアクセス不能の兆候で、この場合はランサムウェアが原因。",
+      "stem_en": "One morning, nobody could connect to the customer database the sales team uses daily. Investigation found the data on the server had been encrypted. What indicator did users see?",
+      "choices_en": [
+        "Resource inaccessibility",
+        "Resource consumption",
+        "Out-of-cycle logging",
+        "Concurrent session usage"
+      ],
+      "explain_en": "Suddenly being unable to reach a normally available resource is the resource inaccessibility indicator — here caused by ransomware.",
+      "stem_es": "Una mañana nadie podía conectarse a la base de datos de clientes que el equipo comercial usa a diario. La investigación descubrió que los datos del servidor se habían cifrado. ¿Qué indicador vieron los usuarios?",
+      "choices_es": [
+        "Inaccesibilidad de recursos",
+        "Consumo de recursos",
+        "Registros fuera de ciclo",
+        "Uso simultáneo de sesiones"
+      ],
+      "explain_es": "No poder acceder de repente a un recurso normalmente disponible es el indicador de inaccesibilidad de recursos; en este caso, causado por ransomware."
     },
     {
       "term": "b-4-out-of-cycle-logging",
@@ -1228,7 +2844,23 @@
         "アカウントのロックアウト"
       ],
       "answer": 2,
-      "explain": "通常と異なる時間帯や頻度でログが生成されるのはサイクル外でのロギングで、不正アクセスや情報漏えいの試行を示唆する。"
+      "explain": "通常と異なる時間帯や頻度でログが生成されるのはサイクル外でのロギングで、不正アクセスや情報漏えいの試行を示唆する。",
+      "stem_en": "An internal system used only on weekday daytimes recorded a large volume of access logs from an unfamiliar external IP at 3 a.m. on a Sunday. Which indicator is this?",
+      "choices_en": [
+        "Impossible travel",
+        "Resource inaccessibility",
+        "Out-of-cycle logging",
+        "Account lockout"
+      ],
+      "explain_en": "Logs generated at unusual times or frequencies are out-of-cycle logging, suggesting unauthorized access or attempted data leaks.",
+      "stem_es": "Un sistema interno que solo se usa en horario laboral entre semana registró un gran volumen de accesos desde una IP externa desconocida a las 3 de la madrugada de un domingo. ¿Qué indicador es?",
+      "choices_es": [
+        "Viaje imposible",
+        "Inaccesibilidad de recursos",
+        "Registros fuera de ciclo",
+        "Bloqueo de cuenta"
+      ],
+      "explain_es": "Los registros generados a horas o con frecuencias inusuales son registros fuera de ciclo, y sugieren accesos no autorizados o intentos de fuga de datos."
     }
   ],
   "B-5": [
@@ -1242,7 +2874,23 @@
         "廃棄"
       ],
       "answer": 1,
-      "explain": "ネットワークを部署単位に分割し区画間の通信を制御するのがセグメンテーション。攻撃範囲の限定とデータ流出防止に効果がある。"
+      "explain": "ネットワークを部署単位に分割し区画間の通信を制御するのがセグメンテーション。攻撃範囲の限定とデータ流出防止に効果がある。",
+      "stem_en": "A company wants to split its network by department and restrict traffic between departments so that even if a sales PC is infected, it can't reach the accounting team's financial data. What is the best mitigation?",
+      "choices_en": [
+        "Patching",
+        "Segmentation",
+        "Monitoring",
+        "Decommissioning"
+      ],
+      "explain_en": "Dividing the network by department and controlling traffic between segments is segmentation. It limits an attack's reach and helps prevent data leaks.",
+      "stem_es": "Una empresa quiere dividir su red por departamentos y restringir el tráfico entre ellos para que, aunque se infecte un PC de ventas, no pueda llegar a los datos financieros de contabilidad. ¿Cuál es la mejor mitigación?",
+      "choices_es": [
+        "Aplicación de parches",
+        "Segmentación",
+        "Supervisión",
+        "Retirada"
+      ],
+      "explain_es": "Dividir la red por departamentos y controlar el tráfico entre segmentos es segmentación. Limita el alcance de un ataque y ayuda a evitar fugas de datos."
     },
     {
       "term": "b-5-acl",
@@ -1254,7 +2902,23 @@
         "アクセスコントロールリスト（ACL）"
       ],
       "answer": 3,
-      "explain": "送信元などに基づきアクセスを許可／拒否するルールの集合をネットワーク機器に適用するのはACL。特定IPに限定することで不正アクセスのリスクを下げる。"
+      "explain": "送信元などに基づきアクセスを許可／拒否するルールの集合をネットワーク機器に適用するのはACL。特定IPに限定することで不正アクセスのリスクを下げる。",
+      "stem_en": "A network admin configured a rule that allows SSH to the router only from the management terminal's IP address and denies everything else. What mitigation is this?",
+      "choices_en": [
+        "Encryption",
+        "Isolation",
+        "Configuration enforcement",
+        "Access control list (ACL)"
+      ],
+      "explain_en": "Applying a set of allow/deny rules, based on source and so on, to network devices is an ACL. Limiting access to specific IPs lowers the risk of unauthorized access.",
+      "stem_es": "Un administrador de red configuró una regla que permite SSH al router solo desde la IP del terminal de gestión y deniega todo lo demás. ¿Qué mitigación es?",
+      "choices_es": [
+        "Cifrado",
+        "Aislamiento",
+        "Aplicación de la configuración",
+        "Lista de control de acceso (ACL)"
+      ],
+      "explain_es": "Aplicar a los equipos de red un conjunto de reglas de permitir/denegar según el origen, etc., es una ACL. Limitar el acceso a IP concretas reduce el riesgo de acceso no autorizado."
     },
     {
       "term": "b-5-permissions",
@@ -1266,7 +2930,23 @@
         "廃棄"
       ],
       "answer": 0,
-      "explain": "ユーザーに割り当てる操作権限（パーミッション）が過剰であることが問題。業務に応じた適切な権限に付け直す必要がある。"
+      "explain": "ユーザーに割り当てる操作権限（パーミッション）が過剰であることが問題。業務に応じた適切な権限に付け直す必要がある。",
+      "stem_en": "An audit found that every employee had admin rights on an internal system, so anyone could view critical data or change settings. What should be reviewed first?",
+      "choices_en": [
+        "Permissions",
+        "Encryption",
+        "Segmentation",
+        "Decommissioning"
+      ],
+      "explain_en": "The problem is excessive operating rights (permissions) assigned to users. They need to be reassigned to fit each job.",
+      "stem_es": "Una auditoría descubrió que todos los empleados tenían derechos de administrador en un sistema interno, así que cualquiera podía ver datos críticos o cambiar la configuración. ¿Qué debe revisarse primero?",
+      "choices_es": [
+        "Permisos",
+        "Cifrado",
+        "Segmentación",
+        "Retirada"
+      ],
+      "explain_es": "El problema son los derechos de operación (permisos) excesivos asignados a los usuarios. Hay que reasignarlos según el puesto de cada uno."
     },
     {
       "term": "b-5-isolation",
@@ -1278,7 +2958,23 @@
         "アクセスコントロールリスト（ACL）"
       ],
       "answer": 2,
-      "explain": "被害を隔離環境の中に閉じ込め外部へ波及させないのがアイソレーション。仮想化やサンドボックスが代表的な手段。"
+      "explain": "被害を隔離環境の中に閉じ込め外部へ波及させないのがアイソレーション。仮想化やサンドボックスが代表的な手段。",
+      "stem_en": "A security officer had employees browse the web in a browser inside a virtual machine, so even if the browser got infected, the physical machine wouldn't be affected. What mitigation is this?",
+      "choices_en": [
+        "Monitoring",
+        "Patching",
+        "Isolation",
+        "Access control list (ACL)"
+      ],
+      "explain_en": "Containing damage inside an isolated environment so it doesn't spread is isolation. Virtualization and sandboxes are typical means.",
+      "stem_es": "Un responsable de seguridad hizo que los empleados navegaran por la web con un navegador dentro de una máquina virtual, para que aunque el navegador se infectara no se viera afectada la máquina física. ¿Qué mitigación es?",
+      "choices_es": [
+        "Supervisión",
+        "Aplicación de parches",
+        "Aislamiento",
+        "Lista de control de acceso (ACL)"
+      ],
+      "explain_es": "Contener el daño dentro de un entorno aislado para que no se propague es aislamiento. La virtualización y los sandbox son medios típicos."
     },
     {
       "term": "b-5-patching",
@@ -1290,7 +2986,23 @@
         "最小特権の原則"
       ],
       "answer": 1,
-      "explain": "脆弱性やバグを修正する更新ファイルを適用するのはパッチ。基本的に最新のものを適用することが重要。"
+      "explain": "脆弱性やバグを修正する更新ファイルを適用するのはパッチ。基本的に最新のものを適用することが重要。",
+      "stem_en": "The company started promptly applying the security updates the vendor releases every month to its Windows devices and Office. What mitigation is this?",
+      "choices_en": [
+        "Configuration enforcement",
+        "Patching",
+        "Encryption",
+        "Principle of least privilege"
+      ],
+      "explain_en": "Applying update files that fix vulnerabilities and bugs is patching. It's important to keep up with the latest ones.",
+      "stem_es": "La empresa empezó a aplicar sin demora las actualizaciones de seguridad que el fabricante publica cada mes en sus equipos Windows y en Office. ¿Qué mitigación es?",
+      "choices_es": [
+        "Aplicación de la configuración",
+        "Aplicación de parches",
+        "Cifrado",
+        "Principio de mínimo privilegio"
+      ],
+      "explain_es": "Aplicar actualizaciones que corrigen vulnerabilidades y errores es aplicar parches. Es importante mantenerse al día con los más recientes."
     },
     {
       "term": "b-5-encryption",
@@ -1302,7 +3014,23 @@
         "モニタリング"
       ],
       "answer": 0,
-      "explain": "通信を暗号化すれば盗聴されても内容を読めず機密性が守られる。HTTPSのURLやブラウザの鍵マークが目印。"
+      "explain": "通信を暗号化すれば盗聴されても内容を読めず機密性が守られる。HTTPSのURLやブラウザの鍵マークが目印。",
+      "stem_en": "An online store wants card numbers to stay unreadable even if intercepted in transit. What is the best mitigation?",
+      "choices_en": [
+        "Encryption (HTTPS/TLS)",
+        "Segmentation",
+        "Decommissioning",
+        "Monitoring"
+      ],
+      "explain_en": "Encrypting traffic keeps content unreadable even if intercepted, protecting confidentiality. Look for HTTPS URLs and the browser's padlock icon.",
+      "stem_es": "Una tienda en línea quiere que los números de tarjeta sigan siendo ilegibles aunque se intercepten en tránsito. ¿Cuál es la mejor mitigación?",
+      "choices_es": [
+        "Cifrado (HTTPS/TLS)",
+        "Segmentación",
+        "Retirada",
+        "Supervisión"
+      ],
+      "explain_es": "Cifrar el tráfico mantiene el contenido ilegible aunque se intercepte, protegiendo la confidencialidad. Fíjate en las URL HTTPS y en el candado del navegador."
     },
     {
       "term": "b-5-monitoring",
@@ -1314,7 +3042,23 @@
         "モニタリング"
       ],
       "answer": 3,
-      "explain": "動作や利用状況を継続的に監視し、普段と異なる動きを早期に検出するのがモニタリング。"
+      "explain": "動作や利用状況を継続的に監視し、普段と異なる動きを早期に検出するのがモニタリング。",
+      "stem_en": "A sysadmin constantly watches the volume of traffic on the internal network and, after detecting a late-night spike in server access, began investigating. What mitigation is this?",
+      "choices_en": [
+        "Permissions",
+        "Configuration enforcement",
+        "Isolation",
+        "Monitoring"
+      ],
+      "explain_en": "Continuously watching activity and usage to catch unusual behavior early is monitoring.",
+      "stem_es": "Un administrador de sistemas vigila constantemente el volumen de tráfico de la red interna y, al detectar un pico de accesos al servidor de madrugada, empezó a investigar. ¿Qué mitigación es?",
+      "choices_es": [
+        "Permisos",
+        "Aplicación de la configuración",
+        "Aislamiento",
+        "Supervisión"
+      ],
+      "explain_es": "Vigilar de forma continua la actividad y el uso para detectar pronto comportamientos inusuales es supervisión."
     },
     {
       "term": "b-5-least-privilege",
@@ -1326,7 +3070,23 @@
         "廃棄"
       ],
       "answer": 2,
-      "explain": "業務に必要な最小限の権限だけを与えるのが最小特権の原則。権限の乱用を防ぎ、攻撃者の横断的な移動も困難にする。"
+      "explain": "業務に必要な最小限の権限だけを与えるのが最小特権の原則。権限の乱用を防ぎ、攻撃者の横断的な移動も困難にする。",
+      "stem_en": "For the HR folder on a file server, access was granted only to HR staff who need it for their work, and no rights at all to other departments such as general affairs. Which principle does this follow?",
+      "choices_en": [
+        "Configuration enforcement",
+        "Segmentation",
+        "Principle of least privilege",
+        "Decommissioning"
+      ],
+      "explain_en": "Granting only the minimum rights needed for the job is the principle of least privilege. It prevents abuse of rights and makes lateral movement harder for attackers.",
+      "stem_es": "En la carpeta de RR. HH. de un servidor de archivos, se dio acceso solo al personal de RR. HH. que lo necesita para su trabajo y ningún derecho a otros departamentos como administración general. ¿Qué principio sigue esto?",
+      "choices_es": [
+        "Aplicación de la configuración",
+        "Segmentación",
+        "Principio de mínimo privilegio",
+        "Retirada"
+      ],
+      "explain_es": "Conceder solo los derechos mínimos necesarios para el trabajo es el principio de mínimo privilegio. Evita el abuso de derechos y dificulta el movimiento lateral de los atacantes."
     },
     {
       "term": "b-5-configuration-enforcement",
@@ -1338,7 +3098,23 @@
         "アクセスコントロールリスト（ACL）"
       ],
       "answer": 0,
-      "explain": "設定を一貫した状態に保ち、個別の変更や誤設定を許さないのが設定の強制。MDMはその代表的な手段。"
+      "explain": "設定を一貫した状態に保ち、個別の変更や誤設定を許さないのが設定の強制。MDMはその代表的な手段。",
+      "stem_en": "To stop employees from installing apps or changing security settings on company phones at will, the company decided to centrally manage settings such as password policies via MDM. What mitigation is this?",
+      "choices_en": [
+        "Configuration enforcement",
+        "Patching",
+        "Monitoring",
+        "Access control list (ACL)"
+      ],
+      "explain_en": "Keeping settings consistent and disallowing individual changes or misconfigurations is configuration enforcement; MDM is a typical means.",
+      "stem_es": "Para impedir que los empleados instalen aplicaciones o cambien la configuración de seguridad de los móviles de empresa a su antojo, se decidió gestionar de forma centralizada ajustes como las políticas de contraseñas mediante MDM. ¿Qué mitigación es?",
+      "choices_es": [
+        "Aplicación de la configuración",
+        "Aplicación de parches",
+        "Supervisión",
+        "Lista de control de acceso (ACL)"
+      ],
+      "explain_es": "Mantener la configuración coherente e impedir cambios individuales o configuraciones erróneas es la aplicación de la configuración; el MDM es un medio típico."
     },
     {
       "term": "b-5-decommissioning",
@@ -1350,7 +3126,23 @@
         "廃棄"
       ],
       "answer": 3,
-      "explain": "不要になったハードウェアやデータを適切に処分して情報漏洩を防ぐのが廃棄（Decommissioning）。"
+      "explain": "不要になったハードウェアやデータを適切に処分して情報漏洩を防ぐのが廃棄（Decommissioning）。",
+      "stem_en": "When replacing aging PCs, the company set a procedure to completely wipe data before disposal so customer information left on hard disks doesn't leak. What mitigation is this?",
+      "choices_en": [
+        "Encryption",
+        "Isolation",
+        "Patching",
+        "Decommissioning"
+      ],
+      "explain_en": "Properly disposing of unneeded hardware and data to prevent information leaks is decommissioning.",
+      "stem_es": "Al sustituir PC antiguos, la empresa estableció un procedimiento para borrar por completo los datos antes de desecharlos, de modo que no se filtre información de clientes de los discos duros. ¿Qué mitigación es?",
+      "choices_es": [
+        "Cifrado",
+        "Aislamiento",
+        "Aplicación de parches",
+        "Retirada"
+      ],
+      "explain_es": "Desechar correctamente el hardware y los datos que ya no se usan para evitar fugas de información es la retirada (decommissioning)."
     },
     {
       "term": "b-5-least-privilege",
@@ -1362,7 +3154,23 @@
         "廃棄"
       ],
       "answer": 1,
-      "explain": "必要最小限の権限しか付与しない最小特権の原則により、侵害されたアカウントでできることが限られ、横断的な移動が困難になった。"
+      "explain": "必要最小限の権限しか付与しない最小特権の原則により、侵害されたアカウントでできることが限られ、横断的な移動が困難になった。",
+      "stem_en": "An employee's account was hijacked, but because it only had the rights needed for that employee's job, lateral movement to other servers was prevented. What was the main factor that limited the damage?",
+      "choices_en": [
+        "Monitoring",
+        "Principle of least privilege",
+        "Encryption",
+        "Decommissioning"
+      ],
+      "explain_en": "Thanks to least privilege, the compromised account could do little, making lateral movement difficult.",
+      "stem_es": "Se secuestró la cuenta de un empleado, pero como solo tenía los derechos necesarios para su trabajo, se evitó el movimiento lateral a otros servidores. ¿Cuál fue el factor principal que limitó los daños?",
+      "choices_es": [
+        "Supervisión",
+        "Principio de mínimo privilegio",
+        "Cifrado",
+        "Retirada"
+      ],
+      "explain_es": "Gracias al mínimo privilegio, la cuenta comprometida podía hacer poco, lo que dificultó el movimiento lateral."
     },
     {
       "term": "b-5-acl",
@@ -1374,7 +3182,23 @@
         "端末を仮想マシンで隔離する"
       ],
       "answer": 2,
-      "explain": "ACLはユーザーの異動や組織変更に合わせて定期的に見直し、不要な権限を削除することが重要。"
+      "explain": "ACLはユーザーの異動や組織変更に合わせて定期的に見直し、不要な権限を削除することが重要。",
+      "stem_en": "It turned out that every time someone transferred departments, their access to the old department's resources remained. What is the most appropriate mitigation?",
+      "choices_en": [
+        "Bring patches up to date",
+        "Encrypt traffic",
+        "Review ACLs regularly and remove unneeded permissions",
+        "Isolate devices in virtual machines"
+      ],
+      "explain_en": "ACLs should be reviewed regularly as people move and the organization changes, removing permissions no longer needed.",
+      "stem_es": "Se descubrió que cada vez que alguien cambiaba de departamento conservaba el acceso a los recursos del departamento anterior. ¿Cuál es la mitigación más adecuada?",
+      "choices_es": [
+        "Poner los parches al día",
+        "Cifrar el tráfico",
+        "Revisar periódicamente las ACL y eliminar los permisos innecesarios",
+        "Aislar los equipos en máquinas virtuales"
+      ],
+      "explain_es": "Las ACL deben revisarse periódicamente a medida que las personas cambian de puesto y la organización evoluciona, eliminando los permisos que ya no se necesitan."
     }
   ]
 }

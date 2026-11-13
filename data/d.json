@@ -24,6 +24,17 @@
               "examples": [
                 "パスワード方針",
                 "FW・更新・AV"
+              ],
+              "es": "Línea base segura",
+              "one_liner_en": "The standard for **minimum settings** to operate securely",
+              "one_liner_es": "El estándar de **configuración mínima** para operar con seguridad",
+              "examples_en": [
+                "Password policy",
+                "FW, updates and AV"
+              ],
+              "examples_es": [
+                "Política de contraseñas",
+                "Cortafuegos, actualizaciones y antivirus"
               ]
             },
             {
@@ -35,6 +46,17 @@
               "examples": [
                 "MDM導入",
                 "施策の維持"
+              ],
+              "es": "Dispositivos móviles",
+              "one_liner_en": "Phones and tablets protected through **central management**",
+              "one_liner_es": "Teléfonos y tabletas protegidos mediante **gestión centralizada**",
+              "examples_en": [
+                "Deploying MDM",
+                "Keeping policies in force"
+              ],
+              "examples_es": [
+                "Implantación de MDM",
+                "Mantenimiento de las políticas"
               ]
             },
             {
@@ -46,6 +68,17 @@
               "examples": [
                 "入退室・ロック",
                 "強力なパスワード"
+              ],
+              "es": "Estaciones de trabajo",
+              "one_liner_en": "Protect work PCs **physically and logically**",
+              "one_liner_es": "Proteger los PC de trabajo **física y lógicamente**",
+              "examples_en": [
+                "Entry control and screen locks",
+                "Strong passwords"
+              ],
+              "examples_es": [
+                "Control de acceso y bloqueo de pantalla",
+                "Contraseñas robustas"
               ]
             },
             {
@@ -57,6 +90,17 @@
               "examples": [
                 "ポートセキュリティ",
                 "MACアドレス登録"
+              ],
+              "es": "Switches",
+              "one_liner_en": "**Restrict** which devices can connect per port",
+              "one_liner_es": "**Restringen** qué dispositivos pueden conectarse por puerto",
+              "examples_en": [
+                "Port security",
+                "Registering MAC addresses"
+              ],
+              "examples_es": [
+                "Seguridad de puertos",
+                "Registro de direcciones MAC"
               ]
             },
             {
@@ -68,9 +112,22 @@
               "examples": [
                 "デフォルトPW禁止",
                 "ファーム更新"
+              ],
+              "es": "Routers",
+              "one_liner_en": "Protect with admin passwords and **up-to-date firmware**",
+              "one_liner_es": "Se protegen con contraseñas de administración y **firmware actualizado**",
+              "examples_en": [
+                "No default passwords",
+                "Firmware updates"
+              ],
+              "examples_es": [
+                "Prohibir contraseñas predeterminadas",
+                "Actualización del firmware"
               ]
             }
-          ]
+          ],
+          "title_en": "Baselines, endpoints and network devices",
+          "title_es": "Líneas base, equipos y dispositivos de red"
         },
         {
           "id": "server-ot",
@@ -85,6 +142,17 @@
               "examples": [
                 "IAM最小権限",
                 "監視・ログ"
+              ],
+              "es": "Infraestructura en la nube",
+              "one_liner_en": "Configure **permissions and logging** properly with IAM and the like",
+              "one_liner_es": "Configurar bien **permisos y registros** con IAM y herramientas similares",
+              "examples_en": [
+                "IAM least privilege",
+                "Monitoring and logs"
+              ],
+              "examples_es": [
+                "Mínimo privilegio en IAM",
+                "Supervisión y registros"
               ]
             },
             {
@@ -96,6 +164,17 @@
               "examples": [
                 "OSパッチ",
                 "接続情報の暗号化"
+              ],
+              "es": "Servidores",
+              "one_liner_en": "**Patching** and protecting configuration secrets",
+              "one_liner_es": "**Parches** y protección de los secretos de configuración",
+              "examples_en": [
+                "OS patches",
+                "Encrypting connection details"
+              ],
+              "examples_es": [
+                "Parches del SO",
+                "Cifrado de los datos de conexión"
               ]
             },
             {
@@ -107,6 +186,17 @@
               "examples": [
                 "インターネット分離",
                 "FW・VLAN分割"
+              ],
+              "es": "ICS / SCADA",
+              "one_liner_en": "**Separate** control systems from business networks",
+              "one_liner_es": "**Separar** los sistemas de control de las redes corporativas",
+              "examples_en": [
+                "Isolation from the internet",
+                "Firewall and VLAN separation"
+              ],
+              "examples_es": [
+                "Aislamiento de internet",
+                "Separación con cortafuegos y VLAN"
               ]
             },
             {
@@ -118,6 +208,17 @@
               "examples": [
                 "家電の更新",
                 "産業機器ファーム"
+              ],
+              "es": "Sistemas embebidos",
+              "one_liner_en": "**Firmware updates** for systems built into devices",
+              "one_liner_es": "**Actualizaciones de firmware** de los sistemas integrados en dispositivos",
+              "examples_en": [
+                "Appliance updates",
+                "Industrial equipment firmware"
+              ],
+              "examples_es": [
+                "Actualizaciones de electrodomésticos",
+                "Firmware de equipos industriales"
               ]
             },
             {
@@ -129,6 +230,18 @@
               "examples": [
                 "エンジン制御",
                 "ベンダーパッチ"
+              ],
+              "es": "Sistema operativo en tiempo real (RTOS)",
+              "name_en": "Real-Time Operating System (RTOS)",
+              "one_liner_en": "**Keep** time-constrained OSes **up to date**",
+              "one_liner_es": "**Mantener actualizados** los SO con restricciones de tiempo",
+              "examples_en": [
+                "Engine control",
+                "Vendor patches"
+              ],
+              "examples_es": [
+                "Control del motor",
+                "Parches del fabricante"
               ]
             },
             {
@@ -140,9 +253,23 @@
               "examples": [
                 "デフォルトPW変更",
                 "遠隔エアコン"
+              ],
+              "es": "Internet de las cosas (IoT)",
+              "name_en": "Internet of Things (IoT)",
+              "one_liner_en": "**Changing default passwords** comes first",
+              "one_liner_es": "Lo primero es **cambiar las contraseñas predeterminadas**",
+              "examples_en": [
+                "Changing default passwords",
+                "Remotely controlled air conditioners"
+              ],
+              "examples_es": [
+                "Cambio de contraseñas predeterminadas",
+                "Aires acondicionados controlados a distancia"
               ]
             }
-          ]
+          ],
+          "title_en": "Servers, cloud, control systems and IoT",
+          "title_es": "Servidores, nube, sistemas de control e IoT"
         },
         {
           "id": "wireless-survey",
@@ -157,6 +284,17 @@
               "examples": [
                 "AP配置決定",
                 "干渉・死角の把握"
+              ],
+              "es": "Estudio del sitio (site survey)",
+              "one_liner_en": "**Surveying radio conditions** before building a wireless network",
+              "one_liner_es": "**Estudiar las condiciones de radio** antes de montar una red inalámbrica",
+              "examples_en": [
+                "Deciding AP placement",
+                "Finding interference and dead spots"
+              ],
+              "examples_es": [
+                "Decidir dónde colocar los AP",
+                "Detectar interferencias y zonas muertas"
               ]
             },
             {
@@ -168,9 +306,22 @@
               "examples": [
                 "弱いエリア表示",
                 "チャンネル調整"
+              ],
+              "es": "Mapa de calor",
+              "one_liner_en": "A map that **visualizes signal strength in color**",
+              "one_liner_es": "Un mapa que **muestra la intensidad de señal con colores**",
+              "examples_en": [
+                "Showing weak areas",
+                "Channel tuning"
+              ],
+              "examples_es": [
+                "Mostrar zonas débiles",
+                "Ajuste de canales"
               ]
             }
-          ]
+          ],
+          "title_en": "Wireless surveys and visualization",
+          "title_es": "Estudios y visualización inalámbricos"
         },
         {
           "id": "mobile-connect",
@@ -185,6 +336,18 @@
               "examples": [
                 "ポリシー一括適用",
                 "リモートワイプ"
+              ],
+              "es": "Gestión de dispositivos móviles (MDM)",
+              "name_en": "Mobile Device Management (MDM)",
+              "one_liner_en": "A system to **centrally manage** mobile devices",
+              "one_liner_es": "Sistema para **gestionar de forma centralizada** los móviles",
+              "examples_en": [
+                "Applying policies in bulk",
+                "Remote wipe"
+              ],
+              "examples_es": [
+                "Aplicación masiva de políticas",
+                "Borrado remoto"
               ]
             },
             {
@@ -196,6 +359,18 @@
               "examples": [
                 "私物スマホ業務",
                 "MDMで管理"
+              ],
+              "es": "Traiga su propio dispositivo (BYOD)",
+              "name_en": "Bring Your Own Device (BYOD)",
+              "one_liner_en": "Using **personal devices** for work",
+              "one_liner_es": "Usar **dispositivos personales** para trabajar",
+              "examples_en": [
+                "Work on personal phones",
+                "Managed with MDM"
+              ],
+              "examples_es": [
+                "Trabajo con el móvil personal",
+                "Gestión con MDM"
               ]
             },
             {
@@ -207,6 +382,18 @@
               "examples": [
                 "承認リスト選択",
                 "基準の事前策定"
+              ],
+              "es": "Elija su propio dispositivo (CYOD)",
+              "name_en": "Choose Your Own Device (CYOD)",
+              "one_liner_en": "Employees **pick from** company-approved devices",
+              "one_liner_es": "Los empleados **eligen entre** dispositivos aprobados por la empresa",
+              "examples_en": [
+                "Choosing from an approved list",
+                "Setting criteria in advance"
+              ],
+              "examples_es": [
+                "Elegir de una lista aprobada",
+                "Definir los criterios de antemano"
               ]
             },
             {
@@ -218,6 +405,17 @@
               "examples": [
                 "SIMの暗号化",
                 "キャリア接続"
+              ],
+              "es": "Celular (red móvil)",
+              "one_liner_en": "Connecting over a **mobile carrier network**",
+              "one_liner_es": "Conectarse a través de la **red de un operador móvil**",
+              "examples_en": [
+                "SIM encryption",
+                "Carrier connections"
+              ],
+              "examples_es": [
+                "Cifrado de la SIM",
+                "Conexión por operador"
               ]
             },
             {
@@ -229,6 +427,17 @@
               "examples": [
                 "暗号化の有効化",
                 "オープン網回避"
+              ],
+              "es": "Wi-Fi",
+              "one_liner_en": "Protect wireless LANs with **encryption and authentication**",
+              "one_liner_es": "Proteger las redes inalámbricas con **cifrado y autenticación**",
+              "examples_en": [
+                "Turning on encryption",
+                "Avoiding open networks"
+              ],
+              "examples_es": [
+                "Activar el cifrado",
+                "Evitar redes abiertas"
               ]
             },
             {
@@ -240,9 +449,22 @@
               "examples": [
                 "バージョン更新",
                 "ペアリング無効化"
+              ],
+              "es": "Bluetooth",
+              "one_liner_en": "Latest version and **pairing only when needed**",
+              "one_liner_es": "Versión más reciente y **emparejar solo cuando haga falta**",
+              "examples_en": [
+                "Updating the version",
+                "Disabling pairing"
+              ],
+              "examples_es": [
+                "Actualizar la versión",
+                "Desactivar el emparejamiento"
               ]
             }
-          ]
+          ],
+          "title_en": "Mobile management, deployment and connection methods",
+          "title_es": "Gestión, despliegue y conexión de móviles"
         },
         {
           "id": "wireless-settings",
@@ -257,6 +479,18 @@
               "examples": [
                 "SAE認証",
                 "WPA2より耐性"
+              ],
+              "es": "WPA3",
+              "name_en": "Wi-Fi Protected Access 3 (WPA3)",
+              "one_liner_en": "Newer Wi-Fi protection that **resists dictionary attacks**",
+              "one_liner_es": "Protección Wi-Fi más reciente que **resiste los ataques de diccionario**",
+              "examples_en": [
+                "SAE authentication",
+                "More resistant than WPA2"
+              ],
+              "examples_es": [
+                "Autenticación SAE",
+                "Más resistente que WPA2"
               ]
             },
             {
@@ -268,9 +502,22 @@
               "examples": [
                 "強い鍵長",
                 "PFS"
+              ],
+              "es": "Protocolos criptográficos",
+              "one_liner_en": "Protect data in transit by **encrypting** it",
+              "one_liner_es": "Protegen los datos en tránsito **cifrándolos**",
+              "examples_en": [
+                "Strong key lengths",
+                "PFS"
+              ],
+              "examples_es": [
+                "Longitudes de clave robustas",
+                "PFS"
               ]
             }
-          ]
+          ],
+          "title_en": "Wireless security settings",
+          "title_es": "Configuración de seguridad inalámbrica"
         },
         {
           "id": "app-monitor",
@@ -285,6 +532,17 @@
               "examples": [
                 "ホワイトリスト",
                 "エスケープ処理"
+              ],
+              "es": "Validación de entradas",
+              "one_liner_en": "**Checks input** is appropriate and rejects bad data",
+              "one_liner_es": "**Comprueba que la entrada** sea adecuada y rechaza los datos indebidos",
+              "examples_en": [
+                "Allow lists",
+                "Escaping"
+              ],
+              "examples_es": [
+                "Listas de permitidos",
+                "Escapado de caracteres"
               ]
             },
             {
@@ -296,6 +554,17 @@
               "examples": [
                 "Secure属性",
                 "傍受防止"
+              ],
+              "es": "Cookies seguras",
+              "one_liner_en": "An attribute that sends cookies **only over HTTPS**",
+              "one_liner_es": "Atributo que envía las cookies **solo por HTTPS**",
+              "examples_en": [
+                "Secure attribute",
+                "Preventing interception"
+              ],
+              "examples_es": [
+                "Atributo Secure",
+                "Evitar la interceptación"
               ]
             },
             {
@@ -307,6 +576,17 @@
               "examples": [
                 "SASTツール",
                 "記述パターン検査"
+              ],
+              "es": "Análisis estático de código",
+              "one_liner_en": "Analyzes source **without running it**",
+              "one_liner_es": "Analiza el código fuente **sin ejecutarlo**",
+              "examples_en": [
+                "SAST tools",
+                "Checking coding patterns"
+              ],
+              "examples_es": [
+                "Herramientas SAST",
+                "Revisión de patrones de código"
               ]
             },
             {
@@ -318,6 +598,17 @@
               "examples": [
                 "デジタル署名",
                 "不明な発行元警告"
+              ],
+              "es": "Firma de código",
+              "one_liner_en": "Signatures **guarantee code authenticity**",
+              "one_liner_es": "Las firmas **garantizan la autenticidad** del código",
+              "examples_en": [
+                "Digital signatures",
+                "Unknown publisher warnings"
+              ],
+              "examples_es": [
+                "Firmas digitales",
+                "Avisos de editor desconocido"
               ]
             },
             {
@@ -329,6 +620,17 @@
               "examples": [
                 "ブラウザ隔離",
                 "アプリ領域分離"
+              ],
+              "es": "Sandboxing",
+              "one_liner_en": "Runs code **confined** in a restricted environment",
+              "one_liner_es": "Ejecuta el código **confinado** en un entorno restringido",
+              "examples_en": [
+                "Browser isolation",
+                "Separate app storage"
+              ],
+              "examples_es": [
+                "Aislamiento del navegador",
+                "Separación de espacios de aplicaciones"
               ]
             },
             {
@@ -340,11 +642,28 @@
               "examples": [
                 "CPU急上昇検知",
                 "操作ログ監視"
+              ],
+              "es": "Supervisión",
+              "one_liner_en": "**Spot anomalies** by watching load and logs",
+              "one_liner_es": "**Detectar anomalías** observando la carga y los registros",
+              "examples_en": [
+                "Detecting CPU spikes",
+                "Monitoring activity logs"
+              ],
+              "examples_es": [
+                "Detección de picos de CPU",
+                "Supervisión de registros de actividad"
               ]
             }
-          ]
+          ],
+          "title_en": "Application security and monitoring",
+          "title_es": "Seguridad de aplicaciones y supervisión"
         }
-      ]
+      ],
+      "title_en": "Securing resources",
+      "title_es": "Protección de recursos",
+      "blurb_en": "Protecting endpoints, servers and the cloud",
+      "blurb_es": "Cómo proteger equipos, servidores y la nube"
     },
     {
       "id": "D-2",
@@ -366,6 +685,17 @@
               "examples": [
                 "正規ルートの新品PC",
                 "納品時の不要ソフト削除"
+              ],
+              "es": "Proceso de adquisición / compra",
+              "one_liner_en": "Define **security requirements** before buying and procure through trusted channels",
+              "one_liner_es": "Definir **requisitos de seguridad** antes de comprar y adquirir por canales de confianza",
+              "examples_en": [
+                "New PCs from authorized channels",
+                "Removing bloatware on delivery"
+              ],
+              "examples_es": [
+                "PC nuevos de canales oficiales",
+                "Eliminar software innecesario al recibirlos"
               ]
             },
             {
@@ -377,9 +707,22 @@
               "examples": [
                 "社員へのPC貸与台帳",
                 "シリアル番号での管理"
+              ],
+              "es": "Propiedad",
+              "one_liner_en": "Clearly assign an asset's **owner and custodian** and record it",
+              "one_liner_es": "Asignar claramente el **propietario y responsable** de cada activo y registrarlo",
+              "examples_en": [
+                "Register of PCs lent to employees",
+                "Tracking by serial number"
+              ],
+              "examples_es": [
+                "Registro de PC prestados a empleados",
+                "Control por número de serie"
               ]
             }
-          ]
+          ],
+          "title_en": "Acquisition and ownership",
+          "title_es": "Adquisición y propiedad"
         },
         {
           "id": "tracking",
@@ -394,6 +737,17 @@
               "examples": [
                 "HW／SWの資産台帳",
                 "ライセンス・サポート期限の確認"
+              ],
+              "es": "Inventario",
+              "one_liner_en": "**List IT assets in a register** and track them continuously",
+              "one_liner_es": "**Registrar los activos de TI** y seguirlos de forma continua",
+              "examples_en": [
+                "HW/SW asset register",
+                "Checking license and support dates"
+              ],
+              "examples_es": [
+                "Registro de activos de hardware y software",
+                "Revisión de licencias y fechas de soporte"
               ]
             },
             {
@@ -405,9 +759,22 @@
               "examples": [
                 "IP範囲スキャン",
                 "開ポート・OSの発見"
+              ],
+              "es": "Enumeración",
+              "one_liner_en": "**Discovers** devices and information matching criteria, e.g. by scanning",
+              "one_liner_es": "**Descubre** dispositivos e información que cumplen ciertos criterios, por ejemplo con escaneos",
+              "examples_en": [
+                "Scanning an IP range",
+                "Finding open ports and OSes"
+              ],
+              "examples_es": [
+                "Escaneo de un rango de IP",
+                "Detección de puertos abiertos y SO"
               ]
             }
-          ]
+          ],
+          "title_en": "Tracking (inventory and enumeration)",
+          "title_es": "Seguimiento (inventario y enumeración)"
         },
         {
           "id": "disposal",
@@ -422,6 +789,17 @@
               "examples": [
                 "サニタイズソフトによる消去",
                 "廃棄前の情報漏洩防止"
+              ],
+              "es": "Saneamiento (sanitization)",
+              "one_liner_en": "Makes data **unrecoverable** (deleting alone isn't enough)",
+              "one_liner_es": "Hace que los datos sean **irrecuperables** (borrar no basta)",
+              "examples_en": [
+                "Erasing with sanitization software",
+                "Preventing leaks before disposal"
+              ],
+              "examples_es": [
+                "Borrado con software de saneamiento",
+                "Evitar fugas antes de desechar"
               ]
             },
             {
@@ -433,6 +811,17 @@
               "examples": [
                 "HDDシュレッダー粉砕",
                 "穿孔・消磁"
+              ],
+              "es": "Destrucción",
+              "one_liner_en": "**Physically destroys** media so nothing can be recovered",
+              "one_liner_es": "**Destruye físicamente** los medios para que nada pueda recuperarse",
+              "examples_en": [
+                "Shredding HDDs",
+                "Drilling and degaussing"
+              ],
+              "examples_es": [
+                "Triturado de discos duros",
+                "Perforación y desmagnetización"
               ]
             },
             {
@@ -444,6 +833,17 @@
               "examples": [
                 "破壊証明書の取得",
                 "規格に沿った廃棄"
+              ],
+              "es": "Certificación",
+              "one_liner_en": "**Third-party proof** of proper disposal or erasure",
+              "one_liner_es": "**Prueba de un tercero** de una eliminación o borrado correctos",
+              "examples_en": [
+                "Getting a certificate of destruction",
+                "Disposal to recognized standards"
+              ],
+              "examples_es": [
+                "Obtener un certificado de destrucción",
+                "Eliminación conforme a normas"
               ]
             },
             {
@@ -455,11 +855,28 @@
               "examples": [
                 "廃棄前バックアップ",
                 "財務データの保存期間"
+              ],
+              "es": "Retención de datos",
+              "one_liner_en": "**Keep required data per legal and business needs** before disposal",
+              "one_liner_es": "**Conservar los datos necesarios según la ley y el negocio** antes de desechar",
+              "examples_en": [
+                "Backing up before disposal",
+                "Retention periods for financial data"
+              ],
+              "examples_es": [
+                "Copia de seguridad antes de desechar",
+                "Plazos de conservación de datos financieros"
               ]
             }
-          ]
+          ],
+          "title_en": "Disposal and decommissioning",
+          "title_es": "Eliminación y retirada"
         }
-      ]
+      ],
+      "title_en": "Hardware acquisition, management and disposal",
+      "title_es": "Adquisición, gestión y eliminación de hardware",
+      "blurb_en": "Asset management from procurement through tracking to disposal",
+      "blurb_es": "Gestión de activos desde la compra y el seguimiento hasta la eliminación"
     },
     {
       "id": "D-3",
@@ -481,6 +898,17 @@
               "examples": [
                 "ポート・版チェック",
                 "SQLインジェクション／XSS検査"
+              ],
+              "es": "Análisis de vulnerabilidades",
+              "one_liner_en": "Finds **known weaknesses** in systems and networks",
+              "one_liner_es": "Detecta **debilidades conocidas** en sistemas y redes",
+              "examples_en": [
+                "Port and version checks",
+                "SQL injection / XSS tests"
+              ],
+              "examples_es": [
+                "Comprobación de puertos y versiones",
+                "Pruebas de inyección SQL / XSS"
               ]
             },
             {
@@ -492,6 +920,17 @@
               "examples": [
                 "SASTツール",
                 "入力連結の検出"
+              ],
+              "es": "Análisis estático",
+              "one_liner_en": "Analyzes an app's code **without running it**",
+              "one_liner_es": "Analiza el código de una aplicación **sin ejecutarla**",
+              "examples_en": [
+                "SAST tools",
+                "Spotting concatenated input"
+              ],
+              "examples_es": [
+                "Herramientas SAST",
+                "Detección de entradas concatenadas"
               ]
             },
             {
@@ -503,6 +942,17 @@
               "examples": [
                 "DAST",
                 "実行時のXSS確認"
+              ],
+              "es": "Análisis dinámico",
+              "one_liner_en": "Analyzes an app's behavior **while it runs**",
+              "one_liner_es": "Analiza el comportamiento de una aplicación **mientras se ejecuta**",
+              "examples_en": [
+                "DAST",
+                "Checking XSS at runtime"
+              ],
+              "examples_es": [
+                "DAST",
+                "Comprobación de XSS en ejecución"
               ]
             },
             {
@@ -514,9 +964,22 @@
               "examples": [
                 "OSSライブラリ監視",
                 "安全な版への更新"
+              ],
+              "es": "Supervisión de paquetes",
+              "one_liner_en": "Watches dependency **packages** for known vulnerabilities",
+              "one_liner_es": "Vigila los **paquetes** de dependencias en busca de vulnerabilidades conocidas",
+              "examples_en": [
+                "Monitoring OSS libraries",
+                "Updating to safe versions"
+              ],
+              "examples_es": [
+                "Supervisión de bibliotecas de código abierto",
+                "Actualización a versiones seguras"
               ]
             }
-          ]
+          ],
+          "title_en": "Identification (scanning and applications)",
+          "title_es": "Identificación (análisis y aplicaciones)"
         },
         {
           "id": "threat-feed",
@@ -531,6 +994,17 @@
               "examples": [
                 "SNSの製品情報",
                 "コミュニティの攻撃手法"
+              ],
+              "es": "Inteligencia de fuentes abiertas (OSINT)",
+              "one_liner_en": "Learns about threats and vulnerabilities from **public information**",
+              "one_liner_es": "Conoce amenazas y vulnerabilidades a partir de **información pública**",
+              "examples_en": [
+                "Product info on social media",
+                "Attack techniques shared by communities"
+              ],
+              "examples_es": [
+                "Información de productos en redes sociales",
+                "Técnicas de ataque compartidas en comunidades"
               ]
             },
             {
@@ -542,6 +1016,17 @@
               "examples": [
                 "有料インテリジェンス",
                 "ゼロデイ情報の購読"
+              ],
+              "es": "Propietarias / de terceros",
+              "one_liner_en": "Uses **threat feeds** from outside vendors",
+              "one_liner_es": "Usa **fuentes de amenazas** de proveedores externos",
+              "examples_en": [
+                "Paid threat intelligence",
+                "Zero-day information subscriptions"
+              ],
+              "examples_es": [
+                "Inteligencia de amenazas de pago",
+                "Suscripciones a información de días cero"
               ]
             },
             {
@@ -553,6 +1038,17 @@
               "examples": [
                 "ISAC",
                 "金融機関同士の共有"
+              ],
+              "es": "Organización de intercambio de información",
+              "one_liner_en": "Organizations that **share** threat information within an industry",
+              "one_liner_es": "Organizaciones que **comparten** información de amenazas en un sector",
+              "examples_en": [
+                "ISAC",
+                "Sharing among financial institutions"
+              ],
+              "examples_es": [
+                "ISAC",
+                "Intercambio entre entidades financieras"
               ]
             },
             {
@@ -564,9 +1060,22 @@
               "examples": [
                 "Tor上のフォーラム",
                 "認証情報売買の監視"
+              ],
+              "es": "Web oscura (dark web)",
+              "one_liner_en": "Gathers **attack and leak** information from anonymous spaces",
+              "one_liner_es": "Obtiene información de **ataques y filtraciones** en espacios anónimos",
+              "examples_en": [
+                "Forums on Tor",
+                "Watching credential sales"
+              ],
+              "examples_es": [
+                "Foros en Tor",
+                "Vigilancia de la venta de credenciales"
               ]
             }
-          ]
+          ],
+          "title_en": "Identification (threat feeds)",
+          "title_es": "Identificación (fuentes de amenazas)"
         },
         {
           "id": "identification-test",
@@ -581,6 +1090,17 @@
               "examples": [
                 "入力フォームへの不正データ",
                 "依頼ベースの評価"
+              ],
+              "es": "Pruebas de penetración",
+              "one_liner_en": "Tests **real-world effectiveness** from an attacker's view, with permission",
+              "one_liner_es": "Prueba la **eficacia real** desde el punto de vista del atacante, con permiso",
+              "examples_en": [
+                "Malicious data in input forms",
+                "Engagement-based assessment"
+              ],
+              "examples_es": [
+                "Datos maliciosos en formularios",
+                "Evaluación por encargo"
               ]
             },
             {
@@ -592,6 +1112,17 @@
               "examples": [
                 "ホワイトハッカーへの報酬",
                 "報告の検証と支払い"
+              ],
+              "es": "Programa de recompensas por errores (bug bounty)",
+              "one_liner_en": "Pays **rewards** for flaws found by outsiders",
+              "one_liner_es": "Paga **recompensas** por fallos descubiertos por externos",
+              "examples_en": [
+                "Rewards for ethical hackers",
+                "Verifying reports and paying out"
+              ],
+              "examples_es": [
+                "Recompensas a hackers éticos",
+                "Verificación de informes y pago"
               ]
             },
             {
@@ -603,9 +1134,22 @@
               "examples": [
                 "セキュリティ監査",
                 "ポリシー遵守の点検"
+              ],
+              "es": "Auditoría de sistemas / procesos",
+              "one_liner_en": "Assesses **compliance** with policies and regulations",
+              "one_liner_es": "Evalúa el **cumplimiento** de políticas y normativas",
+              "examples_en": [
+                "Security audits",
+                "Checking policy compliance"
+              ],
+              "examples_es": [
+                "Auditorías de seguridad",
+                "Revisión del cumplimiento de políticas"
               ]
             }
-          ]
+          ],
+          "title_en": "Identification (testing and audits)",
+          "title_es": "Identificación (pruebas y auditorías)"
         },
         {
           "id": "analysis",
@@ -620,6 +1164,17 @@
               "examples": [
                 "スキャナの誤検知",
                 "手動検証で否定"
+              ],
+              "es": "Falso positivo",
+              "one_liner_en": "Wrongly flags a problem **that isn't there**",
+              "one_liner_es": "Señala por error un problema **que no existe**",
+              "examples_en": [
+                "Scanner false alarms",
+                "Ruled out by manual checks"
+              ],
+              "examples_es": [
+                "Falsas alarmas del escáner",
+                "Descartado con comprobación manual"
               ]
             },
             {
@@ -631,6 +1186,17 @@
               "examples": [
                 "監査で見落とし",
                 "後日の侵害で発覚"
+              ],
+              "es": "Falso negativo",
+              "one_liner_en": "**Misses** a problem that does exist",
+              "one_liner_es": "**Pasa por alto** un problema que sí existe",
+              "examples_en": [
+                "Overlooked in an audit",
+                "Found later in a breach"
+              ],
+              "examples_es": [
+                "Pasado por alto en una auditoría",
+                "Descubierto después en una intrusión"
               ]
             },
             {
@@ -642,6 +1208,17 @@
               "examples": [
                 "中核機能の脆弱性を先に",
                 "低影響は後回し"
+              ],
+              "es": "Priorización",
+              "one_liner_en": "Decides **fix order** based on impact",
+              "one_liner_es": "Decide el **orden de corrección** según el impacto",
+              "examples_en": [
+                "Core-function vulnerabilities first",
+                "Low impact later"
+              ],
+              "examples_es": [
+                "Primero las vulnerabilidades de funciones clave",
+                "Lo de bajo impacto, después"
               ]
             },
             {
@@ -653,6 +1230,17 @@
               "examples": [
                 "特性の採点",
                 "優先度の定量根拠"
+              ],
+              "es": "Sistema común de puntuación de vulnerabilidades (CVSS)",
+              "one_liner_en": "A standard that rates severity **from 0 to 10**",
+              "one_liner_es": "Estándar que puntúa la gravedad **de 0 a 10**",
+              "examples_en": [
+                "Scoring characteristics",
+                "Quantitative basis for priority"
+              ],
+              "examples_es": [
+                "Puntuación de características",
+                "Base cuantitativa para la prioridad"
               ]
             },
             {
@@ -664,6 +1252,17 @@
               "examples": [
                 "CVE-年-番号",
                 "ExchangeのCVE例"
+              ],
+              "es": "Vulnerabilidades y exposiciones comunes (CVE)",
+              "one_liner_en": "Assigns vulnerabilities a **unique ID**",
+              "one_liner_es": "Asigna a cada vulnerabilidad un **identificador único**",
+              "examples_en": [
+                "CVE-year-number",
+                "CVE examples for Exchange"
+              ],
+              "examples_es": [
+                "CVE-año-número",
+                "Ejemplos de CVE de Exchange"
               ]
             },
             {
@@ -675,6 +1274,17 @@
               "examples": [
                 "OWASP Top 10",
                 "インジェクション等の類型"
+              ],
+              "es": "Clasificación de vulnerabilidades",
+              "one_liner_en": "**Groups** vulnerabilities by their characteristics",
+              "one_liner_es": "**Agrupa** las vulnerabilidades según sus características",
+              "examples_en": [
+                "OWASP Top 10",
+                "Categories such as injection"
+              ],
+              "examples_es": [
+                "OWASP Top 10",
+                "Categorías como la inyección"
               ]
             },
             {
@@ -686,6 +1296,17 @@
               "examples": [
                 "DB接続情報の保管",
                 "環境要因と優先度"
+              ],
+              "es": "Variables del entorno",
+              "one_liner_en": "**Factors** environment settings and conditions into the analysis",
+              "one_liner_es": "**Incorpora** al análisis la configuración y los factores del entorno",
+              "examples_en": [
+                "Storing DB connection info",
+                "Environmental factors and priority"
+              ],
+              "examples_es": [
+                "Almacenamiento de datos de conexión a la BD",
+                "Factores del entorno y prioridad"
               ]
             },
             {
@@ -697,9 +1318,22 @@
               "examples": [
                 "決済情報扱い＝許容低",
                 "対応の厳しさに反映"
+              ],
+              "es": "Tolerancia al riesgo",
+              "one_liner_en": "The **level of risk** an organization can accept",
+              "one_liner_es": "El **nivel de riesgo** que una organización puede aceptar",
+              "examples_en": [
+                "Payment data = low tolerance",
+                "Reflected in how strict the response is"
+              ],
+              "examples_es": [
+                "Datos de pago = tolerancia baja",
+                "Se refleja en lo estricta que es la respuesta"
               ]
             }
-          ]
+          ],
+          "title_en": "Analysis",
+          "title_es": "Análisis"
         },
         {
           "id": "response",
@@ -714,6 +1348,17 @@
               "examples": [
                 "緊急パッチ展開",
                 "メンテ窓での適用"
+              ],
+              "es": "Aplicación de parches",
+              "one_liner_en": "**Applies** vendor fixes to close holes",
+              "one_liner_es": "**Aplica** las correcciones del fabricante para cerrar fallos",
+              "examples_en": [
+                "Rolling out emergency patches",
+                "Applying in a maintenance window"
+              ],
+              "examples_es": [
+                "Despliegue de parches urgentes",
+                "Aplicación en una ventana de mantenimiento"
               ]
             },
             {
@@ -725,6 +1370,17 @@
               "examples": [
                 "サイバー保険",
                 "復旧・賠償のカバー"
+              ],
+              "es": "Seguro",
+              "one_liner_en": "**Financial compensation** for losses via insurance",
+              "one_liner_es": "**Compensación económica** de pérdidas mediante un seguro",
+              "examples_en": [
+                "Cyber insurance",
+                "Covering recovery and liability"
+              ],
+              "examples_es": [
+                "Ciberseguro",
+                "Cobertura de recuperación e indemnizaciones"
               ]
             },
             {
@@ -736,6 +1392,17 @@
               "examples": [
                 "重要系の分離",
                 "最小通信の許可"
+              ],
+              "es": "Segmentación",
+              "one_liner_en": "Splits the network to curb **lateral movement**",
+              "one_liner_es": "Divide la red para frenar el **movimiento lateral**",
+              "examples_en": [
+                "Isolating critical systems",
+                "Allowing only minimal traffic"
+              ],
+              "examples_es": [
+                "Aislar sistemas críticos",
+                "Permitir solo el tráfico mínimo"
               ]
             },
             {
@@ -747,6 +1414,17 @@
               "examples": [
                 "パッチ保留中のIPS",
                 "同等効果を目指す制御"
+              ],
+              "es": "Controles compensatorios",
+              "one_liner_en": "Contains risk **by other means** when the primary fix isn't possible",
+              "one_liner_es": "Contiene el riesgo **por otros medios** cuando la corrección principal no es posible",
+              "examples_en": [
+                "IPS while a patch is pending",
+                "Controls aiming for equivalent effect"
+              ],
+              "examples_es": [
+                "IPS mientras el parche está pendiente",
+                "Controles que buscan un efecto equivalente"
               ]
             },
             {
@@ -758,11 +1436,28 @@
               "examples": [
                 "代替策付きパッチ延期",
                 "隔離ラボの対応免除"
+              ],
+              "es": "Excepciones y exenciones",
+              "one_liner_en": "Exception = alternate handling allowed; exemption = **no action required**",
+              "one_liner_es": "Excepción = se permite otra forma de tratarlo; exención = **no requiere acción**",
+              "examples_en": [
+                "Delaying a patch with compensating controls",
+                "Exempting an isolated lab"
+              ],
+              "examples_es": [
+                "Aplazar un parche con controles compensatorios",
+                "Eximir a un laboratorio aislado"
               ]
             }
-          ]
+          ],
+          "title_en": "Response and remediation",
+          "title_es": "Respuesta y corrección"
         }
-      ]
+      ],
+      "title_en": "Vulnerability management",
+      "title_es": "Gestión de vulnerabilidades",
+      "blurb_en": "Identifying, analyzing and responding",
+      "blurb_es": "Identificar, analizar y responder"
     },
     {
       "id": "D-4",
@@ -784,6 +1479,17 @@
               "examples": [
                 "CPU・メモリ・ディスクの収集",
                 "応答時間の異常検知"
+              ],
+              "es": "Supervisión de sistemas",
+              "one_liner_en": "**Continuously checks** health, availability and performance",
+              "one_liner_es": "**Comprueba de forma continua** el estado, la disponibilidad y el rendimiento",
+              "examples_en": [
+                "Collecting CPU, memory and disk data",
+                "Detecting abnormal response times"
+              ],
+              "examples_es": [
+                "Recogida de datos de CPU, memoria y disco",
+                "Detección de tiempos de respuesta anómalos"
               ]
             },
             {
@@ -795,6 +1501,17 @@
               "examples": [
                 "応答時間の計測",
                 "エラー率の監視"
+              ],
+              "es": "Supervisión de aplicaciones",
+              "one_liner_en": "Continuously tracks app availability, performance and **errors**",
+              "one_liner_es": "Sigue de forma continua la disponibilidad, el rendimiento y los **errores** de la aplicación",
+              "examples_en": [
+                "Measuring response times",
+                "Monitoring error rates"
+              ],
+              "examples_es": [
+                "Medición de tiempos de respuesta",
+                "Supervisión de la tasa de errores"
               ]
             },
             {
@@ -806,9 +1523,22 @@
               "examples": [
                 "ディスク逼迫の検知",
                 "プロセス状態の監視"
+              ],
+              "es": "Supervisión de la infraestructura",
+              "one_liner_en": "Continuously monitors that servers, network and storage **are running**",
+              "one_liner_es": "Vigila de forma continua que servidores, red y almacenamiento **estén funcionando**",
+              "examples_en": [
+                "Detecting low disk space",
+                "Monitoring process status"
+              ],
+              "examples_es": [
+                "Detección de falta de espacio en disco",
+                "Supervisión del estado de los procesos"
               ]
             }
-          ]
+          ],
+          "title_en": "What to monitor",
+          "title_es": "Qué supervisar"
         },
         {
           "id": "activities",
@@ -823,6 +1553,17 @@
               "examples": [
                 "中央ログサーバーへの転送",
                 "クラウドログサービス"
+              ],
+              "es": "Agregación de registros",
+              "one_liner_en": "**Collects scattered logs in one place** for management",
+              "one_liner_es": "**Reúne en un solo lugar los registros dispersos** para gestionarlos",
+              "examples_en": [
+                "Forwarding to a central log server",
+                "Cloud logging services"
+              ],
+              "examples_es": [
+                "Envío a un servidor central de registros",
+                "Servicios de registro en la nube"
               ]
             },
             {
@@ -834,6 +1575,17 @@
               "examples": [
                 "CPU 90%超の通知",
                 "IDS検知の即時メール"
+              ],
+              "es": "Alertas",
+              "one_liner_en": "Detects anomalies or threats and **notifies administrators**",
+              "one_liner_es": "Detecta anomalías o amenazas y **avisa a los administradores**",
+              "examples_en": [
+                "Notice when CPU exceeds 90%",
+                "Instant email on IDS detection"
+              ],
+              "examples_es": [
+                "Aviso cuando la CPU supera el 90 %",
+                "Correo inmediato ante una detección del IDS"
               ]
             },
             {
@@ -845,9 +1597,22 @@
               "examples": [
                 "Webアプリ脆弱性スキャン",
                 "定期的な弱点点検"
+              ],
+              "es": "Escaneo",
+              "one_liner_en": "**Actively detects** vulnerabilities and misconfigurations",
+              "one_liner_es": "**Detecta activamente** vulnerabilidades y configuraciones erróneas",
+              "examples_en": [
+                "Web app vulnerability scans",
+                "Regular weakness checks"
+              ],
+              "examples_es": [
+                "Análisis de vulnerabilidades de aplicaciones web",
+                "Revisión periódica de debilidades"
               ]
             }
-          ]
+          ],
+          "title_en": "Monitoring activities",
+          "title_es": "Actividades de supervisión"
         },
         {
           "id": "alert-response",
@@ -862,6 +1627,17 @@
               "examples": [
                 "ボットネット端末の切断",
                 "横展開防止"
+              ],
+              "es": "Cuarentena",
+              "one_liner_en": "**Cuts off** infected or suspicious devices from the network to limit impact",
+              "one_liner_es": "**Desconecta** de la red los dispositivos infectados o sospechosos para limitar el impacto",
+              "examples_en": [
+                "Disconnecting botnet hosts",
+                "Preventing lateral movement"
+              ],
+              "examples_es": [
+                "Desconexión de equipos de una botnet",
+                "Evitar el movimiento lateral"
               ]
             },
             {
@@ -873,9 +1649,22 @@
               "examples": [
                 "閾値・ルール調整",
                 "アラート疲れの防止"
+              ],
+              "es": "Ajuste de alertas",
+              "one_liner_en": "**Cuts alert noise** so only important anomalies are reported",
+              "one_liner_es": "**Reduce el ruido de las alertas** para notificar solo las anomalías importantes",
+              "examples_en": [
+                "Adjusting thresholds and rules",
+                "Preventing alert fatigue"
+              ],
+              "examples_es": [
+                "Ajuste de umbrales y reglas",
+                "Evitar la fatiga de alertas"
               ]
             }
-          ]
+          ],
+          "title_en": "Responding to alerts",
+          "title_es": "Respuesta a alertas"
         },
         {
           "id": "tools",
@@ -890,6 +1679,18 @@
               "examples": [
                 "OVALによる基準記述",
                 "不適合の自動報告"
+              ],
+              "es": "Protocolo de automatización de contenido de seguridad (SCAP)",
+              "name_en": "Security Content Automation Protocol (SCAP)",
+              "one_liner_en": "A framework that **automates** configuration and vulnerability assessment",
+              "one_liner_es": "Marco que **automatiza** la evaluación de configuraciones y vulnerabilidades",
+              "examples_en": [
+                "Describing baselines in OVAL",
+                "Automatic noncompliance reports"
+              ],
+              "examples_es": [
+                "Descripción de líneas base en OVAL",
+                "Informes automáticos de incumplimiento"
               ]
             },
             {
@@ -901,6 +1702,17 @@
               "examples": [
                 "応答時間閾値の根拠",
                 "望ましい設定との比較"
+              ],
+              "es": "Benchmarks (referencias)",
+              "one_liner_en": "**Standards and metrics** for measuring security posture",
+              "one_liner_es": "**Estándares y métricas** para medir el estado de seguridad",
+              "examples_en": [
+                "Basis for response time thresholds",
+                "Comparing with recommended settings"
+              ],
+              "examples_es": [
+                "Base para umbrales de tiempo de respuesta",
+                "Comparación con la configuración recomendada"
               ]
             },
             {
@@ -912,6 +1724,17 @@
               "examples": [
                 "エージェント導入の詳細保護",
                 "リモート収集の軽量管理"
+              ],
+              "es": "Con agente / sin agente",
+              "one_liner_en": "Monitoring that **does or doesn't install software** on the target",
+              "one_liner_es": "Supervisión que **instala o no software** en el equipo supervisado",
+              "examples_en": [
+                "Detailed protection with installed agents",
+                "Lightweight remote collection"
+              ],
+              "examples_es": [
+                "Protección detallada con agentes instalados",
+                "Recogida remota ligera"
               ]
             },
             {
@@ -923,6 +1746,18 @@
               "examples": [
                 "数百台ログの一元監視",
                 "関連イベントからの攻撃検知"
+              ],
+              "es": "Gestión de información y eventos de seguridad (SIEM)",
+              "name_en": "Security Information and Event Management (SIEM)",
+              "one_liner_en": "Collects logs and **correlates** them to help detect and respond to threats",
+              "one_liner_es": "Recoge registros y los **correlaciona** para ayudar a detectar amenazas y responder",
+              "examples_en": [
+                "Central monitoring of logs from hundreds of hosts",
+                "Spotting attacks from related events"
+              ],
+              "examples_es": [
+                "Supervisión central de registros de cientos de equipos",
+                "Detección de ataques a partir de eventos relacionados"
               ]
             },
             {
@@ -934,6 +1769,17 @@
               "examples": [
                 "ランサムウェア付き添付の遮断",
                 "エンドポイント保護"
+              ],
+              "es": "Antivirus",
+              "one_liner_en": "Software that **detects, prevents and removes** malware",
+              "one_liner_es": "Software que **detecta, previene y elimina** malware",
+              "examples_en": [
+                "Blocking attachments carrying ransomware",
+                "Endpoint protection"
+              ],
+              "examples_es": [
+                "Bloqueo de adjuntos con ransomware",
+                "Protección de endpoints"
               ]
             },
             {
@@ -945,6 +1791,17 @@
               "examples": [
                 "USBコピーのブロック",
                 "管理者へのアラート"
+              ],
+              "es": "Prevención de pérdida de datos (DLP)",
+              "one_liner_en": "Prevents **leaks and removal** of sensitive data",
+              "one_liner_es": "Evita **fugas y salidas no autorizadas** de datos sensibles",
+              "examples_en": [
+                "Blocking USB copies",
+                "Alerting administrators"
+              ],
+              "examples_es": [
+                "Bloqueo de copias a USB",
+                "Alertas a los administradores"
               ]
             },
             {
@@ -956,11 +1813,28 @@
               "examples": [
                 "海外拠点への急増トラフィック分析",
                 "送受信IP・ポートの集計"
+              ],
+              "es": "NetFlow",
+              "one_liner_en": "Technology that monitors and analyzes traffic **per flow**",
+              "one_liner_es": "Tecnología que supervisa y analiza el tráfico **por flujos**",
+              "examples_en": [
+                "Analyzing a traffic spike to an overseas site",
+                "Aggregating source/destination IPs and ports"
+              ],
+              "examples_es": [
+                "Análisis de un pico de tráfico hacia una sede extranjera",
+                "Agregación de IP y puertos de origen y destino"
               ]
             }
-          ]
+          ],
+          "title_en": "Monitoring tools",
+          "title_es": "Herramientas de supervisión"
         }
-      ]
+      ],
+      "title_en": "Alerting and monitoring",
+      "title_es": "Alertas y supervisión",
+      "blurb_en": "What to monitor, activities, response and tools",
+      "blurb_es": "Qué supervisar, actividades, respuesta y herramientas"
     },
     {
       "id": "D-5",
@@ -982,6 +1856,17 @@
               "examples": [
                 "特定IPのみ許可",
                 "悪意IPのブロック"
+              ],
+              "es": "Reglas",
+              "one_liner_en": "Traffic conditions the firewall **allows or denies**",
+              "one_liner_es": "Condiciones de tráfico que el cortafuegos **permite o deniega**",
+              "examples_en": [
+                "Allowing only specific IPs",
+                "Blocking malicious IPs"
+              ],
+              "examples_es": [
+                "Permitir solo IP concretas",
+                "Bloquear IP maliciosas"
               ]
             },
             {
@@ -993,6 +1878,17 @@
               "examples": [
                 "部門IPのみ許可",
                 "国・IPレンジの拒否"
+              ],
+              "es": "Listas de acceso",
+              "one_liner_en": "A **set of rules** controlling inbound and outbound traffic",
+              "one_liner_es": "Un **conjunto de reglas** que controla el tráfico entrante y saliente",
+              "examples_en": [
+                "Allowing only department IPs",
+                "Denying countries or IP ranges"
+              ],
+              "examples_es": [
+                "Permitir solo las IP del departamento",
+                "Denegar países o rangos de IP"
               ]
             },
             {
@@ -1004,9 +1900,22 @@
               "examples": [
                 "未使用の80/443閉鎖",
                 "FTPポート閉鎖"
+              ],
+              "es": "Puertos / protocolos",
+              "one_liner_en": "**Close unneeded ports and protocols**",
+              "one_liner_es": "**Cerrar los puertos y protocolos innecesarios**",
+              "examples_en": [
+                "Closing unused 80/443",
+                "Closing FTP ports"
+              ],
+              "examples_es": [
+                "Cerrar el 80/443 si no se usan",
+                "Cerrar los puertos FTP"
               ]
             }
-          ]
+          ],
+          "title_en": "Firewalls",
+          "title_es": "Cortafuegos"
         },
         {
           "id": "ids-ips",
@@ -1021,6 +1930,17 @@
               "examples": [
                 "行動逸脱の検知",
                 "未知脅威の早期発見"
+              ],
+              "es": "Tendencias de IDS/IPS",
+              "one_liner_en": "Leverages the latest threat trends and **AI/ML detection**",
+              "one_liner_es": "Aprovecha las últimas tendencias de amenazas y la **detección con IA/ML**",
+              "examples_en": [
+                "Detecting behavioral deviations",
+                "Catching unknown threats early"
+              ],
+              "examples_es": [
+                "Detección de desviaciones de comportamiento",
+                "Detección temprana de amenazas desconocidas"
               ]
             },
             {
@@ -1032,9 +1952,22 @@
               "examples": [
                 "C2通信シグネチャ",
                 "定期更新と誤検知調整"
+              ],
+              "es": "Firmas de IDS/IPS",
+              "one_liner_en": "Alerts or blocks on **pattern matches** for known attacks",
+              "one_liner_es": "Alerta o bloquea por **coincidencia de patrones** de ataques conocidos",
+              "examples_en": [
+                "C2 traffic signatures",
+                "Regular updates and false-positive tuning"
+              ],
+              "examples_es": [
+                "Firmas de tráfico C2",
+                "Actualización periódica y ajuste de falsos positivos"
               ]
             }
-          ]
+          ],
+          "title_en": "IDS/IPS",
+          "title_es": "IDS/IPS"
         },
         {
           "id": "web-filter",
@@ -1049,6 +1982,17 @@
               "examples": [
                 "悪意サイトのローカル遮断",
                 "ユーザー単位ポリシー"
+              ],
+              "es": "Basado en agente",
+              "one_liner_en": "Controls web use with an **agent** installed on the device",
+              "one_liner_es": "Controla el uso web con un **agente** instalado en el equipo",
+              "examples_en": [
+                "Blocking malicious sites locally",
+                "Per-user policies"
+              ],
+              "examples_es": [
+                "Bloqueo local de sitios maliciosos",
+                "Políticas por usuario"
               ]
             },
             {
@@ -1060,6 +2004,17 @@
               "examples": [
                 "中央でのブロック",
                 "アクセスログ可視化"
+              ],
+              "es": "Proxy centralizado",
+              "one_liner_en": "A proxy that **centrally manages** web traffic",
+              "one_liner_es": "Proxy que **gestiona de forma centralizada** el tráfico web",
+              "examples_en": [
+                "Central blocking",
+                "Visible access logs"
+              ],
+              "examples_es": [
+                "Bloqueo centralizado",
+                "Registros de acceso visibles"
               ]
             },
             {
@@ -1071,6 +2026,17 @@
               "examples": [
                 "フィッシングURL遮断",
                 "マルウェア配布URL検知"
+              ],
+              "es": "Análisis de URL",
+              "one_liner_en": "**Inspects URLs in real time** before access",
+              "one_liner_es": "**Inspecciona las URL en tiempo real** antes del acceso",
+              "examples_en": [
+                "Blocking phishing URLs",
+                "Detecting malware distribution URLs"
+              ],
+              "examples_es": [
+                "Bloqueo de URL de phishing",
+                "Detección de URL que distribuyen malware"
               ]
             },
             {
@@ -1082,6 +2048,17 @@
               "examples": [
                 "SNSカテゴリのブロック",
                 "業務必須サイトの確保"
+              ],
+              "es": "Categorización de contenido",
+              "one_liner_en": "Controls sites by **category**",
+              "one_liner_es": "Controla los sitios por **categorías**",
+              "examples_en": [
+                "Blocking the social media category",
+                "Keeping business-critical sites available"
+              ],
+              "examples_es": [
+                "Bloqueo de la categoría de redes sociales",
+                "Mantener accesibles los sitios imprescindibles"
               ]
             },
             {
@@ -1093,6 +2070,17 @@
               "examples": [
                 "特定SNSのURL禁止",
                 "IP単位のブロック"
+              ],
+              "es": "Reglas de bloqueo",
+              "one_liner_en": "**Explicitly forbid** specific URLs and the like",
+              "one_liner_es": "**Prohíben expresamente** URL concretas y similares",
+              "examples_en": [
+                "Banning a specific social site's URL",
+                "Blocking by IP"
+              ],
+              "examples_es": [
+                "Prohibir la URL de una red social concreta",
+                "Bloqueo por IP"
               ]
             },
             {
@@ -1104,9 +2092,22 @@
               "examples": [
                 "悪評サイトの自動遮断",
                 "閾値の調整"
+              ],
+              "es": "Reputación",
+              "one_liner_en": "Allows or denies based on a site's **reputation score**",
+              "one_liner_es": "Permite o deniega según la **puntuación de reputación** del sitio",
+              "examples_en": [
+                "Automatically blocking disreputable sites",
+                "Tuning the threshold"
+              ],
+              "examples_es": [
+                "Bloqueo automático de sitios con mala reputación",
+                "Ajuste del umbral"
               ]
             }
-          ]
+          ],
+          "title_en": "Web filtering",
+          "title_es": "Filtrado web"
         },
         {
           "id": "os-security",
@@ -1121,6 +2122,17 @@
               "examples": [
                 "自動アップデート強制",
                 "パスワード／ロックアウト"
+              ],
+              "es": "Directiva de grupo",
+              "one_liner_en": "A mechanism to **centrally manage** Windows settings",
+              "one_liner_es": "Mecanismo para **gestionar de forma centralizada** la configuración de Windows",
+              "examples_en": [
+                "Enforcing automatic updates",
+                "Password and lockout settings"
+              ],
+              "examples_es": [
+                "Forzar las actualizaciones automáticas",
+                "Configuración de contraseñas y bloqueo"
               ]
             },
             {
@@ -1132,9 +2144,22 @@
               "examples": [
                 "httpdのディレクトリ制限",
                 "許可ポートの限定"
+              ],
+              "es": "SELinux",
+              "one_liner_en": "Mandatory access control in Linux using **labels and policies**",
+              "one_liner_es": "Control de acceso obligatorio en Linux mediante **etiquetas y políticas**",
+              "examples_en": [
+                "Restricting httpd's directories",
+                "Limiting allowed ports"
+              ],
+              "examples_es": [
+                "Restringir los directorios de httpd",
+                "Limitar los puertos permitidos"
               ]
             }
-          ]
+          ],
+          "title_en": "OS security",
+          "title_es": "Seguridad del SO"
         },
         {
           "id": "secure-protocols",
@@ -1149,6 +2174,17 @@
               "examples": [
                 "HTTP→HTTPS",
                 "TLS付きメール"
+              ],
+              "es": "Selección de protocolos",
+              "one_liner_en": "Choose **encrypted protocols** wherever possible",
+              "one_liner_es": "Elegir **protocolos cifrados** siempre que sea posible",
+              "examples_en": [
+                "HTTP → HTTPS",
+                "Email with TLS"
+              ],
+              "examples_es": [
+                "HTTP → HTTPS",
+                "Correo con TLS"
               ]
             },
             {
@@ -1160,6 +2196,17 @@
               "examples": [
                 "SSHの22番変更",
                 "自動攻撃の回避"
+              ],
+              "es": "Selección de puertos",
+              "one_liner_en": "**Choose listening ports wisely** for services",
+              "one_liner_es": "**Elegir bien los puertos** en los que escuchan los servicios",
+              "examples_en": [
+                "Moving SSH off port 22",
+                "Avoiding automated attacks"
+              ],
+              "examples_es": [
+                "Mover SSH del puerto 22",
+                "Evitar ataques automatizados"
               ]
             },
             {
@@ -1171,9 +2218,22 @@
               "examples": [
                 "TLS転送",
                 "SFTP/FTPS"
+              ],
+              "es": "Método de transporte",
+              "one_liner_en": "Send data over an **encrypted channel**",
+              "one_liner_es": "Enviar los datos por un **canal cifrado**",
+              "examples_en": [
+                "Transfer over TLS",
+                "SFTP/FTPS"
+              ],
+              "examples_es": [
+                "Transferencia por TLS",
+                "SFTP/FTPS"
               ]
             }
-          ]
+          ],
+          "title_en": "Implementing secure protocols",
+          "title_es": "Implementación de protocolos seguros"
         },
         {
           "id": "dns-email",
@@ -1188,6 +2248,17 @@
               "examples": [
                 "ランサムC2遮断",
                 "偽サイト解決の拒否"
+              ],
+              "es": "Filtrado DNS",
+              "one_liner_en": "**Blocks malicious domains** at name resolution",
+              "one_liner_es": "**Bloquea dominios maliciosos** al resolver nombres",
+              "examples_en": [
+                "Blocking ransomware C2",
+                "Refusing to resolve fake sites"
+              ],
+              "examples_es": [
+                "Bloqueo del C2 de ransomware",
+                "Negarse a resolver sitios falsos"
               ]
             },
             {
@@ -1199,6 +2270,17 @@
               "examples": [
                 "認証失敗メールの拒否",
                 "DNSのDMARCレコード"
+              ],
+              "es": "DMARC",
+              "one_liner_en": "Uses SPF/DKIM results to decide **how to handle spoofed mail**",
+              "one_liner_es": "Usa los resultados de SPF/DKIM para decidir **qué hacer con el correo suplantado**",
+              "examples_en": [
+                "Rejecting mail that fails authentication",
+                "DMARC record in DNS"
+              ],
+              "examples_es": [
+                "Rechazo del correo que no supera la autenticación",
+                "Registro DMARC en el DNS"
               ]
             },
             {
@@ -1210,6 +2292,17 @@
               "examples": [
                 "秘密鍵で署名",
                 "公開鍵をDNS公開"
+              ],
+              "es": "DKIM",
+              "one_liner_en": "Adds a **digital signature** to email to show it's legitimate",
+              "one_liner_es": "Añade una **firma digital** al correo para demostrar que es legítimo",
+              "examples_en": [
+                "Signing with a private key",
+                "Publishing the public key in DNS"
+              ],
+              "examples_es": [
+                "Firma con clave privada",
+                "Publicación de la clave pública en el DNS"
               ]
             },
             {
@@ -1221,9 +2314,22 @@
               "examples": [
                 "許可IPのみ送信可",
                 "詐称メールの検知"
+              ],
+              "es": "SPF",
+              "one_liner_en": "**Declares legitimate sending IPs in DNS** for checking",
+              "one_liner_es": "**Declara en el DNS las IP de envío legítimas** para comprobarlas",
+              "examples_en": [
+                "Only allowed IPs may send",
+                "Detecting spoofed mail"
+              ],
+              "examples_es": [
+                "Solo pueden enviar las IP permitidas",
+                "Detección de correo suplantado"
               ]
             }
-          ]
+          ],
+          "title_en": "DNS and email authentication",
+          "title_es": "DNS y autenticación del correo"
         },
         {
           "id": "data-endpoint",
@@ -1238,6 +2344,18 @@
               "examples": [
                 "ベースライン比較",
                 "システムファイル監視"
+              ],
+              "es": "Supervisión de la integridad de archivos (FIM)",
+              "name_en": "File integrity monitoring (FIM)",
+              "one_liner_en": "**Detects changes** to important files using hashes",
+              "one_liner_es": "**Detecta cambios** en archivos importantes mediante hashes",
+              "examples_en": [
+                "Comparing against a baseline",
+                "Monitoring system files"
+              ],
+              "examples_es": [
+                "Comparación con una línea base",
+                "Supervisión de archivos del sistema"
               ]
             },
             {
@@ -1249,6 +2367,18 @@
               "examples": [
                 "機密の特定と保護",
                 "不正持ち出しの抑止"
+              ],
+              "es": "Prevención de pérdida de datos (DLP)",
+              "name_en": "Data loss prevention (DLP)",
+              "one_liner_en": "**Prevents leaks and removal** of important information",
+              "one_liner_es": "**Evita fugas y salidas no autorizadas** de información importante",
+              "examples_en": [
+                "Identifying and protecting sensitive data",
+                "Deterring unauthorized removal"
+              ],
+              "examples_es": [
+                "Identificar y proteger datos sensibles",
+                "Disuadir de sacar datos sin autorización"
               ]
             },
             {
@@ -1260,6 +2390,18 @@
               "examples": [
                 "パッチ未適用の隔離",
                 "BYODの準拠確認"
+              ],
+              "es": "Control de acceso a la red (NAC)",
+              "name_en": "Network access control (NAC)",
+              "one_liner_en": "**Verifies device health** before connecting and restricts noncompliant ones",
+              "one_liner_es": "**Verifica el estado del equipo** antes de conectarlo y restringe los que no cumplen",
+              "examples_en": [
+                "Quarantining unpatched devices",
+                "Checking BYOD compliance"
+              ],
+              "examples_es": [
+                "Cuarentena de equipos sin parches",
+                "Verificación del cumplimiento de BYOD"
               ]
             },
             {
@@ -1271,6 +2413,17 @@
               "examples": [
                 "エンドポイント封じ込め",
                 "NW/クラウド横断検知"
+              ],
+              "es": "EDR/XDR",
+              "one_liner_en": "**Detection and response** on endpoints and across layers",
+              "one_liner_es": "**Detección y respuesta** en endpoints y entre capas",
+              "examples_en": [
+                "Endpoint containment",
+                "Detection across network and cloud"
+              ],
+              "examples_es": [
+                "Contención en el endpoint",
+                "Detección en red y nube"
               ]
             },
             {
@@ -1282,11 +2435,29 @@
               "examples": [
                 "異常ログイン検知",
                 "大量DLの予兆検知"
+              ],
+              "es": "Análisis del comportamiento de usuarios (UBA)",
+              "name_en": "User behavior analytics (UBA)",
+              "one_liner_en": "**Detects deviations** from normal behavior",
+              "one_liner_es": "**Detecta desviaciones** del comportamiento habitual",
+              "examples_en": [
+                "Detecting unusual logins",
+                "Early signs of mass downloads"
+              ],
+              "examples_es": [
+                "Detección de inicios de sesión inusuales",
+                "Indicios tempranos de descargas masivas"
               ]
             }
-          ]
+          ],
+          "title_en": "Data protection and endpoints",
+          "title_es": "Protección de datos y endpoints"
         }
-      ]
+      ],
+      "title_en": "Enhancing security",
+      "title_es": "Mejora de la seguridad",
+      "blurb_en": "Firewalls, IDS/IPS, web filtering, secure protocols, email authentication and more",
+      "blurb_es": "Cortafuegos, IDS/IPS, filtrado web, protocolos seguros, autenticación del correo y más"
     },
     {
       "id": "D-6",
@@ -1308,6 +2479,17 @@
               "examples": [
                 "入社時のID発行",
                 "退職者の即時無効化"
+              ],
+              "es": "Aprovisionamiento",
+              "one_liner_en": "**Issuing accounts and granting rights** (and disabling on departure)",
+              "one_liner_es": "**Crear cuentas y conceder permisos** (y desactivarlas al salir)",
+              "examples_en": [
+                "Issuing IDs to new hires",
+                "Disabling leavers immediately"
+              ],
+              "examples_es": [
+                "Creación de ID para nuevas incorporaciones",
+                "Desactivación inmediata de quienes se van"
               ]
             },
             {
@@ -1319,6 +2501,17 @@
               "examples": [
                 "経理へ財務権限のみ",
                 "過剰権限の排除"
+              ],
+              "es": "Asignación de permisos",
+              "one_liner_en": "Assign **only the access** a job requires",
+              "one_liner_es": "Asignar **solo el acceso** que requiere el puesto",
+              "examples_en": [
+                "Finance rights only for accounting",
+                "Removing excess rights"
+              ],
+              "examples_es": [
+                "Solo permisos financieros para contabilidad",
+                "Eliminar permisos excesivos"
               ]
             },
             {
@@ -1330,6 +2523,17 @@
               "examples": [
                 "身分証と人事情報の照合",
                 "口座開設時の本人確認"
+              ],
+              "es": "Verificación de identidad (identity proofing)",
+              "one_liner_en": "The process of confirming someone **is who they claim to be**",
+              "one_liner_es": "Proceso para confirmar que alguien **es quien dice ser**",
+              "examples_en": [
+                "Matching ID documents with HR records",
+                "ID checks when opening an account"
+              ],
+              "examples_es": [
+                "Cotejo de documentos de identidad con datos de RR. HH.",
+                "Verificación de identidad al abrir una cuenta"
               ]
             },
             {
@@ -1341,9 +2545,22 @@
               "examples": [
                 "異動後の権限レビュー",
                 "不要権限の削除記録"
+              ],
+              "es": "Atestación",
+              "one_liner_en": "**Verifies and records** that permissions fit the job",
+              "one_liner_es": "**Verifica y registra** que los permisos se ajustan al puesto",
+              "examples_en": [
+                "Access review after a transfer",
+                "Recording removal of unneeded rights"
+              ],
+              "examples_es": [
+                "Revisión de accesos tras un cambio de puesto",
+                "Registro de la eliminación de permisos innecesarios"
               ]
             }
-          ]
+          ],
+          "title_en": "IAM lifecycle",
+          "title_es": "Ciclo de vida de IAM"
         },
         {
           "id": "federation-sso",
@@ -1358,6 +2575,17 @@
               "examples": [
                 "Googleアカウントで他社ログイン",
                 "IdPとSPの信頼"
+              ],
+              "es": "Federación",
+              "one_liner_en": "Shares authentication and authorization info **between different systems**",
+              "one_liner_es": "Comparte información de autenticación y autorización **entre sistemas distintos**",
+              "examples_en": [
+                "Signing in to other services with a Google account",
+                "Trust between IdP and SP"
+              ],
+              "examples_es": [
+                "Iniciar sesión en otros servicios con una cuenta de Google",
+                "Confianza entre IdP y SP"
               ]
             },
             {
@@ -1369,6 +2597,17 @@
               "examples": [
                 "AD連携ログイン",
                 "SSO基盤の一部"
+              ],
+              "es": "LDAP",
+              "one_liner_en": "A **protocol** used to manage users in a directory",
+              "one_liner_es": "**Protocolo** para gestionar usuarios en un directorio",
+              "examples_en": [
+                "AD-integrated login",
+                "Part of an SSO platform"
+              ],
+              "examples_es": [
+                "Inicio de sesión integrado con AD",
+                "Parte de una plataforma SSO"
               ]
             },
             {
@@ -1380,9 +2619,22 @@
               "examples": [
                 "SAMLで社内IAMとクラウド連携",
                 "ユーザー情報の同期"
+              ],
+              "es": "Interoperabilidad",
+              "one_liner_en": "Ability of **different systems to work together** via standard protocols",
+              "one_liner_es": "Capacidad de **sistemas distintos para trabajar juntos** mediante protocolos estándar",
+              "examples_en": [
+                "Linking internal IAM and cloud via SAML",
+                "Syncing user information"
+              ],
+              "examples_es": [
+                "Conectar IAM interno y nube mediante SAML",
+                "Sincronización de datos de usuario"
               ]
             }
-          ]
+          ],
+          "title_en": "Federation and directories",
+          "title_es": "Federación y directorios"
         },
         {
           "id": "access-controls",
@@ -1397,6 +2649,18 @@
               "examples": [
                 "Top Secretラベル",
                 "軍事・政府環境"
+              ],
+              "es": "Control de acceso obligatorio (MAC)",
+              "name_en": "Mandatory access control (MAC)",
+              "one_liner_en": "Control **enforced** through labels and clearances",
+              "one_liner_es": "Control **impuesto** mediante etiquetas y autorizaciones",
+              "examples_en": [
+                "Top Secret labels",
+                "Military and government environments"
+              ],
+              "examples_es": [
+                "Etiquetas de alto secreto",
+                "Entornos militares y gubernamentales"
               ]
             },
             {
@@ -1408,6 +2672,18 @@
               "examples": [
                 "共有フォルダのACL",
                 "読取／書込の個別付与"
+              ],
+              "es": "Control de acceso discrecional (DAC)",
+              "name_en": "Discretionary access control (DAC)",
+              "one_liner_en": "A model where permissions are set **at the owner's discretion**",
+              "one_liner_es": "Modelo en el que los permisos se conceden **a criterio del propietario**",
+              "examples_en": [
+                "ACLs on a shared folder",
+                "Granting read/write individually"
+              ],
+              "examples_es": [
+                "ACL de una carpeta compartida",
+                "Concesión individual de lectura/escritura"
               ]
             },
             {
@@ -1419,6 +2695,18 @@
               "examples": [
                 "経理ロール",
                 "ロール継承"
+              ],
+              "es": "Control de acceso basado en roles (RBAC)",
+              "name_en": "Role-based access control (RBAC)",
+              "one_liner_en": "Bundles permissions into **roles** and assigns them",
+              "one_liner_es": "Agrupa los permisos en **roles** y los asigna",
+              "examples_en": [
+                "Accounting role",
+                "Role inheritance"
+              ],
+              "examples_es": [
+                "Rol de contabilidad",
+                "Herencia de roles"
               ]
             },
             {
@@ -1430,6 +2718,17 @@
               "examples": [
                 "役職＋時間帯の条件",
                 "環境要因を含む規則"
+              ],
+              "es": "Control de acceso basado en reglas",
+              "one_liner_en": "Decides access dynamically with **predefined rules**",
+              "one_liner_es": "Decide el acceso de forma dinámica con **reglas predefinidas**",
+              "examples_en": [
+                "Conditions on job title + time of day",
+                "Rules including environmental factors"
+              ],
+              "examples_es": [
+                "Condiciones de cargo + franja horaria",
+                "Reglas que incluyen factores del entorno"
               ]
             },
             {
@@ -1441,6 +2740,18 @@
               "examples": [
                 "部門＋資料種別＋時刻",
                 "細粒度の動的判定"
+              ],
+              "es": "Control de acceso basado en atributos (ABAC)",
+              "name_en": "Attribute-based access control (ABAC)",
+              "one_liner_en": "Controls by **combining attributes** of user, resource and environment",
+              "one_liner_es": "Controla **combinando atributos** del usuario, el recurso y el entorno",
+              "examples_en": [
+                "Department + document type + time",
+                "Fine-grained dynamic decisions"
+              ],
+              "examples_es": [
+                "Departamento + tipo de documento + hora",
+                "Decisiones dinámicas de grano fino"
               ]
             },
             {
@@ -1452,6 +2763,17 @@
               "examples": [
                 "平日9〜18時のみ入館",
                 "業務時間外ログイン禁止"
+              ],
+              "es": "Restricciones horarias",
+              "one_liner_en": "**Limits the hours** when access is allowed",
+              "one_liner_es": "**Limita las horas** en que se permite el acceso",
+              "examples_en": [
+                "Building entry only 9–6 on weekdays",
+                "No logins outside business hours"
+              ],
+              "examples_es": [
+                "Acceso al edificio solo de 9 a 18 entre semana",
+                "Sin inicio de sesión fuera del horario laboral"
               ]
             },
             {
@@ -1463,9 +2785,22 @@
               "examples": [
                 "一般ユーザーに設定変更権なし",
                 "管理者でも不要データ遮断"
+              ],
+              "es": "Mínimo privilegio",
+              "one_liner_en": "Grant **only the minimum** rights the job needs",
+              "one_liner_es": "Conceder **solo los derechos mínimos** que requiere el trabajo",
+              "examples_en": [
+                "Standard users can't change settings",
+                "Even admins blocked from unneeded data"
+              ],
+              "examples_es": [
+                "Los usuarios estándar no cambian la configuración",
+                "Incluso los administradores sin acceso a datos innecesarios"
               ]
             }
-          ]
+          ],
+          "title_en": "Access controls",
+          "title_es": "Controles de acceso"
         },
         {
           "id": "mfa",
@@ -1480,6 +2815,17 @@
               "examples": [
                 "指紋・顔・虹彩",
                 "空港の顔認証ゲート"
+              ],
+              "es": "Biometría",
+              "one_liner_en": "Verifies identity with **biological traits**",
+              "one_liner_es": "Verifica la identidad con **rasgos biológicos**",
+              "examples_en": [
+                "Fingerprint, face, iris",
+                "Face recognition gates at airports"
+              ],
+              "examples_es": [
+                "Huella, rostro, iris",
+                "Puertas de reconocimiento facial en aeropuertos"
               ]
             },
             {
@@ -1491,6 +2837,17 @@
               "examples": [
                 "Authenticatorアプリ",
                 "銀行ハードトークン"
+              ],
+              "es": "Tokens de autenticación físicos / de software",
+              "one_liner_en": "**Hardware or software** authenticators that generate OTPs and the like",
+              "one_liner_es": "Autenticadores **físicos o de software** que generan OTP y similares",
+              "examples_en": [
+                "Authenticator apps",
+                "Bank hardware tokens"
+              ],
+              "examples_es": [
+                "Aplicaciones autenticadoras",
+                "Tokens físicos de bancos"
               ]
             },
             {
@@ -1502,6 +2859,17 @@
               "examples": [
                 "YubiKey",
                 "USBキー押下ログイン"
+              ],
+              "es": "Llaves de seguridad",
+              "one_liner_en": "**Physical keys** for public-key-based multifactor authentication",
+              "one_liner_es": "**Llaves físicas** para autenticación multifactor basada en clave pública",
+              "examples_en": [
+                "YubiKey",
+                "Login by pressing a USB key"
+              ],
+              "examples_es": [
+                "YubiKey",
+                "Inicio de sesión pulsando una llave USB"
               ]
             },
             {
@@ -1513,9 +2881,22 @@
               "examples": [
                 "パスワード＋トークン",
                 "GPS／社内Wi-Fi位置"
+              ],
+              "es": "Factores de autenticación",
+              "one_liner_en": "**Categories of authentication**: something you know, have, are, or somewhere you are",
+              "one_liner_es": "**Categorías de autenticación**: algo que sabes, que tienes, que eres o dónde estás",
+              "examples_en": [
+                "Password + token",
+                "GPS or corporate Wi-Fi location"
+              ],
+              "examples_es": [
+                "Contraseña + token",
+                "Ubicación por GPS o Wi-Fi corporativa"
               ]
             }
-          ]
+          ],
+          "title_en": "Multifactor authentication",
+          "title_es": "Autenticación multifactor"
         },
         {
           "id": "passwords",
@@ -1530,6 +2911,17 @@
               "examples": [
                 "12文字以上の要求",
                 "短すぎるパスワード禁止"
+              ],
+              "es": "Longitud de la contraseña",
+              "one_liner_en": "Enough **characters** to resist brute force",
+              "one_liner_es": "Suficientes **caracteres** para resistir la fuerza bruta",
+              "examples_en": [
+                "Requiring 12+ characters",
+                "Banning passwords that are too short"
+              ],
+              "examples_es": [
+                "Exigir 12 caracteres o más",
+                "Prohibir contraseñas demasiado cortas"
               ]
             },
             {
@@ -1541,6 +2933,17 @@
               "examples": [
                 "大文字小文字数字記号",
                 "辞書攻撃対策"
+              ],
+              "es": "Complejidad de la contraseña",
+              "one_liner_en": "Varied character types and **avoiding dictionary words**",
+              "one_liner_es": "Variedad de tipos de caracteres y **evitar palabras de diccionario**",
+              "examples_en": [
+                "Upper/lowercase, numbers and symbols",
+                "Defense against dictionary attacks"
+              ],
+              "examples_es": [
+                "Mayúsculas, minúsculas, números y símbolos",
+                "Defensa contra ataques de diccionario"
               ]
             },
             {
@@ -1552,6 +2955,17 @@
               "examples": [
                 "使い回し禁止",
                 "漏えいの横展開防止"
+              ],
+              "es": "Reutilización de contraseñas",
+              "one_liner_en": "Use a **unique password** for each service",
+              "one_liner_es": "Usar una **contraseña única** para cada servicio",
+              "examples_en": [
+                "No reusing passwords",
+                "Stopping a leak from spreading"
+              ],
+              "examples_es": [
+                "Prohibir reutilizar contraseñas",
+                "Evitar que una filtración se extienda"
               ]
             },
             {
@@ -1563,6 +2977,17 @@
               "examples": [
                 "旧来の90日ローテ",
                 "漏洩時変更を重視"
+              ],
+              "es": "Caducidad de la contraseña",
+              "one_liner_en": "Periodic change policy (**frequent changes can backfire**)",
+              "one_liner_es": "Política de cambio periódico (**los cambios frecuentes pueden ser contraproducentes**)",
+              "examples_en": [
+                "Traditional 90-day rotation",
+                "Prioritizing change after a leak"
+              ],
+              "examples_es": [
+                "Rotación tradicional cada 90 días",
+                "Priorizar el cambio tras una filtración"
               ]
             },
             {
@@ -1574,6 +2999,17 @@
               "examples": [
                 "ブラウザの保存機能",
                 "専用管理アプリ"
+              ],
+              "es": "Gestores de contraseñas",
+              "one_liner_en": "**Stores passwords encrypted** and helps keep them unique and strong",
+              "one_liner_es": "**Guarda las contraseñas cifradas** y ayuda a que sean únicas y robustas",
+              "examples_en": [
+                "Browser password saving",
+                "Dedicated manager apps"
+              ],
+              "examples_es": [
+                "Guardado de contraseñas del navegador",
+                "Aplicaciones de gestión dedicadas"
               ]
             },
             {
@@ -1585,11 +3021,28 @@
               "examples": [
                 "指紋ログイン",
                 "セキュリティキー認証"
+              ],
+              "es": "Sin contraseña",
+              "one_liner_en": "**Authentication without passwords**, using biometrics, keys and the like",
+              "one_liner_es": "**Autenticación sin contraseñas**, con biometría, llaves y similares",
+              "examples_en": [
+                "Fingerprint login",
+                "Security key authentication"
+              ],
+              "examples_es": [
+                "Inicio de sesión con huella",
+                "Autenticación con llave de seguridad"
               ]
             }
-          ]
+          ],
+          "title_en": "Passwords",
+          "title_es": "Contraseñas"
         }
-      ]
+      ],
+      "title_en": "Identity and access management",
+      "title_es": "Gestión de identidades y accesos",
+      "blurb_en": "IAM, access control, MFA and passwords",
+      "blurb_es": "IAM, control de acceso, MFA y contraseñas"
     },
     {
       "id": "D-7",
@@ -1611,6 +3064,17 @@
               "examples": [
                 "入退社のアカウント自動作成",
                 "人事システム連携トリガー"
+              ],
+              "es": "Aprovisionamiento de usuarios",
+              "one_liner_en": "Automates account **creation, rights, updates and deletion**",
+              "one_liner_es": "Automatiza la **creación, los permisos, la actualización y la eliminación** de cuentas",
+              "examples_en": [
+                "Auto-creating accounts for joiners and leavers",
+                "Triggers from the HR system"
+              ],
+              "examples_es": [
+                "Creación automática de cuentas en altas y bajas",
+                "Disparadores desde el sistema de RR. HH."
               ]
             },
             {
@@ -1622,6 +3086,17 @@
               "examples": [
                 "需要に応じたサーバー増減",
                 "IaCでの構成自動適用"
+              ],
+              "es": "Aprovisionamiento de recursos",
+              "one_liner_en": "Automates **allocating and configuring** servers and the like (IaC)",
+              "one_liner_es": "Automatiza la **asignación y configuración** de servidores y similares (IaC)",
+              "examples_en": [
+                "Scaling servers with demand",
+                "Applying configuration automatically with IaC"
+              ],
+              "examples_es": [
+                "Escalar servidores según la demanda",
+                "Aplicar la configuración automáticamente con IaC"
               ]
             },
             {
@@ -1633,6 +3108,17 @@
               "examples": [
                 "ファイアウォール",
                 "WAFによる攻撃ブロック"
+              ],
+              "es": "Barreras de protección (guardrails)",
+              "one_liner_en": "A framework that **detects and prevents** dangerous actions",
+              "one_liner_es": "Marco que **detecta e impide** acciones peligrosas",
+              "examples_en": [
+                "Firewalls",
+                "Blocking attacks with a WAF"
+              ],
+              "examples_es": [
+                "Cortafuegos",
+                "Bloqueo de ataques con un WAF"
               ]
             },
             {
@@ -1644,6 +3130,17 @@
               "examples": [
                 "HTTP公開・SSHは管理者のみ",
                 "クラウドNSGの自動適用"
+              ],
+              "es": "Grupos de seguridad",
+              "one_liner_en": "A **set of virtual firewall rules** for VMs and containers",
+              "one_liner_es": "Un **conjunto de reglas de cortafuegos virtual** para VM y contenedores",
+              "examples_en": [
+                "HTTP public, SSH for admins only",
+                "Auto-applying cloud NSGs"
+              ],
+              "examples_es": [
+                "HTTP público y SSH solo para administradores",
+                "Aplicación automática de NSG en la nube"
               ]
             },
             {
@@ -1655,6 +3152,17 @@
               "examples": [
                 "メール受信で自動起票",
                 "セルフサービス要求から発行"
+              ],
+              "es": "Creación de tickets",
+              "one_liner_en": "**Automatically opens tickets** for incidents and requests",
+              "one_liner_es": "**Abre tickets automáticamente** para incidencias y solicitudes",
+              "examples_en": [
+                "Auto-ticket on email receipt",
+                "Ticket from a self-service request"
+              ],
+              "examples_es": [
+                "Ticket automático al recibir un correo",
+                "Ticket a partir de una solicitud de autoservicio"
               ]
             },
             {
@@ -1666,6 +3174,17 @@
               "examples": [
                 "SLA超過で上長通知",
                 "重大インシデントの自動回付"
+              ],
+              "es": "Escalado",
+              "one_liner_en": "**Automatically notifies higher-ups or specialists** by priority or elapsed time",
+              "one_liner_es": "**Avisa automáticamente a superiores o especialistas** según la prioridad o el tiempo transcurrido",
+              "examples_en": [
+                "Notifying the manager when the SLA is exceeded",
+                "Auto-routing major incidents"
+              ],
+              "examples_es": [
+                "Avisar al responsable si se supera el SLA",
+                "Derivación automática de incidentes graves"
               ]
             },
             {
@@ -1677,6 +3196,17 @@
               "examples": [
                 "入社時の権限付与",
                 "退社時の一括無効化"
+              ],
+              "es": "Habilitar / deshabilitar servicios y accesos",
+              "one_liner_en": "**Automates turning** permissions and services **on and off**",
+              "one_liner_es": "**Automatiza la activación y desactivación** de permisos y servicios",
+              "examples_en": [
+                "Granting rights when someone joins",
+                "Bulk disabling when someone leaves"
+              ],
+              "examples_es": [
+                "Conceder permisos al incorporarse",
+                "Desactivación masiva al salir"
               ]
             },
             {
@@ -1688,6 +3218,17 @@
               "examples": [
                 "リポジトリ連携のCI",
                 "マージ前の自動テスト"
+              ],
+              "es": "Integración y pruebas continuas",
+              "one_liner_en": "**Automatically builds and tests** on every commit",
+              "one_liner_es": "**Compila y prueba automáticamente** en cada confirmación",
+              "examples_en": [
+                "CI linked to the repository",
+                "Automated tests before merging"
+              ],
+              "examples_es": [
+                "CI conectada al repositorio",
+                "Pruebas automáticas antes de fusionar"
               ]
             },
             {
@@ -1699,9 +3240,22 @@
               "examples": [
                 "CRMから販売管理へ自動連携",
                 "HTTPS APIでの受け渡し"
+              ],
+              "es": "Integraciones y API",
+              "one_liner_en": "**Automates data exchange between systems** via APIs",
+              "one_liner_es": "**Automatiza el intercambio de datos entre sistemas** mediante API",
+              "examples_en": [
+                "Auto-sync from CRM to sales management",
+                "Exchange via HTTPS APIs"
+              ],
+              "examples_es": [
+                "Sincronización automática del CRM a la gestión de ventas",
+                "Intercambio mediante API HTTPS"
               ]
             }
-          ]
+          ],
+          "title_en": "Use cases",
+          "title_es": "Casos de uso"
         },
         {
           "id": "benefits",
@@ -1716,6 +3270,17 @@
               "examples": [
                 "請求書のOCR取込",
                 "手入力ワークフローの削減"
+              ],
+              "es": "Eficiencia / ahorro de tiempo",
+              "one_liner_en": "Automating routine work **cuts effort and time**",
+              "one_liner_es": "Automatizar el trabajo rutinario **reduce esfuerzo y tiempo**",
+              "examples_en": [
+                "OCR intake of invoices",
+                "Fewer manual-entry workflows"
+              ],
+              "examples_es": [
+                "Captura de facturas por OCR",
+                "Menos flujos de introducción manual"
               ]
             },
             {
@@ -1727,6 +3292,17 @@
               "examples": [
                 "静的解析での脆弱性検出",
                 "リンター＋セキュリティプラグイン"
+              ],
+              "es": "Aplicación de líneas base",
+              "one_liner_en": "**Automatically enforces minimum security standards**",
+              "one_liner_es": "**Aplica automáticamente los estándares mínimos de seguridad**",
+              "examples_en": [
+                "Finding vulnerabilities via static analysis",
+                "Linters + security plugins"
+              ],
+              "examples_es": [
+                "Detección de vulnerabilidades con análisis estático",
+                "Linters + complementos de seguridad"
               ]
             },
             {
@@ -1738,6 +3314,17 @@
               "examples": [
                 "開発・ステージ・本番の同構成",
                 "NW／SG／LBのコード管理"
+              ],
+              "es": "Configuraciones de infraestructura estándar",
+              "one_liner_en": "**Keeps configurations consistent across environments** with IaC and the like",
+              "one_liner_es": "**Mantiene configuraciones coherentes entre entornos** con IaC y similares",
+              "examples_en": [
+                "Same setup in dev, staging and production",
+                "Network/SG/LB managed as code"
+              ],
+              "examples_es": [
+                "Misma configuración en desarrollo, preproducción y producción",
+                "Red/SG/LB gestionados como código"
               ]
             },
             {
@@ -1749,6 +3336,17 @@
               "examples": [
                 "EC2 Auto Scaling",
                 "セール時の自動台数調整"
+              ],
+              "es": "Escalado seguro",
+              "one_liner_en": "**Scales automatically with demand** while keeping secure settings",
+              "one_liner_es": "**Escala automáticamente según la demanda** sin perder la configuración segura",
+              "examples_en": [
+                "EC2 Auto Scaling",
+                "Automatic capacity during sales"
+              ],
+              "examples_es": [
+                "EC2 Auto Scaling",
+                "Capacidad automática durante las rebajas"
               ]
             },
             {
@@ -1760,6 +3358,17 @@
               "examples": [
                 "CIによるテスト／デプロイ自動化",
                 "繰り返し手作業の削減"
+              ],
+              "es": "Retención de empleados",
+              "one_liner_en": "Reduces tedious work so people **can focus on creative work**",
+              "one_liner_es": "Reduce el trabajo tedioso para que las personas **se centren en tareas creativas**",
+              "examples_en": [
+                "Automating tests and deploys with CI",
+                "Less repetitive manual work"
+              ],
+              "examples_es": [
+                "Automatizar pruebas y despliegues con CI",
+                "Menos trabajo manual repetitivo"
               ]
             },
             {
@@ -1771,6 +3380,17 @@
               "examples": [
                 "自動審査・自動通知",
                 "数日かかった処理を数分に"
+              ],
+              "es": "Tiempo de reacción",
+              "one_liner_en": "**Speeds up responses** to events and requests",
+              "one_liner_es": "**Acelera la respuesta** a eventos y solicitudes",
+              "examples_en": [
+                "Automated reviews and notifications",
+                "Tasks that took days now take minutes"
+              ],
+              "examples_es": [
+                "Revisiones y avisos automáticos",
+                "Tareas de días que ahora duran minutos"
               ]
             },
             {
@@ -1782,9 +3402,22 @@
               "examples": [
                 "入力自動化→分析へ再配分",
                 "少人数で広い範囲をカバー"
+              ],
+              "es": "Multiplicador de la plantilla",
+              "one_liner_en": "The same headcount **produces multiplied value**",
+              "one_liner_es": "La misma plantilla **genera un valor multiplicado**",
+              "examples_en": [
+                "Automate data entry → redeploy to analysis",
+                "A small team covering a wide scope"
+              ],
+              "examples_es": [
+                "Automatizar la introducción de datos → reasignar al análisis",
+                "Un equipo pequeño que cubre mucho"
               ]
             }
-          ]
+          ],
+          "title_en": "Benefits",
+          "title_es": "Ventajas"
         },
         {
           "id": "considerations",
@@ -1799,6 +3432,17 @@
               "examples": [
                 "部門横断の相互依存",
                 "一変更が他へ波及"
+              ],
+              "es": "Complejidad",
+              "one_liner_en": "More automation means **more dependencies and less predictability**",
+              "one_liner_es": "Más automatización implica **más dependencias y menos previsibilidad**",
+              "examples_en": [
+                "Cross-department interdependencies",
+                "One change rippling elsewhere"
+              ],
+              "examples_es": [
+                "Interdependencias entre departamentos",
+                "Un cambio que repercute en otros"
               ]
             },
             {
@@ -1810,6 +3454,17 @@
               "examples": [
                 "ツールライセンス",
                 "やりすぎによる保守費増大"
+              ],
+              "es": "Coste",
+              "one_liner_en": "**The cost of automation itself**: implementation, maintenance, outsourcing",
+              "one_liner_es": "**El coste de la propia automatización**: implantación, mantenimiento, externalización",
+              "examples_en": [
+                "Tool licenses",
+                "Higher maintenance from overdoing it"
+              ],
+              "examples_es": [
+                "Licencias de herramientas",
+                "Mayor mantenimiento por excederse"
               ]
             },
             {
@@ -1821,6 +3476,17 @@
               "examples": [
                 "中央制御サーバの故障",
                 "自動化基盤の全面停止"
+              ],
+              "es": "Punto único de fallo",
+              "one_liner_en": "A dependency where **one failure stops everything** (SPOF)",
+              "one_liner_es": "Una dependencia en la que **un solo fallo lo detiene todo** (SPOF)",
+              "examples_en": [
+                "Central control server failing",
+                "Automation platform going down entirely"
+              ],
+              "examples_es": [
+                "Fallo del servidor de control central",
+                "Caída completa de la plataforma de automatización"
               ]
             },
             {
@@ -1832,6 +3498,17 @@
               "examples": [
                 "テストなしスクリプト",
                 "文書不足で改修不能"
+              ],
+              "es": "Deuda técnica",
+              "one_liner_en": "The **deferred cost** of sacrificing quality",
+              "one_liner_es": "El **coste diferido** de sacrificar la calidad",
+              "examples_en": [
+                "Untested scripts",
+                "Unmaintainable due to missing docs"
+              ],
+              "examples_es": [
+                "Scripts sin pruebas",
+                "Imposible de modificar por falta de documentación"
               ]
             },
             {
@@ -1843,11 +3520,28 @@
               "examples": [
                 "ルールの継続更新",
                 "パッチ／バージョン追従"
+              ],
+              "es": "Mantenibilidad continua",
+              "one_liner_en": "Whether you **can keep up** with changing requirements and updates",
+              "one_liner_es": "Si se puede **seguir el ritmo** de los cambios de requisitos y las actualizaciones",
+              "examples_en": [
+                "Continuously updating rules",
+                "Keeping up with patches and versions"
+              ],
+              "examples_es": [
+                "Actualización continua de reglas",
+                "Seguir el ritmo de parches y versiones"
               ]
             }
-          ]
+          ],
+          "title_en": "Considerations",
+          "title_es": "Consideraciones"
         }
-      ]
+      ],
+      "title_en": "Automation",
+      "title_es": "Automatización",
+      "blurb_en": "Use cases, benefits and considerations",
+      "blurb_es": "Casos de uso, ventajas y consideraciones"
     },
     {
       "id": "D-8",
@@ -1869,6 +3563,17 @@
               "examples": [
                 "対応チーム編成",
                 "IR計画と監視ツール"
+              ],
+              "es": "Preparación",
+              "one_liner_en": "Set up **plans, teams, tools and training** before anything happens",
+              "one_liner_es": "Preparar **planes, equipos, herramientas y formación** antes de que ocurra nada",
+              "examples_en": [
+                "Forming a response team",
+                "IR plan and monitoring tools"
+              ],
+              "examples_es": [
+                "Formar un equipo de respuesta",
+                "Plan de respuesta y herramientas de supervisión"
               ]
             },
             {
@@ -1880,6 +3585,17 @@
               "examples": [
                 "IDS/IPS/SIEMのアラート",
                 "異常トラフィック・ユーザー報告"
+              ],
+              "es": "Detección",
+              "one_liner_en": "**Spot threats as early as possible** via logs, tools and reports",
+              "one_liner_es": "**Detectar las amenazas lo antes posible** mediante registros, herramientas e informes",
+              "examples_en": [
+                "IDS/IPS/SIEM alerts",
+                "Abnormal traffic and user reports"
+              ],
+              "examples_es": [
+                "Alertas de IDS/IPS/SIEM",
+                "Tráfico anómalo e informes de usuarios"
               ]
             },
             {
@@ -1891,6 +3607,17 @@
               "examples": [
                 "アクセスログ調査",
                 "フォレンジック・感染経路"
+              ],
+              "es": "Análisis",
+              "one_liner_en": "Assess the **cause and scope** of an anomaly",
+              "one_liner_es": "Evaluar la **causa y el alcance** de una anomalía",
+              "examples_en": [
+                "Investigating access logs",
+                "Forensics and infection path"
+              ],
+              "examples_es": [
+                "Investigación de registros de acceso",
+                "Análisis forense y vía de infección"
               ]
             },
             {
@@ -1902,6 +3629,17 @@
               "examples": [
                 "感染PCのLAN切り離し",
                 "共有フォルダ制限"
+              ],
+              "es": "Contención",
+              "one_liner_en": "**Stop the damage from spreading** by isolating and blocking",
+              "one_liner_es": "**Impedir que el daño se extienda** aislando y bloqueando",
+              "examples_en": [
+                "Disconnecting infected PCs from the LAN",
+                "Restricting shared folders"
+              ],
+              "examples_es": [
+                "Desconectar de la LAN los PC infectados",
+                "Restringir carpetas compartidas"
               ]
             },
             {
@@ -1913,6 +3651,17 @@
               "examples": [
                 "感染前バックアップからリストア",
                 "DRサイトへのフェイルオーバー"
+              ],
+              "es": "Recuperación",
+              "one_liner_en": "**Return to normal** using backups and DR",
+              "one_liner_es": "**Volver a la normalidad** con copias de seguridad y recuperación ante desastres",
+              "examples_en": [
+                "Restoring from pre-infection backups",
+                "Failing over to a DR site"
+              ],
+              "examples_es": [
+                "Restauración desde copias previas a la infección",
+                "Conmutación al sitio de recuperación"
               ]
             },
             {
@@ -1924,9 +3673,22 @@
               "examples": [
                 "連絡体制の見直し",
                 "脆弱性修正プロセス改善"
+              ],
+              "es": "Lecciones aprendidas",
+              "one_liner_en": "Use post-incident reviews to **prevent recurrence**",
+              "one_liner_es": "Aprovechar la revisión posterior para **evitar que se repita**",
+              "examples_en": [
+                "Revising contact procedures",
+                "Improving the vulnerability-fix process"
+              ],
+              "examples_es": [
+                "Revisión de los procedimientos de contacto",
+                "Mejora del proceso de corrección de vulnerabilidades"
               ]
             }
-          ]
+          ],
+          "title_en": "Incident response process",
+          "title_es": "Proceso de respuesta a incidentes"
         },
         {
           "id": "training-testing",
@@ -1941,6 +3703,17 @@
               "examples": [
                 "フォレンジック実習",
                 "証拠収集〜報告の一連演習"
+              ],
+              "es": "Formación",
+              "one_liner_en": "Exercises to **master and improve** procedures",
+              "one_liner_es": "Ejercicios para **dominar y mejorar** los procedimientos",
+              "examples_en": [
+                "Forensics practice",
+                "Full drill from evidence collection to reporting"
+              ],
+              "examples_es": [
+                "Prácticas de análisis forense",
+                "Simulacro completo desde la recogida de pruebas al informe"
               ]
             },
             {
@@ -1952,6 +3725,17 @@
               "examples": [
                 "ランサム想定の役割分担議論",
                 "会議室での対応方針検討"
+              ],
+              "es": "Ejercicio de mesa",
+              "one_liner_en": "Exercises that walk through scenarios **by discussion**",
+              "one_liner_es": "Ejercicios que recorren escenarios **mediante el debate**",
+              "examples_en": [
+                "Discussing roles in a ransomware scenario",
+                "Deciding response policy in a meeting room"
+              ],
+              "examples_es": [
+                "Debate de funciones ante un caso de ransomware",
+                "Decidir la respuesta en una sala de reuniones"
               ]
             },
             {
@@ -1963,9 +3747,22 @@
               "examples": [
                 "DoS疑似トラフィック演習",
                 "FW調整・ISP連携の実践"
+              ],
+              "es": "Simulación",
+              "one_liner_en": "Exercises run in conditions **close to the real environment**",
+              "one_liner_es": "Ejercicios en condiciones **cercanas al entorno real**",
+              "examples_en": [
+                "Drills with simulated DoS traffic",
+                "Practicing FW tuning and ISP coordination"
+              ],
+              "examples_es": [
+                "Simulacros con tráfico DoS simulado",
+                "Práctica de ajuste del cortafuegos y coordinación con el ISP"
               ]
             }
-          ]
+          ],
+          "title_en": "Training and testing",
+          "title_es": "Formación y pruebas"
         },
         {
           "id": "investigation",
@@ -1980,6 +3777,17 @@
               "examples": [
                 "ログの時系列追跡",
                 "DoSの送信元特定"
+              ],
+              "es": "Análisis de la causa raíz",
+              "one_liner_en": "Identifies the **underlying cause** of an incident",
+              "one_liner_es": "Identifica la **causa de fondo** de un incidente",
+              "examples_en": [
+                "Tracing logs chronologically",
+                "Identifying the source of a DoS"
+              ],
+              "examples_es": [
+                "Seguimiento cronológico de registros",
+                "Identificar el origen de un DoS"
               ]
             },
             {
@@ -1991,11 +3799,32 @@
               "examples": [
                 "異常時間帯の転送調査",
                 "不審アクセスの深掘り"
+              ],
+              "es": "Búsqueda de amenazas (threat hunting)",
+              "one_liner_en": "**Proactively searches out and removes** hidden threats",
+              "one_liner_es": "**Busca y elimina de forma proactiva** amenazas ocultas",
+              "examples_en": [
+                "Investigating transfers at odd hours",
+                "Digging into suspicious access"
+              ],
+              "examples_es": [
+                "Investigar transferencias a horas inusuales",
+                "Profundizar en accesos sospechosos"
               ]
             }
-          ]
+          ],
+          "title_en": "Root cause and threat hunting",
+          "title_es": "Causa raíz y búsqueda de amenazas"
         }
-      ]
+      ],
+      "title_en": "Incident response",
+      "title_es": "Respuesta a incidentes",
+      "blurb_en": "The IR process, training, root cause analysis and threat hunting",
+      "blurb_es": "El proceso de respuesta, la formación, el análisis de la causa raíz y la búsqueda de amenazas"
     }
-  ]
+  ],
+  "title_en": "Security Operations",
+  "title_es": "Operaciones de seguridad",
+  "intro_en": "Domain 4 covers security operations: how defenses are actually run. Its nine subtopics are fairly independent and practical, ranging from protecting endpoints and servers to monitoring and incident response.",
+  "intro_es": "El dominio 4 trata las operaciones de seguridad, es decir, cómo se gestionan las defensas en la práctica. Sus nueve subapartados son bastante independientes y prácticos, desde la protección de equipos y servidores hasta la supervisión y la respuesta a incidentes."
 }

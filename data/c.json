@@ -24,6 +24,17 @@
               "examples": [
                 "PaaSのアプリ対策",
                 "IaaS/PaaS/SaaS"
+              ],
+              "es": "Matriz de responsabilidad en la nube",
+              "one_liner_en": "A table sorting out **who is responsible** for what between provider and customer",
+              "one_liner_es": "Tabla que delimita **quién es responsable** de qué entre proveedor y cliente",
+              "examples_en": [
+                "App security on PaaS",
+                "IaaS/PaaS/SaaS"
+              ],
+              "examples_es": [
+                "Seguridad de la aplicación en PaaS",
+                "IaaS/PaaS/SaaS"
               ]
             },
             {
@@ -35,6 +46,18 @@
               "examples": [
                 "環境の自動構築",
                 "構成のバージョン管理"
+              ],
+              "es": "Infraestructura como código (IaC)",
+              "name_en": "Infrastructure as Code (IaC)",
+              "one_liner_en": "**Defines infrastructure as code** and automates it",
+              "one_liner_es": "**Define la infraestructura como código** y la automatiza",
+              "examples_en": [
+                "Automated environment builds",
+                "Version-controlled configuration"
+              ],
+              "examples_es": [
+                "Creación automática de entornos",
+                "Configuración bajo control de versiones"
               ]
             },
             {
@@ -45,6 +68,17 @@
               "one_liner": "サーバー管理を任せ**アプリに集中**するモデル",
               "examples": [
                 "Lambda関数",
+                "Cloud Functions"
+              ],
+              "es": "Sin servidor (serverless)",
+              "one_liner_en": "A model that hands off server management so you can **focus on the app**",
+              "one_liner_es": "Modelo que delega la gestión de servidores para **centrarse en la aplicación**",
+              "examples_en": [
+                "Lambda functions",
+                "Cloud Functions"
+              ],
+              "examples_es": [
+                "Funciones Lambda",
                 "Cloud Functions"
               ]
             },
@@ -57,9 +91,22 @@
               "examples": [
                 "ECの注文サービス",
                 "独立デプロイ"
+              ],
+              "es": "Microservicios",
+              "one_liner_en": "Splits features into **independent services**",
+              "one_liner_es": "Divide las funciones en **servicios independientes**",
+              "examples_en": [
+                "Order service of an online store",
+                "Independent deployment"
+              ],
+              "examples_es": [
+                "Servicio de pedidos de una tienda en línea",
+                "Despliegue independiente"
               ]
             }
-          ]
+          ],
+          "title_en": "Cloud and code (who is responsible, how it's built)",
+          "title_es": "Nube y código (quién es responsable y cómo se construye)"
         },
         {
           "id": "net-virt",
@@ -74,6 +121,17 @@
               "examples": [
                 "軍事の機密網",
                 "インターネット非接続"
+              ],
+              "es": "Aislamiento físico (air gap)",
+              "one_liner_en": "A system **physically isolated** from outside networks",
+              "one_liner_es": "Sistema **aislado físicamente** de redes externas",
+              "examples_en": [
+                "Classified military networks",
+                "No internet connection"
+              ],
+              "examples_es": [
+                "Redes militares clasificadas",
+                "Sin conexión a internet"
               ]
             },
             {
@@ -85,6 +143,18 @@
               "examples": [
                 "SDNコントローラ",
                 "プレーン分離"
+              ],
+              "es": "Redes definidas por software (SDN)",
+              "name_en": "Software-Defined Networking (SDN)",
+              "one_liner_en": "Controls the network **centrally through software**",
+              "one_liner_es": "Controla la red **de forma centralizada mediante software**",
+              "examples_en": [
+                "SDN controller",
+                "Separating the planes"
+              ],
+              "examples_es": [
+                "Controlador SDN",
+                "Separación de planos"
               ]
             },
             {
@@ -96,6 +166,17 @@
               "examples": [
                 "銀行の中央処理",
                 "ブロックチェーン"
+              ],
+              "es": "Centralizado frente a descentralizado",
+              "one_liner_en": "Whether management is **concentrated in one place or spread out**",
+              "one_liner_es": "Si la gestión se **concentra en un lugar o se reparte**",
+              "examples_en": [
+                "A bank's central processing",
+                "Blockchain"
+              ],
+              "examples_es": [
+                "Procesamiento central de un banco",
+                "Cadena de bloques"
               ]
             },
             {
@@ -107,6 +188,17 @@
               "examples": [
                 "コンテナイメージ",
                 "ホストOS共有"
+              ],
+              "es": "Contenedorización",
+              "one_liner_en": "Bundles an app and its dependencies into a **container**",
+              "one_liner_es": "Empaqueta una aplicación y sus dependencias en un **contenedor**",
+              "examples_en": [
+                "Container images",
+                "Shared host OS"
+              ],
+              "examples_es": [
+                "Imágenes de contenedor",
+                "SO del host compartido"
               ]
             },
             {
@@ -118,9 +210,22 @@
               "examples": [
                 "VMware/Hyper-V",
                 "1台に複数OS"
+              ],
+              "es": "Virtualización",
+              "one_liner_en": "Splits a physical machine into **multiple VMs**",
+              "one_liner_es": "Divide una máquina física en **varias VM**",
+              "examples_en": [
+                "VMware/Hyper-V",
+                "Several OSes on one machine"
+              ],
+              "examples_es": [
+                "VMware/Hyper-V",
+                "Varios SO en una sola máquina"
               ]
             }
-          ]
+          ],
+          "title_en": "Network isolation and virtualization (how to separate and host)",
+          "title_es": "Aislamiento de red y virtualización (cómo separar y alojar)"
         },
         {
           "id": "embedded-ot",
@@ -135,6 +240,18 @@
               "examples": [
                 "Miraiボットネット",
                 "デフォルトパスワード"
+              ],
+              "es": "Internet de las cosas (IoT)",
+              "name_en": "Internet of Things (IoT)",
+              "one_liner_en": "Networked **things** that collect data and control devices",
+              "one_liner_es": "**Objetos** conectados que recogen datos y controlan dispositivos",
+              "examples_en": [
+                "Mirai botnet",
+                "Default passwords"
+              ],
+              "examples_es": [
+                "Botnet Mirai",
+                "Contraseñas predeterminadas"
               ]
             },
             {
@@ -146,6 +263,17 @@
               "examples": [
                 "発電所の監視",
                 "電力・ガス・水道"
+              ],
+              "es": "ICS / SCADA",
+              "one_liner_en": "Systems that **monitor and control** industrial equipment",
+              "one_liner_es": "Sistemas que **supervisan y controlan** equipos industriales",
+              "examples_en": [
+                "Power plant monitoring",
+                "Electricity, gas and water"
+              ],
+              "examples_es": [
+                "Supervisión de centrales eléctricas",
+                "Electricidad, gas y agua"
               ]
             },
             {
@@ -157,9 +285,23 @@
               "examples": [
                 "エンジン制御",
                 "組込み機器"
+              ],
+              "es": "Sistema operativo en tiempo real (RTOS)",
+              "name_en": "Real-Time Operating System (RTOS)",
+              "one_liner_en": "A specialized OS that **guarantees processing within deadlines**",
+              "one_liner_es": "SO especializado que **garantiza el procesamiento dentro de plazo**",
+              "examples_en": [
+                "Engine control",
+                "Embedded devices"
+              ],
+              "examples_es": [
+                "Control del motor",
+                "Dispositivos embebidos"
               ]
             }
-          ]
+          ],
+          "title_en": "Embedded systems and OT (field devices and control systems)",
+          "title_es": "Sistemas embebidos y OT (dispositivos de campo y sistemas de control)"
         },
         {
           "id": "design-tradeoffs",
@@ -174,6 +316,17 @@
               "examples": [
                 "冗長化",
                 "ロードバランサ"
+              ],
+              "es": "Disponibilidad",
+              "one_liner_en": "How far it's **usable when needed**",
+              "one_liner_es": "Grado en que **está disponible cuando se necesita**",
+              "examples_en": [
+                "Redundancy",
+                "Load balancers"
+              ],
+              "examples_es": [
+                "Redundancia",
+                "Balanceadores de carga"
               ]
             },
             {
@@ -185,6 +338,17 @@
               "examples": [
                 "SPOF排除",
                 "自動復旧"
+              ],
+              "es": "Resiliencia",
+              "one_liner_en": "The ability to keep running through failures and **recover quickly**",
+              "one_liner_es": "Capacidad de seguir funcionando ante fallos y **recuperarse rápido**",
+              "examples_en": [
+                "Eliminating SPOFs",
+                "Automatic recovery"
+              ],
+              "examples_es": [
+                "Eliminar puntos únicos de fallo",
+                "Recuperación automática"
               ]
             },
             {
@@ -196,6 +360,17 @@
               "examples": [
                 "重要系に監視限定",
                 "リスク優先順位"
+              ],
+              "es": "Coste",
+              "one_liner_en": "**Balancing** security against expense",
+              "one_liner_es": "**Equilibrar** seguridad y gasto",
+              "examples_en": [
+                "Monitoring only critical systems",
+                "Prioritizing by risk"
+              ],
+              "examples_es": [
+                "Supervisar solo los sistemas críticos",
+                "Priorizar según el riesgo"
               ]
             },
             {
@@ -207,6 +382,17 @@
               "examples": [
                 "WAFルール調整",
                 "性能との両立"
+              ],
+              "es": "Capacidad de respuesta",
+              "one_liner_en": "Ability to **respond at an appropriate speed**",
+              "one_liner_es": "Capacidad de **responder a una velocidad adecuada**",
+              "examples_en": [
+                "Tuning WAF rules",
+                "Balancing with performance"
+              ],
+              "examples_es": [
+                "Ajuste de reglas del WAF",
+                "Equilibrio con el rendimiento"
               ]
             },
             {
@@ -218,6 +404,17 @@
               "examples": [
                 "オートスケール",
                 "認証基盤の増減"
+              ],
+              "es": "Escalabilidad",
+              "one_liner_en": "Ability to **scale out and in** with demand",
+              "one_liner_es": "Capacidad de **ampliarse y reducirse** según la demanda",
+              "examples_en": [
+                "Autoscaling",
+                "Scaling the authentication platform"
+              ],
+              "examples_es": [
+                "Escalado automático",
+                "Escalado de la plataforma de autenticación"
               ]
             },
             {
@@ -229,9 +426,22 @@
               "examples": [
                 "CI/CDパイプライン",
                 "設定の自動適用"
+              ],
+              "es": "Facilidad de despliegue",
+              "one_liner_en": "Ability to get changes into **production quickly and reliably**",
+              "one_liner_es": "Capacidad de llevar cambios a **producción de forma rápida y fiable**",
+              "examples_en": [
+                "CI/CD pipeline",
+                "Automatic config rollout"
+              ],
+              "examples_es": [
+                "Canalización CI/CD",
+                "Aplicación automática de la configuración"
               ]
             }
-          ]
+          ],
+          "title_en": "Design trade-offs (what to prioritize)",
+          "title_es": "Compromisos de diseño (qué priorizar)"
         },
         {
           "id": "ops-constraints",
@@ -246,6 +456,17 @@
               "examples": [
                 "サイバー保険",
                 "損害賠償カバー"
+              ],
+              "es": "Transferencia del riesgo",
+              "one_liner_en": "**Moving** hard-to-handle risk to an outside party",
+              "one_liner_es": "**Trasladar** a un tercero un riesgo difícil de asumir",
+              "examples_en": [
+                "Cyber insurance",
+                "Liability coverage"
+              ],
+              "examples_es": [
+                "Ciberseguro",
+                "Cobertura de responsabilidad civil"
               ]
             },
             {
@@ -257,6 +478,17 @@
               "examples": [
                 "定期バックアップ",
                 "オフサイト保管"
+              ],
+              "es": "Facilidad de recuperación",
+              "one_liner_en": "Ability to **recover quickly** after a failure",
+              "one_liner_es": "Capacidad de **recuperarse rápido** tras un fallo",
+              "examples_en": [
+                "Regular backups",
+                "Offsite storage"
+              ],
+              "examples_es": [
+                "Copias de seguridad periódicas",
+                "Almacenamiento externo"
               ]
             },
             {
@@ -268,6 +500,17 @@
               "examples": [
                 "Windows更新",
                 "WannaCry教訓"
+              ],
+              "es": "Disponibilidad de parches",
+              "one_liner_en": "Whether fixes are **released promptly**",
+              "one_liner_es": "Si las correcciones **se publican con rapidez**",
+              "examples_en": [
+                "Windows updates",
+                "Lessons from WannaCry"
+              ],
+              "examples_es": [
+                "Actualizaciones de Windows",
+                "Lecciones de WannaCry"
               ]
             },
             {
@@ -279,6 +522,17 @@
               "examples": [
                 "レガシー互換",
                 "停止できない本番"
+              ],
+              "es": "Imposibilidad de aplicar parches",
+              "one_liner_en": "Situations where patches **can't be applied**",
+              "one_liner_es": "Situaciones en las que **no se pueden aplicar** parches",
+              "examples_en": [
+                "Legacy compatibility",
+                "Production that can't be stopped"
+              ],
+              "examples_es": [
+                "Compatibilidad con sistemas heredados",
+                "Producción que no puede detenerse"
               ]
             },
             {
@@ -290,6 +544,17 @@
               "examples": [
                 "UPS",
                 "冗長電源"
+              ],
+              "es": "Energía",
+              "one_liner_en": "A **stable power supply** and outage protection as a foundation",
+              "one_liner_es": "**Suministro eléctrico estable** y protección ante cortes como base",
+              "examples_en": [
+                "UPS",
+                "Redundant power"
+              ],
+              "examples_es": [
+                "SAI (UPS)",
+                "Alimentación redundante"
               ]
             },
             {
@@ -301,11 +566,28 @@
               "examples": [
                 "TLS終端負荷",
                 "鍵長とCPU"
+              ],
+              "es": "Capacidad de cómputo",
+              "one_liner_en": "The **computing resources** security processing needs",
+              "one_liner_es": "Los **recursos de cálculo** que requiere el procesamiento de seguridad",
+              "examples_en": [
+                "TLS termination load",
+                "Key length and CPU"
+              ],
+              "examples_es": [
+                "Carga de terminación TLS",
+                "Longitud de clave y CPU"
               ]
             }
-          ]
+          ],
+          "title_en": "Operational constraints (transfer, recovery, patching, resources)",
+          "title_es": "Restricciones operativas (transferencia, recuperación, parches y recursos)"
         }
-      ]
+      ],
+      "title_en": "Security architecture overview",
+      "title_es": "Panorama de la arquitectura de seguridad",
+      "blurb_en": "Cloud, virtualization, embedded systems and design considerations",
+      "blurb_es": "Nube, virtualización, sistemas embebidos y consideraciones de diseño"
     },
     {
       "id": "C-2",
@@ -327,6 +609,17 @@
               "examples": [
                 "中間階のサーバルーム",
                 "入退室管理"
+              ],
+              "es": "Ubicación de dispositivos",
+              "one_liner_en": "Putting critical equipment in a **physically secure location**",
+              "one_liner_es": "Colocar los equipos críticos en un **lugar físicamente seguro**",
+              "examples_en": [
+                "Server room on a middle floor",
+                "Entry control"
+              ],
+              "examples_es": [
+                "Sala de servidores en una planta intermedia",
+                "Control de acceso"
               ]
             },
             {
@@ -338,6 +631,17 @@
               "examples": [
                 "DMZ",
                 "内部／機密ネットワーク"
+              ],
+              "es": "Zonas de seguridad",
+              "one_liner_en": "**Divides** the network by trust level",
+              "one_liner_es": "**Divide** la red según el nivel de confianza",
+              "examples_en": [
+                "DMZ",
+                "Internal/confidential networks"
+              ],
+              "examples_es": [
+                "DMZ",
+                "Redes internas / confidenciales"
               ]
             },
             {
@@ -349,6 +653,17 @@
               "examples": [
                 "ログインフォーム",
                 "不要ポートの開放"
+              ],
+              "es": "Superficie de ataque",
+              "one_liner_en": "The **sum of all entry points** for an attack",
+              "one_liner_es": "El **conjunto de puntos de entrada** para un ataque",
+              "examples_en": [
+                "Login forms",
+                "Unneeded open ports"
+              ],
+              "examples_es": [
+                "Formularios de inicio de sesión",
+                "Puertos innecesarios abiertos"
               ]
             },
             {
@@ -360,9 +675,22 @@
               "examples": [
                 "サーバー冗長化",
                 "代替ネットワーク経路"
+              ],
+              "es": "Conectividad",
+              "one_liner_en": "Keeping connections up with **availability** in mind",
+              "one_liner_es": "Mantener las conexiones pensando en la **disponibilidad**",
+              "examples_en": [
+                "Redundant servers",
+                "Alternate network paths"
+              ],
+              "examples_es": [
+                "Servidores redundantes",
+                "Rutas de red alternativas"
               ]
             }
-          ]
+          ],
+          "title_en": "Placement and zones",
+          "title_es": "Ubicación y zonas"
         },
         {
           "id": "fail-safe",
@@ -377,6 +705,17 @@
               "examples": [
                 "障害時にドア開放",
                 "業務継続を優先"
+              ],
+              "es": "Fallo abierto (fail open)",
+              "one_liner_en": "**Keeps access going** on failure (availability first)",
+              "one_liner_es": "**Mantiene el acceso** ante un fallo (prioriza la disponibilidad)",
+              "examples_en": [
+                "Doors unlock during an outage",
+                "Business continuity first"
+              ],
+              "examples_es": [
+                "Puertas que se abren ante una avería",
+                "Prioridad a la continuidad del negocio"
               ]
             },
             {
@@ -388,9 +727,22 @@
               "examples": [
                 "ゲート自動ロック",
                 "機密システムの停止"
+              ],
+              "es": "Fallo cerrado (fail closed)",
+              "one_liner_en": "**Closes or stops** on failure (security first)",
+              "one_liner_es": "**Cierra o detiene** ante un fallo (prioriza la seguridad)",
+              "examples_en": [
+                "Gates lock automatically",
+                "Shutting down a confidential system"
+              ],
+              "examples_es": [
+                "Torniquetes que se bloquean solos",
+                "Parada de un sistema confidencial"
               ]
             }
-          ]
+          ],
+          "title_en": "Failure modes",
+          "title_es": "Modos de fallo"
         },
         {
           "id": "middleboxes",
@@ -405,6 +757,17 @@
               "examples": [
                 "本番サーバーへの踏み台",
                 "操作ログの一元化"
+              ],
+              "es": "Servidor de salto (jump server)",
+              "one_liner_en": "A **relay point** for administrative access",
+              "one_liner_es": "Un **punto intermedio** para el acceso administrativo",
+              "examples_en": [
+                "Stepping stone to production servers",
+                "Centralized operation logs"
+              ],
+              "examples_es": [
+                "Paso intermedio hacia servidores de producción",
+                "Registros de operación centralizados"
               ]
             },
             {
@@ -416,6 +779,17 @@
               "examples": [
                 "Webキャッシュ",
                 "URLフィルタ"
+              ],
+              "es": "Servidor proxy",
+              "one_liner_en": "Relays traffic **on behalf of** clients",
+              "one_liner_es": "Retransmite el tráfico **en nombre de** los clientes",
+              "examples_en": [
+                "Web caching",
+                "URL filtering"
+              ],
+              "examples_es": [
+                "Caché web",
+                "Filtrado de URL"
               ]
             },
             {
@@ -427,6 +801,17 @@
               "examples": [
                 "シグネチャ照合",
                 "異常トラフィック検知"
+              ],
+              "es": "IPS / IDS",
+              "one_liner_en": "**Detects or prevents** suspicious traffic",
+              "one_liner_es": "**Detecta o impide** el tráfico sospechoso",
+              "examples_en": [
+                "Signature matching",
+                "Detecting abnormal traffic"
+              ],
+              "examples_es": [
+                "Comparación de firmas",
+                "Detección de tráfico anómalo"
               ]
             },
             {
@@ -438,6 +823,17 @@
               "examples": [
                 "ラウンドロビン",
                 "Webサーバー振り分け"
+              ],
+              "es": "Balanceador de carga",
+              "one_liner_en": "**Spreads load** across multiple servers",
+              "one_liner_es": "**Reparte la carga** entre varios servidores",
+              "examples_en": [
+                "Round robin",
+                "Distributing to web servers"
+              ],
+              "examples_es": [
+                "Round robin",
+                "Reparto entre servidores web"
               ]
             },
             {
@@ -449,9 +845,22 @@
               "examples": [
                 "サーバルーム温度",
                 "ネットワーク監視センサー"
+              ],
+              "es": "Sensores",
+              "one_liner_en": "**Watch for signs** of anomalies and failures",
+              "one_liner_es": "**Vigilan las señales** de anomalías y fallos",
+              "examples_en": [
+                "Server room temperature",
+                "Network monitoring sensors"
+              ],
+              "examples_es": [
+                "Temperatura de la sala de servidores",
+                "Sensores de supervisión de red"
               ]
             }
-          ]
+          ],
+          "title_en": "Network appliances",
+          "title_es": "Dispositivos de red"
         },
         {
           "id": "perimeter-app",
@@ -466,6 +875,17 @@
               "examples": [
                 "EAP-TLS",
                 "無線LANの相互認証"
+              ],
+              "es": "Protocolo de autenticación extensible (EAP)",
+              "one_liner_en": "A highly extensible **authentication framework**",
+              "one_liner_es": "Un **marco de autenticación** muy extensible",
+              "examples_en": [
+                "EAP-TLS",
+                "Mutual authentication on wireless LANs"
+              ],
+              "examples_es": [
+                "EAP-TLS",
+                "Autenticación mutua en redes inalámbricas"
               ]
             },
             {
@@ -477,6 +897,17 @@
               "examples": [
                 "SQLインジェクション遮断",
                 "XSS対策"
+              ],
+              "es": "Cortafuegos de aplicaciones web (WAF)",
+              "one_liner_en": "A firewall that blocks attacks on **web applications**",
+              "one_liner_es": "Cortafuegos que bloquea ataques contra **aplicaciones web**",
+              "examples_en": [
+                "Blocking SQL injection",
+                "XSS protection"
+              ],
+              "examples_es": [
+                "Bloqueo de inyección SQL",
+                "Protección contra XSS"
               ]
             },
             {
@@ -488,6 +919,17 @@
               "examples": [
                 "SNS利用制限",
                 "URLフィルタ＋IPS"
+              ],
+              "es": "Cortafuegos de nueva generación (NGFW)",
+              "one_liner_en": "A firewall that **combines many features**, such as app awareness",
+              "one_liner_es": "Cortafuegos que **integra muchas funciones**, como el reconocimiento de aplicaciones",
+              "examples_en": [
+                "Restricting social media use",
+                "URL filtering + IPS"
+              ],
+              "examples_es": [
+                "Restricción del uso de redes sociales",
+                "Filtrado de URL + IPS"
               ]
             },
             {
@@ -499,9 +941,22 @@
               "examples": [
                 "L4: IP・ポート制御",
                 "L7: HTTP内容制御"
+              ],
+              "es": "Cortafuegos (capa 4 / 7)",
+              "one_liner_en": "Firewalls whose **control granularity differs by OSI layer**",
+              "one_liner_es": "Cortafuegos cuya **granularidad de control depende de la capa OSI**",
+              "examples_en": [
+                "L4: IP and port control",
+                "L7: HTTP content control"
+              ],
+              "examples_es": [
+                "L4: control por IP y puerto",
+                "L7: control del contenido HTTP"
               ]
             }
-          ]
+          ],
+          "title_en": "Perimeter and application defense",
+          "title_es": "Defensa perimetral y de aplicaciones"
         },
         {
           "id": "secure-access",
@@ -516,6 +971,17 @@
               "examples": [
                 "在宅からの社内接続",
                 "出張先の安全アクセス"
+              ],
+              "es": "Red privada virtual (VPN)",
+              "one_liner_en": "Builds an **encrypted tunnel** over a public network",
+              "one_liner_es": "Crea un **túnel cifrado** sobre una red pública",
+              "examples_en": [
+                "Connecting to the office from home",
+                "Secure access while traveling"
+              ],
+              "examples_es": [
+                "Conexión a la oficina desde casa",
+                "Acceso seguro en viajes"
               ]
             },
             {
@@ -527,6 +993,17 @@
               "examples": [
                 "HTTPS",
                 "カード情報の保護"
+              ],
+              "es": "Seguridad de la capa de transporte (TLS)",
+              "one_liner_en": "**Encryption, integrity and authentication** for traffic",
+              "one_liner_es": "**Cifrado, integridad y autenticación** del tráfico",
+              "examples_en": [
+                "HTTPS",
+                "Protecting card data"
+              ],
+              "examples_es": [
+                "HTTPS",
+                "Protección de datos de tarjetas"
               ]
             },
             {
@@ -538,6 +1015,17 @@
               "examples": [
                 "店舗ごとの最適回線",
                 "アプリ別経路選択"
+              ],
+              "es": "WAN definida por software (SD-WAN)",
+              "one_liner_en": "**Optimizes a WAN through software**",
+              "one_liner_es": "**Optimiza una WAN mediante software**",
+              "examples_en": [
+                "Best line per store",
+                "Per-app path selection"
+              ],
+              "examples_es": [
+                "Mejor línea para cada tienda",
+                "Selección de ruta por aplicación"
               ]
             },
             {
@@ -549,11 +1037,28 @@
               "examples": [
                 "FW＋VPN＋ZTNAの統合",
                 "エッジでの一元防御"
+              ],
+              "es": "Servicio de acceso seguro en el perímetro (SASE)",
+              "one_liner_en": "**Combines connectivity and security in the cloud**",
+              "one_liner_es": "**Unifica conectividad y seguridad en la nube**",
+              "examples_en": [
+                "FW + VPN + ZTNA in one",
+                "Unified protection at the edge"
+              ],
+              "examples_es": [
+                "FW + VPN + ZTNA integrados",
+                "Protección unificada en el perímetro"
               ]
             }
-          ]
+          ],
+          "title_en": "Secure communication and access",
+          "title_es": "Comunicación y acceso seguros"
         }
-      ]
+      ],
+      "title_en": "Security principles for infrastructure",
+      "title_es": "Principios de seguridad para la infraestructura",
+      "blurb_en": "Zones, appliances and secure communication",
+      "blurb_es": "Zonas, dispositivos y comunicación segura"
     },
     {
       "id": "C-3",
@@ -576,6 +1081,20 @@
                 "医療記録",
                 "口座・信用情報",
                 "GDPR対象"
+              ],
+              "es": "Datos regulados",
+              "name_en": "Regulated data",
+              "one_liner_en": "Data that needs special handling under **laws and industry rules**",
+              "one_liner_es": "Datos que requieren un trato especial según **leyes y normas del sector**",
+              "examples_en": [
+                "Medical records",
+                "Account and credit data",
+                "Data under GDPR"
+              ],
+              "examples_es": [
+                "Historiales médicos",
+                "Datos de cuentas y de crédito",
+                "Datos sujetos al RGPD"
               ]
             },
             {
@@ -587,6 +1106,17 @@
               "examples": [
                 "企業ロゴの商標",
                 "特許技術"
+              ],
+              "es": "Propiedad intelectual",
+              "one_liner_en": "Intangible assets such as **patents, trademarks and copyrights**",
+              "one_liner_es": "Activos intangibles como **patentes, marcas y derechos de autor**",
+              "examples_en": [
+                "A corporate logo trademark",
+                "Patented technology"
+              ],
+              "examples_es": [
+                "Marca registrada del logotipo de una empresa",
+                "Tecnología patentada"
               ]
             },
             {
@@ -598,6 +1128,17 @@
               "examples": [
                 "開示前の決算短信",
                 "売上・利益"
+              ],
+              "es": "Información financiera",
+              "one_liner_en": "Information showing an organization's **finances and business condition**",
+              "one_liner_es": "Información que muestra la **situación financiera y de negocio** de la organización",
+              "examples_en": [
+                "Earnings report before disclosure",
+                "Revenue and profit"
+              ],
+              "examples_es": [
+                "Informe de resultados antes de su publicación",
+                "Ingresos y beneficios"
               ]
             },
             {
@@ -609,9 +1150,22 @@
               "examples": [
                 "平文メール",
                 "暗号化後の記号列"
+              ],
+              "es": "Legible / no legible por humanos",
+              "one_liner_en": "Classified by **whether people can read it**",
+              "one_liner_es": "Se clasifica según **si las personas pueden leerlo**",
+              "examples_en": [
+                "Plaintext email",
+                "Encrypted gibberish"
+              ],
+              "examples_es": [
+                "Correo en texto claro",
+                "Cadena de símbolos cifrada"
               ]
             }
-          ]
+          ],
+          "title_en": "Data types (what kind of data)",
+          "title_es": "Tipos de datos (qué clase de datos)"
         },
         {
           "id": "classification",
@@ -626,6 +1180,17 @@
               "examples": [
                 "診療記録",
                 "病名・処方"
+              ],
+              "es": "Sensible",
+              "one_liner_en": "Highly confidential data whose leak has **serious impact**",
+              "one_liner_es": "Datos muy confidenciales cuya filtración tiene un **impacto grave**",
+              "examples_en": [
+                "Medical records",
+                "Diagnoses and prescriptions"
+              ],
+              "examples_es": [
+                "Historiales clínicos",
+                "Diagnósticos y recetas"
               ]
             },
             {
@@ -637,6 +1202,17 @@
               "examples": [
                 "軍事機密",
                 "最小権限での区分管理"
+              ],
+              "es": "Confidencial",
+              "one_liner_en": "**Important information** tied to competitiveness and continuity",
+              "one_liner_es": "**Información importante** ligada a la competitividad y la continuidad",
+              "examples_en": [
+                "Military secrets",
+                "Compartmentalized least-privilege access"
+              ],
+              "examples_es": [
+                "Secretos militares",
+                "Acceso compartimentado con mínimo privilegio"
               ]
             },
             {
@@ -648,6 +1224,17 @@
               "examples": [
                 "白書・統計",
                 "人口推計"
+              ],
+              "es": "Pública",
+              "one_liner_en": "Information **meant for the public**",
+              "one_liner_es": "Información **destinada al público**",
+              "examples_en": [
+                "White papers and statistics",
+                "Population estimates"
+              ],
+              "examples_es": [
+                "Libros blancos y estadísticas",
+                "Estimaciones de población"
               ]
             },
             {
@@ -659,6 +1246,17 @@
               "examples": [
                 "DCの所在地詳細",
                 "建物構造情報"
+              ],
+              "es": "Restringida",
+              "one_liner_en": "Not as strict as confidential, but **some limits apply**",
+              "one_liner_es": "No tan estricta como la confidencial, pero **con ciertas restricciones**",
+              "examples_en": [
+                "Exact data center locations",
+                "Building structure information"
+              ],
+              "examples_es": [
+                "Ubicación exacta de centros de datos",
+                "Información sobre la estructura del edificio"
               ]
             },
             {
@@ -670,6 +1268,17 @@
               "examples": [
                 "管理者のID/PW",
                 "個人情報保護法の対象"
+              ],
+              "es": "Privada",
+              "one_liner_en": "Highly sensitive information **about individuals**",
+              "one_liner_es": "Información muy sensible **sobre personas**",
+              "examples_en": [
+                "Admin IDs and passwords",
+                "Data covered by privacy law"
+              ],
+              "examples_es": [
+                "ID y contraseñas de administradores",
+                "Datos amparados por la ley de protección de datos"
               ]
             },
             {
@@ -681,9 +1290,22 @@
               "examples": [
                 "国家機密",
                 "軍事技術の詳細"
+              ],
+              "es": "Crítica",
+              "one_liner_en": "Information whose loss **threatens the organization's survival**",
+              "one_liner_es": "Información cuya pérdida **pone en peligro la supervivencia** de la organización",
+              "examples_en": [
+                "State secrets",
+                "Details of military technology"
+              ],
+              "examples_es": [
+                "Secretos de Estado",
+                "Detalles de tecnología militar"
               ]
             }
-          ]
+          ],
+          "title_en": "Data classification (how much protection)",
+          "title_es": "Clasificación de datos (cuánta protección)"
         },
         {
           "id": "data-states",
@@ -698,6 +1320,17 @@
               "examples": [
                 "HDD上の顧客DB",
                 "USB・テープ保存"
+              ],
+              "es": "Datos en reposo",
+              "one_liner_en": "**Stored** and not being accessed",
+              "one_liner_es": "**Almacenados** y sin que se acceda a ellos",
+              "examples_en": [
+                "Customer DB on an HDD",
+                "Stored on USB or tape"
+              ],
+              "examples_es": [
+                "BD de clientes en un disco duro",
+                "Guardados en USB o cinta"
               ]
             },
             {
@@ -709,6 +1342,17 @@
               "examples": [
                 "送信中のカード情報",
                 "TLSで保護"
+              ],
+              "es": "Datos en tránsito",
+              "one_liner_en": "Data **moving across** a network",
+              "one_liner_es": "Datos **viajando** por una red",
+              "examples_en": [
+                "Card data being sent",
+                "Protected with TLS"
+              ],
+              "examples_es": [
+                "Datos de tarjeta en envío",
+                "Protegidos con TLS"
               ]
             },
             {
@@ -720,9 +1364,22 @@
               "examples": [
                 "入力中のパスワード",
                 "メモリ上の平文"
+              ],
+              "es": "Datos en uso",
+              "one_liner_en": "Data **being used** by an app or OS",
+              "one_liner_es": "Datos que **está usando** una aplicación o el SO",
+              "examples_en": [
+                "A password being typed",
+                "Plaintext in memory"
+              ],
+              "examples_es": [
+                "Una contraseña mientras se escribe",
+                "Texto claro en memoria"
               ]
             }
-          ]
+          ],
+          "title_en": "Data states (when and where it is)",
+          "title_es": "Estados de los datos (cuándo y dónde están)"
         },
         {
           "id": "geo-sovereignty",
@@ -737,6 +1394,17 @@
               "examples": [
                 "GDPRと域外クラウド",
                 "所在地の検討"
+              ],
+              "es": "Soberanía de los datos",
+              "one_liner_en": "The **right to control** data under the laws of where it resides",
+              "one_liner_es": "El **derecho a controlar** los datos según las leyes del lugar donde residen",
+              "examples_en": [
+                "GDPR and clouds outside the EU",
+                "Considering where data lives"
+              ],
+              "examples_es": [
+                "RGPD y nubes fuera de la UE",
+                "Valorar dónde residen los datos"
               ]
             },
             {
@@ -748,6 +1416,17 @@
               "examples": [
                 "車載の位置送信",
                 "行動パターン推察"
+              ],
+              "es": "Geolocalización",
+              "one_liner_en": "Handling **location data** and privacy",
+              "one_liner_es": "Tratamiento de los **datos de ubicación** y la privacidad",
+              "examples_en": [
+                "In-car location reporting",
+                "Inferring behavior patterns"
+              ],
+              "examples_es": [
+                "Envío de ubicación desde el coche",
+                "Deducción de patrones de comportamiento"
               ]
             },
             {
@@ -759,9 +1438,22 @@
               "examples": [
                 "EU域内DC保管",
                 "域外転送の制限"
+              ],
+              "es": "Restricciones geográficas",
+              "one_liner_en": "**Limits storage, processing and access** to specific regions",
+              "one_liner_es": "**Limita el almacenamiento, el tratamiento y el acceso** a regiones concretas",
+              "examples_en": [
+                "Storing in EU data centers",
+                "Restricting transfers outside the region"
+              ],
+              "examples_es": [
+                "Almacenamiento en centros de datos de la UE",
+                "Restricción de transferencias fuera de la región"
               ]
             }
-          ]
+          ],
+          "title_en": "Geography and sovereignty (where it's handled)",
+          "title_es": "Geografía y soberanía (dónde se tratan)"
         },
         {
           "id": "protection-methods",
@@ -776,6 +1468,17 @@
               "examples": [
                 "TLS通信",
                 "カード情報の保護"
+              ],
+              "es": "Cifrado",
+              "one_liner_en": "Protects **confidentiality** by making data hard to decipher",
+              "one_liner_es": "Protege la **confidencialidad** haciendo que los datos sean difíciles de descifrar",
+              "examples_en": [
+                "TLS traffic",
+                "Protecting card data"
+              ],
+              "examples_es": [
+                "Tráfico TLS",
+                "Protección de datos de tarjetas"
               ]
             },
             {
@@ -787,6 +1490,17 @@
               "examples": [
                 "パスワードのハッシュ保存",
                 "DB漏えい時の保護"
+              ],
+              "es": "Hash",
+              "one_liner_en": "A **one-way** transform that makes the original hard to recover",
+              "one_liner_es": "Transformación **unidireccional** que dificulta recuperar el original",
+              "examples_en": [
+                "Storing password hashes",
+                "Protection if the DB leaks"
+              ],
+              "examples_es": [
+                "Almacenar hashes de contraseñas",
+                "Protección si se filtra la BD"
               ]
             },
             {
@@ -798,6 +1512,17 @@
               "examples": [
                 "カード番号の****表示",
                 "下4桁以外を隠蔽"
+              ],
+              "es": "Enmascaramiento",
+              "one_liner_en": "**Hides part** of sensitive data with symbols",
+              "one_liner_es": "**Oculta una parte** de los datos sensibles con símbolos",
+              "examples_en": [
+                "Showing card numbers as ****",
+                "Hiding all but the last four digits"
+              ],
+              "examples_es": [
+                "Mostrar números de tarjeta como ****",
+                "Ocultar todo salvo los cuatro últimos dígitos"
               ]
             },
             {
@@ -809,6 +1534,17 @@
               "examples": [
                 "ECのカード番号置換",
                 "決済時に原本へ戻す"
+              ],
+              "es": "Tokenización",
+              "one_liner_en": "Replaces the original with a **meaningless token**",
+              "one_liner_es": "Sustituye el original por un **token sin significado**",
+              "examples_en": [
+                "Replacing card numbers in online stores",
+                "Mapped back to the original at payment"
+              ],
+              "examples_es": [
+                "Sustitución de números de tarjeta en tiendas en línea",
+                "Se recupera el original al pagar"
               ]
             },
             {
@@ -820,6 +1556,17 @@
               "examples": [
                 "アプリの変数名変換",
                 "解析耐性の向上"
+              ],
+              "es": "Ofuscación",
+              "one_liner_en": "Makes code or data **hard to understand**",
+              "one_liner_es": "Hace que el código o los datos sean **difíciles de entender**",
+              "examples_en": [
+                "Renaming variables in an app",
+                "Resisting analysis"
+              ],
+              "examples_es": [
+                "Renombrar variables de una aplicación",
+                "Mayor resistencia al análisis"
               ]
             },
             {
@@ -831,6 +1578,17 @@
               "examples": [
                 "業務網とゲストWi-Fi分離",
                 "侵害時の影響局限"
+              ],
+              "es": "Segmentación",
+              "one_liner_en": "**Divides** areas to narrow what can be reached",
+              "one_liner_es": "**Divide** áreas para reducir lo que se puede alcanzar",
+              "examples_en": [
+                "Separating business network and guest Wi-Fi",
+                "Limiting the impact of a breach"
+              ],
+              "examples_es": [
+                "Separar la red corporativa y la Wi-Fi de invitados",
+                "Limitar el impacto de una intrusión"
               ]
             },
             {
@@ -842,11 +1600,28 @@
               "examples": [
                 "電子カルテのRBAC",
                 "必要スタッフのみアクセス"
+              ],
+              "es": "Restricciones de permisos",
+              "one_liner_en": "**Limits by permission** who can touch what",
+              "one_liner_es": "**Limita mediante permisos** quién accede a qué",
+              "examples_en": [
+                "RBAC for electronic medical records",
+                "Access only for staff who need it"
+              ],
+              "examples_es": [
+                "RBAC en historias clínicas electrónicas",
+                "Acceso solo para el personal que lo necesita"
               ]
             }
-          ]
+          ],
+          "title_en": "Protection methods (how to protect it)",
+          "title_es": "Métodos de protección (cómo protegerlos)"
         }
-      ]
+      ],
+      "title_en": "Data protection strategies and concepts",
+      "title_es": "Estrategias y conceptos de protección de datos",
+      "blurb_en": "Classification, states and protection methods",
+      "blurb_es": "Clasificación, estados y métodos de protección"
     },
     {
       "id": "C-4",
@@ -868,6 +1643,17 @@
               "examples": [
                 "金融機関の遠隔DC",
                 "常時データ複製"
+              ],
+              "es": "Sitio caliente",
+              "one_liner_en": "A backup site with **equivalent capability** that can take over instantly",
+              "one_liner_es": "Sitio de respaldo con **capacidad equivalente** que asume el servicio al instante",
+              "examples_en": [
+                "A bank's remote data center",
+                "Continuous data replication"
+              ],
+              "examples_es": [
+                "Centro de datos remoto de un banco",
+                "Replicación continua de datos"
               ]
             },
             {
@@ -879,6 +1665,17 @@
               "examples": [
                 "倉庫・空きオフィス",
                 "機器搬入とリストア"
+              ],
+              "es": "Sitio frío",
+              "one_liner_en": "A backup site that's **mostly just space** (slow to bring up)",
+              "one_liner_es": "Sitio de respaldo que es **sobre todo espacio** (lento de poner en marcha)",
+              "examples_en": [
+                "Warehouse or empty office",
+                "Moving in equipment and restoring"
+              ],
+              "examples_es": [
+                "Almacén u oficina vacía",
+                "Traslado de equipos y restauración"
               ]
             },
             {
@@ -890,9 +1687,22 @@
               "examples": [
                 "基本設備の事前配置",
                 "定期データ同期"
+              ],
+              "es": "Sitio templado",
+              "one_liner_en": "A backup site **between** hot and cold",
+              "one_liner_es": "Sitio de respaldo **intermedio** entre el caliente y el frío",
+              "examples_en": [
+                "Basic equipment pre-installed",
+                "Periodic data sync"
+              ],
+              "examples_es": [
+                "Equipamiento básico preinstalado",
+                "Sincronización periódica de datos"
               ]
             }
-          ]
+          ],
+          "title_en": "Alternate sites",
+          "title_es": "Sitios alternativos"
         },
         {
           "id": "dispersion",
@@ -907,6 +1717,17 @@
               "examples": [
                 "遠隔バックアップDC",
                 "津波・広域停電対策"
+              ],
+              "es": "Dispersión geográfica",
+              "one_liner_en": "Keeps sites **geographically apart** to avoid being hit together",
+              "one_liner_es": "Mantiene los sitios **separados geográficamente** para no verse afectados a la vez",
+              "examples_en": [
+                "Remote backup data center",
+                "Tsunami and wide-area outage planning"
+              ],
+              "examples_es": [
+                "Centro de datos de respaldo remoto",
+                "Previsión ante tsunamis y apagones extensos"
               ]
             },
             {
@@ -918,6 +1739,17 @@
               "examples": [
                 "多地域DC配置",
                 "異ベンダー組合せ"
+              ],
+              "es": "Diversidad de plataformas",
+              "one_liner_en": "**Spreads** sites, environments and vendors to reduce SPOFs",
+              "one_liner_es": "**Reparte** sitios, entornos y proveedores para reducir puntos únicos de fallo",
+              "examples_en": [
+                "Multi-region data centers",
+                "Mixing vendors"
+              ],
+              "examples_es": [
+                "Centros de datos en varias regiones",
+                "Combinación de proveedores"
               ]
             },
             {
@@ -929,6 +1761,17 @@
               "examples": [
                 "AWS＋Azure",
                 "リージョン横断バックアップ"
+              ],
+              "es": "Sistemas multinube",
+              "one_liner_en": "Uses **several CSPs** to boost availability and DR",
+              "one_liner_es": "Usa **varios proveedores de nube** para mejorar la disponibilidad y la recuperación",
+              "examples_en": [
+                "AWS + Azure",
+                "Cross-region backups"
+              ],
+              "examples_es": [
+                "AWS + Azure",
+                "Copias de seguridad entre regiones"
               ]
             },
             {
@@ -940,9 +1783,22 @@
               "examples": [
                 "BCPとRTO/RPO",
                 "安否確認・連絡手段"
+              ],
+              "es": "Continuidad de las operaciones",
+              "one_liner_en": "A framework to **keep the business running** during disruptions (BCP)",
+              "one_liner_es": "Marco para **mantener el negocio en marcha** ante interrupciones (BCP)",
+              "examples_en": [
+                "BCP with RTO/RPO",
+                "Staff safety checks and contact methods"
+              ],
+              "examples_es": [
+                "BCP con RTO/RPO",
+                "Comprobación de la seguridad del personal y medios de contacto"
               ]
             }
-          ]
+          ],
+          "title_en": "Dispersion and continuity",
+          "title_es": "Dispersión y continuidad"
         },
         {
           "id": "capacity",
@@ -957,6 +1813,17 @@
               "examples": [
                 "24/365運用チーム",
                 "応援・外部協力計画"
+              ],
+              "es": "Planificación de capacidad (personas)",
+              "one_liner_en": "Securing the **people** needed for recovery in advance",
+              "one_liner_es": "Asegurar de antemano las **personas** necesarias para la recuperación",
+              "examples_en": [
+                "24/365 operations team",
+                "Plans for backup staff and outside help"
+              ],
+              "examples_es": [
+                "Equipo de operaciones 24/365",
+                "Planes de refuerzo y colaboración externa"
               ]
             },
             {
@@ -968,6 +1835,17 @@
               "examples": [
                 "オートスケール",
                 "可用性ゾーン"
+              ],
+              "es": "Planificación de capacidad (tecnología)",
+              "one_liner_en": "Technical planning to **maintain and expand** processing and capacity",
+              "one_liner_es": "Planificación técnica para **mantener y ampliar** el procesamiento y la capacidad",
+              "examples_en": [
+                "Autoscaling",
+                "Availability zones"
+              ],
+              "examples_es": [
+                "Escalado automático",
+                "Zonas de disponibilidad"
               ]
             },
             {
@@ -979,9 +1857,22 @@
               "examples": [
                 "非常用電源・水・通信",
                 "空調・ラック・回線"
+              ],
+              "es": "Planificación de capacidad (infraestructura)",
+              "one_liner_en": "Planning to secure **infrastructure resources** such as power and facilities",
+              "one_liner_es": "Planificación para asegurar **recursos de infraestructura** como energía e instalaciones",
+              "examples_en": [
+                "Emergency power, water and communications",
+                "Cooling, racks and lines"
+              ],
+              "examples_es": [
+                "Energía, agua y comunicaciones de emergencia",
+                "Climatización, racks y líneas"
               ]
             }
-          ]
+          ],
+          "title_en": "Capacity",
+          "title_es": "Capacidad"
         },
         {
           "id": "backup-policy",
@@ -996,6 +1887,17 @@
               "examples": [
                 "同ビル内ストレージ",
                 "クラウドへの転送"
+              ],
+              "es": "En el sitio / fuera del sitio",
+              "one_liner_en": "Keeping backups in **the same place or a different one**",
+              "one_liner_es": "Guardar las copias **en el mismo lugar o en otro distinto**",
+              "examples_en": [
+                "Storage in the same building",
+                "Transfer to the cloud"
+              ],
+              "examples_es": [
+                "Almacenamiento en el mismo edificio",
+                "Envío a la nube"
               ]
             },
             {
@@ -1007,6 +1909,17 @@
               "examples": [
                 "数分間隔の取得",
                 "日次＋ログバックアップ"
+              ],
+              "es": "Frecuencia",
+              "one_liner_en": "Sets the backup **interval** by importance",
+              "one_liner_es": "Fija el **intervalo** de copia según la importancia",
+              "examples_en": [
+                "Backups every few minutes",
+                "Daily plus log backups"
+              ],
+              "examples_es": [
+                "Copias cada pocos minutos",
+                "Copias diarias más copias de registros"
               ]
             },
             {
@@ -1018,9 +1931,23 @@
               "examples": [
                 "保管データの暗号化",
                 "クラウドバックアップ保護"
+              ],
+              "es": "Cifrado de copias de seguridad",
+              "name_en": "Backup encryption",
+              "one_liner_en": "Encrypts backups so they're **unreadable**",
+              "one_liner_es": "Cifra las copias para que sean **ilegibles**",
+              "examples_en": [
+                "Encrypting stored data",
+                "Protecting cloud backups"
+              ],
+              "examples_es": [
+                "Cifrado de los datos almacenados",
+                "Protección de copias en la nube"
               ]
             }
-          ]
+          ],
+          "title_en": "Backup policy",
+          "title_es": "Política de copias de seguridad"
         },
         {
           "id": "backup-tech",
@@ -1035,6 +1962,17 @@
               "examples": [
                 "仮想マシンのスナップショット",
                 "迅速なリストア"
+              ],
+              "es": "Instantáneas",
+              "one_liner_en": "Records a point-in-time state and keeps it **light with deltas**",
+              "one_liner_es": "Registra el estado en un momento dado y lo mantiene **ligero con diferencias**",
+              "examples_en": [
+                "VM snapshots",
+                "Fast restore"
+              ],
+              "examples_es": [
+                "Instantáneas de máquinas virtuales",
+                "Restauración rápida"
               ]
             },
             {
@@ -1046,6 +1984,17 @@
               "examples": [
                 "個別ファイル復元",
                 "全体リストアと訓練"
+              ],
+              "es": "Recuperación",
+              "one_liner_en": "**Restores** data and systems from backups",
+              "one_liner_es": "**Restaura** datos y sistemas a partir de copias de seguridad",
+              "examples_en": [
+                "Restoring individual files",
+                "Full restore and drills"
+              ],
+              "examples_es": [
+                "Restauración de archivos individuales",
+                "Restauración completa y simulacros"
               ]
             },
             {
@@ -1057,6 +2006,17 @@
               "examples": [
                 "クラウドへのレプリケーション",
                 "同期間隔と保持期間"
+              ],
+              "es": "Replicación",
+              "one_liner_en": "**Copies or syncs** data to another location",
+              "one_liner_es": "**Copia o sincroniza** datos en otra ubicación",
+              "examples_en": [
+                "Replication to the cloud",
+                "Sync interval and retention period"
+              ],
+              "examples_es": [
+                "Replicación a la nube",
+                "Intervalo de sincronización y periodo de retención"
               ]
             },
             {
@@ -1068,9 +2028,22 @@
               "examples": [
                 "ストレージのジャーナル",
                 "RPOの極小化"
+              ],
+              "es": "Registro por diario (journaling)",
+              "one_liner_en": "Continuously logs changes so you can return to **any point in time**",
+              "one_liner_es": "Registra los cambios de forma continua para volver a **cualquier momento**",
+              "examples_en": [
+                "Storage journals",
+                "Minimizing RPO"
+              ],
+              "examples_es": [
+                "Diarios de almacenamiento",
+                "Minimizar el RPO"
               ]
             }
-          ]
+          ],
+          "title_en": "Backup techniques",
+          "title_es": "Técnicas de copia de seguridad"
         },
         {
           "id": "power",
@@ -1085,6 +2058,17 @@
               "examples": [
                 "ディーゼル発電機",
                 "ガスタービン発電機"
+              ],
+              "es": "Generadores",
+              "one_liner_en": "Emergency power supplied **for long periods** during outages",
+              "one_liner_es": "Energía de emergencia **durante largos periodos** en un corte",
+              "examples_en": [
+                "Diesel generators",
+                "Gas turbine generators"
+              ],
+              "examples_es": [
+                "Generadores diésel",
+                "Generadores de turbina de gas"
               ]
             },
             {
@@ -1096,11 +2080,32 @@
               "examples": [
                 "発電機切替までの橋渡し",
                 "安全なシャットダウン"
+              ],
+              "es": "Sistema de alimentación ininterrumpida (SAI/UPS)",
+              "one_liner_en": "Battery power **for a short time** right after an outage",
+              "one_liner_es": "Energía de batería **durante poco tiempo** justo tras un corte",
+              "examples_en": [
+                "Bridge until the generator starts",
+                "Safe shutdown"
+              ],
+              "examples_es": [
+                "Puente hasta que arranca el generador",
+                "Apagado seguro"
               ]
             }
-          ]
+          ],
+          "title_en": "Power",
+          "title_es": "Energía"
         }
-      ]
+      ],
+      "title_en": "Resilience and recovery",
+      "title_es": "Resiliencia y recuperación",
+      "blurb_en": "Alternate sites, dispersion, backups and power",
+      "blurb_es": "Sitios alternativos, dispersión, copias de seguridad y energía"
     }
-  ]
+  ],
+  "title_en": "Security Architecture",
+  "title_es": "Arquitectura de seguridad",
+  "intro_en": "Domain 3 covers security architecture: the big picture of protective mechanisms, assembled the way you'd build a house. Sections 3.1–3.4 walk through everything from cloud and embedded systems to design and operational constraints such as availability and patching.",
+  "intro_es": "El dominio 3 trata la arquitectura de seguridad: la visión de conjunto de los mecanismos de protección, que se monta como quien construye una casa. Las secciones 3.1–3.4 recorren desde la nube y los sistemas embebidos hasta restricciones de diseño y operación como la disponibilidad y los parches."
 }

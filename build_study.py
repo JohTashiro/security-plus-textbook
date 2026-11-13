@@ -128,6 +128,7 @@ UI = {
         "Elige un dominio y refuérzalo con el modo memorización y el mapa de conocimiento.",
     ),
     "global_map_title": ("知識マップ", "Knowledge map", "Mapa de conocimiento"),
+    "overview": ("全体", "Overview", "Visión general"),
     "global_map_tagline": (
         "Domain を選ぶと、その Domain の用語マップへ進みます。章ラベルは各章の覚えるモードへリンクします（用語 {n}）。",
         "Pick a domain to open its term map. Chapter labels link to that chapter's memorize mode ({n} terms).",
@@ -731,7 +732,7 @@ def global_map_page(hub_domains: list[dict]) -> str:
     {root_sidebar(map_active=True)}
     <main class="main main-wide">
       <header class="hero">
-        <p class="eyebrow">SY0-701 · 全体</p>
+        <p class="eyebrow">SY0-701 · {t("overview")}</p>
         <h1>{t("global_map_title")}</h1>
         <p>{t("global_map_tagline", n=total_terms)}</p>
       </header>

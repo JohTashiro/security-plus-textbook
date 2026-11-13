@@ -24,6 +24,17 @@
               "examples": [
                 "PW長さ・文字種",
                 "持ち出し暗号化"
+              ],
+              "es": "Directrices",
+              "one_liner_en": "**Concrete guidance** for meeting goals",
+              "one_liner_es": "**Orientaciones concretas** para alcanzar los objetivos",
+              "examples_en": [
+                "Password length and character types",
+                "Encrypting data taken off-site"
+              ],
+              "examples_es": [
+                "Longitud y tipos de caracteres de las contraseñas",
+                "Cifrar los datos que salen de la oficina"
               ]
             },
             {
@@ -35,6 +46,17 @@
               "examples": [
                 "端末隔離",
                 "役割と指揮系統"
+              ],
+              "es": "Respuesta a incidentes",
+              "one_liner_en": "Recover using **procedures set in advance**",
+              "one_liner_es": "Recuperarse con **procedimientos fijados de antemano**",
+              "examples_en": [
+                "Isolating devices",
+                "Roles and chain of command"
+              ],
+              "examples_es": [
+                "Aislar equipos",
+                "Funciones y cadena de mando"
               ]
             },
             {
@@ -46,6 +68,18 @@
               "examples": [
                 "要件に法規",
                 "設計で入力検証"
+              ],
+              "es": "Ciclo de vida del desarrollo de software (SDLC)",
+              "name_en": "Software Development Lifecycle (SDLC)",
+              "one_liner_en": "Builds in **security requirements** from planning through operation",
+              "one_liner_es": "Incorpora **requisitos de seguridad** desde la planificación hasta la operación",
+              "examples_en": [
+                "Legal requirements in the spec",
+                "Input validation in the design"
+              ],
+              "examples_es": [
+                "Requisitos legales en la especificación",
+                "Validación de entradas en el diseño"
               ]
             },
             {
@@ -57,9 +91,22 @@
               "examples": [
                 "委員会申請",
                 "検証環境テスト"
+              ],
+              "es": "Gestión de cambios",
+              "one_liner_en": "Contains change risk through **requests and approval**",
+              "one_liner_es": "Contiene el riesgo de los cambios mediante **solicitudes y aprobación**",
+              "examples_en": [
+                "Submitting to a committee",
+                "Testing in a staging environment"
+              ],
+              "examples_es": [
+                "Solicitud a un comité",
+                "Pruebas en un entorno de preproducción"
               ]
             }
-          ]
+          ],
+          "title_en": "Guidelines and policies",
+          "title_es": "Directrices y políticas"
         },
         {
           "id": "standards-procedures",
@@ -74,6 +121,17 @@
               "examples": [
                 "最低8文字",
                 "総当たり対策"
+              ],
+              "es": "Estándares de contraseñas",
+              "one_liner_en": "**Standardizes** password length and so on, and enforces it",
+              "one_liner_es": "**Estandariza** la longitud de las contraseñas, etc., y exige cumplirlo",
+              "examples_en": [
+                "Minimum 8 characters",
+                "Defense against brute force"
+              ],
+              "examples_es": [
+                "Mínimo 8 caracteres",
+                "Defensa contra la fuerza bruta"
               ]
             },
             {
@@ -85,6 +143,17 @@
               "examples": [
                 "職務に応じ付与",
                 "特権ログ監査"
+              ],
+              "es": "Estándares de control de acceso",
+              "one_liner_en": "**Least privilege** and strict control of privileged accounts",
+              "one_liner_es": "**Mínimo privilegio** y control estricto de las cuentas privilegiadas",
+              "examples_en": [
+                "Granting by job duties",
+                "Auditing privileged logs"
+              ],
+              "examples_es": [
+                "Conceder según las funciones",
+                "Auditar los registros de cuentas privilegiadas"
               ]
             },
             {
@@ -96,6 +165,17 @@
               "examples": [
                 "IC＋PIN",
                 "生体認証・施錠"
+              ],
+              "es": "Estándares de seguridad física",
+              "one_liner_en": "Protect facilities with **entry standards**",
+              "one_liner_es": "Proteger las instalaciones con **estándares de acceso**",
+              "examples_en": [
+                "Smart card + PIN",
+                "Biometrics and locks"
+              ],
+              "examples_es": [
+                "Tarjeta + PIN",
+                "Biometría y cerraduras"
               ]
             },
             {
@@ -107,6 +187,17 @@
               "examples": [
                 "TLS1.2以上",
                 "透過的暗号化"
+              ],
+              "es": "Estándares de cifrado",
+              "one_liner_en": "**Encryption rules** for data in transit and at rest",
+              "one_liner_es": "**Reglas de cifrado** para datos en tránsito y en reposo",
+              "examples_en": [
+                "TLS 1.2 or later",
+                "Transparent encryption"
+              ],
+              "examples_es": [
+                "TLS 1.2 o superior",
+                "Cifrado transparente"
               ]
             },
             {
@@ -118,9 +209,22 @@
               "examples": [
                 "変更依頼登録",
                 "高リスク差戻し"
+              ],
+              "es": "Procedimientos de gestión de cambios",
+              "one_liner_en": "**Turns into procedure** everything from request to review",
+              "one_liner_es": "**Convierte en procedimiento** todo, desde la solicitud hasta la revisión",
+              "examples_en": [
+                "Logging change requests",
+                "Sending back high-risk changes"
+              ],
+              "examples_es": [
+                "Registro de solicitudes de cambio",
+                "Devolución de cambios de alto riesgo"
               ]
             }
-          ]
+          ],
+          "title_en": "Standards and procedures",
+          "title_es": "Estándares y procedimientos"
         },
         {
           "id": "external",
@@ -135,6 +239,17 @@
               "examples": [
                 "個人情報保護法",
                 "準拠の定期評価"
+              ],
+              "es": "Regulatorias",
+              "one_liner_en": "**Reflects regulatory requirements in policy**",
+              "one_liner_es": "**Refleja los requisitos normativos en las políticas**",
+              "examples_en": [
+                "Personal information protection law",
+                "Regular compliance assessments"
+              ],
+              "examples_es": [
+                "Ley de protección de datos personales",
+                "Evaluaciones periódicas del cumplimiento"
               ]
             },
             {
@@ -146,6 +261,17 @@
               "examples": [
                 "不正アクセス禁止法",
                 "ID管理・ログ"
+              ],
+              "es": "Legales",
+              "one_liner_en": "Understand laws and **build them into procedures**",
+              "one_liner_es": "Entender las leyes e **incorporarlas a los procedimientos**",
+              "examples_en": [
+                "Unauthorized computer access law",
+                "ID management and logs"
+              ],
+              "examples_es": [
+                "Ley contra el acceso informático no autorizado",
+                "Gestión de ID y registros"
               ]
             },
             {
@@ -157,6 +283,17 @@
               "examples": [
                 "金融のMFA",
                 "当局ガイドライン"
+              ],
+              "es": "Del sector",
+              "one_liner_en": "**Industry-specific**, higher requirements",
+              "one_liner_es": "Requisitos más exigentes **propios del sector**",
+              "examples_en": [
+                "MFA in finance",
+                "Regulator guidelines"
+              ],
+              "examples_es": [
+                "MFA en la banca",
+                "Directrices del supervisor"
               ]
             },
             {
@@ -168,6 +305,17 @@
               "examples": [
                 "GDPR",
                 "データ現地保存"
+              ],
+              "es": "Locales / regionales",
+              "one_liner_en": "Additional compliance with **regional laws**",
+              "one_liner_es": "Cumplimiento adicional de **leyes regionales**",
+              "examples_en": [
+                "GDPR",
+                "Data localization"
+              ],
+              "examples_es": [
+                "RGPD",
+                "Almacenamiento local de datos"
               ]
             },
             {
@@ -179,6 +327,17 @@
               "examples": [
                 "サイバー基本法",
                 "省庁ガイドライン"
+              ],
+              "es": "Nacionales",
+              "one_liner_en": "Influence of **national laws** and national strategy",
+              "one_liner_es": "Influencia de las **leyes nacionales** y la estrategia del país",
+              "examples_en": [
+                "Basic Act on Cybersecurity",
+                "Ministry guidelines"
+              ],
+              "examples_es": [
+                "Ley básica de ciberseguridad",
+                "Directrices ministeriales"
               ]
             },
             {
@@ -190,9 +349,22 @@
               "examples": [
                 "サイバー犯罪条約",
                 "国際協力"
+              ],
+              "es": "Globales",
+              "one_liner_en": "Builds **international frameworks** into the organization",
+              "one_liner_es": "Incorpora **marcos internacionales** a la organización",
+              "examples_en": [
+                "Convention on Cybercrime",
+                "International cooperation"
+              ],
+              "examples_es": [
+                "Convenio sobre la Ciberdelincuencia",
+                "Cooperación internacional"
               ]
             }
-          ]
+          ],
+          "title_en": "External considerations",
+          "title_es": "Consideraciones externas"
         },
         {
           "id": "monitoring-governance",
@@ -207,6 +379,17 @@
               "examples": [
                 "定期監査",
                 "教育強化"
+              ],
+              "es": "Supervisión y revisión",
+              "one_liner_en": "Monitor through audits and **revise if needed**",
+              "one_liner_es": "Supervisar mediante auditorías y **revisar si es necesario**",
+              "examples_en": [
+                "Regular audits",
+                "Strengthening training"
+              ],
+              "examples_es": [
+                "Auditorías periódicas",
+                "Refuerzo de la formación"
               ]
             },
             {
@@ -218,6 +401,17 @@
               "examples": [
                 "CISO選任",
                 "ポリシー承認"
+              ],
+              "es": "Consejos de administración",
+              "one_liner_en": "The **top decision-making body** that sets strategy",
+              "one_liner_es": "El **máximo órgano de decisión** que fija la estrategia",
+              "examples_en": [
+                "Appointing a CISO",
+                "Approving policies"
+              ],
+              "examples_es": [
+                "Nombrar al CISO",
+                "Aprobar las políticas"
               ]
             },
             {
@@ -229,6 +423,17 @@
               "examples": [
                 "対応方針決定",
                 "再発防止立案"
+              ],
+              "es": "Comités",
+              "one_liner_en": "**Specialist bodies** for specific issues",
+              "one_liner_es": "**Órganos especializados** para cuestiones concretas",
+              "examples_en": [
+                "Deciding response policy",
+                "Planning recurrence prevention"
+              ],
+              "examples_es": [
+                "Decidir la política de respuesta",
+                "Planificar la prevención de repeticiones"
               ]
             },
             {
@@ -240,6 +445,17 @@
               "examples": [
                 "国家戦略",
                 "自治体クラウド"
+              ],
+              "es": "Entidades gubernamentales",
+              "one_liner_en": "Strategies and measures from **public bodies**",
+              "one_liner_es": "Estrategias y medidas de **organismos públicos**",
+              "examples_en": [
+                "National strategy",
+                "Municipal security clouds"
+              ],
+              "examples_es": [
+                "Estrategia nacional",
+                "Nubes de seguridad municipales"
               ]
             },
             {
@@ -251,9 +467,22 @@
               "examples": [
                 "本社CISO統括",
                 "拠点自律"
+              ],
+              "es": "Centralizado / descentralizado",
+              "one_liner_en": "Whether responsibility is **concentrated or delegated**",
+              "one_liner_es": "Si la responsabilidad se **concentra o se delega**",
+              "examples_en": [
+                "HQ CISO oversees everything",
+                "Sites act autonomously"
+              ],
+              "examples_es": [
+                "El CISO de la sede lo supervisa todo",
+                "Las sedes actúan de forma autónoma"
               ]
             }
-          ]
+          ],
+          "title_en": "Monitoring, revision and governance structures",
+          "title_es": "Supervisión, revisión y estructuras de gobernanza"
         },
         {
           "id": "data-roles",
@@ -268,6 +497,17 @@
               "examples": [
                 "極秘格付け",
                 "権限棚卸し"
+              ],
+              "es": "Propietarios de los datos",
+              "one_liner_en": "**Responsible for classifying** data and implementing controls",
+              "one_liner_es": "**Responsables de clasificar** los datos y aplicar los controles",
+              "examples_en": [
+                "Classifying as top secret",
+                "Reviewing access rights"
+              ],
+              "examples_es": [
+                "Clasificar como alto secreto",
+                "Revisar los permisos de acceso"
               ]
             },
             {
@@ -279,11 +519,28 @@
               "examples": [
                 "目的の通知",
                 "プラポリ公表"
+              ],
+              "es": "Responsables del tratamiento",
+              "one_liner_en": "**Responsible for deciding** the purpose of use",
+              "one_liner_es": "**Responsables de decidir** la finalidad del uso",
+              "examples_en": [
+                "Notifying the purpose",
+                "Publishing a privacy policy"
+              ],
+              "examples_es": [
+                "Comunicar la finalidad",
+                "Publicar una política de privacidad"
               ]
             }
-          ]
+          ],
+          "title_en": "Data roles",
+          "title_es": "Funciones respecto a los datos"
         }
-      ]
+      ],
+      "title_en": "Elements of security governance",
+      "title_es": "Elementos de la gobernanza de la seguridad",
+      "blurb_en": "Policies, standards, roles and monitoring",
+      "blurb_es": "Políticas, estándares, funciones y supervisión"
     },
     {
       "id": "E-2",
@@ -305,6 +562,17 @@
               "examples": [
                 "開発遅延リスクの列挙",
                 "過去案件の教訓活用"
+              ],
+              "es": "Identificación de riesgos",
+              "one_liner_en": "**Lists** assets, threats and vulnerabilities",
+              "one_liner_es": "**Enumera** activos, amenazas y vulnerabilidades",
+              "examples_en": [
+                "Listing development-delay risks",
+                "Using lessons from past projects"
+              ],
+              "examples_es": [
+                "Enumerar riesgos de retraso del desarrollo",
+                "Aprovechar lecciones de proyectos anteriores"
               ]
             },
             {
@@ -316,6 +584,17 @@
               "examples": [
                 "専門家の自由レビュー",
                 "新機能直後の分析"
+              ],
+              "es": "Ad hoc",
+              "one_liner_en": "Assess **as needed and quickly** as things change",
+              "one_liner_es": "Evaluar **cuando haga falta y con rapidez** según cambie el entorno",
+              "examples_en": [
+                "Free-form expert review",
+                "Analysis right after a new feature"
+              ],
+              "examples_es": [
+                "Revisión libre por expertos",
+                "Análisis justo después de una nueva función"
               ]
             },
             {
@@ -327,6 +606,17 @@
               "examples": [
                 "クラウド導入前評価",
                 "ポリシー適合確認"
+              ],
+              "es": "Puntual",
+              "one_liner_en": "A **one-off** assessment triggered by an introduction or change",
+              "one_liner_es": "Evaluación **única** motivada por una implantación o un cambio",
+              "examples_en": [
+                "Assessment before adopting a cloud service",
+                "Checking policy compliance"
+              ],
+              "examples_es": [
+                "Evaluación antes de adoptar un servicio en la nube",
+                "Comprobación del cumplimiento de políticas"
               ]
             },
             {
@@ -338,9 +628,22 @@
               "examples": [
                 "ログ常時監視",
                 "四半期脆弱性スキャン"
+              ],
+              "es": "Continua",
+              "one_liner_en": "Assess **regularly or constantly** during operation",
+              "one_liner_es": "Evaluar **periódica o constantemente** durante la operación",
+              "examples_en": [
+                "Constant log monitoring",
+                "Quarterly vulnerability scans"
+              ],
+              "examples_es": [
+                "Supervisión constante de registros",
+                "Análisis de vulnerabilidades trimestrales"
               ]
             }
-          ]
+          ],
+          "title_en": "How to identify and assess",
+          "title_es": "Cómo identificar y evaluar"
         },
         {
           "id": "analysis-metrics",
@@ -355,6 +658,17 @@
               "examples": [
                 "リスクの色分け",
                 "離職リスク＝低"
+              ],
+              "es": "Cualitativo",
+              "one_liner_en": "Subjectively rates likelihood and impact as **high/medium/low**",
+              "one_liner_es": "Califica subjetivamente probabilidad e impacto como **alto/medio/bajo**",
+              "examples_en": [
+                "Color-coding risks",
+                "Turnover risk = low"
+              ],
+              "examples_es": [
+                "Codificar riesgos por colores",
+                "Riesgo de rotación = bajo"
               ]
             },
             {
@@ -366,6 +680,17 @@
               "examples": [
                 "年間確率の見積もり",
                 "金額との掛け合わせ"
+              ],
+              "es": "Cuantitativo",
+              "one_liner_en": "Expresses probability and loss **in numbers**",
+              "one_liner_es": "Expresa la probabilidad y las pérdidas **en cifras**",
+              "examples_en": [
+                "Estimating annual probability",
+                "Multiplying by monetary amounts"
+              ],
+              "examples_es": [
+                "Estimar la probabilidad anual",
+                "Multiplicar por importes"
               ]
             },
             {
@@ -377,6 +702,18 @@
               "examples": [
                 "障害1回の機会損失",
                 "信用失墜コスト"
+              ],
+              "es": "Expectativa de pérdida única (SLE)",
+              "name_en": "Single Loss Expectancy (SLE)",
+              "one_liner_en": "Expected loss from **a single** incident",
+              "one_liner_es": "Pérdida esperada de **un solo** incidente",
+              "examples_en": [
+                "Lost business from one outage",
+                "Cost of lost trust"
+              ],
+              "examples_es": [
+                "Negocio perdido por una caída",
+                "Coste de la pérdida de confianza"
               ]
             },
             {
@@ -388,6 +725,18 @@
               "examples": [
                 "対策コストとの比較",
                 "年あたり損失の算出"
+              ],
+              "es": "Expectativa de pérdida anualizada (ALE)",
+              "name_en": "Annualized Loss Expectancy (ALE)",
+              "one_liner_en": "**Annual** expected loss (SLE × ARO)",
+              "one_liner_es": "Pérdida esperada **anual** (SLE × ARO)",
+              "examples_en": [
+                "Comparing with countermeasure cost",
+                "Calculating loss per year"
+              ],
+              "examples_es": [
+                "Comparar con el coste de las contramedidas",
+                "Calcular la pérdida por año"
               ]
             },
             {
@@ -399,6 +748,17 @@
               "examples": [
                 "発生確率0.1",
                 "可能性＝高"
+              ],
+              "es": "Probabilidad y verosimilitud",
+              "one_liner_en": "Probability = **numeric**; likelihood = **qualitative**",
+              "one_liner_es": "Probabilidad = **numérica**; verosimilitud = **cualitativa**",
+              "examples_en": [
+                "Probability of occurrence 0.1",
+                "Likelihood = high"
+              ],
+              "examples_es": [
+                "Probabilidad de ocurrencia 0,1",
+                "Verosimilitud = alta"
               ]
             },
             {
@@ -410,6 +770,17 @@
               "examples": [
                 "火災でPC20%損失",
                 "EF=0.2"
+              ],
+              "es": "Factor de exposición",
+              "one_liner_en": "The **share of an asset** lost when a threat occurs",
+              "one_liner_es": "La **proporción del activo** que se pierde cuando se materializa una amenaza",
+              "examples_en": [
+                "20% of PCs lost in a fire",
+                "EF = 0.2"
+              ],
+              "examples_es": [
+                "20 % de los PC perdidos en un incendio",
+                "EF = 0,2"
               ]
             },
             {
@@ -421,9 +792,22 @@
               "examples": [
                 "財務損失",
                 "業務中断・評判低下"
+              ],
+              "es": "Impacto",
+              "one_liner_en": "**How severe the effect** is when a risk materializes",
+              "one_liner_es": "**Gravedad del efecto** cuando un riesgo se materializa",
+              "examples_en": [
+                "Financial loss",
+                "Business disruption and reputational harm"
+              ],
+              "examples_es": [
+                "Pérdidas económicas",
+                "Interrupción del negocio y daño a la reputación"
               ]
             }
-          ]
+          ],
+          "title_en": "Analysis methods and loss metrics",
+          "title_es": "Métodos de análisis y métricas de pérdidas"
         },
         {
           "id": "register-appetite",
@@ -438,6 +822,18 @@
               "examples": [
                 "在庫回転率",
                 "欠品率"
+              ],
+              "es": "Indicador clave de riesgo (KRI)",
+              "name_en": "Key risk indicator (KRI)",
+              "one_liner_en": "A metric for **spotting worsening risk early**",
+              "one_liner_es": "Métrica para **detectar pronto el empeoramiento de un riesgo**",
+              "examples_en": [
+                "Inventory turnover",
+                "Stockout rate"
+              ],
+              "examples_es": [
+                "Rotación de inventario",
+                "Tasa de roturas de stock"
               ]
             },
             {
@@ -449,6 +845,17 @@
               "examples": [
                 "品質管理責任者",
                 "対応策の立案・監視"
+              ],
+              "es": "Propietario del riesgo",
+              "one_liner_en": "The person **leading** management of a risk",
+              "one_liner_es": "La persona que **dirige** la gestión de un riesgo",
+              "examples_en": [
+                "Quality control manager",
+                "Planning and monitoring responses"
+              ],
+              "examples_es": [
+                "Responsable de control de calidad",
+                "Planificar y supervisar las respuestas"
               ]
             },
             {
@@ -460,6 +867,17 @@
               "examples": [
                 "超えたら必ず対策",
                 "登録簿での強弱付け"
+              ],
+              "es": "Umbral de riesgo",
+              "one_liner_en": "The **tolerable limit** used to prioritize",
+              "one_liner_es": "El **límite tolerable** que sirve para priorizar",
+              "examples_en": [
+                "Above it, action is mandatory",
+                "Setting priorities in the register"
+              ],
+              "examples_es": [
+                "Por encima, la acción es obligatoria",
+                "Fijar prioridades en el registro"
               ]
             },
             {
@@ -471,6 +889,17 @@
               "examples": [
                 "革新的製品開発",
                 "スタートアップの挑戦"
+              ],
+              "es": "Apetito de riesgo expansivo",
+              "one_liner_en": "**Actively** takes risks for high returns",
+              "one_liner_es": "Asume riesgos **activamente** para obtener altos rendimientos",
+              "examples_en": [
+                "Developing innovative products",
+                "A startup's bold bets"
+              ],
+              "examples_es": [
+                "Desarrollo de productos innovadores",
+                "Las apuestas audaces de una startup"
               ]
             },
             {
@@ -482,6 +911,17 @@
               "examples": [
                 "老舗ブランド保護",
                 "慎重な新施策"
+              ],
+              "es": "Apetito de riesgo conservador",
+              "one_liner_en": "Prioritizes stability and **minimizes** risk",
+              "one_liner_es": "Prioriza la estabilidad y **minimiza** el riesgo",
+              "examples_en": [
+                "Protecting a long-established brand",
+                "Cautious new initiatives"
+              ],
+              "examples_es": [
+                "Proteger una marca de larga tradición",
+                "Iniciativas nuevas prudentes"
               ]
             },
             {
@@ -493,11 +933,28 @@
               "examples": [
                 "案件ごとの秤量",
                 "状況応変のテイク"
+              ],
+              "es": "Apetito de riesgo neutral",
+              "one_liner_en": "**Balances** risk and opportunity",
+              "one_liner_es": "**Equilibra** riesgo y oportunidad",
+              "examples_en": [
+                "Weighing each project",
+                "Taking risks as the situation demands"
+              ],
+              "examples_es": [
+                "Sopesar cada proyecto",
+                "Asumir riesgos según la situación"
               ]
             }
-          ]
+          ],
+          "title_en": "Risk register and appetite",
+          "title_es": "Registro de riesgos y apetito"
         }
-      ]
+      ],
+      "title_en": "Risk management process",
+      "title_es": "Proceso de gestión de riesgos",
+      "blurb_en": "Identification, assessment, analysis and appetite",
+      "blurb_es": "Identificación, evaluación, análisis y apetito de riesgo"
     },
     {
       "id": "E-3",
@@ -519,6 +976,17 @@
               "examples": [
                 "委託先の耐性確認",
                 "課題の共有・改善"
+              ],
+              "es": "Pruebas de penetración",
+              "one_liner_en": "**Verify a vendor's controls yourself**",
+              "one_liner_es": "**Verificar uno mismo los controles** del proveedor",
+              "examples_en": [
+                "Checking a contractor's resilience",
+                "Sharing and fixing issues"
+              ],
+              "examples_es": [
+                "Comprobar la resistencia de un proveedor",
+                "Compartir y corregir los problemas"
               ]
             },
             {
@@ -530,6 +998,17 @@
               "examples": [
                 "財務・法令遵守",
                 "セキュリティ体制"
+              ],
+              "es": "Diligencia debida",
+              "one_liner_en": "Thorough investigation **before** selection",
+              "one_liner_es": "Investigación exhaustiva **antes** de la selección",
+              "examples_en": [
+                "Finances and legal compliance",
+                "Security posture"
+              ],
+              "examples_es": [
+                "Finanzas y cumplimiento legal",
+                "Situación de la seguridad"
               ]
             },
             {
@@ -541,6 +1020,17 @@
               "examples": [
                 "監査頻度・範囲",
                 "記録の保持確認"
+              ],
+              "es": "Evidencias de auditorías internas",
+              "one_liner_en": "Check the vendor's **internal audit records**",
+              "one_liner_es": "Revisar los **registros de auditoría interna** del proveedor",
+              "examples_en": [
+                "Audit frequency and scope",
+                "Confirming records are kept"
+              ],
+              "examples_es": [
+                "Frecuencia y alcance de las auditorías",
+                "Confirmar que se conservan los registros"
               ]
             },
             {
@@ -552,9 +1042,22 @@
               "examples": [
                 "知人企業への優先発注",
                 "選定時の利害確認"
+              ],
+              "es": "Conflicto de intereses",
+              "one_liner_en": "Whether personal interests **distort fair selection**",
+              "one_liner_es": "Si los intereses personales **distorsionan una selección justa**",
+              "examples_en": [
+                "Favoring an acquaintance's company",
+                "Checking interests during selection"
+              ],
+              "examples_es": [
+                "Favorecer a la empresa de un conocido",
+                "Comprobar intereses durante la selección"
               ]
             }
-          ]
+          ],
+          "title_en": "Vendor assessment",
+          "title_es": "Evaluación de proveedores"
         },
         {
           "id": "agreements",
@@ -569,6 +1072,18 @@
               "examples": [
                 "役割・期間の定義",
                 "契約ではないが疑義低減"
+              ],
+              "es": "Memorando de acuerdo (MOA)",
+              "name_en": "Memorandum of Agreement (MOA)",
+              "one_liner_en": "A memo that **puts the agreement in writing**",
+              "one_liner_es": "Un memorando que **deja por escrito lo acordado**",
+              "examples_en": [
+                "Defining roles and duration",
+                "Not a contract, but reduces disputes"
+              ],
+              "examples_es": [
+                "Definir funciones y duración",
+                "No es un contrato, pero reduce las dudas"
               ]
             },
             {
@@ -580,6 +1095,18 @@
               "examples": [
                 "共同研究の目的整理",
                 "パートナーシップの基礎"
+              ],
+              "es": "Memorando de entendimiento (MOU)",
+              "name_en": "Memorandum of Understanding (MOU)",
+              "one_liner_en": "A **memo of understanding** recording shared direction",
+              "one_liner_es": "Un **memorando de entendimiento** que recoge la orientación compartida",
+              "examples_en": [
+                "Setting out the aims of joint research",
+                "Basis for a partnership"
+              ],
+              "examples_es": [
+                "Ordenar los objetivos de una investigación conjunta",
+                "Base de una colaboración"
               ]
             },
             {
@@ -591,11 +1118,29 @@
               "examples": [
                 "稼働率・応答時間",
                 "障害対応手順"
+              ],
+              "es": "Acuerdo de nivel de servicio (SLA)",
+              "name_en": "Service Level Agreement (SLA)",
+              "one_liner_en": "An agreement defining **service quality and scope**",
+              "one_liner_es": "Acuerdo que define la **calidad y el alcance del servicio**",
+              "examples_en": [
+                "Uptime and response time",
+                "Incident handling procedures"
+              ],
+              "examples_es": [
+                "Disponibilidad y tiempo de respuesta",
+                "Procedimientos ante incidencias"
               ]
             }
-          ]
+          ],
+          "title_en": "Written agreements",
+          "title_es": "Acuerdos por escrito"
         }
-      ]
+      ],
+      "title_en": "Third-party risk assessment",
+      "title_es": "Evaluación de riesgos de terceros",
+      "blurb_en": "Vendor assessment and written agreements",
+      "blurb_es": "Evaluación de proveedores y acuerdos por escrito"
     },
     {
       "id": "E-4",
@@ -617,6 +1162,17 @@
               "examples": [
                 "監査委員会への四半期報告",
                 "訓練完了・ギャップの共有"
+              ],
+              "es": "Informes de cumplimiento internos",
+              "one_liner_en": "Report compliance status **inside the organization** (management, audit committee)",
+              "one_liner_es": "Informar del estado de cumplimiento **dentro de la organización** (dirección, comité de auditoría)",
+              "examples_en": [
+                "Quarterly report to the audit committee",
+                "Sharing training completion and gaps"
+              ],
+              "examples_es": [
+                "Informe trimestral al comité de auditoría",
+                "Compartir finalización de la formación y carencias"
               ]
             },
             {
@@ -628,9 +1184,22 @@
               "examples": [
                 "監督官庁への届出",
                 "顧客向け年次レポート"
+              ],
+              "es": "Informes de cumplimiento externos",
+              "one_liner_en": "Submitted **outside the organization**, to regulators, customers and so on",
+              "one_liner_es": "Se presentan **fuera de la organización**, a reguladores, clientes, etc.",
+              "examples_en": [
+                "Filing with the regulator",
+                "Annual report for customers"
+              ],
+              "examples_es": [
+                "Notificación al organismo regulador",
+                "Informe anual para clientes"
               ]
             }
-          ]
+          ],
+          "title_en": "Compliance reporting",
+          "title_es": "Informes de cumplimiento"
         },
         {
           "id": "non-compliance-consequences",
@@ -645,6 +1214,17 @@
               "examples": [
                 "個人情報保護違反の罰金",
                 "重大度で金額が変動"
+              ],
+              "es": "Multas",
+              "one_liner_en": "**Monetary** penalties for violations",
+              "one_liner_es": "Sanciones **económicas** por infracciones",
+              "examples_en": [
+                "Fines for personal data violations",
+                "Amount varies with severity"
+              ],
+              "examples_es": [
+                "Multas por infringir la protección de datos",
+                "El importe varía según la gravedad"
               ]
             },
             {
@@ -656,6 +1236,17 @@
               "examples": [
                 "談合での指名停止",
                 "許認可の取消"
+              ],
+              "es": "Sanciones",
+              "one_liner_en": "Deterrence through **adverse measures** such as suspension or exclusion from bidding",
+              "one_liner_es": "Disuasión mediante **medidas perjudiciales** como la suspensión o la exclusión de licitaciones",
+              "examples_en": [
+                "Exclusion from bidding for bid-rigging",
+                "Revoking licenses"
+              ],
+              "examples_es": [
+                "Exclusión de licitaciones por colusión",
+                "Revocación de licencias"
               ]
             },
             {
@@ -667,6 +1258,17 @@
               "examples": [
                 "原産地偽装による信用喪失",
                 "顧客離れ・株価下落"
+              ],
+              "es": "Daño a la reputación",
+              "one_liner_en": "Trust and brand **seriously harmed**",
+              "one_liner_es": "La confianza y la marca **gravemente dañadas**",
+              "examples_en": [
+                "Loss of trust from falsified origin labels",
+                "Customers leaving and stock falling"
+              ],
+              "examples_es": [
+                "Pérdida de confianza por falsear el origen",
+                "Pérdida de clientes y caída de la cotización"
               ]
             },
             {
@@ -678,9 +1280,22 @@
               "examples": [
                 "脆弱性起因の委託解除",
                 "損害賠償請求リスク"
+              ],
+              "es": "Impactos contractuales",
+              "one_liner_en": "Violations lead to **contracts being terminated, revised or hard to win**",
+              "one_liner_es": "Las infracciones llevan a **rescindir, modificar o dificultar contratos**",
+              "examples_en": [
+                "Outsourcing terminated over a vulnerability",
+                "Risk of damage claims"
+              ],
+              "examples_es": [
+                "Rescisión de un encargo por una vulnerabilidad",
+                "Riesgo de reclamaciones por daños"
               ]
             }
-          ]
+          ],
+          "title_en": "Consequences of noncompliance",
+          "title_es": "Consecuencias del incumplimiento"
         },
         {
           "id": "compliance-monitoring",
@@ -695,6 +1310,17 @@
               "examples": [
                 "サプライヤーの法令遵守確認",
                 "贈収賄リスク評価"
+              ],
+              "es": "Diligencia debida",
+              "one_liner_en": "**Thoroughly investigate in advance** a partner's compliance",
+              "one_liner_es": "**Investigar a fondo de antemano** el cumplimiento de un socio",
+              "examples_en": [
+                "Checking a supplier's legal compliance",
+                "Assessing bribery risk"
+              ],
+              "examples_es": [
+                "Comprobar el cumplimiento legal de un proveedor",
+                "Evaluar el riesgo de soborno"
               ]
             },
             {
@@ -706,11 +1332,32 @@
               "examples": [
                 "監査での対策実施の証明",
                 "経営責任者の署名確認"
+              ],
+              "es": "Atestación",
+              "one_liner_en": "**Proves by signature** or similar that facts or statements are valid",
+              "one_liner_es": "**Demuestra mediante firma** o similar la validez de hechos o declaraciones",
+              "examples_en": [
+                "Certifying controls are in place in an audit",
+                "Confirming an executive's signature"
+              ],
+              "examples_es": [
+                "Certificar en una auditoría que los controles están implantados",
+                "Confirmar la firma de un directivo"
               ]
             }
-          ]
+          ],
+          "title_en": "Compliance monitoring",
+          "title_es": "Supervisión del cumplimiento"
         }
-      ]
+      ],
+      "title_en": "Security compliance",
+      "title_es": "Cumplimiento de seguridad",
+      "blurb_en": "Reporting, consequences of noncompliance and monitoring",
+      "blurb_es": "Informes, consecuencias del incumplimiento y supervisión"
     }
-  ]
+  ],
+  "title_en": "Security Program Management & Oversight",
+  "title_es": "Gestión y supervisión del programa de seguridad",
+  "intro_en": "Domain 5 covers managing and overseeing the security program. The big keywords are governance and compliance: shaping an organization's defenses through policies, structures, external factors and roles.",
+  "intro_es": "El dominio 5 trata la gestión y supervisión del programa de seguridad. Las grandes palabras clave son la gobernanza y el cumplimiento normativo: organizar las defensas de la organización mediante políticas, estructuras, factores externos y funciones."
 }

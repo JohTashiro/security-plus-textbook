@@ -24,7 +24,7 @@
   </div>
   <nav class="nav-section">
     <h2>Domain C</h2>
-    <a href="c-1.html">C-1 <span data-i18n="ja">セキュリティアーキテクチャの全体像</span><span data-i18n="en">セキュリティアーキテクチャの全体像</span><span data-i18n="es">セキュリティアーキテクチャの全体像</span></a><a href="c-2.html">C-2 <span data-i18n="ja">インフラを守るセキュリティ原則</span><span data-i18n="en">インフラを守るセキュリティ原則</span><span data-i18n="es">インフラを守るセキュリティ原則</span></a><a href="c-3.html">C-3 <span data-i18n="ja">データ保護の戦略と概念</span><span data-i18n="en">データ保護の戦略と概念</span><span data-i18n="es">データ保護の戦略と概念</span></a><a href="c-4.html" class="active">C-4 <span data-i18n="ja">回復性と耐性</span><span data-i18n="en">回復性と耐性</span><span data-i18n="es">回復性と耐性</span></a>
+    <a href="c-1.html">C-1 <span data-i18n="ja">セキュリティアーキテクチャの全体像</span><span data-i18n="en">Security architecture overview</span><span data-i18n="es">Panorama de la arquitectura de seguridad</span></a><a href="c-2.html">C-2 <span data-i18n="ja">インフラを守るセキュリティ原則</span><span data-i18n="en">Security principles for infrastructure</span><span data-i18n="es">Principios de seguridad para la infraestructura</span></a><a href="c-3.html">C-3 <span data-i18n="ja">データ保護の戦略と概念</span><span data-i18n="en">Data protection strategies and concepts</span><span data-i18n="es">Estrategias y conceptos de protección de datos</span></a><a href="c-4.html" class="active">C-4 <span data-i18n="ja">回復性と耐性</span><span data-i18n="en">Resilience and recovery</span><span data-i18n="es">Resiliencia y recuperación</span></a>
   </nav>
   <nav class="nav-section">
     <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
@@ -55,10 +55,10 @@
       
 <header class="hero">
   <p class="eyebrow">Domain C · C-4</p>
-  <h1><span data-i18n="ja">回復性と耐性</span><span data-i18n="en">回復性と耐性</span><span data-i18n="es">回復性と耐性</span></h1>
+  <h1><span data-i18n="ja">回復性と耐性</span><span data-i18n="en">Resilience and recovery</span><span data-i18n="es">Resiliencia y recuperación</span></h1>
   <p data-i18n="ja">代替サイト・分散・バックアップ・電源</p>
-  <p data-i18n="en">代替サイト・分散・バックアップ・電源</p>
-  <p data-i18n="es">代替サイト・分散・バックアップ・電源</p>
+  <p data-i18n="en">Alternate sites, dispersion, backups and power</p>
+  <p data-i18n="es">Sitios alternativos, dispersión, copias de seguridad y energía</p>
   <div class="meta-row">
     <span class="chip"><span data-i18n="ja">用語 19</span><span data-i18n="en">19 terms</span><span data-i18n="es">19 términos</span></span>
     <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
@@ -74,345 +74,345 @@
   </div>
 </header>
 <div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
-<section class="group"><h2 class="group-title"><span data-i18n="ja">代替サイト</span><span data-i18n="en">代替サイト</span><span data-i18n="es">代替サイト</span></h2>
-<article class="memo-card" id="c-4-hot-site" data-search="ホットサイト hot site  主要系と同等機能で即切替できる予備拠点 金融機関の遠隔dc 常時データ複製">
+<section class="group"><h2 class="group-title"><span data-i18n="ja">代替サイト</span><span data-i18n="en">Alternate sites</span><span data-i18n="es">Sitios alternativos</span></h2>
+<article class="memo-card" id="c-4-hot-site" data-search="ホットサイト hot site sitio caliente 主要系と同等機能で即切替できる予備拠点 金融機関の遠隔dc 常時データ複製">
   <h3>
     <span data-i18n="ja">ホットサイト<span class="en">Hot site</span></span>
     <span data-i18n="en">Hot site</span>
-    <span data-i18n="es">ホットサイト</span>
+    <span data-i18n="es">Sitio caliente</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">主要系と<span class="hl">同等機能</span>で即切替できる予備拠点</p><p data-i18n="en" class="one-liner">主要系と<span class="hl">同等機能</span>で即切替できる予備拠点</p><p data-i18n="es" class="one-liner">主要系と<span class="hl">同等機能</span>で即切替できる予備拠点</p>
+    <p data-i18n="ja" class="one-liner">主要系と<span class="hl">同等機能</span>で即切替できる予備拠点</p><p data-i18n="en" class="one-liner">A backup site with <span class="hl">equivalent capability</span> that can take over instantly</p><p data-i18n="es" class="one-liner">Sitio de respaldo con <span class="hl">capacidad equivalente</span> que asume el servicio al instante</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>金融機関の遠隔DC</li><li>常時データ複製</li></ul>
-      <ul class="example-list" data-i18n="en"><li>金融機関の遠隔DC</li><li>常時データ複製</li></ul>
-      <ul class="example-list" data-i18n="es"><li>金融機関の遠隔DC</li><li>常時データ複製</li></ul>
+      <ul class="example-list" data-i18n="en"><li>A bank's remote data center</li><li>Continuous data replication</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Centro de datos remoto de un banco</li><li>Replicación continua de datos</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-cold-site" data-search="コールドサイト cold site  場所中心の予備拠点（稼働に時間がかかる） 倉庫・空きオフィス 機器搬入とリストア">
+<article class="memo-card" id="c-4-cold-site" data-search="コールドサイト cold site sitio frío 場所中心の予備拠点（稼働に時間がかかる） 倉庫・空きオフィス 機器搬入とリストア">
   <h3>
     <span data-i18n="ja">コールドサイト<span class="en">Cold site</span></span>
     <span data-i18n="en">Cold site</span>
-    <span data-i18n="es">コールドサイト</span>
+    <span data-i18n="es">Sitio frío</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner"><span class="hl">場所中心</span>の予備拠点（稼働に時間がかかる）</p><p data-i18n="en" class="one-liner"><span class="hl">場所中心</span>の予備拠点（稼働に時間がかかる）</p><p data-i18n="es" class="one-liner"><span class="hl">場所中心</span>の予備拠点（稼働に時間がかかる）</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">場所中心</span>の予備拠点（稼働に時間がかかる）</p><p data-i18n="en" class="one-liner">A backup site that's <span class="hl">mostly just space</span> (slow to bring up)</p><p data-i18n="es" class="one-liner">Sitio de respaldo que es <span class="hl">sobre todo espacio</span> (lento de poner en marcha)</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>倉庫・空きオフィス</li><li>機器搬入とリストア</li></ul>
-      <ul class="example-list" data-i18n="en"><li>倉庫・空きオフィス</li><li>機器搬入とリストア</li></ul>
-      <ul class="example-list" data-i18n="es"><li>倉庫・空きオフィス</li><li>機器搬入とリストア</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Warehouse or empty office</li><li>Moving in equipment and restoring</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Almacén u oficina vacía</li><li>Traslado de equipos y restauración</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-warm-site" data-search="ウォームサイト warm site  ホットとコールドの中間の予備拠点 基本設備の事前配置 定期データ同期">
+<article class="memo-card" id="c-4-warm-site" data-search="ウォームサイト warm site sitio templado ホットとコールドの中間の予備拠点 基本設備の事前配置 定期データ同期">
   <h3>
     <span data-i18n="ja">ウォームサイト<span class="en">Warm site</span></span>
     <span data-i18n="en">Warm site</span>
-    <span data-i18n="es">ウォームサイト</span>
+    <span data-i18n="es">Sitio templado</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">ホットとコールドの<span class="hl">中間</span>の予備拠点</p><p data-i18n="en" class="one-liner">ホットとコールドの<span class="hl">中間</span>の予備拠点</p><p data-i18n="es" class="one-liner">ホットとコールドの<span class="hl">中間</span>の予備拠点</p>
+    <p data-i18n="ja" class="one-liner">ホットとコールドの<span class="hl">中間</span>の予備拠点</p><p data-i18n="en" class="one-liner">A backup site <span class="hl">between</span> hot and cold</p><p data-i18n="es" class="one-liner">Sitio de respaldo <span class="hl">intermedio</span> entre el caliente y el frío</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>基本設備の事前配置</li><li>定期データ同期</li></ul>
-      <ul class="example-list" data-i18n="en"><li>基本設備の事前配置</li><li>定期データ同期</li></ul>
-      <ul class="example-list" data-i18n="es"><li>基本設備の事前配置</li><li>定期データ同期</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Basic equipment pre-installed</li><li>Periodic data sync</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Equipamiento básico preinstalado</li><li>Sincronización periódica de datos</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title"><span data-i18n="ja">分散と継続</span><span data-i18n="en">分散と継続</span><span data-i18n="es">分散と継続</span></h2>
-<article class="memo-card" id="c-4-geographic-dispersion" data-search="物理的な距離（地理的分散） geographic dispersion  拠点を地理的に離し同時被災を避ける 遠隔バックアップdc 津波・広域停電対策">
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">分散と継続</span><span data-i18n="en">Dispersion and continuity</span><span data-i18n="es">Dispersión y continuidad</span></h2>
+<article class="memo-card" id="c-4-geographic-dispersion" data-search="物理的な距離（地理的分散） geographic dispersion dispersión geográfica 拠点を地理的に離し同時被災を避ける 遠隔バックアップdc 津波・広域停電対策">
   <h3>
     <span data-i18n="ja">物理的な距離（地理的分散）<span class="en">Geographic dispersion</span></span>
     <span data-i18n="en">Geographic dispersion</span>
-    <span data-i18n="es">物理的な距離（地理的分散）</span>
+    <span data-i18n="es">Dispersión geográfica</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">拠点を<span class="hl">地理的に離し</span>同時被災を避ける</p><p data-i18n="en" class="one-liner">拠点を<span class="hl">地理的に離し</span>同時被災を避ける</p><p data-i18n="es" class="one-liner">拠点を<span class="hl">地理的に離し</span>同時被災を避ける</p>
+    <p data-i18n="ja" class="one-liner">拠点を<span class="hl">地理的に離し</span>同時被災を避ける</p><p data-i18n="en" class="one-liner">Keeps sites <span class="hl">geographically apart</span> to avoid being hit together</p><p data-i18n="es" class="one-liner">Mantiene los sitios <span class="hl">separados geográficamente</span> para no verse afectados a la vez</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>遠隔バックアップDC</li><li>津波・広域停電対策</li></ul>
-      <ul class="example-list" data-i18n="en"><li>遠隔バックアップDC</li><li>津波・広域停電対策</li></ul>
-      <ul class="example-list" data-i18n="es"><li>遠隔バックアップDC</li><li>津波・広域停電対策</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Remote backup data center</li><li>Tsunami and wide-area outage planning</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Centro de datos de respaldo remoto</li><li>Previsión ante tsunamis y apagones extensos</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-platform-diversity" data-search="プラットフォームの分散 platform diversity  拠点・環境・ベンダーを分散してspofを減らす 多地域dc配置 異ベンダー組合せ">
+<article class="memo-card" id="c-4-platform-diversity" data-search="プラットフォームの分散 platform diversity diversidad de plataformas 拠点・環境・ベンダーを分散してspofを減らす 多地域dc配置 異ベンダー組合せ">
   <h3>
     <span data-i18n="ja">プラットフォームの分散<span class="en">Platform diversity</span></span>
     <span data-i18n="en">Platform diversity</span>
-    <span data-i18n="es">プラットフォームの分散</span>
+    <span data-i18n="es">Diversidad de plataformas</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">拠点・環境・ベンダーを<span class="hl">分散</span>してSPOFを減らす</p><p data-i18n="en" class="one-liner">拠点・環境・ベンダーを<span class="hl">分散</span>してSPOFを減らす</p><p data-i18n="es" class="one-liner">拠点・環境・ベンダーを<span class="hl">分散</span>してSPOFを減らす</p>
+    <p data-i18n="ja" class="one-liner">拠点・環境・ベンダーを<span class="hl">分散</span>してSPOFを減らす</p><p data-i18n="en" class="one-liner"><span class="hl">Spreads</span> sites, environments and vendors to reduce SPOFs</p><p data-i18n="es" class="one-liner"><span class="hl">Reparte</span> sitios, entornos y proveedores para reducir puntos únicos de fallo</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>多地域DC配置</li><li>異ベンダー組合せ</li></ul>
-      <ul class="example-list" data-i18n="en"><li>多地域DC配置</li><li>異ベンダー組合せ</li></ul>
-      <ul class="example-list" data-i18n="es"><li>多地域DC配置</li><li>異ベンダー組合せ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Multi-region data centers</li><li>Mixing vendors</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Centros de datos en varias regiones</li><li>Combinación de proveedores</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-multi-cloud" data-search="マルチクラウド multi-cloud systems  複数cspを併用して可用性・drを高める aws＋azure リージョン横断バックアップ">
+<article class="memo-card" id="c-4-multi-cloud" data-search="マルチクラウド multi-cloud systems sistemas multinube 複数cspを併用して可用性・drを高める aws＋azure リージョン横断バックアップ">
   <h3>
     <span data-i18n="ja">マルチクラウド<span class="en">Multi-cloud systems</span></span>
     <span data-i18n="en">Multi-cloud systems</span>
-    <span data-i18n="es">マルチクラウド</span>
+    <span data-i18n="es">Sistemas multinube</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner"><span class="hl">複数CSP</span>を併用して可用性・DRを高める</p><p data-i18n="en" class="one-liner"><span class="hl">複数CSP</span>を併用して可用性・DRを高める</p><p data-i18n="es" class="one-liner"><span class="hl">複数CSP</span>を併用して可用性・DRを高める</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">複数CSP</span>を併用して可用性・DRを高める</p><p data-i18n="en" class="one-liner">Uses <span class="hl">several CSPs</span> to boost availability and DR</p><p data-i18n="es" class="one-liner">Usa <span class="hl">varios proveedores de nube</span> para mejorar la disponibilidad y la recuperación</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>AWS＋Azure</li><li>リージョン横断バックアップ</li></ul>
-      <ul class="example-list" data-i18n="en"><li>AWS＋Azure</li><li>リージョン横断バックアップ</li></ul>
-      <ul class="example-list" data-i18n="es"><li>AWS＋Azure</li><li>リージョン横断バックアップ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>AWS + Azure</li><li>Cross-region backups</li></ul>
+      <ul class="example-list" data-i18n="es"><li>AWS + Azure</li><li>Copias de seguridad entre regiones</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-continuity-of-operations" data-search="運営の継続性 continuity of operations  障害時も事業を止めない枠組み（bcp） bcpとrto/rpo 安否確認・連絡手段">
+<article class="memo-card" id="c-4-continuity-of-operations" data-search="運営の継続性 continuity of operations continuidad de las operaciones 障害時も事業を止めない枠組み（bcp） bcpとrto/rpo 安否確認・連絡手段">
   <h3>
     <span data-i18n="ja">運営の継続性<span class="en">Continuity of operations</span></span>
     <span data-i18n="en">Continuity of operations</span>
-    <span data-i18n="es">運営の継続性</span>
+    <span data-i18n="es">Continuidad de las operaciones</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">障害時も事業を<span class="hl">止めない</span>枠組み（BCP）</p><p data-i18n="en" class="one-liner">障害時も事業を<span class="hl">止めない</span>枠組み（BCP）</p><p data-i18n="es" class="one-liner">障害時も事業を<span class="hl">止めない</span>枠組み（BCP）</p>
+    <p data-i18n="ja" class="one-liner">障害時も事業を<span class="hl">止めない</span>枠組み（BCP）</p><p data-i18n="en" class="one-liner">A framework to <span class="hl">keep the business running</span> during disruptions (BCP)</p><p data-i18n="es" class="one-liner">Marco para <span class="hl">mantener el negocio en marcha</span> ante interrupciones (BCP)</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>BCPとRTO/RPO</li><li>安否確認・連絡手段</li></ul>
-      <ul class="example-list" data-i18n="en"><li>BCPとRTO/RPO</li><li>安否確認・連絡手段</li></ul>
-      <ul class="example-list" data-i18n="es"><li>BCPとRTO/RPO</li><li>安否確認・連絡手段</li></ul>
+      <ul class="example-list" data-i18n="en"><li>BCP with RTO/RPO</li><li>Staff safety checks and contact methods</li></ul>
+      <ul class="example-list" data-i18n="es"><li>BCP con RTO/RPO</li><li>Comprobación de la seguridad del personal y medios de contacto</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title"><span data-i18n="ja">キャパシティ</span><span data-i18n="en">キャパシティ</span><span data-i18n="es">キャパシティ</span></h2>
-<article class="memo-card" id="c-4-capacity-people" data-search="キャパシティプランニング（人員） capacity planning (people)  復旧に必要な人的リソースを事前確保 24/365運用チーム 応援・外部協力計画">
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">キャパシティ</span><span data-i18n="en">Capacity</span><span data-i18n="es">Capacidad</span></h2>
+<article class="memo-card" id="c-4-capacity-people" data-search="キャパシティプランニング（人員） capacity planning (people) planificación de capacidad (personas) 復旧に必要な人的リソースを事前確保 24/365運用チーム 応援・外部協力計画">
   <h3>
     <span data-i18n="ja">キャパシティプランニング（人員）<span class="en">Capacity planning (People)</span></span>
     <span data-i18n="en">Capacity planning (People)</span>
-    <span data-i18n="es">キャパシティプランニング（人員）</span>
+    <span data-i18n="es">Planificación de capacidad (personas)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">復旧に必要な<span class="hl">人的リソース</span>を事前確保</p><p data-i18n="en" class="one-liner">復旧に必要な<span class="hl">人的リソース</span>を事前確保</p><p data-i18n="es" class="one-liner">復旧に必要な<span class="hl">人的リソース</span>を事前確保</p>
+    <p data-i18n="ja" class="one-liner">復旧に必要な<span class="hl">人的リソース</span>を事前確保</p><p data-i18n="en" class="one-liner">Securing the <span class="hl">people</span> needed for recovery in advance</p><p data-i18n="es" class="one-liner">Asegurar de antemano las <span class="hl">personas</span> necesarias para la recuperación</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>24/365運用チーム</li><li>応援・外部協力計画</li></ul>
-      <ul class="example-list" data-i18n="en"><li>24/365運用チーム</li><li>応援・外部協力計画</li></ul>
-      <ul class="example-list" data-i18n="es"><li>24/365運用チーム</li><li>応援・外部協力計画</li></ul>
+      <ul class="example-list" data-i18n="en"><li>24/365 operations team</li><li>Plans for backup staff and outside help</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Equipo de operaciones 24/365</li><li>Planes de refuerzo y colaboración externa</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-capacity-technology" data-search="キャパシティプランニング（技術） capacity planning (technology)  処理能力・容量を維持拡張する技術計画 オートスケール 可用性ゾーン">
+<article class="memo-card" id="c-4-capacity-technology" data-search="キャパシティプランニング（技術） capacity planning (technology) planificación de capacidad (tecnología) 処理能力・容量を維持拡張する技術計画 オートスケール 可用性ゾーン">
   <h3>
     <span data-i18n="ja">キャパシティプランニング（技術）<span class="en">Capacity planning (Technology)</span></span>
     <span data-i18n="en">Capacity planning (Technology)</span>
-    <span data-i18n="es">キャパシティプランニング（技術）</span>
+    <span data-i18n="es">Planificación de capacidad (tecnología)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">処理能力・容量を<span class="hl">維持拡張</span>する技術計画</p><p data-i18n="en" class="one-liner">処理能力・容量を<span class="hl">維持拡張</span>する技術計画</p><p data-i18n="es" class="one-liner">処理能力・容量を<span class="hl">維持拡張</span>する技術計画</p>
+    <p data-i18n="ja" class="one-liner">処理能力・容量を<span class="hl">維持拡張</span>する技術計画</p><p data-i18n="en" class="one-liner">Technical planning to <span class="hl">maintain and expand</span> processing and capacity</p><p data-i18n="es" class="one-liner">Planificación técnica para <span class="hl">mantener y ampliar</span> el procesamiento y la capacidad</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>オートスケール</li><li>可用性ゾーン</li></ul>
-      <ul class="example-list" data-i18n="en"><li>オートスケール</li><li>可用性ゾーン</li></ul>
-      <ul class="example-list" data-i18n="es"><li>オートスケール</li><li>可用性ゾーン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Autoscaling</li><li>Availability zones</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Escalado automático</li><li>Zonas de disponibilidad</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-capacity-infrastructure" data-search="キャパシティプランニング（インフラ） capacity planning (infrastructure)  電力・施設などインフラ資源を確保する計画 非常用電源・水・通信 空調・ラック・回線">
+<article class="memo-card" id="c-4-capacity-infrastructure" data-search="キャパシティプランニング（インフラ） capacity planning (infrastructure) planificación de capacidad (infraestructura) 電力・施設などインフラ資源を確保する計画 非常用電源・水・通信 空調・ラック・回線">
   <h3>
     <span data-i18n="ja">キャパシティプランニング（インフラ）<span class="en">Capacity planning (Infrastructure)</span></span>
     <span data-i18n="en">Capacity planning (Infrastructure)</span>
-    <span data-i18n="es">キャパシティプランニング（インフラ）</span>
+    <span data-i18n="es">Planificación de capacidad (infraestructura)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">電力・施設など<span class="hl">インフラ資源</span>を確保する計画</p><p data-i18n="en" class="one-liner">電力・施設など<span class="hl">インフラ資源</span>を確保する計画</p><p data-i18n="es" class="one-liner">電力・施設など<span class="hl">インフラ資源</span>を確保する計画</p>
+    <p data-i18n="ja" class="one-liner">電力・施設など<span class="hl">インフラ資源</span>を確保する計画</p><p data-i18n="en" class="one-liner">Planning to secure <span class="hl">infrastructure resources</span> such as power and facilities</p><p data-i18n="es" class="one-liner">Planificación para asegurar <span class="hl">recursos de infraestructura</span> como energía e instalaciones</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>非常用電源・水・通信</li><li>空調・ラック・回線</li></ul>
-      <ul class="example-list" data-i18n="en"><li>非常用電源・水・通信</li><li>空調・ラック・回線</li></ul>
-      <ul class="example-list" data-i18n="es"><li>非常用電源・水・通信</li><li>空調・ラック・回線</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Emergency power, water and communications</li><li>Cooling, racks and lines</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Energía, agua y comunicaciones de emergencia</li><li>Climatización, racks y líneas</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title"><span data-i18n="ja">バックアップ方針</span><span data-i18n="en">バックアップ方針</span><span data-i18n="es">バックアップ方針</span></h2>
-<article class="memo-card" id="c-4-onsite-offsite" data-search="オンサイトとオフサイト onsite / offsite  バックアップを同じ場所か別場所かに置く 同ビル内ストレージ クラウドへの転送">
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">バックアップ方針</span><span data-i18n="en">Backup policy</span><span data-i18n="es">Política de copias de seguridad</span></h2>
+<article class="memo-card" id="c-4-onsite-offsite" data-search="オンサイトとオフサイト onsite / offsite en el sitio / fuera del sitio バックアップを同じ場所か別場所かに置く 同ビル内ストレージ クラウドへの転送">
   <h3>
     <span data-i18n="ja">オンサイトとオフサイト<span class="en">Onsite / Offsite</span></span>
     <span data-i18n="en">Onsite / Offsite</span>
-    <span data-i18n="es">オンサイトとオフサイト</span>
+    <span data-i18n="es">En el sitio / fuera del sitio</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">バックアップを<span class="hl">同じ場所か別場所か</span>に置く</p><p data-i18n="en" class="one-liner">バックアップを<span class="hl">同じ場所か別場所か</span>に置く</p><p data-i18n="es" class="one-liner">バックアップを<span class="hl">同じ場所か別場所か</span>に置く</p>
+    <p data-i18n="ja" class="one-liner">バックアップを<span class="hl">同じ場所か別場所か</span>に置く</p><p data-i18n="en" class="one-liner">Keeping backups in <span class="hl">the same place or a different one</span></p><p data-i18n="es" class="one-liner">Guardar las copias <span class="hl">en el mismo lugar o en otro distinto</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>同ビル内ストレージ</li><li>クラウドへの転送</li></ul>
-      <ul class="example-list" data-i18n="en"><li>同ビル内ストレージ</li><li>クラウドへの転送</li></ul>
-      <ul class="example-list" data-i18n="es"><li>同ビル内ストレージ</li><li>クラウドへの転送</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Storage in the same building</li><li>Transfer to the cloud</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Almacenamiento en el mismo edificio</li><li>Envío a la nube</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-frequency" data-search="頻度 frequency  重要度に応じてバックアップ間隔を決める 数分間隔の取得 日次＋ログバックアップ">
+<article class="memo-card" id="c-4-frequency" data-search="頻度 frequency frecuencia 重要度に応じてバックアップ間隔を決める 数分間隔の取得 日次＋ログバックアップ">
   <h3>
     <span data-i18n="ja">頻度<span class="en">Frequency</span></span>
     <span data-i18n="en">Frequency</span>
-    <span data-i18n="es">頻度</span>
+    <span data-i18n="es">Frecuencia</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">重要度に応じてバックアップ<span class="hl">間隔</span>を決める</p><p data-i18n="en" class="one-liner">重要度に応じてバックアップ<span class="hl">間隔</span>を決める</p><p data-i18n="es" class="one-liner">重要度に応じてバックアップ<span class="hl">間隔</span>を決める</p>
+    <p data-i18n="ja" class="one-liner">重要度に応じてバックアップ<span class="hl">間隔</span>を決める</p><p data-i18n="en" class="one-liner">Sets the backup <span class="hl">interval</span> by importance</p><p data-i18n="es" class="one-liner">Fija el <span class="hl">intervalo</span> de copia según la importancia</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>数分間隔の取得</li><li>日次＋ログバックアップ</li></ul>
-      <ul class="example-list" data-i18n="en"><li>数分間隔の取得</li><li>日次＋ログバックアップ</li></ul>
-      <ul class="example-list" data-i18n="es"><li>数分間隔の取得</li><li>日次＋ログバックアップ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Backups every few minutes</li><li>Daily plus log backups</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Copias cada pocos minutos</li><li>Copias diarias más copias de registros</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-encryption" data-search="暗号化（バックアップ） encryption  バックアップを暗号化して読めなくする 保管データの暗号化 クラウドバックアップ保護">
+<article class="memo-card" id="c-4-encryption" data-search="暗号化（バックアップ） encryption cifrado de copias de seguridad バックアップを暗号化して読めなくする 保管データの暗号化 クラウドバックアップ保護">
   <h3>
     <span data-i18n="ja">暗号化（バックアップ）<span class="en">Encryption</span></span>
-    <span data-i18n="en">Encryption</span>
-    <span data-i18n="es">暗号化（バックアップ）</span>
+    <span data-i18n="en">Backup encryption</span>
+    <span data-i18n="es">Cifrado de copias de seguridad</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">バックアップを暗号化して<span class="hl">読めなくする</span></p><p data-i18n="en" class="one-liner">バックアップを暗号化して<span class="hl">読めなくする</span></p><p data-i18n="es" class="one-liner">バックアップを暗号化して<span class="hl">読めなくする</span></p>
+    <p data-i18n="ja" class="one-liner">バックアップを暗号化して<span class="hl">読めなくする</span></p><p data-i18n="en" class="one-liner">Encrypts backups so they're <span class="hl">unreadable</span></p><p data-i18n="es" class="one-liner">Cifra las copias para que sean <span class="hl">ilegibles</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>保管データの暗号化</li><li>クラウドバックアップ保護</li></ul>
-      <ul class="example-list" data-i18n="en"><li>保管データの暗号化</li><li>クラウドバックアップ保護</li></ul>
-      <ul class="example-list" data-i18n="es"><li>保管データの暗号化</li><li>クラウドバックアップ保護</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Encrypting stored data</li><li>Protecting cloud backups</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Cifrado de los datos almacenados</li><li>Protección de copias en la nube</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title"><span data-i18n="ja">バックアップ技術</span><span data-i18n="en">バックアップ技術</span><span data-i18n="es">バックアップ技術</span></h2>
-<article class="memo-card" id="c-4-snapshot" data-search="スナップショット snapshots  ある時点の状態を記録し差分で軽く残す 仮想マシンのスナップショット 迅速なリストア">
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">バックアップ技術</span><span data-i18n="en">Backup techniques</span><span data-i18n="es">Técnicas de copia de seguridad</span></h2>
+<article class="memo-card" id="c-4-snapshot" data-search="スナップショット snapshots instantáneas ある時点の状態を記録し差分で軽く残す 仮想マシンのスナップショット 迅速なリストア">
   <h3>
     <span data-i18n="ja">スナップショット<span class="en">Snapshots</span></span>
     <span data-i18n="en">Snapshots</span>
-    <span data-i18n="es">スナップショット</span>
+    <span data-i18n="es">Instantáneas</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">ある時点の状態を記録し<span class="hl">差分で軽く</span>残す</p><p data-i18n="en" class="one-liner">ある時点の状態を記録し<span class="hl">差分で軽く</span>残す</p><p data-i18n="es" class="one-liner">ある時点の状態を記録し<span class="hl">差分で軽く</span>残す</p>
+    <p data-i18n="ja" class="one-liner">ある時点の状態を記録し<span class="hl">差分で軽く</span>残す</p><p data-i18n="en" class="one-liner">Records a point-in-time state and keeps it <span class="hl">light with deltas</span></p><p data-i18n="es" class="one-liner">Registra el estado en un momento dado y lo mantiene <span class="hl">ligero con diferencias</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>仮想マシンのスナップショット</li><li>迅速なリストア</li></ul>
-      <ul class="example-list" data-i18n="en"><li>仮想マシンのスナップショット</li><li>迅速なリストア</li></ul>
-      <ul class="example-list" data-i18n="es"><li>仮想マシンのスナップショット</li><li>迅速なリストア</li></ul>
+      <ul class="example-list" data-i18n="en"><li>VM snapshots</li><li>Fast restore</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Instantáneas de máquinas virtuales</li><li>Restauración rápida</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-recovery" data-search="リカバリ recovery  バックアップからデータ・システムを復元する 個別ファイル復元 全体リストアと訓練">
+<article class="memo-card" id="c-4-recovery" data-search="リカバリ recovery recuperación バックアップからデータ・システムを復元する 個別ファイル復元 全体リストアと訓練">
   <h3>
     <span data-i18n="ja">リカバリ<span class="en">Recovery</span></span>
     <span data-i18n="en">Recovery</span>
-    <span data-i18n="es">リカバリ</span>
+    <span data-i18n="es">Recuperación</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">バックアップからデータ・システムを<span class="hl">復元</span>する</p><p data-i18n="en" class="one-liner">バックアップからデータ・システムを<span class="hl">復元</span>する</p><p data-i18n="es" class="one-liner">バックアップからデータ・システムを<span class="hl">復元</span>する</p>
+    <p data-i18n="ja" class="one-liner">バックアップからデータ・システムを<span class="hl">復元</span>する</p><p data-i18n="en" class="one-liner"><span class="hl">Restores</span> data and systems from backups</p><p data-i18n="es" class="one-liner"><span class="hl">Restaura</span> datos y sistemas a partir de copias de seguridad</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>個別ファイル復元</li><li>全体リストアと訓練</li></ul>
-      <ul class="example-list" data-i18n="en"><li>個別ファイル復元</li><li>全体リストアと訓練</li></ul>
-      <ul class="example-list" data-i18n="es"><li>個別ファイル復元</li><li>全体リストアと訓練</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Restoring individual files</li><li>Full restore and drills</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Restauración de archivos individuales</li><li>Restauración completa y simulacros</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-replication" data-search="複製 replication  データを別場所へコピー／同期する クラウドへのレプリケーション 同期間隔と保持期間">
+<article class="memo-card" id="c-4-replication" data-search="複製 replication replicación データを別場所へコピー／同期する クラウドへのレプリケーション 同期間隔と保持期間">
   <h3>
     <span data-i18n="ja">複製<span class="en">Replication</span></span>
     <span data-i18n="en">Replication</span>
-    <span data-i18n="es">複製</span>
+    <span data-i18n="es">Replicación</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">データを別場所へ<span class="hl">コピー／同期</span>する</p><p data-i18n="en" class="one-liner">データを別場所へ<span class="hl">コピー／同期</span>する</p><p data-i18n="es" class="one-liner">データを別場所へ<span class="hl">コピー／同期</span>する</p>
+    <p data-i18n="ja" class="one-liner">データを別場所へ<span class="hl">コピー／同期</span>する</p><p data-i18n="en" class="one-liner"><span class="hl">Copies or syncs</span> data to another location</p><p data-i18n="es" class="one-liner"><span class="hl">Copia o sincroniza</span> datos en otra ubicación</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>クラウドへのレプリケーション</li><li>同期間隔と保持期間</li></ul>
-      <ul class="example-list" data-i18n="en"><li>クラウドへのレプリケーション</li><li>同期間隔と保持期間</li></ul>
-      <ul class="example-list" data-i18n="es"><li>クラウドへのレプリケーション</li><li>同期間隔と保持期間</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Replication to the cloud</li><li>Sync interval and retention period</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Replicación a la nube</li><li>Intervalo de sincronización y periodo de retención</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-journaling" data-search="ジャーナリング journaling  変更履歴を連続記録し任意時点へ戻す ストレージのジャーナル rpoの極小化">
+<article class="memo-card" id="c-4-journaling" data-search="ジャーナリング journaling registro por diario (journaling) 変更履歴を連続記録し任意時点へ戻す ストレージのジャーナル rpoの極小化">
   <h3>
     <span data-i18n="ja">ジャーナリング<span class="en">Journaling</span></span>
     <span data-i18n="en">Journaling</span>
-    <span data-i18n="es">ジャーナリング</span>
+    <span data-i18n="es">Registro por diario (journaling)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">変更履歴を連続記録し<span class="hl">任意時点</span>へ戻す</p><p data-i18n="en" class="one-liner">変更履歴を連続記録し<span class="hl">任意時点</span>へ戻す</p><p data-i18n="es" class="one-liner">変更履歴を連続記録し<span class="hl">任意時点</span>へ戻す</p>
+    <p data-i18n="ja" class="one-liner">変更履歴を連続記録し<span class="hl">任意時点</span>へ戻す</p><p data-i18n="en" class="one-liner">Continuously logs changes so you can return to <span class="hl">any point in time</span></p><p data-i18n="es" class="one-liner">Registra los cambios de forma continua para volver a <span class="hl">cualquier momento</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>ストレージのジャーナル</li><li>RPOの極小化</li></ul>
-      <ul class="example-list" data-i18n="en"><li>ストレージのジャーナル</li><li>RPOの極小化</li></ul>
-      <ul class="example-list" data-i18n="es"><li>ストレージのジャーナル</li><li>RPOの極小化</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Storage journals</li><li>Minimizing RPO</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Diarios de almacenamiento</li><li>Minimizar el RPO</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title"><span data-i18n="ja">電源</span><span data-i18n="en">電源</span><span data-i18n="es">電源</span></h2>
-<article class="memo-card" id="c-4-generator" data-search="発電機 generators  停電時に長時間電力を供給する非常用電源 ディーゼル発電機 ガスタービン発電機">
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">電源</span><span data-i18n="en">Power</span><span data-i18n="es">Energía</span></h2>
+<article class="memo-card" id="c-4-generator" data-search="発電機 generators generadores 停電時に長時間電力を供給する非常用電源 ディーゼル発電機 ガスタービン発電機">
   <h3>
     <span data-i18n="ja">発電機<span class="en">Generators</span></span>
     <span data-i18n="en">Generators</span>
-    <span data-i18n="es">発電機</span>
+    <span data-i18n="es">Generadores</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">停電時に<span class="hl">長時間</span>電力を供給する非常用電源</p><p data-i18n="en" class="one-liner">停電時に<span class="hl">長時間</span>電力を供給する非常用電源</p><p data-i18n="es" class="one-liner">停電時に<span class="hl">長時間</span>電力を供給する非常用電源</p>
+    <p data-i18n="ja" class="one-liner">停電時に<span class="hl">長時間</span>電力を供給する非常用電源</p><p data-i18n="en" class="one-liner">Emergency power supplied <span class="hl">for long periods</span> during outages</p><p data-i18n="es" class="one-liner">Energía de emergencia <span class="hl">durante largos periodos</span> en un corte</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>ディーゼル発電機</li><li>ガスタービン発電機</li></ul>
-      <ul class="example-list" data-i18n="en"><li>ディーゼル発電機</li><li>ガスタービン発電機</li></ul>
-      <ul class="example-list" data-i18n="es"><li>ディーゼル発電機</li><li>ガスタービン発電機</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Diesel generators</li><li>Gas turbine generators</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Generadores diésel</li><li>Generadores de turbina de gas</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-ups" data-search="ups（無停電電源装置） uninterruptible power supply (ups)  停電直後の短時間電力をバッテリーで維持 発電機切替までの橋渡し 安全なシャットダウン">
+<article class="memo-card" id="c-4-ups" data-search="ups（無停電電源装置） uninterruptible power supply (ups) sistema de alimentación ininterrumpida (sai/ups) 停電直後の短時間電力をバッテリーで維持 発電機切替までの橋渡し 安全なシャットダウン">
   <h3>
     <span data-i18n="ja">UPS（無停電電源装置）<span class="en">Uninterruptible power supply (UPS)</span></span>
     <span data-i18n="en">Uninterruptible power supply (UPS)</span>
-    <span data-i18n="es">UPS（無停電電源装置）</span>
+    <span data-i18n="es">Sistema de alimentación ininterrumpida (SAI/UPS)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">停電直後の<span class="hl">短時間</span>電力をバッテリーで維持</p><p data-i18n="en" class="one-liner">停電直後の<span class="hl">短時間</span>電力をバッテリーで維持</p><p data-i18n="es" class="one-liner">停電直後の<span class="hl">短時間</span>電力をバッテリーで維持</p>
+    <p data-i18n="ja" class="one-liner">停電直後の<span class="hl">短時間</span>電力をバッテリーで維持</p><p data-i18n="en" class="one-liner">Battery power <span class="hl">for a short time</span> right after an outage</p><p data-i18n="es" class="one-liner">Energía de batería <span class="hl">durante poco tiempo</span> justo tras un corte</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>発電機切替までの橋渡し</li><li>安全なシャットダウン</li></ul>
-      <ul class="example-list" data-i18n="en"><li>発電機切替までの橋渡し</li><li>安全なシャットダウン</li></ul>
-      <ul class="example-list" data-i18n="es"><li>発電機切替までの橋渡し</li><li>安全なシャットダウン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Bridge until the generator starts</li><li>Safe shutdown</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Puente hasta que arranca el generador</li><li>Apagado seguro</li></ul>
     </div>
   </div>
 </article>
@@ -425,10 +425,10 @@
     <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（19問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (19 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (19 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
-  <script type="application/json" id="quiz-data">[{"term": "c-4-hot-site", "stem": "金融機関が、メインDC停止時にも直ちに同等のサーバー・回線・複製データへ切り替えて業務を継続できるよう、遠隔地に常時稼働相当の予備拠点を用意した。これはどれか。", "choices": ["コールドサイト", "ウォームサイト", "ホットサイト", "オンサイトバックアップのみ"], "answer": 2, "explain": "主要系と同等機能を常備し即切替できるのがホットサイト。コストは高いが復旧は最短に近い。"}, {"term": "c-4-cold-site", "stem": "中小企業がコストを抑えるため、平時は機器を本格稼働させず、被災後にサーバーを搬入してバックアップからリストアする場所だけを確保した。これはどれか。", "choices": ["ホットサイト", "コールドサイト", "マルチクラウド", "UPS"], "answer": 1, "explain": "場所・スペース中心で稼働に時間がかかるのがコールドサイト。ランニングコストは低い。"}, {"term": "c-4-warm-site", "stem": "製造業が、基本設備と定期同期データを別拠点に用意し、ホットほど即時ではないがコールドより早く段階的に再開できる拠点を確保した。これはどれか。", "choices": ["ウォームサイト", "コールドサイト", "発電機", "ジャーナリング"], "answer": 0, "explain": "ホットとコールドの中間で、基本設備と定期同期により比較的短時間で復旧するのがウォームサイト。"}, {"term": "c-4-geographic-dispersion", "stem": "津波や広域停電で両方の拠点が同時に使えなくなるのを避けるため、メインDCとバックアップDCを十分離れた場所に置いた。主にどの考え方か。", "choices": ["スナップショット", "キャパシティプランニング（人員）", "物理的な距離（地理的分散）", "バックアップの暗号化"], "answer": 2, "explain": "同一災害による同時被災を避けるため拠点を地理的に離すのが物理的な距離／Geographic dispersion。"}, {"term": "c-4-platform-diversity", "stem": "単一ベンダーや単一拠点の障害で全体が止まらないよう、サーバーやストレージを複数拠点・異ベンダー環境に分けて配置した。これはどれか。", "choices": ["プラットフォームの分散", "UPS", "コールドサイト", "頻度の見直しのみ"], "answer": 0, "explain": "拠点・環境・ベンダーを分散し単一障害点を減らすのがプラットフォームの分散（Platform diversity）。"}, {"term": "c-4-multi-cloud", "stem": "EC事業者がAWSとAzureを併用し、一方のリージョン障害時も他方のクラウド上のバックアップでサービス継続できるようにした。これはどれか。", "choices": ["ホットサイトのみ", "マルチクラウド", "オンサイトバックアップ", "負荷試験なしの単一クラウド固定"], "answer": 1, "explain": "複数のクラウドサービスプロバイダーを併用するのがマルチクラウド。可用性・DR・コスト最適化が狙い。"}, {"term": "c-4-continuity-of-operations", "stem": "地震でDCが被災しても重要業務を止めないよう、BCPを策定しRTO/RPOや安否確認・連絡手段をあらかじめ決めておいた。主にどの概念か。", "choices": ["スナップショット", "運営の継続性", "発電機", "プラットフォームの分散"], "answer": 1, "explain": "障害時も事業を継続するための枠組みが運営の継続性（Continuity of operations）。BCPや連絡体制が含まれる。"}, {"term": "c-4-capacity-people", "stem": "大規模障害に備え、専門スキルを持つエンジニアのシフト体制と他部門からの応援・外部ベンダー協力を事前に計画した。これはどのキャパシティ計画か。", "choices": ["キャパシティプランニング（技術）", "キャパシティプランニング（インフラ）", "キャパシティプランニング（人員）", "バックアップ頻度の計画のみ"], "answer": 2, "explain": "復旧・継続に必要な人的リソースの事前確保が人員のキャパシティプランニング。"}, {"term": "c-4-capacity-technology", "stem": "ピーク需要を予測し、障害時にオートスケールで処理能力を足せ、可用性ゾーンで一部DC停止にも耐えるよう設計した。これはどの計画か。", "choices": ["キャパシティプランニング（技術）", "キャパシティプランニング（人員）", "コールドサイト選定", "UPSの電池交換周期のみ"], "answer": 0, "explain": "システムの処理能力・容量を維持・拡張する計画が技術のキャパシティプランニング。"}, {"term": "c-4-capacity-infrastructure", "stem": "復旧拠点で業務を続けるため、電力・空調・ラック・回線に加え、非常用発電機や水・衛星電話などライフライン途絶への備えを計画した。これはどれか。", "choices": ["ジャーナリング", "キャパシティプランニング（インフラ）", "マルチクラウド", "スナップショット"], "answer": 1, "explain": "施設・電力・ネットワークなどインフラ資源の確保・配分がインフラのキャパシティプランニング。"}, {"term": "c-4-onsite-offsite", "stem": "短時間復旧用に同一ビルのサーバールームへバックアップし、同時にクラウド上の別拠点にも転送して保管する運用にした。区別している概念はどれか。", "choices": ["オンサイトとオフサイト", "ホットサイトとウォームサイトのみ", "負荷分散とクラスタリング", "机上演習とシミュレーション"], "answer": 0, "explain": "同じ場所（オンサイト）か別場所（オフサイト）かがバックアップ保管場所の基本区分。"}, {"term": "c-4-frequency", "stem": "注文データが多いECサイトが、データ損失を抑えるため数分〜数十分間隔でバックアップし、日次バックアップに加えログも取得している。主に何を決めているか。", "choices": ["暗号化アルゴリズムだけ", "バックアップの頻度", "発電機の燃料種だけ", "プラットフォームのベンダー固定"], "answer": 1, "explain": "重要度や変更頻度に応じてバックアップ間隔を決めるのが頻度（Frequency）。RPOに直結する。"}, {"term": "c-4-encryption", "stem": "クラウドに送ったバックアップ媒体が万一持ち出されても内容を読まれないよう、保存時に暗号化する方針にした。これはどれか。", "choices": ["リカバリ訓練", "地理的分散のみ", "バックアップの暗号化", "ウォームサイト"], "answer": 2, "explain": "バックアップデータを暗号化して不正アクセスから守る。オフサイト／クラウド保管でも重要。"}, {"term": "c-4-snapshot", "stem": "仮想マシンの時点状態を記録し、変更点を差分保存することでバックアップ負荷を抑え、迅速に元の状態へ戻せるようにした。これはどれか。", "choices": ["スナップショット", "発電機", "コールドサイト", "運営の継続性"], "answer": 0, "explain": "ある時点の状態記録と差分保存・迅速リストアがスナップショットの特徴。"}, {"term": "c-4-recovery", "stem": "誤削除ファイルは個別に戻し、サーバー全停止時はシステム全体をリストアする手順を文書化し定期訓練している。この活動はどれか。", "choices": ["マルチクラウド契約交渉", "リカバリ", "プラットフォームの分散のみ", "物理的な距離の測定のみ"], "answer": 1, "explain": "バックアップからデータやシステムを復元するのがリカバリ。手順確立と訓練が重要。"}, {"term": "c-4-replication", "stem": "オンプレのバックアップをクラウドストレージへ同期コピーし、同期間隔と保持期間も設定した。これはどれか。", "choices": ["複製（レプリケーション）", "机上演習", "UPS", "キャパシティプランニング（人員）"], "answer": 0, "explain": "データを別場所へコピー／同期するのが複製。間隔と保持期間の設定もポイント。"}, {"term": "c-4-journaling", "stem": "ストレージが変更を連続ログとして記録し、障害時にジャーナルを遡ってほぼ直前の状態まで戻せるようにした。これはどれか。", "choices": ["ホットサイト", "ジャーナリング", "オンサイト保管のみ", "キャパシティプランニング（インフラ）"], "answer": 1, "explain": "変更履歴の連続記録により任意時点へ復元し、RPOを極小化できるのがジャーナリング。"}, {"term": "c-4-generator", "stem": "データセンターが長時間の停電に備え、ディーゼルの非常用発電装置で電力を供給できるようにした。これはどれか。", "choices": ["UPSのみ", "スナップショット", "発電機", "バックアップ頻度"], "answer": 2, "explain": "停電時に長時間電力を供給する非常用発電装置が発電機。UPSの後段として併用されることが多い。"}, {"term": "c-4-ups", "stem": "停電発生直後、バッテリーでサーバー電源を維持し、安全なシャットダウンや非常用発電機への切替までの時間を稼ぐ装置を導入した。これはどれか。", "choices": ["UPS（無停電電源装置）", "コールドサイト", "マルチクラウド", "プラットフォームの分散"], "answer": 0, "explain": "停電や電圧変化時に短時間電力を維持し、発電機切替等までの橋渡しをするのがUPS。"}]</script>
+  <script type="application/json" id="quiz-data">[{"term": "c-4-hot-site", "stem": "金融機関が、メインDC停止時にも直ちに同等のサーバー・回線・複製データへ切り替えて業務を継続できるよう、遠隔地に常時稼働相当の予備拠点を用意した。これはどれか。", "choices": ["コールドサイト", "ウォームサイト", "ホットサイト", "オンサイトバックアップのみ"], "answer": 2, "explain": "主要系と同等機能を常備し即切替できるのがホットサイト。コストは高いが復旧は最短に近い。", "stem_en": "A financial institution set up a remote backup site running essentially full-time, so it can switch immediately to equivalent servers, lines and replicated data if the main data center stops. What is this?", "choices_en": ["Cold site", "Warm site", "Hot site", "Onsite backup only"], "explain_en": "A site with capability equivalent to the primary, ready to take over instantly, is a hot site. It's costly, but recovery is about as fast as it gets.", "stem_es": "Una entidad financiera montó un sitio de respaldo remoto que funciona prácticamente siempre, para poder pasar al instante a servidores, líneas y datos replicados equivalentes si se detiene el centro de datos principal. ¿Qué es?", "choices_es": ["Sitio frío", "Sitio templado", "Sitio caliente", "Solo copia en el sitio"], "explain_es": "Un sitio con capacidad equivalente a la principal, listo para asumir el servicio al instante, es un sitio caliente. Es caro, pero la recuperación es casi inmediata."}, {"term": "c-4-cold-site", "stem": "中小企業がコストを抑えるため、平時は機器を本格稼働させず、被災後にサーバーを搬入してバックアップからリストアする場所だけを確保した。これはどれか。", "choices": ["ホットサイト", "コールドサイト", "マルチクラウド", "UPS"], "answer": 1, "explain": "場所・スペース中心で稼働に時間がかかるのがコールドサイト。ランニングコストは低い。", "stem_en": "To save money, a small company secured only a location where, after a disaster, servers can be brought in and restored from backup, without running equipment in normal times. What is this?", "choices_en": ["Hot site", "Cold site", "Multi-cloud", "UPS"], "explain_en": "A site focused on space that takes time to bring up is a cold site. Running costs are low.", "stem_es": "Para ahorrar, una pyme solo aseguró un local donde, tras un desastre, se pueden llevar servidores y restaurar desde las copias, sin tener equipos funcionando en tiempos normales. ¿Qué es?", "choices_es": ["Sitio caliente", "Sitio frío", "Multinube", "SAI (UPS)"], "explain_es": "Un sitio centrado en el espacio que tarda en ponerse en marcha es un sitio frío. Los costes de funcionamiento son bajos."}, {"term": "c-4-warm-site", "stem": "製造業が、基本設備と定期同期データを別拠点に用意し、ホットほど即時ではないがコールドより早く段階的に再開できる拠点を確保した。これはどれか。", "choices": ["ウォームサイト", "コールドサイト", "発電機", "ジャーナリング"], "answer": 0, "explain": "ホットとコールドの中間で、基本設備と定期同期により比較的短時間で復旧するのがウォームサイト。", "stem_en": "A manufacturer prepared basic equipment and periodically synced data at another site, so it can resume in stages: not as instantly as a hot site, but faster than a cold one. What is this?", "choices_en": ["Warm site", "Cold site", "Generator", "Journaling"], "explain_en": "Between hot and cold, a site with basic equipment and periodic sync that recovers relatively quickly is a warm site.", "stem_es": "Un fabricante preparó equipamiento básico y datos sincronizados periódicamente en otro sitio para reanudar por etapas: no tan rápido como un sitio caliente, pero más que uno frío. ¿Qué es?", "choices_es": ["Sitio templado", "Sitio frío", "Generador", "Registro por diario"], "explain_es": "Entre el caliente y el frío, un sitio con equipamiento básico y sincronización periódica que se recupera con relativa rapidez es un sitio templado."}, {"term": "c-4-geographic-dispersion", "stem": "津波や広域停電で両方の拠点が同時に使えなくなるのを避けるため、メインDCとバックアップDCを十分離れた場所に置いた。主にどの考え方か。", "choices": ["スナップショット", "キャパシティプランニング（人員）", "物理的な距離（地理的分散）", "バックアップの暗号化"], "answer": 2, "explain": "同一災害による同時被災を避けるため拠点を地理的に離すのが物理的な距離／Geographic dispersion。", "stem_en": "To avoid both sites becoming unusable at once from a tsunami or wide-area outage, the main and backup data centers were placed far apart. Which concept is this mainly?", "choices_en": ["Snapshots", "Capacity planning (people)", "Geographic dispersion", "Backup encryption"], "explain_en": "Keeping sites geographically apart to avoid being hit by the same disaster is geographic dispersion.", "stem_es": "Para evitar que ambos sitios queden inutilizados a la vez por un tsunami o un apagón extenso, el centro de datos principal y el de respaldo se situaron muy lejos entre sí. ¿Qué concepto es principalmente?", "choices_es": ["Instantáneas", "Planificación de capacidad (personas)", "Dispersión geográfica", "Cifrado de copias de seguridad"], "explain_es": "Mantener los sitios separados geográficamente para no verse afectados por el mismo desastre es la dispersión geográfica."}, {"term": "c-4-platform-diversity", "stem": "単一ベンダーや単一拠点の障害で全体が止まらないよう、サーバーやストレージを複数拠点・異ベンダー環境に分けて配置した。これはどれか。", "choices": ["プラットフォームの分散", "UPS", "コールドサイト", "頻度の見直しのみ"], "answer": 0, "explain": "拠点・環境・ベンダーを分散し単一障害点を減らすのがプラットフォームの分散（Platform diversity）。", "stem_en": "So that a failure of one vendor or one site doesn't stop everything, servers and storage were spread across several sites and different vendors' environments. What is this?", "choices_en": ["Platform diversity", "UPS", "Cold site", "Reviewing frequency only"], "explain_en": "Spreading sites, environments and vendors to reduce single points of failure is platform diversity.", "stem_es": "Para que el fallo de un proveedor o de un sitio no lo detenga todo, los servidores y el almacenamiento se repartieron entre varios sitios y entornos de proveedores distintos. ¿Qué es?", "choices_es": ["Diversidad de plataformas", "SAI (UPS)", "Sitio frío", "Solo revisar la frecuencia"], "explain_es": "Repartir sitios, entornos y proveedores para reducir los puntos únicos de fallo es la diversidad de plataformas."}, {"term": "c-4-multi-cloud", "stem": "EC事業者がAWSとAzureを併用し、一方のリージョン障害時も他方のクラウド上のバックアップでサービス継続できるようにした。これはどれか。", "choices": ["ホットサイトのみ", "マルチクラウド", "オンサイトバックアップ", "負荷試験なしの単一クラウド固定"], "answer": 1, "explain": "複数のクラウドサービスプロバイダーを併用するのがマルチクラウド。可用性・DR・コスト最適化が狙い。", "stem_en": "An online retailer uses both AWS and Azure so that if one region fails, service can continue from backups on the other cloud. What is this?", "choices_en": ["Hot site only", "Multi-cloud", "Onsite backup", "Locked into a single cloud without load testing"], "explain_en": "Using several cloud service providers together is multi-cloud; the aims are availability, DR and cost optimization.", "stem_es": "Un comercio en línea usa AWS y Azure a la vez para que, si falla una región, el servicio continúe con las copias de la otra nube. ¿Qué es?", "choices_es": ["Solo sitio caliente", "Multinube", "Copia en el sitio", "Atado a una sola nube sin pruebas de carga"], "explain_es": "Usar varios proveedores de servicios en la nube a la vez es multinube; busca disponibilidad, recuperación ante desastres y optimización de costes."}, {"term": "c-4-continuity-of-operations", "stem": "地震でDCが被災しても重要業務を止めないよう、BCPを策定しRTO/RPOや安否確認・連絡手段をあらかじめ決めておいた。主にどの概念か。", "choices": ["スナップショット", "運営の継続性", "発電機", "プラットフォームの分散"], "answer": 1, "explain": "障害時も事業を継続するための枠組みが運営の継続性（Continuity of operations）。BCPや連絡体制が含まれる。", "stem_en": "So critical operations don't stop even if an earthquake hits the data center, the company drafted a BCP and set RTO/RPO, staff safety checks and contact methods in advance. Which concept is this mainly?", "choices_en": ["Snapshots", "Continuity of operations", "Generators", "Platform diversity"], "explain_en": "The framework for keeping the business running during disruptions is continuity of operations, including the BCP and contact arrangements.", "stem_es": "Para que las operaciones críticas no se detengan aunque un terremoto afecte al centro de datos, la empresa elaboró un BCP y fijó de antemano RTO/RPO, comprobación de la seguridad del personal y medios de contacto. ¿Qué concepto es principalmente?", "choices_es": ["Instantáneas", "Continuidad de las operaciones", "Generadores", "Diversidad de plataformas"], "explain_es": "El marco para mantener el negocio en marcha ante interrupciones es la continuidad de las operaciones, que incluye el BCP y los mecanismos de contacto."}, {"term": "c-4-capacity-people", "stem": "大規模障害に備え、専門スキルを持つエンジニアのシフト体制と他部門からの応援・外部ベンダー協力を事前に計画した。これはどのキャパシティ計画か。", "choices": ["キャパシティプランニング（技術）", "キャパシティプランニング（インフラ）", "キャパシティプランニング（人員）", "バックアップ頻度の計画のみ"], "answer": 2, "explain": "復旧・継続に必要な人的リソースの事前確保が人員のキャパシティプランニング。", "stem_en": "For a major outage, the company planned shift rotations for skilled engineers plus backup from other departments and outside vendors in advance. Which kind of capacity planning is this?", "choices_en": ["Capacity planning (technology)", "Capacity planning (infrastructure)", "Capacity planning (people)", "Planning backup frequency only"], "explain_en": "Securing in advance the human resources needed for recovery and continuity is capacity planning for people.", "stem_es": "Ante una gran avería, la empresa planificó de antemano turnos de ingenieros cualificados y refuerzos de otros departamentos y proveedores externos. ¿Qué tipo de planificación de capacidad es?", "choices_es": ["Planificación de capacidad (tecnología)", "Planificación de capacidad (infraestructura)", "Planificación de capacidad (personas)", "Solo planificar la frecuencia de las copias"], "explain_es": "Asegurar de antemano los recursos humanos necesarios para la recuperación y la continuidad es la planificación de capacidad de personas."}, {"term": "c-4-capacity-technology", "stem": "ピーク需要を予測し、障害時にオートスケールで処理能力を足せ、可用性ゾーンで一部DC停止にも耐えるよう設計した。これはどの計画か。", "choices": ["キャパシティプランニング（技術）", "キャパシティプランニング（人員）", "コールドサイト選定", "UPSの電池交換周期のみ"], "answer": 0, "explain": "システムの処理能力・容量を維持・拡張する計画が技術のキャパシティプランニング。", "stem_en": "Peak demand was forecast, and the design lets autoscaling add capacity during failures and availability zones withstand some data center outages. Which plan is this?", "choices_en": ["Capacity planning (technology)", "Capacity planning (people)", "Choosing a cold site", "UPS battery replacement cycle only"], "explain_en": "Planning to maintain and expand a system's processing power and capacity is capacity planning for technology.", "stem_es": "Se previó la demanda máxima y el diseño permite que el escalado automático añada capacidad durante los fallos y que las zonas de disponibilidad resistan la caída de algunos centros de datos. ¿Qué planificación es?", "choices_es": ["Planificación de capacidad (tecnología)", "Planificación de capacidad (personas)", "Elección de un sitio frío", "Solo el ciclo de cambio de baterías del SAI"], "explain_es": "Planificar cómo mantener y ampliar la potencia de procesamiento y la capacidad de un sistema es la planificación de capacidad tecnológica."}, {"term": "c-4-capacity-infrastructure", "stem": "復旧拠点で業務を続けるため、電力・空調・ラック・回線に加え、非常用発電機や水・衛星電話などライフライン途絶への備えを計画した。これはどれか。", "choices": ["ジャーナリング", "キャパシティプランニング（インフラ）", "マルチクラウド", "スナップショット"], "answer": 1, "explain": "施設・電力・ネットワークなどインフラ資源の確保・配分がインフラのキャパシティプランニング。", "stem_en": "To keep working at the recovery site, the company planned for power, cooling, racks and lines, plus emergency generators, water and satellite phones in case lifelines are cut. What is this?", "choices_en": ["Journaling", "Capacity planning (infrastructure)", "Multi-cloud", "Snapshots"], "explain_en": "Securing and allocating infrastructure resources such as facilities, power and network is capacity planning for infrastructure.", "stem_es": "Para seguir trabajando en el sitio de recuperación, la empresa planificó energía, climatización, racks y líneas, además de generadores de emergencia, agua y teléfonos por satélite por si se cortan los suministros básicos. ¿Qué es?", "choices_es": ["Registro por diario", "Planificación de capacidad (infraestructura)", "Multinube", "Instantáneas"], "explain_es": "Asegurar y asignar recursos de infraestructura como instalaciones, energía y red es la planificación de capacidad de infraestructura."}, {"term": "c-4-onsite-offsite", "stem": "短時間復旧用に同一ビルのサーバールームへバックアップし、同時にクラウド上の別拠点にも転送して保管する運用にした。区別している概念はどれか。", "choices": ["オンサイトとオフサイト", "ホットサイトとウォームサイトのみ", "負荷分散とクラスタリング", "机上演習とシミュレーション"], "answer": 0, "explain": "同じ場所（オンサイト）か別場所（オフサイト）かがバックアップ保管場所の基本区分。", "stem_en": "For quick recovery, backups go to the server room in the same building, and they're also transferred to a separate site in the cloud. Which concept is being distinguished?", "choices_en": ["Onsite vs. offsite", "Hot vs. warm site only", "Load balancing vs. clustering", "Tabletop exercise vs. simulation"], "explain_en": "Same place (onsite) or a different place (offsite) is the basic distinction for where backups are stored.", "stem_es": "Para recuperar rápido, las copias se guardan en la sala de servidores del mismo edificio y además se envían a otro sitio en la nube. ¿Qué concepto se está distinguiendo?", "choices_es": ["En el sitio frente a fuera del sitio", "Solo sitio caliente frente a templado", "Balanceo de carga frente a clúster", "Ejercicio de mesa frente a simulación"], "explain_es": "El mismo lugar (en el sitio) o un lugar distinto (fuera del sitio) es la distinción básica de dónde se guardan las copias."}, {"term": "c-4-frequency", "stem": "注文データが多いECサイトが、データ損失を抑えるため数分〜数十分間隔でバックアップし、日次バックアップに加えログも取得している。主に何を決めているか。", "choices": ["暗号化アルゴリズムだけ", "バックアップの頻度", "発電機の燃料種だけ", "プラットフォームのベンダー固定"], "answer": 1, "explain": "重要度や変更頻度に応じてバックアップ間隔を決めるのが頻度（Frequency）。RPOに直結する。", "stem_en": "An online store with lots of order data backs up every few minutes to tens of minutes to limit data loss, and captures logs in addition to daily backups. What is mainly being decided?", "choices_en": ["Only the encryption algorithm", "Backup frequency", "Only the generator's fuel type", "Locking in a platform vendor"], "explain_en": "Setting the backup interval by importance and rate of change is frequency, which directly affects RPO.", "stem_es": "Una tienda en línea con muchos pedidos hace copias cada pocos minutos o decenas de minutos para limitar la pérdida de datos, y guarda registros además de las copias diarias. ¿Qué se está decidiendo principalmente?", "choices_es": ["Solo el algoritmo de cifrado", "La frecuencia de las copias", "Solo el tipo de combustible del generador", "Fijar un proveedor de plataforma"], "explain_es": "Fijar el intervalo de copia según la importancia y el ritmo de cambio es la frecuencia, que influye directamente en el RPO."}, {"term": "c-4-encryption", "stem": "クラウドに送ったバックアップ媒体が万一持ち出されても内容を読まれないよう、保存時に暗号化する方針にした。これはどれか。", "choices": ["リカバリ訓練", "地理的分散のみ", "バックアップの暗号化", "ウォームサイト"], "answer": 2, "explain": "バックアップデータを暗号化して不正アクセスから守る。オフサイト／クラウド保管でも重要。", "stem_en": "So backup media sent to the cloud can't be read even if taken, the policy is to encrypt them when stored. What is this?", "choices_en": ["Recovery drills", "Geographic dispersion only", "Backup encryption", "Warm site"], "explain_en": "Encrypting backup data protects it from unauthorized access, which matters for offsite and cloud storage too.", "stem_es": "Para que las copias enviadas a la nube no puedan leerse aunque alguien se las lleve, la política es cifrarlas al almacenarlas. ¿Qué es?", "choices_es": ["Simulacros de recuperación", "Solo dispersión geográfica", "Cifrado de copias de seguridad", "Sitio templado"], "explain_es": "Cifrar los datos de las copias los protege del acceso no autorizado, algo importante también en el almacenamiento externo y en la nube."}, {"term": "c-4-snapshot", "stem": "仮想マシンの時点状態を記録し、変更点を差分保存することでバックアップ負荷を抑え、迅速に元の状態へ戻せるようにした。これはどれか。", "choices": ["スナップショット", "発電機", "コールドサイト", "運営の継続性"], "answer": 0, "explain": "ある時点の状態記録と差分保存・迅速リストアがスナップショットの特徴。", "stem_en": "The point-in-time state of a virtual machine is recorded and changes are saved as deltas, reducing backup load and allowing a quick return to the earlier state. What is this?", "choices_en": ["Snapshot", "Generator", "Cold site", "Continuity of operations"], "explain_en": "Recording a point-in-time state, saving deltas and restoring quickly are the hallmarks of a snapshot.", "stem_es": "Se registra el estado de una máquina virtual en un momento dado y los cambios se guardan como diferencias, lo que reduce la carga de las copias y permite volver rápido al estado anterior. ¿Qué es?", "choices_es": ["Instantánea", "Generador", "Sitio frío", "Continuidad de las operaciones"], "explain_es": "Registrar el estado en un momento dado, guardar diferencias y restaurar rápido son los rasgos de una instantánea."}, {"term": "c-4-recovery", "stem": "誤削除ファイルは個別に戻し、サーバー全停止時はシステム全体をリストアする手順を文書化し定期訓練している。この活動はどれか。", "choices": ["マルチクラウド契約交渉", "リカバリ", "プラットフォームの分散のみ", "物理的な距離の測定のみ"], "answer": 1, "explain": "バックアップからデータやシステムを復元するのがリカバリ。手順確立と訓練が重要。", "stem_en": "Procedures are documented and drilled regularly: accidentally deleted files are restored individually, and the whole system is restored if all servers go down. What is this activity?", "choices_en": ["Negotiating multi-cloud contracts", "Recovery", "Platform diversity only", "Only measuring physical distance"], "explain_en": "Restoring data and systems from backups is recovery; establishing procedures and drilling them is key.", "stem_es": "Hay procedimientos documentados y simulacros periódicos: los archivos borrados por error se restauran uno a uno y, si caen todos los servidores, se restaura todo el sistema. ¿Qué actividad es?", "choices_es": ["Negociar contratos multinube", "Recuperación", "Solo diversidad de plataformas", "Solo medir la distancia física"], "explain_es": "Restaurar datos y sistemas a partir de copias es la recuperación; lo clave es fijar procedimientos y practicarlos."}, {"term": "c-4-replication", "stem": "オンプレのバックアップをクラウドストレージへ同期コピーし、同期間隔と保持期間も設定した。これはどれか。", "choices": ["複製（レプリケーション）", "机上演習", "UPS", "キャパシティプランニング（人員）"], "answer": 0, "explain": "データを別場所へコピー／同期するのが複製。間隔と保持期間の設定もポイント。", "stem_en": "On-premises backups are synchronously copied to cloud storage, with a sync interval and retention period configured. What is this?", "choices_en": ["Replication", "Tabletop exercise", "UPS", "Capacity planning (people)"], "explain_en": "Copying or syncing data to another location is replication; setting the interval and retention period also matters.", "stem_es": "Las copias locales se replican de forma sincronizada en el almacenamiento en la nube, con un intervalo de sincronización y un periodo de retención configurados. ¿Qué es?", "choices_es": ["Replicación", "Ejercicio de mesa", "SAI (UPS)", "Planificación de capacidad (personas)"], "explain_es": "Copiar o sincronizar datos en otra ubicación es la replicación; también importa fijar el intervalo y el periodo de retención."}, {"term": "c-4-journaling", "stem": "ストレージが変更を連続ログとして記録し、障害時にジャーナルを遡ってほぼ直前の状態まで戻せるようにした。これはどれか。", "choices": ["ホットサイト", "ジャーナリング", "オンサイト保管のみ", "キャパシティプランニング（インフラ）"], "answer": 1, "explain": "変更履歴の連続記録により任意時点へ復元し、RPOを極小化できるのがジャーナリング。", "stem_en": "Storage records changes as a continuous log, so after a failure it can roll back through the journal to almost the moment before. What is this?", "choices_en": ["Hot site", "Journaling", "Onsite storage only", "Capacity planning (infrastructure)"], "explain_en": "Continuously recording changes so you can restore to any point in time, minimizing RPO, is journaling.", "stem_es": "El almacenamiento registra los cambios como un registro continuo, de modo que tras un fallo puede retroceder por el diario hasta casi el instante anterior. ¿Qué es?", "choices_es": ["Sitio caliente", "Registro por diario (journaling)", "Solo almacenamiento en el sitio", "Planificación de capacidad (infraestructura)"], "explain_es": "Registrar los cambios de forma continua para restaurar a cualquier momento y minimizar el RPO es el journaling."}, {"term": "c-4-generator", "stem": "データセンターが長時間の停電に備え、ディーゼルの非常用発電装置で電力を供給できるようにした。これはどれか。", "choices": ["UPSのみ", "スナップショット", "発電機", "バックアップ頻度"], "answer": 2, "explain": "停電時に長時間電力を供給する非常用発電装置が発電機。UPSの後段として併用されることが多い。", "stem_en": "To prepare for long outages, a data center can supply power from diesel emergency generating equipment. What is this?", "choices_en": ["UPS only", "Snapshot", "Generator", "Backup frequency"], "explain_en": "Emergency equipment that supplies power for long periods during outages is a generator, often used after a UPS.", "stem_es": "Para prepararse ante cortes prolongados, un centro de datos puede suministrar energía con equipos de generación de emergencia diésel. ¿Qué es?", "choices_es": ["Solo SAI (UPS)", "Instantánea", "Generador", "Frecuencia de las copias"], "explain_es": "El equipo de emergencia que suministra energía durante largos periodos en un corte es un generador, que suele usarse tras un SAI."}, {"term": "c-4-ups", "stem": "停電発生直後、バッテリーでサーバー電源を維持し、安全なシャットダウンや非常用発電機への切替までの時間を稼ぐ装置を導入した。これはどれか。", "choices": ["UPS（無停電電源装置）", "コールドサイト", "マルチクラウド", "プラットフォームの分散"], "answer": 0, "explain": "停電や電圧変化時に短時間電力を維持し、発電機切替等までの橋渡しをするのがUPS。", "stem_en": "Right after an outage, a device keeps servers powered from batteries to buy time for a safe shutdown or the switch to an emergency generator. What is this?", "choices_en": ["UPS (uninterruptible power supply)", "Cold site", "Multi-cloud", "Platform diversity"], "explain_en": "A UPS maintains power for a short time during outages or voltage changes, bridging the gap until a generator takes over.", "stem_es": "Justo después de un corte, un dispositivo mantiene alimentados los servidores con baterías para ganar tiempo para un apagado seguro o el paso a un generador de emergencia. ¿Qué es?", "choices_es": ["SAI (sistema de alimentación ininterrumpida)", "Sitio frío", "Multinube", "Diversidad de plataformas"], "explain_es": "Un SAI mantiene la energía durante poco tiempo ante cortes o variaciones de tensión, hasta que entra un generador."}]</script>
 </section>
 
-<nav class="pager"><a href="c-3.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>C-3 <span data-i18n="ja">データ保護の戦略と概念</span><span data-i18n="en">データ保護の戦略と概念</span><span data-i18n="es">データ保護の戦略と概念</span></span></a><a class="next" href="index.html"><span><span data-i18n="ja">戻る</span><span data-i18n="en">Back</span><span data-i18n="es">Volver</span></span><span>Domain C <span data-i18n="ja">ハブ</span><span data-i18n="en">hub</span><span data-i18n="es">hub</span></span></a></nav>
+<nav class="pager"><a href="c-3.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>C-3 <span data-i18n="ja">データ保護の戦略と概念</span><span data-i18n="en">Data protection strategies and concepts</span><span data-i18n="es">Estrategias y conceptos de protección de datos</span></span></a><a class="next" href="index.html"><span><span data-i18n="ja">戻る</span><span data-i18n="en">Back</span><span data-i18n="es">Volver</span></span><span>Domain C <span data-i18n="ja">ハブ</span><span data-i18n="en">hub</span><span data-i18n="es">hub</span></span></a></nav>
 
     </main>
   </div>

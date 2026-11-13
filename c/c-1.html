@@ -24,7 +24,7 @@
   </div>
   <nav class="nav-section">
     <h2>Domain C</h2>
-    <a href="c-1.html" class="active">C-1 <span data-i18n="ja">セキュリティアーキテクチャの全体像</span><span data-i18n="en">セキュリティアーキテクチャの全体像</span><span data-i18n="es">セキュリティアーキテクチャの全体像</span></a><a href="c-2.html">C-2 <span data-i18n="ja">インフラを守るセキュリティ原則</span><span data-i18n="en">インフラを守るセキュリティ原則</span><span data-i18n="es">インフラを守るセキュリティ原則</span></a><a href="c-3.html">C-3 <span data-i18n="ja">データ保護の戦略と概念</span><span data-i18n="en">データ保護の戦略と概念</span><span data-i18n="es">データ保護の戦略と概念</span></a><a href="c-4.html">C-4 <span data-i18n="ja">回復性と耐性</span><span data-i18n="en">回復性と耐性</span><span data-i18n="es">回復性と耐性</span></a>
+    <a href="c-1.html" class="active">C-1 <span data-i18n="ja">セキュリティアーキテクチャの全体像</span><span data-i18n="en">Security architecture overview</span><span data-i18n="es">Panorama de la arquitectura de seguridad</span></a><a href="c-2.html">C-2 <span data-i18n="ja">インフラを守るセキュリティ原則</span><span data-i18n="en">Security principles for infrastructure</span><span data-i18n="es">Principios de seguridad para la infraestructura</span></a><a href="c-3.html">C-3 <span data-i18n="ja">データ保護の戦略と概念</span><span data-i18n="en">Data protection strategies and concepts</span><span data-i18n="es">Estrategias y conceptos de protección de datos</span></a><a href="c-4.html">C-4 <span data-i18n="ja">回復性と耐性</span><span data-i18n="en">Resilience and recovery</span><span data-i18n="es">Resiliencia y recuperación</span></a>
   </nav>
   <nav class="nav-section">
     <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
@@ -55,10 +55,10 @@
       
 <header class="hero">
   <p class="eyebrow">Domain C · C-1</p>
-  <h1><span data-i18n="ja">セキュリティアーキテクチャの全体像</span><span data-i18n="en">セキュリティアーキテクチャの全体像</span><span data-i18n="es">セキュリティアーキテクチャの全体像</span></h1>
+  <h1><span data-i18n="ja">セキュリティアーキテクチャの全体像</span><span data-i18n="en">Security architecture overview</span><span data-i18n="es">Panorama de la arquitectura de seguridad</span></h1>
   <p data-i18n="ja">クラウド・仮想化・組込みと設計の観点</p>
-  <p data-i18n="en">クラウド・仮想化・組込みと設計の観点</p>
-  <p data-i18n="es">クラウド・仮想化・組込みと設計の観点</p>
+  <p data-i18n="en">Cloud, virtualization, embedded systems and design considerations</p>
+  <p data-i18n="es">Nube, virtualización, sistemas embebidos y consideraciones de diseño</p>
   <div class="meta-row">
     <span class="chip"><span data-i18n="ja">用語 24</span><span data-i18n="en">24 terms</span><span data-i18n="es">24 términos</span></span>
     <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
@@ -74,435 +74,435 @@
   </div>
 </header>
 <div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
-<section class="group"><h2 class="group-title"><span data-i18n="ja">クラウドとコード（誰が責任を持ち、どう作るか）</span><span data-i18n="en">クラウドとコード（誰が責任を持ち、どう作るか）</span><span data-i18n="es">クラウドとコード（誰が責任を持ち、どう作るか）</span></h2>
-<article class="memo-card" id="c-1-responsibility-matrix" data-search="クラウドの責任マトリクス cloud responsibility matrix  事業者とユーザーの責任範囲を整理する表 paasのアプリ対策 iaas/paas/saas">
+<section class="group"><h2 class="group-title"><span data-i18n="ja">クラウドとコード（誰が責任を持ち、どう作るか）</span><span data-i18n="en">Cloud and code (who is responsible, how it's built)</span><span data-i18n="es">Nube y código (quién es responsable y cómo se construye)</span></h2>
+<article class="memo-card" id="c-1-responsibility-matrix" data-search="クラウドの責任マトリクス cloud responsibility matrix matriz de responsabilidad en la nube 事業者とユーザーの責任範囲を整理する表 paasのアプリ対策 iaas/paas/saas">
   <h3>
     <span data-i18n="ja">クラウドの責任マトリクス<span class="en">Cloud responsibility matrix</span></span>
     <span data-i18n="en">Cloud responsibility matrix</span>
-    <span data-i18n="es">クラウドの責任マトリクス</span>
+    <span data-i18n="es">Matriz de responsabilidad en la nube</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">事業者とユーザーの<span class="hl">責任範囲</span>を整理する表</p><p data-i18n="en" class="one-liner">事業者とユーザーの<span class="hl">責任範囲</span>を整理する表</p><p data-i18n="es" class="one-liner">事業者とユーザーの<span class="hl">責任範囲</span>を整理する表</p>
+    <p data-i18n="ja" class="one-liner">事業者とユーザーの<span class="hl">責任範囲</span>を整理する表</p><p data-i18n="en" class="one-liner">A table sorting out <span class="hl">who is responsible</span> for what between provider and customer</p><p data-i18n="es" class="one-liner">Tabla que delimita <span class="hl">quién es responsable</span> de qué entre proveedor y cliente</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>PaaSのアプリ対策</li><li>IaaS/PaaS/SaaS</li></ul>
-      <ul class="example-list" data-i18n="en"><li>PaaSのアプリ対策</li><li>IaaS/PaaS/SaaS</li></ul>
-      <ul class="example-list" data-i18n="es"><li>PaaSのアプリ対策</li><li>IaaS/PaaS/SaaS</li></ul>
+      <ul class="example-list" data-i18n="en"><li>App security on PaaS</li><li>IaaS/PaaS/SaaS</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Seguridad de la aplicación en PaaS</li><li>IaaS/PaaS/SaaS</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-iac" data-search="iac infrastructure as code  インフラ設定をコードで定義し自動化 環境の自動構築 構成のバージョン管理">
+<article class="memo-card" id="c-1-iac" data-search="iac infrastructure as code infraestructura como código (iac) インフラ設定をコードで定義し自動化 環境の自動構築 構成のバージョン管理">
   <h3>
     <span data-i18n="ja">IaC<span class="en">Infrastructure as Code</span></span>
-    <span data-i18n="en">Infrastructure as Code</span>
-    <span data-i18n="es">IaC</span>
+    <span data-i18n="en">Infrastructure as Code (IaC)</span>
+    <span data-i18n="es">Infraestructura como código (IaC)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">インフラ設定を<span class="hl">コードで定義</span>し自動化</p><p data-i18n="en" class="one-liner">インフラ設定を<span class="hl">コードで定義</span>し自動化</p><p data-i18n="es" class="one-liner">インフラ設定を<span class="hl">コードで定義</span>し自動化</p>
+    <p data-i18n="ja" class="one-liner">インフラ設定を<span class="hl">コードで定義</span>し自動化</p><p data-i18n="en" class="one-liner"><span class="hl">Defines infrastructure as code</span> and automates it</p><p data-i18n="es" class="one-liner"><span class="hl">Define la infraestructura como código</span> y la automatiza</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>環境の自動構築</li><li>構成のバージョン管理</li></ul>
-      <ul class="example-list" data-i18n="en"><li>環境の自動構築</li><li>構成のバージョン管理</li></ul>
-      <ul class="example-list" data-i18n="es"><li>環境の自動構築</li><li>構成のバージョン管理</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Automated environment builds</li><li>Version-controlled configuration</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Creación automática de entornos</li><li>Configuración bajo control de versiones</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-serverless" data-search="サーバーレス serverless  サーバー管理を任せアプリに集中するモデル lambda関数 cloud functions">
+<article class="memo-card" id="c-1-serverless" data-search="サーバーレス serverless sin servidor (serverless) サーバー管理を任せアプリに集中するモデル lambda関数 cloud functions">
   <h3>
     <span data-i18n="ja">サーバーレス<span class="en">Serverless</span></span>
     <span data-i18n="en">Serverless</span>
-    <span data-i18n="es">サーバーレス</span>
+    <span data-i18n="es">Sin servidor (serverless)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">サーバー管理を任せ<span class="hl">アプリに集中</span>するモデル</p><p data-i18n="en" class="one-liner">サーバー管理を任せ<span class="hl">アプリに集中</span>するモデル</p><p data-i18n="es" class="one-liner">サーバー管理を任せ<span class="hl">アプリに集中</span>するモデル</p>
+    <p data-i18n="ja" class="one-liner">サーバー管理を任せ<span class="hl">アプリに集中</span>するモデル</p><p data-i18n="en" class="one-liner">A model that hands off server management so you can <span class="hl">focus on the app</span></p><p data-i18n="es" class="one-liner">Modelo que delega la gestión de servidores para <span class="hl">centrarse en la aplicación</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>Lambda関数</li><li>Cloud Functions</li></ul>
-      <ul class="example-list" data-i18n="en"><li>Lambda関数</li><li>Cloud Functions</li></ul>
-      <ul class="example-list" data-i18n="es"><li>Lambda関数</li><li>Cloud Functions</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Lambda functions</li><li>Cloud Functions</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Funciones Lambda</li><li>Cloud Functions</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-microservices" data-search="マイクロサービス microservices  機能を独立サービスに分割して運用 ecの注文サービス 独立デプロイ">
+<article class="memo-card" id="c-1-microservices" data-search="マイクロサービス microservices microservicios 機能を独立サービスに分割して運用 ecの注文サービス 独立デプロイ">
   <h3>
     <span data-i18n="ja">マイクロサービス<span class="en">Microservices</span></span>
     <span data-i18n="en">Microservices</span>
-    <span data-i18n="es">マイクロサービス</span>
+    <span data-i18n="es">Microservicios</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">機能を<span class="hl">独立サービス</span>に分割して運用</p><p data-i18n="en" class="one-liner">機能を<span class="hl">独立サービス</span>に分割して運用</p><p data-i18n="es" class="one-liner">機能を<span class="hl">独立サービス</span>に分割して運用</p>
+    <p data-i18n="ja" class="one-liner">機能を<span class="hl">独立サービス</span>に分割して運用</p><p data-i18n="en" class="one-liner">Splits features into <span class="hl">independent services</span></p><p data-i18n="es" class="one-liner">Divide las funciones en <span class="hl">servicios independientes</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>ECの注文サービス</li><li>独立デプロイ</li></ul>
-      <ul class="example-list" data-i18n="en"><li>ECの注文サービス</li><li>独立デプロイ</li></ul>
-      <ul class="example-list" data-i18n="es"><li>ECの注文サービス</li><li>独立デプロイ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Order service of an online store</li><li>Independent deployment</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Servicio de pedidos de una tienda en línea</li><li>Despliegue independiente</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title"><span data-i18n="ja">ネットワーク分離と仮想化（どう分け、どう載せるか）</span><span data-i18n="en">ネットワーク分離と仮想化（どう分け、どう載せるか）</span><span data-i18n="es">ネットワーク分離と仮想化（どう分け、どう載せるか）</span></h2>
-<article class="memo-card" id="c-1-air-gap" data-search="エアギャップ air gap  外部網から物理的に隔離されたシステム 軍事の機密網 インターネット非接続">
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">ネットワーク分離と仮想化（どう分け、どう載せるか）</span><span data-i18n="en">Network isolation and virtualization (how to separate and host)</span><span data-i18n="es">Aislamiento de red y virtualización (cómo separar y alojar)</span></h2>
+<article class="memo-card" id="c-1-air-gap" data-search="エアギャップ air gap aislamiento físico (air gap) 外部網から物理的に隔離されたシステム 軍事の機密網 インターネット非接続">
   <h3>
     <span data-i18n="ja">エアギャップ<span class="en">Air gap</span></span>
     <span data-i18n="en">Air gap</span>
-    <span data-i18n="es">エアギャップ</span>
+    <span data-i18n="es">Aislamiento físico (air gap)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">外部網から<span class="hl">物理的に隔離</span>されたシステム</p><p data-i18n="en" class="one-liner">外部網から<span class="hl">物理的に隔離</span>されたシステム</p><p data-i18n="es" class="one-liner">外部網から<span class="hl">物理的に隔離</span>されたシステム</p>
+    <p data-i18n="ja" class="one-liner">外部網から<span class="hl">物理的に隔離</span>されたシステム</p><p data-i18n="en" class="one-liner">A system <span class="hl">physically isolated</span> from outside networks</p><p data-i18n="es" class="one-liner">Sistema <span class="hl">aislado físicamente</span> de redes externas</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>軍事の機密網</li><li>インターネット非接続</li></ul>
-      <ul class="example-list" data-i18n="en"><li>軍事の機密網</li><li>インターネット非接続</li></ul>
-      <ul class="example-list" data-i18n="es"><li>軍事の機密網</li><li>インターネット非接続</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Classified military networks</li><li>No internet connection</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Redes militares clasificadas</li><li>Sin conexión a internet</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-sdn" data-search="sdn software-defined networking  ネットワークをソフトで集中制御する技術 sdnコントローラ プレーン分離">
+<article class="memo-card" id="c-1-sdn" data-search="sdn software-defined networking redes definidas por software (sdn) ネットワークをソフトで集中制御する技術 sdnコントローラ プレーン分離">
   <h3>
     <span data-i18n="ja">SDN<span class="en">Software-Defined Networking</span></span>
-    <span data-i18n="en">Software-Defined Networking</span>
-    <span data-i18n="es">SDN</span>
+    <span data-i18n="en">Software-Defined Networking (SDN)</span>
+    <span data-i18n="es">Redes definidas por software (SDN)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">ネットワークを<span class="hl">ソフトで集中制御</span>する技術</p><p data-i18n="en" class="one-liner">ネットワークを<span class="hl">ソフトで集中制御</span>する技術</p><p data-i18n="es" class="one-liner">ネットワークを<span class="hl">ソフトで集中制御</span>する技術</p>
+    <p data-i18n="ja" class="one-liner">ネットワークを<span class="hl">ソフトで集中制御</span>する技術</p><p data-i18n="en" class="one-liner">Controls the network <span class="hl">centrally through software</span></p><p data-i18n="es" class="one-liner">Controla la red <span class="hl">de forma centralizada mediante software</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>SDNコントローラ</li><li>プレーン分離</li></ul>
-      <ul class="example-list" data-i18n="en"><li>SDNコントローラ</li><li>プレーン分離</li></ul>
-      <ul class="example-list" data-i18n="es"><li>SDNコントローラ</li><li>プレーン分離</li></ul>
+      <ul class="example-list" data-i18n="en"><li>SDN controller</li><li>Separating the planes</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Controlador SDN</li><li>Separación de planos</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-centralized-decentralized" data-search="集中型と分散型 centralized vs decentralized  管理を一箇所に集めるか分散するか 銀行の中央処理 ブロックチェーン">
+<article class="memo-card" id="c-1-centralized-decentralized" data-search="集中型と分散型 centralized vs decentralized centralizado frente a descentralizado 管理を一箇所に集めるか分散するか 銀行の中央処理 ブロックチェーン">
   <h3>
     <span data-i18n="ja">集中型と分散型<span class="en">Centralized vs decentralized</span></span>
     <span data-i18n="en">Centralized vs decentralized</span>
-    <span data-i18n="es">集中型と分散型</span>
+    <span data-i18n="es">Centralizado frente a descentralizado</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">管理を<span class="hl">一箇所に集めるか分散するか</span></p><p data-i18n="en" class="one-liner">管理を<span class="hl">一箇所に集めるか分散するか</span></p><p data-i18n="es" class="one-liner">管理を<span class="hl">一箇所に集めるか分散するか</span></p>
+    <p data-i18n="ja" class="one-liner">管理を<span class="hl">一箇所に集めるか分散するか</span></p><p data-i18n="en" class="one-liner">Whether management is <span class="hl">concentrated in one place or spread out</span></p><p data-i18n="es" class="one-liner">Si la gestión se <span class="hl">concentra en un lugar o se reparte</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>銀行の中央処理</li><li>ブロックチェーン</li></ul>
-      <ul class="example-list" data-i18n="en"><li>銀行の中央処理</li><li>ブロックチェーン</li></ul>
-      <ul class="example-list" data-i18n="es"><li>銀行の中央処理</li><li>ブロックチェーン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>A bank's central processing</li><li>Blockchain</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Procesamiento central de un banco</li><li>Cadena de bloques</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-containerization" data-search="コンテナ化 containerization  アプリと依存をコンテナにまとめる コンテナイメージ ホストos共有">
+<article class="memo-card" id="c-1-containerization" data-search="コンテナ化 containerization contenedorización アプリと依存をコンテナにまとめる コンテナイメージ ホストos共有">
   <h3>
     <span data-i18n="ja">コンテナ化<span class="en">Containerization</span></span>
     <span data-i18n="en">Containerization</span>
-    <span data-i18n="es">コンテナ化</span>
+    <span data-i18n="es">Contenedorización</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">アプリと依存を<span class="hl">コンテナ</span>にまとめる</p><p data-i18n="en" class="one-liner">アプリと依存を<span class="hl">コンテナ</span>にまとめる</p><p data-i18n="es" class="one-liner">アプリと依存を<span class="hl">コンテナ</span>にまとめる</p>
+    <p data-i18n="ja" class="one-liner">アプリと依存を<span class="hl">コンテナ</span>にまとめる</p><p data-i18n="en" class="one-liner">Bundles an app and its dependencies into a <span class="hl">container</span></p><p data-i18n="es" class="one-liner">Empaqueta una aplicación y sus dependencias en un <span class="hl">contenedor</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>コンテナイメージ</li><li>ホストOS共有</li></ul>
-      <ul class="example-list" data-i18n="en"><li>コンテナイメージ</li><li>ホストOS共有</li></ul>
-      <ul class="example-list" data-i18n="es"><li>コンテナイメージ</li><li>ホストOS共有</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Container images</li><li>Shared host OS</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Imágenes de contenedor</li><li>SO del host compartido</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-virtualization" data-search="仮想化 virtualization  物理マシンを複数vmに分割する技術 vmware/hyper-v 1台に複数os">
+<article class="memo-card" id="c-1-virtualization" data-search="仮想化 virtualization virtualización 物理マシンを複数vmに分割する技術 vmware/hyper-v 1台に複数os">
   <h3>
     <span data-i18n="ja">仮想化<span class="en">Virtualization</span></span>
     <span data-i18n="en">Virtualization</span>
-    <span data-i18n="es">仮想化</span>
+    <span data-i18n="es">Virtualización</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">物理マシンを<span class="hl">複数VM</span>に分割する技術</p><p data-i18n="en" class="one-liner">物理マシンを<span class="hl">複数VM</span>に分割する技術</p><p data-i18n="es" class="one-liner">物理マシンを<span class="hl">複数VM</span>に分割する技術</p>
+    <p data-i18n="ja" class="one-liner">物理マシンを<span class="hl">複数VM</span>に分割する技術</p><p data-i18n="en" class="one-liner">Splits a physical machine into <span class="hl">multiple VMs</span></p><p data-i18n="es" class="one-liner">Divide una máquina física en <span class="hl">varias VM</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>VMware/Hyper-V</li><li>1台に複数OS</li></ul>
-      <ul class="example-list" data-i18n="en"><li>VMware/Hyper-V</li><li>1台に複数OS</li></ul>
-      <ul class="example-list" data-i18n="es"><li>VMware/Hyper-V</li><li>1台に複数OS</li></ul>
+      <ul class="example-list" data-i18n="en"><li>VMware/Hyper-V</li><li>Several OSes on one machine</li></ul>
+      <ul class="example-list" data-i18n="es"><li>VMware/Hyper-V</li><li>Varios SO en una sola máquina</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title"><span data-i18n="ja">組込みとOT（現場デバイス・制御系）</span><span data-i18n="en">組込みとOT（現場デバイス・制御系）</span><span data-i18n="es">組込みとOT（現場デバイス・制御系）</span></h2>
-<article class="memo-card" id="c-1-iot" data-search="iot internet of things  ネット接続のモノがデータ収集・制御する miraiボットネット デフォルトパスワード">
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">組込みとOT（現場デバイス・制御系）</span><span data-i18n="en">Embedded systems and OT (field devices and control systems)</span><span data-i18n="es">Sistemas embebidos y OT (dispositivos de campo y sistemas de control)</span></h2>
+<article class="memo-card" id="c-1-iot" data-search="iot internet of things internet de las cosas (iot) ネット接続のモノがデータ収集・制御する miraiボットネット デフォルトパスワード">
   <h3>
     <span data-i18n="ja">IoT<span class="en">Internet of Things</span></span>
-    <span data-i18n="en">Internet of Things</span>
-    <span data-i18n="es">IoT</span>
+    <span data-i18n="en">Internet of Things (IoT)</span>
+    <span data-i18n="es">Internet de las cosas (IoT)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">ネット接続の<span class="hl">モノ</span>がデータ収集・制御する</p><p data-i18n="en" class="one-liner">ネット接続の<span class="hl">モノ</span>がデータ収集・制御する</p><p data-i18n="es" class="one-liner">ネット接続の<span class="hl">モノ</span>がデータ収集・制御する</p>
+    <p data-i18n="ja" class="one-liner">ネット接続の<span class="hl">モノ</span>がデータ収集・制御する</p><p data-i18n="en" class="one-liner">Networked <span class="hl">things</span> that collect data and control devices</p><p data-i18n="es" class="one-liner"><span class="hl">Objetos</span> conectados que recogen datos y controlan dispositivos</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>Miraiボットネット</li><li>デフォルトパスワード</li></ul>
-      <ul class="example-list" data-i18n="en"><li>Miraiボットネット</li><li>デフォルトパスワード</li></ul>
-      <ul class="example-list" data-i18n="es"><li>Miraiボットネット</li><li>デフォルトパスワード</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Mirai botnet</li><li>Default passwords</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Botnet Mirai</li><li>Contraseñas predeterminadas</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-ics-scada" data-search="icsとscada ics / scada  産業設備を監視・制御するシステム 発電所の監視 電力・ガス・水道">
+<article class="memo-card" id="c-1-ics-scada" data-search="icsとscada ics / scada ics / scada 産業設備を監視・制御するシステム 発電所の監視 電力・ガス・水道">
   <h3>
     <span data-i18n="ja">ICSとSCADA<span class="en">ICS / SCADA</span></span>
     <span data-i18n="en">ICS / SCADA</span>
-    <span data-i18n="es">ICSとSCADA</span>
+    <span data-i18n="es">ICS / SCADA</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">産業設備を<span class="hl">監視・制御</span>するシステム</p><p data-i18n="en" class="one-liner">産業設備を<span class="hl">監視・制御</span>するシステム</p><p data-i18n="es" class="one-liner">産業設備を<span class="hl">監視・制御</span>するシステム</p>
+    <p data-i18n="ja" class="one-liner">産業設備を<span class="hl">監視・制御</span>するシステム</p><p data-i18n="en" class="one-liner">Systems that <span class="hl">monitor and control</span> industrial equipment</p><p data-i18n="es" class="one-liner">Sistemas que <span class="hl">supervisan y controlan</span> equipos industriales</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>発電所の監視</li><li>電力・ガス・水道</li></ul>
-      <ul class="example-list" data-i18n="en"><li>発電所の監視</li><li>電力・ガス・水道</li></ul>
-      <ul class="example-list" data-i18n="es"><li>発電所の監視</li><li>電力・ガス・水道</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Power plant monitoring</li><li>Electricity, gas and water</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Supervisión de centrales eléctricas</li><li>Electricidad, gas y agua</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-rtos" data-search="rtos real-time operating system  時間内に確実処理を保証する特殊os エンジン制御 組込み機器">
+<article class="memo-card" id="c-1-rtos" data-search="rtos real-time operating system sistema operativo en tiempo real (rtos) 時間内に確実処理を保証する特殊os エンジン制御 組込み機器">
   <h3>
     <span data-i18n="ja">RTOS<span class="en">Real-Time Operating System</span></span>
-    <span data-i18n="en">Real-Time Operating System</span>
-    <span data-i18n="es">RTOS</span>
+    <span data-i18n="en">Real-Time Operating System (RTOS)</span>
+    <span data-i18n="es">Sistema operativo en tiempo real (RTOS)</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner"><span class="hl">時間内に確実処理</span>を保証する特殊OS</p><p data-i18n="en" class="one-liner"><span class="hl">時間内に確実処理</span>を保証する特殊OS</p><p data-i18n="es" class="one-liner"><span class="hl">時間内に確実処理</span>を保証する特殊OS</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">時間内に確実処理</span>を保証する特殊OS</p><p data-i18n="en" class="one-liner">A specialized OS that <span class="hl">guarantees processing within deadlines</span></p><p data-i18n="es" class="one-liner">SO especializado que <span class="hl">garantiza el procesamiento dentro de plazo</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>エンジン制御</li><li>組込み機器</li></ul>
-      <ul class="example-list" data-i18n="en"><li>エンジン制御</li><li>組込み機器</li></ul>
-      <ul class="example-list" data-i18n="es"><li>エンジン制御</li><li>組込み機器</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Engine control</li><li>Embedded devices</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Control del motor</li><li>Dispositivos embebidos</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title"><span data-i18n="ja">設計のトレードオフ（何を優先して組むか）</span><span data-i18n="en">設計のトレードオフ（何を優先して組むか）</span><span data-i18n="es">設計のトレードオフ（何を優先して組むか）</span></h2>
-<article class="memo-card" id="c-1-availability" data-search="可用性 availability  必要なときに使える度合い 冗長化 ロードバランサ">
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">設計のトレードオフ（何を優先して組むか）</span><span data-i18n="en">Design trade-offs (what to prioritize)</span><span data-i18n="es">Compromisos de diseño (qué priorizar)</span></h2>
+<article class="memo-card" id="c-1-availability" data-search="可用性 availability disponibilidad 必要なときに使える度合い 冗長化 ロードバランサ">
   <h3>
     <span data-i18n="ja">可用性<span class="en">Availability</span></span>
     <span data-i18n="en">Availability</span>
-    <span data-i18n="es">可用性</span>
+    <span data-i18n="es">Disponibilidad</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">必要なときに<span class="hl">使える度合い</span></p><p data-i18n="en" class="one-liner">必要なときに<span class="hl">使える度合い</span></p><p data-i18n="es" class="one-liner">必要なときに<span class="hl">使える度合い</span></p>
+    <p data-i18n="ja" class="one-liner">必要なときに<span class="hl">使える度合い</span></p><p data-i18n="en" class="one-liner">How far it's <span class="hl">usable when needed</span></p><p data-i18n="es" class="one-liner">Grado en que <span class="hl">está disponible cuando se necesita</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>冗長化</li><li>ロードバランサ</li></ul>
-      <ul class="example-list" data-i18n="en"><li>冗長化</li><li>ロードバランサ</li></ul>
-      <ul class="example-list" data-i18n="es"><li>冗長化</li><li>ロードバランサ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Redundancy</li><li>Load balancers</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Redundancia</li><li>Balanceadores de carga</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-resilience" data-search="レジリエンス resilience  障害下でも維持し速やかに回復する力 spof排除 自動復旧">
+<article class="memo-card" id="c-1-resilience" data-search="レジリエンス resilience resiliencia 障害下でも維持し速やかに回復する力 spof排除 自動復旧">
   <h3>
     <span data-i18n="ja">レジリエンス<span class="en">Resilience</span></span>
     <span data-i18n="en">Resilience</span>
-    <span data-i18n="es">レジリエンス</span>
+    <span data-i18n="es">Resiliencia</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">障害下でも維持し<span class="hl">速やかに回復</span>する力</p><p data-i18n="en" class="one-liner">障害下でも維持し<span class="hl">速やかに回復</span>する力</p><p data-i18n="es" class="one-liner">障害下でも維持し<span class="hl">速やかに回復</span>する力</p>
+    <p data-i18n="ja" class="one-liner">障害下でも維持し<span class="hl">速やかに回復</span>する力</p><p data-i18n="en" class="one-liner">The ability to keep running through failures and <span class="hl">recover quickly</span></p><p data-i18n="es" class="one-liner">Capacidad de seguir funcionando ante fallos y <span class="hl">recuperarse rápido</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>SPOF排除</li><li>自動復旧</li></ul>
-      <ul class="example-list" data-i18n="en"><li>SPOF排除</li><li>自動復旧</li></ul>
-      <ul class="example-list" data-i18n="es"><li>SPOF排除</li><li>自動復旧</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Eliminating SPOFs</li><li>Automatic recovery</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Eliminar puntos únicos de fallo</li><li>Recuperación automática</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-cost" data-search="コスト cost  安全性と費用のバランスを取る観点 重要系に監視限定 リスク優先順位">
+<article class="memo-card" id="c-1-cost" data-search="コスト cost coste 安全性と費用のバランスを取る観点 重要系に監視限定 リスク優先順位">
   <h3>
     <span data-i18n="ja">コスト<span class="en">Cost</span></span>
     <span data-i18n="en">Cost</span>
-    <span data-i18n="es">コスト</span>
+    <span data-i18n="es">Coste</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">安全性と費用の<span class="hl">バランス</span>を取る観点</p><p data-i18n="en" class="one-liner">安全性と費用の<span class="hl">バランス</span>を取る観点</p><p data-i18n="es" class="one-liner">安全性と費用の<span class="hl">バランス</span>を取る観点</p>
+    <p data-i18n="ja" class="one-liner">安全性と費用の<span class="hl">バランス</span>を取る観点</p><p data-i18n="en" class="one-liner"><span class="hl">Balancing</span> security against expense</p><p data-i18n="es" class="one-liner"><span class="hl">Equilibrar</span> seguridad y gasto</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>重要系に監視限定</li><li>リスク優先順位</li></ul>
-      <ul class="example-list" data-i18n="en"><li>重要系に監視限定</li><li>リスク優先順位</li></ul>
-      <ul class="example-list" data-i18n="es"><li>重要系に監視限定</li><li>リスク優先順位</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Monitoring only critical systems</li><li>Prioritizing by risk</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Supervisar solo los sistemas críticos</li><li>Priorizar según el riesgo</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-responsiveness" data-search="応答性 responsiveness  要求に適切な速度で応答する能力 wafルール調整 性能との両立">
+<article class="memo-card" id="c-1-responsiveness" data-search="応答性 responsiveness capacidad de respuesta 要求に適切な速度で応答する能力 wafルール調整 性能との両立">
   <h3>
     <span data-i18n="ja">応答性<span class="en">Responsiveness</span></span>
     <span data-i18n="en">Responsiveness</span>
-    <span data-i18n="es">応答性</span>
+    <span data-i18n="es">Capacidad de respuesta</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">要求に<span class="hl">適切な速度で応答</span>する能力</p><p data-i18n="en" class="one-liner">要求に<span class="hl">適切な速度で応答</span>する能力</p><p data-i18n="es" class="one-liner">要求に<span class="hl">適切な速度で応答</span>する能力</p>
+    <p data-i18n="ja" class="one-liner">要求に<span class="hl">適切な速度で応答</span>する能力</p><p data-i18n="en" class="one-liner">Ability to <span class="hl">respond at an appropriate speed</span></p><p data-i18n="es" class="one-liner">Capacidad de <span class="hl">responder a una velocidad adecuada</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>WAFルール調整</li><li>性能との両立</li></ul>
-      <ul class="example-list" data-i18n="en"><li>WAFルール調整</li><li>性能との両立</li></ul>
-      <ul class="example-list" data-i18n="es"><li>WAFルール調整</li><li>性能との両立</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Tuning WAF rules</li><li>Balancing with performance</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Ajuste de reglas del WAF</li><li>Equilibrio con el rendimiento</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-scalability" data-search="スケーラビリティ scalability  負荷に応じ拡張・縮小できる能力 オートスケール 認証基盤の増減">
+<article class="memo-card" id="c-1-scalability" data-search="スケーラビリティ scalability escalabilidad 負荷に応じ拡張・縮小できる能力 オートスケール 認証基盤の増減">
   <h3>
     <span data-i18n="ja">スケーラビリティ<span class="en">Scalability</span></span>
     <span data-i18n="en">Scalability</span>
-    <span data-i18n="es">スケーラビリティ</span>
+    <span data-i18n="es">Escalabilidad</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">負荷に応じ<span class="hl">拡張・縮小</span>できる能力</p><p data-i18n="en" class="one-liner">負荷に応じ<span class="hl">拡張・縮小</span>できる能力</p><p data-i18n="es" class="one-liner">負荷に応じ<span class="hl">拡張・縮小</span>できる能力</p>
+    <p data-i18n="ja" class="one-liner">負荷に応じ<span class="hl">拡張・縮小</span>できる能力</p><p data-i18n="en" class="one-liner">Ability to <span class="hl">scale out and in</span> with demand</p><p data-i18n="es" class="one-liner">Capacidad de <span class="hl">ampliarse y reducirse</span> según la demanda</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>オートスケール</li><li>認証基盤の増減</li></ul>
-      <ul class="example-list" data-i18n="en"><li>オートスケール</li><li>認証基盤の増減</li></ul>
-      <ul class="example-list" data-i18n="es"><li>オートスケール</li><li>認証基盤の増減</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Autoscaling</li><li>Scaling the authentication platform</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Escalado automático</li><li>Escalado de la plataforma de autenticación</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-ease-of-deployment" data-search="デプロイの容易さ ease of deployment  変更を速く確実に本番反映できる力 ci/cdパイプライン 設定の自動適用">
+<article class="memo-card" id="c-1-ease-of-deployment" data-search="デプロイの容易さ ease of deployment facilidad de despliegue 変更を速く確実に本番反映できる力 ci/cdパイプライン 設定の自動適用">
   <h3>
     <span data-i18n="ja">デプロイの容易さ<span class="en">Ease of deployment</span></span>
     <span data-i18n="en">Ease of deployment</span>
-    <span data-i18n="es">デプロイの容易さ</span>
+    <span data-i18n="es">Facilidad de despliegue</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">変更を<span class="hl">速く確実に本番反映</span>できる力</p><p data-i18n="en" class="one-liner">変更を<span class="hl">速く確実に本番反映</span>できる力</p><p data-i18n="es" class="one-liner">変更を<span class="hl">速く確実に本番反映</span>できる力</p>
+    <p data-i18n="ja" class="one-liner">変更を<span class="hl">速く確実に本番反映</span>できる力</p><p data-i18n="en" class="one-liner">Ability to get changes into <span class="hl">production quickly and reliably</span></p><p data-i18n="es" class="one-liner">Capacidad de llevar cambios a <span class="hl">producción de forma rápida y fiable</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>CI/CDパイプライン</li><li>設定の自動適用</li></ul>
-      <ul class="example-list" data-i18n="en"><li>CI/CDパイプライン</li><li>設定の自動適用</li></ul>
-      <ul class="example-list" data-i18n="es"><li>CI/CDパイプライン</li><li>設定の自動適用</li></ul>
+      <ul class="example-list" data-i18n="en"><li>CI/CD pipeline</li><li>Automatic config rollout</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Canalización CI/CD</li><li>Aplicación automática de la configuración</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title"><span data-i18n="ja">運用の制約（移転・復旧・パッチ・資源）</span><span data-i18n="en">運用の制約（移転・復旧・パッチ・資源）</span><span data-i18n="es">運用の制約（移転・復旧・パッチ・資源）</span></h2>
-<article class="memo-card" id="c-1-risk-transference" data-search="リスク移転 risk transference  難しいリスクを外部へ移すこと サイバー保険 損害賠償カバー">
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">運用の制約（移転・復旧・パッチ・資源）</span><span data-i18n="en">Operational constraints (transfer, recovery, patching, resources)</span><span data-i18n="es">Restricciones operativas (transferencia, recuperación, parches y recursos)</span></h2>
+<article class="memo-card" id="c-1-risk-transference" data-search="リスク移転 risk transference transferencia del riesgo 難しいリスクを外部へ移すこと サイバー保険 損害賠償カバー">
   <h3>
     <span data-i18n="ja">リスク移転<span class="en">Risk transference</span></span>
     <span data-i18n="en">Risk transference</span>
-    <span data-i18n="es">リスク移転</span>
+    <span data-i18n="es">Transferencia del riesgo</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">難しいリスクを<span class="hl">外部へ移す</span>こと</p><p data-i18n="en" class="one-liner">難しいリスクを<span class="hl">外部へ移す</span>こと</p><p data-i18n="es" class="one-liner">難しいリスクを<span class="hl">外部へ移す</span>こと</p>
+    <p data-i18n="ja" class="one-liner">難しいリスクを<span class="hl">外部へ移す</span>こと</p><p data-i18n="en" class="one-liner"><span class="hl">Moving</span> hard-to-handle risk to an outside party</p><p data-i18n="es" class="one-liner"><span class="hl">Trasladar</span> a un tercero un riesgo difícil de asumir</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>サイバー保険</li><li>損害賠償カバー</li></ul>
-      <ul class="example-list" data-i18n="en"><li>サイバー保険</li><li>損害賠償カバー</li></ul>
-      <ul class="example-list" data-i18n="es"><li>サイバー保険</li><li>損害賠償カバー</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Cyber insurance</li><li>Liability coverage</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Ciberseguro</li><li>Cobertura de responsabilidad civil</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-ease-of-recovery" data-search="回復の容易さ ease of recovery  障害後に迅速復旧できる能力 定期バックアップ オフサイト保管">
+<article class="memo-card" id="c-1-ease-of-recovery" data-search="回復の容易さ ease of recovery facilidad de recuperación 障害後に迅速復旧できる能力 定期バックアップ オフサイト保管">
   <h3>
     <span data-i18n="ja">回復の容易さ<span class="en">Ease of recovery</span></span>
     <span data-i18n="en">Ease of recovery</span>
-    <span data-i18n="es">回復の容易さ</span>
+    <span data-i18n="es">Facilidad de recuperación</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">障害後に<span class="hl">迅速復旧</span>できる能力</p><p data-i18n="en" class="one-liner">障害後に<span class="hl">迅速復旧</span>できる能力</p><p data-i18n="es" class="one-liner">障害後に<span class="hl">迅速復旧</span>できる能力</p>
+    <p data-i18n="ja" class="one-liner">障害後に<span class="hl">迅速復旧</span>できる能力</p><p data-i18n="en" class="one-liner">Ability to <span class="hl">recover quickly</span> after a failure</p><p data-i18n="es" class="one-liner">Capacidad de <span class="hl">recuperarse rápido</span> tras un fallo</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>定期バックアップ</li><li>オフサイト保管</li></ul>
-      <ul class="example-list" data-i18n="en"><li>定期バックアップ</li><li>オフサイト保管</li></ul>
-      <ul class="example-list" data-i18n="es"><li>定期バックアップ</li><li>オフサイト保管</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Regular backups</li><li>Offsite storage</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Copias de seguridad periódicas</li><li>Almacenamiento externo</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-patch-availability" data-search="パッチの可用性 patch availability  修正パッチが迅速に提供されるか windows更新 wannacry教訓">
+<article class="memo-card" id="c-1-patch-availability" data-search="パッチの可用性 patch availability disponibilidad de parches 修正パッチが迅速に提供されるか windows更新 wannacry教訓">
   <h3>
     <span data-i18n="ja">パッチの可用性<span class="en">Patch availability</span></span>
     <span data-i18n="en">Patch availability</span>
-    <span data-i18n="es">パッチの可用性</span>
+    <span data-i18n="es">Disponibilidad de parches</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">修正パッチが<span class="hl">迅速に提供</span>されるか</p><p data-i18n="en" class="one-liner">修正パッチが<span class="hl">迅速に提供</span>されるか</p><p data-i18n="es" class="one-liner">修正パッチが<span class="hl">迅速に提供</span>されるか</p>
+    <p data-i18n="ja" class="one-liner">修正パッチが<span class="hl">迅速に提供</span>されるか</p><p data-i18n="en" class="one-liner">Whether fixes are <span class="hl">released promptly</span></p><p data-i18n="es" class="one-liner">Si las correcciones <span class="hl">se publican con rapidez</span></p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>Windows更新</li><li>WannaCry教訓</li></ul>
-      <ul class="example-list" data-i18n="en"><li>Windows更新</li><li>WannaCry教訓</li></ul>
-      <ul class="example-list" data-i18n="es"><li>Windows更新</li><li>WannaCry教訓</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Windows updates</li><li>Lessons from WannaCry</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Actualizaciones de Windows</li><li>Lecciones de WannaCry</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-inability-to-patch" data-search="パッチ適用不可 inability to patch  事情によりパッチを当てられない状況 レガシー互換 停止できない本番">
+<article class="memo-card" id="c-1-inability-to-patch" data-search="パッチ適用不可 inability to patch imposibilidad de aplicar parches 事情によりパッチを当てられない状況 レガシー互換 停止できない本番">
   <h3>
     <span data-i18n="ja">パッチ適用不可<span class="en">Inability to patch</span></span>
     <span data-i18n="en">Inability to patch</span>
-    <span data-i18n="es">パッチ適用不可</span>
+    <span data-i18n="es">Imposibilidad de aplicar parches</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">事情によりパッチを<span class="hl">当てられない</span>状況</p><p data-i18n="en" class="one-liner">事情によりパッチを<span class="hl">当てられない</span>状況</p><p data-i18n="es" class="one-liner">事情によりパッチを<span class="hl">当てられない</span>状況</p>
+    <p data-i18n="ja" class="one-liner">事情によりパッチを<span class="hl">当てられない</span>状況</p><p data-i18n="en" class="one-liner">Situations where patches <span class="hl">can't be applied</span></p><p data-i18n="es" class="one-liner">Situaciones en las que <span class="hl">no se pueden aplicar</span> parches</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>レガシー互換</li><li>停止できない本番</li></ul>
-      <ul class="example-list" data-i18n="en"><li>レガシー互換</li><li>停止できない本番</li></ul>
-      <ul class="example-list" data-i18n="es"><li>レガシー互換</li><li>停止できない本番</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Legacy compatibility</li><li>Production that can't be stopped</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Compatibilidad con sistemas heredados</li><li>Producción que no puede detenerse</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-power" data-search="電力 power  稼働基盤としての安定電源と停電対策 ups 冗長電源">
+<article class="memo-card" id="c-1-power" data-search="電力 power energía 稼働基盤としての安定電源と停電対策 ups 冗長電源">
   <h3>
     <span data-i18n="ja">電力<span class="en">Power</span></span>
     <span data-i18n="en">Power</span>
-    <span data-i18n="es">電力</span>
+    <span data-i18n="es">Energía</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">稼働基盤としての<span class="hl">安定電源</span>と停電対策</p><p data-i18n="en" class="one-liner">稼働基盤としての<span class="hl">安定電源</span>と停電対策</p><p data-i18n="es" class="one-liner">稼働基盤としての<span class="hl">安定電源</span>と停電対策</p>
+    <p data-i18n="ja" class="one-liner">稼働基盤としての<span class="hl">安定電源</span>と停電対策</p><p data-i18n="en" class="one-liner">A <span class="hl">stable power supply</span> and outage protection as a foundation</p><p data-i18n="es" class="one-liner"><span class="hl">Suministro eléctrico estable</span> y protección ante cortes como base</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>UPS</li><li>冗長電源</li></ul>
-      <ul class="example-list" data-i18n="en"><li>UPS</li><li>冗長電源</li></ul>
-      <ul class="example-list" data-i18n="es"><li>UPS</li><li>冗長電源</li></ul>
+      <ul class="example-list" data-i18n="en"><li>UPS</li><li>Redundant power</li></ul>
+      <ul class="example-list" data-i18n="es"><li>SAI (UPS)</li><li>Alimentación redundante</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-compute" data-search="演算能力 compute  セキュリティ処理に必要な計算リソース tls終端負荷 鍵長とcpu">
+<article class="memo-card" id="c-1-compute" data-search="演算能力 compute capacidad de cómputo セキュリティ処理に必要な計算リソース tls終端負荷 鍵長とcpu">
   <h3>
     <span data-i18n="ja">演算能力<span class="en">Compute</span></span>
     <span data-i18n="en">Compute</span>
-    <span data-i18n="es">演算能力</span>
+    <span data-i18n="es">Capacidad de cómputo</span>
   </h3>
   <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p data-i18n="ja" class="one-liner">セキュリティ処理に必要な<span class="hl">計算リソース</span></p><p data-i18n="en" class="one-liner">セキュリティ処理に必要な<span class="hl">計算リソース</span></p><p data-i18n="es" class="one-liner">セキュリティ処理に必要な<span class="hl">計算リソース</span></p>
+    <p data-i18n="ja" class="one-liner">セキュリティ処理に必要な<span class="hl">計算リソース</span></p><p data-i18n="en" class="one-liner">The <span class="hl">computing resources</span> security processing needs</p><p data-i18n="es" class="one-liner">Los <span class="hl">recursos de cálculo</span> que requiere el procesamiento de seguridad</p>
     <div class="examples">
       <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
       <ul class="example-list" data-i18n="ja"><li>TLS終端負荷</li><li>鍵長とCPU</li></ul>
-      <ul class="example-list" data-i18n="en"><li>TLS終端負荷</li><li>鍵長とCPU</li></ul>
-      <ul class="example-list" data-i18n="es"><li>TLS終端負荷</li><li>鍵長とCPU</li></ul>
+      <ul class="example-list" data-i18n="en"><li>TLS termination load</li><li>Key length and CPU</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Carga de terminación TLS</li><li>Longitud de clave y CPU</li></ul>
     </div>
   </div>
 </article>
@@ -515,10 +515,10 @@
     <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（24問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (24 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (24 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
-  <script type="application/json" id="quiz-data">[{"term": "c-1-responsibility-matrix", "stem": "PaaS上でWebアプリを運用する企業が、アプリの脆弱性対策とアクセス制御を自社で実施し、OSやミドルウェアは事業者側の責任としている。この考え方を最もよく表すものはどれか。", "choices": ["エアギャップ", "クラウドの責任マトリクス", "リスク移転", "SDN"], "answer": 1, "explain": "クラウド事業者とユーザーの責任範囲をモデルごとに整理するのが責任マトリクス（共有責任）である。"}, {"term": "c-1-iac", "stem": "開発・ステージング・本番のサーバー構成をテキストで定義し、同じ内容を自動で再現できるようにした。この手法はどれか。", "choices": ["サーバーレス", "マイクロサービス", "IaC（Infrastructure as Code）", "コンテナ化"], "answer": 2, "explain": "インフラ設定をコードで定義し自動化・再現するのが IaC である。"}, {"term": "c-1-serverless", "stem": "開発チームがサーバー調達やOS設定を行わず、クラウド上の関数にビジネスロジックだけを実装して処理を動かしている。このモデルはどれか。", "choices": ["仮想化", "エアギャップ", "ICS", "サーバーレス"], "answer": 3, "explain": "サーバー管理を提供者に任せアプリ実装に集中するのがサーバーレスである。サーバーが物理的に無いわけではない。"}, {"term": "c-1-microservices", "stem": "ECサイトのユーザー管理・商品・注文・決済を別サービスに分け、注文だけを独立してデプロイできるようにした。この設計はどれか。", "choices": ["モノリスのみの設計", "エアギャップ", "リスク移転", "マイクロサービス"], "answer": 3, "explain": "機能を独立サービスに分割し、独立デプロイ・スケーリングできるのがマイクロサービスである。"}, {"term": "c-1-air-gap", "stem": "政府機関が機密システムをインターネットから物理的に切り離し、データの持ち込みを厳格に管理している。この構成はどれか。", "choices": ["SDN", "サーバーレス", "エアギャップ", "コンテナ化"], "answer": 2, "explain": "外部ネットワークから物理的に隔離するのがエアギャップである。"}, {"term": "c-1-sdn", "stem": "データセンターで、個々のスイッチ設定ではなくコントローラに制御を集約し、データプレーンとコントロールプレーンを分離して運用している。この技術はどれか。", "choices": ["エアギャップ", "RTOS", "リスク移転", "SDN"], "answer": 3, "explain": "ソフトウェアでネットワークを集中制御し、プレーンを分離するのが SDN である。"}, {"term": "c-1-centralized-decentralized", "stem": "従来の銀行システム（中央で一括処理）と、多数ノードで検証するブロックチェーン型システムを比較するとき、講義が示す対比の軸はどれか。", "choices": ["対称暗号と非対称暗号", "集中型と分散型", "予防的と検出的", "IaaSとPaaSのみ"], "answer": 1, "explain": "統一性・効率と障害影響範囲、耐障害性と管理コストなど、集中型と分散型の一長一短を比較する。"}, {"term": "c-1-containerization", "stem": "Webアプリのコード・ランタイム・ライブラリを一つのイメージにまとめ、ホストOSのカーネルを共有して軽量に動かしている。この技術はどれか。", "choices": ["エアギャップ", "サイバー保険", "コンテナ化", "UPS"], "answer": 2, "explain": "アプリと依存関係をコンテナにまとめ、環境差を吸収しつつホストカーネルを共有するのがコンテナ化である。"}, {"term": "c-1-virtualization", "stem": "1台の物理サーバー上に複数の仮想マシンを作り、それぞれが独自のOSを実行している。この技術はどれか。", "choices": ["仮想化", "エアギャップ", "リスク移転", "パッチ適用不可"], "answer": 0, "explain": "物理ハードを仮想分割し、複数VM（各々独自OS）を動かすのが仮想化である。"}, {"term": "c-1-iot", "stem": "工場出荷時のデフォルトパスワードのままの大量の接続機器が乗っ取られ、大規模DDoSの踏み台になった。講義で示すこの問題領域はどれか。", "choices": ["SDN", "IaC", "マイクロサービス", "IoT"], "answer": 3, "explain": "Mirai に代表されるように、IoT デバイスの弱い初期設定がネットワーク全体のリスクにつながる。"}, {"term": "c-1-ics-scada", "stem": "電力会社が発電・送電設備の出力や電圧を常時監視し、需要に応じて自動調整している。この種の産業制御の枠組みとして最も適切なものはどれか。", "choices": ["サーバーレス", "ICSとSCADA", "シャドーIT", "コンテナ化"], "answer": 1, "explain": "電力・ガス・水道などのプラント監視制御は ICS／SCADA の領域である。"}, {"term": "c-1-rtos", "stem": "自動車のエンジン制御で、センサーデータを決められた時間内に処理し燃料噴射タイミングを保証するOSが使われている。これはどれか。", "choices": ["汎用デスクトップOSのみ", "SDNコントローラ", "RTOS", "責任マトリクス"], "answer": 2, "explain": "応答性と予測可能性を重視し、締切どおりの処理を保証するのが RTOS である。"}, {"term": "c-1-availability", "stem": "ECサイトが単一障害点やDDoSの影響で長時間アクセス不能になり、買い物ができなくなった。設計上とくに損なわれた考慮事項はどれか。", "choices": ["ステガノグラフィ", "鍵エスクロー", "データマスキング", "可用性"], "answer": 3, "explain": "必要なときに利用できる度合いが可用性であり、冗長化や負荷分散で高める。"}, {"term": "c-1-resilience", "stem": "データセンター被災後も、冗長構成と自動復旧の仕組みによりサービス機能を維持し早期に平常運転へ戻した。この能力を最もよく表す用語はどれか。", "choices": ["レジリエンス", "コスト削減のみ", "パッチ適用不可", "エアギャップ"], "answer": 0, "explain": "障害・攻撃下での機能維持と速やかな回復がレジリエンスである。"}, {"term": "c-1-cost", "stem": "24時間365日の有人監視は効果的だが費用が膨大なため、重要システムに限定し自動化も併用した。この判断が示す考慮事項はどれか。", "choices": ["エアギャップ", "IoTセグメンテーションのみ", "コスト", "RTOS"], "answer": 2, "explain": "安全性と費用のバランスを取り、リスク評価に基づき優先順位を付けるのがコストの観点である。"}, {"term": "c-1-responsiveness", "stem": "WAFの検査ルールが複雑すぎてページ応答が遅くなり、ユーザー体験が悪化した。調整で改善すべき考慮事項はどれか。", "choices": ["リスク移転", "応答性", "エアギャップ", "電力"], "answer": 1, "explain": "セキュリティ処理とパフォーマンスのバランスを取り、適切な応答速度を保つのが応答性である。"}, {"term": "c-1-scalability", "stem": "利用者増加に合わせ認証サーバーのインスタンスを自動で増減できるように設計した。この能力はどれか。", "choices": ["スケーラビリティ", "パッチ適用不可", "エアギャップ", "鍵エスクロー"], "answer": 0, "explain": "負荷や要件変化に応じて拡張・縮小できる能力がスケーラビリティである。"}, {"term": "c-1-ease-of-deployment", "stem": "脆弱性修正を含む変更を、手作業ミスを減らしつつCI/CDで速やかに本番へ反映できる体制を整えた。この考慮事項はどれか。", "choices": ["デプロイの容易さ", "エアギャップ", "ICS", "Mirai"], "answer": 0, "explain": "変更を迅速かつ確実に本番反映できる能力がデプロイの容易さである。"}, {"term": "c-1-risk-transference", "stem": "情報漏えい時の損害賠償や事故対応費用に備え、サイバー保険に加入した。このリスク対応はどれか。", "choices": ["リスク回避のみ", "パッチ適用", "コンテナ化", "リスク移転"], "answer": 3, "explain": "自組織で抱えきれない影響を保険など外部へ移すのがリスク移転である。"}, {"term": "c-1-ease-of-recovery", "stem": "ランサムウェアでデータが暗号化されても、オフサイトの定期バックアップから迅速に復元できるよう手順と訓練を整えている。焦点となっている考慮事項はどれか。", "choices": ["サーバーレス", "回復の容易さ", "SDN", "マイクロサービス"], "answer": 1, "explain": "インシデント後に迅速復旧できる能力が回復の容易さであり、バックアップと復旧訓練が典型策である。"}, {"term": "c-1-patch-availability", "stem": "導入予定の製品について、脆弱性発見後にベンダーが修正パッチを速やかに出せるかを評価している。この考慮事項はどれか。", "choices": ["パッチの可用性", "エアギャップ", "集中型のみ", "ステガノグラフィ"], "answer": 0, "explain": "修正パッチが迅速に提供されるかどうかがパッチの可用性である。"}, {"term": "c-1-inability-to-patch", "stem": "レガシー制御システムは互換性の問題と停止不可の業務要件からセキュリティ更新を当てられず、代替の防御策を検討している。この状況はどれか。", "choices": ["パッチ適用不可", "サーバーレス", "IaC", "責任マトリクスの廃止"], "answer": 0, "explain": "パッチを適用できない状況では理由の明確化・リスク評価と代替対策が必要になる。"}, {"term": "c-1-power", "stem": "停電時もシステムを保護するためUPSを導入し、電源経路を二重化して単一障害点を減らした。この考慮事項はどれか。", "choices": ["マイクロサービス", "電力", "コンテナ化", "IaC"], "answer": 1, "explain": "安定供給と停電対策（UPS・冗長電源）は電力の観点である。"}, {"term": "c-1-compute", "stem": "高トラフィックサイトでTLSの暗号化・復号がCPUを逼迫し、ボトルネックになりそうなので処理能力を見積もり直した。この考慮事項はどれか。", "choices": ["エアギャップ", "リスク移転", "演算能力", "シャドーIT"], "answer": 2, "explain": "セキュリティ機能の実行に必要な処理能力を見積もるのが演算能力（Compute）の観点である。"}]</script>
+  <script type="application/json" id="quiz-data">[{"term": "c-1-responsibility-matrix", "stem": "PaaS上でWebアプリを運用する企業が、アプリの脆弱性対策とアクセス制御を自社で実施し、OSやミドルウェアは事業者側の責任としている。この考え方を最もよく表すものはどれか。", "choices": ["エアギャップ", "クラウドの責任マトリクス", "リスク移転", "SDN"], "answer": 1, "explain": "クラウド事業者とユーザーの責任範囲をモデルごとに整理するのが責任マトリクス（共有責任）である。", "stem_en": "A company running a web app on PaaS handles app vulnerability fixes and access control itself, leaving the OS and middleware to the provider. What best describes this approach?", "choices_en": ["Air gap", "Cloud responsibility matrix", "Risk transference", "SDN"], "explain_en": "Sorting out the responsibilities of the cloud provider and the customer for each model is the responsibility matrix (shared responsibility).", "stem_es": "Una empresa que ejecuta una aplicación web en PaaS se ocupa ella misma de corregir vulnerabilidades de la aplicación y del control de acceso, y deja el SO y el middleware al proveedor. ¿Qué describe mejor este enfoque?", "choices_es": ["Aislamiento físico", "Matriz de responsabilidad en la nube", "Transferencia del riesgo", "SDN"], "explain_es": "Delimitar las responsabilidades del proveedor y del cliente en cada modelo es la matriz de responsabilidad (responsabilidad compartida)."}, {"term": "c-1-iac", "stem": "開発・ステージング・本番のサーバー構成をテキストで定義し、同じ内容を自動で再現できるようにした。この手法はどれか。", "choices": ["サーバーレス", "マイクロサービス", "IaC（Infrastructure as Code）", "コンテナ化"], "answer": 2, "explain": "インフラ設定をコードで定義し自動化・再現するのが IaC である。", "stem_en": "Server configurations for dev, staging and production were defined in text so the same setup can be reproduced automatically. What is this approach?", "choices_en": ["Serverless", "Microservices", "IaC (Infrastructure as Code)", "Containerization"], "explain_en": "Defining infrastructure settings in code to automate and reproduce them is IaC.", "stem_es": "Las configuraciones de servidores de desarrollo, preproducción y producción se definieron en texto para reproducir la misma configuración automáticamente. ¿Qué enfoque es?", "choices_es": ["Sin servidor", "Microservicios", "IaC (infraestructura como código)", "Contenedorización"], "explain_es": "Definir la configuración de la infraestructura en código para automatizarla y reproducirla es IaC."}, {"term": "c-1-serverless", "stem": "開発チームがサーバー調達やOS設定を行わず、クラウド上の関数にビジネスロジックだけを実装して処理を動かしている。このモデルはどれか。", "choices": ["仮想化", "エアギャップ", "ICS", "サーバーレス"], "answer": 3, "explain": "サーバー管理を提供者に任せアプリ実装に集中するのがサーバーレスである。サーバーが物理的に無いわけではない。", "stem_en": "A dev team runs its processing by implementing only business logic in cloud functions, without procuring servers or configuring an OS. Which model is this?", "choices_en": ["Virtualization", "Air gap", "ICS", "Serverless"], "explain_en": "Leaving server management to the provider and focusing on the app is serverless. It doesn't mean there are no physical servers.", "stem_es": "Un equipo de desarrollo ejecuta su procesamiento implementando solo la lógica de negocio en funciones en la nube, sin adquirir servidores ni configurar un SO. ¿Qué modelo es?", "choices_es": ["Virtualización", "Aislamiento físico", "ICS", "Sin servidor"], "explain_es": "Delegar la gestión de servidores en el proveedor y centrarse en la aplicación es serverless. No significa que no existan servidores físicos."}, {"term": "c-1-microservices", "stem": "ECサイトのユーザー管理・商品・注文・決済を別サービスに分け、注文だけを独立してデプロイできるようにした。この設計はどれか。", "choices": ["モノリスのみの設計", "エアギャップ", "リスク移転", "マイクロサービス"], "answer": 3, "explain": "機能を独立サービスに分割し、独立デプロイ・スケーリングできるのがマイクロサービスである。", "stem_en": "An online store split user management, products, orders and payments into separate services so orders alone can be deployed independently. What design is this?", "choices_en": ["Monolith-only design", "Air gap", "Risk transference", "Microservices"], "explain_en": "Splitting features into independent services that can be deployed and scaled separately is microservices.", "stem_es": "Una tienda en línea separó la gestión de usuarios, productos, pedidos y pagos en servicios distintos para poder desplegar solo los pedidos de forma independiente. ¿Qué diseño es?", "choices_es": ["Diseño solo monolítico", "Aislamiento físico", "Transferencia del riesgo", "Microservicios"], "explain_es": "Dividir las funciones en servicios independientes que se despliegan y escalan por separado es una arquitectura de microservicios."}, {"term": "c-1-air-gap", "stem": "政府機関が機密システムをインターネットから物理的に切り離し、データの持ち込みを厳格に管理している。この構成はどれか。", "choices": ["SDN", "サーバーレス", "エアギャップ", "コンテナ化"], "answer": 2, "explain": "外部ネットワークから物理的に隔離するのがエアギャップである。", "stem_en": "A government agency physically disconnected a classified system from the internet and strictly controls any data brought in. What configuration is this?", "choices_en": ["SDN", "Serverless", "Air gap", "Containerization"], "explain_en": "Physically isolating a system from outside networks is an air gap.", "stem_es": "Un organismo público desconectó físicamente de internet un sistema clasificado y controla estrictamente cualquier dato que se introduzca. ¿Qué configuración es?", "choices_es": ["SDN", "Sin servidor", "Aislamiento físico (air gap)", "Contenedorización"], "explain_es": "Aislar físicamente un sistema de las redes externas es un air gap."}, {"term": "c-1-sdn", "stem": "データセンターで、個々のスイッチ設定ではなくコントローラに制御を集約し、データプレーンとコントロールプレーンを分離して運用している。この技術はどれか。", "choices": ["エアギャップ", "RTOS", "リスク移転", "SDN"], "answer": 3, "explain": "ソフトウェアでネットワークを集中制御し、プレーンを分離するのが SDN である。", "stem_en": "A data center centralizes control in a controller instead of configuring each switch, and separates the data plane from the control plane. What technology is this?", "choices_en": ["Air gap", "RTOS", "Risk transference", "SDN"], "explain_en": "Controlling the network centrally in software and separating the planes is SDN.", "stem_es": "Un centro de datos centraliza el control en un controlador en lugar de configurar cada switch, y separa el plano de datos del plano de control. ¿Qué tecnología es?", "choices_es": ["Aislamiento físico", "RTOS", "Transferencia del riesgo", "SDN"], "explain_es": "Controlar la red de forma centralizada por software y separar los planos es SDN."}, {"term": "c-1-centralized-decentralized", "stem": "従来の銀行システム（中央で一括処理）と、多数ノードで検証するブロックチェーン型システムを比較するとき、講義が示す対比の軸はどれか。", "choices": ["対称暗号と非対称暗号", "集中型と分散型", "予防的と検出的", "IaaSとPaaSのみ"], "answer": 1, "explain": "統一性・効率と障害影響範囲、耐障害性と管理コストなど、集中型と分散型の一長一短を比較する。", "stem_en": "When comparing a traditional banking system (central batch processing) with a blockchain-style system verified by many nodes, what axis of comparison does the lesson present?", "choices_en": ["Symmetric vs. asymmetric encryption", "Centralized vs. decentralized", "Preventive vs. detective", "IaaS vs. PaaS only"], "explain_en": "You compare the pros and cons of centralized vs. decentralized: consistency and efficiency vs. blast radius, fault tolerance vs. management cost, and so on.", "stem_es": "Al comparar un sistema bancario tradicional (procesamiento central por lotes) con un sistema tipo blockchain verificado por muchos nodos, ¿qué eje de comparación presenta la lección?", "choices_es": ["Cifrado simétrico frente a asimétrico", "Centralizado frente a descentralizado", "Preventivo frente a de detección", "Solo IaaS frente a PaaS"], "explain_es": "Se comparan ventajas e inconvenientes de lo centralizado frente a lo descentralizado: coherencia y eficiencia frente a alcance de los fallos, tolerancia a fallos frente a coste de gestión, etc."}, {"term": "c-1-containerization", "stem": "Webアプリのコード・ランタイム・ライブラリを一つのイメージにまとめ、ホストOSのカーネルを共有して軽量に動かしている。この技術はどれか。", "choices": ["エアギャップ", "サイバー保険", "コンテナ化", "UPS"], "answer": 2, "explain": "アプリと依存関係をコンテナにまとめ、環境差を吸収しつつホストカーネルを共有するのがコンテナ化である。", "stem_en": "A web app's code, runtime and libraries are bundled into a single image that runs lightly while sharing the host OS kernel. What technology is this?", "choices_en": ["Air gap", "Cyber insurance", "Containerization", "UPS"], "explain_en": "Bundling an app and its dependencies into a container that smooths over environment differences while sharing the host kernel is containerization.", "stem_es": "El código, el entorno de ejecución y las bibliotecas de una aplicación web se empaquetan en una sola imagen que se ejecuta de forma ligera compartiendo el kernel del SO del host. ¿Qué tecnología es?", "choices_es": ["Aislamiento físico", "Ciberseguro", "Contenedorización", "SAI (UPS)"], "explain_es": "Empaquetar una aplicación y sus dependencias en un contenedor que absorbe las diferencias de entorno y comparte el kernel del host es la contenedorización."}, {"term": "c-1-virtualization", "stem": "1台の物理サーバー上に複数の仮想マシンを作り、それぞれが独自のOSを実行している。この技術はどれか。", "choices": ["仮想化", "エアギャップ", "リスク移転", "パッチ適用不可"], "answer": 0, "explain": "物理ハードを仮想分割し、複数VM（各々独自OS）を動かすのが仮想化である。", "stem_en": "Several virtual machines are created on one physical server, each running its own OS. What technology is this?", "choices_en": ["Virtualization", "Air gap", "Risk transference", "Inability to patch"], "explain_en": "Dividing physical hardware virtually to run multiple VMs, each with its own OS, is virtualization.", "stem_es": "En un servidor físico se crean varias máquinas virtuales, cada una con su propio SO. ¿Qué tecnología es?", "choices_es": ["Virtualización", "Aislamiento físico", "Transferencia del riesgo", "Imposibilidad de aplicar parches"], "explain_es": "Dividir virtualmente el hardware físico para ejecutar varias VM, cada una con su propio SO, es virtualización."}, {"term": "c-1-iot", "stem": "工場出荷時のデフォルトパスワードのままの大量の接続機器が乗っ取られ、大規模DDoSの踏み台になった。講義で示すこの問題領域はどれか。", "choices": ["SDN", "IaC", "マイクロサービス", "IoT"], "answer": 3, "explain": "Mirai に代表されるように、IoT デバイスの弱い初期設定がネットワーク全体のリスクにつながる。", "stem_en": "Huge numbers of connected devices still on factory-default passwords were hijacked and used as launchpads for a massive DDoS. Which problem area from the lesson is this?", "choices_en": ["SDN", "IaC", "Microservices", "IoT"], "explain_en": "As Mirai showed, weak default settings on IoT devices put the whole network at risk.", "stem_es": "Enormes cantidades de dispositivos conectados con las contraseñas de fábrica fueron secuestrados y usados como plataforma para un DDoS masivo. ¿Qué área problemática de la lección es esta?", "choices_es": ["SDN", "IaC", "Microservicios", "IoT"], "explain_es": "Como demostró Mirai, la configuración inicial débil de los dispositivos IoT pone en riesgo toda la red."}, {"term": "c-1-ics-scada", "stem": "電力会社が発電・送電設備の出力や電圧を常時監視し、需要に応じて自動調整している。この種の産業制御の枠組みとして最も適切なものはどれか。", "choices": ["サーバーレス", "ICSとSCADA", "シャドーIT", "コンテナ化"], "answer": 1, "explain": "電力・ガス・水道などのプラント監視制御は ICS／SCADA の領域である。", "stem_en": "A power company constantly monitors the output and voltage of its generation and transmission equipment and adjusts them automatically to demand. Which industrial control framework fits best?", "choices_en": ["Serverless", "ICS and SCADA", "Shadow IT", "Containerization"], "explain_en": "Supervisory control of plants for electricity, gas and water belongs to ICS/SCADA.", "stem_es": "Una eléctrica supervisa constantemente la potencia y la tensión de sus equipos de generación y transmisión y las ajusta automáticamente a la demanda. ¿Qué marco de control industrial encaja mejor?", "choices_es": ["Sin servidor", "ICS y SCADA", "TI en la sombra", "Contenedorización"], "explain_es": "La supervisión y el control de plantas de electricidad, gas y agua pertenecen al ámbito ICS/SCADA."}, {"term": "c-1-rtos", "stem": "自動車のエンジン制御で、センサーデータを決められた時間内に処理し燃料噴射タイミングを保証するOSが使われている。これはどれか。", "choices": ["汎用デスクトップOSのみ", "SDNコントローラ", "RTOS", "責任マトリクス"], "answer": 2, "explain": "応答性と予測可能性を重視し、締切どおりの処理を保証するのが RTOS である。", "stem_en": "A car's engine control uses an OS that processes sensor data within set time limits to guarantee fuel injection timing. What is it?", "choices_en": ["General-purpose desktop OS only", "SDN controller", "RTOS", "Responsibility matrix"], "explain_en": "An OS that prioritizes responsiveness and predictability and guarantees processing by the deadline is an RTOS.", "stem_es": "El control del motor de un coche usa un SO que procesa los datos de los sensores en un tiempo fijado para garantizar el momento de la inyección de combustible. ¿Qué es?", "choices_es": ["Solo un SO de escritorio de uso general", "Controlador SDN", "RTOS", "Matriz de responsabilidad"], "explain_es": "Un SO que prioriza la capacidad de respuesta y la previsibilidad y garantiza el procesamiento en plazo es un RTOS."}, {"term": "c-1-availability", "stem": "ECサイトが単一障害点やDDoSの影響で長時間アクセス不能になり、買い物ができなくなった。設計上とくに損なわれた考慮事項はどれか。", "choices": ["ステガノグラフィ", "鍵エスクロー", "データマスキング", "可用性"], "answer": 3, "explain": "必要なときに利用できる度合いが可用性であり、冗長化や負荷分散で高める。", "stem_en": "An online store was unreachable for hours because of a single point of failure and a DDoS, so nobody could shop. Which design consideration was mainly compromised?", "choices_en": ["Steganography", "Key escrow", "Data masking", "Availability"], "explain_en": "How far a system is usable when needed is availability; redundancy and load balancing improve it.", "stem_es": "Una tienda en línea estuvo inaccesible durante horas por un punto único de fallo y un DDoS, y nadie podía comprar. ¿Qué consideración de diseño se vio afectada principalmente?", "choices_es": ["Esteganografía", "Custodia de claves", "Enmascaramiento de datos", "Disponibilidad"], "explain_es": "El grado en que un sistema está disponible cuando se necesita es la disponibilidad; la redundancia y el balanceo de carga la mejoran."}, {"term": "c-1-resilience", "stem": "データセンター被災後も、冗長構成と自動復旧の仕組みによりサービス機能を維持し早期に平常運転へ戻した。この能力を最もよく表す用語はどれか。", "choices": ["レジリエンス", "コスト削減のみ", "パッチ適用不可", "エアギャップ"], "answer": 0, "explain": "障害・攻撃下での機能維持と速やかな回復がレジリエンスである。", "stem_en": "After a data center was hit by a disaster, redundant configurations and automatic recovery kept services running and quickly restored normal operation. Which term best describes this capability?", "choices_en": ["Resilience", "Cost cutting only", "Inability to patch", "Air gap"], "explain_en": "Maintaining functions under failure or attack and recovering quickly is resilience.", "stem_es": "Tras un desastre en un centro de datos, la configuración redundante y la recuperación automática mantuvieron los servicios y devolvieron pronto la normalidad. ¿Qué término describe mejor esta capacidad?", "choices_es": ["Resiliencia", "Solo reducción de costes", "Imposibilidad de aplicar parches", "Aislamiento físico"], "explain_es": "Mantener las funciones ante fallos o ataques y recuperarse rápido es la resiliencia."}, {"term": "c-1-cost", "stem": "24時間365日の有人監視は効果的だが費用が膨大なため、重要システムに限定し自動化も併用した。この判断が示す考慮事項はどれか。", "choices": ["エアギャップ", "IoTセグメンテーションのみ", "コスト", "RTOS"], "answer": 2, "explain": "安全性と費用のバランスを取り、リスク評価に基づき優先順位を付けるのがコストの観点である。", "stem_en": "24/7 staffed monitoring is effective but very expensive, so it was limited to critical systems and combined with automation. Which consideration does this decision reflect?", "choices_en": ["Air gap", "IoT segmentation only", "Cost", "RTOS"], "explain_en": "Balancing security against expense and prioritizing based on risk assessment is the cost consideration.", "stem_es": "La supervisión con personal 24/7 es eficaz pero muy cara, así que se limitó a los sistemas críticos y se combinó con automatización. ¿Qué consideración refleja esta decisión?", "choices_es": ["Aislamiento físico", "Solo segmentación IoT", "Coste", "RTOS"], "explain_es": "Equilibrar seguridad y gasto, y priorizar según la evaluación de riesgos, es la consideración del coste."}, {"term": "c-1-responsiveness", "stem": "WAFの検査ルールが複雑すぎてページ応答が遅くなり、ユーザー体験が悪化した。調整で改善すべき考慮事項はどれか。", "choices": ["リスク移転", "応答性", "エアギャップ", "電力"], "answer": 1, "explain": "セキュリティ処理とパフォーマンスのバランスを取り、適切な応答速度を保つのが応答性である。", "stem_en": "The WAF's inspection rules were so complex that page responses slowed and the user experience suffered. Which consideration should tuning improve?", "choices_en": ["Risk transference", "Responsiveness", "Air gap", "Power"], "explain_en": "Balancing security processing with performance to keep response speed appropriate is responsiveness.", "stem_es": "Las reglas de inspección del WAF eran tan complejas que las páginas respondían lento y empeoró la experiencia de usuario. ¿Qué consideración debe mejorar el ajuste?", "choices_es": ["Transferencia del riesgo", "Capacidad de respuesta", "Aislamiento físico", "Energía"], "explain_es": "Equilibrar el procesamiento de seguridad con el rendimiento para mantener una velocidad de respuesta adecuada es la capacidad de respuesta."}, {"term": "c-1-scalability", "stem": "利用者増加に合わせ認証サーバーのインスタンスを自動で増減できるように設計した。この能力はどれか。", "choices": ["スケーラビリティ", "パッチ適用不可", "エアギャップ", "鍵エスクロー"], "answer": 0, "explain": "負荷や要件変化に応じて拡張・縮小できる能力がスケーラビリティである。", "stem_en": "The authentication servers were designed so instances automatically increase and decrease with the number of users. What capability is this?", "choices_en": ["Scalability", "Inability to patch", "Air gap", "Key escrow"], "explain_en": "The ability to scale out and in as load and requirements change is scalability.", "stem_es": "Los servidores de autenticación se diseñaron para que el número de instancias aumente y disminuya automáticamente según los usuarios. ¿Qué capacidad es?", "choices_es": ["Escalabilidad", "Imposibilidad de aplicar parches", "Aislamiento físico", "Custodia de claves"], "explain_es": "La capacidad de ampliarse y reducirse según cambian la carga y los requisitos es la escalabilidad."}, {"term": "c-1-ease-of-deployment", "stem": "脆弱性修正を含む変更を、手作業ミスを減らしつつCI/CDで速やかに本番へ反映できる体制を整えた。この考慮事項はどれか。", "choices": ["デプロイの容易さ", "エアギャップ", "ICS", "Mirai"], "answer": 0, "explain": "変更を迅速かつ確実に本番反映できる能力がデプロイの容易さである。", "stem_en": "The team set up CI/CD so changes, including vulnerability fixes, reach production quickly with fewer manual errors. Which consideration is this?", "choices_en": ["Ease of deployment", "Air gap", "ICS", "Mirai"], "explain_en": "The ability to get changes into production quickly and reliably is ease of deployment.", "stem_es": "El equipo montó CI/CD para que los cambios, incluidas las correcciones de vulnerabilidades, lleguen rápido a producción con menos errores manuales. ¿Qué consideración es?", "choices_es": ["Facilidad de despliegue", "Aislamiento físico", "ICS", "Mirai"], "explain_es": "La capacidad de llevar cambios a producción de forma rápida y fiable es la facilidad de despliegue."}, {"term": "c-1-risk-transference", "stem": "情報漏えい時の損害賠償や事故対応費用に備え、サイバー保険に加入した。このリスク対応はどれか。", "choices": ["リスク回避のみ", "パッチ適用", "コンテナ化", "リスク移転"], "answer": 3, "explain": "自組織で抱えきれない影響を保険など外部へ移すのがリスク移転である。", "stem_en": "To cover damages and incident response costs from a data breach, the company bought cyber insurance. What risk response is this?", "choices_en": ["Risk avoidance only", "Patching", "Containerization", "Risk transference"], "explain_en": "Shifting impact you can't absorb yourself to an outside party, such as an insurer, is risk transference.", "stem_es": "Para cubrir indemnizaciones y costes de respuesta ante una filtración de datos, la empresa contrató un ciberseguro. ¿Qué respuesta al riesgo es?", "choices_es": ["Solo evitar el riesgo", "Aplicación de parches", "Contenedorización", "Transferencia del riesgo"], "explain_es": "Trasladar a un tercero, como una aseguradora, un impacto que no puedes asumir es la transferencia del riesgo."}, {"term": "c-1-ease-of-recovery", "stem": "ランサムウェアでデータが暗号化されても、オフサイトの定期バックアップから迅速に復元できるよう手順と訓練を整えている。焦点となっている考慮事項はどれか。", "choices": ["サーバーレス", "回復の容易さ", "SDN", "マイクロサービス"], "answer": 1, "explain": "インシデント後に迅速復旧できる能力が回復の容易さであり、バックアップと復旧訓練が典型策である。", "stem_en": "Even if ransomware encrypts data, procedures and drills are in place to restore quickly from regular offsite backups. Which consideration is the focus?", "choices_en": ["Serverless", "Ease of recovery", "SDN", "Microservices"], "explain_en": "The ability to recover quickly after an incident is ease of recovery; backups and recovery drills are typical measures.", "stem_es": "Aunque el ransomware cifre los datos, hay procedimientos y simulacros para restaurar rápido desde copias externas periódicas. ¿En qué consideración se centra?", "choices_es": ["Sin servidor", "Facilidad de recuperación", "SDN", "Microservicios"], "explain_es": "La capacidad de recuperarse rápido tras un incidente es la facilidad de recuperación; las copias y los simulacros de recuperación son medidas típicas."}, {"term": "c-1-patch-availability", "stem": "導入予定の製品について、脆弱性発見後にベンダーが修正パッチを速やかに出せるかを評価している。この考慮事項はどれか。", "choices": ["パッチの可用性", "エアギャップ", "集中型のみ", "ステガノグラフィ"], "answer": 0, "explain": "修正パッチが迅速に提供されるかどうかがパッチの可用性である。", "stem_en": "For a product being considered, the team evaluates whether the vendor can quickly release fixes after a vulnerability is found. Which consideration is this?", "choices_en": ["Patch availability", "Air gap", "Centralized only", "Steganography"], "explain_en": "Whether fixes are released promptly is patch availability.", "stem_es": "Para un producto que se va a adquirir, el equipo evalúa si el fabricante puede publicar correcciones con rapidez tras descubrirse una vulnerabilidad. ¿Qué consideración es?", "choices_es": ["Disponibilidad de parches", "Aislamiento físico", "Solo centralizado", "Esteganografía"], "explain_es": "Que las correcciones se publiquen con rapidez es la disponibilidad de parches."}, {"term": "c-1-inability-to-patch", "stem": "レガシー制御システムは互換性の問題と停止不可の業務要件からセキュリティ更新を当てられず、代替の防御策を検討している。この状況はどれか。", "choices": ["パッチ適用不可", "サーバーレス", "IaC", "責任マトリクスの廃止"], "answer": 0, "explain": "パッチを適用できない状況では理由の明確化・リスク評価と代替対策が必要になる。", "stem_en": "A legacy control system can't take security updates because of compatibility issues and a business requirement that it never stop, so alternative defenses are being considered. What situation is this?", "choices_en": ["Inability to patch", "Serverless", "IaC", "Abolishing the responsibility matrix"], "explain_en": "When patches can't be applied, you need to clarify why, assess the risk and put compensating measures in place.", "stem_es": "Un sistema de control heredado no admite actualizaciones de seguridad por problemas de compatibilidad y porque el negocio exige que nunca se detenga, así que se estudian defensas alternativas. ¿Qué situación es?", "choices_es": ["Imposibilidad de aplicar parches", "Sin servidor", "IaC", "Eliminar la matriz de responsabilidad"], "explain_es": "Cuando no se pueden aplicar parches, hay que aclarar el motivo, evaluar el riesgo y aplicar medidas compensatorias."}, {"term": "c-1-power", "stem": "停電時もシステムを保護するためUPSを導入し、電源経路を二重化して単一障害点を減らした。この考慮事項はどれか。", "choices": ["マイクロサービス", "電力", "コンテナ化", "IaC"], "answer": 1, "explain": "安定供給と停電対策（UPS・冗長電源）は電力の観点である。", "stem_en": "To protect systems during outages, a UPS was installed and power paths were duplicated to reduce single points of failure. Which consideration is this?", "choices_en": ["Microservices", "Power", "Containerization", "IaC"], "explain_en": "Stable supply and outage protection (UPS, redundant power) are the power consideration.", "stem_es": "Para proteger los sistemas durante los cortes, se instaló un SAI y se duplicaron las vías de alimentación para reducir los puntos únicos de fallo. ¿Qué consideración es?", "choices_es": ["Microservicios", "Energía", "Contenedorización", "IaC"], "explain_es": "El suministro estable y la protección ante cortes (SAI, alimentación redundante) son la consideración de la energía."}, {"term": "c-1-compute", "stem": "高トラフィックサイトでTLSの暗号化・復号がCPUを逼迫し、ボトルネックになりそうなので処理能力を見積もり直した。この考慮事項はどれか。", "choices": ["エアギャップ", "リスク移転", "演算能力", "シャドーIT"], "answer": 2, "explain": "セキュリティ機能の実行に必要な処理能力を見積もるのが演算能力（Compute）の観点である。", "stem_en": "On a high-traffic site, TLS encryption and decryption were straining the CPU and threatening to become a bottleneck, so processing capacity was re-estimated. Which consideration is this?", "choices_en": ["Air gap", "Risk transference", "Compute", "Shadow IT"], "explain_en": "Estimating the processing power needed to run security functions is the compute consideration.", "stem_es": "En un sitio con mucho tráfico, el cifrado y descifrado TLS estaba saturando la CPU y amenazaba con convertirse en un cuello de botella, así que se recalculó la capacidad de procesamiento. ¿Qué consideración es?", "choices_es": ["Aislamiento físico", "Transferencia del riesgo", "Capacidad de cómputo", "TI en la sombra"], "explain_es": "Estimar la potencia de procesamiento necesaria para ejecutar las funciones de seguridad es la consideración de la capacidad de cómputo."}]</script>
 </section>
 
-<nav class="pager"><a href="index.html"><span><span data-i18n="ja">戻る</span><span data-i18n="en">Back</span><span data-i18n="es">Volver</span></span><span>Domain C <span data-i18n="ja">ハブ</span><span data-i18n="en">hub</span><span data-i18n="es">hub</span></span></a><a class="next" href="c-2.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>C-2 <span data-i18n="ja">インフラを守るセキュリティ原則</span><span data-i18n="en">インフラを守るセキュリティ原則</span><span data-i18n="es">インフラを守るセキュリティ原則</span></span></a></nav>
+<nav class="pager"><a href="index.html"><span><span data-i18n="ja">戻る</span><span data-i18n="en">Back</span><span data-i18n="es">Volver</span></span><span>Domain C <span data-i18n="ja">ハブ</span><span data-i18n="en">hub</span><span data-i18n="es">hub</span></span></a><a class="next" href="c-2.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>C-2 <span data-i18n="ja">インフラを守るセキュリティ原則</span><span data-i18n="en">Security principles for infrastructure</span><span data-i18n="es">Principios de seguridad para la infraestructura</span></span></a></nav>
 
     </main>
   </div>
