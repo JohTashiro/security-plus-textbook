@@ -274,6 +274,7 @@ def page(
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{esc(title)} · Security+ Textbook</title>
   {SETTINGS_BOOT}
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="{FONT}" rel="stylesheet">
@@ -515,6 +516,7 @@ def root_index(term_counts: dict[str, int]) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Security+ Textbook</title>
   {SETTINGS_BOOT}
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="{FONT}" rel="stylesheet">
@@ -557,6 +559,7 @@ def global_map_page(hub_domains: list[dict]) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>全体の知識マップ · Security+ Textbook</title>
   {SETTINGS_BOOT}
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="{FONT}" rel="stylesheet">
