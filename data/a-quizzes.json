@@ -10,7 +10,23 @@
         "物理的（Physical）"
       ],
       "answer": 0,
-      "explain": "暗号化や認証は技術・ソフトウェアで実現する対策なので技術的コントロール。"
+      "explain": "暗号化や認証は技術・ソフトウェアで実現する対策なので技術的コントロール。",
+      "stem_en": "A company introduced email encryption and multifactor authentication. Which control category do these mainly fall under?",
+      "choices_en": [
+        "Technical",
+        "Managerial",
+        "Operational",
+        "Physical"
+      ],
+      "explain_en": "Encryption and authentication are implemented with technology and software, so they are technical controls.",
+      "stem_es": "Una empresa implantó el cifrado del correo y la autenticación multifactor. ¿En qué categoría de control encajan principalmente?",
+      "choices_es": [
+        "Técnico",
+        "De gestión",
+        "Operativo",
+        "Físico"
+      ],
+      "explain_es": "El cifrado y la autenticación se implementan con tecnología y software, por lo que son controles técnicos."
     },
     {
       "term": "a-1-managerial",
@@ -22,7 +38,23 @@
         "物理的"
       ],
       "answer": 1,
-      "explain": "ポリシー策定や監査の仕組みづくりは管理的（Managerial）コントロール。"
+      "explain": "ポリシー策定や監査の仕組みづくりは管理的（Managerial）コントロール。",
+      "stem_en": "Senior management drafted an information security policy and required annual audits. Which category is this mainly?",
+      "choices_en": [
+        "Technical",
+        "Managerial",
+        "Operational",
+        "Physical"
+      ],
+      "explain_en": "Creating policies and audit frameworks is a managerial control.",
+      "stem_es": "La dirección redactó una política de seguridad de la información y exigió auditorías anuales. ¿De qué categoría se trata principalmente?",
+      "choices_es": [
+        "Técnico",
+        "De gestión",
+        "Operativo",
+        "Físico"
+      ],
+      "explain_es": "Crear políticas y marcos de auditoría es un control de gestión."
     },
     {
       "term": "a-1-operational",
@@ -34,7 +66,23 @@
         "物理的"
       ],
       "answer": 2,
-      "explain": "教育訓練や日常のログ確認・パッチ運用は運営的（Operational）。"
+      "explain": "教育訓練や日常のログ確認・パッチ運用は運営的（Operational）。",
+      "stem_en": "The SOC reviews logs daily and runs regular phishing training for employees. Which category is this mainly?",
+      "choices_en": [
+        "Technical",
+        "Managerial",
+        "Operational",
+        "Physical"
+      ],
+      "explain_en": "Training and day-to-day log review and patching are operational controls.",
+      "stem_es": "El SOC revisa los registros a diario y realiza formaciones periódicas sobre phishing para los empleados. ¿De qué categoría se trata principalmente?",
+      "choices_es": [
+        "Técnico",
+        "De gestión",
+        "Operativo",
+        "Físico"
+      ],
+      "explain_es": "La formación y la revisión diaria de registros y parches son controles operativos."
     },
     {
       "term": "a-1-physical",
@@ -46,7 +94,23 @@
         "物理的"
       ],
       "answer": 3,
-      "explain": "施設・設備への物理アクセスを制御するので物理的コントロール。"
+      "explain": "施設・設備への物理アクセスを制御するので物理的コントロール。",
+      "stem_en": "A fence and entry gates were installed at the data center entrance. Which category is this mainly?",
+      "choices_en": [
+        "Technical",
+        "Managerial",
+        "Operational",
+        "Physical"
+      ],
+      "explain_en": "It controls physical access to facilities and equipment, so it is a physical control.",
+      "stem_es": "Se instalaron una valla y tornos de acceso en la entrada del centro de datos. ¿De qué categoría se trata principalmente?",
+      "choices_es": [
+        "Técnico",
+        "De gestión",
+        "Operativo",
+        "Físico"
+      ],
+      "explain_es": "Controla el acceso físico a instalaciones y equipos, por lo que es un control físico."
     },
     {
       "term": "a-1-preventive",
@@ -58,7 +122,23 @@
         "代替的（Compensating）"
       ],
       "answer": 0,
-      "explain": "発生する前に防ぐのが予防的。ファイアウォールは典型例。"
+      "explain": "発生する前に防ぐのが予防的。ファイアウォールは典型例。",
+      "stem_en": "A perimeter firewall blocks unauthorized inbound traffic, stopping attacks before they arrive. Which control type is this?",
+      "choices_en": [
+        "Preventive",
+        "Detective",
+        "Corrective",
+        "Compensating"
+      ],
+      "explain_en": "Stopping something before it happens is preventive. A firewall is a classic example.",
+      "stem_es": "Un cortafuegos perimetral bloquea el tráfico entrante no autorizado y detiene los ataques antes de que lleguen. ¿Qué tipo de control es?",
+      "choices_es": [
+        "Preventivo",
+        "De detección",
+        "Correctivo",
+        "Compensatorio"
+      ],
+      "explain_es": "Detener algo antes de que ocurra es preventivo. El cortafuegos es un ejemplo típico."
     },
     {
       "term": "a-1-deterrent",
@@ -70,7 +150,23 @@
         "技術的"
       ],
       "answer": 1,
-      "explain": "警告掲示は心理的に思いとどまらせる抑止的コントロール。"
+      "explain": "警告掲示は心理的に思いとどまらせる抑止的コントロール。",
+      "stem_en": "A sign at the building entrance reads \"CCTV in operation — trespassers will be prosecuted.\" Which type best describes its main purpose?",
+      "choices_en": [
+        "Corrective",
+        "Deterrent",
+        "Compensating",
+        "Technical"
+      ],
+      "explain_en": "A warning sign psychologically discourages people, so it is a deterrent control.",
+      "stem_es": "En la entrada del edificio hay un cartel: «Videovigilancia activa: los intrusos serán denunciados». ¿Qué tipo describe mejor su objetivo principal?",
+      "choices_es": [
+        "Correctivo",
+        "Disuasorio",
+        "Compensatorio",
+        "Técnico"
+      ],
+      "explain_es": "Un cartel de advertencia disuade psicológicamente, por lo que es un control disuasorio."
     },
     {
       "term": "a-1-detective",
@@ -82,7 +178,23 @@
         "指示的"
       ],
       "answer": 2,
-      "explain": "インシデントの発生に気づくのが検出的。ログ監視やIDSが該当。"
+      "explain": "インシデントの発生に気づくのが検出的。ログ監視やIDSが該当。",
+      "stem_en": "An IDS detected abnormal traffic and raised an alert. Which type is this?",
+      "choices_en": [
+        "Preventive",
+        "Deterrent",
+        "Detective",
+        "Directive"
+      ],
+      "explain_en": "Noticing that an incident is happening is detective. Log monitoring and IDS fall here.",
+      "stem_es": "Un IDS detectó tráfico anómalo y generó una alerta. ¿Qué tipo es?",
+      "choices_es": [
+        "Preventivo",
+        "Disuasorio",
+        "De detección",
+        "Directivo"
+      ],
+      "explain_es": "Darse cuenta de que ocurre un incidente es de detección. La supervisión de registros y los IDS entran aquí."
     },
     {
       "term": "a-1-corrective",
@@ -94,7 +206,23 @@
         "是正的（Corrective）"
       ],
       "answer": 3,
-      "explain": "発生後に被害を修復し再発を防ぐのが是正的。"
+      "explain": "発生後に被害を修復し再発を防ぐのが是正的。",
+      "stem_en": "An infected device was isolated, restored from backup, and patched. Which type is this?",
+      "choices_en": [
+        "Preventive",
+        "Deterrent",
+        "Detective",
+        "Corrective"
+      ],
+      "explain_en": "Repairing damage after the fact and preventing recurrence is corrective.",
+      "stem_es": "Se aisló un equipo infectado, se restauró desde una copia de seguridad y se le aplicó un parche. ¿Qué tipo es?",
+      "choices_es": [
+        "Preventivo",
+        "Disuasorio",
+        "De detección",
+        "Correctivo"
+      ],
+      "explain_es": "Reparar el daño tras el incidente y evitar que se repita es correctivo."
     },
     {
       "term": "a-1-compensating",
@@ -106,7 +234,23 @@
         "管理的"
       ],
       "answer": 1,
-      "explain": "本来の対策が困難なときの次善策が代替的（補償的）コントロール。"
+      "explain": "本来の対策が困難なときの次善策が代替的（補償的）コントロール。",
+      "stem_en": "A legacy server can't be patched, so strict network isolation and access restrictions were applied instead. Which type is this?",
+      "choices_en": [
+        "Directive",
+        "Compensating",
+        "Deterrent",
+        "Managerial"
+      ],
+      "explain_en": "A next-best measure used when the intended control isn't feasible is a compensating control.",
+      "stem_es": "Un servidor heredado no puede parchearse, así que se aplicaron un aislamiento de red estricto y restricciones de acceso en su lugar. ¿Qué tipo es?",
+      "choices_es": [
+        "Directivo",
+        "Compensatorio",
+        "Disuasorio",
+        "De gestión"
+      ],
+      "explain_es": "La mejor alternativa cuando el control previsto no es viable es un control compensatorio."
     },
     {
       "term": "a-1-directive",
@@ -118,7 +262,23 @@
         "技術的"
       ],
       "answer": 2,
-      "explain": "トップダウンで方針・要求を示すのが指示的コントロール。"
+      "explain": "トップダウンで方針・要求を示すのが指示的コントロール。",
+      "stem_en": "The CEO issued a company-wide security policy and mandated regulatory compliance. Which control type is this?",
+      "choices_en": [
+        "Detective",
+        "Corrective",
+        "Directive",
+        "Technical"
+      ],
+      "explain_en": "Setting policies and requirements top-down is a directive control.",
+      "stem_es": "El CEO publicó una política de seguridad para toda la empresa y exigió el cumplimiento normativo. ¿Qué tipo de control es?",
+      "choices_es": [
+        "De detección",
+        "Correctivo",
+        "Directivo",
+        "Técnico"
+      ],
+      "explain_es": "Fijar políticas y requisitos de arriba abajo es un control directivo."
     }
   ],
   "A-2": [
@@ -132,7 +292,23 @@
         "否認防止"
       ],
       "answer": 0,
-      "explain": "認可された者だけがアクセスできる状態＝機密性。"
+      "explain": "認可された者だけがアクセスできる状態＝機密性。",
+      "stem_en": "Patient medical records must not be viewed by unauthorized staff. Which part of CIA is mainly being protected?",
+      "choices_en": [
+        "Confidentiality",
+        "Integrity",
+        "Availability",
+        "Non-repudiation"
+      ],
+      "explain_en": "Only authorized people having access is confidentiality.",
+      "stem_es": "Los historiales clínicos no deben poder verlos empleados sin autorización. ¿Qué elemento de la tríada CIA se protege principalmente?",
+      "choices_es": [
+        "Confidencialidad",
+        "Integridad",
+        "Disponibilidad",
+        "No repudio"
+      ],
+      "explain_es": "Que solo accedan las personas autorizadas es confidencialidad."
     },
     {
       "term": "a-2-non-repudiation",
@@ -144,7 +320,23 @@
         "暗黙の信頼ゾーン"
       ],
       "answer": 2,
-      "explain": "行為を後から否定できないようにするのが否認防止。デジタル署名が典型。"
+      "explain": "行為を後から否定できないようにするのが否認防止。デジタル署名が典型。",
+      "stem_en": "You want to ensure the sender of an e-contract can't later claim they never signed it. Which concept fits best?",
+      "choices_en": [
+        "Availability",
+        "Gap analysis",
+        "Non-repudiation",
+        "Implicit trust zone"
+      ],
+      "explain_en": "Making an action impossible to deny later is non-repudiation. Digital signatures are the classic example.",
+      "stem_es": "Quieres garantizar que el remitente de un contrato electrónico no pueda alegar después que no lo firmó. ¿Qué concepto encaja mejor?",
+      "choices_es": [
+        "Disponibilidad",
+        "Análisis de brechas",
+        "No repudio",
+        "Zona de confianza implícita"
+      ],
+      "explain_es": "Impedir que una acción pueda negarse después es el no repudio. Las firmas digitales son el ejemplo típico."
     },
     {
       "term": "a-2-gap-analysis",
@@ -156,7 +348,23 @@
         "バックアウトプラン"
       ],
       "answer": 1,
-      "explain": "現状と目標の差を特定するのがギャップ分析。"
+      "explain": "現状と目標の差を特定するのがギャップ分析。",
+      "stem_en": "You compared current controls against the target security standard and listed the missing ones. What is this activity?",
+      "choices_en": [
+        "Key escrow",
+        "Gap analysis",
+        "Tokenization",
+        "Backout plan"
+      ],
+      "explain_en": "Identifying the difference between current and target state is gap analysis.",
+      "stem_es": "Comparaste los controles actuales con el estándar de seguridad objetivo y listaste los que faltan. ¿Qué actividad es?",
+      "choices_es": [
+        "Custodia de claves",
+        "Análisis de brechas",
+        "Tokenización",
+        "Plan de reversión"
+      ],
+      "explain_es": "Identificar la diferencia entre el estado actual y el objetivo es el análisis de brechas."
     },
     {
       "term": "a-2-adaptive-identity",
@@ -168,7 +376,23 @@
         "公開台帳"
       ],
       "answer": 1,
-      "explain": "状況・リスクに応じて認証を動的に変えるのがアダプティブID。"
+      "explain": "状況・リスクに応じて認証を動的に変えるのがアダプティブID。",
+      "stem_en": "A user logging in from an unusual country was asked for additional MFA. Which zero trust element is closest?",
+      "choices_en": [
+        "Implicit trust zone",
+        "Adaptive identity",
+        "Bollard",
+        "Public ledger"
+      ],
+      "explain_en": "Dynamically adjusting authentication to context and risk is adaptive identity.",
+      "stem_es": "A un usuario que inició sesión desde un país inusual se le pidió MFA adicional. ¿Qué elemento de confianza cero se aproxima más?",
+      "choices_es": [
+        "Zona de confianza implícita",
+        "Identidad adaptativa",
+        "Bolardo",
+        "Registro público"
+      ],
+      "explain_es": "Ajustar dinámicamente la autenticación según el contexto y el riesgo es la identidad adaptativa."
     },
     {
       "term": "a-2-threat-scope",
@@ -180,7 +404,23 @@
         "自己署名証明書"
       ],
       "answer": 0,
-      "explain": "被害が及ぶ範囲を狭める＝脅威範囲の縮小（Threat Scope Reduction）。"
+      "explain": "被害が及ぶ範囲を狭める＝脅威範囲の縮小（Threat Scope Reduction）。",
+      "stem_en": "A suspicious device's privileges were temporarily frozen, leaving only least privilege. Which idea is this mainly?",
+      "choices_en": [
+        "Threat scope reduction",
+        "Steganography",
+        "Key stretching",
+        "Self-signed certificate"
+      ],
+      "explain_en": "Narrowing how far damage can reach is threat scope reduction.",
+      "stem_es": "Se congelaron temporalmente los privilegios de un dispositivo sospechoso, dejando solo el mínimo privilegio. ¿Qué idea es principalmente?",
+      "choices_es": [
+        "Reducción del alcance de amenazas",
+        "Esteganografía",
+        "Estiramiento de claves",
+        "Certificado autofirmado"
+      ],
+      "explain_es": "Limitar hasta dónde puede llegar el daño es la reducción del alcance de amenazas."
     },
     {
       "term": "a-2-policy-driven",
@@ -192,7 +432,23 @@
         "CRL"
       ],
       "answer": 0,
-      "explain": "定義済みポリシーで権限を決めるのがポリシー駆動型アクセス制御。"
+      "explain": "定義済みポリシーで権限を決めるのがポリシー駆動型アクセス制御。",
+      "stem_en": "Access to design data is decided automatically based on policies defined per role. What is this?",
+      "choices_en": [
+        "Policy-driven access control",
+        "Data masking",
+        "Full-disk encryption",
+        "CRL"
+      ],
+      "explain_en": "Deciding permissions from predefined policies is policy-driven access control.",
+      "stem_es": "El acceso a los datos de diseño se decide automáticamente según políticas definidas por rol. ¿Qué es?",
+      "choices_es": [
+        "Control de acceso basado en políticas",
+        "Enmascaramiento de datos",
+        "Cifrado de disco completo",
+        "CRL"
+      ],
+      "explain_es": "Decidir permisos a partir de políticas predefinidas es el control de acceso basado en políticas."
     },
     {
       "term": "a-2-policy-admin",
@@ -204,7 +460,23 @@
         "警備員"
       ],
       "answer": 1,
-      "explain": "ポリシーを決めて更新する側がポリシー管理者。"
+      "explain": "ポリシーを決めて更新する側がポリシー管理者。",
+      "stem_en": "In zero trust, what is the role of the person who creates and updates rules for viewing medical records by job type?",
+      "choices_en": [
+        "PEP",
+        "Policy Administrator",
+        "Root CA",
+        "Security guard"
+      ],
+      "explain_en": "The side that decides and updates policies is the policy administrator.",
+      "stem_es": "En confianza cero, ¿cómo se llama el rol de quien crea y actualiza las reglas de acceso a historiales clínicos según el puesto?",
+      "choices_es": [
+        "PEP",
+        "Administrador de políticas",
+        "CA raíz",
+        "Guardia de seguridad"
+      ],
+      "explain_es": "Quien decide y actualiza las políticas es el administrador de políticas."
     },
     {
       "term": "a-2-implicit-trust",
@@ -216,7 +488,23 @@
         "公開鍵"
       ],
       "answer": 1,
-      "explain": "デフォルトで信用してしまう領域＝暗黙の信頼ゾーン（排除すべき）。"
+      "explain": "デフォルトで信用してしまう領域＝暗黙の信頼ゾーン（排除すべき）。",
+      "stem_en": "In zero trust, what do you call the traditional area where anyone on the corporate LAN can freely reach internal resources without further checks?",
+      "choices_en": [
+        "Secure enclave",
+        "Implicit trust zone",
+        "Maintenance window",
+        "Public key"
+      ],
+      "explain_en": "An area trusted by default is the implicit trust zone (which should be eliminated).",
+      "stem_es": "En confianza cero, ¿cómo se llama la zona tradicional donde quien está en la LAN corporativa accede libremente a recursos internos sin más verificación?",
+      "choices_es": [
+        "Enclave seguro",
+        "Zona de confianza implícita",
+        "Ventana de mantenimiento",
+        "Clave pública"
+      ],
+      "explain_es": "Una zona en la que se confía por defecto es la zona de confianza implícita (debe eliminarse)."
     },
     {
       "term": "a-2-subject-system",
@@ -228,7 +516,23 @@
         "CIA"
       ],
       "answer": 0,
-      "explain": "アクセス主体がサブジェクト、対象がシステム。"
+      "explain": "アクセス主体がサブジェクト、対象がシステム。",
+      "stem_en": "In the zero trust data plane, what is the pair \"who/what is accessing\" and \"what is being accessed\" called?",
+      "choices_en": [
+        "Subject and system",
+        "Symmetric and asymmetric",
+        "Allow list and deny list",
+        "CIA"
+      ],
+      "explain_en": "The accessing entity is the subject; the target is the system.",
+      "stem_es": "En el plano de datos de confianza cero, ¿cómo se llama el par «quién/qué accede» y «a qué se accede»?",
+      "choices_es": [
+        "Sujeto y sistema",
+        "Simétrico y asimétrico",
+        "Lista de permitidos y lista de denegados",
+        "CIA"
+      ],
+      "explain_es": "La entidad que accede es el sujeto; el destino es el sistema."
     },
     {
       "term": "a-2-pep",
@@ -240,7 +544,23 @@
         "フェンシング"
       ],
       "answer": 0,
-      "explain": "現場でポリシーを執行するのが PEP（Policy Enforcement Point）。"
+      "explain": "現場でポリシーを執行するのが PEP（Policy Enforcement Point）。",
+      "stem_en": "What is the gateway-like point that receives access requests, allows or denies them against policy, and logs them?",
+      "choices_en": [
+        "Policy Enforcement Point (PEP)",
+        "Key escrow",
+        "Gap analysis",
+        "Fencing"
+      ],
+      "explain_en": "Enforcing policy at the point of access is the PEP (Policy Enforcement Point).",
+      "stem_es": "¿Cuál es el punto tipo pasarela que recibe solicitudes de acceso, las permite o deniega según la política y las registra?",
+      "choices_es": [
+        "Punto de aplicación de políticas (PEP)",
+        "Custodia de claves",
+        "Análisis de brechas",
+        "Vallado"
+      ],
+      "explain_es": "Aplicar la política en el punto de acceso es el PEP (Policy Enforcement Point)."
     },
     {
       "term": "a-2-bollard",
@@ -252,7 +572,23 @@
         "SOP"
       ],
       "answer": 0,
-      "explain": "車両侵入防止の柱＝ボラード。"
+      "explain": "車両侵入防止の柱＝ボラード。",
+      "stem_en": "Sturdy posts are lined up in front of a building to stop vehicles ramming it. What is this control?",
+      "choices_en": [
+        "Bollards",
+        "Lighting",
+        "Access badge",
+        "SOP"
+      ],
+      "explain_en": "Posts that stop vehicle intrusion are bollards.",
+      "stem_es": "Se colocan postes robustos frente a un edificio para impedir que los vehículos lo embistan. ¿Qué control es?",
+      "choices_es": [
+        "Bolardos",
+        "Iluminación",
+        "Tarjeta de acceso",
+        "SOP"
+      ],
+      "explain_es": "Los postes que impiden la entrada de vehículos son bolardos."
     },
     {
       "term": "a-2-fencing",
@@ -264,7 +600,23 @@
         "CRL"
       ],
       "answer": 1,
-      "explain": "境界の柵・塀はフェンシング。"
+      "explain": "境界の柵・塀はフェンシング。",
+      "stem_en": "A fence is installed around a factory's perimeter to keep people from getting in. What is this?",
+      "choices_en": [
+        "Bollards",
+        "Fencing",
+        "HSM",
+        "CRL"
+      ],
+      "explain_en": "Barriers and walls along the boundary are fencing.",
+      "stem_es": "Se instala una valla en el perímetro de una fábrica para impedir la entrada de personas. ¿Qué es?",
+      "choices_es": [
+        "Bolardos",
+        "Vallado",
+        "HSM",
+        "CRL"
+      ],
+      "explain_es": "Las vallas y muros del perímetro son el vallado."
     },
     {
       "term": "a-2-video",
@@ -276,7 +628,23 @@
         "指示的コントロール"
       ],
       "answer": 0,
-      "explain": "カメラによる監視・録画＝ビデオ監視。"
+      "explain": "カメラによる監視・録画＝ビデオ監視。",
+      "stem_en": "Cameras record inside the facility, and the footage also serves as evidence in later investigations. What is this?",
+      "choices_en": [
+        "Video surveillance",
+        "Key exchange",
+        "Dependencies",
+        "Directive control"
+      ],
+      "explain_en": "Monitoring and recording with cameras is video surveillance.",
+      "stem_es": "Las cámaras graban dentro de la instalación y las imágenes sirven también como prueba en investigaciones posteriores. ¿Qué es?",
+      "choices_es": [
+        "Videovigilancia",
+        "Intercambio de claves",
+        "Dependencias",
+        "Control directivo"
+      ],
+      "explain_es": "Supervisar y grabar con cámaras es videovigilancia."
     },
     {
       "term": "a-2-guard",
@@ -288,7 +656,23 @@
         "非対称暗号"
       ],
       "answer": 0,
-      "explain": "人による巡回・確認＝警備員（Security Guard）。"
+      "explain": "人による巡回・確認＝警備員（Security Guard）。",
+      "stem_en": "People check visitors' IDs at reception and patrol the premises. Which physical control is this?",
+      "choices_en": [
+        "Security guards",
+        "Tokenization",
+        "Hashing",
+        "Asymmetric encryption"
+      ],
+      "explain_en": "Patrolling and verification by people is a security guard.",
+      "stem_es": "Personas comprueban la identidad de los visitantes en recepción y patrullan las instalaciones. ¿Qué control físico es?",
+      "choices_es": [
+        "Guardias de seguridad",
+        "Tokenización",
+        "Hash",
+        "Cifrado asimétrico"
+      ],
+      "explain_es": "Las rondas y verificaciones hechas por personas corresponden a guardias de seguridad."
     },
     {
       "term": "a-2-badge",
@@ -300,7 +684,23 @@
         "バックアウトプラン"
       ],
       "answer": 0,
-      "explain": "電子的に入退室を許可する証＝アクセスバッジ。"
+      "explain": "電子的に入退室を許可する証＝アクセスバッジ。",
+      "stem_en": "Employees unlock doors by tapping a smart-card ID. What is being used?",
+      "choices_en": [
+        "Access badge",
+        "Salt",
+        "Public ledger",
+        "Backout plan"
+      ],
+      "explain_en": "A credential that electronically grants entry is an access badge.",
+      "stem_es": "Los empleados abren las puertas acercando una tarjeta con chip. ¿Qué se está usando?",
+      "choices_es": [
+        "Tarjeta de acceso",
+        "Sal",
+        "Registro público",
+        "Plan de reversión"
+      ],
+      "explain_es": "Una credencial que autoriza la entrada electrónicamente es una tarjeta de acceso."
     },
     {
       "term": "a-2-lighting",
@@ -312,7 +712,23 @@
         "アルゴリズム"
       ],
       "answer": 0,
-      "explain": "照明による抑止・監視支援＝ライティング。"
+      "explain": "照明による抑止・監視支援＝ライティング。",
+      "stem_en": "A parking lot is brightly lit, making intruders easier to spot and deterring them. What is this?",
+      "choices_en": [
+        "Lighting",
+        "Steganography",
+        "Downtime",
+        "Algorithm"
+      ],
+      "explain_en": "Using light to deter and support monitoring is lighting.",
+      "stem_es": "Un aparcamiento está bien iluminado, lo que facilita detectar intrusos y los disuade. ¿Qué es?",
+      "choices_es": [
+        "Iluminación",
+        "Esteganografía",
+        "Tiempo de inactividad",
+        "Algoritmo"
+      ],
+      "explain_es": "Usar la luz para disuadir y apoyar la vigilancia es la iluminación."
     }
   ],
   "A-3": [
@@ -326,7 +742,23 @@
         "鍵の長さ"
       ],
       "answer": 0,
-      "explain": "権限者が変更の妥当性を審査するのが承認プロセス。"
+      "explain": "権限者が変更の妥当性を審査するのが承認プロセス。",
+      "stem_en": "Before new software is introduced, the security team and management review whether to allow it. What part of change management is this?",
+      "choices_en": [
+        "Approval process",
+        "Tokenization",
+        "Implicit trust zone",
+        "Key length"
+      ],
+      "explain_en": "An authority reviewing whether a change is appropriate is the approval process.",
+      "stem_es": "Antes de implantar un software nuevo, el equipo de seguridad y la dirección revisan si se autoriza. ¿Qué parte de la gestión de cambios es?",
+      "choices_es": [
+        "Proceso de aprobación",
+        "Tokenización",
+        "Zona de confianza implícita",
+        "Longitud de clave"
+      ],
+      "explain_es": "Que una autoridad revise si un cambio es adecuado es el proceso de aprobación."
     },
     {
       "term": "a-3-stakeholder",
@@ -338,7 +770,23 @@
         "ソルト"
       ],
       "answer": 0,
-      "explain": "利害関係者＝ステークホルダー。"
+      "explain": "利害関係者＝ステークホルダー。",
+      "stem_en": "What do you collectively call the executives, developers, and business users affected by a system change?",
+      "choices_en": [
+        "Stakeholders",
+        "Root of trust",
+        "PEP",
+        "Salt"
+      ],
+      "explain_en": "Parties with an interest in the change are stakeholders.",
+      "stem_es": "¿Cómo se llama en conjunto a los directivos, desarrolladores y usuarios afectados por un cambio en el sistema?",
+      "choices_es": [
+        "Partes interesadas",
+        "Raíz de confianza",
+        "PEP",
+        "Sal"
+      ],
+      "explain_es": "Quienes tienen intereses en juego son las partes interesadas."
     },
     {
       "term": "a-3-impact",
@@ -350,7 +798,23 @@
         "ボラード"
       ],
       "answer": 0,
-      "explain": "変更や事故の影響を事前に見積もるのがインパクト分析。"
+      "explain": "変更や事故の影響を事前に見積もるのがインパクト分析。",
+      "stem_en": "Before patching, you assessed the risk of service outages and data leaks to set priorities. What is this?",
+      "choices_en": [
+        "Impact analysis",
+        "Steganography",
+        "Self-signed certificate",
+        "Bollard"
+      ],
+      "explain_en": "Estimating the effect of a change or incident in advance is impact analysis.",
+      "stem_es": "Antes de parchear, evaluaste el riesgo de interrupciones del servicio y fugas de datos para fijar prioridades. ¿Qué es?",
+      "choices_es": [
+        "Análisis de impacto",
+        "Esteganografía",
+        "Certificado autofirmado",
+        "Bolardo"
+      ],
+      "explain_es": "Estimar de antemano el efecto de un cambio o incidente es el análisis de impacto."
     },
     {
       "term": "a-3-test-results",
@@ -362,7 +826,23 @@
         "公開鍵"
       ],
       "answer": 0,
-      "explain": "対策の有効性を検証した成果＝テスト結果。"
+      "explain": "対策の有効性を検証した成果＝テスト結果。",
+      "stem_en": "Fixes were chosen based on vulnerability scan and penetration test reports. What is the basis for the decision?",
+      "choices_en": [
+        "Test results",
+        "Key escrow",
+        "Lighting",
+        "Public key"
+      ],
+      "explain_en": "Evidence verifying that controls work is test results.",
+      "stem_es": "Las correcciones se eligieron a partir de informes de análisis de vulnerabilidades y pruebas de penetración. ¿En qué se basa la decisión?",
+      "choices_es": [
+        "Resultados de pruebas",
+        "Custodia de claves",
+        "Iluminación",
+        "Clave pública"
+      ],
+      "explain_es": "La evidencia que verifica que los controles funcionan son los resultados de pruebas."
     },
     {
       "term": "a-3-backout",
@@ -374,7 +854,23 @@
         "フェンシング"
       ],
       "answer": 0,
-      "explain": "失敗時に切り戻す計画＝バックアウトプラン。"
+      "explain": "失敗時に切り戻す計画＝バックアウトプラン。",
+      "stem_en": "A procedure was prepared in advance to quickly restore from backup if an upgrade fails. What is this?",
+      "choices_en": [
+        "Backout plan",
+        "Gap analysis",
+        "CRL",
+        "Fencing"
+      ],
+      "explain_en": "A plan to roll back on failure is a backout plan.",
+      "stem_es": "Se preparó de antemano un procedimiento para restaurar rápidamente desde la copia de seguridad si falla una actualización. ¿Qué es?",
+      "choices_es": [
+        "Plan de reversión",
+        "Análisis de brechas",
+        "CRL",
+        "Vallado"
+      ],
+      "explain_es": "Un plan para volver atrás si algo falla es un plan de reversión."
     },
     {
       "term": "a-3-maint-window",
@@ -386,7 +882,23 @@
         "データマスキング"
       ],
       "answer": 0,
-      "explain": "計画的に確保する作業時間枠＝メンテナンスウィンドウ。"
+      "explain": "計画的に確保する作業時間枠＝メンテナンスウィンドウ。",
+      "stem_en": "To limit business impact, a late-night time slot was reserved for patching. What is this?",
+      "choices_en": [
+        "Maintenance window",
+        "Digital signature",
+        "Adaptive identity",
+        "Data masking"
+      ],
+      "explain_en": "A planned time slot for work is a maintenance window.",
+      "stem_es": "Para limitar el impacto en el negocio, se reservó una franja de madrugada para aplicar parches. ¿Qué es?",
+      "choices_es": [
+        "Ventana de mantenimiento",
+        "Firma digital",
+        "Identidad adaptativa",
+        "Enmascaramiento de datos"
+      ],
+      "explain_es": "Una franja de tiempo planificada para trabajos es una ventana de mantenimiento."
     },
     {
       "term": "a-3-sop",
@@ -398,7 +910,23 @@
         "暗黙の信頼ゾーン"
       ],
       "answer": 0,
-      "explain": "一貫した実行手順を文書化したものがSOP。"
+      "explain": "一貫した実行手順を文書化したものがSOP。",
+      "stem_en": "The steps for communication and evidence preservation during incidents were documented and shared. What is this?",
+      "choices_en": [
+        "Standard operating procedure (SOP)",
+        "Blockchain",
+        "Asymmetric encryption",
+        "Implicit trust zone"
+      ],
+      "explain_en": "A documented procedure for consistent execution is an SOP.",
+      "stem_es": "Se documentaron y difundieron los pasos de comunicación y conservación de pruebas ante incidentes. ¿Qué es?",
+      "choices_es": [
+        "Procedimiento operativo estándar (SOP)",
+        "Cadena de bloques",
+        "Cifrado asimétrico",
+        "Zona de confianza implícita"
+      ],
+      "explain_es": "Un procedimiento documentado para actuar siempre igual es un SOP."
     },
     {
       "term": "a-3-allow-deny",
@@ -410,7 +938,23 @@
         "ボラード"
       ],
       "answer": 0,
-      "explain": "通す相手・拒む相手の一覧＝Allow/Deny List。"
+      "explain": "通す相手・拒む相手の一覧＝Allow/Deny List。",
+      "stem_en": "The firewall was updated to allow only trusted IPs and block malicious destinations. Which concept is involved?",
+      "choices_en": [
+        "Allow list / deny list",
+        "Secure enclave",
+        "Only the availability part of CIA",
+        "Bollard"
+      ],
+      "explain_en": "A list of who to let through and who to block is an allow/deny list.",
+      "stem_es": "Se actualizó el cortafuegos para permitir solo IP de confianza y bloquear destinos maliciosos. ¿Qué concepto interviene?",
+      "choices_es": [
+        "Lista de permitidos / denegados",
+        "Enclave seguro",
+        "Solo la disponibilidad de la tríada CIA",
+        "Bolardo"
+      ],
+      "explain_es": "Una lista de a quién dejar pasar y a quién bloquear es una lista de permitidos/denegados."
     },
     {
       "term": "a-3-restrict",
@@ -422,7 +966,23 @@
         "抑止的掲示のみ"
       ],
       "answer": 0,
-      "explain": "不要・危険な機能を止める＝機能の制限。"
+      "explain": "不要・危険な機能を止める＝機能の制限。",
+      "stem_en": "The camera and external sharing on work phones were disabled to reduce the attack surface. What is this?",
+      "choices_en": [
+        "Restricted activities",
+        "Key stretching",
+        "Public ledger",
+        "Only a deterrent sign"
+      ],
+      "explain_en": "Turning off unneeded or risky features is restricting activities.",
+      "stem_es": "Se desactivaron la cámara y el uso compartido externo de los móviles de empresa para reducir la superficie de ataque. ¿Qué es?",
+      "choices_es": [
+        "Actividades restringidas",
+        "Estiramiento de claves",
+        "Registro público",
+        "Solo un cartel disuasorio"
+      ],
+      "explain_es": "Desactivar funciones innecesarias o peligrosas es restringir actividades."
     },
     {
       "term": "a-3-downtime",
@@ -434,7 +994,23 @@
         "トークン"
       ],
       "answer": 0,
-      "explain": "システムが利用できない時間＝ダウンタイム。"
+      "explain": "システムが利用できない時間＝ダウンタイム。",
+      "stem_en": "Users were notified of a planned system shutdown for a data center inspection. What is this period of unavailability called?",
+      "choices_en": [
+        "Downtime",
+        "Salt",
+        "PEP",
+        "Token"
+      ],
+      "explain_en": "Time when the system is unavailable is downtime.",
+      "stem_es": "Se avisó a los usuarios de una parada planificada del sistema por la inspección del centro de datos. ¿Cómo se llama ese periodo sin servicio?",
+      "choices_es": [
+        "Tiempo de inactividad",
+        "Sal",
+        "PEP",
+        "Token"
+      ],
+      "explain_es": "El tiempo en que el sistema no está disponible es el tiempo de inactividad."
     },
     {
       "term": "a-3-restart",
@@ -446,7 +1022,23 @@
         "フェンシング"
       ],
       "answer": 0,
-      "explain": "変更を有効にする再起動＝Application Restart。"
+      "explain": "変更を有効にする再起動＝Application Restart。",
+      "stem_en": "After changing a security setting, the app was stopped and started again for it to take effect. What task is needed?",
+      "choices_en": [
+        "Application restart",
+        "Gap analysis",
+        "Only issuing a self-signed certificate",
+        "Fencing"
+      ],
+      "explain_en": "Restarting so the change takes effect is an application restart.",
+      "stem_es": "Tras cambiar un ajuste de seguridad, se detuvo y volvió a iniciar la aplicación para que surtiera efecto. ¿Qué tarea hace falta?",
+      "choices_es": [
+        "Reinicio de la aplicación",
+        "Análisis de brechas",
+        "Solo emitir un certificado autofirmado",
+        "Vallado"
+      ],
+      "explain_es": "Reiniciar para que el cambio surta efecto es el reinicio de la aplicación."
     },
     {
       "term": "a-3-legacy",
@@ -458,7 +1050,23 @@
         "ルート証明書の多さ"
       ],
       "answer": 0,
-      "explain": "更新困難な古いアプリ＝レガシー。隔離など代替策が必要になりやすい。"
+      "explain": "更新困難な古いアプリ＝レガシー。隔離など代替策が必要になりやすい。",
+      "stem_en": "An old control application on an unsupported OS can't be updated and is still in use. What is mainly the problem?",
+      "choices_en": [
+        "Legacy application",
+        "Faster key exchange",
+        "Excessive redundancy",
+        "Too many root certificates"
+      ],
+      "explain_en": "An old app that's hard to update is legacy. It often needs compensating measures such as isolation.",
+      "stem_es": "Una antigua aplicación de control sobre un SO sin soporte no puede actualizarse y sigue en uso. ¿Cuál es el problema principal?",
+      "choices_es": [
+        "Aplicación heredada",
+        "Intercambio de claves más rápido",
+        "Redundancia excesiva",
+        "Demasiados certificados raíz"
+      ],
+      "explain_es": "Una aplicación antigua difícil de actualizar es heredada. Suele requerir medidas alternativas como el aislamiento."
     },
     {
       "term": "a-3-dependencies",
@@ -470,7 +1078,23 @@
         "ライティング"
       ],
       "answer": 0,
-      "explain": "他コンポーネントとのつながり＝依存関係。変更時も要確認。"
+      "explain": "他コンポーネントとのつながり＝依存関係。変更時も要確認。",
+      "stem_en": "An old open-source library used by a web app has a vulnerability that puts the whole system at risk. What needs to be managed?",
+      "choices_en": [
+        "Dependencies",
+        "Bollards",
+        "Only a directive policy",
+        "Lighting"
+      ],
+      "explain_en": "Links to other components are dependencies. Check them during changes too.",
+      "stem_es": "Una antigua biblioteca de código abierto que usa una aplicación web tiene una vulnerabilidad que pone en riesgo todo el sistema. ¿Qué hay que gestionar?",
+      "choices_es": [
+        "Dependencias",
+        "Bolardos",
+        "Solo una política directiva",
+        "Iluminación"
+      ],
+      "explain_es": "Los vínculos con otros componentes son dependencias. También hay que revisarlas al hacer cambios."
     }
   ],
   "A-4": [
@@ -484,7 +1108,23 @@
         "CRL"
       ],
       "answer": 0,
-      "explain": "公開鍵で暗号化したデータは対応する秘密鍵でのみ復号できる。"
+      "explain": "公開鍵で暗号化したデータは対応する秘密鍵でのみ復号できる。",
+      "stem_en": "An email encrypted with the recipient's public key can be read only by the recipient. What is used to decrypt it?",
+      "choices_en": [
+        "The recipient's private key",
+        "The sender's public key",
+        "Only a shared symmetric key (always)",
+        "CRL"
+      ],
+      "explain_en": "Data encrypted with a public key can only be decrypted with the matching private key.",
+      "stem_es": "Un correo cifrado con la clave pública del destinatario solo puede leerlo el destinatario. ¿Qué se usa para descifrarlo?",
+      "choices_es": [
+        "La clave privada del destinatario",
+        "La clave pública del remitente",
+        "Solo una clave simétrica compartida (siempre)",
+        "CRL"
+      ],
+      "explain_es": "Los datos cifrados con una clave pública solo pueden descifrarse con la clave privada correspondiente."
     },
     {
       "term": "a-4-key-escrow",
@@ -496,7 +1136,23 @@
         "フェンシング"
       ],
       "answer": 0,
-      "explain": "鍵の第三者預託＝キーエスクロー。"
+      "explain": "鍵の第三者預託＝キーエスクロー。",
+      "stem_en": "In case keys are lost, the private key was deposited with a trusted third party. What is this mechanism?",
+      "choices_en": [
+        "Key escrow",
+        "Steganography",
+        "Data masking",
+        "Fencing"
+      ],
+      "explain_en": "Depositing keys with a third party is key escrow.",
+      "stem_es": "Por si se pierden las claves, la clave privada se depositó en un tercero de confianza. ¿Qué mecanismo es?",
+      "choices_es": [
+        "Custodia de claves",
+        "Esteganografía",
+        "Enmascaramiento de datos",
+        "Vallado"
+      ],
+      "explain_es": "Depositar claves en un tercero es la custodia de claves."
     },
     {
       "term": "a-4-enc-scope",
@@ -508,7 +1164,23 @@
         "ギャップ分析"
       ],
       "answer": 0,
-      "explain": "ディスク全体の暗号化はフルディスク。範囲（粒度）の選択問題。"
+      "explain": "ディスク全体の暗号化はフルディスク。範囲（粒度）の選択問題。",
+      "stem_en": "To protect against laptop loss, the entire disk was encrypted. Which level of encryption is this closest to?",
+      "choices_en": [
+        "Full-disk encryption",
+        "Record-level only",
+        "CRL registration",
+        "Gap analysis"
+      ],
+      "explain_en": "Encrypting the whole disk is full-disk encryption — a question of scope (granularity).",
+      "stem_es": "Para protegerse ante la pérdida de portátiles, se cifró el disco entero. ¿A qué nivel de cifrado se parece más?",
+      "choices_es": [
+        "Cifrado de disco completo",
+        "Solo por registro",
+        "Registro en la CRL",
+        "Análisis de brechas"
+      ],
+      "explain_es": "Cifrar todo el disco es cifrado de disco completo: una cuestión de alcance (granularidad)."
     },
     {
       "term": "a-4-asymmetric",
@@ -520,7 +1192,23 @@
         "許可リスト"
       ],
       "answer": 0,
-      "explain": "2鍵方式＝非対称（公開鍵暗号）。"
+      "explain": "2鍵方式＝非対称（公開鍵暗号）。",
+      "stem_en": "Which method uses a public/private key pair for encryption and digital signatures?",
+      "choices_en": [
+        "Asymmetric encryption",
+        "Symmetric encryption",
+        "Salt only",
+        "Allow list"
+      ],
+      "explain_en": "The two-key scheme is asymmetric (public-key) cryptography.",
+      "stem_es": "¿Qué método usa un par de claves pública/privada para cifrar y firmar digitalmente?",
+      "choices_es": [
+        "Cifrado asimétrico",
+        "Cifrado simétrico",
+        "Solo sal",
+        "Lista de permitidos"
+      ],
+      "explain_es": "El esquema de dos claves es la criptografía asimétrica (de clave pública)."
     },
     {
       "term": "a-4-symmetric",
@@ -532,7 +1220,23 @@
         "ボラード"
       ],
       "answer": 0,
-      "explain": "同一鍵＝対称。AESなどが代表。鍵配送が課題。"
+      "explain": "同一鍵＝対称。AESなどが代表。鍵配送が課題。",
+      "stem_en": "Which method encrypts and decrypts with the same key and suits fast processing of large amounts of data?",
+      "choices_en": [
+        "Symmetric encryption",
+        "Asymmetric encryption",
+        "Non-repudiation",
+        "Bollard"
+      ],
+      "explain_en": "Same key = symmetric. AES is the classic example; key distribution is the challenge.",
+      "stem_es": "¿Qué método cifra y descifra con la misma clave y es adecuado para procesar rápidamente grandes volúmenes de datos?",
+      "choices_es": [
+        "Cifrado simétrico",
+        "Cifrado asimétrico",
+        "No repudio",
+        "Bolardo"
+      ],
+      "explain_es": "Misma clave = simétrico. AES es el ejemplo típico; el reto es distribuir la clave."
     },
     {
       "term": "a-4-key-exchange",
@@ -544,7 +1248,23 @@
         "インパクト分析"
       ],
       "answer": 0,
-      "explain": "共通鍵を安全に共有するプロセス＝鍵交換。"
+      "explain": "共通鍵を安全に共有するプロセス＝鍵交換。",
+      "stem_en": "Diffie-Hellman is used at the start of a session to share a common key securely. What is the purpose?",
+      "choices_en": [
+        "Key exchange",
+        "Data masking",
+        "Entry/exit control",
+        "Impact analysis"
+      ],
+      "explain_en": "The process of securely sharing a common key is key exchange.",
+      "stem_es": "Se usa Diffie-Hellman al inicio de una sesión para compartir una clave común de forma segura. ¿Cuál es el objetivo?",
+      "choices_es": [
+        "Intercambio de claves",
+        "Enmascaramiento de datos",
+        "Control de acceso a instalaciones",
+        "Análisis de impacto"
+      ],
+      "explain_es": "El proceso de compartir una clave común de forma segura es el intercambio de claves."
     },
     {
       "term": "a-4-algorithm",
@@ -556,7 +1276,23 @@
         "ダウンタイム"
       ],
       "answer": 0,
-      "explain": "変換の手順・規則＝暗号アルゴリズム。"
+      "explain": "変換の手順・規則＝暗号アルゴリズム。",
+      "stem_en": "What do you call the mathematical procedure, such as AES, that converts plaintext into ciphertext?",
+      "choices_en": [
+        "Algorithm",
+        "Stakeholder",
+        "PEP",
+        "Downtime"
+      ],
+      "explain_en": "The procedure and rules of transformation are the cryptographic algorithm.",
+      "stem_es": "¿Cómo se llama el procedimiento matemático, como AES, que convierte el texto claro en texto cifrado?",
+      "choices_es": [
+        "Algoritmo",
+        "Parte interesada",
+        "PEP",
+        "Tiempo de inactividad"
+      ],
+      "explain_es": "El procedimiento y las reglas de transformación son el algoritmo criptográfico."
     },
     {
       "term": "a-4-key-length",
@@ -568,7 +1304,23 @@
         "物理フェンスが不要になる"
       ],
       "answer": 0,
-      "explain": "鍵が長いほど強いが暗号化・復号の負荷が増える。"
+      "explain": "鍵が長いほど強いが暗号化・復号の負荷が増える。",
+      "stem_en": "In general, what happens when you increase the bit length of an encryption key?",
+      "choices_en": [
+        "Security tends to rise, but processing gets heavier",
+        "Only availability always increases",
+        "A CRL is no longer needed",
+        "Physical fences are no longer needed"
+      ],
+      "explain_en": "Longer keys are stronger but increase the encryption/decryption load.",
+      "stem_es": "En general, ¿qué ocurre al aumentar la longitud en bits de una clave de cifrado?",
+      "choices_es": [
+        "La seguridad suele aumentar, pero el procesamiento es más pesado",
+        "Siempre aumenta solo la disponibilidad",
+        "Ya no hace falta una CRL",
+        "Ya no hacen falta vallas físicas"
+      ],
+      "explain_es": "Las claves más largas son más seguras, pero aumentan la carga de cifrado y descifrado."
     },
     {
       "term": "a-4-hsm",
@@ -580,7 +1332,23 @@
         "ライティング"
       ],
       "answer": 0,
-      "explain": "鍵保護の専用ハードウェア＝HSM。"
+      "explain": "鍵保護の専用ハードウェア＝HSM。",
+      "stem_en": "A bank generates and stores PINs and signing keys inside tamper-resistant dedicated hardware. What is this?",
+      "choices_en": [
+        "HSM",
+        "Fencing",
+        "Gap analysis",
+        "Lighting"
+      ],
+      "explain_en": "Dedicated hardware for protecting keys is an HSM.",
+      "stem_es": "Un banco genera y guarda PIN y claves de firma dentro de hardware dedicado resistente a manipulaciones. ¿Qué es?",
+      "choices_es": [
+        "HSM",
+        "Vallado",
+        "Análisis de brechas",
+        "Iluminación"
+      ],
+      "explain_es": "El hardware dedicado a proteger claves es un HSM."
     },
     {
       "term": "a-4-kms",
@@ -592,7 +1360,23 @@
         "SOPのみ"
       ],
       "answer": 0,
-      "explain": "鍵ライフサイクルの一元管理＝KMS。"
+      "explain": "鍵ライフサイクルの一元管理＝KMS。",
+      "stem_en": "What mechanism centrally manages key generation, distribution, rotation, and destruction in the cloud?",
+      "choices_en": [
+        "Key management system (KMS)",
+        "Bollards",
+        "Deterrent signs",
+        "SOP only"
+      ],
+      "explain_en": "Central management of the key lifecycle is a KMS.",
+      "stem_es": "¿Qué mecanismo gestiona de forma centralizada la generación, distribución, rotación y destrucción de claves en la nube?",
+      "choices_es": [
+        "Sistema de gestión de claves (KMS)",
+        "Bolardos",
+        "Carteles disuasorios",
+        "Solo SOP"
+      ],
+      "explain_es": "La gestión centralizada del ciclo de vida de las claves es un KMS."
     },
     {
       "term": "a-4-enclave",
@@ -604,7 +1388,23 @@
         "依存関係"
       ],
       "answer": 0,
-      "explain": "端末内の隔離保護領域＝Secure Enclave。"
+      "explain": "端末内の隔離保護領域＝Secure Enclave。",
+      "stem_en": "A phone stores biometric data in an area isolated from the main OS. What is this?",
+      "choices_en": [
+        "Secure enclave",
+        "Public ledger",
+        "Maintenance window",
+        "Dependencies"
+      ],
+      "explain_en": "An isolated protected area inside the device is a secure enclave.",
+      "stem_es": "Un móvil guarda los datos biométricos en un área aislada del sistema operativo principal. ¿Qué es?",
+      "choices_es": [
+        "Enclave seguro",
+        "Registro público",
+        "Ventana de mantenimiento",
+        "Dependencias"
+      ],
+      "explain_es": "Un área protegida y aislada dentro del dispositivo es un enclave seguro."
     },
     {
       "term": "a-4-stego",
@@ -616,7 +1416,23 @@
         "アクセスバッジ"
       ],
       "answer": 0,
-      "explain": "データの中に秘密を隠す＝ステガノグラフィ（難読化）。"
+      "explain": "データの中に秘密を隠す＝ステガノグラフィ（難読化）。",
+      "stem_en": "A secret message was embedded in an image file, hiding its very existence. What is this?",
+      "choices_en": [
+        "Steganography",
+        "Symmetric encryption only",
+        "Approval process",
+        "Access badge"
+      ],
+      "explain_en": "Hiding secrets inside data is steganography (obfuscation).",
+      "stem_es": "Se incrustó un mensaje secreto en un archivo de imagen, ocultando su propia existencia. ¿Qué es?",
+      "choices_es": [
+        "Esteganografía",
+        "Solo cifrado simétrico",
+        "Proceso de aprobación",
+        "Tarjeta de acceso"
+      ],
+      "explain_es": "Ocultar secretos dentro de datos es la esteganografía (ofuscación)."
     },
     {
       "term": "a-4-tokenize",
@@ -628,7 +1444,23 @@
         "指示的コントロール"
       ],
       "answer": 0,
-      "explain": "機密を無害な値に置換＝トークン化。"
+      "explain": "機密を無害な値に置換＝トークン化。",
+      "stem_en": "Card numbers are replaced with random tokens, and payment processing handles only the tokens. What is this?",
+      "choices_en": [
+        "Tokenization",
+        "Same as full-disk encryption",
+        "Fencing",
+        "Directive control"
+      ],
+      "explain_en": "Replacing sensitive data with a harmless value is tokenization.",
+      "stem_es": "Los números de tarjeta se sustituyen por tokens aleatorios y el procesamiento de pagos solo maneja los tokens. ¿Qué es?",
+      "choices_es": [
+        "Tokenización",
+        "Lo mismo que el cifrado de disco completo",
+        "Vallado",
+        "Control directivo"
+      ],
+      "explain_es": "Sustituir datos sensibles por un valor inofensivo es la tokenización."
     },
     {
       "term": "a-4-masking",
@@ -640,7 +1472,23 @@
         "ボラード"
       ],
       "answer": 0,
-      "explain": "一部を伏せて形式を保つ＝データマスキング。"
+      "explain": "一部を伏せて形式を保つ＝データマスキング。",
+      "stem_en": "A card number is displayed with only part of it visible, like **** **** **** 1234. What is this?",
+      "choices_en": [
+        "Data masking",
+        "Key exchange",
+        "CRL",
+        "Bollard"
+      ],
+      "explain_en": "Hiding part of the data while keeping its format is data masking.",
+      "stem_es": "Un número de tarjeta se muestra con solo una parte visible, como **** **** **** 1234. ¿Qué es?",
+      "choices_es": [
+        "Enmascaramiento de datos",
+        "Intercambio de claves",
+        "CRL",
+        "Bolardo"
+      ],
+      "explain_es": "Ocultar parte de los datos manteniendo su formato es el enmascaramiento de datos."
     },
     {
       "term": "a-4-hash",
@@ -652,7 +1500,23 @@
         "ダウンタイム"
       ],
       "answer": 0,
-      "explain": "不可逆の固定長指紋＝ハッシュ。完全性確認にも使用。"
+      "explain": "不可逆の固定長指紋＝ハッシュ。完全性確認にも使用。",
+      "stem_en": "Passwords are converted into irreversible fixed-length values for storage, which are also used to detect tampering. What is this?",
+      "choices_en": [
+        "Hashing",
+        "Sharing a symmetric key itself",
+        "Security guard",
+        "Downtime"
+      ],
+      "explain_en": "An irreversible fixed-length fingerprint is a hash; it's also used to verify integrity.",
+      "stem_es": "Las contraseñas se convierten en valores irreversibles de longitud fija para almacenarlas, que también sirven para detectar manipulaciones. ¿Qué es?",
+      "choices_es": [
+        "Hash",
+        "Compartir la propia clave simétrica",
+        "Guardia de seguridad",
+        "Tiempo de inactividad"
+      ],
+      "explain_es": "Una huella irreversible de longitud fija es un hash; también se usa para comprobar la integridad."
     },
     {
       "term": "a-4-salt",
@@ -664,7 +1528,23 @@
         "ライティング"
       ],
       "answer": 0,
-      "explain": "ハッシュ前のランダム値＝ソルト。レインボーテーブル対策。"
+      "explain": "ハッシュ前のランダム値＝ソルト。レインボーテーブル対策。",
+      "stem_en": "A random value is added before hashing so identical passwords produce different hashes. What is this?",
+      "choices_en": [
+        "Salt",
+        "Bollard",
+        "Approval process",
+        "Lighting"
+      ],
+      "explain_en": "A random value added before hashing is a salt — a defense against rainbow tables.",
+      "stem_es": "Se añade un valor aleatorio antes del hash para que contraseñas idénticas den hashes distintos. ¿Qué es?",
+      "choices_es": [
+        "Sal",
+        "Bolardo",
+        "Proceso de aprobación",
+        "Iluminación"
+      ],
+      "explain_es": "Un valor aleatorio añadido antes del hash es una sal: defensa contra tablas arcoíris."
     },
     {
       "term": "a-4-digital-sig",
@@ -676,7 +1556,23 @@
         "機能の制限"
       ],
       "answer": 0,
-      "explain": "完全性・認証・否認防止に寄与するのがデジタル署名。"
+      "explain": "完全性・認証・否認防止に寄与するのがデジタル署名。",
+      "stem_en": "The sender signs with their private key, and the recipient verifies with the public key to confirm the sender and that nothing was altered. What is this?",
+      "choices_en": [
+        "Digital signature",
+        "Data masking",
+        "Fencing",
+        "Restricted activities"
+      ],
+      "explain_en": "A digital signature supports integrity, authentication, and non-repudiation.",
+      "stem_es": "El remitente firma con su clave privada y el destinatario verifica con la clave pública para confirmar el remitente y que nada se alteró. ¿Qué es?",
+      "choices_es": [
+        "Firma digital",
+        "Enmascaramiento de datos",
+        "Vallado",
+        "Actividades restringidas"
+      ],
+      "explain_es": "La firma digital contribuye a la integridad, la autenticación y el no repudio."
     },
     {
       "term": "a-4-key-stretch",
@@ -688,7 +1584,23 @@
         "メンテナンスウィンドウ"
       ],
       "answer": 0,
-      "explain": "計算を重くして攻撃を遅くする＝キーストレッチ（PBKDF2等）。"
+      "explain": "計算を重くして攻撃を遅くする＝キーストレッチ（PBKDF2等）。",
+      "stem_en": "Passwords are deliberately hashed many times to slow down brute-force attacks. What is this?",
+      "choices_en": [
+        "Key stretching",
+        "Implicit trust zone",
+        "Bollard",
+        "Maintenance window"
+      ],
+      "explain_en": "Making computation heavier to slow attacks is key stretching (e.g., PBKDF2).",
+      "stem_es": "Las contraseñas se someten a hash muchas veces a propósito para frenar los ataques de fuerza bruta. ¿Qué es?",
+      "choices_es": [
+        "Estiramiento de claves",
+        "Zona de confianza implícita",
+        "Bolardo",
+        "Ventana de mantenimiento"
+      ],
+      "explain_es": "Hacer el cálculo más pesado para frenar ataques es el estiramiento de claves (p. ej., PBKDF2)."
     },
     {
       "term": "a-4-blockchain",
@@ -700,7 +1612,23 @@
         "抑止掲示"
       ],
       "answer": 0,
-      "explain": "分散型で耐改ざん性の高い台帳＝ブロックチェーン。"
+      "explain": "分散型で耐改ざん性の高い台帳＝ブロックチェーン。",
+      "stem_en": "Which ledger technology shares transactions across distributed nodes, making tampering extremely difficult?",
+      "choices_en": [
+        "Blockchain",
+        "Access badge",
+        "SOP",
+        "Deterrent sign"
+      ],
+      "explain_en": "A distributed, highly tamper-resistant ledger is a blockchain.",
+      "stem_es": "¿Qué tecnología de registro comparte las transacciones entre nodos distribuidos y hace muy difícil su manipulación?",
+      "choices_es": [
+        "Cadena de bloques",
+        "Tarjeta de acceso",
+        "SOP",
+        "Cartel disuasorio"
+      ],
+      "explain_es": "Un registro distribuido y muy resistente a manipulaciones es una cadena de bloques."
     },
     {
       "term": "a-4-public-ledger",
@@ -712,7 +1640,23 @@
         "警備員"
       ],
       "answer": 0,
-      "explain": "誰でも見られる不変の記録＝公開台帳。"
+      "explain": "誰でも見られる不変の記録＝公開台帳。",
+      "stem_en": "What do you call a public, hard-to-change record of transactions that anyone can verify?",
+      "choices_en": [
+        "Public ledger",
+        "Self-signed certificate",
+        "Gap analysis",
+        "Security guard"
+      ],
+      "explain_en": "An immutable record anyone can view is a public ledger.",
+      "stem_es": "¿Cómo se llama un registro público de transacciones, difícil de modificar, que cualquiera puede verificar?",
+      "choices_es": [
+        "Registro público",
+        "Certificado autofirmado",
+        "Análisis de brechas",
+        "Guardia de seguridad"
+      ],
+      "explain_es": "Un registro inmutable que cualquiera puede ver es un registro público."
     },
     {
       "term": "a-4-ca",
@@ -724,7 +1668,23 @@
         "ダウンタイム"
       ],
       "answer": 0,
-      "explain": "証明書を発行する第三者＝Certificate Authority。"
+      "explain": "証明書を発行する第三者＝Certificate Authority。",
+      "stem_en": "What trusted organization verifies a website operator's identity and issues TLS certificates?",
+      "choices_en": [
+        "Certificate authority (CA)",
+        "Bollard",
+        "Stakeholders only",
+        "Downtime"
+      ],
+      "explain_en": "The third party that issues certificates is a certificate authority.",
+      "stem_es": "¿Qué entidad de confianza verifica la identidad del operador de un sitio web y emite certificados TLS?",
+      "choices_es": [
+        "Autoridad de certificación (CA)",
+        "Bolardo",
+        "Solo las partes interesadas",
+        "Tiempo de inactividad"
+      ],
+      "explain_es": "El tercero que emite certificados es una autoridad de certificación."
     },
     {
       "term": "a-4-crl",
@@ -736,7 +1696,23 @@
         "フェンシング"
       ],
       "answer": 0,
-      "explain": "期限前に無効化した証明書の一覧＝CRL。"
+      "explain": "期限前に無効化した証明書の一覧＝CRL。",
+      "stem_en": "Because a private key was leaked, a still-valid certificate was revoked and published in a list. What is this list?",
+      "choices_en": [
+        "Certificate revocation list (CRL)",
+        "Allow list",
+        "SOP",
+        "Fencing"
+      ],
+      "explain_en": "A list of certificates revoked before expiry is a CRL.",
+      "stem_es": "Por la filtración de una clave privada, se revocó un certificado aún vigente y se publicó en una lista. ¿Qué lista es?",
+      "choices_es": [
+        "Lista de revocación de certificados (CRL)",
+        "Lista de permitidos",
+        "SOP",
+        "Vallado"
+      ],
+      "explain_es": "Una lista de certificados revocados antes de caducar es una CRL."
     },
     {
       "term": "a-4-self-signed",
@@ -748,7 +1724,23 @@
         "公開台帳"
       ],
       "answer": 0,
-      "explain": "所有者自身が発行＝自己署名。外部からの広範な信頼は得にくい。"
+      "explain": "所有者自身が発行＝自己署名。外部からの広範な信頼は得にくい。",
+      "stem_en": "To save costs in a development environment, a certificate signed by its own owner is used. What is this?",
+      "choices_en": [
+        "Self-signed certificate",
+        "Same trust as a third-party certificate",
+        "HSM required",
+        "Public ledger"
+      ],
+      "explain_en": "Issued by the owner itself = self-signed. It's hard for it to gain broad external trust.",
+      "stem_es": "Para ahorrar costes en un entorno de desarrollo, se usa un certificado firmado por su propio titular. ¿Qué es?",
+      "choices_es": [
+        "Certificado autofirmado",
+        "La misma confianza que un certificado de terceros",
+        "Requiere HSM",
+        "Registro público"
+      ],
+      "explain_es": "Emitido por el propio titular = autofirmado. Es difícil que obtenga una confianza externa amplia."
     },
     {
       "term": "a-4-third-party-cert",
@@ -760,7 +1752,23 @@
         "ボラード"
       ],
       "answer": 0,
-      "explain": "CA発行の証明書＝サードパーティ証明書。"
+      "explain": "CA発行の証明書＝サードパーティ証明書。",
+      "stem_en": "A public website uses a certificate issued after a third-party CA verified its identity. What is this?",
+      "choices_en": [
+        "Third-party certificate",
+        "Self-signed only",
+        "Salt",
+        "Bollard"
+      ],
+      "explain_en": "A certificate issued by a CA is a third-party certificate.",
+      "stem_es": "Un sitio web público usa un certificado emitido tras la verificación de su identidad por una CA externa. ¿Qué es?",
+      "choices_es": [
+        "Certificado de terceros",
+        "Solo autofirmado",
+        "Sal",
+        "Bolardo"
+      ],
+      "explain_es": "Un certificado emitido por una CA es un certificado de terceros."
     },
     {
       "term": "a-4-root-of-trust",
@@ -772,7 +1780,23 @@
         "抑止的掲示"
       ],
       "answer": 0,
-      "explain": "信頼連鎖の根＝Root of Trust。"
+      "explain": "信頼連鎖の根＝Root of Trust。",
+      "stem_en": "What do you call the ultimate starting point of trust (such as a root certificate) that a browser reaches when following a certificate chain?",
+      "choices_en": [
+        "Root of trust",
+        "Downtime",
+        "Restricted activities",
+        "Deterrent sign"
+      ],
+      "explain_en": "The root of the chain of trust is the root of trust.",
+      "stem_es": "¿Cómo se llama el punto de partida final de la confianza (como un certificado raíz) al que llega el navegador al seguir una cadena de certificados?",
+      "choices_es": [
+        "Raíz de confianza",
+        "Tiempo de inactividad",
+        "Actividades restringidas",
+        "Cartel disuasorio"
+      ],
+      "explain_es": "La raíz de la cadena de confianza es la raíz de confianza."
     }
   ]
 }

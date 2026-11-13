@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A-4 適切な暗号化の選択 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain A</span></a>
-  <a class="nav-back" href="index.html">← Domain A ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain A ハブ</span><span data-i18n="en">← Domain A hub</span><span data-i18n="es">← Hub del Domain A</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain A</h2>
-    <a href="a-1.html">A-1 セキュリティコントロールの比較</a><a href="a-2.html">A-2 セキュリティコンセプトの基礎</a><a href="a-3.html">A-3 変更管理とセキュリティへの影響</a><a href="a-4.html" class="active">A-4 適切な暗号化の選択</a>
+    <a href="a-1.html">A-1 <span data-i18n="ja">セキュリティコントロールの比較</span><span data-i18n="en">Comparing security controls</span><span data-i18n="es">Comparación de controles de seguridad</span></a><a href="a-2.html">A-2 <span data-i18n="ja">セキュリティコンセプトの基礎</span><span data-i18n="en">Fundamental security concepts</span><span data-i18n="es">Conceptos de seguridad fundamentales</span></a><a href="a-3.html">A-3 <span data-i18n="ja">変更管理とセキュリティへの影響</span><span data-i18n="en">Change management and its security impact</span><span data-i18n="es">Gestión de cambios y su impacto en la seguridad</span></a><a href="a-4.html" class="active">A-4 <span data-i18n="ja">適切な暗号化の選択</span><span data-i18n="en">Choosing appropriate cryptography</span><span data-i18n="es">Elección de la criptografía adecuada</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain A 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain A <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,317 +55,472 @@
       
 <header class="hero">
   <p class="eyebrow">Domain A · A-4</p>
-  <h1>適切な暗号化の選択</h1>
-  <p>鍵・隠す・ハッシュ・証明書</p>
+  <h1><span data-i18n="ja">適切な暗号化の選択</span><span data-i18n="en">Choosing appropriate cryptography</span><span data-i18n="es">Elección de la criptografía adecuada</span></h1>
+  <p data-i18n="ja">鍵・隠す・ハッシュ・証明書</p>
+  <p data-i18n="en">Keys, hiding, hashing, certificates</p>
+  <p data-i18n="es">Claves, ocultación, hash y certificados</p>
   <div class="meta-row">
-    <span class="chip">用語 25</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 1.4</span>
+    <span class="chip"><span data-i18n="ja">用語 25</span><span data-i18n="en">25 terms</span><span data-i18n="es">25 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 1.4</span><span data-i18n="en">Official 1.4</span><span data-i18n="es">Oficial 1.4</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 25問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 25問</span><span data-i18n="en">Quiz (25)</span><span data-i18n="es">Cuestionario (25)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">鍵と暗号方式</h2>
-<article class="memo-card" id="a-4-pub-priv" data-search="公開鍵と秘密鍵 public / private key 対になる2つの鍵で暗号・署名 公開鍵で暗号化 秘密鍵で復号">
-  <h3>公開鍵と秘密鍵<span class="en">Public / Private Key</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">鍵と暗号方式</span><span data-i18n="en">Keys and encryption methods</span><span data-i18n="es">Claves y métodos de cifrado</span></h2>
+<article class="memo-card" id="a-4-pub-priv" data-search="公開鍵と秘密鍵 public / private key clave pública y clave privada 対になる2つの鍵で暗号・署名 公開鍵で暗号化 秘密鍵で復号">
+  <h3>
+    <span data-i18n="ja">公開鍵と秘密鍵<span class="en">Public / Private Key</span></span>
+    <span data-i18n="en">Public / Private Key</span>
+    <span data-i18n="es">Clave pública y clave privada</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">対になる<span class="hl">2つの鍵</span>で暗号・署名</p>
+    <p data-i18n="ja" class="one-liner">対になる<span class="hl">2つの鍵</span>で暗号・署名</p><p data-i18n="en" class="one-liner"><span class="hl">A key pair</span> used for encryption and signing</p><p data-i18n="es" class="one-liner"><span class="hl">Un par de claves</span> para cifrar y firmar</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>公開鍵で暗号化</li><li>秘密鍵で復号</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>公開鍵で暗号化</li><li>秘密鍵で復号</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Encrypt with the public key</li><li>Decrypt with the private key</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Cifrar con la clave pública</li><li>Descifrar con la clave privada</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-key-escrow" data-search="キーエスクロー key escrow 鍵を信頼できる第三者に預ける 紛失時の鍵復旧">
-  <h3>キーエスクロー<span class="en">Key Escrow</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-key-escrow" data-search="キーエスクロー key escrow custodia de claves 鍵を信頼できる第三者に預ける 紛失時の鍵復旧">
+  <h3>
+    <span data-i18n="ja">キーエスクロー<span class="en">Key Escrow</span></span>
+    <span data-i18n="en">Key Escrow</span>
+    <span data-i18n="es">Custodia de claves</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">鍵を信頼できる<span class="hl">第三者に預ける</span></p>
+    <p data-i18n="ja" class="one-liner">鍵を信頼できる<span class="hl">第三者に預ける</span></p><p data-i18n="en" class="one-liner">Keys <span class="hl">held by a trusted third party</span></p><p data-i18n="es" class="one-liner">Claves <span class="hl">depositadas en un tercero de confianza</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>紛失時の鍵復旧</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>紛失時の鍵復旧</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Key recovery after loss</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Recuperación de claves tras una pérdida</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-enc-scope" data-search="暗号化の範囲 level of encryption どの粒度で暗号化するかを決める フルディスク ファイル単位">
-  <h3>暗号化の範囲<span class="en">Level of Encryption</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-enc-scope" data-search="暗号化の範囲 level of encryption nivel de cifrado どの粒度で暗号化するかを決める フルディスク ファイル単位">
+  <h3>
+    <span data-i18n="ja">暗号化の範囲<span class="en">Level of Encryption</span></span>
+    <span data-i18n="en">Level of Encryption</span>
+    <span data-i18n="es">Nivel de cifrado</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">どの粒度</span>で暗号化するかを決める</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">どの粒度</span>で暗号化するかを決める</p><p data-i18n="en" class="one-liner">Decides <span class="hl">at what granularity</span> to encrypt</p><p data-i18n="es" class="one-liner">Decide <span class="hl">con qué granularidad</span> cifrar</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>フルディスク</li><li>ファイル単位</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>フルディスク</li><li>ファイル単位</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Full disk</li><li>Per file</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Disco completo</li><li>Por archivo</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-asymmetric" data-search="非対称暗号化 asymmetric 公開鍵と秘密鍵の2鍵方式 メール暗号化 デジタル署名">
-  <h3>非対称暗号化<span class="en">Asymmetric</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-asymmetric" data-search="非対称暗号化 asymmetric cifrado asimétrico 公開鍵と秘密鍵の2鍵方式 メール暗号化 デジタル署名">
+  <h3>
+    <span data-i18n="ja">非対称暗号化<span class="en">Asymmetric</span></span>
+    <span data-i18n="en">Asymmetric encryption</span>
+    <span data-i18n="es">Cifrado asimétrico</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">公開鍵と秘密鍵の<span class="hl">2鍵方式</span></p>
+    <p data-i18n="ja" class="one-liner">公開鍵と秘密鍵の<span class="hl">2鍵方式</span></p><p data-i18n="en" class="one-liner">A <span class="hl">two-key scheme</span>: public and private</p><p data-i18n="es" class="one-liner">Un <span class="hl">esquema de dos claves</span>: pública y privada</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>メール暗号化</li><li>デジタル署名</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>メール暗号化</li><li>デジタル署名</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Email encryption</li><li>Digital signatures</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Cifrado de correo</li><li>Firmas digitales</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-symmetric" data-search="対称暗号化 symmetric 同じ鍵で暗号も復号もする aes 大量データ暗号">
-  <h3>対称暗号化<span class="en">Symmetric</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-symmetric" data-search="対称暗号化 symmetric cifrado simétrico 同じ鍵で暗号も復号もする aes 大量データ暗号">
+  <h3>
+    <span data-i18n="ja">対称暗号化<span class="en">Symmetric</span></span>
+    <span data-i18n="en">Symmetric encryption</span>
+    <span data-i18n="es">Cifrado simétrico</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">同じ鍵</span>で暗号も復号もする</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">同じ鍵</span>で暗号も復号もする</p><p data-i18n="en" class="one-liner"><span class="hl">The same key</span> encrypts and decrypts</p><p data-i18n="es" class="one-liner"><span class="hl">La misma clave</span> cifra y descifra</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>AES</li><li>大量データ暗号</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>AES</li><li>大量データ暗号</li></ul>
+      <ul class="example-list" data-i18n="en"><li>AES</li><li>Bulk data encryption</li></ul>
+      <ul class="example-list" data-i18n="es"><li>AES</li><li>Cifrado de grandes volúmenes de datos</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-key-exchange" data-search="鍵交換 key exchange 共通鍵を安全に共有する手順 diffie-hellman rsa鍵交換">
-  <h3>鍵交換<span class="en">Key Exchange</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-key-exchange" data-search="鍵交換 key exchange intercambio de claves 共通鍵を安全に共有する手順 diffie-hellman rsa鍵交換">
+  <h3>
+    <span data-i18n="ja">鍵交換<span class="en">Key Exchange</span></span>
+    <span data-i18n="en">Key Exchange</span>
+    <span data-i18n="es">Intercambio de claves</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">共通鍵を<span class="hl">安全に共有</span>する手順</p>
+    <p data-i18n="ja" class="one-liner">共通鍵を<span class="hl">安全に共有</span>する手順</p><p data-i18n="en" class="one-liner">How to <span class="hl">share a common key safely</span></p><p data-i18n="es" class="one-liner">Cómo <span class="hl">compartir una clave común de forma segura</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Diffie-Hellman</li><li>RSA鍵交換</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Diffie-Hellman</li><li>RSA鍵交換</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Diffie-Hellman</li><li>RSA key exchange</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Diffie-Hellman</li><li>Intercambio de claves RSA</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-algorithm" data-search="アルゴリズム algorithm 平文を暗号文にする計算手順 aes">
-  <h3>アルゴリズム<span class="en">Algorithm</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-algorithm" data-search="アルゴリズム algorithm algoritmo 平文を暗号文にする計算手順 aes">
+  <h3>
+    <span data-i18n="ja">アルゴリズム<span class="en">Algorithm</span></span>
+    <span data-i18n="en">Algorithm</span>
+    <span data-i18n="es">Algoritmo</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">平文を暗号文にする<span class="hl">計算手順</span></p>
+    <p data-i18n="ja" class="one-liner">平文を暗号文にする<span class="hl">計算手順</span></p><p data-i18n="en" class="one-liner">The <span class="hl">computational steps</span> that turn plaintext into ciphertext</p><p data-i18n="es" class="one-liner">Los <span class="hl">pasos de cálculo</span> que convierten texto claro en cifrado</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>AES</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>AES</li></ul>
+      <ul class="example-list" data-i18n="en"><li>AES</li></ul>
+      <ul class="example-list" data-i18n="es"><li>AES</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-key-length" data-search="鍵の長さ key length 長いほど強いが処理は重い 128ビット 256ビット">
-  <h3>鍵の長さ<span class="en">Key Length</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-key-length" data-search="鍵の長さ key length longitud de clave 長いほど強いが処理は重い 128ビット 256ビット">
+  <h3>
+    <span data-i18n="ja">鍵の長さ<span class="en">Key Length</span></span>
+    <span data-i18n="en">Key Length</span>
+    <span data-i18n="es">Longitud de clave</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">長いほど強いが<span class="hl">処理は重い</span></p>
+    <p data-i18n="ja" class="one-liner">長いほど強いが<span class="hl">処理は重い</span></p><p data-i18n="en" class="one-liner">Longer is stronger but <span class="hl">slower to process</span></p><p data-i18n="es" class="one-liner">Más larga es más segura, pero <span class="hl">más lenta de procesar</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>128ビット</li><li>256ビット</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>128ビット</li><li>256ビット</li></ul>
+      <ul class="example-list" data-i18n="en"><li>128-bit</li><li>256-bit</li></ul>
+      <ul class="example-list" data-i18n="es"><li>128 bits</li><li>256 bits</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">鍵の保護</h2>
-<article class="memo-card" id="a-4-hsm" data-search="hsm hardware security module 鍵を守る専用ハードウェア 銀行の鍵管理 署名鍵保護">
-  <h3>HSM<span class="en">Hardware Security Module</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">鍵の保護</span><span data-i18n="en">Protecting keys</span><span data-i18n="es">Protección de claves</span></h2>
+<article class="memo-card" id="a-4-hsm" data-search="hsm hardware security module módulo de seguridad de hardware (hsm) 鍵を守る専用ハードウェア 銀行の鍵管理 署名鍵保護">
+  <h3>
+    <span data-i18n="ja">HSM<span class="en">Hardware Security Module</span></span>
+    <span data-i18n="en">Hardware Security Module</span>
+    <span data-i18n="es">Módulo de seguridad de hardware (HSM)</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">鍵を守る<span class="hl">専用ハードウェア</span></p>
+    <p data-i18n="ja" class="one-liner">鍵を守る<span class="hl">専用ハードウェア</span></p><p data-i18n="en" class="one-liner"><span class="hl">Dedicated hardware</span> that protects keys</p><p data-i18n="es" class="one-liner"><span class="hl">Hardware dedicado</span> que protege las claves</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>銀行の鍵管理</li><li>署名鍵保護</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-4-kms" data-search="キー管理システム kms 鍵の一生をまとめて管理 クラウドの暗号鍵管理">
-  <h3>キー管理システム<span class="en">KMS</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">鍵の一生を<span class="hl">まとめて管理</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>クラウドの暗号鍵管理</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-4-enclave" data-search="セキュアエンクレーブ secure enclave 端末内の隔離された保護領域 生体認証データの保護">
-  <h3>セキュアエンクレーブ<span class="en">Secure Enclave</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">端末内の<span class="hl">隔離された保護領域</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>生体認証データの保護</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">難読化・データ隠蔽</h2>
-<article class="memo-card" id="a-4-stego" data-search="ステガノグラフィ steganography データの中に秘密を隠す 画像へのメッセージ埋め込み">
-  <h3>ステガノグラフィ<span class="en">Steganography</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">データの中に<span class="hl">秘密を隠す</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>画像へのメッセージ埋め込み</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>銀行の鍵管理</li><li>署名鍵保護</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Bank key management</li><li>Signing key protection</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Gestión de claves en bancos</li><li>Protección de claves de firma</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-tokenize" data-search="トークン化 tokenization 機密を別の無害な値に置換 カード番号のトークン">
-  <h3>トークン化<span class="en">Tokenization</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-kms" data-search="キー管理システム kms sistema de gestión de claves (kms) 鍵の一生をまとめて管理 クラウドの暗号鍵管理">
+  <h3>
+    <span data-i18n="ja">キー管理システム<span class="en">KMS</span></span>
+    <span data-i18n="en">Key Management System (KMS)</span>
+    <span data-i18n="es">Sistema de gestión de claves (KMS)</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">機密を別の<span class="hl">無害な値に置換</span></p>
+    <p data-i18n="ja" class="one-liner">鍵の一生を<span class="hl">まとめて管理</span></p><p data-i18n="en" class="one-liner"><span class="hl">Manages a key's whole lifecycle</span> in one place</p><p data-i18n="es" class="one-liner"><span class="hl">Gestiona todo el ciclo de vida</span> de las claves en un solo lugar</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>カード番号のトークン</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>クラウドの暗号鍵管理</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Cloud encryption key management</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Gestión de claves de cifrado en la nube</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-masking" data-search="データマスキング data masking 一部を伏せて見せる **** **** **** 3456">
-  <h3>データマスキング<span class="en">Data Masking</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-enclave" data-search="セキュアエンクレーブ secure enclave enclave seguro 端末内の隔離された保護領域 生体認証データの保護">
+  <h3>
+    <span data-i18n="ja">セキュアエンクレーブ<span class="en">Secure Enclave</span></span>
+    <span data-i18n="en">Secure Enclave</span>
+    <span data-i18n="es">Enclave seguro</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">一部を<span class="hl">伏せて見せる</span></p>
+    <p data-i18n="ja" class="one-liner">端末内の<span class="hl">隔離された保護領域</span></p><p data-i18n="en" class="one-liner">An <span class="hl">isolated protected area</span> inside a device</p><p data-i18n="es" class="one-liner">Un <span class="hl">área protegida y aislada</span> dentro del dispositivo</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>**** **** **** 3456</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>生体認証データの保護</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Protecting biometric data</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Protección de datos biométricos</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">ハッシュと署名</h2>
-<article class="memo-card" id="a-4-hash" data-search="ハッシュ値 hash 戻せない固定長の指紋 パスワード保存 改ざん検知">
-  <h3>ハッシュ値<span class="en">Hash</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">難読化・データ隠蔽</span><span data-i18n="en">Obfuscation and data hiding</span><span data-i18n="es">Ofuscación y ocultación de datos</span></h2>
+<article class="memo-card" id="a-4-stego" data-search="ステガノグラフィ steganography esteganografía データの中に秘密を隠す 画像へのメッセージ埋め込み">
+  <h3>
+    <span data-i18n="ja">ステガノグラフィ<span class="en">Steganography</span></span>
+    <span data-i18n="en">Steganography</span>
+    <span data-i18n="es">Esteganografía</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">戻せない<span class="hl">固定長の指紋</span></p>
+    <p data-i18n="ja" class="one-liner">データの中に<span class="hl">秘密を隠す</span></p><p data-i18n="en" class="one-liner"><span class="hl">Hides secrets</span> inside other data</p><p data-i18n="es" class="one-liner"><span class="hl">Oculta secretos</span> dentro de otros datos</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>パスワード保存</li><li>改ざん検知</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-4-salt" data-search="ソルト salt ハッシュ前に足すランダム値 レインボーテーブル対策">
-  <h3>ソルト<span class="en">Salt</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">ハッシュ前に足す<span class="hl">ランダム値</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>レインボーテーブル対策</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-4-digital-sig" data-search="デジタル署名 digital signature 誰が送り改ざんがないかを証明 署名付きメール 電子契約">
-  <h3>デジタル署名<span class="en">Digital Signature</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">誰が送り<span class="hl">改ざんがないか</span>を証明</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>署名付きメール</li><li>電子契約</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>画像へのメッセージ埋め込み</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Embedding a message in an image</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Incrustar un mensaje en una imagen</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-key-stretch" data-search="キーストレッチ key stretching 何度もハッシュして総当たりを遅くする pbkdf2 bcrypt">
-  <h3>キーストレッチ<span class="en">Key Stretching</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-tokenize" data-search="トークン化 tokenization tokenización 機密を別の無害な値に置換 カード番号のトークン">
+  <h3>
+    <span data-i18n="ja">トークン化<span class="en">Tokenization</span></span>
+    <span data-i18n="en">Tokenization</span>
+    <span data-i18n="es">Tokenización</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">何度もハッシュして<span class="hl">総当たりを遅く</span>する</p>
+    <p data-i18n="ja" class="one-liner">機密を別の<span class="hl">無害な値に置換</span></p><p data-i18n="en" class="one-liner">Replaces sensitive data with a <span class="hl">harmless substitute</span></p><p data-i18n="es" class="one-liner">Sustituye datos sensibles por un <span class="hl">valor inofensivo</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>PBKDF2</li><li>bcrypt</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">分散台帳</h2>
-<article class="memo-card" id="a-4-blockchain" data-search="ブロックチェーン blockchain 改ざんしにくい分散型の台帳 ビットコイン取引">
-  <h3>ブロックチェーン<span class="en">Blockchain</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">改ざんしにくい<span class="hl">分散型の台帳</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ビットコイン取引</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>カード番号のトークン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Card number tokens</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Tokens de números de tarjeta</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-public-ledger" data-search="公開台帳 public ledger 誰でも見られる不変の記録 公開取引履歴">
-  <h3>公開台帳<span class="en">Public Ledger</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-masking" data-search="データマスキング data masking enmascaramiento de datos 一部を伏せて見せる **** **** **** 3456">
+  <h3>
+    <span data-i18n="ja">データマスキング<span class="en">Data Masking</span></span>
+    <span data-i18n="en">Data Masking</span>
+    <span data-i18n="es">Enmascaramiento de datos</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">誰でも見られる<span class="hl">不変の記録</span></p>
+    <p data-i18n="ja" class="one-liner">一部を<span class="hl">伏せて見せる</span></p><p data-i18n="en" class="one-liner">Shows data with <span class="hl">part of it hidden</span></p><p data-i18n="es" class="one-liner">Muestra los datos con <span class="hl">una parte oculta</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>公開取引履歴</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>**** **** **** 3456</li></ul>
+      <ul class="example-list" data-i18n="en"><li>**** **** **** 3456</li></ul>
+      <ul class="example-list" data-i18n="es"><li>**** **** **** 3456</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">証明書と信頼</h2>
-<article class="memo-card" id="a-4-ca" data-search="認証局 ca 証明書を発行する信頼できる機関 ssl/tls証明書の発行">
-  <h3>認証局<span class="en">CA</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">ハッシュと署名</span><span data-i18n="en">Hashing and signatures</span><span data-i18n="es">Hash y firmas</span></h2>
+<article class="memo-card" id="a-4-hash" data-search="ハッシュ値 hash hash 戻せない固定長の指紋 パスワード保存 改ざん検知">
+  <h3>
+    <span data-i18n="ja">ハッシュ値<span class="en">Hash</span></span>
+    <span data-i18n="en">Hash</span>
+    <span data-i18n="es">Hash</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">証明書を発行する<span class="hl">信頼できる機関</span></p>
+    <p data-i18n="ja" class="one-liner">戻せない<span class="hl">固定長の指紋</span></p><p data-i18n="en" class="one-liner">An irreversible <span class="hl">fixed-length fingerprint</span></p><p data-i18n="es" class="one-liner">Una <span class="hl">huella de longitud fija</span> irreversible</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>SSL/TLS証明書の発行</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-4-crl" data-search="証明書失効リスト crl 期限前に無効にした証明書一覧 鍵漏洩時の失効">
-  <h3>証明書失効リスト<span class="en">CRL</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">期限前に無効にした<span class="hl">証明書一覧</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>鍵漏洩時の失効</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-4-self-signed" data-search="自己署名証明書 self-signed 自分で発行する試験・開発用証明書 ローカルhttps">
-  <h3>自己署名証明書<span class="en">Self-Signed</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">自分で発行する<span class="hl">試験・開発用</span>証明書</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ローカルHTTPS</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>パスワード保存</li><li>改ざん検知</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Password storage</li><li>Tamper detection</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Almacenamiento de contraseñas</li><li>Detección de manipulaciones</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-third-party-cert" data-search="サードパーティ証明書 third-party certificate caが身元確認して発行する証明書 公開webサイトの証明書">
-  <h3>サードパーティ証明書<span class="en">Third-party Certificate</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-salt" data-search="ソルト salt sal (salt) ハッシュ前に足すランダム値 レインボーテーブル対策">
+  <h3>
+    <span data-i18n="ja">ソルト<span class="en">Salt</span></span>
+    <span data-i18n="en">Salt</span>
+    <span data-i18n="es">Sal (salt)</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">CAが身元確認して発行する証明書</p>
+    <p data-i18n="ja" class="one-liner">ハッシュ前に足す<span class="hl">ランダム値</span></p><p data-i18n="en" class="one-liner">A <span class="hl">random value</span> added before hashing</p><p data-i18n="es" class="one-liner">Un <span class="hl">valor aleatorio</span> que se añade antes del hash</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>公開Webサイトの証明書</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>レインボーテーブル対策</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Defense against rainbow tables</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Defensa contra tablas arcoíris</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-4-root-of-trust" data-search="信頼の起点 root of trust 信頼の連鎖の出発点 ルート証明書">
-  <h3>信頼の起点<span class="en">Root of Trust</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-4-digital-sig" data-search="デジタル署名 digital signature firma digital 誰が送り改ざんがないかを証明 署名付きメール 電子契約">
+  <h3>
+    <span data-i18n="ja">デジタル署名<span class="en">Digital Signature</span></span>
+    <span data-i18n="en">Digital Signature</span>
+    <span data-i18n="es">Firma digital</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">信頼の連鎖の<span class="hl">出発点</span></p>
+    <p data-i18n="ja" class="one-liner">誰が送り<span class="hl">改ざんがないか</span>を証明</p><p data-i18n="en" class="one-liner">Proves who sent it and that it <span class="hl">wasn't altered</span></p><p data-i18n="es" class="one-liner">Demuestra quién lo envió y que <span class="hl">no fue alterado</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ルート証明書</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>署名付きメール</li><li>電子契約</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Signed email</li><li>Electronic contracts</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Correo firmado</li><li>Contratos electrónicos</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-key-stretch" data-search="キーストレッチ key stretching estiramiento de claves 何度もハッシュして総当たりを遅くする pbkdf2 bcrypt">
+  <h3>
+    <span data-i18n="ja">キーストレッチ<span class="en">Key Stretching</span></span>
+    <span data-i18n="en">Key Stretching</span>
+    <span data-i18n="es">Estiramiento de claves</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">何度もハッシュして<span class="hl">総当たりを遅く</span>する</p><p data-i18n="en" class="one-liner">Hashes repeatedly to <span class="hl">slow down brute force</span></p><p data-i18n="es" class="one-liner">Aplica hash repetidamente para <span class="hl">frenar la fuerza bruta</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>PBKDF2</li><li>bcrypt</li></ul>
+      <ul class="example-list" data-i18n="en"><li>PBKDF2</li><li>bcrypt</li></ul>
+      <ul class="example-list" data-i18n="es"><li>PBKDF2</li><li>bcrypt</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">分散台帳</span><span data-i18n="en">Distributed ledgers</span><span data-i18n="es">Registros distribuidos</span></h2>
+<article class="memo-card" id="a-4-blockchain" data-search="ブロックチェーン blockchain cadena de bloques (blockchain) 改ざんしにくい分散型の台帳 ビットコイン取引">
+  <h3>
+    <span data-i18n="ja">ブロックチェーン<span class="en">Blockchain</span></span>
+    <span data-i18n="en">Blockchain</span>
+    <span data-i18n="es">Cadena de bloques (blockchain)</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">改ざんしにくい<span class="hl">分散型の台帳</span></p><p data-i18n="en" class="one-liner">A <span class="hl">distributed ledger</span> that's hard to tamper with</p><p data-i18n="es" class="one-liner">Un <span class="hl">registro distribuido</span> difícil de manipular</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ビットコイン取引</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Bitcoin transactions</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Transacciones de Bitcoin</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-public-ledger" data-search="公開台帳 public ledger registro público 誰でも見られる不変の記録 公開取引履歴">
+  <h3>
+    <span data-i18n="ja">公開台帳<span class="en">Public Ledger</span></span>
+    <span data-i18n="en">Public Ledger</span>
+    <span data-i18n="es">Registro público</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">誰でも見られる<span class="hl">不変の記録</span></p><p data-i18n="en" class="one-liner">An <span class="hl">immutable record</span> anyone can view</p><p data-i18n="es" class="one-liner">Un <span class="hl">registro inmutable</span> que cualquiera puede ver</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>公開取引履歴</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Public transaction history</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Historial público de transacciones</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">証明書と信頼</span><span data-i18n="en">Certificates and trust</span><span data-i18n="es">Certificados y confianza</span></h2>
+<article class="memo-card" id="a-4-ca" data-search="認証局 ca autoridad de certificación (ca) 証明書を発行する信頼できる機関 ssl/tls証明書の発行">
+  <h3>
+    <span data-i18n="ja">認証局<span class="en">CA</span></span>
+    <span data-i18n="en">Certificate Authority (CA)</span>
+    <span data-i18n="es">Autoridad de certificación (CA)</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">証明書を発行する<span class="hl">信頼できる機関</span></p><p data-i18n="en" class="one-liner">A <span class="hl">trusted organization</span> that issues certificates</p><p data-i18n="es" class="one-liner">Una <span class="hl">entidad de confianza</span> que emite certificados</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>SSL/TLS証明書の発行</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Issuing SSL/TLS certificates</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Emisión de certificados SSL/TLS</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-crl" data-search="証明書失効リスト crl lista de revocación de certificados (crl) 期限前に無効にした証明書一覧 鍵漏洩時の失効">
+  <h3>
+    <span data-i18n="ja">証明書失効リスト<span class="en">CRL</span></span>
+    <span data-i18n="en">Certificate Revocation List (CRL)</span>
+    <span data-i18n="es">Lista de revocación de certificados (CRL)</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">期限前に無効にした<span class="hl">証明書一覧</span></p><p data-i18n="en" class="one-liner">A <span class="hl">list of certificates</span> revoked before expiry</p><p data-i18n="es" class="one-liner">Una <span class="hl">lista de certificados</span> revocados antes de caducar</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>鍵漏洩時の失効</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Revocation after key compromise</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Revocación tras la filtración de una clave</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-self-signed" data-search="自己署名証明書 self-signed certificado autofirmado 自分で発行する試験・開発用証明書 ローカルhttps">
+  <h3>
+    <span data-i18n="ja">自己署名証明書<span class="en">Self-Signed</span></span>
+    <span data-i18n="en">Self-signed certificate</span>
+    <span data-i18n="es">Certificado autofirmado</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">自分で発行する<span class="hl">試験・開発用</span>証明書</p><p data-i18n="en" class="one-liner">A certificate you issue yourself, <span class="hl">for testing and development</span></p><p data-i18n="es" class="one-liner">Un certificado emitido por uno mismo, <span class="hl">para pruebas y desarrollo</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ローカルHTTPS</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Local HTTPS</li></ul>
+      <ul class="example-list" data-i18n="es"><li>HTTPS local</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-third-party-cert" data-search="サードパーティ証明書 third-party certificate certificado de terceros caが身元確認して発行する証明書 公開webサイトの証明書">
+  <h3>
+    <span data-i18n="ja">サードパーティ証明書<span class="en">Third-party Certificate</span></span>
+    <span data-i18n="en">Third-party Certificate</span>
+    <span data-i18n="es">Certificado de terceros</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">CAが身元確認して発行する証明書</p><p data-i18n="en" class="one-liner">A certificate issued by a CA <span class="hl">after verifying identity</span></p><p data-i18n="es" class="one-liner">Certificado emitido por una CA <span class="hl">tras verificar la identidad</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>公開Webサイトの証明書</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Certificates for public websites</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Certificados de sitios web públicos</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-root-of-trust" data-search="信頼の起点 root of trust raíz de confianza 信頼の連鎖の出発点 ルート証明書">
+  <h3>
+    <span data-i18n="ja">信頼の起点<span class="en">Root of Trust</span></span>
+    <span data-i18n="en">Root of Trust</span>
+    <span data-i18n="es">Raíz de confianza</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">信頼の連鎖の<span class="hl">出発点</span></p><p data-i18n="en" class="one-liner">The <span class="hl">starting point</span> of the chain of trust</p><p data-i18n="es" class="one-liner">El <span class="hl">punto de partida</span> de la cadena de confianza</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ルート証明書</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Root certificates</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Certificados raíz</li></ul>
     </div>
   </div>
 </article>
@@ -367,19 +528,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（25問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（25問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (25 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (25 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
-  <script type="application/json" id="quiz-data">[{"term": "a-4-pub-priv", "stem": "受信者の公開鍵で暗号化したメールを、受信者だけが読める。復号に使うのは何か。", "choices": ["受信者の秘密鍵", "送信者の公開鍵", "共有の対称鍵のみ（常に）", "CRL"], "answer": 0, "explain": "公開鍵で暗号化したデータは対応する秘密鍵でのみ復号できる。"}, {"term": "a-4-key-escrow", "stem": "鍵紛失に備え、秘密鍵を信頼できる第三者機関に預けた。この仕組みは何か。", "choices": ["キーエスクロー", "ステガノグラフィ", "データマスキング", "フェンシング"], "answer": 0, "explain": "鍵の第三者預託＝キーエスクロー。"}, {"term": "a-4-enc-scope", "stem": "ノートPC紛失対策としてディスク全体を暗号化した。これは暗号化の範囲のどれに近いか。", "choices": ["フルディスク暗号化", "レコード単位のみ", "CRL登録", "ギャップ分析"], "answer": 0, "explain": "ディスク全体の暗号化はフルディスク。範囲（粒度）の選択問題。"}, {"term": "a-4-asymmetric", "stem": "公開鍵と秘密鍵の対を使い、暗号化やデジタル署名を行う方式は何か。", "choices": ["非対称暗号化", "対称暗号化", "ソルトのみ", "許可リスト"], "answer": 0, "explain": "2鍵方式＝非対称（公開鍵暗号）。"}, {"term": "a-4-symmetric", "stem": "同じ鍵で暗号化と復号を行い、大量データの高速処理に向く方式は何か。", "choices": ["対称暗号化", "非対称暗号化", "否認防止", "ボラード"], "answer": 0, "explain": "同一鍵＝対称。AESなどが代表。鍵配送が課題。"}, {"term": "a-4-key-exchange", "stem": "通信開始時に共通鍵を安全に共有するため Diffie-Hellman を使う。目的は何か。", "choices": ["鍵交換", "データマスキング", "入退室管理", "インパクト分析"], "answer": 0, "explain": "共通鍵を安全に共有するプロセス＝鍵交換。"}, {"term": "a-4-algorithm", "stem": "AESのように、平文を暗号文へ変換する数学的手順を何と呼ぶか。", "choices": ["アルゴリズム", "ステークホルダー", "PEP", "ダウンタイム"], "answer": 0, "explain": "変換の手順・規則＝暗号アルゴリズム。"}, {"term": "a-4-key-length", "stem": "一般に、暗号鍵のビット数を長くするとどうなるか。", "choices": ["安全性は上がりがちだが処理は重くなりやすい", "必ず可用性だけが上がる", "CRLが不要になる", "物理フェンスが不要になる"], "answer": 0, "explain": "鍵が長いほど強いが暗号化・復号の負荷が増える。"}, {"term": "a-4-hsm", "stem": "銀行がPINや署名鍵を、耐タンパー性のある専用機器内で生成・保管する。これは何か。", "choices": ["HSM", "フェンシング", "ギャップ分析", "ライティング"], "answer": 0, "explain": "鍵保護の専用ハードウェア＝HSM。"}, {"term": "a-4-kms", "stem": "クラウド上で鍵の生成・配布・更新・破棄を一元管理する仕組みは何か。", "choices": ["キー管理システム（KMS）", "ボラード", "抑止掲示", "SOPのみ"], "answer": 0, "explain": "鍵ライフサイクルの一元管理＝KMS。"}, {"term": "a-4-enclave", "stem": "スマホ内で生体情報を、メインOSから隔離された領域に保存する。これは何か。", "choices": ["セキュアエンクレーブ", "公開台帳", "メンテナンスウィンドウ", "依存関係"], "answer": 0, "explain": "端末内の隔離保護領域＝Secure Enclave。"}, {"term": "a-4-stego", "stem": "画像ファイルの中に秘密メッセージを埋め込み、存在自体を隠した。これは何か。", "choices": ["ステガノグラフィ", "対称暗号のみ", "承認プロセス", "アクセスバッジ"], "answer": 0, "explain": "データの中に秘密を隠す＝ステガノグラフィ（難読化）。"}, {"term": "a-4-tokenize", "stem": "カード番号をランダムなトークンに置き換え、決済処理ではトークンだけ扱う。これは何か。", "choices": ["トークン化", "フルディスク暗号化と同一", "フェンシング", "指示的コントロール"], "answer": 0, "explain": "機密を無害な値に置換＝トークン化。"}, {"term": "a-4-masking", "stem": "画面表示でカード番号を **** **** **** 1234 のように一部だけ見せる。これは何か。", "choices": ["データマスキング", "鍵交換", "CRL", "ボラード"], "answer": 0, "explain": "一部を伏せて形式を保つ＝データマスキング。"}, {"term": "a-4-hash", "stem": "パスワードを不可逆な固定長値に変換して保存し、改ざん検知にも使う。これは何か。", "choices": ["ハッシュ", "対称鍵の共有そのもの", "警備員", "ダウンタイム"], "answer": 0, "explain": "不可逆の固定長指紋＝ハッシュ。完全性確認にも使用。"}, {"term": "a-4-salt", "stem": "同じパスワードでも異なるハッシュになるよう、ハッシュ前にランダム値を加える。これは何か。", "choices": ["ソルト", "ボラード", "承認プロセス", "ライティング"], "answer": 0, "explain": "ハッシュ前のランダム値＝ソルト。レインボーテーブル対策。"}, {"term": "a-4-digital-sig", "stem": "送信者の秘密鍵で署名し、受信者が公開鍵で検証して改ざんと送信者を確認する。これは何か。", "choices": ["デジタル署名", "データマスキング", "フェンシング", "機能の制限"], "answer": 0, "explain": "完全性・認証・否認防止に寄与するのがデジタル署名。"}, {"term": "a-4-key-stretch", "stem": "パスワードを意図的に何度もハッシュし、総当たり攻撃を遅くする。これは何か。", "choices": ["キーストレッチ", "暗黙の信頼ゾーン", "ボラード", "メンテナンスウィンドウ"], "answer": 0, "explain": "計算を重くして攻撃を遅くする＝キーストレッチ（PBKDF2等）。"}, {"term": "a-4-blockchain", "stem": "取引を分散ノードで共有し、改ざんが極めて困難な台帳技術は何か。", "choices": ["ブロックチェーン", "アクセスバッジ", "SOP", "抑止掲示"], "answer": 0, "explain": "分散型で耐改ざん性の高い台帳＝ブロックチェーン。"}, {"term": "a-4-public-ledger", "stem": "誰でも取引履歴を検証できる、変更困難な公開記録を何と呼ぶか。", "choices": ["公開台帳", "自己署名証明書", "ギャップ分析", "警備員"], "answer": 0, "explain": "誰でも見られる不変の記録＝公開台帳。"}, {"term": "a-4-ca", "stem": "Webサイト運営者の身元を確認し、TLS証明書を発行する信頼された機関は何か。", "choices": ["認証局（CA）", "ボラード", "ステークホルダーのみ", "ダウンタイム"], "answer": 0, "explain": "証明書を発行する第三者＝Certificate Authority。"}, {"term": "a-4-crl", "stem": "秘密鍵漏洩のため、有効期限内の証明書を無効化し一覧で公開した。この一覧は何か。", "choices": ["証明書失効リスト（CRL）", "許可リスト", "SOP", "フェンシング"], "answer": 0, "explain": "期限前に無効化した証明書の一覧＝CRL。"}, {"term": "a-4-self-signed", "stem": "開発環境でコストを抑え、自分自身で署名した証明書を使う。これは何か。", "choices": ["自己署名証明書", "サードパーティ証明書と同一の信頼", "HSM必須", "公開台帳"], "answer": 0, "explain": "所有者自身が発行＝自己署名。外部からの広範な信頼は得にくい。"}, {"term": "a-4-third-party-cert", "stem": "一般公開サイトが、第三者CAに身元確認してもらい発行した証明書を使う。これは何か。", "choices": ["サードパーティ証明書", "自己署名のみ", "ソルト", "ボラード"], "answer": 0, "explain": "CA発行の証明書＝サードパーティ証明書。"}, {"term": "a-4-root-of-trust", "stem": "ブラウザが証明書チェーンをたどった最終的な信頼の出発点（ルート証明書など）を何と呼ぶか。", "choices": ["信頼の起点（Root of Trust）", "ダウンタイム", "機能の制限", "抑止的掲示"], "answer": 0, "explain": "信頼連鎖の根＝Root of Trust。"}]</script>
+  <script type="application/json" id="quiz-data">[{"term": "a-4-pub-priv", "stem": "受信者の公開鍵で暗号化したメールを、受信者だけが読める。復号に使うのは何か。", "choices": ["受信者の秘密鍵", "送信者の公開鍵", "共有の対称鍵のみ（常に）", "CRL"], "answer": 0, "explain": "公開鍵で暗号化したデータは対応する秘密鍵でのみ復号できる。", "stem_en": "An email encrypted with the recipient's public key can be read only by the recipient. What is used to decrypt it?", "choices_en": ["The recipient's private key", "The sender's public key", "Only a shared symmetric key (always)", "CRL"], "explain_en": "Data encrypted with a public key can only be decrypted with the matching private key.", "stem_es": "Un correo cifrado con la clave pública del destinatario solo puede leerlo el destinatario. ¿Qué se usa para descifrarlo?", "choices_es": ["La clave privada del destinatario", "La clave pública del remitente", "Solo una clave simétrica compartida (siempre)", "CRL"], "explain_es": "Los datos cifrados con una clave pública solo pueden descifrarse con la clave privada correspondiente."}, {"term": "a-4-key-escrow", "stem": "鍵紛失に備え、秘密鍵を信頼できる第三者機関に預けた。この仕組みは何か。", "choices": ["キーエスクロー", "ステガノグラフィ", "データマスキング", "フェンシング"], "answer": 0, "explain": "鍵の第三者預託＝キーエスクロー。", "stem_en": "In case keys are lost, the private key was deposited with a trusted third party. What is this mechanism?", "choices_en": ["Key escrow", "Steganography", "Data masking", "Fencing"], "explain_en": "Depositing keys with a third party is key escrow.", "stem_es": "Por si se pierden las claves, la clave privada se depositó en un tercero de confianza. ¿Qué mecanismo es?", "choices_es": ["Custodia de claves", "Esteganografía", "Enmascaramiento de datos", "Vallado"], "explain_es": "Depositar claves en un tercero es la custodia de claves."}, {"term": "a-4-enc-scope", "stem": "ノートPC紛失対策としてディスク全体を暗号化した。これは暗号化の範囲のどれに近いか。", "choices": ["フルディスク暗号化", "レコード単位のみ", "CRL登録", "ギャップ分析"], "answer": 0, "explain": "ディスク全体の暗号化はフルディスク。範囲（粒度）の選択問題。", "stem_en": "To protect against laptop loss, the entire disk was encrypted. Which level of encryption is this closest to?", "choices_en": ["Full-disk encryption", "Record-level only", "CRL registration", "Gap analysis"], "explain_en": "Encrypting the whole disk is full-disk encryption — a question of scope (granularity).", "stem_es": "Para protegerse ante la pérdida de portátiles, se cifró el disco entero. ¿A qué nivel de cifrado se parece más?", "choices_es": ["Cifrado de disco completo", "Solo por registro", "Registro en la CRL", "Análisis de brechas"], "explain_es": "Cifrar todo el disco es cifrado de disco completo: una cuestión de alcance (granularidad)."}, {"term": "a-4-asymmetric", "stem": "公開鍵と秘密鍵の対を使い、暗号化やデジタル署名を行う方式は何か。", "choices": ["非対称暗号化", "対称暗号化", "ソルトのみ", "許可リスト"], "answer": 0, "explain": "2鍵方式＝非対称（公開鍵暗号）。", "stem_en": "Which method uses a public/private key pair for encryption and digital signatures?", "choices_en": ["Asymmetric encryption", "Symmetric encryption", "Salt only", "Allow list"], "explain_en": "The two-key scheme is asymmetric (public-key) cryptography.", "stem_es": "¿Qué método usa un par de claves pública/privada para cifrar y firmar digitalmente?", "choices_es": ["Cifrado asimétrico", "Cifrado simétrico", "Solo sal", "Lista de permitidos"], "explain_es": "El esquema de dos claves es la criptografía asimétrica (de clave pública)."}, {"term": "a-4-symmetric", "stem": "同じ鍵で暗号化と復号を行い、大量データの高速処理に向く方式は何か。", "choices": ["対称暗号化", "非対称暗号化", "否認防止", "ボラード"], "answer": 0, "explain": "同一鍵＝対称。AESなどが代表。鍵配送が課題。", "stem_en": "Which method encrypts and decrypts with the same key and suits fast processing of large amounts of data?", "choices_en": ["Symmetric encryption", "Asymmetric encryption", "Non-repudiation", "Bollard"], "explain_en": "Same key = symmetric. AES is the classic example; key distribution is the challenge.", "stem_es": "¿Qué método cifra y descifra con la misma clave y es adecuado para procesar rápidamente grandes volúmenes de datos?", "choices_es": ["Cifrado simétrico", "Cifrado asimétrico", "No repudio", "Bolardo"], "explain_es": "Misma clave = simétrico. AES es el ejemplo típico; el reto es distribuir la clave."}, {"term": "a-4-key-exchange", "stem": "通信開始時に共通鍵を安全に共有するため Diffie-Hellman を使う。目的は何か。", "choices": ["鍵交換", "データマスキング", "入退室管理", "インパクト分析"], "answer": 0, "explain": "共通鍵を安全に共有するプロセス＝鍵交換。", "stem_en": "Diffie-Hellman is used at the start of a session to share a common key securely. What is the purpose?", "choices_en": ["Key exchange", "Data masking", "Entry/exit control", "Impact analysis"], "explain_en": "The process of securely sharing a common key is key exchange.", "stem_es": "Se usa Diffie-Hellman al inicio de una sesión para compartir una clave común de forma segura. ¿Cuál es el objetivo?", "choices_es": ["Intercambio de claves", "Enmascaramiento de datos", "Control de acceso a instalaciones", "Análisis de impacto"], "explain_es": "El proceso de compartir una clave común de forma segura es el intercambio de claves."}, {"term": "a-4-algorithm", "stem": "AESのように、平文を暗号文へ変換する数学的手順を何と呼ぶか。", "choices": ["アルゴリズム", "ステークホルダー", "PEP", "ダウンタイム"], "answer": 0, "explain": "変換の手順・規則＝暗号アルゴリズム。", "stem_en": "What do you call the mathematical procedure, such as AES, that converts plaintext into ciphertext?", "choices_en": ["Algorithm", "Stakeholder", "PEP", "Downtime"], "explain_en": "The procedure and rules of transformation are the cryptographic algorithm.", "stem_es": "¿Cómo se llama el procedimiento matemático, como AES, que convierte el texto claro en texto cifrado?", "choices_es": ["Algoritmo", "Parte interesada", "PEP", "Tiempo de inactividad"], "explain_es": "El procedimiento y las reglas de transformación son el algoritmo criptográfico."}, {"term": "a-4-key-length", "stem": "一般に、暗号鍵のビット数を長くするとどうなるか。", "choices": ["安全性は上がりがちだが処理は重くなりやすい", "必ず可用性だけが上がる", "CRLが不要になる", "物理フェンスが不要になる"], "answer": 0, "explain": "鍵が長いほど強いが暗号化・復号の負荷が増える。", "stem_en": "In general, what happens when you increase the bit length of an encryption key?", "choices_en": ["Security tends to rise, but processing gets heavier", "Only availability always increases", "A CRL is no longer needed", "Physical fences are no longer needed"], "explain_en": "Longer keys are stronger but increase the encryption/decryption load.", "stem_es": "En general, ¿qué ocurre al aumentar la longitud en bits de una clave de cifrado?", "choices_es": ["La seguridad suele aumentar, pero el procesamiento es más pesado", "Siempre aumenta solo la disponibilidad", "Ya no hace falta una CRL", "Ya no hacen falta vallas físicas"], "explain_es": "Las claves más largas son más seguras, pero aumentan la carga de cifrado y descifrado."}, {"term": "a-4-hsm", "stem": "銀行がPINや署名鍵を、耐タンパー性のある専用機器内で生成・保管する。これは何か。", "choices": ["HSM", "フェンシング", "ギャップ分析", "ライティング"], "answer": 0, "explain": "鍵保護の専用ハードウェア＝HSM。", "stem_en": "A bank generates and stores PINs and signing keys inside tamper-resistant dedicated hardware. What is this?", "choices_en": ["HSM", "Fencing", "Gap analysis", "Lighting"], "explain_en": "Dedicated hardware for protecting keys is an HSM.", "stem_es": "Un banco genera y guarda PIN y claves de firma dentro de hardware dedicado resistente a manipulaciones. ¿Qué es?", "choices_es": ["HSM", "Vallado", "Análisis de brechas", "Iluminación"], "explain_es": "El hardware dedicado a proteger claves es un HSM."}, {"term": "a-4-kms", "stem": "クラウド上で鍵の生成・配布・更新・破棄を一元管理する仕組みは何か。", "choices": ["キー管理システム（KMS）", "ボラード", "抑止掲示", "SOPのみ"], "answer": 0, "explain": "鍵ライフサイクルの一元管理＝KMS。", "stem_en": "What mechanism centrally manages key generation, distribution, rotation, and destruction in the cloud?", "choices_en": ["Key management system (KMS)", "Bollards", "Deterrent signs", "SOP only"], "explain_en": "Central management of the key lifecycle is a KMS.", "stem_es": "¿Qué mecanismo gestiona de forma centralizada la generación, distribución, rotación y destrucción de claves en la nube?", "choices_es": ["Sistema de gestión de claves (KMS)", "Bolardos", "Carteles disuasorios", "Solo SOP"], "explain_es": "La gestión centralizada del ciclo de vida de las claves es un KMS."}, {"term": "a-4-enclave", "stem": "スマホ内で生体情報を、メインOSから隔離された領域に保存する。これは何か。", "choices": ["セキュアエンクレーブ", "公開台帳", "メンテナンスウィンドウ", "依存関係"], "answer": 0, "explain": "端末内の隔離保護領域＝Secure Enclave。", "stem_en": "A phone stores biometric data in an area isolated from the main OS. What is this?", "choices_en": ["Secure enclave", "Public ledger", "Maintenance window", "Dependencies"], "explain_en": "An isolated protected area inside the device is a secure enclave.", "stem_es": "Un móvil guarda los datos biométricos en un área aislada del sistema operativo principal. ¿Qué es?", "choices_es": ["Enclave seguro", "Registro público", "Ventana de mantenimiento", "Dependencias"], "explain_es": "Un área protegida y aislada dentro del dispositivo es un enclave seguro."}, {"term": "a-4-stego", "stem": "画像ファイルの中に秘密メッセージを埋め込み、存在自体を隠した。これは何か。", "choices": ["ステガノグラフィ", "対称暗号のみ", "承認プロセス", "アクセスバッジ"], "answer": 0, "explain": "データの中に秘密を隠す＝ステガノグラフィ（難読化）。", "stem_en": "A secret message was embedded in an image file, hiding its very existence. What is this?", "choices_en": ["Steganography", "Symmetric encryption only", "Approval process", "Access badge"], "explain_en": "Hiding secrets inside data is steganography (obfuscation).", "stem_es": "Se incrustó un mensaje secreto en un archivo de imagen, ocultando su propia existencia. ¿Qué es?", "choices_es": ["Esteganografía", "Solo cifrado simétrico", "Proceso de aprobación", "Tarjeta de acceso"], "explain_es": "Ocultar secretos dentro de datos es la esteganografía (ofuscación)."}, {"term": "a-4-tokenize", "stem": "カード番号をランダムなトークンに置き換え、決済処理ではトークンだけ扱う。これは何か。", "choices": ["トークン化", "フルディスク暗号化と同一", "フェンシング", "指示的コントロール"], "answer": 0, "explain": "機密を無害な値に置換＝トークン化。", "stem_en": "Card numbers are replaced with random tokens, and payment processing handles only the tokens. What is this?", "choices_en": ["Tokenization", "Same as full-disk encryption", "Fencing", "Directive control"], "explain_en": "Replacing sensitive data with a harmless value is tokenization.", "stem_es": "Los números de tarjeta se sustituyen por tokens aleatorios y el procesamiento de pagos solo maneja los tokens. ¿Qué es?", "choices_es": ["Tokenización", "Lo mismo que el cifrado de disco completo", "Vallado", "Control directivo"], "explain_es": "Sustituir datos sensibles por un valor inofensivo es la tokenización."}, {"term": "a-4-masking", "stem": "画面表示でカード番号を **** **** **** 1234 のように一部だけ見せる。これは何か。", "choices": ["データマスキング", "鍵交換", "CRL", "ボラード"], "answer": 0, "explain": "一部を伏せて形式を保つ＝データマスキング。", "stem_en": "A card number is displayed with only part of it visible, like **** **** **** 1234. What is this?", "choices_en": ["Data masking", "Key exchange", "CRL", "Bollard"], "explain_en": "Hiding part of the data while keeping its format is data masking.", "stem_es": "Un número de tarjeta se muestra con solo una parte visible, como **** **** **** 1234. ¿Qué es?", "choices_es": ["Enmascaramiento de datos", "Intercambio de claves", "CRL", "Bolardo"], "explain_es": "Ocultar parte de los datos manteniendo su formato es el enmascaramiento de datos."}, {"term": "a-4-hash", "stem": "パスワードを不可逆な固定長値に変換して保存し、改ざん検知にも使う。これは何か。", "choices": ["ハッシュ", "対称鍵の共有そのもの", "警備員", "ダウンタイム"], "answer": 0, "explain": "不可逆の固定長指紋＝ハッシュ。完全性確認にも使用。", "stem_en": "Passwords are converted into irreversible fixed-length values for storage, which are also used to detect tampering. What is this?", "choices_en": ["Hashing", "Sharing a symmetric key itself", "Security guard", "Downtime"], "explain_en": "An irreversible fixed-length fingerprint is a hash; it's also used to verify integrity.", "stem_es": "Las contraseñas se convierten en valores irreversibles de longitud fija para almacenarlas, que también sirven para detectar manipulaciones. ¿Qué es?", "choices_es": ["Hash", "Compartir la propia clave simétrica", "Guardia de seguridad", "Tiempo de inactividad"], "explain_es": "Una huella irreversible de longitud fija es un hash; también se usa para comprobar la integridad."}, {"term": "a-4-salt", "stem": "同じパスワードでも異なるハッシュになるよう、ハッシュ前にランダム値を加える。これは何か。", "choices": ["ソルト", "ボラード", "承認プロセス", "ライティング"], "answer": 0, "explain": "ハッシュ前のランダム値＝ソルト。レインボーテーブル対策。", "stem_en": "A random value is added before hashing so identical passwords produce different hashes. What is this?", "choices_en": ["Salt", "Bollard", "Approval process", "Lighting"], "explain_en": "A random value added before hashing is a salt — a defense against rainbow tables.", "stem_es": "Se añade un valor aleatorio antes del hash para que contraseñas idénticas den hashes distintos. ¿Qué es?", "choices_es": ["Sal", "Bolardo", "Proceso de aprobación", "Iluminación"], "explain_es": "Un valor aleatorio añadido antes del hash es una sal: defensa contra tablas arcoíris."}, {"term": "a-4-digital-sig", "stem": "送信者の秘密鍵で署名し、受信者が公開鍵で検証して改ざんと送信者を確認する。これは何か。", "choices": ["デジタル署名", "データマスキング", "フェンシング", "機能の制限"], "answer": 0, "explain": "完全性・認証・否認防止に寄与するのがデジタル署名。", "stem_en": "The sender signs with their private key, and the recipient verifies with the public key to confirm the sender and that nothing was altered. What is this?", "choices_en": ["Digital signature", "Data masking", "Fencing", "Restricted activities"], "explain_en": "A digital signature supports integrity, authentication, and non-repudiation.", "stem_es": "El remitente firma con su clave privada y el destinatario verifica con la clave pública para confirmar el remitente y que nada se alteró. ¿Qué es?", "choices_es": ["Firma digital", "Enmascaramiento de datos", "Vallado", "Actividades restringidas"], "explain_es": "La firma digital contribuye a la integridad, la autenticación y el no repudio."}, {"term": "a-4-key-stretch", "stem": "パスワードを意図的に何度もハッシュし、総当たり攻撃を遅くする。これは何か。", "choices": ["キーストレッチ", "暗黙の信頼ゾーン", "ボラード", "メンテナンスウィンドウ"], "answer": 0, "explain": "計算を重くして攻撃を遅くする＝キーストレッチ（PBKDF2等）。", "stem_en": "Passwords are deliberately hashed many times to slow down brute-force attacks. What is this?", "choices_en": ["Key stretching", "Implicit trust zone", "Bollard", "Maintenance window"], "explain_en": "Making computation heavier to slow attacks is key stretching (e.g., PBKDF2).", "stem_es": "Las contraseñas se someten a hash muchas veces a propósito para frenar los ataques de fuerza bruta. ¿Qué es?", "choices_es": ["Estiramiento de claves", "Zona de confianza implícita", "Bolardo", "Ventana de mantenimiento"], "explain_es": "Hacer el cálculo más pesado para frenar ataques es el estiramiento de claves (p. ej., PBKDF2)."}, {"term": "a-4-blockchain", "stem": "取引を分散ノードで共有し、改ざんが極めて困難な台帳技術は何か。", "choices": ["ブロックチェーン", "アクセスバッジ", "SOP", "抑止掲示"], "answer": 0, "explain": "分散型で耐改ざん性の高い台帳＝ブロックチェーン。", "stem_en": "Which ledger technology shares transactions across distributed nodes, making tampering extremely difficult?", "choices_en": ["Blockchain", "Access badge", "SOP", "Deterrent sign"], "explain_en": "A distributed, highly tamper-resistant ledger is a blockchain.", "stem_es": "¿Qué tecnología de registro comparte las transacciones entre nodos distribuidos y hace muy difícil su manipulación?", "choices_es": ["Cadena de bloques", "Tarjeta de acceso", "SOP", "Cartel disuasorio"], "explain_es": "Un registro distribuido y muy resistente a manipulaciones es una cadena de bloques."}, {"term": "a-4-public-ledger", "stem": "誰でも取引履歴を検証できる、変更困難な公開記録を何と呼ぶか。", "choices": ["公開台帳", "自己署名証明書", "ギャップ分析", "警備員"], "answer": 0, "explain": "誰でも見られる不変の記録＝公開台帳。", "stem_en": "What do you call a public, hard-to-change record of transactions that anyone can verify?", "choices_en": ["Public ledger", "Self-signed certificate", "Gap analysis", "Security guard"], "explain_en": "An immutable record anyone can view is a public ledger.", "stem_es": "¿Cómo se llama un registro público de transacciones, difícil de modificar, que cualquiera puede verificar?", "choices_es": ["Registro público", "Certificado autofirmado", "Análisis de brechas", "Guardia de seguridad"], "explain_es": "Un registro inmutable que cualquiera puede ver es un registro público."}, {"term": "a-4-ca", "stem": "Webサイト運営者の身元を確認し、TLS証明書を発行する信頼された機関は何か。", "choices": ["認証局（CA）", "ボラード", "ステークホルダーのみ", "ダウンタイム"], "answer": 0, "explain": "証明書を発行する第三者＝Certificate Authority。", "stem_en": "What trusted organization verifies a website operator's identity and issues TLS certificates?", "choices_en": ["Certificate authority (CA)", "Bollard", "Stakeholders only", "Downtime"], "explain_en": "The third party that issues certificates is a certificate authority.", "stem_es": "¿Qué entidad de confianza verifica la identidad del operador de un sitio web y emite certificados TLS?", "choices_es": ["Autoridad de certificación (CA)", "Bolardo", "Solo las partes interesadas", "Tiempo de inactividad"], "explain_es": "El tercero que emite certificados es una autoridad de certificación."}, {"term": "a-4-crl", "stem": "秘密鍵漏洩のため、有効期限内の証明書を無効化し一覧で公開した。この一覧は何か。", "choices": ["証明書失効リスト（CRL）", "許可リスト", "SOP", "フェンシング"], "answer": 0, "explain": "期限前に無効化した証明書の一覧＝CRL。", "stem_en": "Because a private key was leaked, a still-valid certificate was revoked and published in a list. What is this list?", "choices_en": ["Certificate revocation list (CRL)", "Allow list", "SOP", "Fencing"], "explain_en": "A list of certificates revoked before expiry is a CRL.", "stem_es": "Por la filtración de una clave privada, se revocó un certificado aún vigente y se publicó en una lista. ¿Qué lista es?", "choices_es": ["Lista de revocación de certificados (CRL)", "Lista de permitidos", "SOP", "Vallado"], "explain_es": "Una lista de certificados revocados antes de caducar es una CRL."}, {"term": "a-4-self-signed", "stem": "開発環境でコストを抑え、自分自身で署名した証明書を使う。これは何か。", "choices": ["自己署名証明書", "サードパーティ証明書と同一の信頼", "HSM必須", "公開台帳"], "answer": 0, "explain": "所有者自身が発行＝自己署名。外部からの広範な信頼は得にくい。", "stem_en": "To save costs in a development environment, a certificate signed by its own owner is used. What is this?", "choices_en": ["Self-signed certificate", "Same trust as a third-party certificate", "HSM required", "Public ledger"], "explain_en": "Issued by the owner itself = self-signed. It's hard for it to gain broad external trust.", "stem_es": "Para ahorrar costes en un entorno de desarrollo, se usa un certificado firmado por su propio titular. ¿Qué es?", "choices_es": ["Certificado autofirmado", "La misma confianza que un certificado de terceros", "Requiere HSM", "Registro público"], "explain_es": "Emitido por el propio titular = autofirmado. Es difícil que obtenga una confianza externa amplia."}, {"term": "a-4-third-party-cert", "stem": "一般公開サイトが、第三者CAに身元確認してもらい発行した証明書を使う。これは何か。", "choices": ["サードパーティ証明書", "自己署名のみ", "ソルト", "ボラード"], "answer": 0, "explain": "CA発行の証明書＝サードパーティ証明書。", "stem_en": "A public website uses a certificate issued after a third-party CA verified its identity. What is this?", "choices_en": ["Third-party certificate", "Self-signed only", "Salt", "Bollard"], "explain_en": "A certificate issued by a CA is a third-party certificate.", "stem_es": "Un sitio web público usa un certificado emitido tras la verificación de su identidad por una CA externa. ¿Qué es?", "choices_es": ["Certificado de terceros", "Solo autofirmado", "Sal", "Bolardo"], "explain_es": "Un certificado emitido por una CA es un certificado de terceros."}, {"term": "a-4-root-of-trust", "stem": "ブラウザが証明書チェーンをたどった最終的な信頼の出発点（ルート証明書など）を何と呼ぶか。", "choices": ["信頼の起点（Root of Trust）", "ダウンタイム", "機能の制限", "抑止的掲示"], "answer": 0, "explain": "信頼連鎖の根＝Root of Trust。", "stem_en": "What do you call the ultimate starting point of trust (such as a root certificate) that a browser reaches when following a certificate chain?", "choices_en": ["Root of trust", "Downtime", "Restricted activities", "Deterrent sign"], "explain_en": "The root of the chain of trust is the root of trust.", "stem_es": "¿Cómo se llama el punto de partida final de la confianza (como un certificado raíz) al que llega el navegador al seguir una cadena de certificados?", "choices_es": ["Raíz de confianza", "Tiempo de inactividad", "Actividades restringidas", "Cartel disuasorio"], "explain_es": "La raíz de la cadena de confianza es la raíz de confianza."}]</script>
 </section>
 
-<nav class="pager"><a href="a-3.html"><span>前の章</span>A-3 変更管理とセキュリティへの影響</a><a class="next" href="index.html"><span>戻る</span>Domain A ハブ</a></nav>
+<nav class="pager"><a href="a-3.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>A-3 <span data-i18n="ja">変更管理とセキュリティへの影響</span><span data-i18n="en">Change management and its security impact</span><span data-i18n="es">Gestión de cambios y su impacto en la seguridad</span></span></a><a class="next" href="index.html"><span><span data-i18n="ja">戻る</span><span data-i18n="en">Back</span><span data-i18n="es">Volver</span></span><span>Domain A <span data-i18n="ja">ハブ</span><span data-i18n="en">hub</span><span data-i18n="es">hub</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

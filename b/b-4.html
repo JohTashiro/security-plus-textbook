@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>B-4 悪意のある活動の兆候 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain B</span></a>
-  <a class="nav-back" href="index.html">← Domain B ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain B ハブ</span><span data-i18n="en">← Domain B hub</span><span data-i18n="es">← Hub del Domain B</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain B</h2>
-    <a href="b-1.html">B-1 脅威アクターと動機</a><a href="b-2.html">B-2 脅威ベクトルと攻撃対象領域</a><a href="b-3.html">B-3 脆弱性の種類</a><a href="b-4.html" class="active">B-4 悪意のある活動の兆候</a><a href="b-5.html">B-5 緩和策</a>
+    <a href="b-1.html">B-1 <span data-i18n="ja">脅威アクターと動機</span><span data-i18n="en">脅威アクターと動機</span><span data-i18n="es">脅威アクターと動機</span></a><a href="b-2.html">B-2 <span data-i18n="ja">脅威ベクトルと攻撃対象領域</span><span data-i18n="en">脅威ベクトルと攻撃対象領域</span><span data-i18n="es">脅威ベクトルと攻撃対象領域</span></a><a href="b-3.html">B-3 <span data-i18n="ja">脆弱性の種類</span><span data-i18n="en">脆弱性の種類</span><span data-i18n="es">脆弱性の種類</span></a><a href="b-4.html" class="active">B-4 <span data-i18n="ja">悪意のある活動の兆候</span><span data-i18n="en">悪意のある活動の兆候</span><span data-i18n="es">悪意のある活動の兆候</span></a><a href="b-5.html">B-5 <span data-i18n="ja">緩和策</span><span data-i18n="en">緩和策</span><span data-i18n="es">緩和策</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain B 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain B <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,377 +55,562 @@
       
 <header class="hero">
   <p class="eyebrow">Domain B · B-4</p>
-  <h1>悪意のある活動の兆候</h1>
-  <p>マルウェア・攻撃手法と異常の兆候を見抜く</p>
+  <h1><span data-i18n="ja">悪意のある活動の兆候</span><span data-i18n="en">悪意のある活動の兆候</span><span data-i18n="es">悪意のある活動の兆候</span></h1>
+  <p data-i18n="ja">マルウェア・攻撃手法と異常の兆候を見抜く</p>
+  <p data-i18n="en">マルウェア・攻撃手法と異常の兆候を見抜く</p>
+  <p data-i18n="es">マルウェア・攻撃手法と異常の兆候を見抜く</p>
   <div class="meta-row">
-    <span class="chip">用語 30</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 2.4</span>
+    <span class="chip"><span data-i18n="ja">用語 30</span><span data-i18n="en">30 terms</span><span data-i18n="es">30 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 2.4</span><span data-i18n="en">Official 2.4</span><span data-i18n="es">Oficial 2.4</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 30問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 30問</span><span data-i18n="en">Quiz (30)</span><span data-i18n="es">Cuestionario (30)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">マルウェア（悪意あるソフトの種類）</h2>
-<article class="memo-card" id="b-4-ransomware" data-search="ランサムウェア ransomware データを暗号化し身代金を要求 wannacry 請求書を装う添付">
-  <h3>ランサムウェア<span class="en">Ransomware</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">マルウェア（悪意あるソフトの種類）</span><span data-i18n="en">マルウェア（悪意あるソフトの種類）</span><span data-i18n="es">マルウェア（悪意あるソフトの種類）</span></h2>
+<article class="memo-card" id="b-4-ransomware" data-search="ランサムウェア ransomware  データを暗号化し身代金を要求 wannacry 請求書を装う添付">
+  <h3>
+    <span data-i18n="ja">ランサムウェア<span class="en">Ransomware</span></span>
+    <span data-i18n="en">Ransomware</span>
+    <span data-i18n="es">ランサムウェア</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">データを暗号化し<span class="hl">身代金</span>を要求</p>
+    <p data-i18n="ja" class="one-liner">データを暗号化し<span class="hl">身代金</span>を要求</p><p data-i18n="en" class="one-liner">データを暗号化し<span class="hl">身代金</span>を要求</p><p data-i18n="es" class="one-liner">データを暗号化し<span class="hl">身代金</span>を要求</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>WannaCry</li><li>請求書を装う添付</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>WannaCry</li><li>請求書を装う添付</li></ul>
+      <ul class="example-list" data-i18n="en"><li>WannaCry</li><li>請求書を装う添付</li></ul>
+      <ul class="example-list" data-i18n="es"><li>WannaCry</li><li>請求書を装う添付</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-trojan" data-search="トロイの木馬 trojan 正規ソフトを装って侵入・潜伏 取引先を装う添付 rat">
-  <h3>トロイの木馬<span class="en">Trojan</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-trojan" data-search="トロイの木馬 trojan  正規ソフトを装って侵入・潜伏 取引先を装う添付 rat">
+  <h3>
+    <span data-i18n="ja">トロイの木馬<span class="en">Trojan</span></span>
+    <span data-i18n="en">Trojan</span>
+    <span data-i18n="es">トロイの木馬</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">正規ソフトを装って</span>侵入・潜伏</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">正規ソフトを装って</span>侵入・潜伏</p><p data-i18n="en" class="one-liner"><span class="hl">正規ソフトを装って</span>侵入・潜伏</p><p data-i18n="es" class="one-liner"><span class="hl">正規ソフトを装って</span>侵入・潜伏</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>取引先を装う添付</li><li>RAT</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>取引先を装う添付</li><li>RAT</li></ul>
+      <ul class="example-list" data-i18n="en"><li>取引先を装う添付</li><li>RAT</li></ul>
+      <ul class="example-list" data-i18n="es"><li>取引先を装う添付</li><li>RAT</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-worm" data-search="ワーム worm 自己増殖してネットワークに拡散 社内pcに一斉感染 脆弱性経由の拡散">
-  <h3>ワーム<span class="en">Worm</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-worm" data-search="ワーム worm  自己増殖してネットワークに拡散 社内pcに一斉感染 脆弱性経由の拡散">
+  <h3>
+    <span data-i18n="ja">ワーム<span class="en">Worm</span></span>
+    <span data-i18n="en">Worm</span>
+    <span data-i18n="es">ワーム</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">自己増殖</span>してネットワークに拡散</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">自己増殖</span>してネットワークに拡散</p><p data-i18n="en" class="one-liner"><span class="hl">自己増殖</span>してネットワークに拡散</p><p data-i18n="es" class="one-liner"><span class="hl">自己増殖</span>してネットワークに拡散</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>社内PCに一斉感染</li><li>脆弱性経由の拡散</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>社内PCに一斉感染</li><li>脆弱性経由の拡散</li></ul>
+      <ul class="example-list" data-i18n="en"><li>社内PCに一斉感染</li><li>脆弱性経由の拡散</li></ul>
+      <ul class="example-list" data-i18n="es"><li>社内PCに一斉感染</li><li>脆弱性経由の拡散</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-spyware" data-search="スパイウェア spyware 潜伏して利用者情報を密かに収集 無料ツールバー同梱 閲覧履歴の送信">
-  <h3>スパイウェア<span class="en">Spyware</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-spyware" data-search="スパイウェア spyware  潜伏して利用者情報を密かに収集 無料ツールバー同梱 閲覧履歴の送信">
+  <h3>
+    <span data-i18n="ja">スパイウェア<span class="en">Spyware</span></span>
+    <span data-i18n="en">Spyware</span>
+    <span data-i18n="es">スパイウェア</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">潜伏して利用者情報を<span class="hl">密かに収集</span></p>
+    <p data-i18n="ja" class="one-liner">潜伏して利用者情報を<span class="hl">密かに収集</span></p><p data-i18n="en" class="one-liner">潜伏して利用者情報を<span class="hl">密かに収集</span></p><p data-i18n="es" class="one-liner">潜伏して利用者情報を<span class="hl">密かに収集</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>無料ツールバー同梱</li><li>閲覧履歴の送信</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>無料ツールバー同梱</li><li>閲覧履歴の送信</li></ul>
+      <ul class="example-list" data-i18n="en"><li>無料ツールバー同梱</li><li>閲覧履歴の送信</li></ul>
+      <ul class="example-list" data-i18n="es"><li>無料ツールバー同梱</li><li>閲覧履歴の送信</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-bloatware" data-search="ブロートウェア bloatware プリインストールの不要ソフト 新品pcの付属アプリ 中古pcの残存アプリ">
-  <h3>ブロートウェア<span class="en">Bloatware</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-bloatware" data-search="ブロートウェア bloatware  プリインストールの不要ソフト 新品pcの付属アプリ 中古pcの残存アプリ">
+  <h3>
+    <span data-i18n="ja">ブロートウェア<span class="en">Bloatware</span></span>
+    <span data-i18n="en">Bloatware</span>
+    <span data-i18n="es">ブロートウェア</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">プリインストール</span>の不要ソフト</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">プリインストール</span>の不要ソフト</p><p data-i18n="en" class="one-liner"><span class="hl">プリインストール</span>の不要ソフト</p><p data-i18n="es" class="one-liner"><span class="hl">プリインストール</span>の不要ソフト</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>新品PCの付属アプリ</li><li>中古PCの残存アプリ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>新品PCの付属アプリ</li><li>中古PCの残存アプリ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>新品PCの付属アプリ</li><li>中古PCの残存アプリ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>新品PCの付属アプリ</li><li>中古PCの残存アプリ</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-keylogger" data-search="キーロガー keylogger キー入力を記録して情報を盗む ホテルのレンタルpc usb型キーロガー">
-  <h3>キーロガー<span class="en">Keylogger</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-keylogger" data-search="キーロガー keylogger  キー入力を記録して情報を盗む ホテルのレンタルpc usb型キーロガー">
+  <h3>
+    <span data-i18n="ja">キーロガー<span class="en">Keylogger</span></span>
+    <span data-i18n="en">Keylogger</span>
+    <span data-i18n="es">キーロガー</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">キー入力を記録</span>して情報を盗む</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">キー入力を記録</span>して情報を盗む</p><p data-i18n="en" class="one-liner"><span class="hl">キー入力を記録</span>して情報を盗む</p><p data-i18n="es" class="one-liner"><span class="hl">キー入力を記録</span>して情報を盗む</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ホテルのレンタルPC</li><li>USB型キーロガー</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ホテルのレンタルPC</li><li>USB型キーロガー</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ホテルのレンタルPC</li><li>USB型キーロガー</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ホテルのレンタルPC</li><li>USB型キーロガー</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-logic-bomb" data-search="ロジックボム logic bomb 条件成立で発動する不正プログラム 退職後にデータ消去 特定日時に起動">
-  <h3>ロジックボム<span class="en">Logic bomb</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-logic-bomb" data-search="ロジックボム logic bomb  条件成立で発動する不正プログラム 退職後にデータ消去 特定日時に起動">
+  <h3>
+    <span data-i18n="ja">ロジックボム<span class="en">Logic bomb</span></span>
+    <span data-i18n="en">Logic bomb</span>
+    <span data-i18n="es">ロジックボム</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">条件成立</span>で発動する不正プログラム</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">条件成立</span>で発動する不正プログラム</p><p data-i18n="en" class="one-liner"><span class="hl">条件成立</span>で発動する不正プログラム</p><p data-i18n="es" class="one-liner"><span class="hl">条件成立</span>で発動する不正プログラム</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>退職後にデータ消去</li><li>特定日時に起動</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>退職後にデータ消去</li><li>特定日時に起動</li></ul>
+      <ul class="example-list" data-i18n="en"><li>退職後にデータ消去</li><li>特定日時に起動</li></ul>
+      <ul class="example-list" data-i18n="es"><li>退職後にデータ消去</li><li>特定日時に起動</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-rootkit" data-search="ルートキット rootkit os中核で管理者権限を奪い隠蔽 カーネル改ざん マルウェアの隠蔽">
-  <h3>ルートキット<span class="en">Rootkit</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-rootkit" data-search="ルートキット rootkit  os中核で管理者権限を奪い隠蔽 カーネル改ざん マルウェアの隠蔽">
+  <h3>
+    <span data-i18n="ja">ルートキット<span class="en">Rootkit</span></span>
+    <span data-i18n="en">Rootkit</span>
+    <span data-i18n="es">ルートキット</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">OS中核で<span class="hl">管理者権限</span>を奪い隠蔽</p>
+    <p data-i18n="ja" class="one-liner">OS中核で<span class="hl">管理者権限</span>を奪い隠蔽</p><p data-i18n="en" class="one-liner">OS中核で<span class="hl">管理者権限</span>を奪い隠蔽</p><p data-i18n="es" class="one-liner">OS中核で<span class="hl">管理者権限</span>を奪い隠蔽</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>カーネル改ざん</li><li>マルウェアの隠蔽</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>カーネル改ざん</li><li>マルウェアの隠蔽</li></ul>
+      <ul class="example-list" data-i18n="en"><li>カーネル改ざん</li><li>マルウェアの隠蔽</li></ul>
+      <ul class="example-list" data-i18n="es"><li>カーネル改ざん</li><li>マルウェアの隠蔽</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">物理・ネットワーク攻撃（どの経路を狙うか）</h2>
-<article class="memo-card" id="b-4-rfid-cloning" data-search="rfidクローニング rfid cloning rfidタグを読み取り複製する 入館カードの複製 非接触ic読取">
-  <h3>RFIDクローニング<span class="en">RFID cloning</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">物理・ネットワーク攻撃（どの経路を狙うか）</span><span data-i18n="en">物理・ネットワーク攻撃（どの経路を狙うか）</span><span data-i18n="es">物理・ネットワーク攻撃（どの経路を狙うか）</span></h2>
+<article class="memo-card" id="b-4-rfid-cloning" data-search="rfidクローニング rfid cloning  rfidタグを読み取り複製する 入館カードの複製 非接触ic読取">
+  <h3>
+    <span data-i18n="ja">RFIDクローニング<span class="en">RFID cloning</span></span>
+    <span data-i18n="en">RFID cloning</span>
+    <span data-i18n="es">RFIDクローニング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">RFIDタグを読み取り<span class="hl">複製</span>する</p>
+    <p data-i18n="ja" class="one-liner">RFIDタグを読み取り<span class="hl">複製</span>する</p><p data-i18n="en" class="one-liner">RFIDタグを読み取り<span class="hl">複製</span>する</p><p data-i18n="es" class="one-liner">RFIDタグを読み取り<span class="hl">複製</span>する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>入館カードの複製</li><li>非接触IC読取</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="b-4-ddos" data-search="ddos攻撃 distributed denial-of-service (ddos) 多数から大量トラフィックで停止 ecサイト停止 増幅・反射型">
-  <h3>DDoS攻撃<span class="en">Distributed denial-of-service (DDoS)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">多数から<span class="hl">大量トラフィック</span>で停止</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ECサイト停止</li><li>増幅・反射型</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="b-4-dns-attack" data-search="dns攻撃 dns attacks 名前解決を偽り偽サイトへ誘導 dnsスプーフィング キャッシュポイズニング">
-  <h3>DNS攻撃<span class="en">DNS attacks</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">名前解決を偽り<span class="hl">偽サイトへ誘導</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>DNSスプーフィング</li><li>キャッシュポイズニング</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>入館カードの複製</li><li>非接触IC読取</li></ul>
+      <ul class="example-list" data-i18n="en"><li>入館カードの複製</li><li>非接触IC読取</li></ul>
+      <ul class="example-list" data-i18n="es"><li>入館カードの複製</li><li>非接触IC読取</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-wireless" data-search="ワイヤレス攻撃 wireless attacks 無線lanの弱点で侵入・盗聴 イービルツイン 公衆wi-fiの盗聴">
-  <h3>ワイヤレス攻撃<span class="en">Wireless attacks</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-ddos" data-search="ddos攻撃 distributed denial-of-service (ddos)  多数から大量トラフィックで停止 ecサイト停止 増幅・反射型">
+  <h3>
+    <span data-i18n="ja">DDoS攻撃<span class="en">Distributed denial-of-service (DDoS)</span></span>
+    <span data-i18n="en">Distributed denial-of-service (DDoS)</span>
+    <span data-i18n="es">DDoS攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">無線LAN</span>の弱点で侵入・盗聴</p>
+    <p data-i18n="ja" class="one-liner">多数から<span class="hl">大量トラフィック</span>で停止</p><p data-i18n="en" class="one-liner">多数から<span class="hl">大量トラフィック</span>で停止</p><p data-i18n="es" class="one-liner">多数から<span class="hl">大量トラフィック</span>で停止</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>イービルツイン</li><li>公衆Wi-Fiの盗聴</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ECサイト停止</li><li>増幅・反射型</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ECサイト停止</li><li>増幅・反射型</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ECサイト停止</li><li>増幅・反射型</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-on-path" data-search="オンパス攻撃 on-path attack 通信経路上で傍受・改ざんする セッションハイジャック 中間者攻撃">
-  <h3>オンパス攻撃<span class="en">On-path attack</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-dns-attack" data-search="dns攻撃 dns attacks  名前解決を偽り偽サイトへ誘導 dnsスプーフィング キャッシュポイズニング">
+  <h3>
+    <span data-i18n="ja">DNS攻撃<span class="en">DNS attacks</span></span>
+    <span data-i18n="en">DNS attacks</span>
+    <span data-i18n="es">DNS攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">通信経路上</span>で傍受・改ざんする</p>
+    <p data-i18n="ja" class="one-liner">名前解決を偽り<span class="hl">偽サイトへ誘導</span></p><p data-i18n="en" class="one-liner">名前解決を偽り<span class="hl">偽サイトへ誘導</span></p><p data-i18n="es" class="one-liner">名前解決を偽り<span class="hl">偽サイトへ誘導</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>セッションハイジャック</li><li>中間者攻撃</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>DNSスプーフィング</li><li>キャッシュポイズニング</li></ul>
+      <ul class="example-list" data-i18n="en"><li>DNSスプーフィング</li><li>キャッシュポイズニング</li></ul>
+      <ul class="example-list" data-i18n="es"><li>DNSスプーフィング</li><li>キャッシュポイズニング</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-credential-replay" data-search="クレデンシャルリプレイ credential replay 盗聴した認証情報を再送しなりすまし 傍受したid/pw再送 パスザハッシュ">
-  <h3>クレデンシャルリプレイ<span class="en">Credential replay</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-wireless" data-search="ワイヤレス攻撃 wireless attacks  無線lanの弱点で侵入・盗聴 イービルツイン 公衆wi-fiの盗聴">
+  <h3>
+    <span data-i18n="ja">ワイヤレス攻撃<span class="en">Wireless attacks</span></span>
+    <span data-i18n="en">Wireless attacks</span>
+    <span data-i18n="es">ワイヤレス攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">盗聴した<span class="hl">認証情報</span>を再送しなりすまし</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">無線LAN</span>の弱点で侵入・盗聴</p><p data-i18n="en" class="one-liner"><span class="hl">無線LAN</span>の弱点で侵入・盗聴</p><p data-i18n="es" class="one-liner"><span class="hl">無線LAN</span>の弱点で侵入・盗聴</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>傍受したID/PW再送</li><li>パスザハッシュ</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">アプリケーション攻撃（アプリの欠陥を突く）</h2>
-<article class="memo-card" id="b-4-injection" data-search="インジェクション攻撃 injection 入力に悪意あるコードを挿入 sqlインジェクション ' or 1=1 -- osコマンド注入">
-  <h3>インジェクション攻撃<span class="en">Injection</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">入力に<span class="hl">悪意あるコード</span>を挿入</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>SQLインジェクション</li><li>' OR 1=1 --</li><li>OSコマンド注入</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>イービルツイン</li><li>公衆Wi-Fiの盗聴</li></ul>
+      <ul class="example-list" data-i18n="en"><li>イービルツイン</li><li>公衆Wi-Fiの盗聴</li></ul>
+      <ul class="example-list" data-i18n="es"><li>イービルツイン</li><li>公衆Wi-Fiの盗聴</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-replay" data-search="リプレイ攻撃 replay attack 傍受した通信を再送信して悪用 送金リクエスト再送 同じ操作の反復">
-  <h3>リプレイ攻撃<span class="en">Replay attack</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-on-path" data-search="オンパス攻撃 on-path attack  通信経路上で傍受・改ざんする セッションハイジャック 中間者攻撃">
+  <h3>
+    <span data-i18n="ja">オンパス攻撃<span class="en">On-path attack</span></span>
+    <span data-i18n="en">On-path attack</span>
+    <span data-i18n="es">オンパス攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">傍受した通信を<span class="hl">再送信</span>して悪用</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">通信経路上</span>で傍受・改ざんする</p><p data-i18n="en" class="one-liner"><span class="hl">通信経路上</span>で傍受・改ざんする</p><p data-i18n="es" class="one-liner"><span class="hl">通信経路上</span>で傍受・改ざんする</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>送金リクエスト再送</li><li>同じ操作の反復</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>セッションハイジャック</li><li>中間者攻撃</li></ul>
+      <ul class="example-list" data-i18n="en"><li>セッションハイジャック</li><li>中間者攻撃</li></ul>
+      <ul class="example-list" data-i18n="es"><li>セッションハイジャック</li><li>中間者攻撃</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-privilege-escalation" data-search="権限昇格攻撃 privilege escalation 本来より高い権限を不正に得る ゼロデイで管理者化 一般→管理者">
-  <h3>権限昇格攻撃<span class="en">Privilege escalation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-credential-replay" data-search="クレデンシャルリプレイ credential replay  盗聴した認証情報を再送しなりすまし 傍受したid/pw再送 パスザハッシュ">
+  <h3>
+    <span data-i18n="ja">クレデンシャルリプレイ<span class="en">Credential replay</span></span>
+    <span data-i18n="en">Credential replay</span>
+    <span data-i18n="es">クレデンシャルリプレイ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">本来より<span class="hl">高い権限</span>を不正に得る</p>
+    <p data-i18n="ja" class="one-liner">盗聴した<span class="hl">認証情報</span>を再送しなりすまし</p><p data-i18n="en" class="one-liner">盗聴した<span class="hl">認証情報</span>を再送しなりすまし</p><p data-i18n="es" class="one-liner">盗聴した<span class="hl">認証情報</span>を再送しなりすまし</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ゼロデイで管理者化</li><li>一般→管理者</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>傍受したID/PW再送</li><li>パスザハッシュ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>傍受したID/PW再送</li><li>パスザハッシュ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>傍受したID/PW再送</li><li>パスザハッシュ</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">アプリケーション攻撃（アプリの欠陥を突く）</span><span data-i18n="en">アプリケーション攻撃（アプリの欠陥を突く）</span><span data-i18n="es">アプリケーション攻撃（アプリの欠陥を突く）</span></h2>
+<article class="memo-card" id="b-4-injection" data-search="インジェクション攻撃 injection  入力に悪意あるコードを挿入 sqlインジェクション ' or 1=1 -- osコマンド注入">
+  <h3>
+    <span data-i18n="ja">インジェクション攻撃<span class="en">Injection</span></span>
+    <span data-i18n="en">Injection</span>
+    <span data-i18n="es">インジェクション攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">入力に<span class="hl">悪意あるコード</span>を挿入</p><p data-i18n="en" class="one-liner">入力に<span class="hl">悪意あるコード</span>を挿入</p><p data-i18n="es" class="one-liner">入力に<span class="hl">悪意あるコード</span>を挿入</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>SQLインジェクション</li><li>' OR 1=1 --</li><li>OSコマンド注入</li></ul>
+      <ul class="example-list" data-i18n="en"><li>SQLインジェクション</li><li>' OR 1=1 --</li><li>OSコマンド注入</li></ul>
+      <ul class="example-list" data-i18n="es"><li>SQLインジェクション</li><li>' OR 1=1 --</li><li>OSコマンド注入</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-directory-traversal" data-search="ディレクトリトラバーサル directory traversal ../で上位の非公開ファイルへ ../etc/passwd dl機能の悪用">
-  <h3>ディレクトリトラバーサル<span class="en">Directory traversal</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-replay" data-search="リプレイ攻撃 replay attack  傍受した通信を再送信して悪用 送金リクエスト再送 同じ操作の反復">
+  <h3>
+    <span data-i18n="ja">リプレイ攻撃<span class="en">Replay attack</span></span>
+    <span data-i18n="en">Replay attack</span>
+    <span data-i18n="es">リプレイ攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">../</span>で上位の非公開ファイルへ</p>
+    <p data-i18n="ja" class="one-liner">傍受した通信を<span class="hl">再送信</span>して悪用</p><p data-i18n="en" class="one-liner">傍受した通信を<span class="hl">再送信</span>して悪用</p><p data-i18n="es" class="one-liner">傍受した通信を<span class="hl">再送信</span>して悪用</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>../etc/passwd</li><li>DL機能の悪用</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">暗号・パスワード攻撃（暗号や認証を破る）</h2>
-<article class="memo-card" id="b-4-downgrade" data-search="ダウングレード攻撃 downgrade attack 古く弱い方式へ強制的に切替 tls→旧sslへ poodle">
-  <h3>ダウングレード攻撃<span class="en">Downgrade attack</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">古く弱い方式</span>へ強制的に切替</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>TLS→旧SSLへ</li><li>POODLE</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>送金リクエスト再送</li><li>同じ操作の反復</li></ul>
+      <ul class="example-list" data-i18n="en"><li>送金リクエスト再送</li><li>同じ操作の反復</li></ul>
+      <ul class="example-list" data-i18n="es"><li>送金リクエスト再送</li><li>同じ操作の反復</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-collision" data-search="衝突攻撃 collision attack 異なる入力で同じハッシュ値を作る md5の衝突 sha-1の衝突">
-  <h3>衝突攻撃<span class="en">Collision attack</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-privilege-escalation" data-search="権限昇格攻撃 privilege escalation  本来より高い権限を不正に得る ゼロデイで管理者化 一般→管理者">
+  <h3>
+    <span data-i18n="ja">権限昇格攻撃<span class="en">Privilege escalation</span></span>
+    <span data-i18n="en">Privilege escalation</span>
+    <span data-i18n="es">権限昇格攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">異なる入力で<span class="hl">同じハッシュ値</span>を作る</p>
+    <p data-i18n="ja" class="one-liner">本来より<span class="hl">高い権限</span>を不正に得る</p><p data-i18n="en" class="one-liner">本来より<span class="hl">高い権限</span>を不正に得る</p><p data-i18n="es" class="one-liner">本来より<span class="hl">高い権限</span>を不正に得る</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>MD5の衝突</li><li>SHA-1の衝突</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ゼロデイで管理者化</li><li>一般→管理者</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ゼロデイで管理者化</li><li>一般→管理者</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ゼロデイで管理者化</li><li>一般→管理者</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-birthday" data-search="バースデイ攻撃 birthday attack 誕生日のパラドックスで衝突探索 23人で一致率50%超 短いハッシュ値">
-  <h3>バースデイ攻撃<span class="en">Birthday attack</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-directory-traversal" data-search="ディレクトリトラバーサル directory traversal  ../で上位の非公開ファイルへ ../etc/passwd dl機能の悪用">
+  <h3>
+    <span data-i18n="ja">ディレクトリトラバーサル<span class="en">Directory traversal</span></span>
+    <span data-i18n="en">Directory traversal</span>
+    <span data-i18n="es">ディレクトリトラバーサル</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">誕生日のパラドックス</span>で衝突探索</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">../</span>で上位の非公開ファイルへ</p><p data-i18n="en" class="one-liner"><span class="hl">../</span>で上位の非公開ファイルへ</p><p data-i18n="es" class="one-liner"><span class="hl">../</span>で上位の非公開ファイルへ</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>23人で一致率50%超</li><li>短いハッシュ値</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>../etc/passwd</li><li>DL機能の悪用</li></ul>
+      <ul class="example-list" data-i18n="en"><li>../etc/passwd</li><li>DL機能の悪用</li></ul>
+      <ul class="example-list" data-i18n="es"><li>../etc/passwd</li><li>DL機能の悪用</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">暗号・パスワード攻撃（暗号や認証を破る）</span><span data-i18n="en">暗号・パスワード攻撃（暗号や認証を破る）</span><span data-i18n="es">暗号・パスワード攻撃（暗号や認証を破る）</span></h2>
+<article class="memo-card" id="b-4-downgrade" data-search="ダウングレード攻撃 downgrade attack  古く弱い方式へ強制的に切替 tls→旧sslへ poodle">
+  <h3>
+    <span data-i18n="ja">ダウングレード攻撃<span class="en">Downgrade attack</span></span>
+    <span data-i18n="en">Downgrade attack</span>
+    <span data-i18n="es">ダウングレード攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner"><span class="hl">古く弱い方式</span>へ強制的に切替</p><p data-i18n="en" class="one-liner"><span class="hl">古く弱い方式</span>へ強制的に切替</p><p data-i18n="es" class="one-liner"><span class="hl">古く弱い方式</span>へ強制的に切替</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>TLS→旧SSLへ</li><li>POODLE</li></ul>
+      <ul class="example-list" data-i18n="en"><li>TLS→旧SSLへ</li><li>POODLE</li></ul>
+      <ul class="example-list" data-i18n="es"><li>TLS→旧SSLへ</li><li>POODLE</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-brute-force" data-search="ブルートフォース攻撃 brute force 全組み合わせを総当たりで試す 銀行ログインへの試行 自動化ツール">
-  <h3>ブルートフォース攻撃<span class="en">Brute force</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-collision" data-search="衝突攻撃 collision attack  異なる入力で同じハッシュ値を作る md5の衝突 sha-1の衝突">
+  <h3>
+    <span data-i18n="ja">衝突攻撃<span class="en">Collision attack</span></span>
+    <span data-i18n="en">Collision attack</span>
+    <span data-i18n="es">衝突攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">全組み合わせを<span class="hl">総当たり</span>で試す</p>
+    <p data-i18n="ja" class="one-liner">異なる入力で<span class="hl">同じハッシュ値</span>を作る</p><p data-i18n="en" class="one-liner">異なる入力で<span class="hl">同じハッシュ値</span>を作る</p><p data-i18n="es" class="one-liner">異なる入力で<span class="hl">同じハッシュ値</span>を作る</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>銀行ログインへの試行</li><li>自動化ツール</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>MD5の衝突</li><li>SHA-1の衝突</li></ul>
+      <ul class="example-list" data-i18n="en"><li>MD5の衝突</li><li>SHA-1の衝突</li></ul>
+      <ul class="example-list" data-i18n="es"><li>MD5の衝突</li><li>SHA-1の衝突</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-password-spraying" data-search="パスワードスプレー攻撃 password spraying 多数のアカウントに弱いpwを少数回 123456を全員に試行 qwerty">
-  <h3>パスワードスプレー攻撃<span class="en">Password spraying</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-birthday" data-search="バースデイ攻撃 birthday attack  誕生日のパラドックスで衝突探索 23人で一致率50%超 短いハッシュ値">
+  <h3>
+    <span data-i18n="ja">バースデイ攻撃<span class="en">Birthday attack</span></span>
+    <span data-i18n="en">Birthday attack</span>
+    <span data-i18n="es">バースデイ攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">多数のアカウント</span>に弱いPWを少数回</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">誕生日のパラドックス</span>で衝突探索</p><p data-i18n="en" class="one-liner"><span class="hl">誕生日のパラドックス</span>で衝突探索</p><p data-i18n="es" class="one-liner"><span class="hl">誕生日のパラドックス</span>で衝突探索</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>123456を全員に試行</li><li>qwerty</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">兆候（Indicators：攻撃を示すサイン）</h2>
-<article class="memo-card" id="b-4-account-lockout" data-search="アカウントのロックアウト account lockout ログイン失敗で自動ロックされた状態 複数アカウント同時ロック 総当たりの痕跡">
-  <h3>アカウントのロックアウト<span class="en">Account lockout</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">ログイン失敗で<span class="hl">自動ロック</span>された状態</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>複数アカウント同時ロック</li><li>総当たりの痕跡</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>23人で一致率50%超</li><li>短いハッシュ値</li></ul>
+      <ul class="example-list" data-i18n="en"><li>23人で一致率50%超</li><li>短いハッシュ値</li></ul>
+      <ul class="example-list" data-i18n="es"><li>23人で一致率50%超</li><li>短いハッシュ値</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-concurrent-session" data-search="セッションの同時使用 concurrent session usage 同一アカウントが同時に複数ログイン 東京とnyで同時ログイン">
-  <h3>セッションの同時使用<span class="en">Concurrent session usage</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-brute-force" data-search="ブルートフォース攻撃 brute force  全組み合わせを総当たりで試す 銀行ログインへの試行 自動化ツール">
+  <h3>
+    <span data-i18n="ja">ブルートフォース攻撃<span class="en">Brute force</span></span>
+    <span data-i18n="en">Brute force</span>
+    <span data-i18n="es">ブルートフォース攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">同一アカウントが<span class="hl">同時に</span>複数ログイン</p>
+    <p data-i18n="ja" class="one-liner">全組み合わせを<span class="hl">総当たり</span>で試す</p><p data-i18n="en" class="one-liner">全組み合わせを<span class="hl">総当たり</span>で試す</p><p data-i18n="es" class="one-liner">全組み合わせを<span class="hl">総当たり</span>で試す</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>東京とNYで同時ログイン</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>銀行ログインへの試行</li><li>自動化ツール</li></ul>
+      <ul class="example-list" data-i18n="en"><li>銀行ログインへの試行</li><li>自動化ツール</li></ul>
+      <ul class="example-list" data-i18n="es"><li>銀行ログインへの試行</li><li>自動化ツール</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-blocked-content" data-search="ブロックされたコンテンツ blocked content 禁止された宛先へのアクセス試行 禁止国ipへの通信 プロキシの遮断ログ">
-  <h3>ブロックされたコンテンツ<span class="en">Blocked content</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-password-spraying" data-search="パスワードスプレー攻撃 password spraying  多数のアカウントに弱いpwを少数回 123456を全員に試行 qwerty">
+  <h3>
+    <span data-i18n="ja">パスワードスプレー攻撃<span class="en">Password spraying</span></span>
+    <span data-i18n="en">Password spraying</span>
+    <span data-i18n="es">パスワードスプレー攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">禁止された宛先</span>へのアクセス試行</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">多数のアカウント</span>に弱いPWを少数回</p><p data-i18n="en" class="one-liner"><span class="hl">多数のアカウント</span>に弱いPWを少数回</p><p data-i18n="es" class="one-liner"><span class="hl">多数のアカウント</span>に弱いPWを少数回</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>禁止国IPへの通信</li><li>プロキシの遮断ログ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>123456を全員に試行</li><li>qwerty</li></ul>
+      <ul class="example-list" data-i18n="en"><li>123456を全員に試行</li><li>qwerty</li></ul>
+      <ul class="example-list" data-i18n="es"><li>123456を全員に試行</li><li>qwerty</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">兆候（Indicators：攻撃を示すサイン）</span><span data-i18n="en">兆候（Indicators：攻撃を示すサイン）</span><span data-i18n="es">兆候（Indicators：攻撃を示すサイン）</span></h2>
+<article class="memo-card" id="b-4-account-lockout" data-search="アカウントのロックアウト account lockout  ログイン失敗で自動ロックされた状態 複数アカウント同時ロック 総当たりの痕跡">
+  <h3>
+    <span data-i18n="ja">アカウントのロックアウト<span class="en">Account lockout</span></span>
+    <span data-i18n="en">Account lockout</span>
+    <span data-i18n="es">アカウントのロックアウト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">ログイン失敗で<span class="hl">自動ロック</span>された状態</p><p data-i18n="en" class="one-liner">ログイン失敗で<span class="hl">自動ロック</span>された状態</p><p data-i18n="es" class="one-liner">ログイン失敗で<span class="hl">自動ロック</span>された状態</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>複数アカウント同時ロック</li><li>総当たりの痕跡</li></ul>
+      <ul class="example-list" data-i18n="en"><li>複数アカウント同時ロック</li><li>総当たりの痕跡</li></ul>
+      <ul class="example-list" data-i18n="es"><li>複数アカウント同時ロック</li><li>総当たりの痕跡</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-impossible-travel" data-search="不可能な旅行 impossible travel 移動不可能な短時間で遠隔地ログイン 東京の10分後にny">
-  <h3>不可能な旅行<span class="en">Impossible travel</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-concurrent-session" data-search="セッションの同時使用 concurrent session usage  同一アカウントが同時に複数ログイン 東京とnyで同時ログイン">
+  <h3>
+    <span data-i18n="ja">セッションの同時使用<span class="en">Concurrent session usage</span></span>
+    <span data-i18n="en">Concurrent session usage</span>
+    <span data-i18n="es">セッションの同時使用</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">移動不可能な短時間</span>で遠隔地ログイン</p>
+    <p data-i18n="ja" class="one-liner">同一アカウントが<span class="hl">同時に</span>複数ログイン</p><p data-i18n="en" class="one-liner">同一アカウントが<span class="hl">同時に</span>複数ログイン</p><p data-i18n="es" class="one-liner">同一アカウントが<span class="hl">同時に</span>複数ログイン</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>東京の10分後にNY</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>東京とNYで同時ログイン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>東京とNYで同時ログイン</li></ul>
+      <ul class="example-list" data-i18n="es"><li>東京とNYで同時ログイン</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-resource-consumption" data-search="リソースの消費 resource consumption cpu等が異常に多く消費される ddosでcpu急上昇 帯域の逼迫">
-  <h3>リソースの消費<span class="en">Resource consumption</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-blocked-content" data-search="ブロックされたコンテンツ blocked content  禁止された宛先へのアクセス試行 禁止国ipへの通信 プロキシの遮断ログ">
+  <h3>
+    <span data-i18n="ja">ブロックされたコンテンツ<span class="en">Blocked content</span></span>
+    <span data-i18n="en">Blocked content</span>
+    <span data-i18n="es">ブロックされたコンテンツ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">CPU等が<span class="hl">異常に多く</span>消費される</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">禁止された宛先</span>へのアクセス試行</p><p data-i18n="en" class="one-liner"><span class="hl">禁止された宛先</span>へのアクセス試行</p><p data-i18n="es" class="one-liner"><span class="hl">禁止された宛先</span>へのアクセス試行</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>DDoSでCPU急上昇</li><li>帯域の逼迫</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>禁止国IPへの通信</li><li>プロキシの遮断ログ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>禁止国IPへの通信</li><li>プロキシの遮断ログ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>禁止国IPへの通信</li><li>プロキシの遮断ログ</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-resource-inaccessibility" data-search="リソースへのアクセス不能 resource inaccessibility 普段のリソースに突然入れない 顧客dbが暗号化 ランサムウェア被害">
-  <h3>リソースへのアクセス不能<span class="en">Resource inaccessibility</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-impossible-travel" data-search="不可能な旅行 impossible travel  移動不可能な短時間で遠隔地ログイン 東京の10分後にny">
+  <h3>
+    <span data-i18n="ja">不可能な旅行<span class="en">Impossible travel</span></span>
+    <span data-i18n="en">Impossible travel</span>
+    <span data-i18n="es">不可能な旅行</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">普段のリソースに<span class="hl">突然入れない</span></p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">移動不可能な短時間</span>で遠隔地ログイン</p><p data-i18n="en" class="one-liner"><span class="hl">移動不可能な短時間</span>で遠隔地ログイン</p><p data-i18n="es" class="one-liner"><span class="hl">移動不可能な短時間</span>で遠隔地ログイン</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>顧客DBが暗号化</li><li>ランサムウェア被害</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>東京の10分後にNY</li></ul>
+      <ul class="example-list" data-i18n="en"><li>東京の10分後にNY</li></ul>
+      <ul class="example-list" data-i18n="es"><li>東京の10分後にNY</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-4-out-of-cycle-logging" data-search="サイクル外でのロギング out-of-cycle logging 普段と違う時間帯にログが出る 深夜の大量アクセス 休日のログイン">
-  <h3>サイクル外でのロギング<span class="en">Out-of-cycle logging</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-4-resource-consumption" data-search="リソースの消費 resource consumption  cpu等が異常に多く消費される ddosでcpu急上昇 帯域の逼迫">
+  <h3>
+    <span data-i18n="ja">リソースの消費<span class="en">Resource consumption</span></span>
+    <span data-i18n="en">Resource consumption</span>
+    <span data-i18n="es">リソースの消費</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">普段と違う時間帯</span>にログが出る</p>
+    <p data-i18n="ja" class="one-liner">CPU等が<span class="hl">異常に多く</span>消費される</p><p data-i18n="en" class="one-liner">CPU等が<span class="hl">異常に多く</span>消費される</p><p data-i18n="es" class="one-liner">CPU等が<span class="hl">異常に多く</span>消費される</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>深夜の大量アクセス</li><li>休日のログイン</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>DDoSでCPU急上昇</li><li>帯域の逼迫</li></ul>
+      <ul class="example-list" data-i18n="en"><li>DDoSでCPU急上昇</li><li>帯域の逼迫</li></ul>
+      <ul class="example-list" data-i18n="es"><li>DDoSでCPU急上昇</li><li>帯域の逼迫</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-4-resource-inaccessibility" data-search="リソースへのアクセス不能 resource inaccessibility  普段のリソースに突然入れない 顧客dbが暗号化 ランサムウェア被害">
+  <h3>
+    <span data-i18n="ja">リソースへのアクセス不能<span class="en">Resource inaccessibility</span></span>
+    <span data-i18n="en">Resource inaccessibility</span>
+    <span data-i18n="es">リソースへのアクセス不能</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">普段のリソースに<span class="hl">突然入れない</span></p><p data-i18n="en" class="one-liner">普段のリソースに<span class="hl">突然入れない</span></p><p data-i18n="es" class="one-liner">普段のリソースに<span class="hl">突然入れない</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>顧客DBが暗号化</li><li>ランサムウェア被害</li></ul>
+      <ul class="example-list" data-i18n="en"><li>顧客DBが暗号化</li><li>ランサムウェア被害</li></ul>
+      <ul class="example-list" data-i18n="es"><li>顧客DBが暗号化</li><li>ランサムウェア被害</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-4-out-of-cycle-logging" data-search="サイクル外でのロギング out-of-cycle logging  普段と違う時間帯にログが出る 深夜の大量アクセス 休日のログイン">
+  <h3>
+    <span data-i18n="ja">サイクル外でのロギング<span class="en">Out-of-cycle logging</span></span>
+    <span data-i18n="en">Out-of-cycle logging</span>
+    <span data-i18n="es">サイクル外でのロギング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner"><span class="hl">普段と違う時間帯</span>にログが出る</p><p data-i18n="en" class="one-liner"><span class="hl">普段と違う時間帯</span>にログが出る</p><p data-i18n="es" class="one-liner"><span class="hl">普段と違う時間帯</span>にログが出る</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>深夜の大量アクセス</li><li>休日のログイン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>深夜の大量アクセス</li><li>休日のログイン</li></ul>
+      <ul class="example-list" data-i18n="es"><li>深夜の大量アクセス</li><li>休日のログイン</li></ul>
     </div>
   </div>
 </article>
@@ -427,19 +618,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（30問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（30問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (30 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (30 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">[{"term": "b-4-ransomware", "stem": "経理担当者がメール添付の「請求書」を開いた直後、共有フォルダのファイルが開けなくなり、画面に「復号したければ暗号資産で支払え」と表示された。最も可能性が高いマルウェアはどれか。", "choices": ["スパイウェア", "ロジックボム", "ランサムウェア", "ブロートウェア"], "answer": 2, "explain": "ファイルを暗号化し、復旧と引き換えに金銭を要求するのはランサムウェアの典型的な挙動。"}, {"term": "b-4-trojan", "stem": "取引先を装ったメールに添付された正規の書類に見えるファイルを開いたところ、ネットワーク上に広がることなく端末内に潜伏し、機密情報を外部へ送信し続けていた。最も当てはまるものはどれか。", "choices": ["トロイの木馬", "ワーム", "ルートキット", "ブロートウェア"], "answer": 0, "explain": "正規のファイル・ソフトを装って侵入し、自己増殖せず潜伏するのはトロイの木馬の特徴。"}, {"term": "b-4-worm", "stem": "1台のPCの感染をきっかけに、ユーザーの操作なしにOSの脆弱性を突いて社内のほぼすべてのPCへ感染が広がり、業務が停止した。原因として最も可能性が高いものはどれか。", "choices": ["キーロガー", "トロイの木馬", "ロジックボム", "ワーム"], "answer": 3, "explain": "自らコピーを作り、脆弱性を通じてネットワーク上に自動的に拡散するのはワーム。"}, {"term": "b-4-spyware", "stem": "無料のブラウザツールバーを入れてから、ポップアップ広告が増え、閲覧履歴や検索キーワードが外部サーバーへ送信されていることが判明した。最も当てはまるものはどれか。", "choices": ["ルートキット", "スパイウェア", "ワーム", "ランサムウェア"], "answer": 1, "explain": "無料ソフトなどに紛れて潜み、利用者の情報を密かに収集・送信するのはスパイウェア。"}, {"term": "b-4-bloatware", "stem": "新しく購入したノートPCに、使う予定のないアプリが多数あらかじめインストールされており、メモリとディスクを圧迫して動作が遅い。これを何と呼ぶか。", "choices": ["スパイウェア", "ロジックボム", "ブロートウェア", "トロイの木馬"], "answer": 2, "explain": "新品デバイスにプリインストールされ、リソースを圧迫する不要なソフトはブロートウェア。"}, {"term": "b-4-keylogger", "stem": "出張先ホテルの共用PCでWebメールにログインした社員のアカウントが、翌日第三者に乗っ取られた。共用PCではキーボードで入力した文字列がすべて記録されていた。仕掛けられていたものはどれか。", "choices": ["キーロガー", "ブロートウェア", "ワーム", "ロジックボム"], "answer": 0, "explain": "キーボード入力を記録してパスワードなどを盗むのはキーロガー。"}, {"term": "b-4-logic-bomb", "stem": "退職した開発者が担当していた基幹システムで、退職から3か月後の特定の日付に突然データベースの全レコードが削除された。それまで不審な動作は一切なかった。最も可能性が高いものはどれか。", "choices": ["ワーム", "スパイウェア", "ルートキット", "ロジックボム"], "answer": 3, "explain": "特定の日時や条件を引き金に発動し、それまでは普通のプログラムに見えるのはロジックボム。内部犯行の典型例。"}, {"term": "b-4-rootkit", "stem": "あるサーバーで長期間情報が流出していたが、通常のアンチウイルスでは何も検出されなかった。調査の結果、OSのカーネルが改ざんされ、管理者権限で不正プロセスが隠蔽されていた。該当するものはどれか。", "choices": ["キーロガー", "ルートキット", "トロイの木馬", "ブロートウェア"], "answer": 1, "explain": "OSの中核に入り込み管理者権限を奪い、不正活動や他のマルウェアを隠蔽するのはルートキット。"}, {"term": "b-4-rfid-cloning", "stem": "従業員の近くでカードリーダーを使ってICカード型入館証の情報を読み取り、そのデータを別のカードに書き込んで、いつでもドアを開けられるようにした。この攻撃はどれか。", "choices": ["RFIDクローニング", "ワイヤレス攻撃", "オンパス攻撃", "リプレイ攻撃"], "answer": 0, "explain": "RFIDタグのデータを盗み取って別のタグに書き込み、複製を作るのはRFIDクローニング。"}, {"term": "b-4-ddos", "stem": "ECサイトに世界中の多数のIPアドレスから大量のリクエストが一斉に届き、サーバーが処理しきれず数時間閲覧不能になった。攻撃者は脆弱なサーバーを踏み台にして通信量を増幅していた。この攻撃はどれか。", "choices": ["ブルートフォース攻撃", "DNS攻撃", "DDoS攻撃", "リプレイ攻撃"], "answer": 2, "explain": "多数の発信元から大量のトラフィックを集中させてサービスを停止させるのはDDoS攻撃。"}, {"term": "b-4-dns-attack", "stem": "利用者がブラウザに正しいURLを入力したにもかかわらず、本物そっくりの偽サイトが表示された。調査すると、名前解決の応答が偽のIPアドレスにすり替えられていた。この攻撃はどれか。", "choices": ["ディレクトリトラバーサル", "DNS攻撃", "ダウングレード攻撃", "インジェクション攻撃"], "answer": 1, "explain": "DNSの応答を偽り、ドメイン名を偽サイトのIPアドレスへ対応付けて誘導するのはDNS攻撃（DNSスプーフィング）。"}, {"term": "b-4-wireless", "stem": "カフェで、普段使う公衆Wi-Fiと同じSSIDの強い電波が出ていた。接続した利用者の通信がすべて攻撃者に傍受されていた。この攻撃の分類として最も適切なものはどれか。", "choices": ["RFIDクローニング", "DDoS攻撃", "DNS攻撃", "ワイヤレス攻撃（イービルツイン）"], "answer": 3, "explain": "正規アクセスポイントと同じSSIDの偽APで通信を傍受するのはイービルツインで、ワイヤレス攻撃に当たる。"}, {"term": "b-4-on-path", "stem": "セッションIDをURLパラメータに含むWebサイトで、攻撃者が利用者とサーバー間の通信に割り込みセッションIDを盗み、利用者になりすまして操作した。この攻撃はどれか。", "choices": ["オンパス攻撃", "パスワードスプレー攻撃", "権限昇格攻撃", "衝突攻撃"], "answer": 0, "explain": "通信経路上に入り込み傍受・改ざんするのがオンパス攻撃（中間者攻撃）で、セッションハイジャックはその代表例。"}, {"term": "b-4-credential-replay", "stem": "暗号化されていない社内Webアプリで、攻撃者がネットワーク上を流れるユーザー名とパスワードを盗聴し、そのまま送信してログインに成功した。この攻撃を最もよく表すものはどれか。", "choices": ["パスワードスプレー攻撃", "ブルートフォース攻撃", "クレデンシャルリプレイ", "ダウングレード攻撃"], "answer": 2, "explain": "傍受した認証情報を再送信してなりすましログインするのはクレデンシャルリプレイ。推測ではなく盗聴した情報を使う点がブルートフォースと異なる。"}, {"term": "b-4-injection", "stem": "Webアプリのログを確認すると、検索ボックスに「' OR 1=1 --」という文字列が入力され、データベースの全顧客情報が返されていた。この攻撃はどれか。", "choices": ["ディレクトリトラバーサル", "リプレイ攻撃", "衝突攻撃", "インジェクション攻撃"], "answer": 3, "explain": "常に真となる条件を挿入してSQLを改変するのはSQLインジェクション。対策は入力のバリデーションやパラメータ化クエリ。"}, {"term": "b-4-replay", "stem": "オンラインバンキングで、正規ユーザーの送金リクエスト（送金先口座・金額を含む）が傍受・保存され、後から同じリクエストが何度も送信されて不正送金が繰り返された。対策としてワンタイムトークンが有効な攻撃はどれか。", "choices": ["インジェクション攻撃", "リプレイ攻撃", "DDoS攻撃", "権限昇格攻撃"], "answer": 1, "explain": "正当な通信を傍受して再送信し、同じ操作を繰り返させるのはリプレイ攻撃。1回限りのトークンで再送を無効化できる。"}, {"term": "b-4-privilege-escalation", "stem": "一般ユーザー権限しか持たない攻撃者が、アプリケーションの未修正の脆弱性を突いた細工リクエストを送り、管理者専用の機能を実行できるようになった。この攻撃と、最も重要な対策の組み合わせはどれか。", "choices": ["権限昇格攻撃 ― 最小権限の原則", "リプレイ攻撃 ― ワンタイムトークン", "衝突攻撃 ― 安全なハッシュ関数", "ブルートフォース攻撃 ― 多要素認証"], "answer": 0, "explain": "本来より高い権限を不正に取得するのは権限昇格攻撃で、最小権限の原則とアクセス制御の設計が対策となる。"}, {"term": "b-4-directory-traversal", "stem": "ファイルダウンロード機能のアクセスログに「download?file=../../../etc/passwd」というリクエストが記録されていた。この攻撃はどれか。", "choices": ["インジェクション攻撃", "オンパス攻撃", "ディレクトリトラバーサル", "権限昇格攻撃"], "answer": 2, "explain": "「../」で上位ディレクトリへさかのぼり、公開されていないファイルを取得しようとするのはディレクトリトラバーサル。"}, {"term": "b-4-downgrade", "stem": "互換性のため古いSSLにも対応しているWebサーバーとの通信に攻撃者が割り込み、クライアントとサーバーに古く脆弱なプロトコルを使わせて暗号を解読した。この攻撃はどれか。", "choices": ["バースデイ攻撃", "ダウングレード攻撃", "DNS攻撃", "リプレイ攻撃"], "answer": 1, "explain": "強力な暗号方式から古く脆弱な方式へ強制的に切り替えさせるのはダウングレード攻撃。"}, {"term": "b-4-collision", "stem": "攻撃者が、正規の文書と同じMD5ハッシュ値を持つ改ざん文書を作成し、ハッシュ値による完全性チェックをすり抜けた。この攻撃はどれか。", "choices": ["ダウングレード攻撃", "パスワードスプレー攻撃", "ディレクトリトラバーサル", "衝突攻撃"], "answer": 3, "explain": "異なる入力から同じハッシュ値を作り出して悪用するのは衝突攻撃。古いハッシュ関数ほど衝突を作られやすい。"}, {"term": "b-4-birthday", "stem": "「23人いれば同じ誕生日の2人がいる確率は50%を超える」という確率論の性質を利用して、ハッシュ値の衝突を少ない試行で見つけ出す攻撃はどれか。", "choices": ["バースデイ攻撃", "ブルートフォース攻撃", "ダウングレード攻撃", "リプレイ攻撃"], "answer": 0, "explain": "誕生日のパラドックスに基づいて衝突を効率的に探すのはバースデイ攻撃。対策は安全で十分な長さのハッシュ値。"}, {"term": "b-4-brute-force", "stem": "ある利用者のアカウント1つに対して、自動化ツールで数万通りのパスワード候補が短時間に次々と試されていた。この攻撃に最も有効な対策の組み合わせはどれか。", "choices": ["ワンタイムトークン ― リプレイ攻撃", "DNSSEC ― DNS攻撃", "長いパスワードと多要素認証 ― ブルートフォース攻撃", "入力値のバリデーション ― インジェクション攻撃"], "answer": 2, "explain": "1アカウントに膨大な組み合わせを総当たりで試すのはブルートフォース攻撃で、長いパスワードと多要素認証が有効。"}, {"term": "b-4-password-spraying", "stem": "認証ログを分析すると、同じ外部IPから社員500人のアカウントそれぞれに「123456」「qwerty」など数個のパスワードだけが試されていた。各アカウントの失敗回数はロックアウトのしきい値未満だった。この攻撃はどれか。", "choices": ["ブルートフォース攻撃", "パスワードスプレー攻撃", "クレデンシャルリプレイ", "バースデイ攻撃"], "answer": 1, "explain": "多数のアカウントに少数の弱いパスワードを試し、1アカウントあたりの試行を抑えてロックアウトを回避するのはパスワードスプレー攻撃。"}, {"term": "b-4-account-lockout", "stem": "月曜の朝、ヘルプデスクに「ログインできない」という問い合わせが複数部署から相次ぎ、調べると数十のアカウントがログイン失敗の繰り返しにより自動的にロックされていた。これは主にどの兆候に当たるか。", "choices": ["サイクル外でのロギング", "リソースへのアクセス不能", "ブロックされたコンテンツ", "アカウントのロックアウト"], "answer": 3, "explain": "複数アカウントが短期間にロックされるのはアカウントのロックアウトの兆候で、ブルートフォースやパスワードスプレーを示唆する。"}, {"term": "b-4-concurrent-session", "stem": "SIEMが、1つのユーザーアカウントで東京のオフィスとニューヨークのホテルから同時刻に有効なセッションが確立されていることを検知した。この兆候はどれか。", "choices": ["セッションの同時使用", "サイクル外でのロギング", "リソースの消費", "アカウントのロックアウト"], "answer": 0, "explain": "同一アカウントで複数の場所・デバイスから同時にセッションが確立されているのはセッションの同時使用で、認証情報の窃取や不正共有を示唆する。"}, {"term": "b-4-blocked-content", "stem": "Webプロキシのログで、ある社員のPCから、攻撃の発信元として知られアクセス禁止に設定された国のIPアドレス帯への通信が繰り返し遮断されていた。この兆候はどれか。", "choices": ["不可能な旅行", "リソースへのアクセス不能", "ブロックされたコンテンツ", "セッションの同時使用"], "answer": 2, "explain": "セキュリティツールに阻止された宛先への繰り返しのアクセス試行はブロックされたコンテンツの兆候で、マルウェア感染や情報漏えいの意図を疑う。"}, {"term": "b-4-impossible-travel", "stem": "あるアカウントが9:00に東京からログインし、9:20にロンドンからログインしていた。2つのログインは同時ではないが、この時間で移動することは物理的に不可能である。この兆候はどれか。", "choices": ["サイクル外でのロギング", "不可能な旅行", "ブロックされたコンテンツ", "リソースの消費"], "answer": 1, "explain": "地理的に離れた場所から、移動不可能な短時間で連続してログインしているのは不可能な旅行。直ちにパスワードをリセットする。"}, {"term": "b-4-resource-consumption", "stem": "Webサーバーのレスポンスが急に遅くなり、監視画面でCPUとメモリの使用率がほぼ100%に張り付いていた。セールなどの業務上の理由は見当たらない。管理者がまず疑うべき兆候はどれか。", "choices": ["アカウントのロックアウト", "ブロックされたコンテンツ", "不可能な旅行", "リソースの消費"], "answer": 3, "explain": "CPUやメモリが通常より著しく多く消費されるのはリソースの消費の兆候で、DDoSなどを示唆する。原因のプロセスやトラフィックを特定する。"}, {"term": "b-4-resource-inaccessibility", "stem": "営業部が毎日使う顧客管理データベースに、ある朝突然誰も接続できなくなった。調査するとサーバー上のデータが暗号化されていた。利用者側から見えたこの兆候はどれか。", "choices": ["リソースへのアクセス不能", "リソースの消費", "サイクル外でのロギング", "セッションの同時使用"], "answer": 0, "explain": "通常使えるリソースに突然アクセスできなくなるのはリソースへのアクセス不能の兆候で、この場合はランサムウェアが原因。"}, {"term": "b-4-out-of-cycle-logging", "stem": "平日日中にしか利用されない社内システムで、日曜の深夜3時に見慣れない外部IPアドレスからの大量のアクセスログが記録されていた。この兆候はどれか。", "choices": ["不可能な旅行", "リソースへのアクセス不能", "サイクル外でのロギング", "アカウントのロックアウト"], "answer": 2, "explain": "通常と異なる時間帯や頻度でログが生成されるのはサイクル外でのロギングで、不正アクセスや情報漏えいの試行を示唆する。"}]</script>
 </section>
 
-<nav class="pager"><a href="b-3.html"><span>前の章</span>B-3 脆弱性の種類</a><a class="next" href="b-5.html"><span>次の章</span>B-5 緩和策</a></nav>
+<nav class="pager"><a href="b-3.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>B-3 <span data-i18n="ja">脆弱性の種類</span><span data-i18n="en">脆弱性の種類</span><span data-i18n="es">脆弱性の種類</span></span></a><a class="next" href="b-5.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>B-5 <span data-i18n="ja">緩和策</span><span data-i18n="en">緩和策</span><span data-i18n="es">緩和策</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -18,61 +18,66 @@
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="index.html">Security+ Textbook<span>SY0-701</span></a>
   <nav class="nav-section">
-    <h2>Domains</h2>
-    <a href="a/index.html">A. 一般的なセキュリティ概念</a><a href="b/index.html">B. 脅威・脆弱性・緩和</a><a href="c/index.html">C. セキュリティアーキテクチャ</a><a href="d/index.html">D. セキュリティ運用</a><a href="e/index.html">E. セキュリティプログラム管理・監督</a>
+    <h2><span data-i18n="ja">Domains</span><span data-i18n="en">Domains</span><span data-i18n="es">Domains</span></h2>
+    <a href="a/index.html">A. <span data-i18n="ja">一般的なセキュリティ概念</span><span data-i18n="en">General Security Concepts</span><span data-i18n="es">Conceptos generales de seguridad</span></a><a href="b/index.html">B. <span data-i18n="ja">脅威・脆弱性・緩和</span><span data-i18n="en">Threats, Vulnerabilities &amp; Mitigations</span><span data-i18n="es">Amenazas, vulnerabilidades y mitigaciones</span></a><a href="c/index.html">C. <span data-i18n="ja">セキュリティアーキテクチャ</span><span data-i18n="en">Security Architecture</span><span data-i18n="es">Arquitectura de seguridad</span></a><a href="d/index.html">D. <span data-i18n="ja">セキュリティ運用</span><span data-i18n="en">Security Operations</span><span data-i18n="es">Operaciones de seguridad</span></a><a href="e/index.html">E. <span data-i18n="ja">セキュリティプログラム管理・監督</span><span data-i18n="en">Security Program Management &amp; Oversight</span><span data-i18n="es">Gestión y supervisión del programa de seguridad</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>マップ</h2>
-    <a href="map.html">全体の知識マップ</a>
+    <h2><span data-i18n="ja">マップ</span><span data-i18n="en">Map</span><span data-i18n="es">Mapa</span></h2>
+    <a href="map.html"><span data-i18n="ja">全体の知識マップ</span><span data-i18n="en">Full knowledge map</span><span data-i18n="es">Mapa de conocimiento completo</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
     <main class="main">
       <header class="hero">
         <p class="eyebrow">Personal Study App</p>
-        <h1>Security+ 教科書</h1>
-        <p>Domain を選んで、覚えるモードと知識マップで定着させる。</p>
+        <h1><span data-i18n="ja">Security+ 教科書</span><span data-i18n="en">Security+ Textbook</span><span data-i18n="es">Manual de Security+</span></h1>
+        <p><span data-i18n="ja">Domain を選んで、覚えるモードと知識マップで定着させる。</span><span data-i18n="en">Pick a domain, then lock it in with memorize mode and the knowledge map.</span><span data-i18n="es">Elige un dominio y refuérzalo con el modo memorización y el mapa de conocimiento.</span></p>
         <div class="action-row">
-          <a class="btn btn-ghost" href="map.html">全体の知識マップ</a>
+          <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">全体の知識マップ</span><span data-i18n="en">Full knowledge map</span><span data-i18n="es">Mapa de conocimiento completo</span></a>
         </div>
       </header>
       <section class="chapter-grid">
         <a class="chapter-card" href="a/index.html">
   <div class="code">DOMAIN A</div>
-  <h2>一般的なセキュリティ概念</h2>
-  <p>章一覧 · 覚えるモード · 知識マップ · 用語 64</p>
+  <h2><span data-i18n="ja">一般的なセキュリティ概念</span><span data-i18n="en">General Security Concepts</span><span data-i18n="es">Conceptos generales de seguridad</span></h2>
+  <p><span data-i18n="ja">章一覧 · 覚えるモード · 知識マップ · 用語 64</span><span data-i18n="en">Chapters · memorize mode · knowledge map · 64 terms</span><span data-i18n="es">Capítulos · modo memorización · mapa de conocimiento · 64 términos</span></p>
 </a><a class="chapter-card" href="b/index.html">
   <div class="code">DOMAIN B</div>
-  <h2>脅威・脆弱性・緩和</h2>
-  <p>章一覧 · 覚えるモード · 知識マップ · 用語 101</p>
+  <h2><span data-i18n="ja">脅威・脆弱性・緩和</span><span data-i18n="en">Threats, Vulnerabilities &amp; Mitigations</span><span data-i18n="es">Amenazas, vulnerabilidades y mitigaciones</span></h2>
+  <p><span data-i18n="ja">章一覧 · 覚えるモード · 知識マップ · 用語 101</span><span data-i18n="en">Chapters · memorize mode · knowledge map · 101 terms</span><span data-i18n="es">Capítulos · modo memorización · mapa de conocimiento · 101 términos</span></p>
 </a><a class="chapter-card" href="c/index.html">
   <div class="code">DOMAIN C</div>
-  <h2>セキュリティアーキテクチャ</h2>
-  <p>章一覧 · 覚えるモード · 知識マップ · 用語 85</p>
+  <h2><span data-i18n="ja">セキュリティアーキテクチャ</span><span data-i18n="en">Security Architecture</span><span data-i18n="es">Arquitectura de seguridad</span></h2>
+  <p><span data-i18n="ja">章一覧 · 覚えるモード · 知識マップ · 用語 85</span><span data-i18n="en">Chapters · memorize mode · knowledge map · 85 terms</span><span data-i18n="es">Capítulos · modo memorización · mapa de conocimiento · 85 términos</span></p>
 </a><a class="chapter-card" href="d/index.html">
   <div class="code">DOMAIN D</div>
-  <h2>セキュリティ運用</h2>
-  <p>章一覧 · 覚えるモード · 知識マップ · 用語 155</p>
+  <h2><span data-i18n="ja">セキュリティ運用</span><span data-i18n="en">Security Operations</span><span data-i18n="es">Operaciones de seguridad</span></h2>
+  <p><span data-i18n="ja">章一覧 · 覚えるモード · 知識マップ · 用語 155</span><span data-i18n="en">Chapters · memorize mode · knowledge map · 155 terms</span><span data-i18n="es">Capítulos · modo memorización · mapa de conocimiento · 155 términos</span></p>
 </a><a class="chapter-card" href="e/index.html">
   <div class="code">DOMAIN E</div>
-  <h2>セキュリティプログラム管理・監督</h2>
-  <p>章一覧 · 覚えるモード · 知識マップ · 用語 54</p>
+  <h2><span data-i18n="ja">セキュリティプログラム管理・監督</span><span data-i18n="en">Security Program Management &amp; Oversight</span><span data-i18n="es">Gestión y supervisión del programa de seguridad</span></h2>
+  <p><span data-i18n="ja">章一覧 · 覚えるモード · 知識マップ · 用語 54</span><span data-i18n="en">Chapters · memorize mode · knowledge map · 54 terms</span><span data-i18n="es">Capítulos · modo memorización · mapa de conocimiento · 54 términos</span></p>
 </a>
       </section>
     </main>
   </div>
-  <script src="js/app.js?v=0970edd5"></script>
+  <script src="js/app.js?v=44658ee8"></script>
 </body>
 </html>

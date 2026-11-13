@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>C-4 回復性と耐性 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain C</span></a>
-  <a class="nav-back" href="index.html">← Domain C ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain C ハブ</span><span data-i18n="en">← Domain C hub</span><span data-i18n="es">← Hub del Domain C</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain C</h2>
-    <a href="c-1.html">C-1 セキュリティアーキテクチャの全体像</a><a href="c-2.html">C-2 インフラを守るセキュリティ原則</a><a href="c-3.html">C-3 データ保護の戦略と概念</a><a href="c-4.html" class="active">C-4 回復性と耐性</a>
+    <a href="c-1.html">C-1 <span data-i18n="ja">セキュリティアーキテクチャの全体像</span><span data-i18n="en">セキュリティアーキテクチャの全体像</span><span data-i18n="es">セキュリティアーキテクチャの全体像</span></a><a href="c-2.html">C-2 <span data-i18n="ja">インフラを守るセキュリティ原則</span><span data-i18n="en">インフラを守るセキュリティ原則</span><span data-i18n="es">インフラを守るセキュリティ原則</span></a><a href="c-3.html">C-3 <span data-i18n="ja">データ保護の戦略と概念</span><span data-i18n="en">データ保護の戦略と概念</span><span data-i18n="es">データ保護の戦略と概念</span></a><a href="c-4.html" class="active">C-4 <span data-i18n="ja">回復性と耐性</span><span data-i18n="en">回復性と耐性</span><span data-i18n="es">回復性と耐性</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain C 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain C <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,245 +55,364 @@
       
 <header class="hero">
   <p class="eyebrow">Domain C · C-4</p>
-  <h1>回復性と耐性</h1>
-  <p>代替サイト・分散・バックアップ・電源</p>
+  <h1><span data-i18n="ja">回復性と耐性</span><span data-i18n="en">回復性と耐性</span><span data-i18n="es">回復性と耐性</span></h1>
+  <p data-i18n="ja">代替サイト・分散・バックアップ・電源</p>
+  <p data-i18n="en">代替サイト・分散・バックアップ・電源</p>
+  <p data-i18n="es">代替サイト・分散・バックアップ・電源</p>
   <div class="meta-row">
-    <span class="chip">用語 19</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 3.4</span>
+    <span class="chip"><span data-i18n="ja">用語 19</span><span data-i18n="en">19 terms</span><span data-i18n="es">19 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 3.4</span><span data-i18n="en">Official 3.4</span><span data-i18n="es">Oficial 3.4</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 19問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 19問</span><span data-i18n="en">Quiz (19)</span><span data-i18n="es">Cuestionario (19)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">代替サイト</h2>
-<article class="memo-card" id="c-4-hot-site" data-search="ホットサイト hot site 主要系と同等機能で即切替できる予備拠点 金融機関の遠隔dc 常時データ複製">
-  <h3>ホットサイト<span class="en">Hot site</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">代替サイト</span><span data-i18n="en">代替サイト</span><span data-i18n="es">代替サイト</span></h2>
+<article class="memo-card" id="c-4-hot-site" data-search="ホットサイト hot site  主要系と同等機能で即切替できる予備拠点 金融機関の遠隔dc 常時データ複製">
+  <h3>
+    <span data-i18n="ja">ホットサイト<span class="en">Hot site</span></span>
+    <span data-i18n="en">Hot site</span>
+    <span data-i18n="es">ホットサイト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">主要系と<span class="hl">同等機能</span>で即切替できる予備拠点</p>
+    <p data-i18n="ja" class="one-liner">主要系と<span class="hl">同等機能</span>で即切替できる予備拠点</p><p data-i18n="en" class="one-liner">主要系と<span class="hl">同等機能</span>で即切替できる予備拠点</p><p data-i18n="es" class="one-liner">主要系と<span class="hl">同等機能</span>で即切替できる予備拠点</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>金融機関の遠隔DC</li><li>常時データ複製</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>金融機関の遠隔DC</li><li>常時データ複製</li></ul>
+      <ul class="example-list" data-i18n="en"><li>金融機関の遠隔DC</li><li>常時データ複製</li></ul>
+      <ul class="example-list" data-i18n="es"><li>金融機関の遠隔DC</li><li>常時データ複製</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-cold-site" data-search="コールドサイト cold site 場所中心の予備拠点（稼働に時間がかかる） 倉庫・空きオフィス 機器搬入とリストア">
-  <h3>コールドサイト<span class="en">Cold site</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-4-cold-site" data-search="コールドサイト cold site  場所中心の予備拠点（稼働に時間がかかる） 倉庫・空きオフィス 機器搬入とリストア">
+  <h3>
+    <span data-i18n="ja">コールドサイト<span class="en">Cold site</span></span>
+    <span data-i18n="en">Cold site</span>
+    <span data-i18n="es">コールドサイト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">場所中心</span>の予備拠点（稼働に時間がかかる）</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">場所中心</span>の予備拠点（稼働に時間がかかる）</p><p data-i18n="en" class="one-liner"><span class="hl">場所中心</span>の予備拠点（稼働に時間がかかる）</p><p data-i18n="es" class="one-liner"><span class="hl">場所中心</span>の予備拠点（稼働に時間がかかる）</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>倉庫・空きオフィス</li><li>機器搬入とリストア</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>倉庫・空きオフィス</li><li>機器搬入とリストア</li></ul>
+      <ul class="example-list" data-i18n="en"><li>倉庫・空きオフィス</li><li>機器搬入とリストア</li></ul>
+      <ul class="example-list" data-i18n="es"><li>倉庫・空きオフィス</li><li>機器搬入とリストア</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-warm-site" data-search="ウォームサイト warm site ホットとコールドの中間の予備拠点 基本設備の事前配置 定期データ同期">
-  <h3>ウォームサイト<span class="en">Warm site</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-4-warm-site" data-search="ウォームサイト warm site  ホットとコールドの中間の予備拠点 基本設備の事前配置 定期データ同期">
+  <h3>
+    <span data-i18n="ja">ウォームサイト<span class="en">Warm site</span></span>
+    <span data-i18n="en">Warm site</span>
+    <span data-i18n="es">ウォームサイト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">ホットとコールドの<span class="hl">中間</span>の予備拠点</p>
+    <p data-i18n="ja" class="one-liner">ホットとコールドの<span class="hl">中間</span>の予備拠点</p><p data-i18n="en" class="one-liner">ホットとコールドの<span class="hl">中間</span>の予備拠点</p><p data-i18n="es" class="one-liner">ホットとコールドの<span class="hl">中間</span>の予備拠点</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>基本設備の事前配置</li><li>定期データ同期</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>基本設備の事前配置</li><li>定期データ同期</li></ul>
+      <ul class="example-list" data-i18n="en"><li>基本設備の事前配置</li><li>定期データ同期</li></ul>
+      <ul class="example-list" data-i18n="es"><li>基本設備の事前配置</li><li>定期データ同期</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">分散と継続</h2>
-<article class="memo-card" id="c-4-geographic-dispersion" data-search="物理的な距離（地理的分散） geographic dispersion 拠点を地理的に離し同時被災を避ける 遠隔バックアップdc 津波・広域停電対策">
-  <h3>物理的な距離（地理的分散）<span class="en">Geographic dispersion</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">分散と継続</span><span data-i18n="en">分散と継続</span><span data-i18n="es">分散と継続</span></h2>
+<article class="memo-card" id="c-4-geographic-dispersion" data-search="物理的な距離（地理的分散） geographic dispersion  拠点を地理的に離し同時被災を避ける 遠隔バックアップdc 津波・広域停電対策">
+  <h3>
+    <span data-i18n="ja">物理的な距離（地理的分散）<span class="en">Geographic dispersion</span></span>
+    <span data-i18n="en">Geographic dispersion</span>
+    <span data-i18n="es">物理的な距離（地理的分散）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">拠点を<span class="hl">地理的に離し</span>同時被災を避ける</p>
+    <p data-i18n="ja" class="one-liner">拠点を<span class="hl">地理的に離し</span>同時被災を避ける</p><p data-i18n="en" class="one-liner">拠点を<span class="hl">地理的に離し</span>同時被災を避ける</p><p data-i18n="es" class="one-liner">拠点を<span class="hl">地理的に離し</span>同時被災を避ける</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>遠隔バックアップDC</li><li>津波・広域停電対策</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="c-4-platform-diversity" data-search="プラットフォームの分散 platform diversity 拠点・環境・ベンダーを分散してspofを減らす 多地域dc配置 異ベンダー組合せ">
-  <h3>プラットフォームの分散<span class="en">Platform diversity</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">拠点・環境・ベンダーを<span class="hl">分散</span>してSPOFを減らす</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>多地域DC配置</li><li>異ベンダー組合せ</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="c-4-multi-cloud" data-search="マルチクラウド multi-cloud systems 複数cspを併用して可用性・drを高める aws＋azure リージョン横断バックアップ">
-  <h3>マルチクラウド<span class="en">Multi-cloud systems</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">複数CSP</span>を併用して可用性・DRを高める</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>AWS＋Azure</li><li>リージョン横断バックアップ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>遠隔バックアップDC</li><li>津波・広域停電対策</li></ul>
+      <ul class="example-list" data-i18n="en"><li>遠隔バックアップDC</li><li>津波・広域停電対策</li></ul>
+      <ul class="example-list" data-i18n="es"><li>遠隔バックアップDC</li><li>津波・広域停電対策</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-continuity-of-operations" data-search="運営の継続性 continuity of operations 障害時も事業を止めない枠組み（bcp） bcpとrto/rpo 安否確認・連絡手段">
-  <h3>運営の継続性<span class="en">Continuity of operations</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-4-platform-diversity" data-search="プラットフォームの分散 platform diversity  拠点・環境・ベンダーを分散してspofを減らす 多地域dc配置 異ベンダー組合せ">
+  <h3>
+    <span data-i18n="ja">プラットフォームの分散<span class="en">Platform diversity</span></span>
+    <span data-i18n="en">Platform diversity</span>
+    <span data-i18n="es">プラットフォームの分散</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">障害時も事業を<span class="hl">止めない</span>枠組み（BCP）</p>
+    <p data-i18n="ja" class="one-liner">拠点・環境・ベンダーを<span class="hl">分散</span>してSPOFを減らす</p><p data-i18n="en" class="one-liner">拠点・環境・ベンダーを<span class="hl">分散</span>してSPOFを減らす</p><p data-i18n="es" class="one-liner">拠点・環境・ベンダーを<span class="hl">分散</span>してSPOFを減らす</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>BCPとRTO/RPO</li><li>安否確認・連絡手段</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">キャパシティ</h2>
-<article class="memo-card" id="c-4-capacity-people" data-search="キャパシティプランニング（人員） capacity planning (people) 復旧に必要な人的リソースを事前確保 24/365運用チーム 応援・外部協力計画">
-  <h3>キャパシティプランニング（人員）<span class="en">Capacity planning (People)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">復旧に必要な<span class="hl">人的リソース</span>を事前確保</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>24/365運用チーム</li><li>応援・外部協力計画</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>多地域DC配置</li><li>異ベンダー組合せ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>多地域DC配置</li><li>異ベンダー組合せ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>多地域DC配置</li><li>異ベンダー組合せ</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-capacity-technology" data-search="キャパシティプランニング（技術） capacity planning (technology) 処理能力・容量を維持拡張する技術計画 オートスケール 可用性ゾーン">
-  <h3>キャパシティプランニング（技術）<span class="en">Capacity planning (Technology)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-4-multi-cloud" data-search="マルチクラウド multi-cloud systems  複数cspを併用して可用性・drを高める aws＋azure リージョン横断バックアップ">
+  <h3>
+    <span data-i18n="ja">マルチクラウド<span class="en">Multi-cloud systems</span></span>
+    <span data-i18n="en">Multi-cloud systems</span>
+    <span data-i18n="es">マルチクラウド</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">処理能力・容量を<span class="hl">維持拡張</span>する技術計画</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">複数CSP</span>を併用して可用性・DRを高める</p><p data-i18n="en" class="one-liner"><span class="hl">複数CSP</span>を併用して可用性・DRを高める</p><p data-i18n="es" class="one-liner"><span class="hl">複数CSP</span>を併用して可用性・DRを高める</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>オートスケール</li><li>可用性ゾーン</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>AWS＋Azure</li><li>リージョン横断バックアップ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>AWS＋Azure</li><li>リージョン横断バックアップ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>AWS＋Azure</li><li>リージョン横断バックアップ</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-capacity-infrastructure" data-search="キャパシティプランニング（インフラ） capacity planning (infrastructure) 電力・施設などインフラ資源を確保する計画 非常用電源・水・通信 空調・ラック・回線">
-  <h3>キャパシティプランニング（インフラ）<span class="en">Capacity planning (Infrastructure)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-4-continuity-of-operations" data-search="運営の継続性 continuity of operations  障害時も事業を止めない枠組み（bcp） bcpとrto/rpo 安否確認・連絡手段">
+  <h3>
+    <span data-i18n="ja">運営の継続性<span class="en">Continuity of operations</span></span>
+    <span data-i18n="en">Continuity of operations</span>
+    <span data-i18n="es">運営の継続性</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">電力・施設など<span class="hl">インフラ資源</span>を確保する計画</p>
+    <p data-i18n="ja" class="one-liner">障害時も事業を<span class="hl">止めない</span>枠組み（BCP）</p><p data-i18n="en" class="one-liner">障害時も事業を<span class="hl">止めない</span>枠組み（BCP）</p><p data-i18n="es" class="one-liner">障害時も事業を<span class="hl">止めない</span>枠組み（BCP）</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>非常用電源・水・通信</li><li>空調・ラック・回線</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>BCPとRTO/RPO</li><li>安否確認・連絡手段</li></ul>
+      <ul class="example-list" data-i18n="en"><li>BCPとRTO/RPO</li><li>安否確認・連絡手段</li></ul>
+      <ul class="example-list" data-i18n="es"><li>BCPとRTO/RPO</li><li>安否確認・連絡手段</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">バックアップ方針</h2>
-<article class="memo-card" id="c-4-onsite-offsite" data-search="オンサイトとオフサイト onsite / offsite バックアップを同じ場所か別場所かに置く 同ビル内ストレージ クラウドへの転送">
-  <h3>オンサイトとオフサイト<span class="en">Onsite / Offsite</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">キャパシティ</span><span data-i18n="en">キャパシティ</span><span data-i18n="es">キャパシティ</span></h2>
+<article class="memo-card" id="c-4-capacity-people" data-search="キャパシティプランニング（人員） capacity planning (people)  復旧に必要な人的リソースを事前確保 24/365運用チーム 応援・外部協力計画">
+  <h3>
+    <span data-i18n="ja">キャパシティプランニング（人員）<span class="en">Capacity planning (People)</span></span>
+    <span data-i18n="en">Capacity planning (People)</span>
+    <span data-i18n="es">キャパシティプランニング（人員）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">バックアップを<span class="hl">同じ場所か別場所か</span>に置く</p>
+    <p data-i18n="ja" class="one-liner">復旧に必要な<span class="hl">人的リソース</span>を事前確保</p><p data-i18n="en" class="one-liner">復旧に必要な<span class="hl">人的リソース</span>を事前確保</p><p data-i18n="es" class="one-liner">復旧に必要な<span class="hl">人的リソース</span>を事前確保</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>同ビル内ストレージ</li><li>クラウドへの転送</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="c-4-frequency" data-search="頻度 frequency 重要度に応じてバックアップ間隔を決める 数分間隔の取得 日次＋ログバックアップ">
-  <h3>頻度<span class="en">Frequency</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">重要度に応じてバックアップ<span class="hl">間隔</span>を決める</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>数分間隔の取得</li><li>日次＋ログバックアップ</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="c-4-encryption" data-search="暗号化（バックアップ） encryption バックアップを暗号化して読めなくする 保管データの暗号化 クラウドバックアップ保護">
-  <h3>暗号化（バックアップ）<span class="en">Encryption</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">バックアップを暗号化して<span class="hl">読めなくする</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>保管データの暗号化</li><li>クラウドバックアップ保護</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">バックアップ技術</h2>
-<article class="memo-card" id="c-4-snapshot" data-search="スナップショット snapshots ある時点の状態を記録し差分で軽く残す 仮想マシンのスナップショット 迅速なリストア">
-  <h3>スナップショット<span class="en">Snapshots</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">ある時点の状態を記録し<span class="hl">差分で軽く</span>残す</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>仮想マシンのスナップショット</li><li>迅速なリストア</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>24/365運用チーム</li><li>応援・外部協力計画</li></ul>
+      <ul class="example-list" data-i18n="en"><li>24/365運用チーム</li><li>応援・外部協力計画</li></ul>
+      <ul class="example-list" data-i18n="es"><li>24/365運用チーム</li><li>応援・外部協力計画</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-recovery" data-search="リカバリ recovery バックアップからデータ・システムを復元する 個別ファイル復元 全体リストアと訓練">
-  <h3>リカバリ<span class="en">Recovery</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-4-capacity-technology" data-search="キャパシティプランニング（技術） capacity planning (technology)  処理能力・容量を維持拡張する技術計画 オートスケール 可用性ゾーン">
+  <h3>
+    <span data-i18n="ja">キャパシティプランニング（技術）<span class="en">Capacity planning (Technology)</span></span>
+    <span data-i18n="en">Capacity planning (Technology)</span>
+    <span data-i18n="es">キャパシティプランニング（技術）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">バックアップからデータ・システムを<span class="hl">復元</span>する</p>
+    <p data-i18n="ja" class="one-liner">処理能力・容量を<span class="hl">維持拡張</span>する技術計画</p><p data-i18n="en" class="one-liner">処理能力・容量を<span class="hl">維持拡張</span>する技術計画</p><p data-i18n="es" class="one-liner">処理能力・容量を<span class="hl">維持拡張</span>する技術計画</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>個別ファイル復元</li><li>全体リストアと訓練</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>オートスケール</li><li>可用性ゾーン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>オートスケール</li><li>可用性ゾーン</li></ul>
+      <ul class="example-list" data-i18n="es"><li>オートスケール</li><li>可用性ゾーン</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-replication" data-search="複製 replication データを別場所へコピー／同期する クラウドへのレプリケーション 同期間隔と保持期間">
-  <h3>複製<span class="en">Replication</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-4-capacity-infrastructure" data-search="キャパシティプランニング（インフラ） capacity planning (infrastructure)  電力・施設などインフラ資源を確保する計画 非常用電源・水・通信 空調・ラック・回線">
+  <h3>
+    <span data-i18n="ja">キャパシティプランニング（インフラ）<span class="en">Capacity planning (Infrastructure)</span></span>
+    <span data-i18n="en">Capacity planning (Infrastructure)</span>
+    <span data-i18n="es">キャパシティプランニング（インフラ）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">データを別場所へ<span class="hl">コピー／同期</span>する</p>
+    <p data-i18n="ja" class="one-liner">電力・施設など<span class="hl">インフラ資源</span>を確保する計画</p><p data-i18n="en" class="one-liner">電力・施設など<span class="hl">インフラ資源</span>を確保する計画</p><p data-i18n="es" class="one-liner">電力・施設など<span class="hl">インフラ資源</span>を確保する計画</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>クラウドへのレプリケーション</li><li>同期間隔と保持期間</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>非常用電源・水・通信</li><li>空調・ラック・回線</li></ul>
+      <ul class="example-list" data-i18n="en"><li>非常用電源・水・通信</li><li>空調・ラック・回線</li></ul>
+      <ul class="example-list" data-i18n="es"><li>非常用電源・水・通信</li><li>空調・ラック・回線</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">バックアップ方針</span><span data-i18n="en">バックアップ方針</span><span data-i18n="es">バックアップ方針</span></h2>
+<article class="memo-card" id="c-4-onsite-offsite" data-search="オンサイトとオフサイト onsite / offsite  バックアップを同じ場所か別場所かに置く 同ビル内ストレージ クラウドへの転送">
+  <h3>
+    <span data-i18n="ja">オンサイトとオフサイト<span class="en">Onsite / Offsite</span></span>
+    <span data-i18n="en">Onsite / Offsite</span>
+    <span data-i18n="es">オンサイトとオフサイト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">バックアップを<span class="hl">同じ場所か別場所か</span>に置く</p><p data-i18n="en" class="one-liner">バックアップを<span class="hl">同じ場所か別場所か</span>に置く</p><p data-i18n="es" class="one-liner">バックアップを<span class="hl">同じ場所か別場所か</span>に置く</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>同ビル内ストレージ</li><li>クラウドへの転送</li></ul>
+      <ul class="example-list" data-i18n="en"><li>同ビル内ストレージ</li><li>クラウドへの転送</li></ul>
+      <ul class="example-list" data-i18n="es"><li>同ビル内ストレージ</li><li>クラウドへの転送</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-journaling" data-search="ジャーナリング journaling 変更履歴を連続記録し任意時点へ戻す ストレージのジャーナル rpoの極小化">
-  <h3>ジャーナリング<span class="en">Journaling</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-4-frequency" data-search="頻度 frequency  重要度に応じてバックアップ間隔を決める 数分間隔の取得 日次＋ログバックアップ">
+  <h3>
+    <span data-i18n="ja">頻度<span class="en">Frequency</span></span>
+    <span data-i18n="en">Frequency</span>
+    <span data-i18n="es">頻度</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">変更履歴を連続記録し<span class="hl">任意時点</span>へ戻す</p>
+    <p data-i18n="ja" class="one-liner">重要度に応じてバックアップ<span class="hl">間隔</span>を決める</p><p data-i18n="en" class="one-liner">重要度に応じてバックアップ<span class="hl">間隔</span>を決める</p><p data-i18n="es" class="one-liner">重要度に応じてバックアップ<span class="hl">間隔</span>を決める</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ストレージのジャーナル</li><li>RPOの極小化</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">電源</h2>
-<article class="memo-card" id="c-4-generator" data-search="発電機 generators 停電時に長時間電力を供給する非常用電源 ディーゼル発電機 ガスタービン発電機">
-  <h3>発電機<span class="en">Generators</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">停電時に<span class="hl">長時間</span>電力を供給する非常用電源</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ディーゼル発電機</li><li>ガスタービン発電機</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>数分間隔の取得</li><li>日次＋ログバックアップ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>数分間隔の取得</li><li>日次＋ログバックアップ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>数分間隔の取得</li><li>日次＋ログバックアップ</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-4-ups" data-search="ups（無停電電源装置） uninterruptible power supply (ups) 停電直後の短時間電力をバッテリーで維持 発電機切替までの橋渡し 安全なシャットダウン">
-  <h3>UPS（無停電電源装置）<span class="en">Uninterruptible power supply (UPS)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-4-encryption" data-search="暗号化（バックアップ） encryption  バックアップを暗号化して読めなくする 保管データの暗号化 クラウドバックアップ保護">
+  <h3>
+    <span data-i18n="ja">暗号化（バックアップ）<span class="en">Encryption</span></span>
+    <span data-i18n="en">Encryption</span>
+    <span data-i18n="es">暗号化（バックアップ）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">停電直後の<span class="hl">短時間</span>電力をバッテリーで維持</p>
+    <p data-i18n="ja" class="one-liner">バックアップを暗号化して<span class="hl">読めなくする</span></p><p data-i18n="en" class="one-liner">バックアップを暗号化して<span class="hl">読めなくする</span></p><p data-i18n="es" class="one-liner">バックアップを暗号化して<span class="hl">読めなくする</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>発電機切替までの橋渡し</li><li>安全なシャットダウン</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>保管データの暗号化</li><li>クラウドバックアップ保護</li></ul>
+      <ul class="example-list" data-i18n="en"><li>保管データの暗号化</li><li>クラウドバックアップ保護</li></ul>
+      <ul class="example-list" data-i18n="es"><li>保管データの暗号化</li><li>クラウドバックアップ保護</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">バックアップ技術</span><span data-i18n="en">バックアップ技術</span><span data-i18n="es">バックアップ技術</span></h2>
+<article class="memo-card" id="c-4-snapshot" data-search="スナップショット snapshots  ある時点の状態を記録し差分で軽く残す 仮想マシンのスナップショット 迅速なリストア">
+  <h3>
+    <span data-i18n="ja">スナップショット<span class="en">Snapshots</span></span>
+    <span data-i18n="en">Snapshots</span>
+    <span data-i18n="es">スナップショット</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">ある時点の状態を記録し<span class="hl">差分で軽く</span>残す</p><p data-i18n="en" class="one-liner">ある時点の状態を記録し<span class="hl">差分で軽く</span>残す</p><p data-i18n="es" class="one-liner">ある時点の状態を記録し<span class="hl">差分で軽く</span>残す</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>仮想マシンのスナップショット</li><li>迅速なリストア</li></ul>
+      <ul class="example-list" data-i18n="en"><li>仮想マシンのスナップショット</li><li>迅速なリストア</li></ul>
+      <ul class="example-list" data-i18n="es"><li>仮想マシンのスナップショット</li><li>迅速なリストア</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-4-recovery" data-search="リカバリ recovery  バックアップからデータ・システムを復元する 個別ファイル復元 全体リストアと訓練">
+  <h3>
+    <span data-i18n="ja">リカバリ<span class="en">Recovery</span></span>
+    <span data-i18n="en">Recovery</span>
+    <span data-i18n="es">リカバリ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">バックアップからデータ・システムを<span class="hl">復元</span>する</p><p data-i18n="en" class="one-liner">バックアップからデータ・システムを<span class="hl">復元</span>する</p><p data-i18n="es" class="one-liner">バックアップからデータ・システムを<span class="hl">復元</span>する</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>個別ファイル復元</li><li>全体リストアと訓練</li></ul>
+      <ul class="example-list" data-i18n="en"><li>個別ファイル復元</li><li>全体リストアと訓練</li></ul>
+      <ul class="example-list" data-i18n="es"><li>個別ファイル復元</li><li>全体リストアと訓練</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-4-replication" data-search="複製 replication  データを別場所へコピー／同期する クラウドへのレプリケーション 同期間隔と保持期間">
+  <h3>
+    <span data-i18n="ja">複製<span class="en">Replication</span></span>
+    <span data-i18n="en">Replication</span>
+    <span data-i18n="es">複製</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">データを別場所へ<span class="hl">コピー／同期</span>する</p><p data-i18n="en" class="one-liner">データを別場所へ<span class="hl">コピー／同期</span>する</p><p data-i18n="es" class="one-liner">データを別場所へ<span class="hl">コピー／同期</span>する</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>クラウドへのレプリケーション</li><li>同期間隔と保持期間</li></ul>
+      <ul class="example-list" data-i18n="en"><li>クラウドへのレプリケーション</li><li>同期間隔と保持期間</li></ul>
+      <ul class="example-list" data-i18n="es"><li>クラウドへのレプリケーション</li><li>同期間隔と保持期間</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-4-journaling" data-search="ジャーナリング journaling  変更履歴を連続記録し任意時点へ戻す ストレージのジャーナル rpoの極小化">
+  <h3>
+    <span data-i18n="ja">ジャーナリング<span class="en">Journaling</span></span>
+    <span data-i18n="en">Journaling</span>
+    <span data-i18n="es">ジャーナリング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">変更履歴を連続記録し<span class="hl">任意時点</span>へ戻す</p><p data-i18n="en" class="one-liner">変更履歴を連続記録し<span class="hl">任意時点</span>へ戻す</p><p data-i18n="es" class="one-liner">変更履歴を連続記録し<span class="hl">任意時点</span>へ戻す</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ストレージのジャーナル</li><li>RPOの極小化</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ストレージのジャーナル</li><li>RPOの極小化</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ストレージのジャーナル</li><li>RPOの極小化</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">電源</span><span data-i18n="en">電源</span><span data-i18n="es">電源</span></h2>
+<article class="memo-card" id="c-4-generator" data-search="発電機 generators  停電時に長時間電力を供給する非常用電源 ディーゼル発電機 ガスタービン発電機">
+  <h3>
+    <span data-i18n="ja">発電機<span class="en">Generators</span></span>
+    <span data-i18n="en">Generators</span>
+    <span data-i18n="es">発電機</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">停電時に<span class="hl">長時間</span>電力を供給する非常用電源</p><p data-i18n="en" class="one-liner">停電時に<span class="hl">長時間</span>電力を供給する非常用電源</p><p data-i18n="es" class="one-liner">停電時に<span class="hl">長時間</span>電力を供給する非常用電源</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ディーゼル発電機</li><li>ガスタービン発電機</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ディーゼル発電機</li><li>ガスタービン発電機</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ディーゼル発電機</li><li>ガスタービン発電機</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-4-ups" data-search="ups（無停電電源装置） uninterruptible power supply (ups)  停電直後の短時間電力をバッテリーで維持 発電機切替までの橋渡し 安全なシャットダウン">
+  <h3>
+    <span data-i18n="ja">UPS（無停電電源装置）<span class="en">Uninterruptible power supply (UPS)</span></span>
+    <span data-i18n="en">Uninterruptible power supply (UPS)</span>
+    <span data-i18n="es">UPS（無停電電源装置）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">停電直後の<span class="hl">短時間</span>電力をバッテリーで維持</p><p data-i18n="en" class="one-liner">停電直後の<span class="hl">短時間</span>電力をバッテリーで維持</p><p data-i18n="es" class="one-liner">停電直後の<span class="hl">短時間</span>電力をバッテリーで維持</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>発電機切替までの橋渡し</li><li>安全なシャットダウン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>発電機切替までの橋渡し</li><li>安全なシャットダウン</li></ul>
+      <ul class="example-list" data-i18n="es"><li>発電機切替までの橋渡し</li><li>安全なシャットダウン</li></ul>
     </div>
   </div>
 </article>
@@ -295,19 +420,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（19問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（19問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (19 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (19 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">[{"term": "c-4-hot-site", "stem": "金融機関が、メインDC停止時にも直ちに同等のサーバー・回線・複製データへ切り替えて業務を継続できるよう、遠隔地に常時稼働相当の予備拠点を用意した。これはどれか。", "choices": ["コールドサイト", "ウォームサイト", "ホットサイト", "オンサイトバックアップのみ"], "answer": 2, "explain": "主要系と同等機能を常備し即切替できるのがホットサイト。コストは高いが復旧は最短に近い。"}, {"term": "c-4-cold-site", "stem": "中小企業がコストを抑えるため、平時は機器を本格稼働させず、被災後にサーバーを搬入してバックアップからリストアする場所だけを確保した。これはどれか。", "choices": ["ホットサイト", "コールドサイト", "マルチクラウド", "UPS"], "answer": 1, "explain": "場所・スペース中心で稼働に時間がかかるのがコールドサイト。ランニングコストは低い。"}, {"term": "c-4-warm-site", "stem": "製造業が、基本設備と定期同期データを別拠点に用意し、ホットほど即時ではないがコールドより早く段階的に再開できる拠点を確保した。これはどれか。", "choices": ["ウォームサイト", "コールドサイト", "発電機", "ジャーナリング"], "answer": 0, "explain": "ホットとコールドの中間で、基本設備と定期同期により比較的短時間で復旧するのがウォームサイト。"}, {"term": "c-4-geographic-dispersion", "stem": "津波や広域停電で両方の拠点が同時に使えなくなるのを避けるため、メインDCとバックアップDCを十分離れた場所に置いた。主にどの考え方か。", "choices": ["スナップショット", "キャパシティプランニング（人員）", "物理的な距離（地理的分散）", "バックアップの暗号化"], "answer": 2, "explain": "同一災害による同時被災を避けるため拠点を地理的に離すのが物理的な距離／Geographic dispersion。"}, {"term": "c-4-platform-diversity", "stem": "単一ベンダーや単一拠点の障害で全体が止まらないよう、サーバーやストレージを複数拠点・異ベンダー環境に分けて配置した。これはどれか。", "choices": ["プラットフォームの分散", "UPS", "コールドサイト", "頻度の見直しのみ"], "answer": 0, "explain": "拠点・環境・ベンダーを分散し単一障害点を減らすのがプラットフォームの分散（Platform diversity）。"}, {"term": "c-4-multi-cloud", "stem": "EC事業者がAWSとAzureを併用し、一方のリージョン障害時も他方のクラウド上のバックアップでサービス継続できるようにした。これはどれか。", "choices": ["ホットサイトのみ", "マルチクラウド", "オンサイトバックアップ", "負荷試験なしの単一クラウド固定"], "answer": 1, "explain": "複数のクラウドサービスプロバイダーを併用するのがマルチクラウド。可用性・DR・コスト最適化が狙い。"}, {"term": "c-4-continuity-of-operations", "stem": "地震でDCが被災しても重要業務を止めないよう、BCPを策定しRTO/RPOや安否確認・連絡手段をあらかじめ決めておいた。主にどの概念か。", "choices": ["スナップショット", "運営の継続性", "発電機", "プラットフォームの分散"], "answer": 1, "explain": "障害時も事業を継続するための枠組みが運営の継続性（Continuity of operations）。BCPや連絡体制が含まれる。"}, {"term": "c-4-capacity-people", "stem": "大規模障害に備え、専門スキルを持つエンジニアのシフト体制と他部門からの応援・外部ベンダー協力を事前に計画した。これはどのキャパシティ計画か。", "choices": ["キャパシティプランニング（技術）", "キャパシティプランニング（インフラ）", "キャパシティプランニング（人員）", "バックアップ頻度の計画のみ"], "answer": 2, "explain": "復旧・継続に必要な人的リソースの事前確保が人員のキャパシティプランニング。"}, {"term": "c-4-capacity-technology", "stem": "ピーク需要を予測し、障害時にオートスケールで処理能力を足せ、可用性ゾーンで一部DC停止にも耐えるよう設計した。これはどの計画か。", "choices": ["キャパシティプランニング（技術）", "キャパシティプランニング（人員）", "コールドサイト選定", "UPSの電池交換周期のみ"], "answer": 0, "explain": "システムの処理能力・容量を維持・拡張する計画が技術のキャパシティプランニング。"}, {"term": "c-4-capacity-infrastructure", "stem": "復旧拠点で業務を続けるため、電力・空調・ラック・回線に加え、非常用発電機や水・衛星電話などライフライン途絶への備えを計画した。これはどれか。", "choices": ["ジャーナリング", "キャパシティプランニング（インフラ）", "マルチクラウド", "スナップショット"], "answer": 1, "explain": "施設・電力・ネットワークなどインフラ資源の確保・配分がインフラのキャパシティプランニング。"}, {"term": "c-4-onsite-offsite", "stem": "短時間復旧用に同一ビルのサーバールームへバックアップし、同時にクラウド上の別拠点にも転送して保管する運用にした。区別している概念はどれか。", "choices": ["オンサイトとオフサイト", "ホットサイトとウォームサイトのみ", "負荷分散とクラスタリング", "机上演習とシミュレーション"], "answer": 0, "explain": "同じ場所（オンサイト）か別場所（オフサイト）かがバックアップ保管場所の基本区分。"}, {"term": "c-4-frequency", "stem": "注文データが多いECサイトが、データ損失を抑えるため数分〜数十分間隔でバックアップし、日次バックアップに加えログも取得している。主に何を決めているか。", "choices": ["暗号化アルゴリズムだけ", "バックアップの頻度", "発電機の燃料種だけ", "プラットフォームのベンダー固定"], "answer": 1, "explain": "重要度や変更頻度に応じてバックアップ間隔を決めるのが頻度（Frequency）。RPOに直結する。"}, {"term": "c-4-encryption", "stem": "クラウドに送ったバックアップ媒体が万一持ち出されても内容を読まれないよう、保存時に暗号化する方針にした。これはどれか。", "choices": ["リカバリ訓練", "地理的分散のみ", "バックアップの暗号化", "ウォームサイト"], "answer": 2, "explain": "バックアップデータを暗号化して不正アクセスから守る。オフサイト／クラウド保管でも重要。"}, {"term": "c-4-snapshot", "stem": "仮想マシンの時点状態を記録し、変更点を差分保存することでバックアップ負荷を抑え、迅速に元の状態へ戻せるようにした。これはどれか。", "choices": ["スナップショット", "発電機", "コールドサイト", "運営の継続性"], "answer": 0, "explain": "ある時点の状態記録と差分保存・迅速リストアがスナップショットの特徴。"}, {"term": "c-4-recovery", "stem": "誤削除ファイルは個別に戻し、サーバー全停止時はシステム全体をリストアする手順を文書化し定期訓練している。この活動はどれか。", "choices": ["マルチクラウド契約交渉", "リカバリ", "プラットフォームの分散のみ", "物理的な距離の測定のみ"], "answer": 1, "explain": "バックアップからデータやシステムを復元するのがリカバリ。手順確立と訓練が重要。"}, {"term": "c-4-replication", "stem": "オンプレのバックアップをクラウドストレージへ同期コピーし、同期間隔と保持期間も設定した。これはどれか。", "choices": ["複製（レプリケーション）", "机上演習", "UPS", "キャパシティプランニング（人員）"], "answer": 0, "explain": "データを別場所へコピー／同期するのが複製。間隔と保持期間の設定もポイント。"}, {"term": "c-4-journaling", "stem": "ストレージが変更を連続ログとして記録し、障害時にジャーナルを遡ってほぼ直前の状態まで戻せるようにした。これはどれか。", "choices": ["ホットサイト", "ジャーナリング", "オンサイト保管のみ", "キャパシティプランニング（インフラ）"], "answer": 1, "explain": "変更履歴の連続記録により任意時点へ復元し、RPOを極小化できるのがジャーナリング。"}, {"term": "c-4-generator", "stem": "データセンターが長時間の停電に備え、ディーゼルの非常用発電装置で電力を供給できるようにした。これはどれか。", "choices": ["UPSのみ", "スナップショット", "発電機", "バックアップ頻度"], "answer": 2, "explain": "停電時に長時間電力を供給する非常用発電装置が発電機。UPSの後段として併用されることが多い。"}, {"term": "c-4-ups", "stem": "停電発生直後、バッテリーでサーバー電源を維持し、安全なシャットダウンや非常用発電機への切替までの時間を稼ぐ装置を導入した。これはどれか。", "choices": ["UPS（無停電電源装置）", "コールドサイト", "マルチクラウド", "プラットフォームの分散"], "answer": 0, "explain": "停電や電圧変化時に短時間電力を維持し、発電機切替等までの橋渡しをするのがUPS。"}]</script>
 </section>
 
-<nav class="pager"><a href="c-3.html"><span>前の章</span>C-3 データ保護の戦略と概念</a><a class="next" href="index.html"><span>戻る</span>Domain C ハブ</a></nav>
+<nav class="pager"><a href="c-3.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>C-3 <span data-i18n="ja">データ保護の戦略と概念</span><span data-i18n="en">データ保護の戦略と概念</span><span data-i18n="es">データ保護の戦略と概念</span></span></a><a class="next" href="index.html"><span><span data-i18n="ja">戻る</span><span data-i18n="en">Back</span><span data-i18n="es">Volver</span></span><span>Domain C <span data-i18n="ja">ハブ</span><span data-i18n="en">hub</span><span data-i18n="es">hub</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>B-2 脅威ベクトルと攻撃対象領域 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain B</span></a>
-  <a class="nav-back" href="index.html">← Domain B ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain B ハブ</span><span data-i18n="en">← Domain B hub</span><span data-i18n="es">← Hub del Domain B</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain B</h2>
-    <a href="b-1.html">B-1 脅威アクターと動機</a><a href="b-2.html" class="active">B-2 脅威ベクトルと攻撃対象領域</a><a href="b-3.html">B-3 脆弱性の種類</a><a href="b-4.html">B-4 悪意のある活動の兆候</a><a href="b-5.html">B-5 緩和策</a>
+    <a href="b-1.html">B-1 <span data-i18n="ja">脅威アクターと動機</span><span data-i18n="en">脅威アクターと動機</span><span data-i18n="es">脅威アクターと動機</span></a><a href="b-2.html" class="active">B-2 <span data-i18n="ja">脅威ベクトルと攻撃対象領域</span><span data-i18n="en">脅威ベクトルと攻撃対象領域</span><span data-i18n="es">脅威ベクトルと攻撃対象領域</span></a><a href="b-3.html">B-3 <span data-i18n="ja">脆弱性の種類</span><span data-i18n="en">脆弱性の種類</span><span data-i18n="es">脆弱性の種類</span></a><a href="b-4.html">B-4 <span data-i18n="ja">悪意のある活動の兆候</span><span data-i18n="en">悪意のある活動の兆候</span><span data-i18n="es">悪意のある活動の兆候</span></a><a href="b-5.html">B-5 <span data-i18n="ja">緩和策</span><span data-i18n="en">緩和策</span><span data-i18n="es">緩和策</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain B 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain B <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,317 +55,472 @@
       
 <header class="hero">
   <p class="eyebrow">Domain B · B-2</p>
-  <h1>脅威ベクトルと攻撃対象領域</h1>
-  <p>どこから・どうやって攻撃が入るか</p>
+  <h1><span data-i18n="ja">脅威ベクトルと攻撃対象領域</span><span data-i18n="en">脅威ベクトルと攻撃対象領域</span><span data-i18n="es">脅威ベクトルと攻撃対象領域</span></h1>
+  <p data-i18n="ja">どこから・どうやって攻撃が入るか</p>
+  <p data-i18n="en">どこから・どうやって攻撃が入るか</p>
+  <p data-i18n="es">どこから・どうやって攻撃が入るか</p>
   <div class="meta-row">
-    <span class="chip">用語 25</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 2.2</span>
+    <span class="chip"><span data-i18n="ja">用語 25</span><span data-i18n="en">25 terms</span><span data-i18n="es">25 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 2.2</span><span data-i18n="en">Official 2.2</span><span data-i18n="es">Oficial 2.2</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 30問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 30問</span><span data-i18n="en">Quiz (30)</span><span data-i18n="es">Cuestionario (30)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">メッセージ系（メッセージを媒体とする経路）</h2>
-<article class="memo-card" id="b-2-email" data-search="eメール email メールを媒介に侵入する経路 標的型メール攻撃 悪性添付ファイル ビジネスメール詐欺">
-  <h3>Eメール<span class="en">Email</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">メッセージ系（メッセージを媒体とする経路）</span><span data-i18n="en">メッセージ系（メッセージを媒体とする経路）</span><span data-i18n="es">メッセージ系（メッセージを媒体とする経路）</span></h2>
+<article class="memo-card" id="b-2-email" data-search="eメール email  メールを媒介に侵入する経路 標的型メール攻撃 悪性添付ファイル ビジネスメール詐欺">
+  <h3>
+    <span data-i18n="ja">Eメール<span class="en">Email</span></span>
+    <span data-i18n="en">Email</span>
+    <span data-i18n="es">Eメール</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">メール</span>を媒介に侵入する経路</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">メール</span>を媒介に侵入する経路</p><p data-i18n="en" class="one-liner"><span class="hl">メール</span>を媒介に侵入する経路</p><p data-i18n="es" class="one-liner"><span class="hl">メール</span>を媒介に侵入する経路</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>標的型メール攻撃</li><li>悪性添付ファイル</li><li>ビジネスメール詐欺</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>標的型メール攻撃</li><li>悪性添付ファイル</li><li>ビジネスメール詐欺</li></ul>
+      <ul class="example-list" data-i18n="en"><li>標的型メール攻撃</li><li>悪性添付ファイル</li><li>ビジネスメール詐欺</li></ul>
+      <ul class="example-list" data-i18n="es"><li>標的型メール攻撃</li><li>悪性添付ファイル</li><li>ビジネスメール詐欺</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-sms" data-search="sms short message service (sms) ショートメッセージを使う経路 偽のログイン確認sms otp詐取のurl">
-  <h3>SMS<span class="en">Short Message Service (SMS)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-sms" data-search="sms short message service (sms)  ショートメッセージを使う経路 偽のログイン確認sms otp詐取のurl">
+  <h3>
+    <span data-i18n="ja">SMS<span class="en">Short Message Service (SMS)</span></span>
+    <span data-i18n="en">Short Message Service (SMS)</span>
+    <span data-i18n="es">SMS</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">ショートメッセージ</span>を使う経路</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">ショートメッセージ</span>を使う経路</p><p data-i18n="en" class="one-liner"><span class="hl">ショートメッセージ</span>を使う経路</p><p data-i18n="es" class="one-liner"><span class="hl">ショートメッセージ</span>を使う経路</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>偽のログイン確認SMS</li><li>OTP詐取のURL</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>偽のログイン確認SMS</li><li>OTP詐取のURL</li></ul>
+      <ul class="example-list" data-i18n="en"><li>偽のログイン確認SMS</li><li>OTP詐取のURL</li></ul>
+      <ul class="example-list" data-i18n="es"><li>偽のログイン確認SMS</li><li>OTP詐取のURL</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-im" data-search="インスタントメッセージング instant messaging (im) メッセンジャーアプリを悪用する経路 友人を装うマルウェア 偽の公式アカウント 投資詐欺メッセージ">
-  <h3>インスタントメッセージング<span class="en">Instant messaging (IM)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-im" data-search="インスタントメッセージング instant messaging (im)  メッセンジャーアプリを悪用する経路 友人を装うマルウェア 偽の公式アカウント 投資詐欺メッセージ">
+  <h3>
+    <span data-i18n="ja">インスタントメッセージング<span class="en">Instant messaging (IM)</span></span>
+    <span data-i18n="en">Instant messaging (IM)</span>
+    <span data-i18n="es">インスタントメッセージング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">メッセンジャー</span>アプリを悪用する経路</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">メッセンジャー</span>アプリを悪用する経路</p><p data-i18n="en" class="one-liner"><span class="hl">メッセンジャー</span>アプリを悪用する経路</p><p data-i18n="es" class="one-liner"><span class="hl">メッセンジャー</span>アプリを悪用する経路</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>友人を装うマルウェア</li><li>偽の公式アカウント</li><li>投資詐欺メッセージ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>友人を装うマルウェア</li><li>偽の公式アカウント</li><li>投資詐欺メッセージ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>友人を装うマルウェア</li><li>偽の公式アカウント</li><li>投資詐欺メッセージ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>友人を装うマルウェア</li><li>偽の公式アカウント</li><li>投資詐欺メッセージ</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">ファイル・媒体系（コンテンツや機器を運び役にする経路）</h2>
-<article class="memo-card" id="b-2-image" data-search="画像 image-based 画像ファイルにマルウェアを潜ませる ステガノグラフィ マルウェア入りミーム">
-  <h3>画像<span class="en">Image-based</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">ファイル・媒体系（コンテンツや機器を運び役にする経路）</span><span data-i18n="en">ファイル・媒体系（コンテンツや機器を運び役にする経路）</span><span data-i18n="es">ファイル・媒体系（コンテンツや機器を運び役にする経路）</span></h2>
+<article class="memo-card" id="b-2-image" data-search="画像 image-based  画像ファイルにマルウェアを潜ませる ステガノグラフィ マルウェア入りミーム">
+  <h3>
+    <span data-i18n="ja">画像<span class="en">Image-based</span></span>
+    <span data-i18n="en">Image-based</span>
+    <span data-i18n="es">画像</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">画像ファイル</span>にマルウェアを潜ませる</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">画像ファイル</span>にマルウェアを潜ませる</p><p data-i18n="en" class="one-liner"><span class="hl">画像ファイル</span>にマルウェアを潜ませる</p><p data-i18n="es" class="one-liner"><span class="hl">画像ファイル</span>にマルウェアを潜ませる</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ステガノグラフィ</li><li>マルウェア入りミーム</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="b-2-file" data-search="ファイル file-based 悪意のあるファイルを開かせる経路 偽装pdf・word クラウド共有の不正ファイル">
-  <h3>ファイル<span class="en">File-based</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">悪意のあるファイル</span>を開かせる経路</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>偽装PDF・Word</li><li>クラウド共有の不正ファイル</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="b-2-voice-call" data-search="ボイスコール voice call 音声通話で情報や金銭を狙う経路 銀行を名乗る電話 公的機関を装う電話">
-  <h3>ボイスコール<span class="en">Voice call</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">音声通話</span>で情報や金銭を狙う経路</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>銀行を名乗る電話</li><li>公的機関を装う電話</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ステガノグラフィ</li><li>マルウェア入りミーム</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ステガノグラフィ</li><li>マルウェア入りミーム</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ステガノグラフィ</li><li>マルウェア入りミーム</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-removable-device" data-search="リムーバブルデバイス removable device usbメモリなど物理媒体を使う経路 駐車場に置かれたusb 業務用を装うusb">
-  <h3>リムーバブルデバイス<span class="en">Removable device</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-file" data-search="ファイル file-based  悪意のあるファイルを開かせる経路 偽装pdf・word クラウド共有の不正ファイル">
+  <h3>
+    <span data-i18n="ja">ファイル<span class="en">File-based</span></span>
+    <span data-i18n="en">File-based</span>
+    <span data-i18n="es">ファイル</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">USBメモリ</span>など物理媒体を使う経路</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">悪意のあるファイル</span>を開かせる経路</p><p data-i18n="en" class="one-liner"><span class="hl">悪意のあるファイル</span>を開かせる経路</p><p data-i18n="es" class="one-liner"><span class="hl">悪意のあるファイル</span>を開かせる経路</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>駐車場に置かれたUSB</li><li>業務用を装うUSB</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">システム・ネットワーク系（狙われる自組織側の弱点）</h2>
-<article class="memo-card" id="b-2-unsupported" data-search="非サポートのシステムやアプリ unsupported systems and applications サポート終了でパッチが出ない製品 windows xp bluekeep flash player">
-  <h3>非サポートのシステムやアプリ<span class="en">Unsupported systems and applications</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">サポート終了</span>でパッチが出ない製品</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Windows XP</li><li>BlueKeep</li><li>Flash Player</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>偽装PDF・Word</li><li>クラウド共有の不正ファイル</li></ul>
+      <ul class="example-list" data-i18n="en"><li>偽装PDF・Word</li><li>クラウド共有の不正ファイル</li></ul>
+      <ul class="example-list" data-i18n="es"><li>偽装PDF・Word</li><li>クラウド共有の不正ファイル</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-wired" data-search="有線ネットワーク wired 安全でない有線lanを突く経路 lanケーブルへの割り込み 空きポートへの接続">
-  <h3>有線ネットワーク<span class="en">Wired</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-voice-call" data-search="ボイスコール voice call  音声通話で情報や金銭を狙う経路 銀行を名乗る電話 公的機関を装う電話">
+  <h3>
+    <span data-i18n="ja">ボイスコール<span class="en">Voice call</span></span>
+    <span data-i18n="en">Voice call</span>
+    <span data-i18n="es">ボイスコール</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">安全でない<span class="hl">有線LAN</span>を突く経路</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">音声通話</span>で情報や金銭を狙う経路</p><p data-i18n="en" class="one-liner"><span class="hl">音声通話</span>で情報や金銭を狙う経路</p><p data-i18n="es" class="one-liner"><span class="hl">音声通話</span>で情報や金銭を狙う経路</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>LANケーブルへの割り込み</li><li>空きポートへの接続</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>銀行を名乗る電話</li><li>公的機関を装う電話</li></ul>
+      <ul class="example-list" data-i18n="en"><li>銀行を名乗る電話</li><li>公的機関を装う電話</li></ul>
+      <ul class="example-list" data-i18n="es"><li>銀行を名乗る電話</li><li>公的機関を装う電話</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-wireless" data-search="無線ネットワーク wireless 安全でない無線lanを突く経路 ウォードライビング 不正ap（rogue ap） 暗号化なしwi-fi">
-  <h3>無線ネットワーク<span class="en">Wireless</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-removable-device" data-search="リムーバブルデバイス removable device  usbメモリなど物理媒体を使う経路 駐車場に置かれたusb 業務用を装うusb">
+  <h3>
+    <span data-i18n="ja">リムーバブルデバイス<span class="en">Removable device</span></span>
+    <span data-i18n="en">Removable device</span>
+    <span data-i18n="es">リムーバブルデバイス</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">安全でない<span class="hl">無線LAN</span>を突く経路</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">USBメモリ</span>など物理媒体を使う経路</p><p data-i18n="en" class="one-liner"><span class="hl">USBメモリ</span>など物理媒体を使う経路</p><p data-i18n="es" class="one-liner"><span class="hl">USBメモリ</span>など物理媒体を使う経路</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ウォードライビング</li><li>不正AP（Rogue AP）</li><li>暗号化なしWi-Fi</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>駐車場に置かれたUSB</li><li>業務用を装うUSB</li></ul>
+      <ul class="example-list" data-i18n="en"><li>駐車場に置かれたUSB</li><li>業務用を装うUSB</li></ul>
+      <ul class="example-list" data-i18n="es"><li>駐車場に置かれたUSB</li><li>業務用を装うUSB</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">システム・ネットワーク系（狙われる自組織側の弱点）</span><span data-i18n="en">システム・ネットワーク系（狙われる自組織側の弱点）</span><span data-i18n="es">システム・ネットワーク系（狙われる自組織側の弱点）</span></h2>
+<article class="memo-card" id="b-2-unsupported" data-search="非サポートのシステムやアプリ unsupported systems and applications  サポート終了でパッチが出ない製品 windows xp bluekeep flash player">
+  <h3>
+    <span data-i18n="ja">非サポートのシステムやアプリ<span class="en">Unsupported systems and applications</span></span>
+    <span data-i18n="en">Unsupported systems and applications</span>
+    <span data-i18n="es">非サポートのシステムやアプリ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner"><span class="hl">サポート終了</span>でパッチが出ない製品</p><p data-i18n="en" class="one-liner"><span class="hl">サポート終了</span>でパッチが出ない製品</p><p data-i18n="es" class="one-liner"><span class="hl">サポート終了</span>でパッチが出ない製品</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Windows XP</li><li>BlueKeep</li><li>Flash Player</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Windows XP</li><li>BlueKeep</li><li>Flash Player</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Windows XP</li><li>BlueKeep</li><li>Flash Player</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-bluetooth" data-search="bluetooth bluetooth bluetoothの弱い認証を突く経路 ブルースナーフィング ウェアラブルの傍受">
-  <h3>Bluetooth<span class="en">Bluetooth</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-wired" data-search="有線ネットワーク wired  安全でない有線lanを突く経路 lanケーブルへの割り込み 空きポートへの接続">
+  <h3>
+    <span data-i18n="ja">有線ネットワーク<span class="en">Wired</span></span>
+    <span data-i18n="en">Wired</span>
+    <span data-i18n="es">有線ネットワーク</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">Bluetooth</span>の弱い認証を突く経路</p>
+    <p data-i18n="ja" class="one-liner">安全でない<span class="hl">有線LAN</span>を突く経路</p><p data-i18n="en" class="one-liner">安全でない<span class="hl">有線LAN</span>を突く経路</p><p data-i18n="es" class="one-liner">安全でない<span class="hl">有線LAN</span>を突く経路</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ブルースナーフィング</li><li>ウェアラブルの傍受</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>LANケーブルへの割り込み</li><li>空きポートへの接続</li></ul>
+      <ul class="example-list" data-i18n="en"><li>LANケーブルへの割り込み</li><li>空きポートへの接続</li></ul>
+      <ul class="example-list" data-i18n="es"><li>LANケーブルへの割り込み</li><li>空きポートへの接続</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-open-ports" data-search="開かれたポート open service ports サービス用の開放ポートが入口になる https 443番 smtp 25 ポートスキャン">
-  <h3>開かれたポート<span class="en">Open service ports</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-wireless" data-search="無線ネットワーク wireless  安全でない無線lanを突く経路 ウォードライビング 不正ap（rogue ap） 暗号化なしwi-fi">
+  <h3>
+    <span data-i18n="ja">無線ネットワーク<span class="en">Wireless</span></span>
+    <span data-i18n="en">Wireless</span>
+    <span data-i18n="es">無線ネットワーク</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">サービス用の<span class="hl">開放ポート</span>が入口になる</p>
+    <p data-i18n="ja" class="one-liner">安全でない<span class="hl">無線LAN</span>を突く経路</p><p data-i18n="en" class="one-liner">安全でない<span class="hl">無線LAN</span>を突く経路</p><p data-i18n="es" class="one-liner">安全でない<span class="hl">無線LAN</span>を突く経路</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>HTTPS 443番</li><li>SMTP 25</li><li>ポートスキャン</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ウォードライビング</li><li>不正AP（Rogue AP）</li><li>暗号化なしWi-Fi</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ウォードライビング</li><li>不正AP（Rogue AP）</li><li>暗号化なしWi-Fi</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ウォードライビング</li><li>不正AP（Rogue AP）</li><li>暗号化なしWi-Fi</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-default-credentials" data-search="デフォルトクレデンシャル default credentials 初期設定のid・パスワードのまま admin/admin miraiボットネット 初期設定のルーター">
-  <h3>デフォルトクレデンシャル<span class="en">Default credentials</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-bluetooth" data-search="bluetooth bluetooth  bluetoothの弱い認証を突く経路 ブルースナーフィング ウェアラブルの傍受">
+  <h3>
+    <span data-i18n="ja">Bluetooth<span class="en">Bluetooth</span></span>
+    <span data-i18n="en">Bluetooth</span>
+    <span data-i18n="es">Bluetooth</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">初期設定のID・パスワード</span>のまま</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">Bluetooth</span>の弱い認証を突く経路</p><p data-i18n="en" class="one-liner"><span class="hl">Bluetooth</span>の弱い認証を突く経路</p><p data-i18n="es" class="one-liner"><span class="hl">Bluetooth</span>の弱い認証を突く経路</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>admin/admin</li><li>Miraiボットネット</li><li>初期設定のルーター</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">サプライチェーン系（外部委託先・取引先を経由）</h2>
-<article class="memo-card" id="b-2-msp" data-search="msp（マネージドサービスプロバイダー） managed service providers (msps) it運用の外注先経由で攻撃される it保守の委託先 複数顧客の一括管理">
-  <h3>MSP（マネージドサービスプロバイダー）<span class="en">Managed service providers (MSPs)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">IT運用の<span class="hl">外注先</span>経由で攻撃される</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>IT保守の委託先</li><li>複数顧客の一括管理</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ブルースナーフィング</li><li>ウェアラブルの傍受</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ブルースナーフィング</li><li>ウェアラブルの傍受</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ブルースナーフィング</li><li>ウェアラブルの傍受</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-vendor" data-search="ベンダー vendors 製品の提供元を起点に侵入される notpetya 改ざんされた更新">
-  <h3>ベンダー<span class="en">Vendors</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-open-ports" data-search="開かれたポート open service ports  サービス用の開放ポートが入口になる https 443番 smtp 25 ポートスキャン">
+  <h3>
+    <span data-i18n="ja">開かれたポート<span class="en">Open service ports</span></span>
+    <span data-i18n="en">Open service ports</span>
+    <span data-i18n="es">開かれたポート</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">製品の提供元</span>を起点に侵入される</p>
+    <p data-i18n="ja" class="one-liner">サービス用の<span class="hl">開放ポート</span>が入口になる</p><p data-i18n="en" class="one-liner">サービス用の<span class="hl">開放ポート</span>が入口になる</p><p data-i18n="es" class="one-liner">サービス用の<span class="hl">開放ポート</span>が入口になる</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>NotPetya</li><li>改ざんされた更新</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">ソーシャルエンジニアリング系（人を狙う攻撃ベクトル）</h2>
-<article class="memo-card" id="b-2-phishing" data-search="フィッシング phishing 実在組織を装うメール詐欺 偽の請求書メール 偽ログインページ">
-  <h3>フィッシング<span class="en">Phishing</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">実在組織を装う<span class="hl">メール詐欺</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>偽の請求書メール</li><li>偽ログインページ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>HTTPS 443番</li><li>SMTP 25</li><li>ポートスキャン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>HTTPS 443番</li><li>SMTP 25</li><li>ポートスキャン</li></ul>
+      <ul class="example-list" data-i18n="es"><li>HTTPS 443番</li><li>SMTP 25</li><li>ポートスキャン</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-vishing" data-search="ビッシング vishing 電話を使ったフィッシング 銀行を名乗る電話 税務署を装う電話">
-  <h3>ビッシング<span class="en">Vishing</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-default-credentials" data-search="デフォルトクレデンシャル default credentials  初期設定のid・パスワードのまま admin/admin miraiボットネット 初期設定のルーター">
+  <h3>
+    <span data-i18n="ja">デフォルトクレデンシャル<span class="en">Default credentials</span></span>
+    <span data-i18n="en">Default credentials</span>
+    <span data-i18n="es">デフォルトクレデンシャル</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">電話</span>を使ったフィッシング</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">初期設定のID・パスワード</span>のまま</p><p data-i18n="en" class="one-liner"><span class="hl">初期設定のID・パスワード</span>のまま</p><p data-i18n="es" class="one-liner"><span class="hl">初期設定のID・パスワード</span>のまま</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>銀行を名乗る電話</li><li>税務署を装う電話</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>admin/admin</li><li>Miraiボットネット</li><li>初期設定のルーター</li></ul>
+      <ul class="example-list" data-i18n="en"><li>admin/admin</li><li>Miraiボットネット</li><li>初期設定のルーター</li></ul>
+      <ul class="example-list" data-i18n="es"><li>admin/admin</li><li>Miraiボットネット</li><li>初期設定のルーター</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">サプライチェーン系（外部委託先・取引先を経由）</span><span data-i18n="en">サプライチェーン系（外部委託先・取引先を経由）</span><span data-i18n="es">サプライチェーン系（外部委託先・取引先を経由）</span></h2>
+<article class="memo-card" id="b-2-msp" data-search="msp（マネージドサービスプロバイダー） managed service providers (msps)  it運用の外注先経由で攻撃される it保守の委託先 複数顧客の一括管理">
+  <h3>
+    <span data-i18n="ja">MSP（マネージドサービスプロバイダー）<span class="en">Managed service providers (MSPs)</span></span>
+    <span data-i18n="en">Managed service providers (MSPs)</span>
+    <span data-i18n="es">MSP（マネージドサービスプロバイダー）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">IT運用の<span class="hl">外注先</span>経由で攻撃される</p><p data-i18n="en" class="one-liner">IT運用の<span class="hl">外注先</span>経由で攻撃される</p><p data-i18n="es" class="one-liner">IT運用の<span class="hl">外注先</span>経由で攻撃される</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>IT保守の委託先</li><li>複数顧客の一括管理</li></ul>
+      <ul class="example-list" data-i18n="en"><li>IT保守の委託先</li><li>複数顧客の一括管理</li></ul>
+      <ul class="example-list" data-i18n="es"><li>IT保守の委託先</li><li>複数顧客の一括管理</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-smishing" data-search="スミッシング smishing smsを使ったフィッシング 不在通知を装うsms otp入力を促すsms">
-  <h3>スミッシング<span class="en">Smishing</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-vendor" data-search="ベンダー vendors  製品の提供元を起点に侵入される notpetya 改ざんされた更新">
+  <h3>
+    <span data-i18n="ja">ベンダー<span class="en">Vendors</span></span>
+    <span data-i18n="en">Vendors</span>
+    <span data-i18n="es">ベンダー</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">SMS</span>を使ったフィッシング</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">製品の提供元</span>を起点に侵入される</p><p data-i18n="en" class="one-liner"><span class="hl">製品の提供元</span>を起点に侵入される</p><p data-i18n="es" class="one-liner"><span class="hl">製品の提供元</span>を起点に侵入される</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>不在通知を装うSMS</li><li>OTP入力を促すSMS</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>NotPetya</li><li>改ざんされた更新</li></ul>
+      <ul class="example-list" data-i18n="en"><li>NotPetya</li><li>改ざんされた更新</li></ul>
+      <ul class="example-list" data-i18n="es"><li>NotPetya</li><li>改ざんされた更新</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">ソーシャルエンジニアリング系（人を狙う攻撃ベクトル）</span><span data-i18n="en">ソーシャルエンジニアリング系（人を狙う攻撃ベクトル）</span><span data-i18n="es">ソーシャルエンジニアリング系（人を狙う攻撃ベクトル）</span></h2>
+<article class="memo-card" id="b-2-phishing" data-search="フィッシング phishing  実在組織を装うメール詐欺 偽の請求書メール 偽ログインページ">
+  <h3>
+    <span data-i18n="ja">フィッシング<span class="en">Phishing</span></span>
+    <span data-i18n="en">Phishing</span>
+    <span data-i18n="es">フィッシング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">実在組織を装う<span class="hl">メール詐欺</span></p><p data-i18n="en" class="one-liner">実在組織を装う<span class="hl">メール詐欺</span></p><p data-i18n="es" class="one-liner">実在組織を装う<span class="hl">メール詐欺</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>偽の請求書メール</li><li>偽ログインページ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>偽の請求書メール</li><li>偽ログインページ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>偽の請求書メール</li><li>偽ログインページ</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-misinformation" data-search="誤情報／偽情報 misinformation/disinformation 偽の情報で人の判断を操作する snsの偽ニュース 評判を落とすデマ">
-  <h3>誤情報／偽情報<span class="en">Misinformation/disinformation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-vishing" data-search="ビッシング vishing  電話を使ったフィッシング 銀行を名乗る電話 税務署を装う電話">
+  <h3>
+    <span data-i18n="ja">ビッシング<span class="en">Vishing</span></span>
+    <span data-i18n="en">Vishing</span>
+    <span data-i18n="es">ビッシング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">偽の情報</span>で人の判断を操作する</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">電話</span>を使ったフィッシング</p><p data-i18n="en" class="one-liner"><span class="hl">電話</span>を使ったフィッシング</p><p data-i18n="es" class="one-liner"><span class="hl">電話</span>を使ったフィッシング</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>SNSの偽ニュース</li><li>評判を落とすデマ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>銀行を名乗る電話</li><li>税務署を装う電話</li></ul>
+      <ul class="example-list" data-i18n="en"><li>銀行を名乗る電話</li><li>税務署を装う電話</li></ul>
+      <ul class="example-list" data-i18n="es"><li>銀行を名乗る電話</li><li>税務署を装う電話</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-impersonation" data-search="なりすまし impersonation 別の人物や組織を装って欺く 経営者を装う送金指示 偽のitサポート電話">
-  <h3>なりすまし<span class="en">Impersonation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-smishing" data-search="スミッシング smishing  smsを使ったフィッシング 不在通知を装うsms otp入力を促すsms">
+  <h3>
+    <span data-i18n="ja">スミッシング<span class="en">Smishing</span></span>
+    <span data-i18n="en">Smishing</span>
+    <span data-i18n="es">スミッシング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">別の人物や組織</span>を装って欺く</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">SMS</span>を使ったフィッシング</p><p data-i18n="en" class="one-liner"><span class="hl">SMS</span>を使ったフィッシング</p><p data-i18n="es" class="one-liner"><span class="hl">SMS</span>を使ったフィッシング</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>経営者を装う送金指示</li><li>偽のITサポート電話</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>不在通知を装うSMS</li><li>OTP入力を促すSMS</li></ul>
+      <ul class="example-list" data-i18n="en"><li>不在通知を装うSMS</li><li>OTP入力を促すSMS</li></ul>
+      <ul class="example-list" data-i18n="es"><li>不在通知を装うSMS</li><li>OTP入力を促すSMS</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-bec" data-search="ビジネスメール詐欺 business email compromise (bec) 幹部を装うメールで不正送金させる 幹部を装う送金指示 偽の振込先変更">
-  <h3>ビジネスメール詐欺<span class="en">Business email compromise (BEC)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-misinformation" data-search="誤情報／偽情報 misinformation/disinformation  偽の情報で人の判断を操作する snsの偽ニュース 評判を落とすデマ">
+  <h3>
+    <span data-i18n="ja">誤情報／偽情報<span class="en">Misinformation/disinformation</span></span>
+    <span data-i18n="en">Misinformation/disinformation</span>
+    <span data-i18n="es">誤情報／偽情報</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">幹部を装う<span class="hl">メールで不正送金</span>させる</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">偽の情報</span>で人の判断を操作する</p><p data-i18n="en" class="one-liner"><span class="hl">偽の情報</span>で人の判断を操作する</p><p data-i18n="es" class="one-liner"><span class="hl">偽の情報</span>で人の判断を操作する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>幹部を装う送金指示</li><li>偽の振込先変更</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>SNSの偽ニュース</li><li>評判を落とすデマ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>SNSの偽ニュース</li><li>評判を落とすデマ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>SNSの偽ニュース</li><li>評判を落とすデマ</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-pretexting" data-search="プリテキシング pretexting もっともらしい口実で信頼を得る 宅配業者を装う ピギーバック">
-  <h3>プリテキシング<span class="en">Pretexting</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-impersonation" data-search="なりすまし impersonation  別の人物や組織を装って欺く 経営者を装う送金指示 偽のitサポート電話">
+  <h3>
+    <span data-i18n="ja">なりすまし<span class="en">Impersonation</span></span>
+    <span data-i18n="en">Impersonation</span>
+    <span data-i18n="es">なりすまし</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">もっともらしい口実</span>で信頼を得る</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">別の人物や組織</span>を装って欺く</p><p data-i18n="en" class="one-liner"><span class="hl">別の人物や組織</span>を装って欺く</p><p data-i18n="es" class="one-liner"><span class="hl">別の人物や組織</span>を装って欺く</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>宅配業者を装う</li><li>ピギーバック</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>経営者を装う送金指示</li><li>偽のITサポート電話</li></ul>
+      <ul class="example-list" data-i18n="en"><li>経営者を装う送金指示</li><li>偽のITサポート電話</li></ul>
+      <ul class="example-list" data-i18n="es"><li>経営者を装う送金指示</li><li>偽のITサポート電話</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-watering-hole" data-search="水飲み場攻撃 watering hole 標的がよく訪れるサイトを改ざん 技術情報サイト改ざん 業界ニュースサイト">
-  <h3>水飲み場攻撃<span class="en">Watering hole</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-bec" data-search="ビジネスメール詐欺 business email compromise (bec)  幹部を装うメールで不正送金させる 幹部を装う送金指示 偽の振込先変更">
+  <h3>
+    <span data-i18n="ja">ビジネスメール詐欺<span class="en">Business email compromise (BEC)</span></span>
+    <span data-i18n="en">Business email compromise (BEC)</span>
+    <span data-i18n="es">ビジネスメール詐欺</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">標的が<span class="hl">よく訪れるサイト</span>を改ざん</p>
+    <p data-i18n="ja" class="one-liner">幹部を装う<span class="hl">メールで不正送金</span>させる</p><p data-i18n="en" class="one-liner">幹部を装う<span class="hl">メールで不正送金</span>させる</p><p data-i18n="es" class="one-liner">幹部を装う<span class="hl">メールで不正送金</span>させる</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>技術情報サイト改ざん</li><li>業界ニュースサイト</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>幹部を装う送金指示</li><li>偽の振込先変更</li></ul>
+      <ul class="example-list" data-i18n="en"><li>幹部を装う送金指示</li><li>偽の振込先変更</li></ul>
+      <ul class="example-list" data-i18n="es"><li>幹部を装う送金指示</li><li>偽の振込先変更</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-brand-impersonation" data-search="ブランドインパーソネーション brand impersonation 正規のブランドを装ってだます amazonを装うメール 銀行ロゴの偽サイト">
-  <h3>ブランドインパーソネーション<span class="en">Brand impersonation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-pretexting" data-search="プリテキシング pretexting  もっともらしい口実で信頼を得る 宅配業者を装う ピギーバック">
+  <h3>
+    <span data-i18n="ja">プリテキシング<span class="en">Pretexting</span></span>
+    <span data-i18n="en">Pretexting</span>
+    <span data-i18n="es">プリテキシング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">正規の<span class="hl">ブランド</span>を装ってだます</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">もっともらしい口実</span>で信頼を得る</p><p data-i18n="en" class="one-liner"><span class="hl">もっともらしい口実</span>で信頼を得る</p><p data-i18n="es" class="one-liner"><span class="hl">もっともらしい口実</span>で信頼を得る</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Amazonを装うメール</li><li>銀行ロゴの偽サイト</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>宅配業者を装う</li><li>ピギーバック</li></ul>
+      <ul class="example-list" data-i18n="en"><li>宅配業者を装う</li><li>ピギーバック</li></ul>
+      <ul class="example-list" data-i18n="es"><li>宅配業者を装う</li><li>ピギーバック</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="b-2-typosquatting" data-search="タイポスクワッティング typosquatting 打ち間違い狙いの似たドメイン amazom.com g00gle.com">
-  <h3>タイポスクワッティング<span class="en">Typosquatting</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="b-2-watering-hole" data-search="水飲み場攻撃 watering hole  標的がよく訪れるサイトを改ざん 技術情報サイト改ざん 業界ニュースサイト">
+  <h3>
+    <span data-i18n="ja">水飲み場攻撃<span class="en">Watering hole</span></span>
+    <span data-i18n="en">Watering hole</span>
+    <span data-i18n="es">水飲み場攻撃</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">打ち間違い</span>狙いの似たドメイン</p>
+    <p data-i18n="ja" class="one-liner">標的が<span class="hl">よく訪れるサイト</span>を改ざん</p><p data-i18n="en" class="one-liner">標的が<span class="hl">よく訪れるサイト</span>を改ざん</p><p data-i18n="es" class="one-liner">標的が<span class="hl">よく訪れるサイト</span>を改ざん</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>amazom.com</li><li>g00gle.com</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>技術情報サイト改ざん</li><li>業界ニュースサイト</li></ul>
+      <ul class="example-list" data-i18n="en"><li>技術情報サイト改ざん</li><li>業界ニュースサイト</li></ul>
+      <ul class="example-list" data-i18n="es"><li>技術情報サイト改ざん</li><li>業界ニュースサイト</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-2-brand-impersonation" data-search="ブランドインパーソネーション brand impersonation  正規のブランドを装ってだます amazonを装うメール 銀行ロゴの偽サイト">
+  <h3>
+    <span data-i18n="ja">ブランドインパーソネーション<span class="en">Brand impersonation</span></span>
+    <span data-i18n="en">Brand impersonation</span>
+    <span data-i18n="es">ブランドインパーソネーション</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">正規の<span class="hl">ブランド</span>を装ってだます</p><p data-i18n="en" class="one-liner">正規の<span class="hl">ブランド</span>を装ってだます</p><p data-i18n="es" class="one-liner">正規の<span class="hl">ブランド</span>を装ってだます</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Amazonを装うメール</li><li>銀行ロゴの偽サイト</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Amazonを装うメール</li><li>銀行ロゴの偽サイト</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Amazonを装うメール</li><li>銀行ロゴの偽サイト</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-2-typosquatting" data-search="タイポスクワッティング typosquatting  打ち間違い狙いの似たドメイン amazom.com g00gle.com">
+  <h3>
+    <span data-i18n="ja">タイポスクワッティング<span class="en">Typosquatting</span></span>
+    <span data-i18n="en">Typosquatting</span>
+    <span data-i18n="es">タイポスクワッティング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner"><span class="hl">打ち間違い</span>狙いの似たドメイン</p><p data-i18n="en" class="one-liner"><span class="hl">打ち間違い</span>狙いの似たドメイン</p><p data-i18n="es" class="one-liner"><span class="hl">打ち間違い</span>狙いの似たドメイン</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>amazom.com</li><li>g00gle.com</li></ul>
+      <ul class="example-list" data-i18n="en"><li>amazom.com</li><li>g00gle.com</li></ul>
+      <ul class="example-list" data-i18n="es"><li>amazom.com</li><li>g00gle.com</li></ul>
     </div>
   </div>
 </article>
@@ -367,19 +528,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（30問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（30問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (30 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (30 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">[{"term": "b-2-email", "stem": "セキュリティ担当者は、自社ドメインを詐称したメールが外部の未認証サーバーから送信されていることに気づいた。送信元ドメインの正当性を受信側で検証できるようにする対策の組み合わせとして最も適切なものはどれか。", "choices": ["WPA3・EAP・RADIUS", "SPF・DKIM・DMARC", "HTTP・HTTPS・SMTP", "VPN・NAC・ポートセキュリティ"], "answer": 1, "explain": "SPF・DKIM・DMARC はなりすましメール対策で、認証されていないサーバーからの送信を検出・拒否できる。"}, {"term": "b-2-email", "stem": "取引先を装ったメールに添付されたファイルを開いた従業員の端末がランサムウェアに感染した。この事例で攻撃に使われた脅威ベクトル（媒体）として最も適切なものはどれか。", "choices": ["リムーバブルデバイス", "ボイスコール", "開かれたポート", "Eメール"], "answer": 3, "explain": "添付ファイル付きのメールを媒介にしているため、脅威ベクトルは Eメール（メッセージベース）である。"}, {"term": "b-2-sms", "stem": "従業員のスマートフォンに「Amazonです。ログインを確認してください」という短文メッセージが電話番号宛てに届き、ワンタイムパスワードの入力を求めるURLが添えられていた。この媒体の特性として講義で強調された点はどれか。", "choices": ["送信者と受信者の間でメッセージが暗号化されない", "常にエンドツーエンド暗号化されている", "必ず公式アカウントからしか送信できない", "画像ファイルにしか情報を埋め込めない"], "answer": 0, "explain": "SMS は送受信者間でメッセージが暗号化されないため、OTP を狙った詐欺などに悪用されやすい。"}, {"term": "b-2-im", "stem": "LINE の友人アカウントから「この写真見て」とファイルが送られ、開いたところマルウェアに感染した。友人のアカウントは乗っ取られていた。この攻撃の脅威ベクトルはどれか。", "choices": ["SMS", "ボイスコール", "インスタントメッセージング", "無線ネットワーク"], "answer": 2, "explain": "LINE や Messenger などのメッセンジャーアプリを悪用した攻撃はインスタントメッセージング（IM）経由である。"}, {"term": "b-2-image", "stem": "SNS で拡散した人気のミーム画像に、一見しただけでは分からない形でマルウェアが埋め込まれていた。この脅威ベクトルに対する有効な対策として講義で挙げられたものはどれか。", "choices": ["ポートスキャンの実施", "画像ファイルの無害化とユーザー教育", "Bluetooth の検出可能性をオフにする", "デフォルトパスワードの変更"], "answer": 1, "explain": "画像ベースの攻撃には、画像ファイルの無害化とユーザー教育が有効な対策とされる。"}, {"term": "b-2-file", "stem": "攻撃者がクラウドストレージ上に「請求書.pdf」に見せかけたマルウェアを置き、共有リンクを送って社員に開かせた。この攻撃が主に悪用している脅威ベクトルはどれか。", "choices": ["画像", "ボイスコール", "非サポートのシステム", "ファイル"], "answer": 3, "explain": "無害に見える PDF などの悪意あるファイルを開かせる手口は、ファイルベースの脅威ベクトルである。"}, {"term": "b-2-voice-call", "stem": "攻撃者が公的機関を名乗って社員に電話をかけ、口座情報の確認を口実に振り込みを要求した。この攻撃で用いられた媒体（脅威ベクトル）はどれか。", "choices": ["ボイスコール", "インスタントメッセージング", "Eメール", "リムーバブルデバイス"], "answer": 0, "explain": "音声通話を使って機密情報や金銭を得ようとするのはボイスコールの脅威ベクトルである。"}, {"term": "b-2-removable-device", "stem": "企業の駐車場に社名ロゴ入りの USB メモリが複数落ちており、拾った社員が社内 PC に接続してマルウェアに感染した。再発防止策として最も適切なものはどれか。", "choices": ["メールサーバーに DMARC を設定する", "Web サーバーの 443 番ポートを閉じる", "リムーバブルメディアの使用を制限し、許可した機器のみ利用可能にする", "無線 AP の SSID を非表示にする"], "answer": 2, "explain": "リムーバブルデバイス経由の感染には、使用を制限・禁止し許可済み機器のみ例外的に認める対策が有効。"}, {"term": "b-2-unsupported", "stem": "ある工場では Windows XP の制御用 PC を使い続けており、既知の RDP の脆弱性を突かれて侵入された。この PC が特に危険だった最大の理由はどれか。", "choices": ["初期設定のパスワードのままだったから", "既知の脆弱性を修正するパッチが提供されないから", "Bluetooth が常にオンだったから", "SMS が暗号化されないから"], "answer": 1, "explain": "サポート終了製品は既知の脆弱性に対するパッチが提供されず、攻撃者に悪用されやすい。"}, {"term": "b-2-wired", "stem": "会議室の空いている LAN ポートに来訪者が自分のノート PC を接続したところ、社内ネットワークにそのままアクセスできてしまった。この事例が示す脅威ベクトルと、関連する設定不備の組み合わせとして最も適切なものはどれか。", "choices": ["無線ネットワーク／WPA2 の未設定", "Bluetooth／ペアリングの未拒否", "開かれたポート／ファイアウォールの 80 番開放", "有線ネットワーク／スイッチのポートセキュリティ未設定"], "answer": 3, "explain": "スイッチのポートセキュリティが不十分だと、物理ポートへの不正接続で有線ネットワークに侵入される。"}, {"term": "b-2-wireless", "stem": "攻撃者がカフェに社内 Wi-Fi とよく似た名前のアクセスポイントを設置し、接続した社員を偽のログイン画面に誘導して認証情報を盗んだ。この手口はどれか。", "choices": ["不正アクセスポイント（Rogue AP）", "ウォードライビング", "タイポスクワッティング", "ブルースナーフィング"], "answer": 0, "explain": "正規 AP に似せた不正 AP を設置して通信を盗聴・認証情報を窃取するのは Rogue AP（無線ネットワークの脅威）である。"}, {"term": "b-2-wireless", "stem": "車で市街地を巡回しながらノート PC で無線 LAN を探索し、暗号化されていないアクセスポイントを見つけて不正接続する行為を何と呼ぶか。", "choices": ["ピギーバック", "ポートスキャン", "ウォードライビング", "水飲み場攻撃"], "answer": 2, "explain": "移動しながら無線 LAN AP を探し回り、暗号化されていない AP に侵入する行為はウォードライビング。"}, {"term": "b-2-bluetooth", "stem": "空港で、検出可能（discoverable）状態のスマートフォンに近くの見知らぬ端末から接続され、連絡先データが盗まれた。この脅威ベクトルへの対策として最も適切でないものはどれか。", "choices": ["信頼できるデバイス以外とペアリングしない", "見知らぬデバイスからの接続要求を拒否する", "使わないときは Bluetooth を無効にする", "検出可能状態を常にオンにしておく"], "answer": 3, "explain": "Bluetooth は検出可能性をオフにすることが推奨される。常にオンにするのは逆効果。"}, {"term": "b-2-open-ports", "stem": "攻撃者は侵入の前段階として、対象サーバーで待ち受けているサービスと、その脆弱性を調べようとしている。このとき攻撃者が最初に行う可能性が高い行為と、狙っている攻撃対象領域の組み合わせはどれか。", "choices": ["ポートスキャン／開かれたポート", "ウォードライビング／無線ネットワーク", "ステガノグラフィ／画像", "タイポスクワッティング／ドメイン名"], "answer": 0, "explain": "攻撃者はポートスキャンで開いているポートと脆弱性を探り、そこを突破口に侵入する。"}, {"term": "b-2-default-credentials", "stem": "大量の監視カメラが「admin／admin」のままインターネットに接続されていたため乗っ取られ、大規模ボットネットの一部として DDoS 攻撃に使われた。この事例の主な原因となった攻撃対象領域はどれか。", "choices": ["非サポートのシステム", "デフォルトクレデンシャル", "ベンダー", "インスタントメッセージング"], "answer": 1, "explain": "Mirai などの IoT ボットネットは、初期設定の ID・パスワードを変更していない機器を突いて構築された。"}, {"term": "b-2-msp", "stem": "ある IT 運用委託先が侵害され、その委託先がリモート管理していた数十社の顧客環境に一斉にランサムウェアが配布された。この事例で攻撃対象領域となったのはどれか。", "choices": ["マネージドサービスプロバイダー（MSP）", "無線ネットワーク", "リムーバブルデバイス", "ボイスコール"], "answer": 0, "explain": "MSP は複数顧客の IT を一括管理するため、MSP が攻撃されると利用している多くの企業に影響が及ぶ。"}, {"term": "b-2-vendor", "stem": "広く使われている会計ソフトの正規アップデートにマルウェアが混入され、そのソフトを導入していた政府機関や企業が一斉に被害を受けた（2017 年の NotPetya 事件）。この攻撃の起点として最も適切なものはどれか。", "choices": ["デフォルトクレデンシャル", "水飲み場攻撃", "ベンダー（サプライチェーン）", "有線ネットワーク"], "answer": 2, "explain": "ベンダーの製品・アップデートを通じて自組織に侵入されるサプライチェーン攻撃の典型例である。"}, {"term": "b-2-phishing", "stem": "「不正アクセスを検知しました。至急パスワードを変更してください」という大手ECサイトを装ったメールのリンクから本物そっくりのサイトに誘導され、IDとパスワードを入力してしまった。この攻撃はどれか。", "choices": ["ビッシング", "スミッシング", "水飲み場攻撃", "フィッシング"], "answer": 3, "explain": "実在組織を装ったメールで偽サイトに誘導し、認証情報を盗むのはフィッシングである。"}, {"term": "b-2-vishing", "stem": "銀行を名乗る人物から電話があり、「不正取引が確認されたので至急暗証番号を変更する必要がある」と言われ、暗証番号を伝えてしまった。この攻撃手法はどれか。", "choices": ["スミッシング", "ビッシング", "プリテキシング", "ブランドインパーソネーション"], "answer": 1, "explain": "Voice と Phishing の造語であるビッシングは、電話で公的機関や銀行を装い暗証番号などを聞き出す手口。"}, {"term": "b-2-smishing", "stem": "「お荷物をお届けに上がりましたが不在のため持ち帰りました」という携帯電話宛ての短文メッセージに URL が記載され、アクセスすると偽サイトでカード情報を求められた。この攻撃はどれか。", "choices": ["スミッシング", "ビッシング", "タイポスクワッティング", "ビジネスメール詐欺"], "answer": 0, "explain": "SMS を使ったフィッシングはスミッシング（SMS＋Phishing）と呼ばれる。"}, {"term": "b-2-misinformation", "stem": "攻撃者が競合企業の株価を下げる目的で、「大規模な情報漏えいが発生した」という虚偽の投稿を意図的に SNS で大量拡散した。この攻撃ベクトルとして最も適切なものはどれか。", "choices": ["水飲み場攻撃", "ブランドインパーソネーション", "偽情報（Disinformation）", "プリテキシング"], "answer": 2, "explain": "欺く意図をもって虚偽情報を流し、人の判断を操作するのは偽情報（Disinformation）である。"}, {"term": "b-2-impersonation", "stem": "Microsoft のサポートスタッフを名乗る人物から「お使いの PC でウイルスが検出されたので遠隔で駆除する」と電話があり、指示どおり遠隔操作ツールを入れたところ PC を乗っ取られた。この手口を最も広く表す用語はどれか。", "choices": ["タイポスクワッティング", "なりすまし", "水飲み場攻撃", "ウォードライビング"], "answer": 1, "explain": "信頼される人物・担当者を装って指示に従わせる手口はなりすまし（Impersonation）である。"}, {"term": "b-2-bec", "stem": "経理担当者に CEO の名前で「出張中のため、至急この口座へ取引先への支払いを送金してほしい」とメールが届き、送金してしまった。送信元は CEO によく似たアドレスだった。この攻撃に最も特化した用語はどれか。", "choices": ["ビッシング", "スミッシング", "ブランドインパーソネーション", "ビジネスメール詐欺（BEC）"], "answer": 3, "explain": "経営幹部や取引先になりすましたメールで不正送金させるのはビジネスメール詐欺（BEC）である。"}, {"term": "b-2-bec", "stem": "BEC（Business Email Compromise）の「Compromise」が表す意味として最も適切なものはどれか。", "choices": ["侵害", "妥協", "圧縮", "比較"], "answer": 0, "explain": "Compromise はセキュリティ文脈で「侵害」を意味し、ビジネスメールが悪用・侵害される詐欺を指す。"}, {"term": "b-2-pretexting", "stem": "攻撃者が「お急ぎの荷物です。サインをいただけますか」と宅配業者を装って本社ビルの入口に立ち、社員が扉を開けた隙に一緒に入館した。攻撃者が宅配業者という筋書きを用意して信頼を得たことを表す用語はどれか。", "choices": ["水飲み場攻撃", "フィッシング", "プリテキシング", "タイポスクワッティング"], "answer": 2, "explain": "もっともらしい口実（pretext）で信頼を得て目的を達成するのがプリテキシング。同行入館の行為自体はピギーバック。"}, {"term": "b-2-pretexting", "stem": "攻撃者が正規の社員の後ろにぴったりついて、セキュリティゲートを一緒に通り抜けた。講義でプリテキシングと合わせて押さえるべきとされたこの行為はどれか。", "choices": ["ピギーバック", "ウォードライビング", "ブルースナーフィング", "ポートスキャン"], "answer": 0, "explain": "誰かの後ろに張り付いて一緒に入り込む物理的な侵入手口はピギーバックと呼ばれる。"}, {"term": "b-2-watering-hole", "stem": "ある半導体メーカーのエンジニアが日常的に閲覧する業界技術ブログが改ざんされ、閲覧しただけでマルウェアに感染する状態になっていた。この攻撃手法はどれか。", "choices": ["タイポスクワッティング", "ブランドインパーソネーション", "フィッシング", "水飲み場攻撃"], "answer": 3, "explain": "標的がよく訪れる正規サイトを改ざんして待ち伏せるのは水飲み場攻撃（Watering hole）である。"}, {"term": "b-2-brand-impersonation", "stem": "自社のロゴや配色をそのまま使った偽のログインページと「アカウント確認」メールが出回り、顧客の認証情報が盗まれている。攻撃者が自社の企業イメージを不正に利用しているこの手口はどれか。", "choices": ["デフォルトクレデンシャル", "ブランドインパーソネーション", "ビッシング", "ウォードライビング"], "answer": 1, "explain": "正規のブランドやサービスを装ってユーザーをだますのはブランドインパーソネーションである。"}, {"term": "b-2-typosquatting", "stem": "利用者が「amazon.com」と入力するつもりで「amazom.com」と打ち間違え、攻撃者が取得していた偽サイトでカード情報を入力してしまった。この手口と、利用者側の有効な対策の組み合わせはどれか。", "choices": ["水飲み場攻撃／ブラウザの更新", "タイポスクワッティング／ブックマークからアクセスする", "スミッシング／SMS の受信拒否", "Rogue AP／Wi-Fi を無効化する"], "answer": 1, "explain": "打ち間違いを狙った紛らわしいドメイン登録はタイポスクワッティング。ブックマークや正しい URL の直接入力が有効。"}, {"term": "b-2-typosquatting", "stem": "水飲み場攻撃とタイポスクワッティングの違いとして最も適切な説明はどれか。", "choices": ["水飲み場攻撃は電話を使い、タイポスクワッティングは SMS を使う", "どちらも正規サイトそのものを改ざんする", "水飲み場攻撃は正規サイトを改ざんし、タイポスクワッティングは似たドメインの偽サイトを用意する", "タイポスクワッティングは USB メモリを使った物理的な攻撃である"], "answer": 2, "explain": "水飲み場攻撃は標的が訪れる正規サイトを改ざんし、タイポスクワッティングは打ち間違いを狙った別ドメインに偽サイトを立てる。"}]</script>
 </section>
 
-<nav class="pager"><a href="b-1.html"><span>前の章</span>B-1 脅威アクターと動機</a><a class="next" href="b-3.html"><span>次の章</span>B-3 脆弱性の種類</a></nav>
+<nav class="pager"><a href="b-1.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>B-1 <span data-i18n="ja">脅威アクターと動機</span><span data-i18n="en">脅威アクターと動機</span><span data-i18n="es">脅威アクターと動機</span></span></a><a class="next" href="b-3.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>B-3 <span data-i18n="ja">脆弱性の種類</span><span data-i18n="en">脆弱性の種類</span><span data-i18n="es">脆弱性の種類</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

@@ -24,6 +24,20 @@
                 "暗号化",
                 "認証",
                 "アクセス制御"
+              ],
+              "es": "Controles técnicos",
+              "name_en": "Technical controls",
+              "one_liner_en": "Protection through **technology and software**",
+              "one_liner_es": "Protección mediante **tecnología y software**",
+              "examples_en": [
+                "Encryption",
+                "Authentication",
+                "Access control"
+              ],
+              "examples_es": [
+                "Cifrado",
+                "Autenticación",
+                "Control de acceso"
               ]
             },
             {
@@ -36,6 +50,20 @@
                 "セキュリティポリシー",
                 "監査",
                 "手順書"
+              ],
+              "es": "Controles de gestión",
+              "name_en": "Managerial controls",
+              "one_liner_en": "Measures that build **policies and governance**",
+              "one_liner_es": "Medidas que establecen **políticas y gobierno**",
+              "examples_en": [
+                "Security policy",
+                "Audits",
+                "Procedure documents"
+              ],
+              "examples_es": [
+                "Política de seguridad",
+                "Auditorías",
+                "Documentos de procedimientos"
               ]
             },
             {
@@ -48,6 +76,20 @@
                 "教育訓練",
                 "ログ分析",
                 "パッチ適用"
+              ],
+              "es": "Controles operativos",
+              "name_en": "Operational controls",
+              "one_liner_en": "Measures carried out through **day-to-day operations**",
+              "one_liner_es": "Medidas aplicadas en las **operaciones diarias**",
+              "examples_en": [
+                "Training",
+                "Log analysis",
+                "Patching"
+              ],
+              "examples_es": [
+                "Formación",
+                "Análisis de registros",
+                "Aplicación de parches"
               ]
             },
             {
@@ -60,9 +102,25 @@
                 "入退室管理",
                 "フェンス",
                 "ボラード"
+              ],
+              "es": "Controles físicos",
+              "name_en": "Physical controls",
+              "one_liner_en": "Protection of **facilities and equipment**",
+              "one_liner_es": "Protección de **instalaciones y equipos**",
+              "examples_en": [
+                "Entry/exit control",
+                "Fences",
+                "Bollards"
+              ],
+              "examples_es": [
+                "Control de acceso a instalaciones",
+                "Vallas",
+                "Bolardos"
               ]
             }
-          ]
+          ],
+          "title_en": "Category (what it focuses on)",
+          "title_es": "Categoría (en qué se centra)"
         },
         {
           "id": "type",
@@ -77,6 +135,18 @@
               "examples": [
                 "ファイアウォール",
                 "アクセス制御"
+              ],
+              "es": "Controles preventivos",
+              "name_en": "Preventive controls",
+              "one_liner_en": "**Stops incidents** before they happen",
+              "one_liner_es": "**Evita incidentes** antes de que ocurran",
+              "examples_en": [
+                "Firewall",
+                "Access control"
+              ],
+              "examples_es": [
+                "Cortafuegos",
+                "Control de acceso"
               ]
             },
             {
@@ -88,6 +158,18 @@
               "examples": [
                 "監視カメラ掲示",
                 "警告バナー"
+              ],
+              "es": "Controles disuasorios",
+              "name_en": "Deterrent controls",
+              "one_liner_en": "**Psychologically** discourages attackers",
+              "one_liner_es": "Disuade al atacante **psicológicamente**",
+              "examples_en": [
+                "CCTV warning signs",
+                "Warning banners"
+              ],
+              "examples_es": [
+                "Carteles de videovigilancia",
+                "Avisos de advertencia"
               ]
             },
             {
@@ -98,6 +180,18 @@
               "one_liner": "異常や攻撃に**早く気づく**",
               "examples": [
                 "ログ監視",
+                "IDS/IPS"
+              ],
+              "es": "Controles de detección",
+              "name_en": "Detective controls",
+              "one_liner_en": "**Notices** anomalies and attacks quickly",
+              "one_liner_es": "**Detecta rápidamente** anomalías y ataques",
+              "examples_en": [
+                "Log monitoring",
+                "IDS/IPS"
+              ],
+              "examples_es": [
+                "Supervisión de registros",
                 "IDS/IPS"
               ]
             },
@@ -111,6 +205,20 @@
                 "隔離・駆除",
                 "バックアップ復旧",
                 "パッチ"
+              ],
+              "es": "Controles correctivos",
+              "name_en": "Corrective controls",
+              "one_liner_en": "**Fixes and prevents recurrence** after an incident",
+              "one_liner_es": "**Corrige y evita que se repita** tras un incidente",
+              "examples_en": [
+                "Isolation and removal",
+                "Restore from backup",
+                "Patches"
+              ],
+              "examples_es": [
+                "Aislamiento y eliminación",
+                "Restauración desde copia de seguridad",
+                "Parches"
               ]
             },
             {
@@ -121,6 +229,16 @@
               "one_liner": "本命が無理なときの**次善策**",
               "examples": [
                 "レガシーのネットワーク分離"
+              ],
+              "es": "Controles compensatorios",
+              "name_en": "Compensating controls",
+              "one_liner_en": "The **next-best measure** when the primary control isn't possible",
+              "one_liner_es": "La **mejor alternativa** cuando el control principal no es viable",
+              "examples_en": [
+                "Network isolation for legacy systems"
+              ],
+              "examples_es": [
+                "Aislamiento de red de sistemas heredados"
               ]
             },
             {
@@ -132,11 +250,29 @@
               "examples": [
                 "情報セキュリティ方針",
                 "法令準拠の要求"
+              ],
+              "es": "Controles directivos",
+              "name_en": "Directive controls",
+              "one_liner_en": "Sets direction **top-down**",
+              "one_liner_es": "Marca la dirección **de arriba abajo**",
+              "examples_en": [
+                "Information security policy",
+                "Regulatory compliance requirements"
+              ],
+              "examples_es": [
+                "Política de seguridad de la información",
+                "Requisitos de cumplimiento normativo"
               ]
             }
-          ]
+          ],
+          "title_en": "Type (when and why)",
+          "title_es": "Tipo (cuándo y para qué)"
         }
-      ]
+      ],
+      "title_en": "Comparing security controls",
+      "title_es": "Comparación de controles de seguridad",
+      "blurb_en": "Classify controls by category × type",
+      "blurb_es": "Clasifica los controles por categoría × tipo"
     },
     {
       "id": "A-2",
@@ -159,6 +295,20 @@
                 "暗号化（機密）",
                 "ハッシュ（完全）",
                 "冗長化（可用）"
+              ],
+              "es": "Tríada CIA",
+              "name_en": "CIA triad",
+              "one_liner_en": "The three pillars: **confidentiality, integrity, availability**",
+              "one_liner_es": "Los tres pilares: **confidencialidad, integridad y disponibilidad**",
+              "examples_en": [
+                "Encryption (confidentiality)",
+                "Hashing (integrity)",
+                "Redundancy (availability)"
+              ],
+              "examples_es": [
+                "Cifrado (confidencialidad)",
+                "Hash (integridad)",
+                "Redundancia (disponibilidad)"
               ]
             },
             {
@@ -170,6 +320,17 @@
               "examples": [
                 "デジタル署名",
                 "証明書"
+              ],
+              "es": "No repudio",
+              "one_liner_en": "You **can't deny it** later",
+              "one_liner_es": "**No se puede negar** después",
+              "examples_en": [
+                "Digital signatures",
+                "Certificates"
+              ],
+              "examples_es": [
+                "Firmas digitales",
+                "Certificados"
               ]
             },
             {
@@ -181,9 +342,22 @@
               "examples": [
                 "対策不足の一覧化",
                 "目標水準との比較"
+              ],
+              "es": "Análisis de brechas",
+              "one_liner_en": "Identifies the **gap between current and target state**",
+              "one_liner_es": "Identifica la **brecha entre el estado actual y el objetivo**",
+              "examples_en": [
+                "Listing missing controls",
+                "Comparing against the target baseline"
+              ],
+              "examples_es": [
+                "Listado de controles que faltan",
+                "Comparación con el nivel objetivo"
               ]
             }
-          ]
+          ],
+          "title_en": "Core concepts",
+          "title_es": "Conceptos básicos"
         },
         {
           "id": "zero-trust",
@@ -197,6 +371,15 @@
               "one_liner": "状況に応じて認証を**動的に変える**",
               "examples": [
                 "普段と違う場所で追加認証"
+              ],
+              "es": "Identidad adaptativa",
+              "one_liner_en": "**Dynamically adjusts** authentication to context",
+              "one_liner_es": "**Ajusta dinámicamente** la autenticación según el contexto",
+              "examples_en": [
+                "Extra authentication from an unusual location"
+              ],
+              "examples_es": [
+                "Autenticación adicional desde una ubicación inusual"
               ]
             },
             {
@@ -208,6 +391,17 @@
               "examples": [
                 "最小権限",
                 "高リスク端末の制限"
+              ],
+              "es": "Reducción del alcance de amenazas",
+              "one_liner_en": "**Narrows how far** damage can spread",
+              "one_liner_es": "**Limita hasta dónde** puede extenderse el daño",
+              "examples_en": [
+                "Least privilege",
+                "Restricting high-risk devices"
+              ],
+              "examples_es": [
+                "Mínimo privilegio",
+                "Restricción de dispositivos de alto riesgo"
               ]
             },
             {
@@ -218,6 +412,15 @@
               "one_liner": "**定義済み方針**で権限を決める",
               "examples": [
                 "役割別アクセスポリシー"
+              ],
+              "es": "Control de acceso basado en políticas",
+              "one_liner_en": "Grants permissions from **predefined policies**",
+              "one_liner_es": "Concede permisos según **políticas predefinidas**",
+              "examples_en": [
+                "Role-based access policies"
+              ],
+              "examples_es": [
+                "Políticas de acceso por rol"
               ]
             },
             {
@@ -228,6 +431,15 @@
               "one_liner": "アクセスルールを**決めて更新**する役割",
               "examples": [
                 "職種別ポリシーの定義"
+              ],
+              "es": "Administrador de políticas",
+              "one_liner_en": "The role that **defines and updates** access rules",
+              "one_liner_es": "El rol que **define y actualiza** las reglas de acceso",
+              "examples_en": [
+                "Defining policies per job role"
+              ],
+              "examples_es": [
+                "Definición de políticas por puesto"
               ]
             },
             {
@@ -238,6 +450,15 @@
               "one_liner": "社内なら信用する領域（**排除対象**）",
               "examples": [
                 "境界内は無検証の従来型"
+              ],
+              "es": "Zona de confianza implícita",
+              "one_liner_en": "An area trusted just for being inside (**to be eliminated**)",
+              "one_liner_es": "Zona en la que se confía solo por estar dentro (**debe eliminarse**)",
+              "examples_en": [
+                "Legacy model: no checks inside the perimeter"
+              ],
+              "examples_es": [
+                "Modelo tradicional: sin verificación dentro del perímetro"
               ]
             },
             {
@@ -248,6 +469,15 @@
               "one_liner": "**アクセスする側**と守る対象",
               "examples": [
                 "医師→電子カルテ"
+              ],
+              "es": "Sujeto / sistema",
+              "one_liner_en": "**Who accesses** and what is being protected",
+              "one_liner_es": "**Quién accede** y qué se protege",
+              "examples_en": [
+                "Doctor → electronic medical records"
+              ],
+              "examples_es": [
+                "Médico → historia clínica electrónica"
               ]
             },
             {
@@ -259,9 +489,23 @@
               "examples": [
                 "ゲートウェイでの判定",
                 "アクセスログ"
+              ],
+              "es": "Punto de aplicación de políticas (PEP)",
+              "name_en": "Policy Enforcement Point (PEP)",
+              "one_liner_en": "The point that **enforces allow/deny** in practice",
+              "one_liner_es": "El punto que **aplica permitir/denegar** en la práctica",
+              "examples_en": [
+                "Gateway decisions",
+                "Access logs"
+              ],
+              "examples_es": [
+                "Decisiones en la pasarela",
+                "Registros de acceso"
               ]
             }
-          ]
+          ],
+          "title_en": "Zero trust",
+          "title_es": "Confianza cero (Zero Trust)"
         },
         {
           "id": "physical",
@@ -275,6 +519,15 @@
               "one_liner": "**車両の侵入**を防ぐ柱",
               "examples": [
                 "建物前の車止め"
+              ],
+              "es": "Bolardo",
+              "one_liner_en": "Posts that block **vehicle intrusion**",
+              "one_liner_es": "Postes que impiden la **entrada de vehículos**",
+              "examples_en": [
+                "Barrier posts in front of a building"
+              ],
+              "examples_es": [
+                "Postes de contención frente a un edificio"
               ]
             },
             {
@@ -285,6 +538,15 @@
               "one_liner": "境界を示し**人の侵入**を防ぐ柵",
               "examples": [
                 "チェーンリンクフェンス"
+              ],
+              "es": "Vallado",
+              "one_liner_en": "A barrier that marks the boundary and stops **people getting in**",
+              "one_liner_es": "Barrera que marca el perímetro e impide el **paso de personas**",
+              "examples_en": [
+                "Chain-link fence"
+              ],
+              "examples_es": [
+                "Valla de tela metálica"
               ]
             },
             {
@@ -296,6 +558,17 @@
               "examples": [
                 "集中監視",
                 "AI映像解析"
+              ],
+              "es": "Videovigilancia",
+              "one_liner_en": "**Monitors and records** with cameras",
+              "one_liner_es": "**Supervisa y graba** con cámaras",
+              "examples_en": [
+                "Centralized monitoring",
+                "AI video analytics"
+              ],
+              "examples_es": [
+                "Supervisión centralizada",
+                "Análisis de vídeo con IA"
               ]
             },
             {
@@ -307,6 +580,17 @@
               "examples": [
                 "受付確認",
                 "巡回警備"
+              ],
+              "es": "Guardia de seguridad",
+              "one_liner_en": "**People patrol and verify**",
+              "one_liner_es": "**Personas que patrullan y verifican**",
+              "examples_en": [
+                "Reception ID checks",
+                "Patrols"
+              ],
+              "examples_es": [
+                "Control de identidad en recepción",
+                "Rondas de vigilancia"
               ]
             },
             {
@@ -317,6 +601,15 @@
               "one_liner": "電子的に**入退室を許可**する証",
               "examples": [
                 "IC社員証"
+              ],
+              "es": "Tarjeta de acceso",
+              "one_liner_en": "A credential that **electronically grants entry**",
+              "one_liner_es": "Credencial que **autoriza la entrada electrónicamente**",
+              "examples_en": [
+                "Smart-card employee ID"
+              ],
+              "examples_es": [
+                "Tarjeta de empleado con chip"
               ]
             },
             {
@@ -328,11 +621,28 @@
               "examples": [
                 "駐車場照明",
                 "出入口照明"
+              ],
+              "es": "Iluminación",
+              "one_liner_en": "Light that aids **deterrence and monitoring**",
+              "one_liner_es": "La luz que ayuda a **disuadir y vigilar**",
+              "examples_en": [
+                "Parking lot lighting",
+                "Entrance lighting"
+              ],
+              "examples_es": [
+                "Iluminación del aparcamiento",
+                "Iluminación de accesos"
               ]
             }
-          ]
+          ],
+          "title_en": "Physical security",
+          "title_es": "Seguridad física"
         }
-      ]
+      ],
+      "title_en": "Fundamental security concepts",
+      "title_es": "Conceptos de seguridad fundamentales",
+      "blurb_en": "CIA, zero trust, physical security",
+      "blurb_es": "CIA, confianza cero y seguridad física"
     },
     {
       "id": "A-3",
@@ -354,6 +664,17 @@
               "examples": [
                 "新ソフト導入の承認",
                 "持ち出し承認"
+              ],
+              "es": "Proceso de aprobación",
+              "one_liner_en": "An authority **reviews** whether the change may proceed",
+              "one_liner_es": "Una autoridad **revisa** si el cambio puede seguir adelante",
+              "examples_en": [
+                "Approving new software",
+                "Approving equipment removal"
+              ],
+              "examples_es": [
+                "Aprobación de software nuevo",
+                "Aprobación de salida de equipos"
               ]
             },
             {
@@ -366,6 +687,19 @@
                 "経営者",
                 "開発者",
                 "利用部門"
+              ],
+              "es": "Parte interesada",
+              "one_liner_en": "**Parties affected** by the change",
+              "one_liner_es": "**Partes afectadas** por el cambio",
+              "examples_en": [
+                "Executives",
+                "Developers",
+                "Business users"
+              ],
+              "examples_es": [
+                "Directivos",
+                "Desarrolladores",
+                "Departamentos usuarios"
               ]
             },
             {
@@ -376,6 +710,15 @@
               "one_liner": "変更や事故の影響を**事前評価**",
               "examples": [
                 "パッチ前の業務影響評価"
+              ],
+              "es": "Análisis de impacto",
+              "one_liner_en": "**Assesses in advance** the effect of a change or incident",
+              "one_liner_es": "**Evalúa de antemano** el efecto de un cambio o incidente",
+              "examples_en": [
+                "Business impact review before patching"
+              ],
+              "examples_es": [
+                "Evaluación del impacto en el negocio antes de parchear"
               ]
             },
             {
@@ -387,6 +730,17 @@
               "examples": [
                 "脆弱性スキャン",
                 "侵入テスト"
+              ],
+              "es": "Resultados de pruebas",
+              "one_liner_en": "**Evidence that verifies** a control works",
+              "one_liner_es": "**Evidencia que verifica** que un control funciona",
+              "examples_en": [
+                "Vulnerability scans",
+                "Penetration tests"
+              ],
+              "examples_es": [
+                "Análisis de vulnerabilidades",
+                "Pruebas de penetración"
               ]
             },
             {
@@ -398,6 +752,17 @@
               "examples": [
                 "バックアップ",
                 "切り戻し手順"
+              ],
+              "es": "Plan de reversión",
+              "one_liner_en": "A **plan to roll back** if it fails",
+              "one_liner_es": "Un **plan para volver atrás** si falla",
+              "examples_en": [
+                "Backups",
+                "Rollback procedure"
+              ],
+              "examples_es": [
+                "Copias de seguridad",
+                "Procedimiento de reversión"
               ]
             },
             {
@@ -408,6 +773,15 @@
               "one_liner": "影響を抑えて作業する**時間枠**",
               "examples": [
                 "深夜の定期メンテ"
+              ],
+              "es": "Ventana de mantenimiento",
+              "one_liner_en": "A **time slot** for work with minimal impact",
+              "one_liner_es": "Un **intervalo de tiempo** para trabajar con impacto mínimo",
+              "examples_en": [
+                "Scheduled late-night maintenance"
+              ],
+              "examples_es": [
+                "Mantenimiento programado de madrugada"
               ]
             },
             {
@@ -419,9 +793,23 @@
               "examples": [
                 "パスワード手順",
                 "インシデント手順"
+              ],
+              "es": "Procedimiento operativo estándar (SOP)",
+              "name_en": "Standard Operating Procedure (SOP)",
+              "one_liner_en": "A document so work is done **the same way every time**",
+              "one_liner_es": "Documento para hacer el trabajo **siempre de la misma forma**",
+              "examples_en": [
+                "Password procedure",
+                "Incident procedure"
+              ],
+              "examples_es": [
+                "Procedimiento de contraseñas",
+                "Procedimiento de incidentes"
               ]
             }
-          ]
+          ],
+          "title_en": "Change process",
+          "title_es": "Proceso de cambio"
         },
         {
           "id": "impact-biz",
@@ -436,6 +824,17 @@
               "examples": [
                 "FWのIPリスト",
                 "メールフィルタ"
+              ],
+              "es": "Lista de permitidos / denegados",
+              "one_liner_en": "A list of **who gets in and who is blocked**",
+              "one_liner_es": "Lista de **a quién se deja pasar y a quién se bloquea**",
+              "examples_en": [
+                "Firewall IP lists",
+                "Email filters"
+              ],
+              "examples_es": [
+                "Listas de IP del cortafuegos",
+                "Filtros de correo"
               ]
             },
             {
@@ -447,6 +846,17 @@
               "examples": [
                 "カメラ制限",
                 "外部共有制限"
+              ],
+              "es": "Actividades restringidas",
+              "one_liner_en": "**Turns off** unneeded or risky features",
+              "one_liner_es": "**Desactiva** funciones innecesarias o peligrosas",
+              "examples_en": [
+                "Camera restrictions",
+                "External sharing restrictions"
+              ],
+              "examples_es": [
+                "Restricción de la cámara",
+                "Restricción del uso compartido externo"
               ]
             },
             {
@@ -457,6 +867,15 @@
               "one_liner": "システムが**使えない時間**",
               "examples": [
                 "パッチ適用の計画停止"
+              ],
+              "es": "Tiempo de inactividad",
+              "one_liner_en": "Time when the system is **unavailable**",
+              "one_liner_es": "Tiempo en que el sistema **no está disponible**",
+              "examples_en": [
+                "Planned outage for patching"
+              ],
+              "examples_es": [
+                "Parada planificada para aplicar parches"
               ]
             },
             {
@@ -467,6 +886,15 @@
               "one_liner": "止めて起動し直し**変更を反映**",
               "examples": [
                 "設定変更後の再起動"
+              ],
+              "es": "Reinicio de la aplicación",
+              "one_liner_en": "Stop and start again to **apply the change**",
+              "one_liner_es": "Detener e iniciar de nuevo para **aplicar el cambio**",
+              "examples_en": [
+                "Restart after a config change"
+              ],
+              "examples_es": [
+                "Reinicio tras un cambio de configuración"
               ]
             },
             {
@@ -478,6 +906,17 @@
               "examples": [
                 "COBOL基幹",
                 "旧OS上の制御系"
+              ],
+              "es": "Aplicación heredada",
+              "one_liner_en": "An **old app** that can't be updated",
+              "one_liner_es": "Una **aplicación antigua** que no se puede actualizar",
+              "examples_en": [
+                "COBOL core systems",
+                "Control systems on old OSes"
+              ],
+              "examples_es": [
+                "Sistemas centrales en COBOL",
+                "Sistemas de control en SO antiguos"
               ]
             },
             {
@@ -489,11 +928,28 @@
               "examples": [
                 "外部ライブラリ",
                 "クラウド部品"
+              ],
+              "es": "Dependencias",
+              "one_liner_en": "**Links** to other components",
+              "one_liner_es": "**Vínculos** con otros componentes",
+              "examples_en": [
+                "External libraries",
+                "Cloud components"
+              ],
+              "examples_es": [
+                "Bibliotecas externas",
+                "Componentes en la nube"
               ]
             }
-          ]
+          ],
+          "title_en": "Impacts of change",
+          "title_es": "Impactos del cambio"
         }
-      ]
+      ],
+      "title_en": "Change management and its security impact",
+      "title_es": "Gestión de cambios y su impacto en la seguridad",
+      "blurb_en": "Decide before you change; roll back if it fails",
+      "blurb_es": "Decide antes de cambiar; revierte si falla"
     },
     {
       "id": "A-4",
@@ -515,6 +971,17 @@
               "examples": [
                 "公開鍵で暗号化",
                 "秘密鍵で復号"
+              ],
+              "es": "Clave pública y clave privada",
+              "one_liner_en": "**A key pair** used for encryption and signing",
+              "one_liner_es": "**Un par de claves** para cifrar y firmar",
+              "examples_en": [
+                "Encrypt with the public key",
+                "Decrypt with the private key"
+              ],
+              "examples_es": [
+                "Cifrar con la clave pública",
+                "Descifrar con la clave privada"
               ]
             },
             {
@@ -525,6 +992,15 @@
               "one_liner": "鍵を信頼できる**第三者に預ける**",
               "examples": [
                 "紛失時の鍵復旧"
+              ],
+              "es": "Custodia de claves",
+              "one_liner_en": "Keys **held by a trusted third party**",
+              "one_liner_es": "Claves **depositadas en un tercero de confianza**",
+              "examples_en": [
+                "Key recovery after loss"
+              ],
+              "examples_es": [
+                "Recuperación de claves tras una pérdida"
               ]
             },
             {
@@ -536,6 +1012,17 @@
               "examples": [
                 "フルディスク",
                 "ファイル単位"
+              ],
+              "es": "Nivel de cifrado",
+              "one_liner_en": "Decides **at what granularity** to encrypt",
+              "one_liner_es": "Decide **con qué granularidad** cifrar",
+              "examples_en": [
+                "Full disk",
+                "Per file"
+              ],
+              "examples_es": [
+                "Disco completo",
+                "Por archivo"
               ]
             },
             {
@@ -547,6 +1034,18 @@
               "examples": [
                 "メール暗号化",
                 "デジタル署名"
+              ],
+              "es": "Cifrado asimétrico",
+              "name_en": "Asymmetric encryption",
+              "one_liner_en": "A **two-key scheme**: public and private",
+              "one_liner_es": "Un **esquema de dos claves**: pública y privada",
+              "examples_en": [
+                "Email encryption",
+                "Digital signatures"
+              ],
+              "examples_es": [
+                "Cifrado de correo",
+                "Firmas digitales"
               ]
             },
             {
@@ -558,6 +1057,18 @@
               "examples": [
                 "AES",
                 "大量データ暗号"
+              ],
+              "es": "Cifrado simétrico",
+              "name_en": "Symmetric encryption",
+              "one_liner_en": "**The same key** encrypts and decrypts",
+              "one_liner_es": "**La misma clave** cifra y descifra",
+              "examples_en": [
+                "AES",
+                "Bulk data encryption"
+              ],
+              "examples_es": [
+                "AES",
+                "Cifrado de grandes volúmenes de datos"
               ]
             },
             {
@@ -569,6 +1080,17 @@
               "examples": [
                 "Diffie-Hellman",
                 "RSA鍵交換"
+              ],
+              "es": "Intercambio de claves",
+              "one_liner_en": "How to **share a common key safely**",
+              "one_liner_es": "Cómo **compartir una clave común de forma segura**",
+              "examples_en": [
+                "Diffie-Hellman",
+                "RSA key exchange"
+              ],
+              "examples_es": [
+                "Diffie-Hellman",
+                "Intercambio de claves RSA"
               ]
             },
             {
@@ -578,6 +1100,15 @@
               "en": "Algorithm",
               "one_liner": "平文を暗号文にする**計算手順**",
               "examples": [
+                "AES"
+              ],
+              "es": "Algoritmo",
+              "one_liner_en": "The **computational steps** that turn plaintext into ciphertext",
+              "one_liner_es": "Los **pasos de cálculo** que convierten texto claro en cifrado",
+              "examples_en": [
+                "AES"
+              ],
+              "examples_es": [
                 "AES"
               ]
             },
@@ -590,9 +1121,22 @@
               "examples": [
                 "128ビット",
                 "256ビット"
+              ],
+              "es": "Longitud de clave",
+              "one_liner_en": "Longer is stronger but **slower to process**",
+              "one_liner_es": "Más larga es más segura, pero **más lenta de procesar**",
+              "examples_en": [
+                "128-bit",
+                "256-bit"
+              ],
+              "examples_es": [
+                "128 bits",
+                "256 bits"
               ]
             }
-          ]
+          ],
+          "title_en": "Keys and encryption methods",
+          "title_es": "Claves y métodos de cifrado"
         },
         {
           "id": "key-protect",
@@ -607,6 +1151,17 @@
               "examples": [
                 "銀行の鍵管理",
                 "署名鍵保護"
+              ],
+              "es": "Módulo de seguridad de hardware (HSM)",
+              "one_liner_en": "**Dedicated hardware** that protects keys",
+              "one_liner_es": "**Hardware dedicado** que protege las claves",
+              "examples_en": [
+                "Bank key management",
+                "Signing key protection"
+              ],
+              "examples_es": [
+                "Gestión de claves en bancos",
+                "Protección de claves de firma"
               ]
             },
             {
@@ -617,6 +1172,16 @@
               "one_liner": "鍵の一生を**まとめて管理**",
               "examples": [
                 "クラウドの暗号鍵管理"
+              ],
+              "es": "Sistema de gestión de claves (KMS)",
+              "name_en": "Key Management System (KMS)",
+              "one_liner_en": "**Manages a key's whole lifecycle** in one place",
+              "one_liner_es": "**Gestiona todo el ciclo de vida** de las claves en un solo lugar",
+              "examples_en": [
+                "Cloud encryption key management"
+              ],
+              "examples_es": [
+                "Gestión de claves de cifrado en la nube"
               ]
             },
             {
@@ -627,9 +1192,20 @@
               "one_liner": "端末内の**隔離された保護領域**",
               "examples": [
                 "生体認証データの保護"
+              ],
+              "es": "Enclave seguro",
+              "one_liner_en": "An **isolated protected area** inside a device",
+              "one_liner_es": "Un **área protegida y aislada** dentro del dispositivo",
+              "examples_en": [
+                "Protecting biometric data"
+              ],
+              "examples_es": [
+                "Protección de datos biométricos"
               ]
             }
-          ]
+          ],
+          "title_en": "Protecting keys",
+          "title_es": "Protección de claves"
         },
         {
           "id": "obfuscation",
@@ -643,6 +1219,15 @@
               "one_liner": "データの中に**秘密を隠す**",
               "examples": [
                 "画像へのメッセージ埋め込み"
+              ],
+              "es": "Esteganografía",
+              "one_liner_en": "**Hides secrets** inside other data",
+              "one_liner_es": "**Oculta secretos** dentro de otros datos",
+              "examples_en": [
+                "Embedding a message in an image"
+              ],
+              "examples_es": [
+                "Incrustar un mensaje en una imagen"
               ]
             },
             {
@@ -653,6 +1238,15 @@
               "one_liner": "機密を別の**無害な値に置換**",
               "examples": [
                 "カード番号のトークン"
+              ],
+              "es": "Tokenización",
+              "one_liner_en": "Replaces sensitive data with a **harmless substitute**",
+              "one_liner_es": "Sustituye datos sensibles por un **valor inofensivo**",
+              "examples_en": [
+                "Card number tokens"
+              ],
+              "examples_es": [
+                "Tokens de números de tarjeta"
               ]
             },
             {
@@ -663,9 +1257,20 @@
               "one_liner": "一部を**伏せて見せる**",
               "examples": [
                 "**** **** **** 3456"
+              ],
+              "es": "Enmascaramiento de datos",
+              "one_liner_en": "Shows data with **part of it hidden**",
+              "one_liner_es": "Muestra los datos con **una parte oculta**",
+              "examples_en": [
+                "**** **** **** 3456"
+              ],
+              "examples_es": [
+                "**** **** **** 3456"
               ]
             }
-          ]
+          ],
+          "title_en": "Obfuscation and data hiding",
+          "title_es": "Ofuscación y ocultación de datos"
         },
         {
           "id": "hash",
@@ -680,6 +1285,17 @@
               "examples": [
                 "パスワード保存",
                 "改ざん検知"
+              ],
+              "es": "Hash",
+              "one_liner_en": "An irreversible **fixed-length fingerprint**",
+              "one_liner_es": "Una **huella de longitud fija** irreversible",
+              "examples_en": [
+                "Password storage",
+                "Tamper detection"
+              ],
+              "examples_es": [
+                "Almacenamiento de contraseñas",
+                "Detección de manipulaciones"
               ]
             },
             {
@@ -690,6 +1306,15 @@
               "one_liner": "ハッシュ前に足す**ランダム値**",
               "examples": [
                 "レインボーテーブル対策"
+              ],
+              "es": "Sal (salt)",
+              "one_liner_en": "A **random value** added before hashing",
+              "one_liner_es": "Un **valor aleatorio** que se añade antes del hash",
+              "examples_en": [
+                "Defense against rainbow tables"
+              ],
+              "examples_es": [
+                "Defensa contra tablas arcoíris"
               ]
             },
             {
@@ -701,6 +1326,17 @@
               "examples": [
                 "署名付きメール",
                 "電子契約"
+              ],
+              "es": "Firma digital",
+              "one_liner_en": "Proves who sent it and that it **wasn't altered**",
+              "one_liner_es": "Demuestra quién lo envió y que **no fue alterado**",
+              "examples_en": [
+                "Signed email",
+                "Electronic contracts"
+              ],
+              "examples_es": [
+                "Correo firmado",
+                "Contratos electrónicos"
               ]
             },
             {
@@ -712,9 +1348,22 @@
               "examples": [
                 "PBKDF2",
                 "bcrypt"
+              ],
+              "es": "Estiramiento de claves",
+              "one_liner_en": "Hashes repeatedly to **slow down brute force**",
+              "one_liner_es": "Aplica hash repetidamente para **frenar la fuerza bruta**",
+              "examples_en": [
+                "PBKDF2",
+                "bcrypt"
+              ],
+              "examples_es": [
+                "PBKDF2",
+                "bcrypt"
               ]
             }
-          ]
+          ],
+          "title_en": "Hashing and signatures",
+          "title_es": "Hash y firmas"
         },
         {
           "id": "ledger",
@@ -728,6 +1377,15 @@
               "one_liner": "改ざんしにくい**分散型の台帳**",
               "examples": [
                 "ビットコイン取引"
+              ],
+              "es": "Cadena de bloques (blockchain)",
+              "one_liner_en": "A **distributed ledger** that's hard to tamper with",
+              "one_liner_es": "Un **registro distribuido** difícil de manipular",
+              "examples_en": [
+                "Bitcoin transactions"
+              ],
+              "examples_es": [
+                "Transacciones de Bitcoin"
               ]
             },
             {
@@ -738,9 +1396,20 @@
               "one_liner": "誰でも見られる**不変の記録**",
               "examples": [
                 "公開取引履歴"
+              ],
+              "es": "Registro público",
+              "one_liner_en": "An **immutable record** anyone can view",
+              "one_liner_es": "Un **registro inmutable** que cualquiera puede ver",
+              "examples_en": [
+                "Public transaction history"
+              ],
+              "examples_es": [
+                "Historial público de transacciones"
               ]
             }
-          ]
+          ],
+          "title_en": "Distributed ledgers",
+          "title_es": "Registros distribuidos"
         },
         {
           "id": "certs",
@@ -754,6 +1423,16 @@
               "one_liner": "証明書を発行する**信頼できる機関**",
               "examples": [
                 "SSL/TLS証明書の発行"
+              ],
+              "es": "Autoridad de certificación (CA)",
+              "name_en": "Certificate Authority (CA)",
+              "one_liner_en": "A **trusted organization** that issues certificates",
+              "one_liner_es": "Una **entidad de confianza** que emite certificados",
+              "examples_en": [
+                "Issuing SSL/TLS certificates"
+              ],
+              "examples_es": [
+                "Emisión de certificados SSL/TLS"
               ]
             },
             {
@@ -764,6 +1443,16 @@
               "one_liner": "期限前に無効にした**証明書一覧**",
               "examples": [
                 "鍵漏洩時の失効"
+              ],
+              "es": "Lista de revocación de certificados (CRL)",
+              "name_en": "Certificate Revocation List (CRL)",
+              "one_liner_en": "A **list of certificates** revoked before expiry",
+              "one_liner_es": "Una **lista de certificados** revocados antes de caducar",
+              "examples_en": [
+                "Revocation after key compromise"
+              ],
+              "examples_es": [
+                "Revocación tras la filtración de una clave"
               ]
             },
             {
@@ -774,6 +1463,16 @@
               "one_liner": "自分で発行する**試験・開発用**証明書",
               "examples": [
                 "ローカルHTTPS"
+              ],
+              "es": "Certificado autofirmado",
+              "name_en": "Self-signed certificate",
+              "one_liner_en": "A certificate you issue yourself, **for testing and development**",
+              "one_liner_es": "Un certificado emitido por uno mismo, **para pruebas y desarrollo**",
+              "examples_en": [
+                "Local HTTPS"
+              ],
+              "examples_es": [
+                "HTTPS local"
               ]
             },
             {
@@ -784,6 +1483,15 @@
               "one_liner": "CAが身元確認して発行する証明書",
               "examples": [
                 "公開Webサイトの証明書"
+              ],
+              "es": "Certificado de terceros",
+              "one_liner_en": "A certificate issued by a CA **after verifying identity**",
+              "one_liner_es": "Certificado emitido por una CA **tras verificar la identidad**",
+              "examples_en": [
+                "Certificates for public websites"
+              ],
+              "examples_es": [
+                "Certificados de sitios web públicos"
               ]
             },
             {
@@ -794,11 +1502,28 @@
               "one_liner": "信頼の連鎖の**出発点**",
               "examples": [
                 "ルート証明書"
+              ],
+              "es": "Raíz de confianza",
+              "one_liner_en": "The **starting point** of the chain of trust",
+              "one_liner_es": "El **punto de partida** de la cadena de confianza",
+              "examples_en": [
+                "Root certificates"
+              ],
+              "examples_es": [
+                "Certificados raíz"
               ]
             }
-          ]
+          ],
+          "title_en": "Certificates and trust",
+          "title_es": "Certificados y confianza"
         }
-      ]
+      ],
+      "title_en": "Choosing appropriate cryptography",
+      "title_es": "Elección de la criptografía adecuada",
+      "blurb_en": "Keys, hiding, hashing, certificates",
+      "blurb_es": "Claves, ocultación, hash y certificados"
     }
-  ]
+  ],
+  "title_en": "General Security Concepts",
+  "title_es": "Conceptos generales de seguridad"
 }

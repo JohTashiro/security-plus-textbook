@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A-1 セキュリティコントロールの比較 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain A</span></a>
-  <a class="nav-back" href="index.html">← Domain A ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain A ハブ</span><span data-i18n="en">← Domain A hub</span><span data-i18n="es">← Hub del Domain A</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain A</h2>
-    <a href="a-1.html" class="active">A-1 セキュリティコントロールの比較</a><a href="a-2.html">A-2 セキュリティコンセプトの基礎</a><a href="a-3.html">A-3 変更管理とセキュリティへの影響</a><a href="a-4.html">A-4 適切な暗号化の選択</a>
+    <a href="a-1.html" class="active">A-1 <span data-i18n="ja">セキュリティコントロールの比較</span><span data-i18n="en">Comparing security controls</span><span data-i18n="es">Comparación de controles de seguridad</span></a><a href="a-2.html">A-2 <span data-i18n="ja">セキュリティコンセプトの基礎</span><span data-i18n="en">Fundamental security concepts</span><span data-i18n="es">Conceptos de seguridad fundamentales</span></a><a href="a-3.html">A-3 <span data-i18n="ja">変更管理とセキュリティへの影響</span><span data-i18n="en">Change management and its security impact</span><span data-i18n="es">Gestión de cambios y su impacto en la seguridad</span></a><a href="a-4.html">A-4 <span data-i18n="ja">適切な暗号化の選択</span><span data-i18n="en">Choosing appropriate cryptography</span><span data-i18n="es">Elección de la criptografía adecuada</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain A 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain A <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,137 +55,202 @@
       
 <header class="hero">
   <p class="eyebrow">Domain A · A-1</p>
-  <h1>セキュリティコントロールの比較</h1>
-  <p>カテゴリ × 種類で対策を分類する</p>
+  <h1><span data-i18n="ja">セキュリティコントロールの比較</span><span data-i18n="en">Comparing security controls</span><span data-i18n="es">Comparación de controles de seguridad</span></h1>
+  <p data-i18n="ja">カテゴリ × 種類で対策を分類する</p>
+  <p data-i18n="en">Classify controls by category × type</p>
+  <p data-i18n="es">Clasifica los controles por categoría × tipo</p>
   <div class="meta-row">
-    <span class="chip">用語 10</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 1.1</span>
+    <span class="chip"><span data-i18n="ja">用語 10</span><span data-i18n="en">10 terms</span><span data-i18n="es">10 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 1.1</span><span data-i18n="en">Official 1.1</span><span data-i18n="es">Oficial 1.1</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 10問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 10問</span><span data-i18n="en">Quiz (10)</span><span data-i18n="es">Cuestionario (10)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">カテゴリ（何に着目するか）</h2>
-<article class="memo-card" id="a-1-technical" data-search="技術的コントロール technical 技術・ソフトで守る対策 暗号化 認証 アクセス制御">
-  <h3>技術的コントロール<span class="en">Technical</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">カテゴリ（何に着目するか）</span><span data-i18n="en">Category (what it focuses on)</span><span data-i18n="es">Categoría (en qué se centra)</span></h2>
+<article class="memo-card" id="a-1-technical" data-search="技術的コントロール technical controles técnicos 技術・ソフトで守る対策 暗号化 認証 アクセス制御">
+  <h3>
+    <span data-i18n="ja">技術的コントロール<span class="en">Technical</span></span>
+    <span data-i18n="en">Technical controls</span>
+    <span data-i18n="es">Controles técnicos</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">技術・ソフト</span>で守る対策</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">技術・ソフト</span>で守る対策</p><p data-i18n="en" class="one-liner">Protection through <span class="hl">technology and software</span></p><p data-i18n="es" class="one-liner">Protección mediante <span class="hl">tecnología y software</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>暗号化</li><li>認証</li><li>アクセス制御</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>暗号化</li><li>認証</li><li>アクセス制御</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Encryption</li><li>Authentication</li><li>Access control</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Cifrado</li><li>Autenticación</li><li>Control de acceso</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-1-managerial" data-search="管理的コントロール managerial 方針・体制づくりの対策 セキュリティポリシー 監査 手順書">
-  <h3>管理的コントロール<span class="en">Managerial</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-1-managerial" data-search="管理的コントロール managerial controles de gestión 方針・体制づくりの対策 セキュリティポリシー 監査 手順書">
+  <h3>
+    <span data-i18n="ja">管理的コントロール<span class="en">Managerial</span></span>
+    <span data-i18n="en">Managerial controls</span>
+    <span data-i18n="es">Controles de gestión</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">方針・体制</span>づくりの対策</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">方針・体制</span>づくりの対策</p><p data-i18n="en" class="one-liner">Measures that build <span class="hl">policies and governance</span></p><p data-i18n="es" class="one-liner">Medidas que establecen <span class="hl">políticas y gobierno</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>セキュリティポリシー</li><li>監査</li><li>手順書</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>セキュリティポリシー</li><li>監査</li><li>手順書</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Security policy</li><li>Audits</li><li>Procedure documents</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Política de seguridad</li><li>Auditorías</li><li>Documentos de procedimientos</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-1-operational" data-search="運営的コントロール operational 日々の運用で回す対策 教育訓練 ログ分析 パッチ適用">
-  <h3>運営的コントロール<span class="en">Operational</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-1-operational" data-search="運営的コントロール operational controles operativos 日々の運用で回す対策 教育訓練 ログ分析 パッチ適用">
+  <h3>
+    <span data-i18n="ja">運営的コントロール<span class="en">Operational</span></span>
+    <span data-i18n="en">Operational controls</span>
+    <span data-i18n="es">Controles operativos</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">日々の運用</span>で回す対策</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">日々の運用</span>で回す対策</p><p data-i18n="en" class="one-liner">Measures carried out through <span class="hl">day-to-day operations</span></p><p data-i18n="es" class="one-liner">Medidas aplicadas en las <span class="hl">operaciones diarias</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>教育訓練</li><li>ログ分析</li><li>パッチ適用</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>教育訓練</li><li>ログ分析</li><li>パッチ適用</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Training</li><li>Log analysis</li><li>Patching</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Formación</li><li>Análisis de registros</li><li>Aplicación de parches</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-1-physical" data-search="物理的コントロール physical 施設・設備で守る対策 入退室管理 フェンス ボラード">
-  <h3>物理的コントロール<span class="en">Physical</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-1-physical" data-search="物理的コントロール physical controles físicos 施設・設備で守る対策 入退室管理 フェンス ボラード">
+  <h3>
+    <span data-i18n="ja">物理的コントロール<span class="en">Physical</span></span>
+    <span data-i18n="en">Physical controls</span>
+    <span data-i18n="es">Controles físicos</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">施設・設備</span>で守る対策</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">施設・設備</span>で守る対策</p><p data-i18n="en" class="one-liner">Protection of <span class="hl">facilities and equipment</span></p><p data-i18n="es" class="one-liner">Protección de <span class="hl">instalaciones y equipos</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>入退室管理</li><li>フェンス</li><li>ボラード</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>入退室管理</li><li>フェンス</li><li>ボラード</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Entry/exit control</li><li>Fences</li><li>Bollards</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Control de acceso a instalaciones</li><li>Vallas</li><li>Bolardos</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">種類（いつ・何のためか）</h2>
-<article class="memo-card" id="a-1-preventive" data-search="予防的コントロール preventive 起きる前に未然に防ぐ ファイアウォール アクセス制御">
-  <h3>予防的コントロール<span class="en">Preventive</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">種類（いつ・何のためか）</span><span data-i18n="en">Type (when and why)</span><span data-i18n="es">Tipo (cuándo y para qué)</span></h2>
+<article class="memo-card" id="a-1-preventive" data-search="予防的コントロール preventive controles preventivos 起きる前に未然に防ぐ ファイアウォール アクセス制御">
+  <h3>
+    <span data-i18n="ja">予防的コントロール<span class="en">Preventive</span></span>
+    <span data-i18n="en">Preventive controls</span>
+    <span data-i18n="es">Controles preventivos</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">起きる前に<span class="hl">未然に防ぐ</span></p>
+    <p data-i18n="ja" class="one-liner">起きる前に<span class="hl">未然に防ぐ</span></p><p data-i18n="en" class="one-liner"><span class="hl">Stops incidents</span> before they happen</p><p data-i18n="es" class="one-liner"><span class="hl">Evita incidentes</span> antes de que ocurran</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ファイアウォール</li><li>アクセス制御</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-1-deterrent" data-search="抑止的コントロール deterrent 心理的に思いとどまらせる 監視カメラ掲示 警告バナー">
-  <h3>抑止的コントロール<span class="en">Deterrent</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">心理的に</span>思いとどまらせる</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>監視カメラ掲示</li><li>警告バナー</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-1-detective" data-search="検出的コントロール detective 異常や攻撃に早く気づく ログ監視 ids/ips">
-  <h3>検出的コントロール<span class="en">Detective</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">異常や攻撃に<span class="hl">早く気づく</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ログ監視</li><li>IDS/IPS</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ファイアウォール</li><li>アクセス制御</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Firewall</li><li>Access control</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Cortafuegos</li><li>Control de acceso</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-1-corrective" data-search="是正的コントロール corrective 発生後に直して再発防止 隔離・駆除 バックアップ復旧 パッチ">
-  <h3>是正的コントロール<span class="en">Corrective</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-1-deterrent" data-search="抑止的コントロール deterrent controles disuasorios 心理的に思いとどまらせる 監視カメラ掲示 警告バナー">
+  <h3>
+    <span data-i18n="ja">抑止的コントロール<span class="en">Deterrent</span></span>
+    <span data-i18n="en">Deterrent controls</span>
+    <span data-i18n="es">Controles disuasorios</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">発生後に<span class="hl">直して再発防止</span></p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">心理的に</span>思いとどまらせる</p><p data-i18n="en" class="one-liner"><span class="hl">Psychologically</span> discourages attackers</p><p data-i18n="es" class="one-liner">Disuade al atacante <span class="hl">psicológicamente</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>隔離・駆除</li><li>バックアップ復旧</li><li>パッチ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>監視カメラ掲示</li><li>警告バナー</li></ul>
+      <ul class="example-list" data-i18n="en"><li>CCTV warning signs</li><li>Warning banners</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Carteles de videovigilancia</li><li>Avisos de advertencia</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-1-compensating" data-search="代替的コントロール compensating 本命が無理なときの次善策 レガシーのネットワーク分離">
-  <h3>代替的コントロール<span class="en">Compensating</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-1-detective" data-search="検出的コントロール detective controles de detección 異常や攻撃に早く気づく ログ監視 ids/ips">
+  <h3>
+    <span data-i18n="ja">検出的コントロール<span class="en">Detective</span></span>
+    <span data-i18n="en">Detective controls</span>
+    <span data-i18n="es">Controles de detección</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">本命が無理なときの<span class="hl">次善策</span></p>
+    <p data-i18n="ja" class="one-liner">異常や攻撃に<span class="hl">早く気づく</span></p><p data-i18n="en" class="one-liner"><span class="hl">Notices</span> anomalies and attacks quickly</p><p data-i18n="es" class="one-liner"><span class="hl">Detecta rápidamente</span> anomalías y ataques</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>レガシーのネットワーク分離</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ログ監視</li><li>IDS/IPS</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Log monitoring</li><li>IDS/IPS</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Supervisión de registros</li><li>IDS/IPS</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-1-directive" data-search="指示的コントロール directive トップダウンで方針を示す 情報セキュリティ方針 法令準拠の要求">
-  <h3>指示的コントロール<span class="en">Directive</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-1-corrective" data-search="是正的コントロール corrective controles correctivos 発生後に直して再発防止 隔離・駆除 バックアップ復旧 パッチ">
+  <h3>
+    <span data-i18n="ja">是正的コントロール<span class="en">Corrective</span></span>
+    <span data-i18n="en">Corrective controls</span>
+    <span data-i18n="es">Controles correctivos</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">トップダウン</span>で方針を示す</p>
+    <p data-i18n="ja" class="one-liner">発生後に<span class="hl">直して再発防止</span></p><p data-i18n="en" class="one-liner"><span class="hl">Fixes and prevents recurrence</span> after an incident</p><p data-i18n="es" class="one-liner"><span class="hl">Corrige y evita que se repita</span> tras un incidente</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>情報セキュリティ方針</li><li>法令準拠の要求</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>隔離・駆除</li><li>バックアップ復旧</li><li>パッチ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Isolation and removal</li><li>Restore from backup</li><li>Patches</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Aislamiento y eliminación</li><li>Restauración desde copia de seguridad</li><li>Parches</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-1-compensating" data-search="代替的コントロール compensating controles compensatorios 本命が無理なときの次善策 レガシーのネットワーク分離">
+  <h3>
+    <span data-i18n="ja">代替的コントロール<span class="en">Compensating</span></span>
+    <span data-i18n="en">Compensating controls</span>
+    <span data-i18n="es">Controles compensatorios</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">本命が無理なときの<span class="hl">次善策</span></p><p data-i18n="en" class="one-liner">The <span class="hl">next-best measure</span> when the primary control isn't possible</p><p data-i18n="es" class="one-liner">La <span class="hl">mejor alternativa</span> cuando el control principal no es viable</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>レガシーのネットワーク分離</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Network isolation for legacy systems</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Aislamiento de red de sistemas heredados</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-1-directive" data-search="指示的コントロール directive controles directivos トップダウンで方針を示す 情報セキュリティ方針 法令準拠の要求">
+  <h3>
+    <span data-i18n="ja">指示的コントロール<span class="en">Directive</span></span>
+    <span data-i18n="en">Directive controls</span>
+    <span data-i18n="es">Controles directivos</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner"><span class="hl">トップダウン</span>で方針を示す</p><p data-i18n="en" class="one-liner">Sets direction <span class="hl">top-down</span></p><p data-i18n="es" class="one-liner">Marca la dirección <span class="hl">de arriba abajo</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>情報セキュリティ方針</li><li>法令準拠の要求</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Information security policy</li><li>Regulatory compliance requirements</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Política de seguridad de la información</li><li>Requisitos de cumplimiento normativo</li></ul>
     </div>
   </div>
 </article>
@@ -187,19 +258,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（10問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（10問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (10 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (10 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
-  <script type="application/json" id="quiz-data">[{"term": "a-1-technical", "stem": "ある企業がメール通信の暗号化と多要素認証を導入した。これらは主にどのコントロール・カテゴリに分類されるか。", "choices": ["技術的（Technical）", "管理的（Managerial）", "運営的（Operational）", "物理的（Physical）"], "answer": 0, "explain": "暗号化や認証は技術・ソフトウェアで実現する対策なので技術的コントロール。"}, {"term": "a-1-managerial", "stem": "経営層が情報セキュリティポリシーを策定し、年次監査の実施を定めた。これは主にどのカテゴリか。", "choices": ["技術的", "管理的", "運営的", "物理的"], "answer": 1, "explain": "ポリシー策定や監査の仕組みづくりは管理的（Managerial）コントロール。"}, {"term": "a-1-operational", "stem": "SOCが毎日ログを確認し、従業員向けのフィッシング訓練を定期実施している。主にどのカテゴリか。", "choices": ["技術的", "管理的", "運営的", "物理的"], "answer": 2, "explain": "教育訓練や日常のログ確認・パッチ運用は運営的（Operational）。"}, {"term": "a-1-physical", "stem": "データセンター入口にフェンスと入退室ゲートを設置した。主にどのカテゴリか。", "choices": ["技術的", "管理的", "運営的", "物理的"], "answer": 3, "explain": "施設・設備への物理アクセスを制御するので物理的コントロール。"}, {"term": "a-1-preventive", "stem": "境界ファイアウォールが未許可のインバウンド通信を遮断し、攻撃が届く前に止めている。これはどのコントロール種類か。", "choices": ["予防的（Preventive）", "検出的（Detective）", "是正的（Corrective）", "代替的（Compensating）"], "answer": 0, "explain": "発生する前に防ぐのが予防的。ファイアウォールは典型例。"}, {"term": "a-1-deterrent", "stem": "建物入口に「監視カメラ作動中・不正侵入は処罰対象」と掲示した。主目的として最も適切な種類はどれか。", "choices": ["是正的", "抑止的（Deterrent）", "代替的", "技術的"], "answer": 1, "explain": "警告掲示は心理的に思いとどまらせる抑止的コントロール。"}, {"term": "a-1-detective", "stem": "IDSが異常トラフィックを検知してアラートを上げた。これはどの種類か。", "choices": ["予防的", "抑止的", "検出的（Detective）", "指示的"], "answer": 2, "explain": "インシデントの発生に気づくのが検出的。ログ監視やIDSが該当。"}, {"term": "a-1-corrective", "stem": "マルウェア感染端末を隔離し、バックアップから復旧してパッチを当てた。これはどの種類か。", "choices": ["予防的", "抑止的", "検出的", "是正的（Corrective）"], "answer": 3, "explain": "発生後に被害を修復し再発を防ぐのが是正的。"}, {"term": "a-1-compensating", "stem": "レガシーサーバにパッチを当てられないため、代わりに厳密なネットワーク分離とアクセス制限を行った。これはどの種類か。", "choices": ["指示的", "代替的（Compensating）", "抑止的", "管理的"], "answer": 1, "explain": "本来の対策が困難なときの次善策が代替的（補償的）コントロール。"}, {"term": "a-1-directive", "stem": "CEOがセキュリティ基本方針を全社に示し、法令準拠を義務付けた。これはどのコントロール種類か。", "choices": ["検出的", "是正的", "指示的（Directive）", "技術的"], "answer": 2, "explain": "トップダウンで方針・要求を示すのが指示的コントロール。"}]</script>
+  <script type="application/json" id="quiz-data">[{"term": "a-1-technical", "stem": "ある企業がメール通信の暗号化と多要素認証を導入した。これらは主にどのコントロール・カテゴリに分類されるか。", "choices": ["技術的（Technical）", "管理的（Managerial）", "運営的（Operational）", "物理的（Physical）"], "answer": 0, "explain": "暗号化や認証は技術・ソフトウェアで実現する対策なので技術的コントロール。", "stem_en": "A company introduced email encryption and multifactor authentication. Which control category do these mainly fall under?", "choices_en": ["Technical", "Managerial", "Operational", "Physical"], "explain_en": "Encryption and authentication are implemented with technology and software, so they are technical controls.", "stem_es": "Una empresa implantó el cifrado del correo y la autenticación multifactor. ¿En qué categoría de control encajan principalmente?", "choices_es": ["Técnico", "De gestión", "Operativo", "Físico"], "explain_es": "El cifrado y la autenticación se implementan con tecnología y software, por lo que son controles técnicos."}, {"term": "a-1-managerial", "stem": "経営層が情報セキュリティポリシーを策定し、年次監査の実施を定めた。これは主にどのカテゴリか。", "choices": ["技術的", "管理的", "運営的", "物理的"], "answer": 1, "explain": "ポリシー策定や監査の仕組みづくりは管理的（Managerial）コントロール。", "stem_en": "Senior management drafted an information security policy and required annual audits. Which category is this mainly?", "choices_en": ["Technical", "Managerial", "Operational", "Physical"], "explain_en": "Creating policies and audit frameworks is a managerial control.", "stem_es": "La dirección redactó una política de seguridad de la información y exigió auditorías anuales. ¿De qué categoría se trata principalmente?", "choices_es": ["Técnico", "De gestión", "Operativo", "Físico"], "explain_es": "Crear políticas y marcos de auditoría es un control de gestión."}, {"term": "a-1-operational", "stem": "SOCが毎日ログを確認し、従業員向けのフィッシング訓練を定期実施している。主にどのカテゴリか。", "choices": ["技術的", "管理的", "運営的", "物理的"], "answer": 2, "explain": "教育訓練や日常のログ確認・パッチ運用は運営的（Operational）。", "stem_en": "The SOC reviews logs daily and runs regular phishing training for employees. Which category is this mainly?", "choices_en": ["Technical", "Managerial", "Operational", "Physical"], "explain_en": "Training and day-to-day log review and patching are operational controls.", "stem_es": "El SOC revisa los registros a diario y realiza formaciones periódicas sobre phishing para los empleados. ¿De qué categoría se trata principalmente?", "choices_es": ["Técnico", "De gestión", "Operativo", "Físico"], "explain_es": "La formación y la revisión diaria de registros y parches son controles operativos."}, {"term": "a-1-physical", "stem": "データセンター入口にフェンスと入退室ゲートを設置した。主にどのカテゴリか。", "choices": ["技術的", "管理的", "運営的", "物理的"], "answer": 3, "explain": "施設・設備への物理アクセスを制御するので物理的コントロール。", "stem_en": "A fence and entry gates were installed at the data center entrance. Which category is this mainly?", "choices_en": ["Technical", "Managerial", "Operational", "Physical"], "explain_en": "It controls physical access to facilities and equipment, so it is a physical control.", "stem_es": "Se instalaron una valla y tornos de acceso en la entrada del centro de datos. ¿De qué categoría se trata principalmente?", "choices_es": ["Técnico", "De gestión", "Operativo", "Físico"], "explain_es": "Controla el acceso físico a instalaciones y equipos, por lo que es un control físico."}, {"term": "a-1-preventive", "stem": "境界ファイアウォールが未許可のインバウンド通信を遮断し、攻撃が届く前に止めている。これはどのコントロール種類か。", "choices": ["予防的（Preventive）", "検出的（Detective）", "是正的（Corrective）", "代替的（Compensating）"], "answer": 0, "explain": "発生する前に防ぐのが予防的。ファイアウォールは典型例。", "stem_en": "A perimeter firewall blocks unauthorized inbound traffic, stopping attacks before they arrive. Which control type is this?", "choices_en": ["Preventive", "Detective", "Corrective", "Compensating"], "explain_en": "Stopping something before it happens is preventive. A firewall is a classic example.", "stem_es": "Un cortafuegos perimetral bloquea el tráfico entrante no autorizado y detiene los ataques antes de que lleguen. ¿Qué tipo de control es?", "choices_es": ["Preventivo", "De detección", "Correctivo", "Compensatorio"], "explain_es": "Detener algo antes de que ocurra es preventivo. El cortafuegos es un ejemplo típico."}, {"term": "a-1-deterrent", "stem": "建物入口に「監視カメラ作動中・不正侵入は処罰対象」と掲示した。主目的として最も適切な種類はどれか。", "choices": ["是正的", "抑止的（Deterrent）", "代替的", "技術的"], "answer": 1, "explain": "警告掲示は心理的に思いとどまらせる抑止的コントロール。", "stem_en": "A sign at the building entrance reads \"CCTV in operation — trespassers will be prosecuted.\" Which type best describes its main purpose?", "choices_en": ["Corrective", "Deterrent", "Compensating", "Technical"], "explain_en": "A warning sign psychologically discourages people, so it is a deterrent control.", "stem_es": "En la entrada del edificio hay un cartel: «Videovigilancia activa: los intrusos serán denunciados». ¿Qué tipo describe mejor su objetivo principal?", "choices_es": ["Correctivo", "Disuasorio", "Compensatorio", "Técnico"], "explain_es": "Un cartel de advertencia disuade psicológicamente, por lo que es un control disuasorio."}, {"term": "a-1-detective", "stem": "IDSが異常トラフィックを検知してアラートを上げた。これはどの種類か。", "choices": ["予防的", "抑止的", "検出的（Detective）", "指示的"], "answer": 2, "explain": "インシデントの発生に気づくのが検出的。ログ監視やIDSが該当。", "stem_en": "An IDS detected abnormal traffic and raised an alert. Which type is this?", "choices_en": ["Preventive", "Deterrent", "Detective", "Directive"], "explain_en": "Noticing that an incident is happening is detective. Log monitoring and IDS fall here.", "stem_es": "Un IDS detectó tráfico anómalo y generó una alerta. ¿Qué tipo es?", "choices_es": ["Preventivo", "Disuasorio", "De detección", "Directivo"], "explain_es": "Darse cuenta de que ocurre un incidente es de detección. La supervisión de registros y los IDS entran aquí."}, {"term": "a-1-corrective", "stem": "マルウェア感染端末を隔離し、バックアップから復旧してパッチを当てた。これはどの種類か。", "choices": ["予防的", "抑止的", "検出的", "是正的（Corrective）"], "answer": 3, "explain": "発生後に被害を修復し再発を防ぐのが是正的。", "stem_en": "An infected device was isolated, restored from backup, and patched. Which type is this?", "choices_en": ["Preventive", "Deterrent", "Detective", "Corrective"], "explain_en": "Repairing damage after the fact and preventing recurrence is corrective.", "stem_es": "Se aisló un equipo infectado, se restauró desde una copia de seguridad y se le aplicó un parche. ¿Qué tipo es?", "choices_es": ["Preventivo", "Disuasorio", "De detección", "Correctivo"], "explain_es": "Reparar el daño tras el incidente y evitar que se repita es correctivo."}, {"term": "a-1-compensating", "stem": "レガシーサーバにパッチを当てられないため、代わりに厳密なネットワーク分離とアクセス制限を行った。これはどの種類か。", "choices": ["指示的", "代替的（Compensating）", "抑止的", "管理的"], "answer": 1, "explain": "本来の対策が困難なときの次善策が代替的（補償的）コントロール。", "stem_en": "A legacy server can't be patched, so strict network isolation and access restrictions were applied instead. Which type is this?", "choices_en": ["Directive", "Compensating", "Deterrent", "Managerial"], "explain_en": "A next-best measure used when the intended control isn't feasible is a compensating control.", "stem_es": "Un servidor heredado no puede parchearse, así que se aplicaron un aislamiento de red estricto y restricciones de acceso en su lugar. ¿Qué tipo es?", "choices_es": ["Directivo", "Compensatorio", "Disuasorio", "De gestión"], "explain_es": "La mejor alternativa cuando el control previsto no es viable es un control compensatorio."}, {"term": "a-1-directive", "stem": "CEOがセキュリティ基本方針を全社に示し、法令準拠を義務付けた。これはどのコントロール種類か。", "choices": ["検出的", "是正的", "指示的（Directive）", "技術的"], "answer": 2, "explain": "トップダウンで方針・要求を示すのが指示的コントロール。", "stem_en": "The CEO issued a company-wide security policy and mandated regulatory compliance. Which control type is this?", "choices_en": ["Detective", "Corrective", "Directive", "Technical"], "explain_en": "Setting policies and requirements top-down is a directive control.", "stem_es": "El CEO publicó una política de seguridad para toda la empresa y exigió el cumplimiento normativo. ¿Qué tipo de control es?", "choices_es": ["De detección", "Correctivo", "Directivo", "Técnico"], "explain_es": "Fijar políticas y requisitos de arriba abajo es un control directivo."}]</script>
 </section>
 
-<nav class="pager"><a href="index.html"><span>戻る</span>Domain A ハブ</a><a class="next" href="a-2.html"><span>次の章</span>A-2 セキュリティコンセプトの基礎</a></nav>
+<nav class="pager"><a href="index.html"><span><span data-i18n="ja">戻る</span><span data-i18n="en">Back</span><span data-i18n="es">Volver</span></span><span>Domain A <span data-i18n="ja">ハブ</span><span data-i18n="en">hub</span><span data-i18n="es">hub</span></span></a><a class="next" href="a-2.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>A-2 <span data-i18n="ja">セキュリティコンセプトの基礎</span><span data-i18n="en">Fundamental security concepts</span><span data-i18n="es">Conceptos de seguridad fundamentales</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

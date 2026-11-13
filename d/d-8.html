@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>D-8 インシデント対応 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain D</span></a>
-  <a class="nav-back" href="index.html">← Domain D ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain D ハブ</span><span data-i18n="en">← Domain D hub</span><span data-i18n="es">← Hub del Domain D</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain D</h2>
-    <a href="d-1.html">D-1 リソースのセキュリティ対策</a><a href="d-2.html">D-2 ハードウェアの取得・管理・廃棄</a><a href="d-3.html">D-3 脆弱性管理手法</a><a href="d-4.html">D-4 アラートとモニタリング</a><a href="d-5.html">D-5 セキュリティ向上策</a><a href="d-6.html">D-6 アクセス管理</a><a href="d-7.html">D-7 自動化</a><a href="d-8.html" class="active">D-8 インシデント対応</a>
+    <a href="d-1.html">D-1 <span data-i18n="ja">リソースのセキュリティ対策</span><span data-i18n="en">リソースのセキュリティ対策</span><span data-i18n="es">リソースのセキュリティ対策</span></a><a href="d-2.html">D-2 <span data-i18n="ja">ハードウェアの取得・管理・廃棄</span><span data-i18n="en">ハードウェアの取得・管理・廃棄</span><span data-i18n="es">ハードウェアの取得・管理・廃棄</span></a><a href="d-3.html">D-3 <span data-i18n="ja">脆弱性管理手法</span><span data-i18n="en">脆弱性管理手法</span><span data-i18n="es">脆弱性管理手法</span></a><a href="d-4.html">D-4 <span data-i18n="ja">アラートとモニタリング</span><span data-i18n="en">アラートとモニタリング</span><span data-i18n="es">アラートとモニタリング</span></a><a href="d-5.html">D-5 <span data-i18n="ja">セキュリティ向上策</span><span data-i18n="en">セキュリティ向上策</span><span data-i18n="es">セキュリティ向上策</span></a><a href="d-6.html">D-6 <span data-i18n="ja">アクセス管理</span><span data-i18n="en">アクセス管理</span><span data-i18n="es">アクセス管理</span></a><a href="d-7.html">D-7 <span data-i18n="ja">自動化</span><span data-i18n="en">自動化</span><span data-i18n="es">自動化</span></a><a href="d-8.html" class="active">D-8 <span data-i18n="ja">インシデント対応</span><span data-i18n="en">インシデント対応</span><span data-i18n="es">インシデント対応</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain D 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain D <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,149 +55,220 @@
       
 <header class="hero">
   <p class="eyebrow">Domain D · D-8</p>
-  <h1>インシデント対応</h1>
-  <p>IRプロセス・訓練・根本原因・脅威ハンティング</p>
+  <h1><span data-i18n="ja">インシデント対応</span><span data-i18n="en">インシデント対応</span><span data-i18n="es">インシデント対応</span></h1>
+  <p data-i18n="ja">IRプロセス・訓練・根本原因・脅威ハンティング</p>
+  <p data-i18n="en">IRプロセス・訓練・根本原因・脅威ハンティング</p>
+  <p data-i18n="es">IRプロセス・訓練・根本原因・脅威ハンティング</p>
   <div class="meta-row">
-    <span class="chip">用語 11</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 4.8</span>
+    <span class="chip"><span data-i18n="ja">用語 11</span><span data-i18n="en">11 terms</span><span data-i18n="es">11 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 4.8</span><span data-i18n="en">Official 4.8</span><span data-i18n="es">Oficial 4.8</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 11問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 11問</span><span data-i18n="en">Quiz (11)</span><span data-i18n="es">Cuestionario (11)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">インシデント対応プロセス</h2>
-<article class="memo-card" id="d-8-preparation" data-search="準備 preparation 起きる前に計画・体制・ツール・訓練を整える 対応チーム編成 ir計画と監視ツール">
-  <h3>準備<span class="en">Preparation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">インシデント対応プロセス</span><span data-i18n="en">インシデント対応プロセス</span><span data-i18n="es">インシデント対応プロセス</span></h2>
+<article class="memo-card" id="d-8-preparation" data-search="準備 preparation  起きる前に計画・体制・ツール・訓練を整える 対応チーム編成 ir計画と監視ツール">
+  <h3>
+    <span data-i18n="ja">準備<span class="en">Preparation</span></span>
+    <span data-i18n="en">Preparation</span>
+    <span data-i18n="es">準備</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">起きる前に<span class="hl">計画・体制・ツール・訓練</span>を整える</p>
+    <p data-i18n="ja" class="one-liner">起きる前に<span class="hl">計画・体制・ツール・訓練</span>を整える</p><p data-i18n="en" class="one-liner">起きる前に<span class="hl">計画・体制・ツール・訓練</span>を整える</p><p data-i18n="es" class="one-liner">起きる前に<span class="hl">計画・体制・ツール・訓練</span>を整える</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>対応チーム編成</li><li>IR計画と監視ツール</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>対応チーム編成</li><li>IR計画と監視ツール</li></ul>
+      <ul class="example-list" data-i18n="en"><li>対応チーム編成</li><li>IR計画と監視ツール</li></ul>
+      <ul class="example-list" data-i18n="es"><li>対応チーム編成</li><li>IR計画と監視ツール</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-8-detection" data-search="検出 detection ログやツール・報告で脅威をいち早く発見する ids/ips/siemのアラート 異常トラフィック・ユーザー報告">
-  <h3>検出<span class="en">Detection</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-8-detection" data-search="検出 detection  ログやツール・報告で脅威をいち早く発見する ids/ips/siemのアラート 異常トラフィック・ユーザー報告">
+  <h3>
+    <span data-i18n="ja">検出<span class="en">Detection</span></span>
+    <span data-i18n="en">Detection</span>
+    <span data-i18n="es">検出</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">ログやツール・報告で脅威を<span class="hl">いち早く発見</span>する</p>
+    <p data-i18n="ja" class="one-liner">ログやツール・報告で脅威を<span class="hl">いち早く発見</span>する</p><p data-i18n="en" class="one-liner">ログやツール・報告で脅威を<span class="hl">いち早く発見</span>する</p><p data-i18n="es" class="one-liner">ログやツール・報告で脅威を<span class="hl">いち早く発見</span>する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>IDS/IPS/SIEMのアラート</li><li>異常トラフィック・ユーザー報告</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>IDS/IPS/SIEMのアラート</li><li>異常トラフィック・ユーザー報告</li></ul>
+      <ul class="example-list" data-i18n="en"><li>IDS/IPS/SIEMのアラート</li><li>異常トラフィック・ユーザー報告</li></ul>
+      <ul class="example-list" data-i18n="es"><li>IDS/IPS/SIEMのアラート</li><li>異常トラフィック・ユーザー報告</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-8-analysis" data-search="分析 analysis 異常の原因と影響範囲を評価する アクセスログ調査 フォレンジック・感染経路">
-  <h3>分析<span class="en">Analysis</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-8-analysis" data-search="分析 analysis  異常の原因と影響範囲を評価する アクセスログ調査 フォレンジック・感染経路">
+  <h3>
+    <span data-i18n="ja">分析<span class="en">Analysis</span></span>
+    <span data-i18n="en">Analysis</span>
+    <span data-i18n="es">分析</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">異常の<span class="hl">原因と影響範囲</span>を評価する</p>
+    <p data-i18n="ja" class="one-liner">異常の<span class="hl">原因と影響範囲</span>を評価する</p><p data-i18n="en" class="one-liner">異常の<span class="hl">原因と影響範囲</span>を評価する</p><p data-i18n="es" class="one-liner">異常の<span class="hl">原因と影響範囲</span>を評価する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>アクセスログ調査</li><li>フォレンジック・感染経路</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>アクセスログ調査</li><li>フォレンジック・感染経路</li></ul>
+      <ul class="example-list" data-i18n="en"><li>アクセスログ調査</li><li>フォレンジック・感染経路</li></ul>
+      <ul class="example-list" data-i18n="es"><li>アクセスログ調査</li><li>フォレンジック・感染経路</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-8-containment" data-search="封じ込め containment 隔離・遮断で被害の拡大を止める 感染pcのlan切り離し 共有フォルダ制限">
-  <h3>封じ込め<span class="en">Containment</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-8-containment" data-search="封じ込め containment  隔離・遮断で被害の拡大を止める 感染pcのlan切り離し 共有フォルダ制限">
+  <h3>
+    <span data-i18n="ja">封じ込め<span class="en">Containment</span></span>
+    <span data-i18n="en">Containment</span>
+    <span data-i18n="es">封じ込め</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">隔離・遮断で被害の<span class="hl">拡大を止める</span></p>
+    <p data-i18n="ja" class="one-liner">隔離・遮断で被害の<span class="hl">拡大を止める</span></p><p data-i18n="en" class="one-liner">隔離・遮断で被害の<span class="hl">拡大を止める</span></p><p data-i18n="es" class="one-liner">隔離・遮断で被害の<span class="hl">拡大を止める</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>感染PCのLAN切り離し</li><li>共有フォルダ制限</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>感染PCのLAN切り離し</li><li>共有フォルダ制限</li></ul>
+      <ul class="example-list" data-i18n="en"><li>感染PCのLAN切り離し</li><li>共有フォルダ制限</li></ul>
+      <ul class="example-list" data-i18n="es"><li>感染PCのLAN切り離し</li><li>共有フォルダ制限</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-8-recovery" data-search="復旧 recovery バックアップやdrで正常状態へ戻す 感染前バックアップからリストア drサイトへのフェイルオーバー">
-  <h3>復旧<span class="en">Recovery</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-8-recovery" data-search="復旧 recovery  バックアップやdrで正常状態へ戻す 感染前バックアップからリストア drサイトへのフェイルオーバー">
+  <h3>
+    <span data-i18n="ja">復旧<span class="en">Recovery</span></span>
+    <span data-i18n="en">Recovery</span>
+    <span data-i18n="es">復旧</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">バックアップやDRで<span class="hl">正常状態へ戻す</span></p>
+    <p data-i18n="ja" class="one-liner">バックアップやDRで<span class="hl">正常状態へ戻す</span></p><p data-i18n="en" class="one-liner">バックアップやDRで<span class="hl">正常状態へ戻す</span></p><p data-i18n="es" class="one-liner">バックアップやDRで<span class="hl">正常状態へ戻す</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>感染前バックアップからリストア</li><li>DRサイトへのフェイルオーバー</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>感染前バックアップからリストア</li><li>DRサイトへのフェイルオーバー</li></ul>
+      <ul class="example-list" data-i18n="en"><li>感染前バックアップからリストア</li><li>DRサイトへのフェイルオーバー</li></ul>
+      <ul class="example-list" data-i18n="es"><li>感染前バックアップからリストア</li><li>DRサイトへのフェイルオーバー</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-8-lessons-learned" data-search="教訓 lessons learned 事後振り返りで知見を再発防止に活かす 連絡体制の見直し 脆弱性修正プロセス改善">
-  <h3>教訓<span class="en">Lessons learned</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-8-lessons-learned" data-search="教訓 lessons learned  事後振り返りで知見を再発防止に活かす 連絡体制の見直し 脆弱性修正プロセス改善">
+  <h3>
+    <span data-i18n="ja">教訓<span class="en">Lessons learned</span></span>
+    <span data-i18n="en">Lessons learned</span>
+    <span data-i18n="es">教訓</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">事後振り返りで知見を<span class="hl">再発防止に活かす</span></p>
+    <p data-i18n="ja" class="one-liner">事後振り返りで知見を<span class="hl">再発防止に活かす</span></p><p data-i18n="en" class="one-liner">事後振り返りで知見を<span class="hl">再発防止に活かす</span></p><p data-i18n="es" class="one-liner">事後振り返りで知見を<span class="hl">再発防止に活かす</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>連絡体制の見直し</li><li>脆弱性修正プロセス改善</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>連絡体制の見直し</li><li>脆弱性修正プロセス改善</li></ul>
+      <ul class="example-list" data-i18n="en"><li>連絡体制の見直し</li><li>脆弱性修正プロセス改善</li></ul>
+      <ul class="example-list" data-i18n="es"><li>連絡体制の見直し</li><li>脆弱性修正プロセス改善</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">訓練とテスト</h2>
-<article class="memo-card" id="d-8-training" data-search="トレーニング training 手順の習熟と改善のための訓練 フォレンジック実習 証拠収集〜報告の一連演習">
-  <h3>トレーニング<span class="en">Training</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">訓練とテスト</span><span data-i18n="en">訓練とテスト</span><span data-i18n="es">訓練とテスト</span></h2>
+<article class="memo-card" id="d-8-training" data-search="トレーニング training  手順の習熟と改善のための訓練 フォレンジック実習 証拠収集〜報告の一連演習">
+  <h3>
+    <span data-i18n="ja">トレーニング<span class="en">Training</span></span>
+    <span data-i18n="en">Training</span>
+    <span data-i18n="es">トレーニング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">手順の<span class="hl">習熟と改善</span>のための訓練</p>
+    <p data-i18n="ja" class="one-liner">手順の<span class="hl">習熟と改善</span>のための訓練</p><p data-i18n="en" class="one-liner">手順の<span class="hl">習熟と改善</span>のための訓練</p><p data-i18n="es" class="one-liner">手順の<span class="hl">習熟と改善</span>のための訓練</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>フォレンジック実習</li><li>証拠収集〜報告の一連演習</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="d-8-tabletop" data-search="机上演習 tabletop シナリオを議論中心で進める訓練 ランサム想定の役割分担議論 会議室での対応方針検討">
-  <h3>机上演習<span class="en">Tabletop</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">シナリオを<span class="hl">議論中心</span>で進める訓練</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ランサム想定の役割分担議論</li><li>会議室での対応方針検討</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="d-8-simulation" data-search="シミュレーション simulation 実環境に近い状況で行う訓練 dos疑似トラフィック演習 fw調整・isp連携の実践">
-  <h3>シミュレーション<span class="en">Simulation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">実環境に近い</span>状況で行う訓練</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>DoS疑似トラフィック演習</li><li>FW調整・ISP連携の実践</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">根本原因と脅威探索</h2>
-<article class="memo-card" id="d-8-root-cause-analysis" data-search="ルート原因分析 root cause analysis インシデントの根本原因を特定する ログの時系列追跡 dosの送信元特定">
-  <h3>ルート原因分析<span class="en">Root cause analysis</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">インシデントの<span class="hl">根本原因</span>を特定する</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ログの時系列追跡</li><li>DoSの送信元特定</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>フォレンジック実習</li><li>証拠収集〜報告の一連演習</li></ul>
+      <ul class="example-list" data-i18n="en"><li>フォレンジック実習</li><li>証拠収集〜報告の一連演習</li></ul>
+      <ul class="example-list" data-i18n="es"><li>フォレンジック実習</li><li>証拠収集〜報告の一連演習</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-8-threat-hunting" data-search="脅威ハンティング threat hunting 潜在脅威を能動的に探索・駆除する 異常時間帯の転送調査 不審アクセスの深掘り">
-  <h3>脅威ハンティング<span class="en">Threat hunting</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-8-tabletop" data-search="机上演習 tabletop  シナリオを議論中心で進める訓練 ランサム想定の役割分担議論 会議室での対応方針検討">
+  <h3>
+    <span data-i18n="ja">机上演習<span class="en">Tabletop</span></span>
+    <span data-i18n="en">Tabletop</span>
+    <span data-i18n="es">机上演習</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">潜在脅威を<span class="hl">能動的に探索・駆除</span>する</p>
+    <p data-i18n="ja" class="one-liner">シナリオを<span class="hl">議論中心</span>で進める訓練</p><p data-i18n="en" class="one-liner">シナリオを<span class="hl">議論中心</span>で進める訓練</p><p data-i18n="es" class="one-liner">シナリオを<span class="hl">議論中心</span>で進める訓練</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>異常時間帯の転送調査</li><li>不審アクセスの深掘り</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ランサム想定の役割分担議論</li><li>会議室での対応方針検討</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ランサム想定の役割分担議論</li><li>会議室での対応方針検討</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ランサム想定の役割分担議論</li><li>会議室での対応方針検討</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-8-simulation" data-search="シミュレーション simulation  実環境に近い状況で行う訓練 dos疑似トラフィック演習 fw調整・isp連携の実践">
+  <h3>
+    <span data-i18n="ja">シミュレーション<span class="en">Simulation</span></span>
+    <span data-i18n="en">Simulation</span>
+    <span data-i18n="es">シミュレーション</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner"><span class="hl">実環境に近い</span>状況で行う訓練</p><p data-i18n="en" class="one-liner"><span class="hl">実環境に近い</span>状況で行う訓練</p><p data-i18n="es" class="one-liner"><span class="hl">実環境に近い</span>状況で行う訓練</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>DoS疑似トラフィック演習</li><li>FW調整・ISP連携の実践</li></ul>
+      <ul class="example-list" data-i18n="en"><li>DoS疑似トラフィック演習</li><li>FW調整・ISP連携の実践</li></ul>
+      <ul class="example-list" data-i18n="es"><li>DoS疑似トラフィック演習</li><li>FW調整・ISP連携の実践</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">根本原因と脅威探索</span><span data-i18n="en">根本原因と脅威探索</span><span data-i18n="es">根本原因と脅威探索</span></h2>
+<article class="memo-card" id="d-8-root-cause-analysis" data-search="ルート原因分析 root cause analysis  インシデントの根本原因を特定する ログの時系列追跡 dosの送信元特定">
+  <h3>
+    <span data-i18n="ja">ルート原因分析<span class="en">Root cause analysis</span></span>
+    <span data-i18n="en">Root cause analysis</span>
+    <span data-i18n="es">ルート原因分析</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">インシデントの<span class="hl">根本原因</span>を特定する</p><p data-i18n="en" class="one-liner">インシデントの<span class="hl">根本原因</span>を特定する</p><p data-i18n="es" class="one-liner">インシデントの<span class="hl">根本原因</span>を特定する</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ログの時系列追跡</li><li>DoSの送信元特定</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ログの時系列追跡</li><li>DoSの送信元特定</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ログの時系列追跡</li><li>DoSの送信元特定</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-8-threat-hunting" data-search="脅威ハンティング threat hunting  潜在脅威を能動的に探索・駆除する 異常時間帯の転送調査 不審アクセスの深掘り">
+  <h3>
+    <span data-i18n="ja">脅威ハンティング<span class="en">Threat hunting</span></span>
+    <span data-i18n="en">Threat hunting</span>
+    <span data-i18n="es">脅威ハンティング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">潜在脅威を<span class="hl">能動的に探索・駆除</span>する</p><p data-i18n="en" class="one-liner">潜在脅威を<span class="hl">能動的に探索・駆除</span>する</p><p data-i18n="es" class="one-liner">潜在脅威を<span class="hl">能動的に探索・駆除</span>する</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>異常時間帯の転送調査</li><li>不審アクセスの深掘り</li></ul>
+      <ul class="example-list" data-i18n="en"><li>異常時間帯の転送調査</li><li>不審アクセスの深掘り</li></ul>
+      <ul class="example-list" data-i18n="es"><li>異常時間帯の転送調査</li><li>不審アクセスの深掘り</li></ul>
     </div>
   </div>
 </article>
@@ -199,19 +276,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（11問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（11問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (11 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (11 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">[{"term": "d-8-preparation", "stem": "ECサイトが顧客情報流出に備え、対応チームを編成し、検知・連絡・報告手順を記した計画と監視ツールをあらかじめ用意した。これはどの段階か。", "choices": ["検出", "準備", "封じ込め", "教訓"], "answer": 1, "explain": "インシデント発生前に計画・体制・ツール・訓練を整えるのが準備（Preparation）。"}, {"term": "d-8-detection", "stem": "管理者がネットワーク監視中に通常と異なる大量データ転送を見つけ、IDSが異常ふるまいのアラートを出した。これはどの段階か。", "choices": ["復旧", "机上演習", "検出", "教訓"], "answer": 2, "explain": "ログ・IDS/IPS/SIEM・ユーザー報告などで脅威をいち早く発見するのが検出（Detection）。"}, {"term": "d-8-analysis", "stem": "顧客情報流出の疑いがあり、対応チームがDBアクセスログから不正アクセスの時間帯と件数、影響レコードを特定した。これはどの段階か。", "choices": ["分析", "準備", "シミュレーション", "封じ込めのみ"], "answer": 0, "explain": "検出後に原因と影響範囲を評価するのが分析（Analysis）。フォレンジックや経路調査も含む。"}, {"term": "d-8-containment", "stem": "ランサムウェア感染が確認されたPCのLANケーブルを抜き、共有フォルダへのアクセスを一時制限して拡散を防いだ。これはどの段階か。", "choices": ["教訓", "封じ込め", "脅威ハンティング", "準備"], "answer": 1, "explain": "隔離・遮断などで被害拡大を止めるのが封じ込め（Containment）。"}, {"term": "d-8-recovery", "stem": "ランサムで暗号化されたファイルを感染前のバックアップからリストアし、被災時はDRサイトへフェイルオーバーして業務を戻した。これはどの段階か。", "choices": ["検出", "机上演習", "復旧", "ルート原因分析のみ"], "answer": 2, "explain": "バックアップやDRによりシステム・データを正常状態へ戻すのが復旧（Recovery）。"}, {"term": "d-8-lessons-learned", "stem": "大規模な個人情報漏えいの対応後、連絡体制や脆弱性診断・パッチ優先度の不足を洗い出し、次回に向けてプロセスを改めた。これはどの段階か。", "choices": ["封じ込め", "検出", "シミュレーション", "教訓"], "answer": 3, "explain": "事後振り返りで得た知見を再発防止・改善に活かすのが教訓（Lessons learned）。"}, {"term": "d-8-training", "stem": "フォレンジック担当が、ログ解析・メモリダンプ取得から報告書作成まで、実機と事例で一連の手順を習熟する演習を行った。これはどれか。", "choices": ["封じ込め", "トレーニング", "準備の計画文書作成のみ", "復旧のリストア実施のみ"], "answer": 1, "explain": "実インシデントに備え手順の習熟と改善を図る取り組みがトレーニング（Training）。"}, {"term": "d-8-tabletop", "stem": "ランサム想定シナリオを会議室で提示し、技術・広報などの役割に分かれて遮断や復旧方針を議論した。実機は動かしていない。これはどれか。", "choices": ["シミュレーション", "脅威ハンティング", "机上演習", "封じ込め"], "answer": 2, "explain": "シナリオを議論中心で進める低コストな訓練が机上演習（Tabletop）。"}, {"term": "d-8-simulation", "stem": "実際のネットワークで疑似DoSトラフィックを発生させ、FWルール調整やISPへのフィルタ依頼、サーバー負荷監視まで役割分担で実施した。これはどれか。", "choices": ["机上演習", "シミュレーション", "教訓", "準備の文書レビューのみ"], "answer": 1, "explain": "実環境に近い状況で実践対応する訓練がシミュレーション（Simulation）。机上より高負荷・高効果。"}, {"term": "d-8-root-cause-analysis", "stem": "Web不通の報告を受け、ログを時系列で追った結果、特定IPからの大量リクエストによるDoSが根本原因だと特定した。これはどれか。", "choices": ["ルート原因分析", "机上演習", "封じ込めのみ", "準備"], "answer": 0, "explain": "表面症状から掘り下げて根本原因を特定し再発防止につなげるのがルート原因分析（Root cause analysis）。"}, {"term": "d-8-threat-hunting", "stem": "アラート待ちだけでなく、異常時間帯の大量転送や普段アクセスしないシステムへの通信を手掛かりに、潜むマルウェアを能動的に探索した。これはどれか。", "choices": ["机上演習", "教訓", "脅威ハンティング", "復旧"], "answer": 2, "explain": "ネットワーク内の潜在脅威を能動的に探索・検知・駆除するのが脅威ハンティング（Threat hunting）。"}]</script>
 </section>
 
-<nav class="pager"><a href="d-7.html"><span>前の章</span>D-7 自動化</a><a class="next" href="index.html"><span>戻る</span>Domain D ハブ</a></nav>
+<nav class="pager"><a href="d-7.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>D-7 <span data-i18n="ja">自動化</span><span data-i18n="en">自動化</span><span data-i18n="es">自動化</span></span></a><a class="next" href="index.html"><span><span data-i18n="ja">戻る</span><span data-i18n="en">Back</span><span data-i18n="es">Volver</span></span><span>Domain D <span data-i18n="ja">ハブ</span><span data-i18n="en">hub</span><span data-i18n="es">hub</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

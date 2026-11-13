@@ -40,30 +40,177 @@ SETTINGS_BOOT = (
     "<script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),"
     "c=document.documentElement.classList;if(s.memorize)c.add('memorize');"
     "if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))"
-    "c.add('dark');}catch(e){}</script>"
+    "c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');"
+    "}catch(e){}</script>"
 )
 
-SETTINGS_NAV = """
+
+def esc(text: str) -> str:
+    return (
+        text.replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+    )
+
+
+def rich(text: str) -> str:
+    """Escape HTML; **bold** becomes highlight span."""
+    parts = re.split(r"(\*\*.+?\*\*)", text)
+    out = []
+    for part in parts:
+        m = re.fullmatch(r"\*\*(.+?)\*\*", part)
+        if m:
+            out.append(f'<span class="hl">{esc(m.group(1))}</span>')
+        else:
+            out.append(esc(part))
+    return "".join(out)
+
+
+def i18n(ja: str, en: str, es: str) -> str:
+    """Three parallel plain-text spans; CSS shows only the active language."""
+    return (
+        f'<span data-i18n="ja">{esc(ja)}</span>'
+        f'<span data-i18n="en">{esc(en)}</span>'
+        f'<span data-i18n="es">{esc(es)}</span>'
+    )
+
+
+def i18n_rich(ja: str, en: str, es: str, tag: str = "span", attrs: str = "") -> str:
+    """Like i18n() but runs each variant through rich() (markdown-ish **bold**)."""
+    out = []
+    for key, text in (("ja", ja), ("en", en), ("es", es)):
+        out.append(f'<{tag} data-i18n="{key}"{attrs}>{rich(text)}</{tag}>')
+    return "".join(out)
+
+
+# UI chrome strings shared across templates: key -> (ja, en, es)
+UI = {
+    "show_answer": ("答えを見る", "Show answer", "Ver respuesta"),
+    "examples": ("代表例", "Examples", "Ejemplos"),
+    "settings": ("設定", "Settings", "Ajustes"),
+    "memorize_mode": ("覚えるモード", "Memorize mode", "Modo memorización"),
+    "memorize_hint": ("答えを隠してタップで表示", "Hide answers, tap to reveal", "Oculta las respuestas, toca para verlas"),
+    "dark_mode": ("ダークモード", "Dark mode", "Modo oscuro"),
+    "language": ("言語", "Language", "Idioma"),
+    "search_placeholder": ("用語を検索...", "Search terms...", "Buscar términos..."),
+    "tools": ("ツール", "Tools", "Herramientas"),
+    "chapter_quiz": ("この章の小テスト", "This chapter's quiz", "Cuestionario de este capítulo"),
+    "domain_map": ("知識マップ", "Knowledge map", "Mapa de conocimiento"),
+    "back_home": ("← ホーム", "← Home", "← Inicio"),
+    "back_hub": ("← Domain {d} ハブ", "← Domain {d} hub", "← Hub del Domain {d}"),
+    "hub": ("ハブ", "hub", "hub"),
+    "terms_count": ("用語 {n}", "{n} terms", "{n} términos"),
+    "official_chip": ("公式 {n}", "Official {n}", "Oficial {n}"),
+    "quiz_eyebrow": ("小テスト · SY0-701風 4択", "Quiz · SY0-701 style, 4 choices", "Cuestionario · estilo SY0-701, 4 opciones"),
+    "quiz_heading": ("この章の確認問題", "Chapter review questions", "Preguntas de repaso del capítulo"),
+    "quiz_intro": (
+        "本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（{n}問）。",
+        "Scenario-based questions in the style of the real exam, covering every term at least once ({n} questions).",
+        "Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez ({n} preguntas).",
+    ),
+    "quiz_button": ("小テスト {n}問", "Quiz ({n})", "Cuestionario ({n})"),
+    "show_all": ("すべて表示", "Show all", "Mostrar todo"),
+    "hide_all": ("すべて隠す", "Hide all", "Ocultar todo"),
+    "no_terms": ("該当する用語がありません", "No matching terms", "No se encontraron términos"),
+    "one_liner_chip": ("一言定義 + 代表例", "One-line definition + examples", "Definición breve + ejemplos"),
+    "prev_chapter": ("前の章", "Previous chapter", "Capítulo anterior"),
+    "next_chapter": ("次の章", "Next chapter", "Siguiente capítulo"),
+    "back": ("戻る", "Back", "Volver"),
+    "chapters_count": ("章一覧 · 覚えるモード · 知識マップ · 用語 {n}", "Chapters · memorize mode · knowledge map · {n} terms", "Capítulos · modo memorización · mapa de conocimiento · {n} términos"),
+    "domains_nav": ("Domains", "Domains", "Domains"),
+    "map_nav": ("マップ", "Map", "Mapa"),
+    "full_map": ("全体の知識マップ", "Full knowledge map", "Mapa de conocimiento completo"),
+    "home_title": ("Security+ 教科書", "Security+ Textbook", "Manual de Security+"),
+    "home_tagline": (
+        "Domain を選んで、覚えるモードと知識マップで定着させる。",
+        "Pick a domain, then lock it in with memorize mode and the knowledge map.",
+        "Elige un dominio y refuérzalo con el modo memorización y el mapa de conocimiento.",
+    ),
+    "global_map_title": ("知識マップ", "Knowledge map", "Mapa de conocimiento"),
+    "global_map_tagline": (
+        "Domain を選ぶと、その Domain の用語マップへ進みます。章ラベルは各章の覚えるモードへリンクします（用語 {n}）。",
+        "Pick a domain to open its term map. Chapter labels link to that chapter's memorize mode ({n} terms).",
+        "Elige un dominio para abrir su mapa de términos. Las etiquetas de capítulo enlazan al modo memorización de ese capítulo ({n} términos).",
+    ),
+    "domain_hero_fallback": (
+        "章を選んで覚える。関係性は Domain 知識マップで確認。",
+        "Pick a chapter to study. Check relationships in the Domain knowledge map.",
+        "Elige un capítulo para estudiar. Revisa las relaciones en el mapa de conocimiento del Domain.",
+    ),
+    "domain_map_tagline": (
+        "用語だけを階層表示。同じカテゴリは同じ階層。タップすると意味と教科書リンクが出ます。",
+        "Terms shown as a hierarchy; same category, same level. Tap one to see its meaning and a link to the textbook.",
+        "Términos mostrados como jerarquía; misma categoría, mismo nivel. Toca uno para ver su significado y un enlace al manual.",
+    ),
+    "panel_meaning": ("意味", "Meaning", "Significado"),
+    "panel_close": ("閉じる", "Close", "Cerrar"),
+    "panel_link": ("教科書で見る（{ch}）", "View in textbook ({ch})", "Ver en el manual ({ch})"),
+    "all_correct": ("全問正解！", "All correct!", "¡Todo correcto!"),
+    "retry": ("復習して再挑戦しよう", "Review and try again", "Repasa e inténtalo de nuevo"),
+    "quiz_score": ("正解", "Score", "Aciertos"),
+    "prep": ("準備中", "Coming soon", "Próximamente"),
+}
+
+
+def t(key: str, **kwargs) -> str:
+    ja, en, es = UI[key]
+    if kwargs:
+        ja, en, es = ja.format(**kwargs), en.format(**kwargs), es.format(**kwargs)
+    return i18n(ja, en, es)
+
+
+SETTINGS_NAV = f"""
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2>{t("settings")}</h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span>{t("memorize_mode")}<small>{t("memorize_hint")}</small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span>{t("dark_mode")}</span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="{UI['language'][0]} / {UI['language'][1]} / {UI['language'][2]}">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>"""
 
 DOMAINS = [
-    {"code": "A", "title": "一般的なセキュリティ概念"},
-    {"code": "B", "title": "脅威・脆弱性・緩和"},
-    {"code": "C", "title": "セキュリティアーキテクチャ"},
-    {"code": "D", "title": "セキュリティ運用"},
-    {"code": "E", "title": "セキュリティプログラム管理・監督"},
+    {
+        "code": "A",
+        "title": "一般的なセキュリティ概念",
+        "title_en": "General Security Concepts",
+        "title_es": "Conceptos generales de seguridad",
+    },
+    {
+        "code": "B",
+        "title": "脅威・脆弱性・緩和",
+        "title_en": "Threats, Vulnerabilities & Mitigations",
+        "title_es": "Amenazas, vulnerabilidades y mitigaciones",
+    },
+    {
+        "code": "C",
+        "title": "セキュリティアーキテクチャ",
+        "title_en": "Security Architecture",
+        "title_es": "Arquitectura de seguridad",
+    },
+    {
+        "code": "D",
+        "title": "セキュリティ運用",
+        "title_en": "Security Operations",
+        "title_es": "Operaciones de seguridad",
+    },
+    {
+        "code": "E",
+        "title": "セキュリティプログラム管理・監督",
+        "title_en": "Security Program Management & Oversight",
+        "title_es": "Gestión y supervisión del programa de seguridad",
+    },
 ]
 for _d in DOMAINS:
     _slug = _d["code"].lower()
@@ -176,28 +323,6 @@ def validate_data(data: dict, quizzes: dict) -> None:
         raise SystemExit(msg)
 
 
-def esc(text: str) -> str:
-    return (
-        text.replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
-
-
-def rich(text: str) -> str:
-    """Escape HTML; **bold** becomes highlight span."""
-    parts = re.split(r"(\*\*.+?\*\*)", text)
-    out = []
-    for part in parts:
-        m = re.fullmatch(r"\*\*(.+?)\*\*", part)
-        if m:
-            out.append(f'<span class="hl">{esc(m.group(1))}</span>')
-        else:
-            out.append(esc(part))
-    return "".join(out)
-
-
 def slug_of(ch: dict) -> str:
     return ch.get("slug") or str(ch["id"]).lower()
 
@@ -211,28 +336,28 @@ def domain_nav(active: str, *, show_search: bool = True, quiz_anchor: str | None
     chapter_links = []
     for ch in DATA["chapters"]:
         cls = ' class="active"' if active == ch["id"] else ""
+        title = i18n(ch["title"], ch.get("title_en") or ch["title"], ch.get("title_es") or ch["title"])
         chapter_links.append(
-            f'<a href="{esc(chapter_href(ch))}"{cls}>{esc(ch["id"])} {esc(ch["title"])}</a>'
+            f'<a href="{esc(chapter_href(ch))}"{cls}>{esc(ch["id"])} {title}</a>'
         )
 
     extra = ""
     if quiz_anchor:
-        extra = f'<a href="{esc(quiz_anchor)}">この章の小テスト</a>'
+        extra = f'<a href="{esc(quiz_anchor)}">{t("chapter_quiz")}</a>'
 
     map_cls = ' class="active"' if active == "map" else ""
     if active == "hub":
-        back = '<a class="nav-back" href="../index.html">← ホーム</a>'
+        back = f'<a class="nav-back" href="../index.html">{t("back_home")}</a>'
     else:
-        back = (
-            f'<a class="nav-back" href="index.html">'
-            f'← Domain {esc(DATA["domain"])} ハブ</a>'
-        )
+        back = f'<a class="nav-back" href="index.html">{t("back_hub", d=esc(DATA["domain"]))}</a>'
 
     search = ""
     if show_search:
-        search = """
+        ph_ja, ph_en, ph_es = UI["search_placeholder"]
+        search = f"""
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="{esc(ph_ja)}" autocomplete="off"
+      data-ph-ja="{esc(ph_ja)}" data-ph-en="{esc(ph_en)}" data-ph-es="{esc(ph_es)}">
   </div>"""
 
     return f"""
@@ -244,9 +369,9 @@ def domain_nav(active: str, *, show_search: bool = True, quiz_anchor: str | None
     {''.join(chapter_links)}
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
+    <h2>{t("tools")}</h2>
     {extra}
-    <a href="map.html"{map_cls}>Domain {esc(DATA["domain"])} 知識マップ</a>
+    <a href="map.html"{map_cls}>Domain {esc(DATA["domain"])} {t("domain_map")}</a>
   </nav>{SETTINGS_NAV}
 </aside>
 """
@@ -295,21 +420,33 @@ def page(
 
 
 def term_card(term: dict) -> str:
-    examples = "".join(f"<li>{esc(x)}</li>" for x in term["examples"])
+    examples_ja = "".join(f"<li>{esc(x)}</li>" for x in term["examples"])
+    examples_en = "".join(f"<li>{esc(x)}</li>" for x in term.get("examples_en", [])) or examples_ja
+    examples_es = "".join(f"<li>{esc(x)}</li>" for x in term.get("examples_es", [])) or examples_ja
     plain = term["one_liner"].replace("**", "")
     search = " ".join(
-        [term["ja"], term.get("en", ""), plain, *term["examples"]]
+        [term["ja"], term.get("en", ""), term.get("es", ""), plain, *term["examples"]]
     ).lower()
-    en = f'<span class="en">{esc(term["en"])}</span>' if term.get("en") else ""
+    en_sub = f'<span class="en">{esc(term["en"])}</span>' if term.get("en") else ""
+    name_en = esc(term.get("name_en") or term.get("en") or term["ja"])
+    name_es = esc(term.get("es") or term["ja"])
+    one_liner_en = term.get("one_liner_en") or term["one_liner"]
+    one_liner_es = term.get("one_liner_es") or term["one_liner"]
     return f"""
 <article class="memo-card" id="{esc(term["id"])}" data-search="{esc(search)}">
-  <h3>{esc(term["ja"])}{en}</h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <h3>
+    <span data-i18n="ja">{esc(term["ja"])}{en_sub}</span>
+    <span data-i18n="en">{name_en}</span>
+    <span data-i18n="es">{name_es}</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">{t("show_answer")}</button>
   <div class="answer">
-    <p class="one-liner">{rich(term["one_liner"])}</p>
+    {i18n_rich(term["one_liner"], one_liner_en, one_liner_es, tag="p", attrs=' class="one-liner"')}
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list">{examples}</ul>
+      <div class="field-label">{t("examples")}</div>
+      <ul class="example-list" data-i18n="ja">{examples_ja}</ul>
+      <ul class="example-list" data-i18n="en">{examples_en}</ul>
+      <ul class="example-list" data-i18n="es">{examples_es}</ul>
     </div>
   </div>
 </article>
@@ -320,31 +457,36 @@ def chapter_page(ch: dict, idx: int) -> str:
     blocks = []
     for group in ch["groups"]:
         cards = "".join(term_card(t) for t in group["terms"])
+        g_title = i18n(group["title"], group.get("title_en") or group["title"], group.get("title_es") or group["title"])
         blocks.append(
-            f'<section class="group"><h2 class="group-title">{esc(group["title"])}</h2>{cards}</section>'
+            f'<section class="group"><h2 class="group-title">{g_title}</h2>{cards}</section>'
         )
+
+    def ch_title(c: dict) -> str:
+        return i18n(c["title"], c.get("title_en") or c["title"], c.get("title_es") or c["title"])
 
     if idx > 0:
         prev = DATA["chapters"][idx - 1]
         prev_html = (
-            f'<a href="{chapter_href(prev)}"><span>前の章</span>'
-            f'{esc(prev["id"])} {esc(prev["title"])}</a>'
+            f'<a href="{chapter_href(prev)}"><span>{t("prev_chapter")}</span>'
+            f'<span>{esc(prev["id"])} {ch_title(prev)}</span></a>'
         )
     else:
         prev_html = (
-            f'<a href="index.html"><span>戻る</span>Domain {esc(DATA["domain"])} ハブ</a>'
+            f'<a href="index.html"><span>{t("back")}</span>'
+            f'<span>Domain {esc(DATA["domain"])} {t("hub")}</span></a>'
         )
 
     if idx < len(DATA["chapters"]) - 1:
         nxt = DATA["chapters"][idx + 1]
         next_html = (
-            f'<a class="next" href="{chapter_href(nxt)}"><span>次の章</span>'
-            f'{esc(nxt["id"])} {esc(nxt["title"])}</a>'
+            f'<a class="next" href="{chapter_href(nxt)}"><span>{t("next_chapter")}</span>'
+            f'<span>{esc(nxt["id"])} {ch_title(nxt)}</span></a>'
         )
     else:
         next_html = (
-            f'<a class="next" href="index.html"><span>戻る</span>'
-            f'Domain {esc(DATA["domain"])} ハブ</a>'
+            f'<a class="next" href="index.html"><span>{t("back")}</span>'
+            f'<span>Domain {esc(DATA["domain"])} {t("hub")}</span></a>'
         )
 
     count = sum(len(g["terms"]) for g in ch["groups"])
@@ -352,14 +494,14 @@ def chapter_page(ch: dict, idx: int) -> str:
     quiz_json = json.dumps(quiz_qs, ensure_ascii=False)
     official = ch.get("official")
     official_chip = (
-        f'<span class="chip">公式 {esc(official)}</span>' if official else ""
+        f'<span class="chip">{t("official_chip", n=esc(official))}</span>' if official else ""
     )
     quiz_block = f"""
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（{len(quiz_qs)}問）。</p>
+    <p class="eyebrow">{t("quiz_eyebrow")}</p>
+    <h2>{t("quiz_heading")}</h2>
+    <p>{t("quiz_intro", n=len(quiz_qs))}</p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">{quiz_json}</script>
@@ -368,20 +510,25 @@ def chapter_page(ch: dict, idx: int) -> str:
     body = f"""
 <header class="hero">
   <p class="eyebrow">Domain {esc(DATA["domain"])} · {esc(ch["id"])}</p>
-  <h1>{esc(ch["title"])}</h1>
-  <p>{esc(ch["blurb"])}</p>
+  <h1>{ch_title(ch)}</h1>
+  <p data-i18n="ja">{esc(ch["blurb"])}</p>
+  <p data-i18n="en">{esc(ch.get("blurb_en") or ch["blurb"])}</p>
+  <p data-i18n="es">{esc(ch.get("blurb_es") or ch["blurb"])}</p>
   <div class="meta-row">
-    <span class="chip">用語 {count}</span>
-    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">{t("terms_count", n=count)}</span>
+    <span class="chip">{t("one_liner_chip")}</span>
     {official_chip}
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト {len(quiz_qs)}問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section">{t("quiz_button", n=len(quiz_qs))}</a>
+    <a class="btn btn-ghost" href="map.html">{t("domain_map")}</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="{UI['show_all'][0]}" data-show-all-en="{UI['show_all'][1]}" data-show-all-es="{UI['show_all'][2]}"
+      data-hide-all-ja="{UI['hide_all'][0]}" data-hide-all-en="{UI['hide_all'][1]}" data-hide-all-es="{UI['hide_all'][2]}"
+    >{t("show_all")}</button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<div id="empty-state" class="empty-state">{t("no_terms")}</div>
 {''.join(blocks)}
 {quiz_block}
 <nav class="pager">{prev_html}{next_html}</nav>
@@ -401,24 +548,34 @@ def domain_index() -> str:
     for ch in DATA["chapters"]:
         n = sum(len(g["terms"]) for g in ch["groups"])
         total += n
+        title = i18n(ch["title"], ch.get("title_en") or ch["title"], ch.get("title_es") or ch["title"])
+        blurb_ja = f'{esc(ch["blurb"])} · {n}語'
+        blurb_en = f'{esc(ch.get("blurb_en") or ch["blurb"])} · {n} terms'
+        blurb_es = f'{esc(ch.get("blurb_es") or ch["blurb"])} · {n} términos'
         cards.append(
             f"""<a class="chapter-card" href="{esc(chapter_href(ch))}">
   <div class="code">{esc(ch["id"])}</div>
-  <h2>{esc(ch["title"])}</h2>
-  <p>{esc(ch["blurb"])} · {n}語</p>
+  <h2>{title}</h2>
+  <p data-i18n="ja">{blurb_ja}</p>
+  <p data-i18n="en">{blurb_en}</p>
+  <p data-i18n="es">{blurb_es}</p>
 </a>"""
         )
+    domain_title = i18n(DATA["title"], DATA.get("title_en") or DATA["title"], DATA.get("title_es") or DATA["title"])
+    intro_ja = DATA.get("intro") or UI["domain_hero_fallback"][0]
+    intro_en = DATA.get("intro_en") or UI["domain_hero_fallback"][1]
+    intro_es = DATA.get("intro_es") or UI["domain_hero_fallback"][2]
     body = f"""
 <header class="hero">
   <p class="eyebrow">CompTIA Security+ SY0-701 · Domain {esc(DATA["domain"])}</p>
-  <h1>Domain {esc(DATA["domain"])}<br>{esc(DATA["title"])}</h1>
-  <p>{esc(DATA.get("intro") or "章を選んで覚える。関係性は Domain 知識マップで確認。")}</p>
+  <h1>Domain {esc(DATA["domain"])}<br>{domain_title}</h1>
+  {i18n_rich(intro_ja, intro_en, intro_es, tag="p")}
   <div class="meta-row">
-    <span class="chip">用語 {total}</span>
-    <span class="chip">公式 Domain {esc(str(DATA.get("official", "1")))}</span>
+    <span class="chip">{t("terms_count", n=total)}</span>
+    <span class="chip">{t("official_chip", n=f'Domain {esc(str(DATA.get("official", "1")))}')}</span>
   </div>
   <div class="action-row">
-    <a class="btn btn-ghost" href="map.html">Domain {esc(DATA["domain"])} 知識マップ</a>
+    <a class="btn btn-ghost" href="map.html">Domain {esc(DATA["domain"])} {t("domain_map")}</a>
   </div>
 </header>
 <section class="chapter-grid">{''.join(cards)}</section>
@@ -437,19 +594,19 @@ def map_page() -> str:
     body = f"""
 <header class="hero">
   <p class="eyebrow">Domain {esc(DATA["domain"])}</p>
-  <h1>知識マップ</h1>
-  <p>用語だけを階層表示。同じカテゴリは同じ階層。タップすると意味と教科書リンクが出ます。</p>
+  <h1>{t("global_map_title")}</h1>
+  <p>{t("domain_map_tagline")}</p>
 </header>
 <div class="mindmap-wrap">
   <div id="mindmap" class="mindmap"></div>
 </div>
 <aside class="term-panel" id="term-panel" aria-hidden="true">
-  <button type="button" class="term-panel-close" id="term-panel-close" aria-label="閉じる">×</button>
-  <p class="term-panel-kicker">意味</p>
+  <button type="button" class="term-panel-close" id="term-panel-close" aria-label="{UI['panel_close'][0]}">×</button>
+  <p class="term-panel-kicker">{t("panel_meaning")}</p>
   <h2 id="term-panel-title"></h2>
-  <button type="button" class="reveal-btn" id="term-panel-reveal" aria-expanded="false">答えを見る</button>
+  <button type="button" class="reveal-btn" id="term-panel-reveal" aria-expanded="false">{t("show_answer")}</button>
   <p class="term-panel-meaning" id="term-panel-meaning"></p>
-  <a class="term-panel-link" id="term-panel-link" href="#">教科書で見る</a>
+  <a class="term-panel-link" id="term-panel-link" href="#"></a>
 </aside>
 <script type="application/json" id="mindmap-data">{payload}</script>
 """
@@ -466,25 +623,27 @@ def map_page() -> str:
 def root_sidebar(*, map_active: bool = False) -> str:
     nav_links = []
     for d in DOMAINS:
+        title = i18n(d["title"], d.get("title_en") or d["title"], d.get("title_es") or d["title"])
         if d["ready"]:
             nav_links.append(
-                f'<a href="{esc(d["href"])}">{esc(d["code"])}. {esc(d["title"])}</a>'
+                f'<a href="{esc(d["href"])}">{esc(d["code"])}. {title}</a>'
             )
         else:
             nav_links.append(
-                f'<a href="#" class="nav-disabled" aria-disabled="true">{esc(d["code"])}. {esc(d["title"])}（準備中）</a>'
+                f'<a href="#" class="nav-disabled" aria-disabled="true">{esc(d["code"])}. {title}'
+                f'（{t("prep")}）</a>'
             )
     map_cls = ' class="active"' if map_active else ""
     return f"""
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="index.html">Security+ Textbook<span>SY0-701</span></a>
   <nav class="nav-section">
-    <h2>Domains</h2>
+    <h2>{t("domains_nav")}</h2>
     {''.join(nav_links)}
   </nav>
   <nav class="nav-section">
-    <h2>マップ</h2>
-    <a href="map.html"{map_cls}>全体の知識マップ</a>
+    <h2>{t("map_nav")}</h2>
+    <a href="map.html"{map_cls}>{t("full_map")}</a>
   </nav>{SETTINGS_NAV}
 </aside>"""
 
@@ -492,20 +651,21 @@ def root_sidebar(*, map_active: bool = False) -> str:
 def root_index(term_counts: dict[str, int]) -> str:
     cards = []
     for d in DOMAINS:
+        title = i18n(d["title"], d.get("title_en") or d["title"], d.get("title_es") or d["title"])
         if d["ready"]:
             cards.append(
                 f"""<a class="chapter-card" href="{esc(d["href"])}">
   <div class="code">DOMAIN {esc(d["code"])}</div>
-  <h2>{esc(d["title"])}</h2>
-  <p>章一覧 · 覚えるモード · 知識マップ · 用語 {term_counts[d["code"]]}</p>
+  <h2>{title}</h2>
+  <p>{t("chapters_count", n=term_counts[d["code"]])}</p>
 </a>"""
             )
         else:
             cards.append(
                 f"""<div class="chapter-card is-disabled" aria-disabled="true">
   <div class="code">DOMAIN {esc(d["code"])}</div>
-  <h2>{esc(d["title"])}</h2>
-  <p>準備中</p>
+  <h2>{title}</h2>
+  <p>{t("prep")}</p>
 </div>"""
             )
 
@@ -529,10 +689,10 @@ def root_index(term_counts: dict[str, int]) -> str:
     <main class="main">
       <header class="hero">
         <p class="eyebrow">Personal Study App</p>
-        <h1>Security+ 教科書</h1>
-        <p>Domain を選んで、覚えるモードと知識マップで定着させる。</p>
+        <h1>{t("home_title")}</h1>
+        <p>{t("home_tagline")}</p>
         <div class="action-row">
-          <a class="btn btn-ghost" href="map.html">全体の知識マップ</a>
+          <a class="btn btn-ghost" href="map.html">{t("full_map")}</a>
         </div>
       </header>
       <section class="chapter-grid">
@@ -572,8 +732,8 @@ def global_map_page(hub_domains: list[dict]) -> str:
     <main class="main main-wide">
       <header class="hero">
         <p class="eyebrow">SY0-701 · 全体</p>
-        <h1>知識マップ</h1>
-        <p>Domain を選ぶと、その Domain の用語マップへ進みます。章ラベルは各章の覚えるモードへリンクします（用語 {total_terms}）。</p>
+        <h1>{t("global_map_title")}</h1>
+        <p>{t("global_map_tagline", n=total_terms)}</p>
       </header>
       <div class="mindmap-wrap">
         <div id="mindmap" class="mindmap"></div>
@@ -626,6 +786,8 @@ def main() -> None:
                     "id": ch["id"],
                     "slug": slug_of(ch),
                     "title": ch["title"],
+                    "title_en": ch.get("title_en") or ch["title"],
+                    "title_es": ch.get("title_es") or ch["title"],
                     "terms": n,
                 }
             )
@@ -635,6 +797,8 @@ def main() -> None:
             {
                 "code": d["code"],
                 "title": data.get("title") or d["title"],
+                "title_en": data.get("title_en") or d["title_en"],
+                "title_es": data.get("title_es") or d["title_es"],
                 "terms": total,
                 "map": f'{d["code"].lower()}/map.html',
                 "href": d["href"],

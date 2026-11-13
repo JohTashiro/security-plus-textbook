@@ -9,6 +9,50 @@
   const panelReveal = document.getElementById("term-panel-reveal");
   if (!host || !dataNode) return;
 
+  const html = document.documentElement;
+
+  const UI = {
+    mapLabel: {
+      ja: (d) => `Domain ${d} 知識マップ`,
+      en: (d) => `Domain ${d} knowledge map`,
+      es: (d) => `Mapa de conocimiento del Domain ${d}`,
+    },
+    textbookLink: {
+      ja: (ch) => `教科書で見る（${ch}）`,
+      en: (ch) => `View in textbook (${ch})`,
+      es: (ch) => `Ver en el manual (${ch})`,
+    },
+  };
+
+  function currentLang() {
+    if (html.classList.contains("lang-en")) return "en";
+    if (html.classList.contains("lang-es")) return "es";
+    return "ja";
+  }
+
+  function pick(obj, field, lang) {
+    if (lang !== "ja" && obj[`${field}_${lang}`]) return obj[`${field}_${lang}`];
+    return obj[field];
+  }
+
+  function termName(term, lang) {
+    if (lang === "en") return term.name_en || term.en || term.ja;
+    if (lang === "es") return term.es || term.ja;
+    return term.ja;
+  }
+
+  function labelOf(term, lang) {
+    const name = termName(term, lang);
+    if (lang !== "ja") return name;
+    return name.replace(/コントロール$/, "").replace(/アプリケーション$/, "アプリ");
+  }
+
+  // Japanese glyphs are roughly twice as wide as Latin ones at the same font size.
+  function termWidth(chars) {
+    const perChar = currentLang() === "ja" ? 12.5 : 7.5;
+    return Math.max(88, chars * perChar + 28);
+  }
+
   function setPanelRevealed(revealed) {
     panel.classList.toggle("revealed", revealed);
     if (panelReveal) panelReveal.setAttribute("aria-expanded", String(revealed));
@@ -26,14 +70,9 @@
     group: 360,
     term: 520,
   };
-  const ROOT_Y_GAP = 0;
   const TERM_GAP = 34;
   const GROUP_PAD = 18;
   const CHAPTER_PAD = 36;
-
-  function stripMarks(text) {
-    return String(text || "").replace(/\*\*/g, "");
-  }
 
   function richHtml(text) {
     return String(text || "")
@@ -66,107 +105,18 @@
     return Math.max(h, TERM_GAP);
   }
 
-  const chapterHeights = data.chapters.map(chapterHeight);
-  const totalH =
-    chapterHeights.reduce((a, b) => a + b, 0) +
-    CHAPTER_PAD * Math.max(0, data.chapters.length - 1);
-  const width = 920;
-  const height = Math.max(640, totalH + 80);
-  const rootY = height / 2;
-
-  const svg = document.createElementNS(NS, "svg");
-  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
-  svg.setAttribute("class", "mindmap-svg");
-  svg.setAttribute("role", "img");
-  const domainCode = data.domain || "A";
-  svg.setAttribute("aria-label", `Domain ${domainCode} 知識マップ`);
-
-  const lines = document.createElementNS(NS, "g");
-  lines.setAttribute("class", "mm-lines");
-  const nodes = document.createElementNS(NS, "g");
-  nodes.setAttribute("class", "mm-nodes");
-  svg.appendChild(lines);
-  svg.appendChild(nodes);
-  host.appendChild(svg);
-
-  function curve(x1, y1, x2, y2) {
-    const mx = (x1 + x2) / 2;
-    const path = document.createElementNS(NS, "path");
-    path.setAttribute("d", `M ${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`);
-    path.setAttribute("class", "mm-link");
-    lines.appendChild(path);
-  }
-
-  function addHub(x, y, label, cls) {
-    const g = document.createElementNS(NS, "g");
-    g.setAttribute("class", `mm-hub ${cls}`);
-    g.setAttribute("transform", `translate(${x}, ${y})`);
-    const c = document.createElementNS(NS, "circle");
-    c.setAttribute("r", cls === "mm-root" ? 28 : 18);
-    g.appendChild(c);
-    const t = document.createElementNS(NS, "text");
-    t.setAttribute("text-anchor", "middle");
-    t.setAttribute("dominant-baseline", "central");
-    t.textContent = label;
-    g.appendChild(t);
-    nodes.appendChild(g);
-    return g;
-  }
-
-  function addTerm(x, y, term, chapterId) {
-    const g = document.createElementNS(NS, "g");
-    g.setAttribute("class", "mm-term");
-    g.setAttribute("transform", `translate(${x}, ${y})`);
-    g.setAttribute("tabindex", "0");
-    g.setAttribute("role", "button");
-    g.dataset.id = term.id;
-    g.dataset.ja = term.ja;
-    g.dataset.meaning = term.one_liner;
-    const slug = String(chapterId || "").toLowerCase();
-    g.dataset.href = `${slug}.html#${term.id}`;
-
-    const label = term.ja.replace(/コントロール$/, "").replace(/アプリケーション$/, "アプリ");
-    const w = Math.max(88, label.length * 12.5 + 28);
-    const h = 26;
-
-    const rect = document.createElementNS(NS, "rect");
-    rect.setAttribute("x", 0);
-    rect.setAttribute("y", -h / 2);
-    rect.setAttribute("rx", 13);
-    rect.setAttribute("ry", 13);
-    rect.setAttribute("width", w);
-    rect.setAttribute("height", h);
-    g.appendChild(rect);
-
-    const t = document.createElementNS(NS, "text");
-    t.setAttribute("x", 14);
-    t.setAttribute("y", 1);
-    t.setAttribute("dominant-baseline", "central");
-    t.textContent = label;
-    g.appendChild(t);
-
-    const open = () => showPanel(term, chapterId);
-    g.addEventListener("click", (e) => {
-      e.stopPropagation();
-      open();
-    });
-    g.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        open();
-      }
-    });
-
-    nodes.appendChild(g);
-    return { g, w };
-  }
+  let panelTerm = null;
+  let panelChapterId = null;
 
   function showPanel(term, chapterId) {
+    const lang = currentLang();
+    panelTerm = term;
+    panelChapterId = chapterId;
+    panelTitle.textContent = termName(term, lang);
+    panelMeaning.innerHTML = richHtml(pick(term, "one_liner", lang));
     const slug = String(chapterId || "").toLowerCase();
-    panelTitle.textContent = term.ja;
-    panelMeaning.innerHTML = richHtml(term.one_liner);
     panelLink.href = `${slug}.html#${term.id}`;
-    panelLink.textContent = `教科書で見る（${chapterId}）`;
+    panelLink.textContent = UI.textbookLink[lang](chapterId);
     setPanelRevealed(false);
     panel.classList.add("open");
     panel.setAttribute("aria-hidden", "false");
@@ -185,45 +135,148 @@
     hidePanel();
   });
 
-  // Root
-  addHub(COL.root, rootY, domainCode, "mm-root");
+  function render() {
+    const lang = currentLang();
+    host.innerHTML = "";
 
-  let cursorY = (height - totalH) / 2;
-  data.chapters.forEach((ch, ci) => {
-    const chH = chapterHeights[ci];
-    const chY = cursorY + chH / 2;
-    curve(COL.root + 28, rootY, COL.chapter - 18, chY);
-    addHub(COL.chapter, chY, ch.id, "mm-chapter");
+    const chapterHeights = data.chapters.map(chapterHeight);
+    const totalH =
+      chapterHeights.reduce((a, b) => a + b, 0) +
+      CHAPTER_PAD * Math.max(0, data.chapters.length - 1);
+    const longest = Math.max(
+      0,
+      ...data.chapters.flatMap((ch) => ch.groups.flatMap((g) => g.terms.map((t) => labelOf(t, lang).length)))
+    );
+    const width = Math.max(920, COL.term + termWidth(longest) + 24);
+    const height = Math.max(640, totalH + 80);
+    const rootY = height / 2;
 
-    let gCursor = cursorY;
-    ch.groups.forEach((group, gi) => {
-      const gH = group.terms.length * TERM_GAP;
-      const gY = gCursor + gH / 2;
-      curve(COL.chapter + 18, chY, COL.group, gY);
+    const svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+    svg.setAttribute("class", "mindmap-svg");
+    svg.setAttribute("role", "img");
+    const domainCode = data.domain || "A";
+    svg.setAttribute("aria-label", UI.mapLabel[lang](domainCode));
 
-      // invisible group fork point (same hierarchy for sibling terms)
-      const fork = document.createElementNS(NS, "circle");
-      fork.setAttribute("cx", COL.group);
-      fork.setAttribute("cy", gY);
-      fork.setAttribute("r", 4);
-      fork.setAttribute("class", "mm-fork");
-      nodes.appendChild(fork);
+    const lines = document.createElementNS(NS, "g");
+    lines.setAttribute("class", "mm-lines");
+    const nodes = document.createElementNS(NS, "g");
+    nodes.setAttribute("class", "mm-nodes");
+    svg.appendChild(lines);
+    svg.appendChild(nodes);
+    host.appendChild(svg);
 
-      group.terms.forEach((term, ti) => {
-        const ty = gCursor + TERM_GAP / 2 + ti * TERM_GAP;
-        curve(COL.group, gY, COL.term, ty);
-        addTerm(COL.term, ty, term, ch.id);
+    function curve(x1, y1, x2, y2) {
+      const mx = (x1 + x2) / 2;
+      const path = document.createElementNS(NS, "path");
+      path.setAttribute("d", `M ${x1} ${y1} C ${mx} ${y1}, ${mx} ${y2}, ${x2} ${y2}`);
+      path.setAttribute("class", "mm-link");
+      lines.appendChild(path);
+    }
+
+    function addHub(x, y, label, cls) {
+      const g = document.createElementNS(NS, "g");
+      g.setAttribute("class", `mm-hub ${cls}`);
+      g.setAttribute("transform", `translate(${x}, ${y})`);
+      const c = document.createElementNS(NS, "circle");
+      c.setAttribute("r", cls === "mm-root" ? 28 : 18);
+      g.appendChild(c);
+      const t = document.createElementNS(NS, "text");
+      t.setAttribute("text-anchor", "middle");
+      t.setAttribute("dominant-baseline", "central");
+      t.textContent = label;
+      g.appendChild(t);
+      nodes.appendChild(g);
+      return g;
+    }
+
+    function addTerm(x, y, term, chapterId) {
+      const g = document.createElementNS(NS, "g");
+      g.setAttribute("class", "mm-term");
+      g.setAttribute("transform", `translate(${x}, ${y})`);
+      g.setAttribute("tabindex", "0");
+      g.setAttribute("role", "button");
+      g.dataset.id = term.id;
+
+      const label = labelOf(term, lang);
+      const w = termWidth(label.length);
+      const h = 26;
+
+      const rect = document.createElementNS(NS, "rect");
+      rect.setAttribute("x", 0);
+      rect.setAttribute("y", -h / 2);
+      rect.setAttribute("rx", 13);
+      rect.setAttribute("ry", 13);
+      rect.setAttribute("width", w);
+      rect.setAttribute("height", h);
+      g.appendChild(rect);
+
+      const t = document.createElementNS(NS, "text");
+      t.setAttribute("x", 14);
+      t.setAttribute("y", 1);
+      t.setAttribute("dominant-baseline", "central");
+      t.textContent = label;
+      g.appendChild(t);
+
+      const open = () => showPanel(term, chapterId);
+      g.addEventListener("click", (e) => {
+        e.stopPropagation();
+        open();
+      });
+      g.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          open();
+        }
       });
 
-      gCursor += gH;
-      if (gi < ch.groups.length - 1) gCursor += GROUP_PAD;
+      nodes.appendChild(g);
+      return { g, w };
+    }
+
+    // Root
+    addHub(COL.root, rootY, domainCode, "mm-root");
+
+    let cursorY = (height - totalH) / 2;
+    data.chapters.forEach((ch, ci) => {
+      const chH = chapterHeights[ci];
+      const chY = cursorY + chH / 2;
+      curve(COL.root + 28, rootY, COL.chapter - 18, chY);
+      addHub(COL.chapter, chY, ch.id, "mm-chapter");
+
+      let gCursor = cursorY;
+      ch.groups.forEach((group, gi) => {
+        const gH = group.terms.length * TERM_GAP;
+        const gY = gCursor + gH / 2;
+        curve(COL.chapter + 18, chY, COL.group, gY);
+
+        // invisible group fork point (same hierarchy for sibling terms)
+        const fork = document.createElementNS(NS, "circle");
+        fork.setAttribute("cx", COL.group);
+        fork.setAttribute("cy", gY);
+        fork.setAttribute("r", 4);
+        fork.setAttribute("class", "mm-fork");
+        nodes.appendChild(fork);
+
+        group.terms.forEach((term, ti) => {
+          const ty = gCursor + TERM_GAP / 2 + ti * TERM_GAP;
+          curve(COL.group, gY, COL.term, ty);
+          addTerm(COL.term, ty, term, ch.id);
+        });
+
+        gCursor += gH;
+        if (gi < ch.groups.length - 1) gCursor += GROUP_PAD;
+      });
+
+      cursorY += chH;
+      if (ci < data.chapters.length - 1) cursorY += CHAPTER_PAD;
     });
 
-    cursorY += chH;
-    if (ci < data.chapters.length - 1) cursorY += CHAPTER_PAD;
-  });
+    if (panel.classList.contains("open") && panelTerm) {
+      showPanel(panelTerm, panelChapterId);
+    }
+  }
 
-  // suppress unused
-  void ROOT_Y_GAP;
-  void stripMarks;
+  render();
+  document.addEventListener("lang-change", render);
 })();

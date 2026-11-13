@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>D-6 アクセス管理 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain D</span></a>
-  <a class="nav-back" href="index.html">← Domain D ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain D ハブ</span><span data-i18n="en">← Domain D hub</span><span data-i18n="es">← Hub del Domain D</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain D</h2>
-    <a href="d-1.html">D-1 リソースのセキュリティ対策</a><a href="d-2.html">D-2 ハードウェアの取得・管理・廃棄</a><a href="d-3.html">D-3 脆弱性管理手法</a><a href="d-4.html">D-4 アラートとモニタリング</a><a href="d-5.html">D-5 セキュリティ向上策</a><a href="d-6.html" class="active">D-6 アクセス管理</a><a href="d-7.html">D-7 自動化</a><a href="d-8.html">D-8 インシデント対応</a>
+    <a href="d-1.html">D-1 <span data-i18n="ja">リソースのセキュリティ対策</span><span data-i18n="en">リソースのセキュリティ対策</span><span data-i18n="es">リソースのセキュリティ対策</span></a><a href="d-2.html">D-2 <span data-i18n="ja">ハードウェアの取得・管理・廃棄</span><span data-i18n="en">ハードウェアの取得・管理・廃棄</span><span data-i18n="es">ハードウェアの取得・管理・廃棄</span></a><a href="d-3.html">D-3 <span data-i18n="ja">脆弱性管理手法</span><span data-i18n="en">脆弱性管理手法</span><span data-i18n="es">脆弱性管理手法</span></a><a href="d-4.html">D-4 <span data-i18n="ja">アラートとモニタリング</span><span data-i18n="en">アラートとモニタリング</span><span data-i18n="es">アラートとモニタリング</span></a><a href="d-5.html">D-5 <span data-i18n="ja">セキュリティ向上策</span><span data-i18n="en">セキュリティ向上策</span><span data-i18n="es">セキュリティ向上策</span></a><a href="d-6.html" class="active">D-6 <span data-i18n="ja">アクセス管理</span><span data-i18n="en">アクセス管理</span><span data-i18n="es">アクセス管理</span></a><a href="d-7.html">D-7 <span data-i18n="ja">自動化</span><span data-i18n="en">自動化</span><span data-i18n="es">自動化</span></a><a href="d-8.html">D-8 <span data-i18n="ja">インシデント対応</span><span data-i18n="en">インシデント対応</span><span data-i18n="es">インシデント対応</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain D 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain D <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,305 +55,454 @@
       
 <header class="hero">
   <p class="eyebrow">Domain D · D-6</p>
-  <h1>アクセス管理</h1>
-  <p>IAM・アクセス制御・MFA・パスワード</p>
+  <h1><span data-i18n="ja">アクセス管理</span><span data-i18n="en">アクセス管理</span><span data-i18n="es">アクセス管理</span></h1>
+  <p data-i18n="ja">IAM・アクセス制御・MFA・パスワード</p>
+  <p data-i18n="en">IAM・アクセス制御・MFA・パスワード</p>
+  <p data-i18n="es">IAM・アクセス制御・MFA・パスワード</p>
   <div class="meta-row">
-    <span class="chip">用語 24</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 4.6</span>
+    <span class="chip"><span data-i18n="ja">用語 24</span><span data-i18n="en">24 terms</span><span data-i18n="es">24 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 4.6</span><span data-i18n="en">Official 4.6</span><span data-i18n="es">Oficial 4.6</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 24問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 24問</span><span data-i18n="en">Quiz (24)</span><span data-i18n="es">Cuestionario (24)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">IAMのライフサイクル</h2>
-<article class="memo-card" id="d-6-provisioning" data-search="プロビジョニング provisioning アカウントの発行と権限付与（退職時は無効化） 入社時のid発行 退職者の即時無効化">
-  <h3>プロビジョニング<span class="en">Provisioning</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">IAMのライフサイクル</span><span data-i18n="en">IAMのライフサイクル</span><span data-i18n="es">IAMのライフサイクル</span></h2>
+<article class="memo-card" id="d-6-provisioning" data-search="プロビジョニング provisioning  アカウントの発行と権限付与（退職時は無効化） 入社時のid発行 退職者の即時無効化">
+  <h3>
+    <span data-i18n="ja">プロビジョニング<span class="en">Provisioning</span></span>
+    <span data-i18n="en">Provisioning</span>
+    <span data-i18n="es">プロビジョニング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">アカウントの<span class="hl">発行と権限付与</span>（退職時は無効化）</p>
+    <p data-i18n="ja" class="one-liner">アカウントの<span class="hl">発行と権限付与</span>（退職時は無効化）</p><p data-i18n="en" class="one-liner">アカウントの<span class="hl">発行と権限付与</span>（退職時は無効化）</p><p data-i18n="es" class="one-liner">アカウントの<span class="hl">発行と権限付与</span>（退職時は無効化）</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>入社時のID発行</li><li>退職者の即時無効化</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>入社時のID発行</li><li>退職者の即時無効化</li></ul>
+      <ul class="example-list" data-i18n="en"><li>入社時のID発行</li><li>退職者の即時無効化</li></ul>
+      <ul class="example-list" data-i18n="es"><li>入社時のID発行</li><li>退職者の即時無効化</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-permission" data-search="パーミッション permission assignments 職務に必要なアクセス権だけを割り当てる 経理へ財務権限のみ 過剰権限の排除">
-  <h3>パーミッション<span class="en">Permission assignments</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-permission" data-search="パーミッション permission assignments  職務に必要なアクセス権だけを割り当てる 経理へ財務権限のみ 過剰権限の排除">
+  <h3>
+    <span data-i18n="ja">パーミッション<span class="en">Permission assignments</span></span>
+    <span data-i18n="en">Permission assignments</span>
+    <span data-i18n="es">パーミッション</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">職務に必要な<span class="hl">アクセス権だけ</span>を割り当てる</p>
+    <p data-i18n="ja" class="one-liner">職務に必要な<span class="hl">アクセス権だけ</span>を割り当てる</p><p data-i18n="en" class="one-liner">職務に必要な<span class="hl">アクセス権だけ</span>を割り当てる</p><p data-i18n="es" class="one-liner">職務に必要な<span class="hl">アクセス権だけ</span>を割り当てる</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>経理へ財務権限のみ</li><li>過剰権限の排除</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>経理へ財務権限のみ</li><li>過剰権限の排除</li></ul>
+      <ul class="example-list" data-i18n="en"><li>経理へ財務権限のみ</li><li>過剰権限の排除</li></ul>
+      <ul class="example-list" data-i18n="es"><li>経理へ財務権限のみ</li><li>過剰権限の排除</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-identity-proofing" data-search="アイデンティティ・プルーフィング identity proofing 主張する本人が本物か確認するプロセス 身分証と人事情報の照合 口座開設時の本人確認">
-  <h3>アイデンティティ・プルーフィング<span class="en">Identity proofing</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-identity-proofing" data-search="アイデンティティ・プルーフィング identity proofing  主張する本人が本物か確認するプロセス 身分証と人事情報の照合 口座開設時の本人確認">
+  <h3>
+    <span data-i18n="ja">アイデンティティ・プルーフィング<span class="en">Identity proofing</span></span>
+    <span data-i18n="en">Identity proofing</span>
+    <span data-i18n="es">アイデンティティ・プルーフィング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">主張する本人が<span class="hl">本物か確認</span>するプロセス</p>
+    <p data-i18n="ja" class="one-liner">主張する本人が<span class="hl">本物か確認</span>するプロセス</p><p data-i18n="en" class="one-liner">主張する本人が<span class="hl">本物か確認</span>するプロセス</p><p data-i18n="es" class="one-liner">主張する本人が<span class="hl">本物か確認</span>するプロセス</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>身分証と人事情報の照合</li><li>口座開設時の本人確認</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>身分証と人事情報の照合</li><li>口座開設時の本人確認</li></ul>
+      <ul class="example-list" data-i18n="en"><li>身分証と人事情報の照合</li><li>口座開設時の本人確認</li></ul>
+      <ul class="example-list" data-i18n="es"><li>身分証と人事情報の照合</li><li>口座開設時の本人確認</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-attestation" data-search="アテステーション attestation 権限が職務に妥当かを検証し記録する 異動後の権限レビュー 不要権限の削除記録">
-  <h3>アテステーション<span class="en">Attestation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-attestation" data-search="アテステーション attestation  権限が職務に妥当かを検証し記録する 異動後の権限レビュー 不要権限の削除記録">
+  <h3>
+    <span data-i18n="ja">アテステーション<span class="en">Attestation</span></span>
+    <span data-i18n="en">Attestation</span>
+    <span data-i18n="es">アテステーション</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">権限が職務に妥当かを<span class="hl">検証し記録</span>する</p>
+    <p data-i18n="ja" class="one-liner">権限が職務に妥当かを<span class="hl">検証し記録</span>する</p><p data-i18n="en" class="one-liner">権限が職務に妥当かを<span class="hl">検証し記録</span>する</p><p data-i18n="es" class="one-liner">権限が職務に妥当かを<span class="hl">検証し記録</span>する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>異動後の権限レビュー</li><li>不要権限の削除記録</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>異動後の権限レビュー</li><li>不要権限の削除記録</li></ul>
+      <ul class="example-list" data-i18n="en"><li>異動後の権限レビュー</li><li>不要権限の削除記録</li></ul>
+      <ul class="example-list" data-i18n="es"><li>異動後の権限レビュー</li><li>不要権限の削除記録</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">連携とディレクトリ</h2>
-<article class="memo-card" id="d-6-federation" data-search="フェデレーション federation 異システム間で認証・認可情報を共有する googleアカウントで他社ログイン idpとspの信頼">
-  <h3>フェデレーション<span class="en">Federation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">連携とディレクトリ</span><span data-i18n="en">連携とディレクトリ</span><span data-i18n="es">連携とディレクトリ</span></h2>
+<article class="memo-card" id="d-6-federation" data-search="フェデレーション federation  異システム間で認証・認可情報を共有する googleアカウントで他社ログイン idpとspの信頼">
+  <h3>
+    <span data-i18n="ja">フェデレーション<span class="en">Federation</span></span>
+    <span data-i18n="en">Federation</span>
+    <span data-i18n="es">フェデレーション</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">異システム間</span>で認証・認可情報を共有する</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">異システム間</span>で認証・認可情報を共有する</p><p data-i18n="en" class="one-liner"><span class="hl">異システム間</span>で認証・認可情報を共有する</p><p data-i18n="es" class="one-liner"><span class="hl">異システム間</span>で認証・認可情報を共有する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Googleアカウントで他社ログイン</li><li>IdPとSPの信頼</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="d-6-ldap" data-search="ldap ldap ディレクトリのユーザー管理に使うプロトコル ad連携ログイン sso基盤の一部">
-  <h3>LDAP<span class="en">LDAP</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">ディレクトリのユーザー管理に使う<span class="hl">プロトコル</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>AD連携ログイン</li><li>SSO基盤の一部</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="d-6-interoperability" data-search="相互運用性 interoperability 標準プロトコルで異システムが相互利用できる能力 samlで社内iamとクラウド連携 ユーザー情報の同期">
-  <h3>相互運用性<span class="en">Interoperability</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">標準プロトコルで<span class="hl">異システムが相互利用</span>できる能力</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>SAMLで社内IAMとクラウド連携</li><li>ユーザー情報の同期</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">アクセス制御</h2>
-<article class="memo-card" id="d-6-mandatory" data-search="強制アクセス制御（mac） mandatory access control ラベルとクリアランスで強制的に制御する top secretラベル 軍事・政府環境">
-  <h3>強制アクセス制御（MAC）<span class="en">Mandatory access control</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">ラベルとクリアランスで<span class="hl">強制的に</span>制御する</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Top Secretラベル</li><li>軍事・政府環境</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Googleアカウントで他社ログイン</li><li>IdPとSPの信頼</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Googleアカウントで他社ログイン</li><li>IdPとSPの信頼</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Googleアカウントで他社ログイン</li><li>IdPとSPの信頼</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-discretionary" data-search="任意アクセス制御（dac） discretionary access control 所有者の裁量で権限を付けるモデル 共有フォルダのacl 読取／書込の個別付与">
-  <h3>任意アクセス制御（DAC）<span class="en">Discretionary access control</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-ldap" data-search="ldap ldap  ディレクトリのユーザー管理に使うプロトコル ad連携ログイン sso基盤の一部">
+  <h3>
+    <span data-i18n="ja">LDAP<span class="en">LDAP</span></span>
+    <span data-i18n="en">LDAP</span>
+    <span data-i18n="es">LDAP</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">所有者の裁量</span>で権限を付けるモデル</p>
+    <p data-i18n="ja" class="one-liner">ディレクトリのユーザー管理に使う<span class="hl">プロトコル</span></p><p data-i18n="en" class="one-liner">ディレクトリのユーザー管理に使う<span class="hl">プロトコル</span></p><p data-i18n="es" class="one-liner">ディレクトリのユーザー管理に使う<span class="hl">プロトコル</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>共有フォルダのACL</li><li>読取／書込の個別付与</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>AD連携ログイン</li><li>SSO基盤の一部</li></ul>
+      <ul class="example-list" data-i18n="en"><li>AD連携ログイン</li><li>SSO基盤の一部</li></ul>
+      <ul class="example-list" data-i18n="es"><li>AD連携ログイン</li><li>SSO基盤の一部</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-role-based" data-search="ロールベース（rbac） role-based access control 役割（ロール）に権限を束ねて付与する 経理ロール ロール継承">
-  <h3>ロールベース（RBAC）<span class="en">Role-based access control</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-interoperability" data-search="相互運用性 interoperability  標準プロトコルで異システムが相互利用できる能力 samlで社内iamとクラウド連携 ユーザー情報の同期">
+  <h3>
+    <span data-i18n="ja">相互運用性<span class="en">Interoperability</span></span>
+    <span data-i18n="en">Interoperability</span>
+    <span data-i18n="es">相互運用性</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">役割（ロール）</span>に権限を束ねて付与する</p>
+    <p data-i18n="ja" class="one-liner">標準プロトコルで<span class="hl">異システムが相互利用</span>できる能力</p><p data-i18n="en" class="one-liner">標準プロトコルで<span class="hl">異システムが相互利用</span>できる能力</p><p data-i18n="es" class="one-liner">標準プロトコルで<span class="hl">異システムが相互利用</span>できる能力</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>経理ロール</li><li>ロール継承</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>SAMLで社内IAMとクラウド連携</li><li>ユーザー情報の同期</li></ul>
+      <ul class="example-list" data-i18n="en"><li>SAMLで社内IAMとクラウド連携</li><li>ユーザー情報の同期</li></ul>
+      <ul class="example-list" data-i18n="es"><li>SAMLで社内IAMとクラウド連携</li><li>ユーザー情報の同期</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">アクセス制御</span><span data-i18n="en">アクセス制御</span><span data-i18n="es">アクセス制御</span></h2>
+<article class="memo-card" id="d-6-mandatory" data-search="強制アクセス制御（mac） mandatory access control  ラベルとクリアランスで強制的に制御する top secretラベル 軍事・政府環境">
+  <h3>
+    <span data-i18n="ja">強制アクセス制御（MAC）<span class="en">Mandatory access control</span></span>
+    <span data-i18n="en">Mandatory access control</span>
+    <span data-i18n="es">強制アクセス制御（MAC）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">ラベルとクリアランスで<span class="hl">強制的に</span>制御する</p><p data-i18n="en" class="one-liner">ラベルとクリアランスで<span class="hl">強制的に</span>制御する</p><p data-i18n="es" class="one-liner">ラベルとクリアランスで<span class="hl">強制的に</span>制御する</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Top Secretラベル</li><li>軍事・政府環境</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Top Secretラベル</li><li>軍事・政府環境</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Top Secretラベル</li><li>軍事・政府環境</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-rule-based" data-search="ルールベース rule-based access control 事前ルールでアクセス可否を動的に決める 役職＋時間帯の条件 環境要因を含む規則">
-  <h3>ルールベース<span class="en">Rule-based access control</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-discretionary" data-search="任意アクセス制御（dac） discretionary access control  所有者の裁量で権限を付けるモデル 共有フォルダのacl 読取／書込の個別付与">
+  <h3>
+    <span data-i18n="ja">任意アクセス制御（DAC）<span class="en">Discretionary access control</span></span>
+    <span data-i18n="en">Discretionary access control</span>
+    <span data-i18n="es">任意アクセス制御（DAC）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">事前ルール</span>でアクセス可否を動的に決める</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">所有者の裁量</span>で権限を付けるモデル</p><p data-i18n="en" class="one-liner"><span class="hl">所有者の裁量</span>で権限を付けるモデル</p><p data-i18n="es" class="one-liner"><span class="hl">所有者の裁量</span>で権限を付けるモデル</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>役職＋時間帯の条件</li><li>環境要因を含む規則</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>共有フォルダのACL</li><li>読取／書込の個別付与</li></ul>
+      <ul class="example-list" data-i18n="en"><li>共有フォルダのACL</li><li>読取／書込の個別付与</li></ul>
+      <ul class="example-list" data-i18n="es"><li>共有フォルダのACL</li><li>読取／書込の個別付与</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-attribute-based" data-search="属性ベース（abac） attribute-based access control ユーザー・資源・環境の属性組合せで制御 部門＋資料種別＋時刻 細粒度の動的判定">
-  <h3>属性ベース（ABAC）<span class="en">Attribute-based access control</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-role-based" data-search="ロールベース（rbac） role-based access control  役割（ロール）に権限を束ねて付与する 経理ロール ロール継承">
+  <h3>
+    <span data-i18n="ja">ロールベース（RBAC）<span class="en">Role-based access control</span></span>
+    <span data-i18n="en">Role-based access control</span>
+    <span data-i18n="es">ロールベース（RBAC）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">ユーザー・資源・環境の<span class="hl">属性組合せ</span>で制御</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">役割（ロール）</span>に権限を束ねて付与する</p><p data-i18n="en" class="one-liner"><span class="hl">役割（ロール）</span>に権限を束ねて付与する</p><p data-i18n="es" class="one-liner"><span class="hl">役割（ロール）</span>に権限を束ねて付与する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>部門＋資料種別＋時刻</li><li>細粒度の動的判定</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>経理ロール</li><li>ロール継承</li></ul>
+      <ul class="example-list" data-i18n="en"><li>経理ロール</li><li>ロール継承</li></ul>
+      <ul class="example-list" data-i18n="es"><li>経理ロール</li><li>ロール継承</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-time-of-day" data-search="時間帯制限 time-of-day restrictions アクセスできる時間帯を制限する 平日9〜18時のみ入館 業務時間外ログイン禁止">
-  <h3>時間帯制限<span class="en">Time-of-day restrictions</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-rule-based" data-search="ルールベース rule-based access control  事前ルールでアクセス可否を動的に決める 役職＋時間帯の条件 環境要因を含む規則">
+  <h3>
+    <span data-i18n="ja">ルールベース<span class="en">Rule-based access control</span></span>
+    <span data-i18n="en">Rule-based access control</span>
+    <span data-i18n="es">ルールベース</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">アクセスできる<span class="hl">時間帯を制限</span>する</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">事前ルール</span>でアクセス可否を動的に決める</p><p data-i18n="en" class="one-liner"><span class="hl">事前ルール</span>でアクセス可否を動的に決める</p><p data-i18n="es" class="one-liner"><span class="hl">事前ルール</span>でアクセス可否を動的に決める</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>平日9〜18時のみ入館</li><li>業務時間外ログイン禁止</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>役職＋時間帯の条件</li><li>環境要因を含む規則</li></ul>
+      <ul class="example-list" data-i18n="en"><li>役職＋時間帯の条件</li><li>環境要因を含む規則</li></ul>
+      <ul class="example-list" data-i18n="es"><li>役職＋時間帯の条件</li><li>環境要因を含む規則</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-least-privilege" data-search="最小特権 least privilege 業務に必要な最小限の権限だけ与える 一般ユーザーに設定変更権なし 管理者でも不要データ遮断">
-  <h3>最小特権<span class="en">Least privilege</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-attribute-based" data-search="属性ベース（abac） attribute-based access control  ユーザー・資源・環境の属性組合せで制御 部門＋資料種別＋時刻 細粒度の動的判定">
+  <h3>
+    <span data-i18n="ja">属性ベース（ABAC）<span class="en">Attribute-based access control</span></span>
+    <span data-i18n="en">Attribute-based access control</span>
+    <span data-i18n="es">属性ベース（ABAC）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">業務に必要な<span class="hl">最小限の権限だけ</span>与える</p>
+    <p data-i18n="ja" class="one-liner">ユーザー・資源・環境の<span class="hl">属性組合せ</span>で制御</p><p data-i18n="en" class="one-liner">ユーザー・資源・環境の<span class="hl">属性組合せ</span>で制御</p><p data-i18n="es" class="one-liner">ユーザー・資源・環境の<span class="hl">属性組合せ</span>で制御</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>一般ユーザーに設定変更権なし</li><li>管理者でも不要データ遮断</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">多要素認証</h2>
-<article class="memo-card" id="d-6-biometrics" data-search="バイオメトリクス biometrics 生体情報で本人を検証する 指紋・顔・虹彩 空港の顔認証ゲート">
-  <h3>バイオメトリクス<span class="en">Biometrics</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">生体情報</span>で本人を検証する</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>指紋・顔・虹彩</li><li>空港の顔認証ゲート</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>部門＋資料種別＋時刻</li><li>細粒度の動的判定</li></ul>
+      <ul class="example-list" data-i18n="en"><li>部門＋資料種別＋時刻</li><li>細粒度の動的判定</li></ul>
+      <ul class="example-list" data-i18n="es"><li>部門＋資料種別＋時刻</li><li>細粒度の動的判定</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-token" data-search="トークン hard/soft authentication tokens otp等を出すハード／ソフト認証手段 authenticatorアプリ 銀行ハードトークン">
-  <h3>トークン<span class="en">Hard/soft authentication tokens</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-time-of-day" data-search="時間帯制限 time-of-day restrictions  アクセスできる時間帯を制限する 平日9〜18時のみ入館 業務時間外ログイン禁止">
+  <h3>
+    <span data-i18n="ja">時間帯制限<span class="en">Time-of-day restrictions</span></span>
+    <span data-i18n="en">Time-of-day restrictions</span>
+    <span data-i18n="es">時間帯制限</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">OTP等を出す<span class="hl">ハード／ソフト</span>認証手段</p>
+    <p data-i18n="ja" class="one-liner">アクセスできる<span class="hl">時間帯を制限</span>する</p><p data-i18n="en" class="one-liner">アクセスできる<span class="hl">時間帯を制限</span>する</p><p data-i18n="es" class="one-liner">アクセスできる<span class="hl">時間帯を制限</span>する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Authenticatorアプリ</li><li>銀行ハードトークン</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>平日9〜18時のみ入館</li><li>業務時間外ログイン禁止</li></ul>
+      <ul class="example-list" data-i18n="en"><li>平日9〜18時のみ入館</li><li>業務時間外ログイン禁止</li></ul>
+      <ul class="example-list" data-i18n="es"><li>平日9〜18時のみ入館</li><li>業務時間外ログイン禁止</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-security-key" data-search="セキュリティキー security keys 物理キーで公開鍵等の多要素を行う yubikey usbキー押下ログイン">
-  <h3>セキュリティキー<span class="en">Security keys</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-least-privilege" data-search="最小特権 least privilege  業務に必要な最小限の権限だけ与える 一般ユーザーに設定変更権なし 管理者でも不要データ遮断">
+  <h3>
+    <span data-i18n="ja">最小特権<span class="en">Least privilege</span></span>
+    <span data-i18n="en">Least privilege</span>
+    <span data-i18n="es">最小特権</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">物理キー</span>で公開鍵等の多要素を行う</p>
+    <p data-i18n="ja" class="one-liner">業務に必要な<span class="hl">最小限の権限だけ</span>与える</p><p data-i18n="en" class="one-liner">業務に必要な<span class="hl">最小限の権限だけ</span>与える</p><p data-i18n="es" class="one-liner">業務に必要な<span class="hl">最小限の権限だけ</span>与える</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>YubiKey</li><li>USBキー押下ログイン</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>一般ユーザーに設定変更権なし</li><li>管理者でも不要データ遮断</li></ul>
+      <ul class="example-list" data-i18n="en"><li>一般ユーザーに設定変更権なし</li><li>管理者でも不要データ遮断</li></ul>
+      <ul class="example-list" data-i18n="es"><li>一般ユーザーに設定変更権なし</li><li>管理者でも不要データ遮断</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">多要素認証</span><span data-i18n="en">多要素認証</span><span data-i18n="es">多要素認証</span></h2>
+<article class="memo-card" id="d-6-biometrics" data-search="バイオメトリクス biometrics  生体情報で本人を検証する 指紋・顔・虹彩 空港の顔認証ゲート">
+  <h3>
+    <span data-i18n="ja">バイオメトリクス<span class="en">Biometrics</span></span>
+    <span data-i18n="en">Biometrics</span>
+    <span data-i18n="es">バイオメトリクス</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner"><span class="hl">生体情報</span>で本人を検証する</p><p data-i18n="en" class="one-liner"><span class="hl">生体情報</span>で本人を検証する</p><p data-i18n="es" class="one-liner"><span class="hl">生体情報</span>で本人を検証する</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>指紋・顔・虹彩</li><li>空港の顔認証ゲート</li></ul>
+      <ul class="example-list" data-i18n="en"><li>指紋・顔・虹彩</li><li>空港の顔認証ゲート</li></ul>
+      <ul class="example-list" data-i18n="es"><li>指紋・顔・虹彩</li><li>空港の顔認証ゲート</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-auth-factors" data-search="認証の要素 authentication factors 知っている／持っている／自身／場所の認証カテゴリ パスワード＋トークン gps／社内wi-fi位置">
-  <h3>認証の要素<span class="en">Authentication factors</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-token" data-search="トークン hard/soft authentication tokens  otp等を出すハード／ソフト認証手段 authenticatorアプリ 銀行ハードトークン">
+  <h3>
+    <span data-i18n="ja">トークン<span class="en">Hard/soft authentication tokens</span></span>
+    <span data-i18n="en">Hard/soft authentication tokens</span>
+    <span data-i18n="es">トークン</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">知っている／持っている／自身／場所の<span class="hl">認証カテゴリ</span></p>
+    <p data-i18n="ja" class="one-liner">OTP等を出す<span class="hl">ハード／ソフト</span>認証手段</p><p data-i18n="en" class="one-liner">OTP等を出す<span class="hl">ハード／ソフト</span>認証手段</p><p data-i18n="es" class="one-liner">OTP等を出す<span class="hl">ハード／ソフト</span>認証手段</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>パスワード＋トークン</li><li>GPS／社内Wi-Fi位置</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">パスワード</h2>
-<article class="memo-card" id="d-6-password-length" data-search="パスワードの長さ password length 十分な文字数で総当たり耐性を上げる 12文字以上の要求 短すぎるパスワード禁止">
-  <h3>パスワードの長さ<span class="en">Password length</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">十分な<span class="hl">文字数</span>で総当たり耐性を上げる</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>12文字以上の要求</li><li>短すぎるパスワード禁止</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Authenticatorアプリ</li><li>銀行ハードトークン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Authenticatorアプリ</li><li>銀行ハードトークン</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Authenticatorアプリ</li><li>銀行ハードトークン</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-password-complexity" data-search="パスワードの複雑さ password complexity 文字種の多様化と辞書単語の回避 大文字小文字数字記号 辞書攻撃対策">
-  <h3>パスワードの複雑さ<span class="en">Password complexity</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-security-key" data-search="セキュリティキー security keys  物理キーで公開鍵等の多要素を行う yubikey usbキー押下ログイン">
+  <h3>
+    <span data-i18n="ja">セキュリティキー<span class="en">Security keys</span></span>
+    <span data-i18n="en">Security keys</span>
+    <span data-i18n="es">セキュリティキー</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">文字種の多様化と<span class="hl">辞書単語の回避</span></p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">物理キー</span>で公開鍵等の多要素を行う</p><p data-i18n="en" class="one-liner"><span class="hl">物理キー</span>で公開鍵等の多要素を行う</p><p data-i18n="es" class="one-liner"><span class="hl">物理キー</span>で公開鍵等の多要素を行う</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>大文字小文字数字記号</li><li>辞書攻撃対策</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>YubiKey</li><li>USBキー押下ログイン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>YubiKey</li><li>USBキー押下ログイン</li></ul>
+      <ul class="example-list" data-i18n="es"><li>YubiKey</li><li>USBキー押下ログイン</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-password-reuse" data-search="パスワードの再利用 password reuse サービスごとに一意のパスワードを使う 使い回し禁止 漏えいの横展開防止">
-  <h3>パスワードの再利用<span class="en">Password reuse</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-auth-factors" data-search="認証の要素 authentication factors  知っている／持っている／自身／場所の認証カテゴリ パスワード＋トークン gps／社内wi-fi位置">
+  <h3>
+    <span data-i18n="ja">認証の要素<span class="en">Authentication factors</span></span>
+    <span data-i18n="en">Authentication factors</span>
+    <span data-i18n="es">認証の要素</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">サービスごとに<span class="hl">一意のパスワード</span>を使う</p>
+    <p data-i18n="ja" class="one-liner">知っている／持っている／自身／場所の<span class="hl">認証カテゴリ</span></p><p data-i18n="en" class="one-liner">知っている／持っている／自身／場所の<span class="hl">認証カテゴリ</span></p><p data-i18n="es" class="one-liner">知っている／持っている／自身／場所の<span class="hl">認証カテゴリ</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>使い回し禁止</li><li>漏えいの横展開防止</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>パスワード＋トークン</li><li>GPS／社内Wi-Fi位置</li></ul>
+      <ul class="example-list" data-i18n="en"><li>パスワード＋トークン</li><li>GPS／社内Wi-Fi位置</li></ul>
+      <ul class="example-list" data-i18n="es"><li>パスワード＋トークン</li><li>GPS／社内Wi-Fi位置</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">パスワード</span><span data-i18n="en">パスワード</span><span data-i18n="es">パスワード</span></h2>
+<article class="memo-card" id="d-6-password-length" data-search="パスワードの長さ password length  十分な文字数で総当たり耐性を上げる 12文字以上の要求 短すぎるパスワード禁止">
+  <h3>
+    <span data-i18n="ja">パスワードの長さ<span class="en">Password length</span></span>
+    <span data-i18n="en">Password length</span>
+    <span data-i18n="es">パスワードの長さ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">十分な<span class="hl">文字数</span>で総当たり耐性を上げる</p><p data-i18n="en" class="one-liner">十分な<span class="hl">文字数</span>で総当たり耐性を上げる</p><p data-i18n="es" class="one-liner">十分な<span class="hl">文字数</span>で総当たり耐性を上げる</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>12文字以上の要求</li><li>短すぎるパスワード禁止</li></ul>
+      <ul class="example-list" data-i18n="en"><li>12文字以上の要求</li><li>短すぎるパスワード禁止</li></ul>
+      <ul class="example-list" data-i18n="es"><li>12文字以上の要求</li><li>短すぎるパスワード禁止</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-password-expiration" data-search="パスワードの期限 password expiration 定期変更方針（頻繁変更は逆効果になり得る） 旧来の90日ローテ 漏洩時変更を重視">
-  <h3>パスワードの期限<span class="en">Password expiration</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-password-complexity" data-search="パスワードの複雑さ password complexity  文字種の多様化と辞書単語の回避 大文字小文字数字記号 辞書攻撃対策">
+  <h3>
+    <span data-i18n="ja">パスワードの複雑さ<span class="en">Password complexity</span></span>
+    <span data-i18n="en">Password complexity</span>
+    <span data-i18n="es">パスワードの複雑さ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">定期変更方針（<span class="hl">頻繁変更は逆効果</span>になり得る）</p>
+    <p data-i18n="ja" class="one-liner">文字種の多様化と<span class="hl">辞書単語の回避</span></p><p data-i18n="en" class="one-liner">文字種の多様化と<span class="hl">辞書単語の回避</span></p><p data-i18n="es" class="one-liner">文字種の多様化と<span class="hl">辞書単語の回避</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>旧来の90日ローテ</li><li>漏洩時変更を重視</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>大文字小文字数字記号</li><li>辞書攻撃対策</li></ul>
+      <ul class="example-list" data-i18n="en"><li>大文字小文字数字記号</li><li>辞書攻撃対策</li></ul>
+      <ul class="example-list" data-i18n="es"><li>大文字小文字数字記号</li><li>辞書攻撃対策</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-password-manager" data-search="パスワードマネージャー password managers パスワードを暗号化保管し一意・強力を支援 ブラウザの保存機能 専用管理アプリ">
-  <h3>パスワードマネージャー<span class="en">Password managers</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-password-reuse" data-search="パスワードの再利用 password reuse  サービスごとに一意のパスワードを使う 使い回し禁止 漏えいの横展開防止">
+  <h3>
+    <span data-i18n="ja">パスワードの再利用<span class="en">Password reuse</span></span>
+    <span data-i18n="en">Password reuse</span>
+    <span data-i18n="es">パスワードの再利用</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">パスワードを<span class="hl">暗号化保管</span>し一意・強力を支援</p>
+    <p data-i18n="ja" class="one-liner">サービスごとに<span class="hl">一意のパスワード</span>を使う</p><p data-i18n="en" class="one-liner">サービスごとに<span class="hl">一意のパスワード</span>を使う</p><p data-i18n="es" class="one-liner">サービスごとに<span class="hl">一意のパスワード</span>を使う</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ブラウザの保存機能</li><li>専用管理アプリ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>使い回し禁止</li><li>漏えいの横展開防止</li></ul>
+      <ul class="example-list" data-i18n="en"><li>使い回し禁止</li><li>漏えいの横展開防止</li></ul>
+      <ul class="example-list" data-i18n="es"><li>使い回し禁止</li><li>漏えいの横展開防止</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-6-passwordless" data-search="パスワードレス passwordless 生体・キー等でパスワードなし認証 指紋ログイン セキュリティキー認証">
-  <h3>パスワードレス<span class="en">Passwordless</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-6-password-expiration" data-search="パスワードの期限 password expiration  定期変更方針（頻繁変更は逆効果になり得る） 旧来の90日ローテ 漏洩時変更を重視">
+  <h3>
+    <span data-i18n="ja">パスワードの期限<span class="en">Password expiration</span></span>
+    <span data-i18n="en">Password expiration</span>
+    <span data-i18n="es">パスワードの期限</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">生体・キー等で<span class="hl">パスワードなし認証</span></p>
+    <p data-i18n="ja" class="one-liner">定期変更方針（<span class="hl">頻繁変更は逆効果</span>になり得る）</p><p data-i18n="en" class="one-liner">定期変更方針（<span class="hl">頻繁変更は逆効果</span>になり得る）</p><p data-i18n="es" class="one-liner">定期変更方針（<span class="hl">頻繁変更は逆効果</span>になり得る）</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>指紋ログイン</li><li>セキュリティキー認証</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>旧来の90日ローテ</li><li>漏洩時変更を重視</li></ul>
+      <ul class="example-list" data-i18n="en"><li>旧来の90日ローテ</li><li>漏洩時変更を重視</li></ul>
+      <ul class="example-list" data-i18n="es"><li>旧来の90日ローテ</li><li>漏洩時変更を重視</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-6-password-manager" data-search="パスワードマネージャー password managers  パスワードを暗号化保管し一意・強力を支援 ブラウザの保存機能 専用管理アプリ">
+  <h3>
+    <span data-i18n="ja">パスワードマネージャー<span class="en">Password managers</span></span>
+    <span data-i18n="en">Password managers</span>
+    <span data-i18n="es">パスワードマネージャー</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">パスワードを<span class="hl">暗号化保管</span>し一意・強力を支援</p><p data-i18n="en" class="one-liner">パスワードを<span class="hl">暗号化保管</span>し一意・強力を支援</p><p data-i18n="es" class="one-liner">パスワードを<span class="hl">暗号化保管</span>し一意・強力を支援</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ブラウザの保存機能</li><li>専用管理アプリ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ブラウザの保存機能</li><li>専用管理アプリ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ブラウザの保存機能</li><li>専用管理アプリ</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-6-passwordless" data-search="パスワードレス passwordless  生体・キー等でパスワードなし認証 指紋ログイン セキュリティキー認証">
+  <h3>
+    <span data-i18n="ja">パスワードレス<span class="en">Passwordless</span></span>
+    <span data-i18n="en">Passwordless</span>
+    <span data-i18n="es">パスワードレス</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">生体・キー等で<span class="hl">パスワードなし認証</span></p><p data-i18n="en" class="one-liner">生体・キー等で<span class="hl">パスワードなし認証</span></p><p data-i18n="es" class="one-liner">生体・キー等で<span class="hl">パスワードなし認証</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>指紋ログイン</li><li>セキュリティキー認証</li></ul>
+      <ul class="example-list" data-i18n="en"><li>指紋ログイン</li><li>セキュリティキー認証</li></ul>
+      <ul class="example-list" data-i18n="es"><li>指紋ログイン</li><li>セキュリティキー認証</li></ul>
     </div>
   </div>
 </article>
@@ -355,19 +510,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（24問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（24問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (24 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (24 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">[{"term": "d-6-provisioning", "stem": "新入社員に各システムのIDを発行して最小限の権限を付け、退職時はアカウントを無効化して全権限を取り消す運用を導入した。これは主にどれか。", "choices": ["アテステーションのみ", "プロビジョニング（とデプロビジョニング）", "MAC", "パスワードレス"], "answer": 1, "explain": "アカウント発行と権限付与、退職時の無効化・取消しがプロビジョニング／デプロビジョニングの中核。"}, {"term": "d-6-permission", "stem": "経理ユーザーに財務システム権限は与えるが、営業データへの権限は付けない方針にした。何を適切に行っているか。", "choices": ["フェデレーション", "パーミッションの割当", "バイオメトリクス", "LDAPクエリの最適化のみ"], "answer": 1, "explain": "職務に必要なアクセス権だけを付与するのがパーミッション割当。過剰権限は漏えいリスクを高める。"}, {"term": "d-6-identity-proofing", "stem": "アカウント申請時に人事情報と身分証明書を照合し、申請者が真正な社員であることを確認した。これはどれか。", "choices": ["アイデンティティ・プルーフィング", "時間帯制限", "DAC", "パスワードの再利用"], "answer": 0, "explain": "主張するアイデンティティが本物かを確認するのが Identity proofing（本人確認）。"}, {"term": "d-6-federation", "stem": "Googleアカウントで自社以外の複数サービスにもログインできるよう、異システム間で認証情報を共有している。これはどれか。", "choices": ["最小特権", "フェデレーション", "パスワードの複雑さ", "強制アクセス制御"], "answer": 1, "explain": "異なるシステム間で認証・認可情報を共有するのがフェデレーション。"}, {"term": "d-6-ldap", "stem": "社内ディレクトリを参照するプロトコルを使い、中央のユーザー情報で複数アプリの認証・アクセス制御を行う。このプロトコルはどれか。", "choices": ["LDAP", "SMTP", "FTP", "DHCP"], "answer": 0, "explain": "LDAPはディレクトリサービス上のユーザー情報管理・アクセス制御に使われるプロトコル。"}, {"term": "d-6-interoperability", "stem": "社内IAMとクラウドをSAML等の標準プロトコルでつなぎ、シングルサインオンやユーザー同期を可能にした。主にどの能力か。", "choices": ["バイオメトリクス", "相互運用性", "パスワードの長さ", "コールドサイト"], "answer": 1, "explain": "標準インターフェース／プロトコルで異システムが相互利用できる能力が相互運用性（Interoperability）。"}, {"term": "d-6-attestation", "stem": "営業から経理へ異動した社員の権限を見直し、不要になった営業系権限を削除して結果を記録した。これはどれか。", "choices": ["アテステーション", "フェデレーション", "セキュリティキー", "パスワードレス"], "answer": 0, "explain": "現職務に必要な範囲か権限を検証し記録するのがアテステーション（アクセスレビュー）。"}, {"term": "d-6-mandatory", "stem": "軍事機関でTop Secretラベルの文書へ、十分なクリアランスを持つ者だけがアクセスでき、所有者が勝手に緩められない。これはどれか。", "choices": ["DAC", "強制アクセス制御（MAC）", "パスワードマネージャー", "時間帯制限のみ"], "answer": 1, "explain": "セキュリティラベルとクリアランスでシステムが強制的に制御するのがMAC。"}, {"term": "d-6-discretionary", "stem": "ファイル所有者があるユーザーに読取、別ユーザーに読取＋書込を自分の判断で設定した。このモデルはどれか。", "choices": ["MAC", "任意アクセス制御（DAC）", "Somewhere you are", "プロビジョニング"], "answer": 1, "explain": "所有者／管理者の裁量で権限を定義するのがDAC。"}, {"term": "d-6-role-based", "stem": "「経理」ロールに会計システム権限を束ね、そのロールを割り当てたユーザーが自動で権限を継承する。これはどれか。", "choices": ["RBAC（ロールベース）", "バイオメトリクス", "パスワードの期限", "LDAPの暗号化のみ"], "answer": 0, "explain": "職務・役割に権限を束ねて管理するのがRBAC。"}, {"term": "d-6-rule-based", "stem": "「部長以上かつ就業時間内かつ機密度が中以下なら読取許可」という条件で可否を決める。これはどれか。", "choices": ["ルールベースアクセス制御", "パスワードレス", "セキュリティキー", "アイデンティティ・プルーフィング"], "answer": 0, "explain": "事前定義ルール（条件）に基づき動的に判定するのがルールベース。"}, {"term": "d-6-attribute-based", "stem": "所属部門・リソース種別・現在時刻などの属性を組み合わせて読取／書込を動的に許可する。これはどれか。", "choices": ["DACのみ", "属性ベース（ABAC）", "パスワードの再利用", "ハードトークン"], "answer": 1, "explain": "ユーザー・リソース・環境の属性組合せで細かく制御するのがABAC。"}, {"term": "d-6-time-of-day", "stem": "平日9〜18時は全社員が入館でき、それ以外は特別許可者のみとする入退館ルールを設けた。これはどれか。", "choices": ["時間帯制限（Time-of-day）", "フェデレーション", "MACラベル付けのみ", "パスワードの複雑さ"], "answer": 0, "explain": "アクセスできる時間帯を制限するのがTime-of-day restrictions。"}, {"term": "d-6-least-privilege", "stem": "一般社員には自業務のファイルだけ、IT管理者にも不要な個人情報へのアクセスは与えない方針にした。これはどれか。", "choices": ["最小特権", "相互運用性", "パスワードの長さ", "フェデレーション"], "answer": 0, "explain": "必要最小限の権限だけを与えるのが最小特権（Least privilege）。"}, {"term": "d-6-biometrics", "stem": "空港ゲートでパスポートICの顔写真とカメラ映像を照合し本人確認する。どの実装か。", "choices": ["バイオメトリクス", "LDAP", "DAC", "パスワードの期限"], "answer": 0, "explain": "指紋・顔・虹彩など生体情報で検証するのがバイオメトリクス。"}, {"term": "d-6-token", "stem": "ログイン時にパスワードに加え、Authenticatorアプリが表示する定期更新コードを入力させる。これはどれか。", "choices": ["ソフトトークン（認証トークン）", "MAC", "アテステーション", "時間帯制限"], "answer": 0, "explain": "OTP等を生成するハード／ソフト手段が認証トークン。アプリはソフトトークンの典型。"}, {"term": "d-6-security-key", "stem": "USBの物理デバイスを挿してボタンを押し、公開鍵認証などで多要素ログインする。これはどれか。", "choices": ["セキュリティキー", "パスワードの再利用", "RBAC", "プロビジョニング"], "answer": 0, "explain": "YubiKey等の物理認証デバイスがセキュリティキー。"}, {"term": "d-6-auth-factors", "stem": "パスワード（知っていること）とトークン（持っているもの）、さらに社内Wi-Fi上か（いる場所）を組み合わせて判定する。整理している概念はどれか。", "choices": ["認証の要素（Authentication factors）", "パスワードの長さのみ", "DAC", "デプロビジョニングのみ"], "answer": 0, "explain": "know／have／are／somewhere のカテゴリが認証の要素。異カテゴリ組合せが真のMFA。"}, {"term": "d-6-password-length", "stem": "短すぎるパスワードは総当たりで破られやすいため、最低12文字などをポリシーで要求した。主に何のベストプラクティスか。", "choices": ["パスワードの長さ", "フェデレーション", "MAC", "アテステーション"], "answer": 0, "explain": "十分な文字数を確保するのがパスワードの長さ（Length）。"}, {"term": "d-6-password-complexity", "stem": "大文字・小文字・数字・記号を必須にし、辞書に載る単語を禁止するポリシーにした。これはどれか。", "choices": ["パスワードの複雑さ", "時間帯制限", "LDAP", "最小特権"], "answer": 0, "explain": "文字種の多様化と辞書攻撃対策が複雑さ（Complexity）の要点。"}, {"term": "d-6-password-reuse", "stem": "あるサービスで漏れたパスワードが他サービスでも使えると被害が広がるため、サービスごとに異なるパスワードを義務付けた。何を防いでいるか。", "choices": ["パスワードの再利用", "相互運用性", "RBAC", "バイオメトリクス"], "answer": 0, "explain": "使い回しを避け一意のパスワードを使うのが再利用対策。"}, {"term": "d-6-password-expiration", "stem": "90日ごとの強制変更は、簡単なパスワードやメモ書きを招き逆効果になり得る、という整理のもと方針を見直した。関係する概念はどれか。", "choices": ["パスワードの期限（Expiration）", "セキュリティキー", "MAC", "フェデレーション"], "answer": 0, "explain": "定期変更（期限）は従来推奨されがちだが、頻繁変更の副作用にも注意、が試験でも押さえどころ。"}, {"term": "d-6-password-manager", "stem": "各サイトの強力で一意なパスワードを暗号化して保管し、ユーザーの暗記負担を減らす仕組みを導入した。これはどれか。", "choices": ["パスワードマネージャー", "強制アクセス制御", "時間帯制限", "アイデンティティ・プルーフィング"], "answer": 0, "explain": "パスワードの暗号化保管と一意・強力なパスワード運用を支援するのがパスワードマネージャー。"}, {"term": "d-6-passwordless", "stem": "パスワード入力の代わりに指紋やセキュリティキーでログインし、弱いパスワードやフィッシングのリスクを減らす。これはどれか。", "choices": ["パスワードレス", "DAC", "LDAPのみ", "パーミッション割当のみ"], "answer": 0, "explain": "生体・キー・アプリ等の代替手段でパスワードなし認証するのがパスワードレス。"}]</script>
 </section>
 
-<nav class="pager"><a href="d-5.html"><span>前の章</span>D-5 セキュリティ向上策</a><a class="next" href="d-7.html"><span>次の章</span>D-7 自動化</a></nav>
+<nav class="pager"><a href="d-5.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>D-5 <span data-i18n="ja">セキュリティ向上策</span><span data-i18n="en">セキュリティ向上策</span><span data-i18n="es">セキュリティ向上策</span></span></a><a class="next" href="d-7.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>D-7 <span data-i18n="ja">自動化</span><span data-i18n="en">自動化</span><span data-i18n="es">自動化</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

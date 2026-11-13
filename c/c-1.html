@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>C-1 セキュリティアーキテクチャの全体像 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain C</span></a>
-  <a class="nav-back" href="index.html">← Domain C ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain C ハブ</span><span data-i18n="en">← Domain C hub</span><span data-i18n="es">← Hub del Domain C</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain C</h2>
-    <a href="c-1.html" class="active">C-1 セキュリティアーキテクチャの全体像</a><a href="c-2.html">C-2 インフラを守るセキュリティ原則</a><a href="c-3.html">C-3 データ保護の戦略と概念</a><a href="c-4.html">C-4 回復性と耐性</a>
+    <a href="c-1.html" class="active">C-1 <span data-i18n="ja">セキュリティアーキテクチャの全体像</span><span data-i18n="en">セキュリティアーキテクチャの全体像</span><span data-i18n="es">セキュリティアーキテクチャの全体像</span></a><a href="c-2.html">C-2 <span data-i18n="ja">インフラを守るセキュリティ原則</span><span data-i18n="en">インフラを守るセキュリティ原則</span><span data-i18n="es">インフラを守るセキュリティ原則</span></a><a href="c-3.html">C-3 <span data-i18n="ja">データ保護の戦略と概念</span><span data-i18n="en">データ保護の戦略と概念</span><span data-i18n="es">データ保護の戦略と概念</span></a><a href="c-4.html">C-4 <span data-i18n="ja">回復性と耐性</span><span data-i18n="en">回復性と耐性</span><span data-i18n="es">回復性と耐性</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain C 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain C <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,305 +55,454 @@
       
 <header class="hero">
   <p class="eyebrow">Domain C · C-1</p>
-  <h1>セキュリティアーキテクチャの全体像</h1>
-  <p>クラウド・仮想化・組込みと設計の観点</p>
+  <h1><span data-i18n="ja">セキュリティアーキテクチャの全体像</span><span data-i18n="en">セキュリティアーキテクチャの全体像</span><span data-i18n="es">セキュリティアーキテクチャの全体像</span></h1>
+  <p data-i18n="ja">クラウド・仮想化・組込みと設計の観点</p>
+  <p data-i18n="en">クラウド・仮想化・組込みと設計の観点</p>
+  <p data-i18n="es">クラウド・仮想化・組込みと設計の観点</p>
   <div class="meta-row">
-    <span class="chip">用語 24</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 3.1</span>
+    <span class="chip"><span data-i18n="ja">用語 24</span><span data-i18n="en">24 terms</span><span data-i18n="es">24 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 3.1</span><span data-i18n="en">Official 3.1</span><span data-i18n="es">Oficial 3.1</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 24問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 24問</span><span data-i18n="en">Quiz (24)</span><span data-i18n="es">Cuestionario (24)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">クラウドとコード（誰が責任を持ち、どう作るか）</h2>
-<article class="memo-card" id="c-1-responsibility-matrix" data-search="クラウドの責任マトリクス cloud responsibility matrix 事業者とユーザーの責任範囲を整理する表 paasのアプリ対策 iaas/paas/saas">
-  <h3>クラウドの責任マトリクス<span class="en">Cloud responsibility matrix</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">クラウドとコード（誰が責任を持ち、どう作るか）</span><span data-i18n="en">クラウドとコード（誰が責任を持ち、どう作るか）</span><span data-i18n="es">クラウドとコード（誰が責任を持ち、どう作るか）</span></h2>
+<article class="memo-card" id="c-1-responsibility-matrix" data-search="クラウドの責任マトリクス cloud responsibility matrix  事業者とユーザーの責任範囲を整理する表 paasのアプリ対策 iaas/paas/saas">
+  <h3>
+    <span data-i18n="ja">クラウドの責任マトリクス<span class="en">Cloud responsibility matrix</span></span>
+    <span data-i18n="en">Cloud responsibility matrix</span>
+    <span data-i18n="es">クラウドの責任マトリクス</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">事業者とユーザーの<span class="hl">責任範囲</span>を整理する表</p>
+    <p data-i18n="ja" class="one-liner">事業者とユーザーの<span class="hl">責任範囲</span>を整理する表</p><p data-i18n="en" class="one-liner">事業者とユーザーの<span class="hl">責任範囲</span>を整理する表</p><p data-i18n="es" class="one-liner">事業者とユーザーの<span class="hl">責任範囲</span>を整理する表</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>PaaSのアプリ対策</li><li>IaaS/PaaS/SaaS</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>PaaSのアプリ対策</li><li>IaaS/PaaS/SaaS</li></ul>
+      <ul class="example-list" data-i18n="en"><li>PaaSのアプリ対策</li><li>IaaS/PaaS/SaaS</li></ul>
+      <ul class="example-list" data-i18n="es"><li>PaaSのアプリ対策</li><li>IaaS/PaaS/SaaS</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-iac" data-search="iac infrastructure as code インフラ設定をコードで定義し自動化 環境の自動構築 構成のバージョン管理">
-  <h3>IaC<span class="en">Infrastructure as Code</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-iac" data-search="iac infrastructure as code  インフラ設定をコードで定義し自動化 環境の自動構築 構成のバージョン管理">
+  <h3>
+    <span data-i18n="ja">IaC<span class="en">Infrastructure as Code</span></span>
+    <span data-i18n="en">Infrastructure as Code</span>
+    <span data-i18n="es">IaC</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">インフラ設定を<span class="hl">コードで定義</span>し自動化</p>
+    <p data-i18n="ja" class="one-liner">インフラ設定を<span class="hl">コードで定義</span>し自動化</p><p data-i18n="en" class="one-liner">インフラ設定を<span class="hl">コードで定義</span>し自動化</p><p data-i18n="es" class="one-liner">インフラ設定を<span class="hl">コードで定義</span>し自動化</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>環境の自動構築</li><li>構成のバージョン管理</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>環境の自動構築</li><li>構成のバージョン管理</li></ul>
+      <ul class="example-list" data-i18n="en"><li>環境の自動構築</li><li>構成のバージョン管理</li></ul>
+      <ul class="example-list" data-i18n="es"><li>環境の自動構築</li><li>構成のバージョン管理</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-serverless" data-search="サーバーレス serverless サーバー管理を任せアプリに集中するモデル lambda関数 cloud functions">
-  <h3>サーバーレス<span class="en">Serverless</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-serverless" data-search="サーバーレス serverless  サーバー管理を任せアプリに集中するモデル lambda関数 cloud functions">
+  <h3>
+    <span data-i18n="ja">サーバーレス<span class="en">Serverless</span></span>
+    <span data-i18n="en">Serverless</span>
+    <span data-i18n="es">サーバーレス</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">サーバー管理を任せ<span class="hl">アプリに集中</span>するモデル</p>
+    <p data-i18n="ja" class="one-liner">サーバー管理を任せ<span class="hl">アプリに集中</span>するモデル</p><p data-i18n="en" class="one-liner">サーバー管理を任せ<span class="hl">アプリに集中</span>するモデル</p><p data-i18n="es" class="one-liner">サーバー管理を任せ<span class="hl">アプリに集中</span>するモデル</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Lambda関数</li><li>Cloud Functions</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Lambda関数</li><li>Cloud Functions</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Lambda関数</li><li>Cloud Functions</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Lambda関数</li><li>Cloud Functions</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-microservices" data-search="マイクロサービス microservices 機能を独立サービスに分割して運用 ecの注文サービス 独立デプロイ">
-  <h3>マイクロサービス<span class="en">Microservices</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-microservices" data-search="マイクロサービス microservices  機能を独立サービスに分割して運用 ecの注文サービス 独立デプロイ">
+  <h3>
+    <span data-i18n="ja">マイクロサービス<span class="en">Microservices</span></span>
+    <span data-i18n="en">Microservices</span>
+    <span data-i18n="es">マイクロサービス</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">機能を<span class="hl">独立サービス</span>に分割して運用</p>
+    <p data-i18n="ja" class="one-liner">機能を<span class="hl">独立サービス</span>に分割して運用</p><p data-i18n="en" class="one-liner">機能を<span class="hl">独立サービス</span>に分割して運用</p><p data-i18n="es" class="one-liner">機能を<span class="hl">独立サービス</span>に分割して運用</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ECの注文サービス</li><li>独立デプロイ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ECの注文サービス</li><li>独立デプロイ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ECの注文サービス</li><li>独立デプロイ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ECの注文サービス</li><li>独立デプロイ</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">ネットワーク分離と仮想化（どう分け、どう載せるか）</h2>
-<article class="memo-card" id="c-1-air-gap" data-search="エアギャップ air gap 外部網から物理的に隔離されたシステム 軍事の機密網 インターネット非接続">
-  <h3>エアギャップ<span class="en">Air gap</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">ネットワーク分離と仮想化（どう分け、どう載せるか）</span><span data-i18n="en">ネットワーク分離と仮想化（どう分け、どう載せるか）</span><span data-i18n="es">ネットワーク分離と仮想化（どう分け、どう載せるか）</span></h2>
+<article class="memo-card" id="c-1-air-gap" data-search="エアギャップ air gap  外部網から物理的に隔離されたシステム 軍事の機密網 インターネット非接続">
+  <h3>
+    <span data-i18n="ja">エアギャップ<span class="en">Air gap</span></span>
+    <span data-i18n="en">Air gap</span>
+    <span data-i18n="es">エアギャップ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">外部網から<span class="hl">物理的に隔離</span>されたシステム</p>
+    <p data-i18n="ja" class="one-liner">外部網から<span class="hl">物理的に隔離</span>されたシステム</p><p data-i18n="en" class="one-liner">外部網から<span class="hl">物理的に隔離</span>されたシステム</p><p data-i18n="es" class="one-liner">外部網から<span class="hl">物理的に隔離</span>されたシステム</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>軍事の機密網</li><li>インターネット非接続</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="c-1-sdn" data-search="sdn software-defined networking ネットワークをソフトで集中制御する技術 sdnコントローラ プレーン分離">
-  <h3>SDN<span class="en">Software-Defined Networking</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">ネットワークを<span class="hl">ソフトで集中制御</span>する技術</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>SDNコントローラ</li><li>プレーン分離</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="c-1-centralized-decentralized" data-search="集中型と分散型 centralized vs decentralized 管理を一箇所に集めるか分散するか 銀行の中央処理 ブロックチェーン">
-  <h3>集中型と分散型<span class="en">Centralized vs decentralized</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">管理を<span class="hl">一箇所に集めるか分散するか</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>銀行の中央処理</li><li>ブロックチェーン</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>軍事の機密網</li><li>インターネット非接続</li></ul>
+      <ul class="example-list" data-i18n="en"><li>軍事の機密網</li><li>インターネット非接続</li></ul>
+      <ul class="example-list" data-i18n="es"><li>軍事の機密網</li><li>インターネット非接続</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-containerization" data-search="コンテナ化 containerization アプリと依存をコンテナにまとめる コンテナイメージ ホストos共有">
-  <h3>コンテナ化<span class="en">Containerization</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-sdn" data-search="sdn software-defined networking  ネットワークをソフトで集中制御する技術 sdnコントローラ プレーン分離">
+  <h3>
+    <span data-i18n="ja">SDN<span class="en">Software-Defined Networking</span></span>
+    <span data-i18n="en">Software-Defined Networking</span>
+    <span data-i18n="es">SDN</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">アプリと依存を<span class="hl">コンテナ</span>にまとめる</p>
+    <p data-i18n="ja" class="one-liner">ネットワークを<span class="hl">ソフトで集中制御</span>する技術</p><p data-i18n="en" class="one-liner">ネットワークを<span class="hl">ソフトで集中制御</span>する技術</p><p data-i18n="es" class="one-liner">ネットワークを<span class="hl">ソフトで集中制御</span>する技術</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>コンテナイメージ</li><li>ホストOS共有</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>SDNコントローラ</li><li>プレーン分離</li></ul>
+      <ul class="example-list" data-i18n="en"><li>SDNコントローラ</li><li>プレーン分離</li></ul>
+      <ul class="example-list" data-i18n="es"><li>SDNコントローラ</li><li>プレーン分離</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-virtualization" data-search="仮想化 virtualization 物理マシンを複数vmに分割する技術 vmware/hyper-v 1台に複数os">
-  <h3>仮想化<span class="en">Virtualization</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-centralized-decentralized" data-search="集中型と分散型 centralized vs decentralized  管理を一箇所に集めるか分散するか 銀行の中央処理 ブロックチェーン">
+  <h3>
+    <span data-i18n="ja">集中型と分散型<span class="en">Centralized vs decentralized</span></span>
+    <span data-i18n="en">Centralized vs decentralized</span>
+    <span data-i18n="es">集中型と分散型</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">物理マシンを<span class="hl">複数VM</span>に分割する技術</p>
+    <p data-i18n="ja" class="one-liner">管理を<span class="hl">一箇所に集めるか分散するか</span></p><p data-i18n="en" class="one-liner">管理を<span class="hl">一箇所に集めるか分散するか</span></p><p data-i18n="es" class="one-liner">管理を<span class="hl">一箇所に集めるか分散するか</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>VMware/Hyper-V</li><li>1台に複数OS</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">組込みとOT（現場デバイス・制御系）</h2>
-<article class="memo-card" id="c-1-iot" data-search="iot internet of things ネット接続のモノがデータ収集・制御する miraiボットネット デフォルトパスワード">
-  <h3>IoT<span class="en">Internet of Things</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">ネット接続の<span class="hl">モノ</span>がデータ収集・制御する</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Miraiボットネット</li><li>デフォルトパスワード</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>銀行の中央処理</li><li>ブロックチェーン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>銀行の中央処理</li><li>ブロックチェーン</li></ul>
+      <ul class="example-list" data-i18n="es"><li>銀行の中央処理</li><li>ブロックチェーン</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-ics-scada" data-search="icsとscada ics / scada 産業設備を監視・制御するシステム 発電所の監視 電力・ガス・水道">
-  <h3>ICSとSCADA<span class="en">ICS / SCADA</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-containerization" data-search="コンテナ化 containerization  アプリと依存をコンテナにまとめる コンテナイメージ ホストos共有">
+  <h3>
+    <span data-i18n="ja">コンテナ化<span class="en">Containerization</span></span>
+    <span data-i18n="en">Containerization</span>
+    <span data-i18n="es">コンテナ化</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">産業設備を<span class="hl">監視・制御</span>するシステム</p>
+    <p data-i18n="ja" class="one-liner">アプリと依存を<span class="hl">コンテナ</span>にまとめる</p><p data-i18n="en" class="one-liner">アプリと依存を<span class="hl">コンテナ</span>にまとめる</p><p data-i18n="es" class="one-liner">アプリと依存を<span class="hl">コンテナ</span>にまとめる</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>発電所の監視</li><li>電力・ガス・水道</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>コンテナイメージ</li><li>ホストOS共有</li></ul>
+      <ul class="example-list" data-i18n="en"><li>コンテナイメージ</li><li>ホストOS共有</li></ul>
+      <ul class="example-list" data-i18n="es"><li>コンテナイメージ</li><li>ホストOS共有</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-rtos" data-search="rtos real-time operating system 時間内に確実処理を保証する特殊os エンジン制御 組込み機器">
-  <h3>RTOS<span class="en">Real-Time Operating System</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-virtualization" data-search="仮想化 virtualization  物理マシンを複数vmに分割する技術 vmware/hyper-v 1台に複数os">
+  <h3>
+    <span data-i18n="ja">仮想化<span class="en">Virtualization</span></span>
+    <span data-i18n="en">Virtualization</span>
+    <span data-i18n="es">仮想化</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">時間内に確実処理</span>を保証する特殊OS</p>
+    <p data-i18n="ja" class="one-liner">物理マシンを<span class="hl">複数VM</span>に分割する技術</p><p data-i18n="en" class="one-liner">物理マシンを<span class="hl">複数VM</span>に分割する技術</p><p data-i18n="es" class="one-liner">物理マシンを<span class="hl">複数VM</span>に分割する技術</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>エンジン制御</li><li>組込み機器</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>VMware/Hyper-V</li><li>1台に複数OS</li></ul>
+      <ul class="example-list" data-i18n="en"><li>VMware/Hyper-V</li><li>1台に複数OS</li></ul>
+      <ul class="example-list" data-i18n="es"><li>VMware/Hyper-V</li><li>1台に複数OS</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">設計のトレードオフ（何を優先して組むか）</h2>
-<article class="memo-card" id="c-1-availability" data-search="可用性 availability 必要なときに使える度合い 冗長化 ロードバランサ">
-  <h3>可用性<span class="en">Availability</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">組込みとOT（現場デバイス・制御系）</span><span data-i18n="en">組込みとOT（現場デバイス・制御系）</span><span data-i18n="es">組込みとOT（現場デバイス・制御系）</span></h2>
+<article class="memo-card" id="c-1-iot" data-search="iot internet of things  ネット接続のモノがデータ収集・制御する miraiボットネット デフォルトパスワード">
+  <h3>
+    <span data-i18n="ja">IoT<span class="en">Internet of Things</span></span>
+    <span data-i18n="en">Internet of Things</span>
+    <span data-i18n="es">IoT</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">必要なときに<span class="hl">使える度合い</span></p>
+    <p data-i18n="ja" class="one-liner">ネット接続の<span class="hl">モノ</span>がデータ収集・制御する</p><p data-i18n="en" class="one-liner">ネット接続の<span class="hl">モノ</span>がデータ収集・制御する</p><p data-i18n="es" class="one-liner">ネット接続の<span class="hl">モノ</span>がデータ収集・制御する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>冗長化</li><li>ロードバランサ</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="c-1-resilience" data-search="レジリエンス resilience 障害下でも維持し速やかに回復する力 spof排除 自動復旧">
-  <h3>レジリエンス<span class="en">Resilience</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">障害下でも維持し<span class="hl">速やかに回復</span>する力</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>SPOF排除</li><li>自動復旧</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="c-1-cost" data-search="コスト cost 安全性と費用のバランスを取る観点 重要系に監視限定 リスク優先順位">
-  <h3>コスト<span class="en">Cost</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">安全性と費用の<span class="hl">バランス</span>を取る観点</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>重要系に監視限定</li><li>リスク優先順位</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Miraiボットネット</li><li>デフォルトパスワード</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Miraiボットネット</li><li>デフォルトパスワード</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Miraiボットネット</li><li>デフォルトパスワード</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-responsiveness" data-search="応答性 responsiveness 要求に適切な速度で応答する能力 wafルール調整 性能との両立">
-  <h3>応答性<span class="en">Responsiveness</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-ics-scada" data-search="icsとscada ics / scada  産業設備を監視・制御するシステム 発電所の監視 電力・ガス・水道">
+  <h3>
+    <span data-i18n="ja">ICSとSCADA<span class="en">ICS / SCADA</span></span>
+    <span data-i18n="en">ICS / SCADA</span>
+    <span data-i18n="es">ICSとSCADA</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">要求に<span class="hl">適切な速度で応答</span>する能力</p>
+    <p data-i18n="ja" class="one-liner">産業設備を<span class="hl">監視・制御</span>するシステム</p><p data-i18n="en" class="one-liner">産業設備を<span class="hl">監視・制御</span>するシステム</p><p data-i18n="es" class="one-liner">産業設備を<span class="hl">監視・制御</span>するシステム</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>WAFルール調整</li><li>性能との両立</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>発電所の監視</li><li>電力・ガス・水道</li></ul>
+      <ul class="example-list" data-i18n="en"><li>発電所の監視</li><li>電力・ガス・水道</li></ul>
+      <ul class="example-list" data-i18n="es"><li>発電所の監視</li><li>電力・ガス・水道</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-scalability" data-search="スケーラビリティ scalability 負荷に応じ拡張・縮小できる能力 オートスケール 認証基盤の増減">
-  <h3>スケーラビリティ<span class="en">Scalability</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-rtos" data-search="rtos real-time operating system  時間内に確実処理を保証する特殊os エンジン制御 組込み機器">
+  <h3>
+    <span data-i18n="ja">RTOS<span class="en">Real-Time Operating System</span></span>
+    <span data-i18n="en">Real-Time Operating System</span>
+    <span data-i18n="es">RTOS</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">負荷に応じ<span class="hl">拡張・縮小</span>できる能力</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">時間内に確実処理</span>を保証する特殊OS</p><p data-i18n="en" class="one-liner"><span class="hl">時間内に確実処理</span>を保証する特殊OS</p><p data-i18n="es" class="one-liner"><span class="hl">時間内に確実処理</span>を保証する特殊OS</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>オートスケール</li><li>認証基盤の増減</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>エンジン制御</li><li>組込み機器</li></ul>
+      <ul class="example-list" data-i18n="en"><li>エンジン制御</li><li>組込み機器</li></ul>
+      <ul class="example-list" data-i18n="es"><li>エンジン制御</li><li>組込み機器</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">設計のトレードオフ（何を優先して組むか）</span><span data-i18n="en">設計のトレードオフ（何を優先して組むか）</span><span data-i18n="es">設計のトレードオフ（何を優先して組むか）</span></h2>
+<article class="memo-card" id="c-1-availability" data-search="可用性 availability  必要なときに使える度合い 冗長化 ロードバランサ">
+  <h3>
+    <span data-i18n="ja">可用性<span class="en">Availability</span></span>
+    <span data-i18n="en">Availability</span>
+    <span data-i18n="es">可用性</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">必要なときに<span class="hl">使える度合い</span></p><p data-i18n="en" class="one-liner">必要なときに<span class="hl">使える度合い</span></p><p data-i18n="es" class="one-liner">必要なときに<span class="hl">使える度合い</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>冗長化</li><li>ロードバランサ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>冗長化</li><li>ロードバランサ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>冗長化</li><li>ロードバランサ</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-ease-of-deployment" data-search="デプロイの容易さ ease of deployment 変更を速く確実に本番反映できる力 ci/cdパイプライン 設定の自動適用">
-  <h3>デプロイの容易さ<span class="en">Ease of deployment</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-resilience" data-search="レジリエンス resilience  障害下でも維持し速やかに回復する力 spof排除 自動復旧">
+  <h3>
+    <span data-i18n="ja">レジリエンス<span class="en">Resilience</span></span>
+    <span data-i18n="en">Resilience</span>
+    <span data-i18n="es">レジリエンス</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">変更を<span class="hl">速く確実に本番反映</span>できる力</p>
+    <p data-i18n="ja" class="one-liner">障害下でも維持し<span class="hl">速やかに回復</span>する力</p><p data-i18n="en" class="one-liner">障害下でも維持し<span class="hl">速やかに回復</span>する力</p><p data-i18n="es" class="one-liner">障害下でも維持し<span class="hl">速やかに回復</span>する力</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>CI/CDパイプライン</li><li>設定の自動適用</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">運用の制約（移転・復旧・パッチ・資源）</h2>
-<article class="memo-card" id="c-1-risk-transference" data-search="リスク移転 risk transference 難しいリスクを外部へ移すこと サイバー保険 損害賠償カバー">
-  <h3>リスク移転<span class="en">Risk transference</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">難しいリスクを<span class="hl">外部へ移す</span>こと</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>サイバー保険</li><li>損害賠償カバー</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>SPOF排除</li><li>自動復旧</li></ul>
+      <ul class="example-list" data-i18n="en"><li>SPOF排除</li><li>自動復旧</li></ul>
+      <ul class="example-list" data-i18n="es"><li>SPOF排除</li><li>自動復旧</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-ease-of-recovery" data-search="回復の容易さ ease of recovery 障害後に迅速復旧できる能力 定期バックアップ オフサイト保管">
-  <h3>回復の容易さ<span class="en">Ease of recovery</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-cost" data-search="コスト cost  安全性と費用のバランスを取る観点 重要系に監視限定 リスク優先順位">
+  <h3>
+    <span data-i18n="ja">コスト<span class="en">Cost</span></span>
+    <span data-i18n="en">Cost</span>
+    <span data-i18n="es">コスト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">障害後に<span class="hl">迅速復旧</span>できる能力</p>
+    <p data-i18n="ja" class="one-liner">安全性と費用の<span class="hl">バランス</span>を取る観点</p><p data-i18n="en" class="one-liner">安全性と費用の<span class="hl">バランス</span>を取る観点</p><p data-i18n="es" class="one-liner">安全性と費用の<span class="hl">バランス</span>を取る観点</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>定期バックアップ</li><li>オフサイト保管</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>重要系に監視限定</li><li>リスク優先順位</li></ul>
+      <ul class="example-list" data-i18n="en"><li>重要系に監視限定</li><li>リスク優先順位</li></ul>
+      <ul class="example-list" data-i18n="es"><li>重要系に監視限定</li><li>リスク優先順位</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-patch-availability" data-search="パッチの可用性 patch availability 修正パッチが迅速に提供されるか windows更新 wannacry教訓">
-  <h3>パッチの可用性<span class="en">Patch availability</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-responsiveness" data-search="応答性 responsiveness  要求に適切な速度で応答する能力 wafルール調整 性能との両立">
+  <h3>
+    <span data-i18n="ja">応答性<span class="en">Responsiveness</span></span>
+    <span data-i18n="en">Responsiveness</span>
+    <span data-i18n="es">応答性</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">修正パッチが<span class="hl">迅速に提供</span>されるか</p>
+    <p data-i18n="ja" class="one-liner">要求に<span class="hl">適切な速度で応答</span>する能力</p><p data-i18n="en" class="one-liner">要求に<span class="hl">適切な速度で応答</span>する能力</p><p data-i18n="es" class="one-liner">要求に<span class="hl">適切な速度で応答</span>する能力</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Windows更新</li><li>WannaCry教訓</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>WAFルール調整</li><li>性能との両立</li></ul>
+      <ul class="example-list" data-i18n="en"><li>WAFルール調整</li><li>性能との両立</li></ul>
+      <ul class="example-list" data-i18n="es"><li>WAFルール調整</li><li>性能との両立</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-inability-to-patch" data-search="パッチ適用不可 inability to patch 事情によりパッチを当てられない状況 レガシー互換 停止できない本番">
-  <h3>パッチ適用不可<span class="en">Inability to patch</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-scalability" data-search="スケーラビリティ scalability  負荷に応じ拡張・縮小できる能力 オートスケール 認証基盤の増減">
+  <h3>
+    <span data-i18n="ja">スケーラビリティ<span class="en">Scalability</span></span>
+    <span data-i18n="en">Scalability</span>
+    <span data-i18n="es">スケーラビリティ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">事情によりパッチを<span class="hl">当てられない</span>状況</p>
+    <p data-i18n="ja" class="one-liner">負荷に応じ<span class="hl">拡張・縮小</span>できる能力</p><p data-i18n="en" class="one-liner">負荷に応じ<span class="hl">拡張・縮小</span>できる能力</p><p data-i18n="es" class="one-liner">負荷に応じ<span class="hl">拡張・縮小</span>できる能力</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>レガシー互換</li><li>停止できない本番</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>オートスケール</li><li>認証基盤の増減</li></ul>
+      <ul class="example-list" data-i18n="en"><li>オートスケール</li><li>認証基盤の増減</li></ul>
+      <ul class="example-list" data-i18n="es"><li>オートスケール</li><li>認証基盤の増減</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-power" data-search="電力 power 稼働基盤としての安定電源と停電対策 ups 冗長電源">
-  <h3>電力<span class="en">Power</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-ease-of-deployment" data-search="デプロイの容易さ ease of deployment  変更を速く確実に本番反映できる力 ci/cdパイプライン 設定の自動適用">
+  <h3>
+    <span data-i18n="ja">デプロイの容易さ<span class="en">Ease of deployment</span></span>
+    <span data-i18n="en">Ease of deployment</span>
+    <span data-i18n="es">デプロイの容易さ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">稼働基盤としての<span class="hl">安定電源</span>と停電対策</p>
+    <p data-i18n="ja" class="one-liner">変更を<span class="hl">速く確実に本番反映</span>できる力</p><p data-i18n="en" class="one-liner">変更を<span class="hl">速く確実に本番反映</span>できる力</p><p data-i18n="es" class="one-liner">変更を<span class="hl">速く確実に本番反映</span>できる力</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>UPS</li><li>冗長電源</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>CI/CDパイプライン</li><li>設定の自動適用</li></ul>
+      <ul class="example-list" data-i18n="en"><li>CI/CDパイプライン</li><li>設定の自動適用</li></ul>
+      <ul class="example-list" data-i18n="es"><li>CI/CDパイプライン</li><li>設定の自動適用</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">運用の制約（移転・復旧・パッチ・資源）</span><span data-i18n="en">運用の制約（移転・復旧・パッチ・資源）</span><span data-i18n="es">運用の制約（移転・復旧・パッチ・資源）</span></h2>
+<article class="memo-card" id="c-1-risk-transference" data-search="リスク移転 risk transference  難しいリスクを外部へ移すこと サイバー保険 損害賠償カバー">
+  <h3>
+    <span data-i18n="ja">リスク移転<span class="en">Risk transference</span></span>
+    <span data-i18n="en">Risk transference</span>
+    <span data-i18n="es">リスク移転</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">難しいリスクを<span class="hl">外部へ移す</span>こと</p><p data-i18n="en" class="one-liner">難しいリスクを<span class="hl">外部へ移す</span>こと</p><p data-i18n="es" class="one-liner">難しいリスクを<span class="hl">外部へ移す</span>こと</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>サイバー保険</li><li>損害賠償カバー</li></ul>
+      <ul class="example-list" data-i18n="en"><li>サイバー保険</li><li>損害賠償カバー</li></ul>
+      <ul class="example-list" data-i18n="es"><li>サイバー保険</li><li>損害賠償カバー</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="c-1-compute" data-search="演算能力 compute セキュリティ処理に必要な計算リソース tls終端負荷 鍵長とcpu">
-  <h3>演算能力<span class="en">Compute</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="c-1-ease-of-recovery" data-search="回復の容易さ ease of recovery  障害後に迅速復旧できる能力 定期バックアップ オフサイト保管">
+  <h3>
+    <span data-i18n="ja">回復の容易さ<span class="en">Ease of recovery</span></span>
+    <span data-i18n="en">Ease of recovery</span>
+    <span data-i18n="es">回復の容易さ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">セキュリティ処理に必要な<span class="hl">計算リソース</span></p>
+    <p data-i18n="ja" class="one-liner">障害後に<span class="hl">迅速復旧</span>できる能力</p><p data-i18n="en" class="one-liner">障害後に<span class="hl">迅速復旧</span>できる能力</p><p data-i18n="es" class="one-liner">障害後に<span class="hl">迅速復旧</span>できる能力</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>TLS終端負荷</li><li>鍵長とCPU</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>定期バックアップ</li><li>オフサイト保管</li></ul>
+      <ul class="example-list" data-i18n="en"><li>定期バックアップ</li><li>オフサイト保管</li></ul>
+      <ul class="example-list" data-i18n="es"><li>定期バックアップ</li><li>オフサイト保管</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-1-patch-availability" data-search="パッチの可用性 patch availability  修正パッチが迅速に提供されるか windows更新 wannacry教訓">
+  <h3>
+    <span data-i18n="ja">パッチの可用性<span class="en">Patch availability</span></span>
+    <span data-i18n="en">Patch availability</span>
+    <span data-i18n="es">パッチの可用性</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">修正パッチが<span class="hl">迅速に提供</span>されるか</p><p data-i18n="en" class="one-liner">修正パッチが<span class="hl">迅速に提供</span>されるか</p><p data-i18n="es" class="one-liner">修正パッチが<span class="hl">迅速に提供</span>されるか</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Windows更新</li><li>WannaCry教訓</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Windows更新</li><li>WannaCry教訓</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Windows更新</li><li>WannaCry教訓</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-1-inability-to-patch" data-search="パッチ適用不可 inability to patch  事情によりパッチを当てられない状況 レガシー互換 停止できない本番">
+  <h3>
+    <span data-i18n="ja">パッチ適用不可<span class="en">Inability to patch</span></span>
+    <span data-i18n="en">Inability to patch</span>
+    <span data-i18n="es">パッチ適用不可</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">事情によりパッチを<span class="hl">当てられない</span>状況</p><p data-i18n="en" class="one-liner">事情によりパッチを<span class="hl">当てられない</span>状況</p><p data-i18n="es" class="one-liner">事情によりパッチを<span class="hl">当てられない</span>状況</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>レガシー互換</li><li>停止できない本番</li></ul>
+      <ul class="example-list" data-i18n="en"><li>レガシー互換</li><li>停止できない本番</li></ul>
+      <ul class="example-list" data-i18n="es"><li>レガシー互換</li><li>停止できない本番</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-1-power" data-search="電力 power  稼働基盤としての安定電源と停電対策 ups 冗長電源">
+  <h3>
+    <span data-i18n="ja">電力<span class="en">Power</span></span>
+    <span data-i18n="en">Power</span>
+    <span data-i18n="es">電力</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">稼働基盤としての<span class="hl">安定電源</span>と停電対策</p><p data-i18n="en" class="one-liner">稼働基盤としての<span class="hl">安定電源</span>と停電対策</p><p data-i18n="es" class="one-liner">稼働基盤としての<span class="hl">安定電源</span>と停電対策</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>UPS</li><li>冗長電源</li></ul>
+      <ul class="example-list" data-i18n="en"><li>UPS</li><li>冗長電源</li></ul>
+      <ul class="example-list" data-i18n="es"><li>UPS</li><li>冗長電源</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-1-compute" data-search="演算能力 compute  セキュリティ処理に必要な計算リソース tls終端負荷 鍵長とcpu">
+  <h3>
+    <span data-i18n="ja">演算能力<span class="en">Compute</span></span>
+    <span data-i18n="en">Compute</span>
+    <span data-i18n="es">演算能力</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">セキュリティ処理に必要な<span class="hl">計算リソース</span></p><p data-i18n="en" class="one-liner">セキュリティ処理に必要な<span class="hl">計算リソース</span></p><p data-i18n="es" class="one-liner">セキュリティ処理に必要な<span class="hl">計算リソース</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>TLS終端負荷</li><li>鍵長とCPU</li></ul>
+      <ul class="example-list" data-i18n="en"><li>TLS終端負荷</li><li>鍵長とCPU</li></ul>
+      <ul class="example-list" data-i18n="es"><li>TLS終端負荷</li><li>鍵長とCPU</li></ul>
     </div>
   </div>
 </article>
@@ -355,19 +510,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（24問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（24問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (24 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (24 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">[{"term": "c-1-responsibility-matrix", "stem": "PaaS上でWebアプリを運用する企業が、アプリの脆弱性対策とアクセス制御を自社で実施し、OSやミドルウェアは事業者側の責任としている。この考え方を最もよく表すものはどれか。", "choices": ["エアギャップ", "クラウドの責任マトリクス", "リスク移転", "SDN"], "answer": 1, "explain": "クラウド事業者とユーザーの責任範囲をモデルごとに整理するのが責任マトリクス（共有責任）である。"}, {"term": "c-1-iac", "stem": "開発・ステージング・本番のサーバー構成をテキストで定義し、同じ内容を自動で再現できるようにした。この手法はどれか。", "choices": ["サーバーレス", "マイクロサービス", "IaC（Infrastructure as Code）", "コンテナ化"], "answer": 2, "explain": "インフラ設定をコードで定義し自動化・再現するのが IaC である。"}, {"term": "c-1-serverless", "stem": "開発チームがサーバー調達やOS設定を行わず、クラウド上の関数にビジネスロジックだけを実装して処理を動かしている。このモデルはどれか。", "choices": ["仮想化", "エアギャップ", "ICS", "サーバーレス"], "answer": 3, "explain": "サーバー管理を提供者に任せアプリ実装に集中するのがサーバーレスである。サーバーが物理的に無いわけではない。"}, {"term": "c-1-microservices", "stem": "ECサイトのユーザー管理・商品・注文・決済を別サービスに分け、注文だけを独立してデプロイできるようにした。この設計はどれか。", "choices": ["モノリスのみの設計", "エアギャップ", "リスク移転", "マイクロサービス"], "answer": 3, "explain": "機能を独立サービスに分割し、独立デプロイ・スケーリングできるのがマイクロサービスである。"}, {"term": "c-1-air-gap", "stem": "政府機関が機密システムをインターネットから物理的に切り離し、データの持ち込みを厳格に管理している。この構成はどれか。", "choices": ["SDN", "サーバーレス", "エアギャップ", "コンテナ化"], "answer": 2, "explain": "外部ネットワークから物理的に隔離するのがエアギャップである。"}, {"term": "c-1-sdn", "stem": "データセンターで、個々のスイッチ設定ではなくコントローラに制御を集約し、データプレーンとコントロールプレーンを分離して運用している。この技術はどれか。", "choices": ["エアギャップ", "RTOS", "リスク移転", "SDN"], "answer": 3, "explain": "ソフトウェアでネットワークを集中制御し、プレーンを分離するのが SDN である。"}, {"term": "c-1-centralized-decentralized", "stem": "従来の銀行システム（中央で一括処理）と、多数ノードで検証するブロックチェーン型システムを比較するとき、講義が示す対比の軸はどれか。", "choices": ["対称暗号と非対称暗号", "集中型と分散型", "予防的と検出的", "IaaSとPaaSのみ"], "answer": 1, "explain": "統一性・効率と障害影響範囲、耐障害性と管理コストなど、集中型と分散型の一長一短を比較する。"}, {"term": "c-1-containerization", "stem": "Webアプリのコード・ランタイム・ライブラリを一つのイメージにまとめ、ホストOSのカーネルを共有して軽量に動かしている。この技術はどれか。", "choices": ["エアギャップ", "サイバー保険", "コンテナ化", "UPS"], "answer": 2, "explain": "アプリと依存関係をコンテナにまとめ、環境差を吸収しつつホストカーネルを共有するのがコンテナ化である。"}, {"term": "c-1-virtualization", "stem": "1台の物理サーバー上に複数の仮想マシンを作り、それぞれが独自のOSを実行している。この技術はどれか。", "choices": ["仮想化", "エアギャップ", "リスク移転", "パッチ適用不可"], "answer": 0, "explain": "物理ハードを仮想分割し、複数VM（各々独自OS）を動かすのが仮想化である。"}, {"term": "c-1-iot", "stem": "工場出荷時のデフォルトパスワードのままの大量の接続機器が乗っ取られ、大規模DDoSの踏み台になった。講義で示すこの問題領域はどれか。", "choices": ["SDN", "IaC", "マイクロサービス", "IoT"], "answer": 3, "explain": "Mirai に代表されるように、IoT デバイスの弱い初期設定がネットワーク全体のリスクにつながる。"}, {"term": "c-1-ics-scada", "stem": "電力会社が発電・送電設備の出力や電圧を常時監視し、需要に応じて自動調整している。この種の産業制御の枠組みとして最も適切なものはどれか。", "choices": ["サーバーレス", "ICSとSCADA", "シャドーIT", "コンテナ化"], "answer": 1, "explain": "電力・ガス・水道などのプラント監視制御は ICS／SCADA の領域である。"}, {"term": "c-1-rtos", "stem": "自動車のエンジン制御で、センサーデータを決められた時間内に処理し燃料噴射タイミングを保証するOSが使われている。これはどれか。", "choices": ["汎用デスクトップOSのみ", "SDNコントローラ", "RTOS", "責任マトリクス"], "answer": 2, "explain": "応答性と予測可能性を重視し、締切どおりの処理を保証するのが RTOS である。"}, {"term": "c-1-availability", "stem": "ECサイトが単一障害点やDDoSの影響で長時間アクセス不能になり、買い物ができなくなった。設計上とくに損なわれた考慮事項はどれか。", "choices": ["ステガノグラフィ", "鍵エスクロー", "データマスキング", "可用性"], "answer": 3, "explain": "必要なときに利用できる度合いが可用性であり、冗長化や負荷分散で高める。"}, {"term": "c-1-resilience", "stem": "データセンター被災後も、冗長構成と自動復旧の仕組みによりサービス機能を維持し早期に平常運転へ戻した。この能力を最もよく表す用語はどれか。", "choices": ["レジリエンス", "コスト削減のみ", "パッチ適用不可", "エアギャップ"], "answer": 0, "explain": "障害・攻撃下での機能維持と速やかな回復がレジリエンスである。"}, {"term": "c-1-cost", "stem": "24時間365日の有人監視は効果的だが費用が膨大なため、重要システムに限定し自動化も併用した。この判断が示す考慮事項はどれか。", "choices": ["エアギャップ", "IoTセグメンテーションのみ", "コスト", "RTOS"], "answer": 2, "explain": "安全性と費用のバランスを取り、リスク評価に基づき優先順位を付けるのがコストの観点である。"}, {"term": "c-1-responsiveness", "stem": "WAFの検査ルールが複雑すぎてページ応答が遅くなり、ユーザー体験が悪化した。調整で改善すべき考慮事項はどれか。", "choices": ["リスク移転", "応答性", "エアギャップ", "電力"], "answer": 1, "explain": "セキュリティ処理とパフォーマンスのバランスを取り、適切な応答速度を保つのが応答性である。"}, {"term": "c-1-scalability", "stem": "利用者増加に合わせ認証サーバーのインスタンスを自動で増減できるように設計した。この能力はどれか。", "choices": ["スケーラビリティ", "パッチ適用不可", "エアギャップ", "鍵エスクロー"], "answer": 0, "explain": "負荷や要件変化に応じて拡張・縮小できる能力がスケーラビリティである。"}, {"term": "c-1-ease-of-deployment", "stem": "脆弱性修正を含む変更を、手作業ミスを減らしつつCI/CDで速やかに本番へ反映できる体制を整えた。この考慮事項はどれか。", "choices": ["デプロイの容易さ", "エアギャップ", "ICS", "Mirai"], "answer": 0, "explain": "変更を迅速かつ確実に本番反映できる能力がデプロイの容易さである。"}, {"term": "c-1-risk-transference", "stem": "情報漏えい時の損害賠償や事故対応費用に備え、サイバー保険に加入した。このリスク対応はどれか。", "choices": ["リスク回避のみ", "パッチ適用", "コンテナ化", "リスク移転"], "answer": 3, "explain": "自組織で抱えきれない影響を保険など外部へ移すのがリスク移転である。"}, {"term": "c-1-ease-of-recovery", "stem": "ランサムウェアでデータが暗号化されても、オフサイトの定期バックアップから迅速に復元できるよう手順と訓練を整えている。焦点となっている考慮事項はどれか。", "choices": ["サーバーレス", "回復の容易さ", "SDN", "マイクロサービス"], "answer": 1, "explain": "インシデント後に迅速復旧できる能力が回復の容易さであり、バックアップと復旧訓練が典型策である。"}, {"term": "c-1-patch-availability", "stem": "導入予定の製品について、脆弱性発見後にベンダーが修正パッチを速やかに出せるかを評価している。この考慮事項はどれか。", "choices": ["パッチの可用性", "エアギャップ", "集中型のみ", "ステガノグラフィ"], "answer": 0, "explain": "修正パッチが迅速に提供されるかどうかがパッチの可用性である。"}, {"term": "c-1-inability-to-patch", "stem": "レガシー制御システムは互換性の問題と停止不可の業務要件からセキュリティ更新を当てられず、代替の防御策を検討している。この状況はどれか。", "choices": ["パッチ適用不可", "サーバーレス", "IaC", "責任マトリクスの廃止"], "answer": 0, "explain": "パッチを適用できない状況では理由の明確化・リスク評価と代替対策が必要になる。"}, {"term": "c-1-power", "stem": "停電時もシステムを保護するためUPSを導入し、電源経路を二重化して単一障害点を減らした。この考慮事項はどれか。", "choices": ["マイクロサービス", "電力", "コンテナ化", "IaC"], "answer": 1, "explain": "安定供給と停電対策（UPS・冗長電源）は電力の観点である。"}, {"term": "c-1-compute", "stem": "高トラフィックサイトでTLSの暗号化・復号がCPUを逼迫し、ボトルネックになりそうなので処理能力を見積もり直した。この考慮事項はどれか。", "choices": ["エアギャップ", "リスク移転", "演算能力", "シャドーIT"], "answer": 2, "explain": "セキュリティ機能の実行に必要な処理能力を見積もるのが演算能力（Compute）の観点である。"}]</script>
 </section>
 
-<nav class="pager"><a href="index.html"><span>戻る</span>Domain C ハブ</a><a class="next" href="c-2.html"><span>次の章</span>C-2 インフラを守るセキュリティ原則</a></nav>
+<nav class="pager"><a href="index.html"><span><span data-i18n="ja">戻る</span><span data-i18n="en">Back</span><span data-i18n="es">Volver</span></span><span>Domain C <span data-i18n="ja">ハブ</span><span data-i18n="en">hub</span><span data-i18n="es">hub</span></span></a><a class="next" href="c-2.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>C-2 <span data-i18n="ja">インフラを守るセキュリティ原則</span><span data-i18n="en">インフラを守るセキュリティ原則</span><span data-i18n="es">インフラを守るセキュリティ原則</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

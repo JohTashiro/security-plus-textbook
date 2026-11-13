@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>D-4 アラートとモニタリング · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain D</span></a>
-  <a class="nav-back" href="index.html">← Domain D ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain D ハブ</span><span data-i18n="en">← Domain D hub</span><span data-i18n="es">← Hub del Domain D</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain D</h2>
-    <a href="d-1.html">D-1 リソースのセキュリティ対策</a><a href="d-2.html">D-2 ハードウェアの取得・管理・廃棄</a><a href="d-3.html">D-3 脆弱性管理手法</a><a href="d-4.html" class="active">D-4 アラートとモニタリング</a><a href="d-5.html">D-5 セキュリティ向上策</a><a href="d-6.html">D-6 アクセス管理</a><a href="d-7.html">D-7 自動化</a><a href="d-8.html">D-8 インシデント対応</a>
+    <a href="d-1.html">D-1 <span data-i18n="ja">リソースのセキュリティ対策</span><span data-i18n="en">リソースのセキュリティ対策</span><span data-i18n="es">リソースのセキュリティ対策</span></a><a href="d-2.html">D-2 <span data-i18n="ja">ハードウェアの取得・管理・廃棄</span><span data-i18n="en">ハードウェアの取得・管理・廃棄</span><span data-i18n="es">ハードウェアの取得・管理・廃棄</span></a><a href="d-3.html">D-3 <span data-i18n="ja">脆弱性管理手法</span><span data-i18n="en">脆弱性管理手法</span><span data-i18n="es">脆弱性管理手法</span></a><a href="d-4.html" class="active">D-4 <span data-i18n="ja">アラートとモニタリング</span><span data-i18n="en">アラートとモニタリング</span><span data-i18n="es">アラートとモニタリング</span></a><a href="d-5.html">D-5 <span data-i18n="ja">セキュリティ向上策</span><span data-i18n="en">セキュリティ向上策</span><span data-i18n="es">セキュリティ向上策</span></a><a href="d-6.html">D-6 <span data-i18n="ja">アクセス管理</span><span data-i18n="en">アクセス管理</span><span data-i18n="es">アクセス管理</span></a><a href="d-7.html">D-7 <span data-i18n="ja">自動化</span><span data-i18n="en">自動化</span><span data-i18n="es">自動化</span></a><a href="d-8.html">D-8 <span data-i18n="ja">インシデント対応</span><span data-i18n="en">インシデント対応</span><span data-i18n="es">インシデント対応</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain D 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain D <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,197 +55,292 @@
       
 <header class="hero">
   <p class="eyebrow">Domain D · D-4</p>
-  <h1>アラートとモニタリング</h1>
-  <p>監視対象・活動・対応とツール</p>
+  <h1><span data-i18n="ja">アラートとモニタリング</span><span data-i18n="en">アラートとモニタリング</span><span data-i18n="es">アラートとモニタリング</span></h1>
+  <p data-i18n="ja">監視対象・活動・対応とツール</p>
+  <p data-i18n="en">監視対象・活動・対応とツール</p>
+  <p data-i18n="es">監視対象・活動・対応とツール</p>
   <div class="meta-row">
-    <span class="chip">用語 15</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 4.4</span>
+    <span class="chip"><span data-i18n="ja">用語 15</span><span data-i18n="en">15 terms</span><span data-i18n="es">15 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 4.4</span><span data-i18n="en">Official 4.4</span><span data-i18n="es">Oficial 4.4</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 15問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 15問</span><span data-i18n="en">Quiz (15)</span><span data-i18n="es">Cuestionario (15)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">監視対象</h2>
-<article class="memo-card" id="d-4-systems-monitoring" data-search="システム監視 systems monitoring 正常性・可用性・パフォーマンスを継続確認する cpu・メモリ・ディスクの収集 応答時間の異常検知">
-  <h3>システム監視<span class="en">Systems monitoring</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">監視対象</span><span data-i18n="en">監視対象</span><span data-i18n="es">監視対象</span></h2>
+<article class="memo-card" id="d-4-systems-monitoring" data-search="システム監視 systems monitoring  正常性・可用性・パフォーマンスを継続確認する cpu・メモリ・ディスクの収集 応答時間の異常検知">
+  <h3>
+    <span data-i18n="ja">システム監視<span class="en">Systems monitoring</span></span>
+    <span data-i18n="en">Systems monitoring</span>
+    <span data-i18n="es">システム監視</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">正常性・可用性・パフォーマンスを<span class="hl">継続確認</span>する</p>
+    <p data-i18n="ja" class="one-liner">正常性・可用性・パフォーマンスを<span class="hl">継続確認</span>する</p><p data-i18n="en" class="one-liner">正常性・可用性・パフォーマンスを<span class="hl">継続確認</span>する</p><p data-i18n="es" class="one-liner">正常性・可用性・パフォーマンスを<span class="hl">継続確認</span>する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>CPU・メモリ・ディスクの収集</li><li>応答時間の異常検知</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>CPU・メモリ・ディスクの収集</li><li>応答時間の異常検知</li></ul>
+      <ul class="example-list" data-i18n="en"><li>CPU・メモリ・ディスクの収集</li><li>応答時間の異常検知</li></ul>
+      <ul class="example-list" data-i18n="es"><li>CPU・メモリ・ディスクの収集</li><li>応答時間の異常検知</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-4-application-monitoring" data-search="アプリケーション監視 application monitoring アプリの可用性・性能・エラーを継続追跡する 応答時間の計測 エラー率の監視">
-  <h3>アプリケーション監視<span class="en">Application monitoring</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-4-application-monitoring" data-search="アプリケーション監視 application monitoring  アプリの可用性・性能・エラーを継続追跡する 応答時間の計測 エラー率の監視">
+  <h3>
+    <span data-i18n="ja">アプリケーション監視<span class="en">Application monitoring</span></span>
+    <span data-i18n="en">Application monitoring</span>
+    <span data-i18n="es">アプリケーション監視</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">アプリの可用性・性能・<span class="hl">エラー</span>を継続追跡する</p>
+    <p data-i18n="ja" class="one-liner">アプリの可用性・性能・<span class="hl">エラー</span>を継続追跡する</p><p data-i18n="en" class="one-liner">アプリの可用性・性能・<span class="hl">エラー</span>を継続追跡する</p><p data-i18n="es" class="one-liner">アプリの可用性・性能・<span class="hl">エラー</span>を継続追跡する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>応答時間の計測</li><li>エラー率の監視</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>応答時間の計測</li><li>エラー率の監視</li></ul>
+      <ul class="example-list" data-i18n="en"><li>応答時間の計測</li><li>エラー率の監視</li></ul>
+      <ul class="example-list" data-i18n="es"><li>応答時間の計測</li><li>エラー率の監視</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-4-infrastructure-monitoring" data-search="インフラ監視 infrastructure monitoring サーバー／nw／ストレージの稼働を継続監視する ディスク逼迫の検知 プロセス状態の監視">
-  <h3>インフラ監視<span class="en">Infrastructure monitoring</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-4-infrastructure-monitoring" data-search="インフラ監視 infrastructure monitoring  サーバー／nw／ストレージの稼働を継続監視する ディスク逼迫の検知 プロセス状態の監視">
+  <h3>
+    <span data-i18n="ja">インフラ監視<span class="en">Infrastructure monitoring</span></span>
+    <span data-i18n="en">Infrastructure monitoring</span>
+    <span data-i18n="es">インフラ監視</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">サーバー／NW／ストレージの<span class="hl">稼働</span>を継続監視する</p>
+    <p data-i18n="ja" class="one-liner">サーバー／NW／ストレージの<span class="hl">稼働</span>を継続監視する</p><p data-i18n="en" class="one-liner">サーバー／NW／ストレージの<span class="hl">稼働</span>を継続監視する</p><p data-i18n="es" class="one-liner">サーバー／NW／ストレージの<span class="hl">稼働</span>を継続監視する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ディスク逼迫の検知</li><li>プロセス状態の監視</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ディスク逼迫の検知</li><li>プロセス状態の監視</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ディスク逼迫の検知</li><li>プロセス状態の監視</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ディスク逼迫の検知</li><li>プロセス状態の監視</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">監視アクティビティ</h2>
-<article class="memo-card" id="d-4-log-aggregation" data-search="ログ集約 log aggregation 散在するログを1箇所に集めて管理する 中央ログサーバーへの転送 クラウドログサービス">
-  <h3>ログ集約<span class="en">Log aggregation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">監視アクティビティ</span><span data-i18n="en">監視アクティビティ</span><span data-i18n="es">監視アクティビティ</span></h2>
+<article class="memo-card" id="d-4-log-aggregation" data-search="ログ集約 log aggregation  散在するログを1箇所に集めて管理する 中央ログサーバーへの転送 クラウドログサービス">
+  <h3>
+    <span data-i18n="ja">ログ集約<span class="en">Log aggregation</span></span>
+    <span data-i18n="en">Log aggregation</span>
+    <span data-i18n="es">ログ集約</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">散在するログを<span class="hl">1箇所に集めて</span>管理する</p>
+    <p data-i18n="ja" class="one-liner">散在するログを<span class="hl">1箇所に集めて</span>管理する</p><p data-i18n="en" class="one-liner">散在するログを<span class="hl">1箇所に集めて</span>管理する</p><p data-i18n="es" class="one-liner">散在するログを<span class="hl">1箇所に集めて</span>管理する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>中央ログサーバーへの転送</li><li>クラウドログサービス</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="d-4-alerting" data-search="アラート alerting 異常や脅威を検知し管理者へ通知する cpu 90%超の通知 ids検知の即時メール">
-  <h3>アラート<span class="en">Alerting</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">異常や脅威を検知し<span class="hl">管理者へ通知</span>する</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>CPU 90%超の通知</li><li>IDS検知の即時メール</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="d-4-scanning" data-search="スキャニング scanning 脆弱性・不正設定などを能動検出する webアプリ脆弱性スキャン 定期的な弱点点検">
-  <h3>スキャニング<span class="en">Scanning</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">脆弱性・不正設定などを<span class="hl">能動検出</span>する</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Webアプリ脆弱性スキャン</li><li>定期的な弱点点検</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">アラート対応</h2>
-<article class="memo-card" id="d-4-quarantine" data-search="隔離 quarantine 感染・不審端末をnwから切り離し影響を抑える ボットネット端末の切断 横展開防止">
-  <h3>隔離<span class="en">Quarantine</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">感染・不審端末をNWから<span class="hl">切り離し</span>影響を抑える</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ボットネット端末の切断</li><li>横展開防止</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>中央ログサーバーへの転送</li><li>クラウドログサービス</li></ul>
+      <ul class="example-list" data-i18n="en"><li>中央ログサーバーへの転送</li><li>クラウドログサービス</li></ul>
+      <ul class="example-list" data-i18n="es"><li>中央ログサーバーへの転送</li><li>クラウドログサービス</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-4-alert-tuning" data-search="チューニング alert tuning アラートのノイズを減らし重要異常だけ通知する 閾値・ルール調整 アラート疲れの防止">
-  <h3>チューニング<span class="en">Alert tuning</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-4-alerting" data-search="アラート alerting  異常や脅威を検知し管理者へ通知する cpu 90%超の通知 ids検知の即時メール">
+  <h3>
+    <span data-i18n="ja">アラート<span class="en">Alerting</span></span>
+    <span data-i18n="en">Alerting</span>
+    <span data-i18n="es">アラート</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">アラートの<span class="hl">ノイズを減らし</span>重要異常だけ通知する</p>
+    <p data-i18n="ja" class="one-liner">異常や脅威を検知し<span class="hl">管理者へ通知</span>する</p><p data-i18n="en" class="one-liner">異常や脅威を検知し<span class="hl">管理者へ通知</span>する</p><p data-i18n="es" class="one-liner">異常や脅威を検知し<span class="hl">管理者へ通知</span>する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>閾値・ルール調整</li><li>アラート疲れの防止</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">監視ツール</h2>
-<article class="memo-card" id="d-4-scap" data-search="scap security content automation protocol 設定・脆弱性評価を自動化するフレームワーク ovalによる基準記述 不適合の自動報告">
-  <h3>SCAP<span class="en">Security Content Automation Protocol</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">設定・脆弱性評価を<span class="hl">自動化</span>するフレームワーク</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>OVALによる基準記述</li><li>不適合の自動報告</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>CPU 90%超の通知</li><li>IDS検知の即時メール</li></ul>
+      <ul class="example-list" data-i18n="en"><li>CPU 90%超の通知</li><li>IDS検知の即時メール</li></ul>
+      <ul class="example-list" data-i18n="es"><li>CPU 90%超の通知</li><li>IDS検知の即時メール</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-4-benchmarks" data-search="ベンチマーク benchmarks セキュリティ状態を測る基準・指標 応答時間閾値の根拠 望ましい設定との比較">
-  <h3>ベンチマーク<span class="en">Benchmarks</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-4-scanning" data-search="スキャニング scanning  脆弱性・不正設定などを能動検出する webアプリ脆弱性スキャン 定期的な弱点点検">
+  <h3>
+    <span data-i18n="ja">スキャニング<span class="en">Scanning</span></span>
+    <span data-i18n="en">Scanning</span>
+    <span data-i18n="es">スキャニング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">セキュリティ状態を測る<span class="hl">基準・指標</span></p>
+    <p data-i18n="ja" class="one-liner">脆弱性・不正設定などを<span class="hl">能動検出</span>する</p><p data-i18n="en" class="one-liner">脆弱性・不正設定などを<span class="hl">能動検出</span>する</p><p data-i18n="es" class="one-liner">脆弱性・不正設定などを<span class="hl">能動検出</span>する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>応答時間閾値の根拠</li><li>望ましい設定との比較</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Webアプリ脆弱性スキャン</li><li>定期的な弱点点検</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Webアプリ脆弱性スキャン</li><li>定期的な弱点点検</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Webアプリ脆弱性スキャン</li><li>定期的な弱点点検</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">アラート対応</span><span data-i18n="en">アラート対応</span><span data-i18n="es">アラート対応</span></h2>
+<article class="memo-card" id="d-4-quarantine" data-search="隔離 quarantine  感染・不審端末をnwから切り離し影響を抑える ボットネット端末の切断 横展開防止">
+  <h3>
+    <span data-i18n="ja">隔離<span class="en">Quarantine</span></span>
+    <span data-i18n="en">Quarantine</span>
+    <span data-i18n="es">隔離</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">感染・不審端末をNWから<span class="hl">切り離し</span>影響を抑える</p><p data-i18n="en" class="one-liner">感染・不審端末をNWから<span class="hl">切り離し</span>影響を抑える</p><p data-i18n="es" class="one-liner">感染・不審端末をNWから<span class="hl">切り離し</span>影響を抑える</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ボットネット端末の切断</li><li>横展開防止</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ボットネット端末の切断</li><li>横展開防止</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ボットネット端末の切断</li><li>横展開防止</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-4-agents-agentless" data-search="エージェント／エージェントレス agents / agentless 対象へソフトを入れるか入れないかの監視方式 エージェント導入の詳細保護 リモート収集の軽量管理">
-  <h3>エージェント／エージェントレス<span class="en">Agents / agentless</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-4-alert-tuning" data-search="チューニング alert tuning  アラートのノイズを減らし重要異常だけ通知する 閾値・ルール調整 アラート疲れの防止">
+  <h3>
+    <span data-i18n="ja">チューニング<span class="en">Alert tuning</span></span>
+    <span data-i18n="en">Alert tuning</span>
+    <span data-i18n="es">チューニング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">対象へソフトを<span class="hl">入れるか入れないか</span>の監視方式</p>
+    <p data-i18n="ja" class="one-liner">アラートの<span class="hl">ノイズを減らし</span>重要異常だけ通知する</p><p data-i18n="en" class="one-liner">アラートの<span class="hl">ノイズを減らし</span>重要異常だけ通知する</p><p data-i18n="es" class="one-liner">アラートの<span class="hl">ノイズを減らし</span>重要異常だけ通知する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>エージェント導入の詳細保護</li><li>リモート収集の軽量管理</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>閾値・ルール調整</li><li>アラート疲れの防止</li></ul>
+      <ul class="example-list" data-i18n="en"><li>閾値・ルール調整</li><li>アラート疲れの防止</li></ul>
+      <ul class="example-list" data-i18n="es"><li>閾値・ルール調整</li><li>アラート疲れの防止</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">監視ツール</span><span data-i18n="en">監視ツール</span><span data-i18n="es">監視ツール</span></h2>
+<article class="memo-card" id="d-4-scap" data-search="scap security content automation protocol  設定・脆弱性評価を自動化するフレームワーク ovalによる基準記述 不適合の自動報告">
+  <h3>
+    <span data-i18n="ja">SCAP<span class="en">Security Content Automation Protocol</span></span>
+    <span data-i18n="en">Security Content Automation Protocol</span>
+    <span data-i18n="es">SCAP</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">設定・脆弱性評価を<span class="hl">自動化</span>するフレームワーク</p><p data-i18n="en" class="one-liner">設定・脆弱性評価を<span class="hl">自動化</span>するフレームワーク</p><p data-i18n="es" class="one-liner">設定・脆弱性評価を<span class="hl">自動化</span>するフレームワーク</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>OVALによる基準記述</li><li>不適合の自動報告</li></ul>
+      <ul class="example-list" data-i18n="en"><li>OVALによる基準記述</li><li>不適合の自動報告</li></ul>
+      <ul class="example-list" data-i18n="es"><li>OVALによる基準記述</li><li>不適合の自動報告</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-4-siem" data-search="siem security information and event management ログを集め相関分析して脅威検知・対応を支援する 数百台ログの一元監視 関連イベントからの攻撃検知">
-  <h3>SIEM<span class="en">Security Information and Event Management</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-4-benchmarks" data-search="ベンチマーク benchmarks  セキュリティ状態を測る基準・指標 応答時間閾値の根拠 望ましい設定との比較">
+  <h3>
+    <span data-i18n="ja">ベンチマーク<span class="en">Benchmarks</span></span>
+    <span data-i18n="en">Benchmarks</span>
+    <span data-i18n="es">ベンチマーク</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">ログを集め<span class="hl">相関分析</span>して脅威検知・対応を支援する</p>
+    <p data-i18n="ja" class="one-liner">セキュリティ状態を測る<span class="hl">基準・指標</span></p><p data-i18n="en" class="one-liner">セキュリティ状態を測る<span class="hl">基準・指標</span></p><p data-i18n="es" class="one-liner">セキュリティ状態を測る<span class="hl">基準・指標</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>数百台ログの一元監視</li><li>関連イベントからの攻撃検知</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>応答時間閾値の根拠</li><li>望ましい設定との比較</li></ul>
+      <ul class="example-list" data-i18n="en"><li>応答時間閾値の根拠</li><li>望ましい設定との比較</li></ul>
+      <ul class="example-list" data-i18n="es"><li>応答時間閾値の根拠</li><li>望ましい設定との比較</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-4-antivirus" data-search="アンチウイルス antivirus マルウェアを検出・防止・除去するソフト ランサムウェア付き添付の遮断 エンドポイント保護">
-  <h3>アンチウイルス<span class="en">Antivirus</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-4-agents-agentless" data-search="エージェント／エージェントレス agents / agentless  対象へソフトを入れるか入れないかの監視方式 エージェント導入の詳細保護 リモート収集の軽量管理">
+  <h3>
+    <span data-i18n="ja">エージェント／エージェントレス<span class="en">Agents / agentless</span></span>
+    <span data-i18n="en">Agents / agentless</span>
+    <span data-i18n="es">エージェント／エージェントレス</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">マルウェアを<span class="hl">検出・防止・除去</span>するソフト</p>
+    <p data-i18n="ja" class="one-liner">対象へソフトを<span class="hl">入れるか入れないか</span>の監視方式</p><p data-i18n="en" class="one-liner">対象へソフトを<span class="hl">入れるか入れないか</span>の監視方式</p><p data-i18n="es" class="one-liner">対象へソフトを<span class="hl">入れるか入れないか</span>の監視方式</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ランサムウェア付き添付の遮断</li><li>エンドポイント保護</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>エージェント導入の詳細保護</li><li>リモート収集の軽量管理</li></ul>
+      <ul class="example-list" data-i18n="en"><li>エージェント導入の詳細保護</li><li>リモート収集の軽量管理</li></ul>
+      <ul class="example-list" data-i18n="es"><li>エージェント導入の詳細保護</li><li>リモート収集の軽量管理</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-4-dlp" data-search="データ損失防止 data loss prevention (dlp) 機密データの漏えい・持ち出しを防ぐ usbコピーのブロック 管理者へのアラート">
-  <h3>データ損失防止<span class="en">Data Loss Prevention (DLP)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-4-siem" data-search="siem security information and event management  ログを集め相関分析して脅威検知・対応を支援する 数百台ログの一元監視 関連イベントからの攻撃検知">
+  <h3>
+    <span data-i18n="ja">SIEM<span class="en">Security Information and Event Management</span></span>
+    <span data-i18n="en">Security Information and Event Management</span>
+    <span data-i18n="es">SIEM</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">機密データの<span class="hl">漏えい・持ち出し</span>を防ぐ</p>
+    <p data-i18n="ja" class="one-liner">ログを集め<span class="hl">相関分析</span>して脅威検知・対応を支援する</p><p data-i18n="en" class="one-liner">ログを集め<span class="hl">相関分析</span>して脅威検知・対応を支援する</p><p data-i18n="es" class="one-liner">ログを集め<span class="hl">相関分析</span>して脅威検知・対応を支援する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>USBコピーのブロック</li><li>管理者へのアラート</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>数百台ログの一元監視</li><li>関連イベントからの攻撃検知</li></ul>
+      <ul class="example-list" data-i18n="en"><li>数百台ログの一元監視</li><li>関連イベントからの攻撃検知</li></ul>
+      <ul class="example-list" data-i18n="es"><li>数百台ログの一元監視</li><li>関連イベントからの攻撃検知</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-4-netflow" data-search="netflow netflow 通信をフロー単位で監視・分析する技術 海外拠点への急増トラフィック分析 送受信ip・ポートの集計">
-  <h3>NetFlow<span class="en">NetFlow</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-4-antivirus" data-search="アンチウイルス antivirus  マルウェアを検出・防止・除去するソフト ランサムウェア付き添付の遮断 エンドポイント保護">
+  <h3>
+    <span data-i18n="ja">アンチウイルス<span class="en">Antivirus</span></span>
+    <span data-i18n="en">Antivirus</span>
+    <span data-i18n="es">アンチウイルス</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">通信を<span class="hl">フロー単位</span>で監視・分析する技術</p>
+    <p data-i18n="ja" class="one-liner">マルウェアを<span class="hl">検出・防止・除去</span>するソフト</p><p data-i18n="en" class="one-liner">マルウェアを<span class="hl">検出・防止・除去</span>するソフト</p><p data-i18n="es" class="one-liner">マルウェアを<span class="hl">検出・防止・除去</span>するソフト</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>海外拠点への急増トラフィック分析</li><li>送受信IP・ポートの集計</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ランサムウェア付き添付の遮断</li><li>エンドポイント保護</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ランサムウェア付き添付の遮断</li><li>エンドポイント保護</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ランサムウェア付き添付の遮断</li><li>エンドポイント保護</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-4-dlp" data-search="データ損失防止 data loss prevention (dlp)  機密データの漏えい・持ち出しを防ぐ usbコピーのブロック 管理者へのアラート">
+  <h3>
+    <span data-i18n="ja">データ損失防止<span class="en">Data Loss Prevention (DLP)</span></span>
+    <span data-i18n="en">Data Loss Prevention (DLP)</span>
+    <span data-i18n="es">データ損失防止</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">機密データの<span class="hl">漏えい・持ち出し</span>を防ぐ</p><p data-i18n="en" class="one-liner">機密データの<span class="hl">漏えい・持ち出し</span>を防ぐ</p><p data-i18n="es" class="one-liner">機密データの<span class="hl">漏えい・持ち出し</span>を防ぐ</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>USBコピーのブロック</li><li>管理者へのアラート</li></ul>
+      <ul class="example-list" data-i18n="en"><li>USBコピーのブロック</li><li>管理者へのアラート</li></ul>
+      <ul class="example-list" data-i18n="es"><li>USBコピーのブロック</li><li>管理者へのアラート</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-4-netflow" data-search="netflow netflow  通信をフロー単位で監視・分析する技術 海外拠点への急増トラフィック分析 送受信ip・ポートの集計">
+  <h3>
+    <span data-i18n="ja">NetFlow<span class="en">NetFlow</span></span>
+    <span data-i18n="en">NetFlow</span>
+    <span data-i18n="es">NetFlow</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">通信を<span class="hl">フロー単位</span>で監視・分析する技術</p><p data-i18n="en" class="one-liner">通信を<span class="hl">フロー単位</span>で監視・分析する技術</p><p data-i18n="es" class="one-liner">通信を<span class="hl">フロー単位</span>で監視・分析する技術</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>海外拠点への急増トラフィック分析</li><li>送受信IP・ポートの集計</li></ul>
+      <ul class="example-list" data-i18n="en"><li>海外拠点への急増トラフィック分析</li><li>送受信IP・ポートの集計</li></ul>
+      <ul class="example-list" data-i18n="es"><li>海外拠点への急増トラフィック分析</li><li>送受信IP・ポートの集計</li></ul>
     </div>
   </div>
 </article>
@@ -247,19 +348,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（15問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（15問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (15 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (15 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">[{"term": "d-4-systems-monitoring", "stem": "WebサーバーのCPU・メモリ・ディスク・ネットワーク指標を継続収集し、応答時間の異常から高負荷を早期に見つける運用をしている。主にどれか。", "choices": ["データ損失防止（DLP）", "システム監視", "隔離", "ベンチマークのみ"], "answer": 1, "explain": "正常性・可用性・パフォーマンスを継続確認するのがシステム監視。"}, {"term": "d-4-application-monitoring", "stem": "業務アプリの応答時間とエラー率を常時チェックし、遅延時に管理者へ通知する。主にどれか。", "choices": ["アプリケーション監視", "NetFlow", "サニタイゼーション", "コールドサイト"], "answer": 0, "explain": "ソフトウェアの可用性・パフォーマンス・エラーを継続追跡するのがアプリケーション監視。"}, {"term": "d-4-infrastructure-monitoring", "stem": "サーバー・ストレージ・ネットワーク機器の稼働状況やリソース使用率をリアルタイムで見て、安定稼働を維持する。主にどれか。", "choices": ["アンチウイルスのみ", "インフラ監視", "ジャーナリング", "ホットサイト"], "answer": 1, "explain": "ITインフラ構成要素の可用性・性能・セキュリティを継続監視するのがインフラ監視。"}, {"term": "d-4-log-aggregation", "stem": "多数サーバーに散らばるログを中央の収集サーバーへ転送し、1箇所で管理して障害調査を速くした。これはどれか。", "choices": ["隔離", "ログ集約", "エージェントレスのみ", "破壊"], "answer": 1, "explain": "機器・サーバーのログを一箇所に集めて管理するのがログ集約。"}, {"term": "d-4-alerting", "stem": "CPU使用率が90%を超えたときや、IDSが不正侵入を検知したときに、管理者へ即座に通知する仕組みを入れた。これはどれか。", "choices": ["アラート", "データ保持", "列挙のみ", "マルチクラウド"], "answer": 0, "explain": "異常やセキュリティ問題を検知して関係者へ通知するのがアラート。"}, {"term": "d-4-scanning", "stem": "自社Webサイトが攻撃対象になる前に弱点を見つけるため、Webアプリ脆弱性スキャナで定期点検している。これはどれか。", "choices": ["UPS", "スキャニング", "オンサイトバックアップ", "オーナーシップ"], "answer": 1, "explain": "脆弱性・不正設定・不正活動などを検出するプロセスがスキャニング。"}, {"term": "d-4-quarantine", "stem": "ボットネットに組み込まれた疑いのあるPCを、指令受信や他端末への感染を防ぐためネットワークから切り離した。これはどれか。", "choices": ["ベンチマーク", "ログ集約", "隔離", "NetFlow"], "answer": 2, "explain": "影響範囲を最小化するため感染・不審システムを切り離すのが隔離（Quarantine）。"}, {"term": "d-4-alert-tuning", "stem": "日常的に大量のエラーログが出る環境で、すべてを通知すると重要異常を見逃すため、閾値を調整して重要度の高いものだけアラートするようにした。これはどれか。", "choices": ["チューニング", "破壊", "ホットサイト", "データ損失防止"], "answer": 0, "explain": "アラートの効果を高めノイズを減らす調整がチューニング。減らしすぎによる見逃しにも注意する。"}, {"term": "d-4-scap", "stem": "OVALなどで機械可読な基準を使い、システムの設定や脆弱性を自動チェックして不適合を報告する枠組みはどれか。", "choices": ["NetFlow", "SCAP", "UPS", "スナップショット"], "answer": 1, "explain": "セキュリティ設定・脆弱性評価の自動化フレームワークが SCAP。OVAL はその構成要素の一例。"}, {"term": "d-4-benchmarks", "stem": "Webアプリの応答時間監視で、アラートを出す閾値を決めるための評価基準・指標として使うものはどれか。", "choices": ["隔離", "ベンチマーク", "発電機", "コールドサイト"], "answer": 1, "explain": "セキュリティ状態を評価するための基準・指標がベンチマーク。"}, {"term": "d-4-agents-agentless", "stem": "監視対象にソフトを入れて詳細保護する方式と、ソフトを入れずリモートで情報取得する方式を比較している。この対はどれか。", "choices": ["ホットサイトとコールドサイト", "エージェント／エージェントレス", "オンサイトとオフサイトのみ", "予防的と抑止的のみ"], "answer": 1, "explain": "エージェントは対象へ導入、エージェントレスは非導入でリモート収集。一長一短がある。"}, {"term": "d-4-siem", "stem": "数百台のサーバーとネットワーク機器のログを一元収集し、相関分析でセキュリティインシデントを検知・対応支援する中央システムはどれか。", "choices": ["SIEM", "発電機", "コールドサイト", "データ保持のみ"], "answer": 0, "explain": "ログ収集・分析・脅威検知・対処支援の中央管理が SIEM（Security Information and Event Management）。"}, {"term": "d-4-antivirus", "stem": "怪しいメール添付に仕込まれたランサムウェアを検知し、端末の感染・ファイル暗号化を防ぐソフトウェアはどれか。", "choices": ["NetFlow", "アンチウイルス", "ウォームサイト", "ログ集約のみ"], "answer": 1, "explain": "マルウェアの検出・防止・除去を行うのがアンチウイルス。"}, {"term": "d-4-dlp", "stem": "顧客個人情報を含む文書のUSBコピーを検知し、ポリシー違反としてブロックして管理者へアラートした。主にどの対策か。", "choices": ["データ損失防止（DLP）", "ホットサイト", "インフラ監視のみ", "スナップショット"], "answer": 0, "explain": "機密データの漏えい・不正持ち出しを防ぐのが DLP（Data Loss Prevention）。"}, {"term": "d-4-netflow", "stem": "普段アクセスの少ない海外拠点サーバーへの大量通信を、送信元／宛先IP・プロトコル・ポートのフロー単位で分析した。使う技術はどれか。", "choices": ["サニタイゼーション", "NetFlow", "コールドサイト", "データ保持"], "answer": 1, "explain": "Cisco発のフロー単位トラフィック監視技術が NetFlow。"}]</script>
 </section>
 
-<nav class="pager"><a href="d-3.html"><span>前の章</span>D-3 脆弱性管理手法</a><a class="next" href="d-5.html"><span>次の章</span>D-5 セキュリティ向上策</a></nav>
+<nav class="pager"><a href="d-3.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>D-3 <span data-i18n="ja">脆弱性管理手法</span><span data-i18n="en">脆弱性管理手法</span><span data-i18n="es">脆弱性管理手法</span></span></a><a class="next" href="d-5.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>D-5 <span data-i18n="ja">セキュリティ向上策</span><span data-i18n="en">セキュリティ向上策</span><span data-i18n="es">セキュリティ向上策</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

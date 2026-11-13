@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>E-2 リスク管理プロセス · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain E</span></a>
-  <a class="nav-back" href="index.html">← Domain E ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain E ハブ</span><span data-i18n="en">← Domain E hub</span><span data-i18n="es">← Hub del Domain E</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain E</h2>
-    <a href="e-1.html">E-1 セキュリティガバナンスの要素</a><a href="e-2.html" class="active">E-2 リスク管理プロセス</a><a href="e-3.html">E-3 第三者のリスク評価</a><a href="e-4.html">E-4 セキュリティコンプライアンス</a>
+    <a href="e-1.html">E-1 <span data-i18n="ja">セキュリティガバナンスの要素</span><span data-i18n="en">セキュリティガバナンスの要素</span><span data-i18n="es">セキュリティガバナンスの要素</span></a><a href="e-2.html" class="active">E-2 <span data-i18n="ja">リスク管理プロセス</span><span data-i18n="en">リスク管理プロセス</span><span data-i18n="es">リスク管理プロセス</span></a><a href="e-3.html">E-3 <span data-i18n="ja">第三者のリスク評価</span><span data-i18n="en">第三者のリスク評価</span><span data-i18n="es">第三者のリスク評価</span></a><a href="e-4.html">E-4 <span data-i18n="ja">セキュリティコンプライアンス</span><span data-i18n="en">セキュリティコンプライアンス</span><span data-i18n="es">セキュリティコンプライアンス</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain E 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain E <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,221 +55,328 @@
       
 <header class="hero">
   <p class="eyebrow">Domain E · E-2</p>
-  <h1>リスク管理プロセス</h1>
-  <p>特定・評価・分析とアペタイト</p>
+  <h1><span data-i18n="ja">リスク管理プロセス</span><span data-i18n="en">リスク管理プロセス</span><span data-i18n="es">リスク管理プロセス</span></h1>
+  <p data-i18n="ja">特定・評価・分析とアペタイト</p>
+  <p data-i18n="en">特定・評価・分析とアペタイト</p>
+  <p data-i18n="es">特定・評価・分析とアペタイト</p>
   <div class="meta-row">
-    <span class="chip">用語 17</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 5.2</span>
+    <span class="chip"><span data-i18n="ja">用語 17</span><span data-i18n="en">17 terms</span><span data-i18n="es">17 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 5.2</span><span data-i18n="en">Official 5.2</span><span data-i18n="es">Oficial 5.2</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 17問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 17問</span><span data-i18n="en">Quiz (17)</span><span data-i18n="es">Cuestionario (17)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">特定と評価の進め方</h2>
-<article class="memo-card" id="e-2-risk-identification" data-search="リスクの特定 risk identification 資産・脅威・脆弱性を洗い出す 開発遅延リスクの列挙 過去案件の教訓活用">
-  <h3>リスクの特定<span class="en">Risk identification</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">特定と評価の進め方</span><span data-i18n="en">特定と評価の進め方</span><span data-i18n="es">特定と評価の進め方</span></h2>
+<article class="memo-card" id="e-2-risk-identification" data-search="リスクの特定 risk identification  資産・脅威・脆弱性を洗い出す 開発遅延リスクの列挙 過去案件の教訓活用">
+  <h3>
+    <span data-i18n="ja">リスクの特定<span class="en">Risk identification</span></span>
+    <span data-i18n="en">Risk identification</span>
+    <span data-i18n="es">リスクの特定</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">資産・脅威・脆弱性を<span class="hl">洗い出す</span></p>
+    <p data-i18n="ja" class="one-liner">資産・脅威・脆弱性を<span class="hl">洗い出す</span></p><p data-i18n="en" class="one-liner">資産・脅威・脆弱性を<span class="hl">洗い出す</span></p><p data-i18n="es" class="one-liner">資産・脅威・脆弱性を<span class="hl">洗い出す</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>開発遅延リスクの列挙</li><li>過去案件の教訓活用</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>開発遅延リスクの列挙</li><li>過去案件の教訓活用</li></ul>
+      <ul class="example-list" data-i18n="en"><li>開発遅延リスクの列挙</li><li>過去案件の教訓活用</li></ul>
+      <ul class="example-list" data-i18n="es"><li>開発遅延リスクの列挙</li><li>過去案件の教訓活用</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-ad-hoc" data-search="アドホック ad hoc 環境変化に応じ随時・迅速に評価 専門家の自由レビュー 新機能直後の分析">
-  <h3>アドホック<span class="en">Ad hoc</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-ad-hoc" data-search="アドホック ad hoc  環境変化に応じ随時・迅速に評価 専門家の自由レビュー 新機能直後の分析">
+  <h3>
+    <span data-i18n="ja">アドホック<span class="en">Ad hoc</span></span>
+    <span data-i18n="en">Ad hoc</span>
+    <span data-i18n="es">アドホック</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">環境変化に応じ<span class="hl">随時・迅速</span>に評価</p>
+    <p data-i18n="ja" class="one-liner">環境変化に応じ<span class="hl">随時・迅速</span>に評価</p><p data-i18n="en" class="one-liner">環境変化に応じ<span class="hl">随時・迅速</span>に評価</p><p data-i18n="es" class="one-liner">環境変化に応じ<span class="hl">随時・迅速</span>に評価</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>専門家の自由レビュー</li><li>新機能直後の分析</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>専門家の自由レビュー</li><li>新機能直後の分析</li></ul>
+      <ul class="example-list" data-i18n="en"><li>専門家の自由レビュー</li><li>新機能直後の分析</li></ul>
+      <ul class="example-list" data-i18n="es"><li>専門家の自由レビュー</li><li>新機能直後の分析</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-one-time" data-search="ワンタイム one-time 導入・変更の契機に一回限り評価 クラウド導入前評価 ポリシー適合確認">
-  <h3>ワンタイム<span class="en">One-time</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-one-time" data-search="ワンタイム one-time  導入・変更の契機に一回限り評価 クラウド導入前評価 ポリシー適合確認">
+  <h3>
+    <span data-i18n="ja">ワンタイム<span class="en">One-time</span></span>
+    <span data-i18n="en">One-time</span>
+    <span data-i18n="es">ワンタイム</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">導入・変更の契機に<span class="hl">一回限り</span>評価</p>
+    <p data-i18n="ja" class="one-liner">導入・変更の契機に<span class="hl">一回限り</span>評価</p><p data-i18n="en" class="one-liner">導入・変更の契機に<span class="hl">一回限り</span>評価</p><p data-i18n="es" class="one-liner">導入・変更の契機に<span class="hl">一回限り</span>評価</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>クラウド導入前評価</li><li>ポリシー適合確認</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>クラウド導入前評価</li><li>ポリシー適合確認</li></ul>
+      <ul class="example-list" data-i18n="en"><li>クラウド導入前評価</li><li>ポリシー適合確認</li></ul>
+      <ul class="example-list" data-i18n="es"><li>クラウド導入前評価</li><li>ポリシー適合確認</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-continuous" data-search="継続的 continuous 運用中に定期または常時評価 ログ常時監視 四半期脆弱性スキャン">
-  <h3>継続的<span class="en">Continuous</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-continuous" data-search="継続的 continuous  運用中に定期または常時評価 ログ常時監視 四半期脆弱性スキャン">
+  <h3>
+    <span data-i18n="ja">継続的<span class="en">Continuous</span></span>
+    <span data-i18n="en">Continuous</span>
+    <span data-i18n="es">継続的</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">運用中に<span class="hl">定期または常時</span>評価</p>
+    <p data-i18n="ja" class="one-liner">運用中に<span class="hl">定期または常時</span>評価</p><p data-i18n="en" class="one-liner">運用中に<span class="hl">定期または常時</span>評価</p><p data-i18n="es" class="one-liner">運用中に<span class="hl">定期または常時</span>評価</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ログ常時監視</li><li>四半期脆弱性スキャン</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ログ常時監視</li><li>四半期脆弱性スキャン</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ログ常時監視</li><li>四半期脆弱性スキャン</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ログ常時監視</li><li>四半期脆弱性スキャン</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">分析手法と損失指標</h2>
-<article class="memo-card" id="e-2-qualitative" data-search="定性的 qualitative 可能性・影響を高中低で主観評価 リスクの色分け 離職リスク＝低">
-  <h3>定性的<span class="en">Qualitative</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">分析手法と損失指標</span><span data-i18n="en">分析手法と損失指標</span><span data-i18n="es">分析手法と損失指標</span></h2>
+<article class="memo-card" id="e-2-qualitative" data-search="定性的 qualitative  可能性・影響を高中低で主観評価 リスクの色分け 離職リスク＝低">
+  <h3>
+    <span data-i18n="ja">定性的<span class="en">Qualitative</span></span>
+    <span data-i18n="en">Qualitative</span>
+    <span data-i18n="es">定性的</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">可能性・影響を<span class="hl">高中低</span>で主観評価</p>
+    <p data-i18n="ja" class="one-liner">可能性・影響を<span class="hl">高中低</span>で主観評価</p><p data-i18n="en" class="one-liner">可能性・影響を<span class="hl">高中低</span>で主観評価</p><p data-i18n="es" class="one-liner">可能性・影響を<span class="hl">高中低</span>で主観評価</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>リスクの色分け</li><li>離職リスク＝低</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="e-2-quantitative" data-search="定量的 quantitative 確率と損失を数値で表す 年間確率の見積もり 金額との掛け合わせ">
-  <h3>定量的<span class="en">Quantitative</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">確率と損失を<span class="hl">数値</span>で表す</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>年間確率の見積もり</li><li>金額との掛け合わせ</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="e-2-sle" data-search="sle single loss expectancy 1回の事故で予想される損失額 障害1回の機会損失 信用失墜コスト">
-  <h3>SLE<span class="en">Single Loss Expectancy</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">1回の</span>事故で予想される損失額</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>障害1回の機会損失</li><li>信用失墜コスト</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>リスクの色分け</li><li>離職リスク＝低</li></ul>
+      <ul class="example-list" data-i18n="en"><li>リスクの色分け</li><li>離職リスク＝低</li></ul>
+      <ul class="example-list" data-i18n="es"><li>リスクの色分け</li><li>離職リスク＝低</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-ale" data-search="ale annualized loss expectancy 年間の期待損失（sle×aro） 対策コストとの比較 年あたり損失の算出">
-  <h3>ALE<span class="en">Annualized Loss Expectancy</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-quantitative" data-search="定量的 quantitative  確率と損失を数値で表す 年間確率の見積もり 金額との掛け合わせ">
+  <h3>
+    <span data-i18n="ja">定量的<span class="en">Quantitative</span></span>
+    <span data-i18n="en">Quantitative</span>
+    <span data-i18n="es">定量的</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">年間</span>の期待損失（SLE×ARO）</p>
+    <p data-i18n="ja" class="one-liner">確率と損失を<span class="hl">数値</span>で表す</p><p data-i18n="en" class="one-liner">確率と損失を<span class="hl">数値</span>で表す</p><p data-i18n="es" class="one-liner">確率と損失を<span class="hl">数値</span>で表す</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>対策コストとの比較</li><li>年あたり損失の算出</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>年間確率の見積もり</li><li>金額との掛け合わせ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>年間確率の見積もり</li><li>金額との掛け合わせ</li></ul>
+      <ul class="example-list" data-i18n="es"><li>年間確率の見積もり</li><li>金額との掛け合わせ</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-probability-likelihood" data-search="確率と可能性 probability and likelihood 確率＝数値／可能性＝定性 発生確率0.1 可能性＝高">
-  <h3>確率と可能性<span class="en">Probability and Likelihood</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-sle" data-search="sle single loss expectancy  1回の事故で予想される損失額 障害1回の機会損失 信用失墜コスト">
+  <h3>
+    <span data-i18n="ja">SLE<span class="en">Single Loss Expectancy</span></span>
+    <span data-i18n="en">Single Loss Expectancy</span>
+    <span data-i18n="es">SLE</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">確率＝<span class="hl">数値</span>／可能性＝<span class="hl">定性</span></p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">1回の</span>事故で予想される損失額</p><p data-i18n="en" class="one-liner"><span class="hl">1回の</span>事故で予想される損失額</p><p data-i18n="es" class="one-liner"><span class="hl">1回の</span>事故で予想される損失額</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>発生確率0.1</li><li>可能性＝高</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>障害1回の機会損失</li><li>信用失墜コスト</li></ul>
+      <ul class="example-list" data-i18n="en"><li>障害1回の機会損失</li><li>信用失墜コスト</li></ul>
+      <ul class="example-list" data-i18n="es"><li>障害1回の機会損失</li><li>信用失墜コスト</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-exposure-factor" data-search="暴露係数 exposure factor 脅威時に失う資産の割合 火災でpc20%損失 ef=0.2">
-  <h3>暴露係数<span class="en">Exposure factor</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-ale" data-search="ale annualized loss expectancy  年間の期待損失（sle×aro） 対策コストとの比較 年あたり損失の算出">
+  <h3>
+    <span data-i18n="ja">ALE<span class="en">Annualized Loss Expectancy</span></span>
+    <span data-i18n="en">Annualized Loss Expectancy</span>
+    <span data-i18n="es">ALE</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">脅威時に失う<span class="hl">資産の割合</span></p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">年間</span>の期待損失（SLE×ARO）</p><p data-i18n="en" class="one-liner"><span class="hl">年間</span>の期待損失（SLE×ARO）</p><p data-i18n="es" class="one-liner"><span class="hl">年間</span>の期待損失（SLE×ARO）</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>火災でPC20%損失</li><li>EF=0.2</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>対策コストとの比較</li><li>年あたり損失の算出</li></ul>
+      <ul class="example-list" data-i18n="en"><li>対策コストとの比較</li><li>年あたり損失の算出</li></ul>
+      <ul class="example-list" data-i18n="es"><li>対策コストとの比較</li><li>年あたり損失の算出</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-impact" data-search="インパクト impact 顕在化時の影響の大きさ 財務損失 業務中断・評判低下">
-  <h3>インパクト<span class="en">Impact</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-probability-likelihood" data-search="確率と可能性 probability and likelihood  確率＝数値／可能性＝定性 発生確率0.1 可能性＝高">
+  <h3>
+    <span data-i18n="ja">確率と可能性<span class="en">Probability and Likelihood</span></span>
+    <span data-i18n="en">Probability and Likelihood</span>
+    <span data-i18n="es">確率と可能性</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">顕在化時の<span class="hl">影響の大きさ</span></p>
+    <p data-i18n="ja" class="one-liner">確率＝<span class="hl">数値</span>／可能性＝<span class="hl">定性</span></p><p data-i18n="en" class="one-liner">確率＝<span class="hl">数値</span>／可能性＝<span class="hl">定性</span></p><p data-i18n="es" class="one-liner">確率＝<span class="hl">数値</span>／可能性＝<span class="hl">定性</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>財務損失</li><li>業務中断・評判低下</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">登録簿とアペタイト</h2>
-<article class="memo-card" id="e-2-kri" data-search="キーリスクインジケーター key risk indicator リスク悪化を早期察知する指標 在庫回転率 欠品率">
-  <h3>キーリスクインジケーター<span class="en">Key risk indicator</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">リスク悪化を<span class="hl">早期察知</span>する指標</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>在庫回転率</li><li>欠品率</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>発生確率0.1</li><li>可能性＝高</li></ul>
+      <ul class="example-list" data-i18n="en"><li>発生確率0.1</li><li>可能性＝高</li></ul>
+      <ul class="example-list" data-i18n="es"><li>発生確率0.1</li><li>可能性＝高</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-risk-owner" data-search="リスクオーナー risk owner リスク管理を主導する責任者 品質管理責任者 対応策の立案・監視">
-  <h3>リスクオーナー<span class="en">Risk owner</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-exposure-factor" data-search="暴露係数 exposure factor  脅威時に失う資産の割合 火災でpc20%損失 ef=0.2">
+  <h3>
+    <span data-i18n="ja">暴露係数<span class="en">Exposure factor</span></span>
+    <span data-i18n="en">Exposure factor</span>
+    <span data-i18n="es">暴露係数</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">リスク管理を<span class="hl">主導する責任者</span></p>
+    <p data-i18n="ja" class="one-liner">脅威時に失う<span class="hl">資産の割合</span></p><p data-i18n="en" class="one-liner">脅威時に失う<span class="hl">資産の割合</span></p><p data-i18n="es" class="one-liner">脅威時に失う<span class="hl">資産の割合</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>品質管理責任者</li><li>対応策の立案・監視</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>火災でPC20%損失</li><li>EF=0.2</li></ul>
+      <ul class="example-list" data-i18n="en"><li>火災でPC20%損失</li><li>EF=0.2</li></ul>
+      <ul class="example-list" data-i18n="es"><li>火災でPC20%損失</li><li>EF=0.2</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-risk-threshold" data-search="リスク閾値 risk threshold 許容できる限界点で優先付け 超えたら必ず対策 登録簿での強弱付け">
-  <h3>リスク閾値<span class="en">Risk threshold</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-impact" data-search="インパクト impact  顕在化時の影響の大きさ 財務損失 業務中断・評判低下">
+  <h3>
+    <span data-i18n="ja">インパクト<span class="en">Impact</span></span>
+    <span data-i18n="en">Impact</span>
+    <span data-i18n="es">インパクト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">許容できる<span class="hl">限界点</span>で優先付け</p>
+    <p data-i18n="ja" class="one-liner">顕在化時の<span class="hl">影響の大きさ</span></p><p data-i18n="en" class="one-liner">顕在化時の<span class="hl">影響の大きさ</span></p><p data-i18n="es" class="one-liner">顕在化時の<span class="hl">影響の大きさ</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>超えたら必ず対策</li><li>登録簿での強弱付け</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>財務損失</li><li>業務中断・評判低下</li></ul>
+      <ul class="example-list" data-i18n="en"><li>財務損失</li><li>業務中断・評判低下</li></ul>
+      <ul class="example-list" data-i18n="es"><li>財務損失</li><li>業務中断・評判低下</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">登録簿とアペタイト</span><span data-i18n="en">登録簿とアペタイト</span><span data-i18n="es">登録簿とアペタイト</span></h2>
+<article class="memo-card" id="e-2-kri" data-search="キーリスクインジケーター key risk indicator  リスク悪化を早期察知する指標 在庫回転率 欠品率">
+  <h3>
+    <span data-i18n="ja">キーリスクインジケーター<span class="en">Key risk indicator</span></span>
+    <span data-i18n="en">Key risk indicator</span>
+    <span data-i18n="es">キーリスクインジケーター</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">リスク悪化を<span class="hl">早期察知</span>する指標</p><p data-i18n="en" class="one-liner">リスク悪化を<span class="hl">早期察知</span>する指標</p><p data-i18n="es" class="one-liner">リスク悪化を<span class="hl">早期察知</span>する指標</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>在庫回転率</li><li>欠品率</li></ul>
+      <ul class="example-list" data-i18n="en"><li>在庫回転率</li><li>欠品率</li></ul>
+      <ul class="example-list" data-i18n="es"><li>在庫回転率</li><li>欠品率</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-expansionary-risk-appetite" data-search="拡大的リスクアペタイト expansionary risk appetite 高リターンのため積極的にテイク 革新的製品開発 スタートアップの挑戦">
-  <h3>拡大的リスクアペタイト<span class="en">Expansionary risk appetite</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-risk-owner" data-search="リスクオーナー risk owner  リスク管理を主導する責任者 品質管理責任者 対応策の立案・監視">
+  <h3>
+    <span data-i18n="ja">リスクオーナー<span class="en">Risk owner</span></span>
+    <span data-i18n="en">Risk owner</span>
+    <span data-i18n="es">リスクオーナー</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">高リターンのため<span class="hl">積極的</span>にテイク</p>
+    <p data-i18n="ja" class="one-liner">リスク管理を<span class="hl">主導する責任者</span></p><p data-i18n="en" class="one-liner">リスク管理を<span class="hl">主導する責任者</span></p><p data-i18n="es" class="one-liner">リスク管理を<span class="hl">主導する責任者</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>革新的製品開発</li><li>スタートアップの挑戦</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>品質管理責任者</li><li>対応策の立案・監視</li></ul>
+      <ul class="example-list" data-i18n="en"><li>品質管理責任者</li><li>対応策の立案・監視</li></ul>
+      <ul class="example-list" data-i18n="es"><li>品質管理責任者</li><li>対応策の立案・監視</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-conservative-risk-appetite" data-search="保守的リスクアペタイト conservative risk appetite 安定重視でリスクを最小化 老舗ブランド保護 慎重な新施策">
-  <h3>保守的リスクアペタイト<span class="en">Conservative risk appetite</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-risk-threshold" data-search="リスク閾値 risk threshold  許容できる限界点で優先付け 超えたら必ず対策 登録簿での強弱付け">
+  <h3>
+    <span data-i18n="ja">リスク閾値<span class="en">Risk threshold</span></span>
+    <span data-i18n="en">Risk threshold</span>
+    <span data-i18n="es">リスク閾値</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">安定重視でリスクを<span class="hl">最小化</span></p>
+    <p data-i18n="ja" class="one-liner">許容できる<span class="hl">限界点</span>で優先付け</p><p data-i18n="en" class="one-liner">許容できる<span class="hl">限界点</span>で優先付け</p><p data-i18n="es" class="one-liner">許容できる<span class="hl">限界点</span>で優先付け</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>老舗ブランド保護</li><li>慎重な新施策</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>超えたら必ず対策</li><li>登録簿での強弱付け</li></ul>
+      <ul class="example-list" data-i18n="en"><li>超えたら必ず対策</li><li>登録簿での強弱付け</li></ul>
+      <ul class="example-list" data-i18n="es"><li>超えたら必ず対策</li><li>登録簿での強弱付け</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-2-neutral-risk-appetite" data-search="中立的リスクアペタイト neutral risk appetite リスクと機会のバランスを取る 案件ごとの秤量 状況応変のテイク">
-  <h3>中立的リスクアペタイト<span class="en">Neutral risk appetite</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-2-expansionary-risk-appetite" data-search="拡大的リスクアペタイト expansionary risk appetite  高リターンのため積極的にテイク 革新的製品開発 スタートアップの挑戦">
+  <h3>
+    <span data-i18n="ja">拡大的リスクアペタイト<span class="en">Expansionary risk appetite</span></span>
+    <span data-i18n="en">Expansionary risk appetite</span>
+    <span data-i18n="es">拡大的リスクアペタイト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">リスクと機会の<span class="hl">バランス</span>を取る</p>
+    <p data-i18n="ja" class="one-liner">高リターンのため<span class="hl">積極的</span>にテイク</p><p data-i18n="en" class="one-liner">高リターンのため<span class="hl">積極的</span>にテイク</p><p data-i18n="es" class="one-liner">高リターンのため<span class="hl">積極的</span>にテイク</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>案件ごとの秤量</li><li>状況応変のテイク</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>革新的製品開発</li><li>スタートアップの挑戦</li></ul>
+      <ul class="example-list" data-i18n="en"><li>革新的製品開発</li><li>スタートアップの挑戦</li></ul>
+      <ul class="example-list" data-i18n="es"><li>革新的製品開発</li><li>スタートアップの挑戦</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-2-conservative-risk-appetite" data-search="保守的リスクアペタイト conservative risk appetite  安定重視でリスクを最小化 老舗ブランド保護 慎重な新施策">
+  <h3>
+    <span data-i18n="ja">保守的リスクアペタイト<span class="en">Conservative risk appetite</span></span>
+    <span data-i18n="en">Conservative risk appetite</span>
+    <span data-i18n="es">保守的リスクアペタイト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">安定重視でリスクを<span class="hl">最小化</span></p><p data-i18n="en" class="one-liner">安定重視でリスクを<span class="hl">最小化</span></p><p data-i18n="es" class="one-liner">安定重視でリスクを<span class="hl">最小化</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>老舗ブランド保護</li><li>慎重な新施策</li></ul>
+      <ul class="example-list" data-i18n="en"><li>老舗ブランド保護</li><li>慎重な新施策</li></ul>
+      <ul class="example-list" data-i18n="es"><li>老舗ブランド保護</li><li>慎重な新施策</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-2-neutral-risk-appetite" data-search="中立的リスクアペタイト neutral risk appetite  リスクと機会のバランスを取る 案件ごとの秤量 状況応変のテイク">
+  <h3>
+    <span data-i18n="ja">中立的リスクアペタイト<span class="en">Neutral risk appetite</span></span>
+    <span data-i18n="en">Neutral risk appetite</span>
+    <span data-i18n="es">中立的リスクアペタイト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">リスクと機会の<span class="hl">バランス</span>を取る</p><p data-i18n="en" class="one-liner">リスクと機会の<span class="hl">バランス</span>を取る</p><p data-i18n="es" class="one-liner">リスクと機会の<span class="hl">バランス</span>を取る</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>案件ごとの秤量</li><li>状況応変のテイク</li></ul>
+      <ul class="example-list" data-i18n="en"><li>案件ごとの秤量</li><li>状況応変のテイク</li></ul>
+      <ul class="example-list" data-i18n="es"><li>案件ごとの秤量</li><li>状況応変のテイク</li></ul>
     </div>
   </div>
 </article>
@@ -271,19 +384,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（17問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（17問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (17 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (17 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">[{"term": "e-2-risk-identification", "stem": "ソフトウェア開発で、要員不足・仕様変更・予算超過・競合先行など、起こりうるリスクシナリオを洗い出している。このプロセスはどれか。", "choices": ["リスクの特定", "ALEの算出のみ", "中立的アペタイトの決定", "ワンタイム評価のみ"], "answer": 0, "explain": "組織の資産・脅威・脆弱性などを洗い出しリスクシナリオを特定するのがリスクの特定である。"}, {"term": "e-2-ad-hoc", "stem": "新機能追加の直後、体系的な固定手順ではなく経験豊富な専門家が素早く脆弱性をレビューし影響を見積もった。この評価の進め方はどれか。", "choices": ["ワンタイムのみ", "アドホック", "ALE", "保守的アペタイト"], "answer": 1, "explain": "新たに見つかったリスクや変化に応じて随時・迅速に行うのがアドホック評価である。"}, {"term": "e-2-one-time", "stem": "新しいクラウドサービス導入の前に、暗号化やログ保存期間が自社ポリシーを満たすかを一度きり調べた。これはどれか。", "choices": ["継続的評価", "拡大的アペタイト", "ワンタイム", "KRI"], "answer": 2, "explain": "導入前や大きな変更前など、特定契機で一回限り実施するのがワンタイム評価である。"}, {"term": "e-2-continuous", "stem": "社内ネットでFWログを常時確認し、四半期ごとに全サーバの脆弱性スキャンも行っている。この評価形式はどれか。", "choices": ["ワンタイム", "アドホックのみ", "SLE", "継続的"], "answer": 3, "explain": "運用開始後に定期または常時モニタリングする形式が継続的リスク評価である。"}, {"term": "e-2-qualitative", "stem": "新製品開発リスクを、発生可能性と影響度で「高／中／低」と言葉で付けている。この分析はどれか。", "choices": ["定量的", "定性的", "ALE", "暴露係数"], "answer": 1, "explain": "主観的に高中低などで表すのが定性的リスク分析である。"}, {"term": "e-2-quantitative", "stem": "SQLi漏えいの年間発生確率を0.1%、損失額と掛け合わせてリスク量を数値で比較している。この分析はどれか。", "choices": ["定量的", "定性的のみ", "アドホック", "リスク閾値"], "answer": 0, "explain": "発生確率と損失額を数値で表すのが定量的リスク分析である。"}, {"term": "e-2-sle", "stem": "基幹障害が一度起きたときの機会損失・緊急調達・信用失墜による売上減を合計し、「1回あたりの予想損失」を出した。この指標はどれか。", "choices": ["ARO", "KRI", "SLE", "Likelihood"], "answer": 2, "explain": "単一損失期待値（SLE）は1回のインシデントで予想される損失額である。"}, {"term": "e-2-ale", "stem": "SLEが100万円、年間発生率AROが0.5のとき、年あたりの期待損失を求めた。この指標と一般的な式はどれか。", "choices": ["インパクト＝高中低のみ", "ALE＝SLE×ARO", "EF＝資産価値÷脅威", "ワンタイム＝常時監視"], "answer": 1, "explain": "年間損失期待値ALEは一般にSLE×AROで求める。"}, {"term": "e-2-probability-likelihood", "stem": "試験対策として、0〜1の数値で表す尺度と、高中低など主観で表す尺度を区別したい。正しい対応はどれか。", "choices": ["Probability＝可能性（定性）、Likelihood＝確率（数値）", "どちらもALEの別名", "Probability＝確率（数値）、Likelihood＝可能性（定性）", "どちらも暴露係数"], "answer": 2, "explain": "講義ではProbabilityを確率（数値）、Likelihoodを可能性（定性）として整理する。"}, {"term": "e-2-exposure-factor", "stem": "火災時に耐火保管のPCは資産価値の20%が失われると見積もり、EF=0.2とした。この指標はどれか。", "choices": ["暴露係数", "リスクオーナー", "拡大的アペタイト", "ワンタイム"], "answer": 0, "explain": "暴露係数（Exposure factor）は脅威発生時に失われる資産の割合である。"}, {"term": "e-2-impact", "stem": "主要部品の供給停止について、財務損失・業務中断時間・評判低下を踏まえ「影響が大きい」と判断した。この概念はどれか。", "choices": ["アドホック", "インパクト", "ARO", "KRI"], "answer": 1, "explain": "脅威顕在化時に組織が受ける影響の大きさがインパクトである。"}, {"term": "e-2-kri", "stem": "在庫過剰・不足のリスクを早期に察知するため、在庫回転率や欠品率を登録簿に指標として載せた。これはどれか。", "choices": ["SLE", "キーリスクインジケーター（KRI）", "ワンタイム", "保守的アペタイト"], "answer": 1, "explain": "リスク状況の変化を早期察知する指標がKRIである。"}, {"term": "e-2-risk-owner", "stem": "製品欠陥リスクについて、品質管理部門の責任者が対応策の立案・進捗監視・他部署調整を主導し登録簿に記載した。この役割はどれか。", "choices": ["暴露係数", "ALE", "リスクオーナー", "アドホック評価者のみ"], "answer": 2, "explain": "リスクに責任を持ち管理を主導する人物・部門がリスクオーナーである。"}, {"term": "e-2-risk-threshold", "stem": "プロジェクトのリスク一覧で、ある水準を超えたものだけ必ず対策する、と線引きして優先順位を付けた。この基準点はどれか。", "choices": ["リスク閾値", "サイトサーベイ", "定性的＝金額計算", "継続的＝一回限り"], "answer": 0, "explain": "許容できる限界を示す基準点がリスク閾値で、対応の強弱付けに使う。"}, {"term": "e-2-expansionary-risk-appetite", "stem": "失敗時の損害は大きいが得られるリターンも大きい新コンセプトEV開発に、スタートアップが積極的に踏み込む。この方針はどれか。", "choices": ["保守的リスクアペタイト", "拡大的リスクアペタイト", "SLE", "ワンタイム"], "answer": 1, "explain": "高いリターンを求めてリスクテイクに積極的なのが拡大的アペタイトである。"}, {"term": "e-2-conservative-risk-appetite", "stem": "老舗食品メーカーがブランドと信頼を最優先し、大きなリスクを避けて安定収益を選ぶ。この方針はどれか。", "choices": ["拡大的リスクアペタイト", "継続的評価", "保守的リスクアペタイト", "定量的分析のみ"], "answer": 2, "explain": "安定性を重視しリスク最小化を優先するのが保守的アペタイトである。"}, {"term": "e-2-neutral-risk-appetite", "stem": "受託ソフト会社が、案件ごとに安全な既存手法とやや新しい挑戦を秤にかけ、リスクと機会のバランスで判断する。この方針はどれか。", "choices": ["中立的リスクアペタイト", "拡大的のみ", "暴露係数", "リスクの特定のみ"], "answer": 0, "explain": "リスクと機会のバランスを状況に応じて取るのが中立的アペタイトである。"}]</script>
 </section>
 
-<nav class="pager"><a href="e-1.html"><span>前の章</span>E-1 セキュリティガバナンスの要素</a><a class="next" href="e-3.html"><span>次の章</span>E-3 第三者のリスク評価</a></nav>
+<nav class="pager"><a href="e-1.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>E-1 <span data-i18n="ja">セキュリティガバナンスの要素</span><span data-i18n="en">セキュリティガバナンスの要素</span><span data-i18n="es">セキュリティガバナンスの要素</span></span></a><a class="next" href="e-3.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>E-3 <span data-i18n="ja">第三者のリスク評価</span><span data-i18n="en">第三者のリスク評価</span><span data-i18n="es">第三者のリスク評価</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

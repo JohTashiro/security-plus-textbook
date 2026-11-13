@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A-2 セキュリティコンセプトの基礎 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain A</span></a>
-  <a class="nav-back" href="index.html">← Domain A ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain A ハブ</span><span data-i18n="en">← Domain A hub</span><span data-i18n="es">← Hub del Domain A</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain A</h2>
-    <a href="a-1.html">A-1 セキュリティコントロールの比較</a><a href="a-2.html" class="active">A-2 セキュリティコンセプトの基礎</a><a href="a-3.html">A-3 変更管理とセキュリティへの影響</a><a href="a-4.html">A-4 適切な暗号化の選択</a>
+    <a href="a-1.html">A-1 <span data-i18n="ja">セキュリティコントロールの比較</span><span data-i18n="en">Comparing security controls</span><span data-i18n="es">Comparación de controles de seguridad</span></a><a href="a-2.html" class="active">A-2 <span data-i18n="ja">セキュリティコンセプトの基礎</span><span data-i18n="en">Fundamental security concepts</span><span data-i18n="es">Conceptos de seguridad fundamentales</span></a><a href="a-3.html">A-3 <span data-i18n="ja">変更管理とセキュリティへの影響</span><span data-i18n="en">Change management and its security impact</span><span data-i18n="es">Gestión de cambios y su impacto en la seguridad</span></a><a href="a-4.html">A-4 <span data-i18n="ja">適切な暗号化の選択</span><span data-i18n="en">Choosing appropriate cryptography</span><span data-i18n="es">Elección de la criptografía adecuada</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain A 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain A <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,209 +55,310 @@
       
 <header class="hero">
   <p class="eyebrow">Domain A · A-2</p>
-  <h1>セキュリティコンセプトの基礎</h1>
-  <p>CIA・ゼロトラスト・物理セキュリティ</p>
+  <h1><span data-i18n="ja">セキュリティコンセプトの基礎</span><span data-i18n="en">Fundamental security concepts</span><span data-i18n="es">Conceptos de seguridad fundamentales</span></h1>
+  <p data-i18n="ja">CIA・ゼロトラスト・物理セキュリティ</p>
+  <p data-i18n="en">CIA, zero trust, physical security</p>
+  <p data-i18n="es">CIA, confianza cero y seguridad física</p>
   <div class="meta-row">
-    <span class="chip">用語 16</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 1.2</span>
+    <span class="chip"><span data-i18n="ja">用語 16</span><span data-i18n="en">16 terms</span><span data-i18n="es">16 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 1.2</span><span data-i18n="en">Official 1.2</span><span data-i18n="es">Oficial 1.2</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 16問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 16問</span><span data-i18n="en">Quiz (16)</span><span data-i18n="es">Cuestionario (16)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">基本概念</h2>
-<article class="memo-card" id="a-2-cia" data-search="cia confidentiality / integrity / availability 機密性・完全性・可用性の3要素 暗号化（機密） ハッシュ（完全） 冗長化（可用）">
-  <h3>CIA<span class="en">Confidentiality / Integrity / Availability</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">基本概念</span><span data-i18n="en">Core concepts</span><span data-i18n="es">Conceptos básicos</span></h2>
+<article class="memo-card" id="a-2-cia" data-search="cia confidentiality / integrity / availability tríada cia 機密性・完全性・可用性の3要素 暗号化（機密） ハッシュ（完全） 冗長化（可用）">
+  <h3>
+    <span data-i18n="ja">CIA<span class="en">Confidentiality / Integrity / Availability</span></span>
+    <span data-i18n="en">CIA triad</span>
+    <span data-i18n="es">Tríada CIA</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">機密性・完全性・可用性</span>の3要素</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">機密性・完全性・可用性</span>の3要素</p><p data-i18n="en" class="one-liner">The three pillars: <span class="hl">confidentiality, integrity, availability</span></p><p data-i18n="es" class="one-liner">Los tres pilares: <span class="hl">confidencialidad, integridad y disponibilidad</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>暗号化（機密）</li><li>ハッシュ（完全）</li><li>冗長化（可用）</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>暗号化（機密）</li><li>ハッシュ（完全）</li><li>冗長化（可用）</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Encryption (confidentiality)</li><li>Hashing (integrity)</li><li>Redundancy (availability)</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Cifrado (confidencialidad)</li><li>Hash (integridad)</li><li>Redundancia (disponibilidad)</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-non-repudiation" data-search="否認防止 non-repudiation 後から「やってない」と否定できない デジタル署名 証明書">
-  <h3>否認防止<span class="en">Non-repudiation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-non-repudiation" data-search="否認防止 non-repudiation no repudio 後から「やってない」と否定できない デジタル署名 証明書">
+  <h3>
+    <span data-i18n="ja">否認防止<span class="en">Non-repudiation</span></span>
+    <span data-i18n="en">Non-repudiation</span>
+    <span data-i18n="es">No repudio</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">後から「やってない」と<span class="hl">否定できない</span></p>
+    <p data-i18n="ja" class="one-liner">後から「やってない」と<span class="hl">否定できない</span></p><p data-i18n="en" class="one-liner">You <span class="hl">can't deny it</span> later</p><p data-i18n="es" class="one-liner"><span class="hl">No se puede negar</span> después</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>デジタル署名</li><li>証明書</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>デジタル署名</li><li>証明書</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Digital signatures</li><li>Certificates</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Firmas digitales</li><li>Certificados</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-gap-analysis" data-search="ギャップ分析 gap analysis 現状と目標の差を洗い出す 対策不足の一覧化 目標水準との比較">
-  <h3>ギャップ分析<span class="en">Gap Analysis</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-gap-analysis" data-search="ギャップ分析 gap analysis análisis de brechas 現状と目標の差を洗い出す 対策不足の一覧化 目標水準との比較">
+  <h3>
+    <span data-i18n="ja">ギャップ分析<span class="en">Gap Analysis</span></span>
+    <span data-i18n="en">Gap Analysis</span>
+    <span data-i18n="es">Análisis de brechas</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">現状と目標の差</span>を洗い出す</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">現状と目標の差</span>を洗い出す</p><p data-i18n="en" class="one-liner">Identifies the <span class="hl">gap between current and target state</span></p><p data-i18n="es" class="one-liner">Identifica la <span class="hl">brecha entre el estado actual y el objetivo</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>対策不足の一覧化</li><li>目標水準との比較</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>対策不足の一覧化</li><li>目標水準との比較</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Listing missing controls</li><li>Comparing against the target baseline</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Listado de controles que faltan</li><li>Comparación con el nivel objetivo</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">ゼロトラスト関連</h2>
-<article class="memo-card" id="a-2-adaptive-identity" data-search="アダプティブid adaptive identity 状況に応じて認証を動的に変える 普段と違う場所で追加認証">
-  <h3>アダプティブID<span class="en">Adaptive Identity</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">ゼロトラスト関連</span><span data-i18n="en">Zero trust</span><span data-i18n="es">Confianza cero (Zero Trust)</span></h2>
+<article class="memo-card" id="a-2-adaptive-identity" data-search="アダプティブid adaptive identity identidad adaptativa 状況に応じて認証を動的に変える 普段と違う場所で追加認証">
+  <h3>
+    <span data-i18n="ja">アダプティブID<span class="en">Adaptive Identity</span></span>
+    <span data-i18n="en">Adaptive Identity</span>
+    <span data-i18n="es">Identidad adaptativa</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">状況に応じて認証を<span class="hl">動的に変える</span></p>
+    <p data-i18n="ja" class="one-liner">状況に応じて認証を<span class="hl">動的に変える</span></p><p data-i18n="en" class="one-liner"><span class="hl">Dynamically adjusts</span> authentication to context</p><p data-i18n="es" class="one-liner"><span class="hl">Ajusta dinámicamente</span> la autenticación según el contexto</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>普段と違う場所で追加認証</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-2-threat-scope" data-search="脅威範囲の縮小 threat scope reduction 被害が広がる範囲を狭める 最小権限 高リスク端末の制限">
-  <h3>脅威範囲の縮小<span class="en">Threat Scope Reduction</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">被害が広がる<span class="hl">範囲を狭める</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>最小権限</li><li>高リスク端末の制限</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-2-policy-driven" data-search="ポリシー駆動型アクセス制御 policy-driven access control 定義済み方針で権限を決める 役割別アクセスポリシー">
-  <h3>ポリシー駆動型アクセス制御<span class="en">Policy-driven Access Control</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">定義済み方針</span>で権限を決める</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>役割別アクセスポリシー</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>普段と違う場所で追加認証</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Extra authentication from an unusual location</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Autenticación adicional desde una ubicación inusual</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-policy-admin" data-search="ポリシー管理者 policy administrator アクセスルールを決めて更新する役割 職種別ポリシーの定義">
-  <h3>ポリシー管理者<span class="en">Policy Administrator</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-threat-scope" data-search="脅威範囲の縮小 threat scope reduction reducción del alcance de amenazas 被害が広がる範囲を狭める 最小権限 高リスク端末の制限">
+  <h3>
+    <span data-i18n="ja">脅威範囲の縮小<span class="en">Threat Scope Reduction</span></span>
+    <span data-i18n="en">Threat Scope Reduction</span>
+    <span data-i18n="es">Reducción del alcance de amenazas</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">アクセスルールを<span class="hl">決めて更新</span>する役割</p>
+    <p data-i18n="ja" class="one-liner">被害が広がる<span class="hl">範囲を狭める</span></p><p data-i18n="en" class="one-liner"><span class="hl">Narrows how far</span> damage can spread</p><p data-i18n="es" class="one-liner"><span class="hl">Limita hasta dónde</span> puede extenderse el daño</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>職種別ポリシーの定義</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>最小権限</li><li>高リスク端末の制限</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Least privilege</li><li>Restricting high-risk devices</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Mínimo privilegio</li><li>Restricción de dispositivos de alto riesgo</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-implicit-trust" data-search="暗黙の信頼ゾーン implicit trust zone 社内なら信用する領域（排除対象） 境界内は無検証の従来型">
-  <h3>暗黙の信頼ゾーン<span class="en">Implicit Trust Zone</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-policy-driven" data-search="ポリシー駆動型アクセス制御 policy-driven access control control de acceso basado en políticas 定義済み方針で権限を決める 役割別アクセスポリシー">
+  <h3>
+    <span data-i18n="ja">ポリシー駆動型アクセス制御<span class="en">Policy-driven Access Control</span></span>
+    <span data-i18n="en">Policy-driven Access Control</span>
+    <span data-i18n="es">Control de acceso basado en políticas</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">社内なら信用する領域（<span class="hl">排除対象</span>）</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">定義済み方針</span>で権限を決める</p><p data-i18n="en" class="one-liner">Grants permissions from <span class="hl">predefined policies</span></p><p data-i18n="es" class="one-liner">Concede permisos según <span class="hl">políticas predefinidas</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>境界内は無検証の従来型</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>役割別アクセスポリシー</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Role-based access policies</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Políticas de acceso por rol</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-subject-system" data-search="サブジェクト／システム subject / system アクセスする側と守る対象 医師→電子カルテ">
-  <h3>サブジェクト／システム<span class="en">Subject / System</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-policy-admin" data-search="ポリシー管理者 policy administrator administrador de políticas アクセスルールを決めて更新する役割 職種別ポリシーの定義">
+  <h3>
+    <span data-i18n="ja">ポリシー管理者<span class="en">Policy Administrator</span></span>
+    <span data-i18n="en">Policy Administrator</span>
+    <span data-i18n="es">Administrador de políticas</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">アクセスする側</span>と守る対象</p>
+    <p data-i18n="ja" class="one-liner">アクセスルールを<span class="hl">決めて更新</span>する役割</p><p data-i18n="en" class="one-liner">The role that <span class="hl">defines and updates</span> access rules</p><p data-i18n="es" class="one-liner">El rol que <span class="hl">define y actualiza</span> las reglas de acceso</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>医師→電子カルテ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>職種別ポリシーの定義</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Defining policies per job role</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Definición de políticas por puesto</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-pep" data-search="ポリシー実施ポイント pep 現場で許可／拒否を執行する点 ゲートウェイでの判定 アクセスログ">
-  <h3>ポリシー実施ポイント<span class="en">PEP</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-implicit-trust" data-search="暗黙の信頼ゾーン implicit trust zone zona de confianza implícita 社内なら信用する領域（排除対象） 境界内は無検証の従来型">
+  <h3>
+    <span data-i18n="ja">暗黙の信頼ゾーン<span class="en">Implicit Trust Zone</span></span>
+    <span data-i18n="en">Implicit Trust Zone</span>
+    <span data-i18n="es">Zona de confianza implícita</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">現場で<span class="hl">許可／拒否を執行</span>する点</p>
+    <p data-i18n="ja" class="one-liner">社内なら信用する領域（<span class="hl">排除対象</span>）</p><p data-i18n="en" class="one-liner">An area trusted just for being inside (<span class="hl">to be eliminated</span>)</p><p data-i18n="es" class="one-liner">Zona en la que se confía solo por estar dentro (<span class="hl">debe eliminarse</span>)</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ゲートウェイでの判定</li><li>アクセスログ</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">物理セキュリティ</h2>
-<article class="memo-card" id="a-2-bollard" data-search="ボラード bollard 車両の侵入を防ぐ柱 建物前の車止め">
-  <h3>ボラード<span class="en">Bollard</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner"><span class="hl">車両の侵入</span>を防ぐ柱</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>建物前の車止め</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>境界内は無検証の従来型</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Legacy model: no checks inside the perimeter</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Modelo tradicional: sin verificación dentro del perímetro</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-fencing" data-search="フェンシング fencing 境界を示し人の侵入を防ぐ柵 チェーンリンクフェンス">
-  <h3>フェンシング<span class="en">Fencing</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-subject-system" data-search="サブジェクト／システム subject / system sujeto / sistema アクセスする側と守る対象 医師→電子カルテ">
+  <h3>
+    <span data-i18n="ja">サブジェクト／システム<span class="en">Subject / System</span></span>
+    <span data-i18n="en">Subject / System</span>
+    <span data-i18n="es">Sujeto / sistema</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">境界を示し<span class="hl">人の侵入</span>を防ぐ柵</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">アクセスする側</span>と守る対象</p><p data-i18n="en" class="one-liner"><span class="hl">Who accesses</span> and what is being protected</p><p data-i18n="es" class="one-liner"><span class="hl">Quién accede</span> y qué se protege</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>チェーンリンクフェンス</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>医師→電子カルテ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Doctor → electronic medical records</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Médico → historia clínica electrónica</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-video" data-search="ビデオ監視 video surveillance カメラで監視・録画する 集中監視 ai映像解析">
-  <h3>ビデオ監視<span class="en">Video Surveillance</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-pep" data-search="ポリシー実施ポイント pep punto de aplicación de políticas (pep) 現場で許可／拒否を執行する点 ゲートウェイでの判定 アクセスログ">
+  <h3>
+    <span data-i18n="ja">ポリシー実施ポイント<span class="en">PEP</span></span>
+    <span data-i18n="en">Policy Enforcement Point (PEP)</span>
+    <span data-i18n="es">Punto de aplicación de políticas (PEP)</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">カメラで<span class="hl">監視・録画</span>する</p>
+    <p data-i18n="ja" class="one-liner">現場で<span class="hl">許可／拒否を執行</span>する点</p><p data-i18n="en" class="one-liner">The point that <span class="hl">enforces allow/deny</span> in practice</p><p data-i18n="es" class="one-liner">El punto que <span class="hl">aplica permitir/denegar</span> en la práctica</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>集中監視</li><li>AI映像解析</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ゲートウェイでの判定</li><li>アクセスログ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Gateway decisions</li><li>Access logs</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Decisiones en la pasarela</li><li>Registros de acceso</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">物理セキュリティ</span><span data-i18n="en">Physical security</span><span data-i18n="es">Seguridad física</span></h2>
+<article class="memo-card" id="a-2-bollard" data-search="ボラード bollard bolardo 車両の侵入を防ぐ柱 建物前の車止め">
+  <h3>
+    <span data-i18n="ja">ボラード<span class="en">Bollard</span></span>
+    <span data-i18n="en">Bollard</span>
+    <span data-i18n="es">Bolardo</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner"><span class="hl">車両の侵入</span>を防ぐ柱</p><p data-i18n="en" class="one-liner">Posts that block <span class="hl">vehicle intrusion</span></p><p data-i18n="es" class="one-liner">Postes que impiden la <span class="hl">entrada de vehículos</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>建物前の車止め</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Barrier posts in front of a building</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Postes de contención frente a un edificio</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-guard" data-search="警備員 security guard 人が巡回・確認する対策 受付確認 巡回警備">
-  <h3>警備員<span class="en">Security Guard</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-fencing" data-search="フェンシング fencing vallado 境界を示し人の侵入を防ぐ柵 チェーンリンクフェンス">
+  <h3>
+    <span data-i18n="ja">フェンシング<span class="en">Fencing</span></span>
+    <span data-i18n="en">Fencing</span>
+    <span data-i18n="es">Vallado</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">人が巡回・確認</span>する対策</p>
+    <p data-i18n="ja" class="one-liner">境界を示し<span class="hl">人の侵入</span>を防ぐ柵</p><p data-i18n="en" class="one-liner">A barrier that marks the boundary and stops <span class="hl">people getting in</span></p><p data-i18n="es" class="one-liner">Barrera que marca el perímetro e impide el <span class="hl">paso de personas</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>受付確認</li><li>巡回警備</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>チェーンリンクフェンス</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Chain-link fence</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Valla de tela metálica</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-badge" data-search="アクセスバッジ access badge 電子的に入退室を許可する証 ic社員証">
-  <h3>アクセスバッジ<span class="en">Access Badge</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-video" data-search="ビデオ監視 video surveillance videovigilancia カメラで監視・録画する 集中監視 ai映像解析">
+  <h3>
+    <span data-i18n="ja">ビデオ監視<span class="en">Video Surveillance</span></span>
+    <span data-i18n="en">Video Surveillance</span>
+    <span data-i18n="es">Videovigilancia</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">電子的に<span class="hl">入退室を許可</span>する証</p>
+    <p data-i18n="ja" class="one-liner">カメラで<span class="hl">監視・録画</span>する</p><p data-i18n="en" class="one-liner"><span class="hl">Monitors and records</span> with cameras</p><p data-i18n="es" class="one-liner"><span class="hl">Supervisa y graba</span> con cámaras</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>IC社員証</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>集中監視</li><li>AI映像解析</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Centralized monitoring</li><li>AI video analytics</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Supervisión centralizada</li><li>Análisis de vídeo con IA</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-2-lighting" data-search="ライティング lighting 明るくして抑止・監視を助ける 駐車場照明 出入口照明">
-  <h3>ライティング<span class="en">Lighting</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-2-guard" data-search="警備員 security guard guardia de seguridad 人が巡回・確認する対策 受付確認 巡回警備">
+  <h3>
+    <span data-i18n="ja">警備員<span class="en">Security Guard</span></span>
+    <span data-i18n="en">Security Guard</span>
+    <span data-i18n="es">Guardia de seguridad</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">明るくして<span class="hl">抑止・監視</span>を助ける</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">人が巡回・確認</span>する対策</p><p data-i18n="en" class="one-liner"><span class="hl">People patrol and verify</span></p><p data-i18n="es" class="one-liner"><span class="hl">Personas que patrullan y verifican</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>駐車場照明</li><li>出入口照明</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>受付確認</li><li>巡回警備</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Reception ID checks</li><li>Patrols</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Control de identidad en recepción</li><li>Rondas de vigilancia</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-2-badge" data-search="アクセスバッジ access badge tarjeta de acceso 電子的に入退室を許可する証 ic社員証">
+  <h3>
+    <span data-i18n="ja">アクセスバッジ<span class="en">Access Badge</span></span>
+    <span data-i18n="en">Access Badge</span>
+    <span data-i18n="es">Tarjeta de acceso</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">電子的に<span class="hl">入退室を許可</span>する証</p><p data-i18n="en" class="one-liner">A credential that <span class="hl">electronically grants entry</span></p><p data-i18n="es" class="one-liner">Credencial que <span class="hl">autoriza la entrada electrónicamente</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>IC社員証</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Smart-card employee ID</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Tarjeta de empleado con chip</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-2-lighting" data-search="ライティング lighting iluminación 明るくして抑止・監視を助ける 駐車場照明 出入口照明">
+  <h3>
+    <span data-i18n="ja">ライティング<span class="en">Lighting</span></span>
+    <span data-i18n="en">Lighting</span>
+    <span data-i18n="es">Iluminación</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">明るくして<span class="hl">抑止・監視</span>を助ける</p><p data-i18n="en" class="one-liner">Light that aids <span class="hl">deterrence and monitoring</span></p><p data-i18n="es" class="one-liner">La luz que ayuda a <span class="hl">disuadir y vigilar</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>駐車場照明</li><li>出入口照明</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Parking lot lighting</li><li>Entrance lighting</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Iluminación del aparcamiento</li><li>Iluminación de accesos</li></ul>
     </div>
   </div>
 </article>
@@ -259,19 +366,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（16問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（16問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (16 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (16 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
-  <script type="application/json" id="quiz-data">[{"term": "a-2-cia", "stem": "患者の診療記録が権限のない職員に閲覧されないようにする。主にCIAのどれを守っているか。", "choices": ["機密性（Confidentiality）", "完全性（Integrity）", "可用性（Availability）", "否認防止"], "answer": 0, "explain": "認可された者だけがアクセスできる状態＝機密性。"}, {"term": "a-2-non-repudiation", "stem": "電子契約の送信者が後から「署名していない」と主張できないようにしたい。最も適切な概念はどれか。", "choices": ["可用性", "ギャップ分析", "否認防止（Non-repudiation）", "暗黙の信頼ゾーン"], "answer": 2, "explain": "行為を後から否定できないようにするのが否認防止。デジタル署名が典型。"}, {"term": "a-2-gap-analysis", "stem": "目標とするセキュリティ基準と現状の対策を比較し、不足している統制を洗い出した。この活動は何か。", "choices": ["キーエスクロー", "ギャップ分析", "トークン化", "バックアウトプラン"], "answer": 1, "explain": "現状と目標の差を特定するのがギャップ分析。"}, {"term": "a-2-adaptive-identity", "stem": "普段と異なる国からログインしたユーザーに追加の多要素認証を求めた。ゼロトラスト要素として最も近いのはどれか。", "choices": ["暗黙の信頼ゾーン", "アダプティブID", "ボラード", "公開台帳"], "answer": 1, "explain": "状況・リスクに応じて認証を動的に変えるのがアダプティブID。"}, {"term": "a-2-threat-scope", "stem": "不審な端末の権限を一時凍結し、最小権限のみ残した。主にどの考え方か。", "choices": ["脅威範囲の縮小", "ステガノグラフィ", "キーストレッチ", "自己署名証明書"], "answer": 0, "explain": "被害が及ぶ範囲を狭める＝脅威範囲の縮小（Threat Scope Reduction）。"}, {"term": "a-2-policy-driven", "stem": "役割ごとに定義したポリシーに基づき、設計データへのアクセス可否を自動判定する。これは何か。", "choices": ["ポリシー駆動型アクセス制御", "データマスキング", "フルディスク暗号化", "CRL"], "answer": 0, "explain": "定義済みポリシーで権限を決めるのがポリシー駆動型アクセス制御。"}, {"term": "a-2-policy-admin", "stem": "職種別にカルテ閲覧権限のルールを作成・更新する担当者の役割は、ゼロトラストでは何と呼ばれるか。", "choices": ["PEP", "ポリシー管理者（Policy Administrator）", "ルートCA", "警備員"], "answer": 1, "explain": "ポリシーを決めて更新する側がポリシー管理者。"}, {"term": "a-2-implicit-trust", "stem": "社内LANに入れば追加検証なしで内部リソースへ自由にアクセスできる従来型の領域を、ゼロトラストでは何と呼ぶか。", "choices": ["セキュアエンクレーブ", "暗黙の信頼ゾーン", "メンテナンスウィンドウ", "公開鍵"], "answer": 1, "explain": "デフォルトで信用してしまう領域＝暗黙の信頼ゾーン（排除すべき）。"}, {"term": "a-2-subject-system", "stem": "ゼロトラストのデータプレーンで、「誰が／何がアクセスするか」と「何にアクセスされるか」の組を何というか。", "choices": ["サブジェクトとシステム", "対称と非対称", "許可リストと拒否リスト", "CIA"], "answer": 0, "explain": "アクセス主体がサブジェクト、対象がシステム。"}, {"term": "a-2-pep", "stem": "アクセス要求を受け取り、ポリシーに照らして許可／拒否し、ログを残すゲートウェイ的な点は何か。", "choices": ["ポリシー実施ポイント（PEP）", "キーエスクロー", "ギャップ分析", "フェンシング"], "answer": 0, "explain": "現場でポリシーを執行するのが PEP（Policy Enforcement Point）。"}, {"term": "a-2-bollard", "stem": "建物前に頑丈な柱を並べ、車両の突入を防ぐ。この対策は何か。", "choices": ["ボラード", "ライティング", "アクセスバッジ", "SOP"], "answer": 0, "explain": "車両侵入防止の柱＝ボラード。"}, {"term": "a-2-fencing", "stem": "工場敷地の境界に柵を設置し、人の不正侵入を防ぐ。これは何か。", "choices": ["ボラード", "フェンシング", "HSM", "CRL"], "answer": 1, "explain": "境界の柵・塀はフェンシング。"}, {"term": "a-2-video", "stem": "施設内をカメラで録画し、事後調査の証拠としても使う。これは何か。", "choices": ["ビデオ監視", "キー交換", "依存関係", "指示的コントロール"], "answer": 0, "explain": "カメラによる監視・録画＝ビデオ監視。"}, {"term": "a-2-guard", "stem": "受付で来訪者の身分確認と巡回を人が行う。これはどの物理対策か。", "choices": ["警備員", "トークン化", "ハッシュ", "非対称暗号"], "answer": 0, "explain": "人による巡回・確認＝警備員（Security Guard）。"}, {"term": "a-2-badge", "stem": "IC社員証をかざしてドアを解錠する入退室管理。用いるものは何か。", "choices": ["アクセスバッジ", "ソルト", "公開台帳", "バックアウトプラン"], "answer": 0, "explain": "電子的に入退室を許可する証＝アクセスバッジ。"}, {"term": "a-2-lighting", "stem": "駐車場を明るくし、不審者を見つけやすく抑止効果も高める。これは何か。", "choices": ["ライティング", "ステガノグラフィ", "ダウンタイム", "アルゴリズム"], "answer": 0, "explain": "照明による抑止・監視支援＝ライティング。"}]</script>
+  <script type="application/json" id="quiz-data">[{"term": "a-2-cia", "stem": "患者の診療記録が権限のない職員に閲覧されないようにする。主にCIAのどれを守っているか。", "choices": ["機密性（Confidentiality）", "完全性（Integrity）", "可用性（Availability）", "否認防止"], "answer": 0, "explain": "認可された者だけがアクセスできる状態＝機密性。", "stem_en": "Patient medical records must not be viewed by unauthorized staff. Which part of CIA is mainly being protected?", "choices_en": ["Confidentiality", "Integrity", "Availability", "Non-repudiation"], "explain_en": "Only authorized people having access is confidentiality.", "stem_es": "Los historiales clínicos no deben poder verlos empleados sin autorización. ¿Qué elemento de la tríada CIA se protege principalmente?", "choices_es": ["Confidencialidad", "Integridad", "Disponibilidad", "No repudio"], "explain_es": "Que solo accedan las personas autorizadas es confidencialidad."}, {"term": "a-2-non-repudiation", "stem": "電子契約の送信者が後から「署名していない」と主張できないようにしたい。最も適切な概念はどれか。", "choices": ["可用性", "ギャップ分析", "否認防止（Non-repudiation）", "暗黙の信頼ゾーン"], "answer": 2, "explain": "行為を後から否定できないようにするのが否認防止。デジタル署名が典型。", "stem_en": "You want to ensure the sender of an e-contract can't later claim they never signed it. Which concept fits best?", "choices_en": ["Availability", "Gap analysis", "Non-repudiation", "Implicit trust zone"], "explain_en": "Making an action impossible to deny later is non-repudiation. Digital signatures are the classic example.", "stem_es": "Quieres garantizar que el remitente de un contrato electrónico no pueda alegar después que no lo firmó. ¿Qué concepto encaja mejor?", "choices_es": ["Disponibilidad", "Análisis de brechas", "No repudio", "Zona de confianza implícita"], "explain_es": "Impedir que una acción pueda negarse después es el no repudio. Las firmas digitales son el ejemplo típico."}, {"term": "a-2-gap-analysis", "stem": "目標とするセキュリティ基準と現状の対策を比較し、不足している統制を洗い出した。この活動は何か。", "choices": ["キーエスクロー", "ギャップ分析", "トークン化", "バックアウトプラン"], "answer": 1, "explain": "現状と目標の差を特定するのがギャップ分析。", "stem_en": "You compared current controls against the target security standard and listed the missing ones. What is this activity?", "choices_en": ["Key escrow", "Gap analysis", "Tokenization", "Backout plan"], "explain_en": "Identifying the difference between current and target state is gap analysis.", "stem_es": "Comparaste los controles actuales con el estándar de seguridad objetivo y listaste los que faltan. ¿Qué actividad es?", "choices_es": ["Custodia de claves", "Análisis de brechas", "Tokenización", "Plan de reversión"], "explain_es": "Identificar la diferencia entre el estado actual y el objetivo es el análisis de brechas."}, {"term": "a-2-adaptive-identity", "stem": "普段と異なる国からログインしたユーザーに追加の多要素認証を求めた。ゼロトラスト要素として最も近いのはどれか。", "choices": ["暗黙の信頼ゾーン", "アダプティブID", "ボラード", "公開台帳"], "answer": 1, "explain": "状況・リスクに応じて認証を動的に変えるのがアダプティブID。", "stem_en": "A user logging in from an unusual country was asked for additional MFA. Which zero trust element is closest?", "choices_en": ["Implicit trust zone", "Adaptive identity", "Bollard", "Public ledger"], "explain_en": "Dynamically adjusting authentication to context and risk is adaptive identity.", "stem_es": "A un usuario que inició sesión desde un país inusual se le pidió MFA adicional. ¿Qué elemento de confianza cero se aproxima más?", "choices_es": ["Zona de confianza implícita", "Identidad adaptativa", "Bolardo", "Registro público"], "explain_es": "Ajustar dinámicamente la autenticación según el contexto y el riesgo es la identidad adaptativa."}, {"term": "a-2-threat-scope", "stem": "不審な端末の権限を一時凍結し、最小権限のみ残した。主にどの考え方か。", "choices": ["脅威範囲の縮小", "ステガノグラフィ", "キーストレッチ", "自己署名証明書"], "answer": 0, "explain": "被害が及ぶ範囲を狭める＝脅威範囲の縮小（Threat Scope Reduction）。", "stem_en": "A suspicious device's privileges were temporarily frozen, leaving only least privilege. Which idea is this mainly?", "choices_en": ["Threat scope reduction", "Steganography", "Key stretching", "Self-signed certificate"], "explain_en": "Narrowing how far damage can reach is threat scope reduction.", "stem_es": "Se congelaron temporalmente los privilegios de un dispositivo sospechoso, dejando solo el mínimo privilegio. ¿Qué idea es principalmente?", "choices_es": ["Reducción del alcance de amenazas", "Esteganografía", "Estiramiento de claves", "Certificado autofirmado"], "explain_es": "Limitar hasta dónde puede llegar el daño es la reducción del alcance de amenazas."}, {"term": "a-2-policy-driven", "stem": "役割ごとに定義したポリシーに基づき、設計データへのアクセス可否を自動判定する。これは何か。", "choices": ["ポリシー駆動型アクセス制御", "データマスキング", "フルディスク暗号化", "CRL"], "answer": 0, "explain": "定義済みポリシーで権限を決めるのがポリシー駆動型アクセス制御。", "stem_en": "Access to design data is decided automatically based on policies defined per role. What is this?", "choices_en": ["Policy-driven access control", "Data masking", "Full-disk encryption", "CRL"], "explain_en": "Deciding permissions from predefined policies is policy-driven access control.", "stem_es": "El acceso a los datos de diseño se decide automáticamente según políticas definidas por rol. ¿Qué es?", "choices_es": ["Control de acceso basado en políticas", "Enmascaramiento de datos", "Cifrado de disco completo", "CRL"], "explain_es": "Decidir permisos a partir de políticas predefinidas es el control de acceso basado en políticas."}, {"term": "a-2-policy-admin", "stem": "職種別にカルテ閲覧権限のルールを作成・更新する担当者の役割は、ゼロトラストでは何と呼ばれるか。", "choices": ["PEP", "ポリシー管理者（Policy Administrator）", "ルートCA", "警備員"], "answer": 1, "explain": "ポリシーを決めて更新する側がポリシー管理者。", "stem_en": "In zero trust, what is the role of the person who creates and updates rules for viewing medical records by job type?", "choices_en": ["PEP", "Policy Administrator", "Root CA", "Security guard"], "explain_en": "The side that decides and updates policies is the policy administrator.", "stem_es": "En confianza cero, ¿cómo se llama el rol de quien crea y actualiza las reglas de acceso a historiales clínicos según el puesto?", "choices_es": ["PEP", "Administrador de políticas", "CA raíz", "Guardia de seguridad"], "explain_es": "Quien decide y actualiza las políticas es el administrador de políticas."}, {"term": "a-2-implicit-trust", "stem": "社内LANに入れば追加検証なしで内部リソースへ自由にアクセスできる従来型の領域を、ゼロトラストでは何と呼ぶか。", "choices": ["セキュアエンクレーブ", "暗黙の信頼ゾーン", "メンテナンスウィンドウ", "公開鍵"], "answer": 1, "explain": "デフォルトで信用してしまう領域＝暗黙の信頼ゾーン（排除すべき）。", "stem_en": "In zero trust, what do you call the traditional area where anyone on the corporate LAN can freely reach internal resources without further checks?", "choices_en": ["Secure enclave", "Implicit trust zone", "Maintenance window", "Public key"], "explain_en": "An area trusted by default is the implicit trust zone (which should be eliminated).", "stem_es": "En confianza cero, ¿cómo se llama la zona tradicional donde quien está en la LAN corporativa accede libremente a recursos internos sin más verificación?", "choices_es": ["Enclave seguro", "Zona de confianza implícita", "Ventana de mantenimiento", "Clave pública"], "explain_es": "Una zona en la que se confía por defecto es la zona de confianza implícita (debe eliminarse)."}, {"term": "a-2-subject-system", "stem": "ゼロトラストのデータプレーンで、「誰が／何がアクセスするか」と「何にアクセスされるか」の組を何というか。", "choices": ["サブジェクトとシステム", "対称と非対称", "許可リストと拒否リスト", "CIA"], "answer": 0, "explain": "アクセス主体がサブジェクト、対象がシステム。", "stem_en": "In the zero trust data plane, what is the pair \"who/what is accessing\" and \"what is being accessed\" called?", "choices_en": ["Subject and system", "Symmetric and asymmetric", "Allow list and deny list", "CIA"], "explain_en": "The accessing entity is the subject; the target is the system.", "stem_es": "En el plano de datos de confianza cero, ¿cómo se llama el par «quién/qué accede» y «a qué se accede»?", "choices_es": ["Sujeto y sistema", "Simétrico y asimétrico", "Lista de permitidos y lista de denegados", "CIA"], "explain_es": "La entidad que accede es el sujeto; el destino es el sistema."}, {"term": "a-2-pep", "stem": "アクセス要求を受け取り、ポリシーに照らして許可／拒否し、ログを残すゲートウェイ的な点は何か。", "choices": ["ポリシー実施ポイント（PEP）", "キーエスクロー", "ギャップ分析", "フェンシング"], "answer": 0, "explain": "現場でポリシーを執行するのが PEP（Policy Enforcement Point）。", "stem_en": "What is the gateway-like point that receives access requests, allows or denies them against policy, and logs them?", "choices_en": ["Policy Enforcement Point (PEP)", "Key escrow", "Gap analysis", "Fencing"], "explain_en": "Enforcing policy at the point of access is the PEP (Policy Enforcement Point).", "stem_es": "¿Cuál es el punto tipo pasarela que recibe solicitudes de acceso, las permite o deniega según la política y las registra?", "choices_es": ["Punto de aplicación de políticas (PEP)", "Custodia de claves", "Análisis de brechas", "Vallado"], "explain_es": "Aplicar la política en el punto de acceso es el PEP (Policy Enforcement Point)."}, {"term": "a-2-bollard", "stem": "建物前に頑丈な柱を並べ、車両の突入を防ぐ。この対策は何か。", "choices": ["ボラード", "ライティング", "アクセスバッジ", "SOP"], "answer": 0, "explain": "車両侵入防止の柱＝ボラード。", "stem_en": "Sturdy posts are lined up in front of a building to stop vehicles ramming it. What is this control?", "choices_en": ["Bollards", "Lighting", "Access badge", "SOP"], "explain_en": "Posts that stop vehicle intrusion are bollards.", "stem_es": "Se colocan postes robustos frente a un edificio para impedir que los vehículos lo embistan. ¿Qué control es?", "choices_es": ["Bolardos", "Iluminación", "Tarjeta de acceso", "SOP"], "explain_es": "Los postes que impiden la entrada de vehículos son bolardos."}, {"term": "a-2-fencing", "stem": "工場敷地の境界に柵を設置し、人の不正侵入を防ぐ。これは何か。", "choices": ["ボラード", "フェンシング", "HSM", "CRL"], "answer": 1, "explain": "境界の柵・塀はフェンシング。", "stem_en": "A fence is installed around a factory's perimeter to keep people from getting in. What is this?", "choices_en": ["Bollards", "Fencing", "HSM", "CRL"], "explain_en": "Barriers and walls along the boundary are fencing.", "stem_es": "Se instala una valla en el perímetro de una fábrica para impedir la entrada de personas. ¿Qué es?", "choices_es": ["Bolardos", "Vallado", "HSM", "CRL"], "explain_es": "Las vallas y muros del perímetro son el vallado."}, {"term": "a-2-video", "stem": "施設内をカメラで録画し、事後調査の証拠としても使う。これは何か。", "choices": ["ビデオ監視", "キー交換", "依存関係", "指示的コントロール"], "answer": 0, "explain": "カメラによる監視・録画＝ビデオ監視。", "stem_en": "Cameras record inside the facility, and the footage also serves as evidence in later investigations. What is this?", "choices_en": ["Video surveillance", "Key exchange", "Dependencies", "Directive control"], "explain_en": "Monitoring and recording with cameras is video surveillance.", "stem_es": "Las cámaras graban dentro de la instalación y las imágenes sirven también como prueba en investigaciones posteriores. ¿Qué es?", "choices_es": ["Videovigilancia", "Intercambio de claves", "Dependencias", "Control directivo"], "explain_es": "Supervisar y grabar con cámaras es videovigilancia."}, {"term": "a-2-guard", "stem": "受付で来訪者の身分確認と巡回を人が行う。これはどの物理対策か。", "choices": ["警備員", "トークン化", "ハッシュ", "非対称暗号"], "answer": 0, "explain": "人による巡回・確認＝警備員（Security Guard）。", "stem_en": "People check visitors' IDs at reception and patrol the premises. Which physical control is this?", "choices_en": ["Security guards", "Tokenization", "Hashing", "Asymmetric encryption"], "explain_en": "Patrolling and verification by people is a security guard.", "stem_es": "Personas comprueban la identidad de los visitantes en recepción y patrullan las instalaciones. ¿Qué control físico es?", "choices_es": ["Guardias de seguridad", "Tokenización", "Hash", "Cifrado asimétrico"], "explain_es": "Las rondas y verificaciones hechas por personas corresponden a guardias de seguridad."}, {"term": "a-2-badge", "stem": "IC社員証をかざしてドアを解錠する入退室管理。用いるものは何か。", "choices": ["アクセスバッジ", "ソルト", "公開台帳", "バックアウトプラン"], "answer": 0, "explain": "電子的に入退室を許可する証＝アクセスバッジ。", "stem_en": "Employees unlock doors by tapping a smart-card ID. What is being used?", "choices_en": ["Access badge", "Salt", "Public ledger", "Backout plan"], "explain_en": "A credential that electronically grants entry is an access badge.", "stem_es": "Los empleados abren las puertas acercando una tarjeta con chip. ¿Qué se está usando?", "choices_es": ["Tarjeta de acceso", "Sal", "Registro público", "Plan de reversión"], "explain_es": "Una credencial que autoriza la entrada electrónicamente es una tarjeta de acceso."}, {"term": "a-2-lighting", "stem": "駐車場を明るくし、不審者を見つけやすく抑止効果も高める。これは何か。", "choices": ["ライティング", "ステガノグラフィ", "ダウンタイム", "アルゴリズム"], "answer": 0, "explain": "照明による抑止・監視支援＝ライティング。", "stem_en": "A parking lot is brightly lit, making intruders easier to spot and deterring them. What is this?", "choices_en": ["Lighting", "Steganography", "Downtime", "Algorithm"], "explain_en": "Using light to deter and support monitoring is lighting.", "stem_es": "Un aparcamiento está bien iluminado, lo que facilita detectar intrusos y los disuade. ¿Qué es?", "choices_es": ["Iluminación", "Esteganografía", "Tiempo de inactividad", "Algoritmo"], "explain_es": "Usar la luz para disuadir y apoyar la vigilancia es la iluminación."}]</script>
 </section>
 
-<nav class="pager"><a href="a-1.html"><span>前の章</span>A-1 セキュリティコントロールの比較</a><a class="next" href="a-3.html"><span>次の章</span>A-3 変更管理とセキュリティへの影響</a></nav>
+<nav class="pager"><a href="a-1.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>A-1 <span data-i18n="ja">セキュリティコントロールの比較</span><span data-i18n="en">Comparing security controls</span><span data-i18n="es">Comparación de controles de seguridad</span></span></a><a class="next" href="a-3.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>A-3 <span data-i18n="ja">変更管理とセキュリティへの影響</span><span data-i18n="en">Change management and its security impact</span><span data-i18n="es">Gestión de cambios y su impacto en la seguridad</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>E-3 第三者のリスク評価 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain E</span></a>
-  <a class="nav-back" href="index.html">← Domain E ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain E ハブ</span><span data-i18n="en">← Domain E hub</span><span data-i18n="es">← Hub del Domain E</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain E</h2>
-    <a href="e-1.html">E-1 セキュリティガバナンスの要素</a><a href="e-2.html">E-2 リスク管理プロセス</a><a href="e-3.html" class="active">E-3 第三者のリスク評価</a><a href="e-4.html">E-4 セキュリティコンプライアンス</a>
+    <a href="e-1.html">E-1 <span data-i18n="ja">セキュリティガバナンスの要素</span><span data-i18n="en">セキュリティガバナンスの要素</span><span data-i18n="es">セキュリティガバナンスの要素</span></a><a href="e-2.html">E-2 <span data-i18n="ja">リスク管理プロセス</span><span data-i18n="en">リスク管理プロセス</span><span data-i18n="es">リスク管理プロセス</span></a><a href="e-3.html" class="active">E-3 <span data-i18n="ja">第三者のリスク評価</span><span data-i18n="en">第三者のリスク評価</span><span data-i18n="es">第三者のリスク評価</span></a><a href="e-4.html">E-4 <span data-i18n="ja">セキュリティコンプライアンス</span><span data-i18n="en">セキュリティコンプライアンス</span><span data-i18n="es">セキュリティコンプライアンス</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain E 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain E <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,101 +55,148 @@
       
 <header class="hero">
   <p class="eyebrow">Domain E · E-3</p>
-  <h1>第三者のリスク評価</h1>
-  <p>ベンダー評価と合意書面</p>
+  <h1><span data-i18n="ja">第三者のリスク評価</span><span data-i18n="en">第三者のリスク評価</span><span data-i18n="es">第三者のリスク評価</span></h1>
+  <p data-i18n="ja">ベンダー評価と合意書面</p>
+  <p data-i18n="en">ベンダー評価と合意書面</p>
+  <p data-i18n="es">ベンダー評価と合意書面</p>
   <div class="meta-row">
-    <span class="chip">用語 7</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 5.3</span>
+    <span class="chip"><span data-i18n="ja">用語 7</span><span data-i18n="en">7 terms</span><span data-i18n="es">7 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 5.3</span><span data-i18n="en">Official 5.3</span><span data-i18n="es">Oficial 5.3</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 7問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 7問</span><span data-i18n="en">Quiz (7)</span><span data-i18n="es">Cuestionario (7)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">ベンダー評価</h2>
-<article class="memo-card" id="e-3-penetration-testing" data-search="侵入テスト penetration testing ベンダー対策を自ら検証する 委託先の耐性確認 課題の共有・改善">
-  <h3>侵入テスト<span class="en">Penetration testing</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">ベンダー評価</span><span data-i18n="en">ベンダー評価</span><span data-i18n="es">ベンダー評価</span></h2>
+<article class="memo-card" id="e-3-penetration-testing" data-search="侵入テスト penetration testing  ベンダー対策を自ら検証する 委託先の耐性確認 課題の共有・改善">
+  <h3>
+    <span data-i18n="ja">侵入テスト<span class="en">Penetration testing</span></span>
+    <span data-i18n="en">Penetration testing</span>
+    <span data-i18n="es">侵入テスト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">ベンダー対策を<span class="hl">自ら検証</span>する</p>
+    <p data-i18n="ja" class="one-liner">ベンダー対策を<span class="hl">自ら検証</span>する</p><p data-i18n="en" class="one-liner">ベンダー対策を<span class="hl">自ら検証</span>する</p><p data-i18n="es" class="one-liner">ベンダー対策を<span class="hl">自ら検証</span>する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>委託先の耐性確認</li><li>課題の共有・改善</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>委託先の耐性確認</li><li>課題の共有・改善</li></ul>
+      <ul class="example-list" data-i18n="en"><li>委託先の耐性確認</li><li>課題の共有・改善</li></ul>
+      <ul class="example-list" data-i18n="es"><li>委託先の耐性確認</li><li>課題の共有・改善</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-3-due-diligence" data-search="デューデリジェンス due diligence 選定前の入念な調査 財務・法令遵守 セキュリティ体制">
-  <h3>デューデリジェンス<span class="en">Due diligence</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-3-due-diligence" data-search="デューデリジェンス due diligence  選定前の入念な調査 財務・法令遵守 セキュリティ体制">
+  <h3>
+    <span data-i18n="ja">デューデリジェンス<span class="en">Due diligence</span></span>
+    <span data-i18n="en">Due diligence</span>
+    <span data-i18n="es">デューデリジェンス</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">選定<span class="hl">前</span>の入念な調査</p>
+    <p data-i18n="ja" class="one-liner">選定<span class="hl">前</span>の入念な調査</p><p data-i18n="en" class="one-liner">選定<span class="hl">前</span>の入念な調査</p><p data-i18n="es" class="one-liner">選定<span class="hl">前</span>の入念な調査</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>財務・法令遵守</li><li>セキュリティ体制</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>財務・法令遵守</li><li>セキュリティ体制</li></ul>
+      <ul class="example-list" data-i18n="en"><li>財務・法令遵守</li><li>セキュリティ体制</li></ul>
+      <ul class="example-list" data-i18n="es"><li>財務・法令遵守</li><li>セキュリティ体制</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-3-evidence-of-internal-audits" data-search="内部監査の証跡 evidence of internal audits ベンダーの内部監査記録を確認 監査頻度・範囲 記録の保持確認">
-  <h3>内部監査の証跡<span class="en">Evidence of internal audits</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-3-evidence-of-internal-audits" data-search="内部監査の証跡 evidence of internal audits  ベンダーの内部監査記録を確認 監査頻度・範囲 記録の保持確認">
+  <h3>
+    <span data-i18n="ja">内部監査の証跡<span class="en">Evidence of internal audits</span></span>
+    <span data-i18n="en">Evidence of internal audits</span>
+    <span data-i18n="es">内部監査の証跡</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">ベンダーの<span class="hl">内部監査記録</span>を確認</p>
+    <p data-i18n="ja" class="one-liner">ベンダーの<span class="hl">内部監査記録</span>を確認</p><p data-i18n="en" class="one-liner">ベンダーの<span class="hl">内部監査記録</span>を確認</p><p data-i18n="es" class="one-liner">ベンダーの<span class="hl">内部監査記録</span>を確認</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>監査頻度・範囲</li><li>記録の保持確認</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>監査頻度・範囲</li><li>記録の保持確認</li></ul>
+      <ul class="example-list" data-i18n="en"><li>監査頻度・範囲</li><li>記録の保持確認</li></ul>
+      <ul class="example-list" data-i18n="es"><li>監査頻度・範囲</li><li>記録の保持確認</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-3-conflict-of-interest" data-search="利益相反 conflict of interest 私的利害で公正選定が歪まないか 知人企業への優先発注 選定時の利害確認">
-  <h3>利益相反<span class="en">Conflict of interest</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-3-conflict-of-interest" data-search="利益相反 conflict of interest  私的利害で公正選定が歪まないか 知人企業への優先発注 選定時の利害確認">
+  <h3>
+    <span data-i18n="ja">利益相反<span class="en">Conflict of interest</span></span>
+    <span data-i18n="en">Conflict of interest</span>
+    <span data-i18n="es">利益相反</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">私的利害で<span class="hl">公正選定</span>が歪まないか</p>
+    <p data-i18n="ja" class="one-liner">私的利害で<span class="hl">公正選定</span>が歪まないか</p><p data-i18n="en" class="one-liner">私的利害で<span class="hl">公正選定</span>が歪まないか</p><p data-i18n="es" class="one-liner">私的利害で<span class="hl">公正選定</span>が歪まないか</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>知人企業への優先発注</li><li>選定時の利害確認</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>知人企業への優先発注</li><li>選定時の利害確認</li></ul>
+      <ul class="example-list" data-i18n="en"><li>知人企業への優先発注</li><li>選定時の利害確認</li></ul>
+      <ul class="example-list" data-i18n="es"><li>知人企業への優先発注</li><li>選定時の利害確認</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">合意書面</h2>
-<article class="memo-card" id="e-3-moa" data-search="moa memorandum of agreement 合意内容を明文化する覚書 役割・期間の定義 契約ではないが疑義低減">
-  <h3>MOA<span class="en">Memorandum of Agreement</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">合意書面</span><span data-i18n="en">合意書面</span><span data-i18n="es">合意書面</span></h2>
+<article class="memo-card" id="e-3-moa" data-search="moa memorandum of agreement  合意内容を明文化する覚書 役割・期間の定義 契約ではないが疑義低減">
+  <h3>
+    <span data-i18n="ja">MOA<span class="en">Memorandum of Agreement</span></span>
+    <span data-i18n="en">Memorandum of Agreement</span>
+    <span data-i18n="es">MOA</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">合意内容を<span class="hl">明文化</span>する覚書</p>
+    <p data-i18n="ja" class="one-liner">合意内容を<span class="hl">明文化</span>する覚書</p><p data-i18n="en" class="one-liner">合意内容を<span class="hl">明文化</span>する覚書</p><p data-i18n="es" class="one-liner">合意内容を<span class="hl">明文化</span>する覚書</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>役割・期間の定義</li><li>契約ではないが疑義低減</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>役割・期間の定義</li><li>契約ではないが疑義低減</li></ul>
+      <ul class="example-list" data-i18n="en"><li>役割・期間の定義</li><li>契約ではないが疑義低減</li></ul>
+      <ul class="example-list" data-i18n="es"><li>役割・期間の定義</li><li>契約ではないが疑義低減</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-3-mou" data-search="mou memorandum of understanding 理解・方向性を残す了解覚書 共同研究の目的整理 パートナーシップの基礎">
-  <h3>MOU<span class="en">Memorandum of Understanding</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-3-mou" data-search="mou memorandum of understanding  理解・方向性を残す了解覚書 共同研究の目的整理 パートナーシップの基礎">
+  <h3>
+    <span data-i18n="ja">MOU<span class="en">Memorandum of Understanding</span></span>
+    <span data-i18n="en">Memorandum of Understanding</span>
+    <span data-i18n="es">MOU</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">理解・方向性を残す<span class="hl">了解覚書</span></p>
+    <p data-i18n="ja" class="one-liner">理解・方向性を残す<span class="hl">了解覚書</span></p><p data-i18n="en" class="one-liner">理解・方向性を残す<span class="hl">了解覚書</span></p><p data-i18n="es" class="one-liner">理解・方向性を残す<span class="hl">了解覚書</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>共同研究の目的整理</li><li>パートナーシップの基礎</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>共同研究の目的整理</li><li>パートナーシップの基礎</li></ul>
+      <ul class="example-list" data-i18n="en"><li>共同研究の目的整理</li><li>パートナーシップの基礎</li></ul>
+      <ul class="example-list" data-i18n="es"><li>共同研究の目的整理</li><li>パートナーシップの基礎</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="e-3-sla" data-search="sla service level agreement サービス品質・範囲を定めた合意 稼働率・応答時間 障害対応手順">
-  <h3>SLA<span class="en">Service Level Agreement</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="e-3-sla" data-search="sla service level agreement  サービス品質・範囲を定めた合意 稼働率・応答時間 障害対応手順">
+  <h3>
+    <span data-i18n="ja">SLA<span class="en">Service Level Agreement</span></span>
+    <span data-i18n="en">Service Level Agreement</span>
+    <span data-i18n="es">SLA</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">サービス<span class="hl">品質・範囲</span>を定めた合意</p>
+    <p data-i18n="ja" class="one-liner">サービス<span class="hl">品質・範囲</span>を定めた合意</p><p data-i18n="en" class="one-liner">サービス<span class="hl">品質・範囲</span>を定めた合意</p><p data-i18n="es" class="one-liner">サービス<span class="hl">品質・範囲</span>を定めた合意</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>稼働率・応答時間</li><li>障害対応手順</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>稼働率・応答時間</li><li>障害対応手順</li></ul>
+      <ul class="example-list" data-i18n="en"><li>稼働率・応答時間</li><li>障害対応手順</li></ul>
+      <ul class="example-list" data-i18n="es"><li>稼働率・応答時間</li><li>障害対応手順</li></ul>
     </div>
   </div>
 </article>
@@ -151,19 +204,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（7問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（7問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (7 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (7 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">[{"term": "e-3-penetration-testing", "stem": "委託先ベンダーのセキュリティ対策を無条件に信じず、合意のうえで攻撃シミュレーション等により自ら耐性を確かめた。これは主にどの評価手法か。", "choices": ["デューデリジェンスのみ", "侵入テスト", "利益相反の確認のみ", "MOUの締結のみ"], "answer": 1, "explain": "第三者の対策を自ら検証するのが侵入テスト（ベンダー評価としての位置づけ）。"}, {"term": "e-3-due-diligence", "stem": "ベンダー選定前に、財務健全性・法令遵守・セキュリティ体制・過去実績などを徹底的に調査した。この活動は何か。", "choices": ["SLAの定義", "内部監査の証跡確認のみ", "デューデリジェンス", "利益相反"], "answer": 2, "explain": "選定前の入念な調査がデューデリジェンス（デューデリ）である。"}, {"term": "e-3-evidence-of-internal-audits", "stem": "ベンダーが定期的に内部監査を実施し記録を保持しているか、監査の頻度や範囲が分かる報告書を提出させて確認した。主にどの概念か。", "choices": ["内部監査の証跡（Evidence of internal audits）", "利益相反", "MOA", "侵入テスト"], "answer": 0, "explain": "ベンダー自身の内部監査の証拠・記録を確認するのが Evidence of internal audits。"}, {"term": "e-3-conflict-of-interest", "stem": "選定担当が同級生の会社へ、他社より高い見積もりでも優先発注しようとしている。公正なベンダー選定のためにまず確認すべき概念はどれか。", "choices": ["SLA", "MOU", "ヒートマップ", "利益相反"], "answer": 3, "explain": "私的利害が職務上の決定を歪める状況が利益相反。選定時に有無を確認する。"}, {"term": "e-3-moa", "stem": "提携先との役割分担・費用負担・期間など、議論でまとまった合意事項を文書に残し、のちの疑義を減らしたい。契約そのものではないが明文化したい。最も近いのはどれか。", "choices": ["利益相反チェックのみ", "MOA（Memorandum of Agreement）", "侵入テスト報告書のみ", "デューデリジェンスのみ"], "answer": 1, "explain": "MOAは合意内容を記した覚書で、講義では契約ではないが記録として疑義を減らすと整理される。"}, {"term": "e-3-mou", "stem": "共同研究の大きな方向性や、当事者がどう理解しているかを書面で整理し、パートナーシップの基礎を築きたい。講義でMOAより「薄い」とされる文書はどれか。", "choices": ["SLA", "内部監査の証跡", "MOU（Memorandum of Understanding）", "侵入テスト"], "answer": 2, "explain": "MOUは理解・方向性を残す了解覚書で、講義ではMOAより緩やかな位置づけ。"}, {"term": "e-3-sla", "stem": "ITサービス提供者と利用者の間で、稼働率・応答時間・障害対応手順などサービスの品質と範囲を契約的に定めた。これは何か。", "choices": ["SLA（Service Level Agreement）", "利益相反", "デューデリジェンス", "MOUのみ"], "answer": 0, "explain": "サービス品質・範囲・性能指標・対応手順を定めるのがSLA。"}]</script>
 </section>
 
-<nav class="pager"><a href="e-2.html"><span>前の章</span>E-2 リスク管理プロセス</a><a class="next" href="e-4.html"><span>次の章</span>E-4 セキュリティコンプライアンス</a></nav>
+<nav class="pager"><a href="e-2.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>E-2 <span data-i18n="ja">リスク管理プロセス</span><span data-i18n="en">リスク管理プロセス</span><span data-i18n="es">リスク管理プロセス</span></span></a><a class="next" href="e-4.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>E-4 <span data-i18n="ja">セキュリティコンプライアンス</span><span data-i18n="en">セキュリティコンプライアンス</span><span data-i18n="es">セキュリティコンプライアンス</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

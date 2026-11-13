@@ -230,6 +230,46 @@ a:hover {
   background: var(--gray-soft);
 }
 
+/* Hide inactive languages; the active one keeps its normal display value. */
+html:not(.lang-en):not(.lang-es) [data-i18n="en"],
+html:not(.lang-en):not(.lang-es) [data-i18n="es"],
+html.lang-en [data-i18n="ja"],
+html.lang-en [data-i18n="es"],
+html.lang-es [data-i18n="ja"],
+html.lang-es [data-i18n="en"] {
+  display: none !important;
+}
+
+.lang-row {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem 0.1rem;
+}
+
+.lang-btn {
+  flex: 1 1 0;
+  padding: 0.4rem 0.3rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.lang-btn:hover {
+  background: var(--gray-soft);
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+
 .switch-row small {
   display: block;
   margin-top: 0.1rem;
@@ -1106,7 +1146,7 @@ html.memorize .term-panel:not(.revealed) .reveal-btn {
   background: var(--accent-dimmer);
 }
 
-.pager a span {
+.pager a > span:first-child {
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.05em;

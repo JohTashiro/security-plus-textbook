@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Domain E セキュリティプログラム管理・監督 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,28 +17,33 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain E</span></a>
-  <a class="nav-back" href="../index.html">← ホーム</a>
+  <a class="nav-back" href="../index.html"><span data-i18n="ja">← ホーム</span><span data-i18n="en">← Home</span><span data-i18n="es">← Inicio</span></a>
   <nav class="nav-section">
     <h2>Domain E</h2>
-    <a href="e-1.html">E-1 セキュリティガバナンスの要素</a><a href="e-2.html">E-2 リスク管理プロセス</a><a href="e-3.html">E-3 第三者のリスク評価</a><a href="e-4.html">E-4 セキュリティコンプライアンス</a>
+    <a href="e-1.html">E-1 <span data-i18n="ja">セキュリティガバナンスの要素</span><span data-i18n="en">セキュリティガバナンスの要素</span><span data-i18n="es">セキュリティガバナンスの要素</span></a><a href="e-2.html">E-2 <span data-i18n="ja">リスク管理プロセス</span><span data-i18n="en">リスク管理プロセス</span><span data-i18n="es">リスク管理プロセス</span></a><a href="e-3.html">E-3 <span data-i18n="ja">第三者のリスク評価</span><span data-i18n="en">第三者のリスク評価</span><span data-i18n="es">第三者のリスク評価</span></a><a href="e-4.html">E-4 <span data-i18n="ja">セキュリティコンプライアンス</span><span data-i18n="en">セキュリティコンプライアンス</span><span data-i18n="es">セキュリティコンプライアンス</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
     
-    <a href="map.html">Domain E 知識マップ</a>
+    <a href="map.html">Domain E <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -46,36 +51,44 @@
       
 <header class="hero">
   <p class="eyebrow">CompTIA Security+ SY0-701 · Domain E</p>
-  <h1>Domain E<br>セキュリティプログラム管理・監督</h1>
-  <p>ドメイン5はセキュリティプログラムの管理・監督を学ぶ領域である。大きなキーワードはガバナンス（統治）とコンプライアンス（法令遵守）で、方針・体制・外部要因・役割を通じて組織の守りを整える。</p>
+  <h1>Domain E<br><span data-i18n="ja">セキュリティプログラム管理・監督</span><span data-i18n="en">セキュリティプログラム管理・監督</span><span data-i18n="es">セキュリティプログラム管理・監督</span></h1>
+  <p data-i18n="ja">ドメイン5はセキュリティプログラムの管理・監督を学ぶ領域である。大きなキーワードはガバナンス（統治）とコンプライアンス（法令遵守）で、方針・体制・外部要因・役割を通じて組織の守りを整える。</p><p data-i18n="en">Pick a chapter to study. Check relationships in the Domain knowledge map.</p><p data-i18n="es">Elige un capítulo para estudiar. Revisa las relaciones en el mapa de conocimiento del Domain.</p>
   <div class="meta-row">
-    <span class="chip">用語 54</span>
-    <span class="chip">公式 Domain 5</span>
+    <span class="chip"><span data-i18n="ja">用語 54</span><span data-i18n="en">54 terms</span><span data-i18n="es">54 términos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 Domain 5</span><span data-i18n="en">Official Domain 5</span><span data-i18n="es">Oficial Domain 5</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-ghost" href="map.html">Domain E 知識マップ</a>
+    <a class="btn btn-ghost" href="map.html">Domain E <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </div>
 </header>
 <section class="chapter-grid"><a class="chapter-card" href="e-1.html">
   <div class="code">E-1</div>
-  <h2>セキュリティガバナンスの要素</h2>
-  <p>方針・基準・役割・監視 · 22語</p>
+  <h2><span data-i18n="ja">セキュリティガバナンスの要素</span><span data-i18n="en">セキュリティガバナンスの要素</span><span data-i18n="es">セキュリティガバナンスの要素</span></h2>
+  <p data-i18n="ja">方針・基準・役割・監視 · 22語</p>
+  <p data-i18n="en">方針・基準・役割・監視 · 22 terms</p>
+  <p data-i18n="es">方針・基準・役割・監視 · 22 términos</p>
 </a><a class="chapter-card" href="e-2.html">
   <div class="code">E-2</div>
-  <h2>リスク管理プロセス</h2>
-  <p>特定・評価・分析とアペタイト · 17語</p>
+  <h2><span data-i18n="ja">リスク管理プロセス</span><span data-i18n="en">リスク管理プロセス</span><span data-i18n="es">リスク管理プロセス</span></h2>
+  <p data-i18n="ja">特定・評価・分析とアペタイト · 17語</p>
+  <p data-i18n="en">特定・評価・分析とアペタイト · 17 terms</p>
+  <p data-i18n="es">特定・評価・分析とアペタイト · 17 términos</p>
 </a><a class="chapter-card" href="e-3.html">
   <div class="code">E-3</div>
-  <h2>第三者のリスク評価</h2>
-  <p>ベンダー評価と合意書面 · 7語</p>
+  <h2><span data-i18n="ja">第三者のリスク評価</span><span data-i18n="en">第三者のリスク評価</span><span data-i18n="es">第三者のリスク評価</span></h2>
+  <p data-i18n="ja">ベンダー評価と合意書面 · 7語</p>
+  <p data-i18n="en">ベンダー評価と合意書面 · 7 terms</p>
+  <p data-i18n="es">ベンダー評価と合意書面 · 7 términos</p>
 </a><a class="chapter-card" href="e-4.html">
   <div class="code">E-4</div>
-  <h2>セキュリティコンプライアンス</h2>
-  <p>報告・非遵守の結果・モニタリング · 8語</p>
+  <h2><span data-i18n="ja">セキュリティコンプライアンス</span><span data-i18n="en">セキュリティコンプライアンス</span><span data-i18n="es">セキュリティコンプライアンス</span></h2>
+  <p data-i18n="ja">報告・非遵守の結果・モニタリング · 8語</p>
+  <p data-i18n="en">報告・非遵守の結果・モニタリング · 8 terms</p>
+  <p data-i18n="es">報告・非遵守の結果・モニタリング · 8 términos</p>
 </a></section>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
 </body>
 </html>

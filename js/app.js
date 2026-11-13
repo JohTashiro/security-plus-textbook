@@ -18,6 +18,12 @@
     }
   }
 
+  function currentLang() {
+    if (html.classList.contains("lang-en")) return "en";
+    if (html.classList.contains("lang-es")) return "es";
+    return "ja";
+  }
+
   const cards = [...document.querySelectorAll(".memo-card")];
   const revealAll = document.getElementById("reveal-all");
 
@@ -29,8 +35,11 @@
 
   function syncRevealAll() {
     if (!revealAll) return;
+    const lang = currentLang();
     const allShown = cards.length > 0 && cards.every((c) => c.classList.contains("revealed"));
-    revealAll.textContent = allShown ? "すべて隠す" : "すべて表示";
+    const attr = allShown ? `data-hide-all-${lang}` : `data-show-all-${lang}`;
+    const label = revealAll.getAttribute(attr);
+    if (label) revealAll.textContent = label;
   }
 
   for (const card of cards) {
@@ -65,6 +74,44 @@
       }
     });
   }
+
+  function applySearchPlaceholder() {
+    const lang = currentLang();
+    const searchInput = document.getElementById("term-search");
+    if (searchInput) {
+      const ph = searchInput.dataset["ph" + lang.charAt(0).toUpperCase() + lang.slice(1)];
+      if (ph) searchInput.placeholder = ph;
+    }
+  }
+
+  const langButtons = [...document.querySelectorAll("[data-lang-btn]")];
+
+  function syncLangButtons() {
+    const lang = currentLang();
+    for (const btn of langButtons) {
+      btn.classList.toggle("active", btn.dataset.langBtn === lang);
+    }
+  }
+
+  function setLang(lang) {
+    const settings = loadSettings();
+    settings.lang = lang;
+    saveSettings(settings);
+    html.classList.toggle("lang-en", lang === "en");
+    html.classList.toggle("lang-es", lang === "es");
+    syncLangButtons();
+    applySearchPlaceholder();
+    syncRevealAll();
+    document.dispatchEvent(new CustomEvent("lang-change", { detail: { lang } }));
+  }
+
+  for (const btn of langButtons) {
+    btn.addEventListener("click", () => setLang(btn.dataset.langBtn));
+  }
+
+  syncLangButtons();
+  applySearchPlaceholder();
+  syncRevealAll();
 
   const input = document.getElementById("term-search");
   const terms = [...document.querySelectorAll(".term, .memo-card")];

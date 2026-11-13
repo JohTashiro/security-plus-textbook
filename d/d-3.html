@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>D-3 脆弱性管理手法 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain D</span></a>
-  <a class="nav-back" href="index.html">← Domain D ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain D ハブ</span><span data-i18n="en">← Domain D hub</span><span data-i18n="es">← Hub del Domain D</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain D</h2>
-    <a href="d-1.html">D-1 リソースのセキュリティ対策</a><a href="d-2.html">D-2 ハードウェアの取得・管理・廃棄</a><a href="d-3.html" class="active">D-3 脆弱性管理手法</a><a href="d-4.html">D-4 アラートとモニタリング</a><a href="d-5.html">D-5 セキュリティ向上策</a><a href="d-6.html">D-6 アクセス管理</a><a href="d-7.html">D-7 自動化</a><a href="d-8.html">D-8 インシデント対応</a>
+    <a href="d-1.html">D-1 <span data-i18n="ja">リソースのセキュリティ対策</span><span data-i18n="en">リソースのセキュリティ対策</span><span data-i18n="es">リソースのセキュリティ対策</span></a><a href="d-2.html">D-2 <span data-i18n="ja">ハードウェアの取得・管理・廃棄</span><span data-i18n="en">ハードウェアの取得・管理・廃棄</span><span data-i18n="es">ハードウェアの取得・管理・廃棄</span></a><a href="d-3.html" class="active">D-3 <span data-i18n="ja">脆弱性管理手法</span><span data-i18n="en">脆弱性管理手法</span><span data-i18n="es">脆弱性管理手法</span></a><a href="d-4.html">D-4 <span data-i18n="ja">アラートとモニタリング</span><span data-i18n="en">アラートとモニタリング</span><span data-i18n="es">アラートとモニタリング</span></a><a href="d-5.html">D-5 <span data-i18n="ja">セキュリティ向上策</span><span data-i18n="en">セキュリティ向上策</span><span data-i18n="es">セキュリティ向上策</span></a><a href="d-6.html">D-6 <span data-i18n="ja">アクセス管理</span><span data-i18n="en">アクセス管理</span><span data-i18n="es">アクセス管理</span></a><a href="d-7.html">D-7 <span data-i18n="ja">自動化</span><span data-i18n="en">自動化</span><span data-i18n="es">自動化</span></a><a href="d-8.html">D-8 <span data-i18n="ja">インシデント対応</span><span data-i18n="en">インシデント対応</span><span data-i18n="es">インシデント対応</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain D 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain D <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,305 +55,454 @@
       
 <header class="hero">
   <p class="eyebrow">Domain D · D-3</p>
-  <h1>脆弱性管理手法</h1>
-  <p>特定・分析・対応の一連の活動</p>
+  <h1><span data-i18n="ja">脆弱性管理手法</span><span data-i18n="en">脆弱性管理手法</span><span data-i18n="es">脆弱性管理手法</span></h1>
+  <p data-i18n="ja">特定・分析・対応の一連の活動</p>
+  <p data-i18n="en">特定・分析・対応の一連の活動</p>
+  <p data-i18n="es">特定・分析・対応の一連の活動</p>
   <div class="meta-row">
-    <span class="chip">用語 24</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 4.3</span>
+    <span class="chip"><span data-i18n="ja">用語 24</span><span data-i18n="en">24 terms</span><span data-i18n="es">24 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 4.3</span><span data-i18n="en">Official 4.3</span><span data-i18n="es">Oficial 4.3</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 24問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 24問</span><span data-i18n="en">Quiz (24)</span><span data-i18n="es">Cuestionario (24)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">特定（スキャン・アプリ）</h2>
-<article class="memo-card" id="d-3-vulnerability-scan" data-search="脆弱性スキャン vulnerability scan システム／網の既知弱点を洗い出す ポート・版チェック sqlインジェクション／xss検査">
-  <h3>脆弱性スキャン<span class="en">Vulnerability scan</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">特定（スキャン・アプリ）</span><span data-i18n="en">特定（スキャン・アプリ）</span><span data-i18n="es">特定（スキャン・アプリ）</span></h2>
+<article class="memo-card" id="d-3-vulnerability-scan" data-search="脆弱性スキャン vulnerability scan  システム／網の既知弱点を洗い出す ポート・版チェック sqlインジェクション／xss検査">
+  <h3>
+    <span data-i18n="ja">脆弱性スキャン<span class="en">Vulnerability scan</span></span>
+    <span data-i18n="en">Vulnerability scan</span>
+    <span data-i18n="es">脆弱性スキャン</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">システム／網の<span class="hl">既知弱点</span>を洗い出す</p>
+    <p data-i18n="ja" class="one-liner">システム／網の<span class="hl">既知弱点</span>を洗い出す</p><p data-i18n="en" class="one-liner">システム／網の<span class="hl">既知弱点</span>を洗い出す</p><p data-i18n="es" class="one-liner">システム／網の<span class="hl">既知弱点</span>を洗い出す</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ポート・版チェック</li><li>SQLインジェクション／XSS検査</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ポート・版チェック</li><li>SQLインジェクション／XSS検査</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ポート・版チェック</li><li>SQLインジェクション／XSS検査</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ポート・版チェック</li><li>SQLインジェクション／XSS検査</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-static-analysis" data-search="アプリの静的な分析 static analysis アプリを動かさずコードを解析する sastツール 入力連結の検出">
-  <h3>アプリの静的な分析<span class="en">Static analysis</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-static-analysis" data-search="アプリの静的な分析 static analysis  アプリを動かさずコードを解析する sastツール 入力連結の検出">
+  <h3>
+    <span data-i18n="ja">アプリの静的な分析<span class="en">Static analysis</span></span>
+    <span data-i18n="en">Static analysis</span>
+    <span data-i18n="es">アプリの静的な分析</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">アプリを<span class="hl">動かさず</span>コードを解析する</p>
+    <p data-i18n="ja" class="one-liner">アプリを<span class="hl">動かさず</span>コードを解析する</p><p data-i18n="en" class="one-liner">アプリを<span class="hl">動かさず</span>コードを解析する</p><p data-i18n="es" class="one-liner">アプリを<span class="hl">動かさず</span>コードを解析する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>SASTツール</li><li>入力連結の検出</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>SASTツール</li><li>入力連結の検出</li></ul>
+      <ul class="example-list" data-i18n="en"><li>SASTツール</li><li>入力連結の検出</li></ul>
+      <ul class="example-list" data-i18n="es"><li>SASTツール</li><li>入力連結の検出</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-dynamic-analysis" data-search="アプリの動的な分析 dynamic analysis アプリを動かしながら挙動を分析する dast 実行時のxss確認">
-  <h3>アプリの動的な分析<span class="en">Dynamic analysis</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-dynamic-analysis" data-search="アプリの動的な分析 dynamic analysis  アプリを動かしながら挙動を分析する dast 実行時のxss確認">
+  <h3>
+    <span data-i18n="ja">アプリの動的な分析<span class="en">Dynamic analysis</span></span>
+    <span data-i18n="en">Dynamic analysis</span>
+    <span data-i18n="es">アプリの動的な分析</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">アプリを<span class="hl">動かしながら</span>挙動を分析する</p>
+    <p data-i18n="ja" class="one-liner">アプリを<span class="hl">動かしながら</span>挙動を分析する</p><p data-i18n="en" class="one-liner">アプリを<span class="hl">動かしながら</span>挙動を分析する</p><p data-i18n="es" class="one-liner">アプリを<span class="hl">動かしながら</span>挙動を分析する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>DAST</li><li>実行時のXSS確認</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>DAST</li><li>実行時のXSS確認</li></ul>
+      <ul class="example-list" data-i18n="en"><li>DAST</li><li>実行時のXSS確認</li></ul>
+      <ul class="example-list" data-i18n="es"><li>DAST</li><li>実行時のXSS確認</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-package-monitoring" data-search="パッケージモニタリング package monitoring 依存パッケージの既知脆弱性を監視する ossライブラリ監視 安全な版への更新">
-  <h3>パッケージモニタリング<span class="en">Package monitoring</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-package-monitoring" data-search="パッケージモニタリング package monitoring  依存パッケージの既知脆弱性を監視する ossライブラリ監視 安全な版への更新">
+  <h3>
+    <span data-i18n="ja">パッケージモニタリング<span class="en">Package monitoring</span></span>
+    <span data-i18n="en">Package monitoring</span>
+    <span data-i18n="es">パッケージモニタリング</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">依存<span class="hl">パッケージ</span>の既知脆弱性を監視する</p>
+    <p data-i18n="ja" class="one-liner">依存<span class="hl">パッケージ</span>の既知脆弱性を監視する</p><p data-i18n="en" class="one-liner">依存<span class="hl">パッケージ</span>の既知脆弱性を監視する</p><p data-i18n="es" class="one-liner">依存<span class="hl">パッケージ</span>の既知脆弱性を監視する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>OSSライブラリ監視</li><li>安全な版への更新</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>OSSライブラリ監視</li><li>安全な版への更新</li></ul>
+      <ul class="example-list" data-i18n="en"><li>OSSライブラリ監視</li><li>安全な版への更新</li></ul>
+      <ul class="example-list" data-i18n="es"><li>OSSライブラリ監視</li><li>安全な版への更新</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">特定（脅威フィード）</h2>
-<article class="memo-card" id="d-3-osint" data-search="osint open-source intelligence (osint) 公開情報から脅威・脆弱性を把握する snsの製品情報 コミュニティの攻撃手法">
-  <h3>OSINT<span class="en">Open-source intelligence (OSINT)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">特定（脅威フィード）</span><span data-i18n="en">特定（脅威フィード）</span><span data-i18n="es">特定（脅威フィード）</span></h2>
+<article class="memo-card" id="d-3-osint" data-search="osint open-source intelligence (osint)  公開情報から脅威・脆弱性を把握する snsの製品情報 コミュニティの攻撃手法">
+  <h3>
+    <span data-i18n="ja">OSINT<span class="en">Open-source intelligence (OSINT)</span></span>
+    <span data-i18n="en">Open-source intelligence (OSINT)</span>
+    <span data-i18n="es">OSINT</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">公開情報</span>から脅威・脆弱性を把握する</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">公開情報</span>から脅威・脆弱性を把握する</p><p data-i18n="en" class="one-liner"><span class="hl">公開情報</span>から脅威・脆弱性を把握する</p><p data-i18n="es" class="one-liner"><span class="hl">公開情報</span>から脅威・脆弱性を把握する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>SNSの製品情報</li><li>コミュニティの攻撃手法</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="d-3-proprietary-third-party" data-search="第三者（独自／サードパーティ） proprietary / third-party 外部ベンダーの脅威フィードを使う 有料インテリジェンス ゼロデイ情報の購読">
-  <h3>第三者（独自／サードパーティ）<span class="en">Proprietary / third-party</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">外部ベンダーの<span class="hl">脅威フィード</span>を使う</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>有料インテリジェンス</li><li>ゼロデイ情報の購読</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="d-3-information-sharing-organization" data-search="情報共有組織 information-sharing organization 業界等で脅威情報を共有する組織 isac 金融機関同士の共有">
-  <h3>情報共有組織<span class="en">Information-sharing organization</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">業界等で脅威情報を<span class="hl">共有</span>する組織</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ISAC</li><li>金融機関同士の共有</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>SNSの製品情報</li><li>コミュニティの攻撃手法</li></ul>
+      <ul class="example-list" data-i18n="en"><li>SNSの製品情報</li><li>コミュニティの攻撃手法</li></ul>
+      <ul class="example-list" data-i18n="es"><li>SNSの製品情報</li><li>コミュニティの攻撃手法</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-dark-web" data-search="ダークウェブ dark web 匿名空間から攻撃・漏洩情報を得る tor上のフォーラム 認証情報売買の監視">
-  <h3>ダークウェブ<span class="en">Dark web</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-proprietary-third-party" data-search="第三者（独自／サードパーティ） proprietary / third-party  外部ベンダーの脅威フィードを使う 有料インテリジェンス ゼロデイ情報の購読">
+  <h3>
+    <span data-i18n="ja">第三者（独自／サードパーティ）<span class="en">Proprietary / third-party</span></span>
+    <span data-i18n="en">Proprietary / third-party</span>
+    <span data-i18n="es">第三者（独自／サードパーティ）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">匿名空間から<span class="hl">攻撃・漏洩</span>情報を得る</p>
+    <p data-i18n="ja" class="one-liner">外部ベンダーの<span class="hl">脅威フィード</span>を使う</p><p data-i18n="en" class="one-liner">外部ベンダーの<span class="hl">脅威フィード</span>を使う</p><p data-i18n="es" class="one-liner">外部ベンダーの<span class="hl">脅威フィード</span>を使う</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>Tor上のフォーラム</li><li>認証情報売買の監視</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">特定（テスト・監査）</h2>
-<article class="memo-card" id="d-3-penetration-testing" data-search="侵入テスト penetration testing 許可下で攻撃者視点の実効性を試す 入力フォームへの不正データ 依頼ベースの評価">
-  <h3>侵入テスト<span class="en">Penetration testing</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">許可下で攻撃者視点の<span class="hl">実効性</span>を試す</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>入力フォームへの不正データ</li><li>依頼ベースの評価</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>有料インテリジェンス</li><li>ゼロデイ情報の購読</li></ul>
+      <ul class="example-list" data-i18n="en"><li>有料インテリジェンス</li><li>ゼロデイ情報の購読</li></ul>
+      <ul class="example-list" data-i18n="es"><li>有料インテリジェンス</li><li>ゼロデイ情報の購読</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-bug-bounty" data-search="バグバウンティプログラム bug bounty program 外部発見に報奨金を出す制度 ホワイトハッカーへの報酬 報告の検証と支払い">
-  <h3>バグバウンティプログラム<span class="en">Bug bounty program</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-information-sharing-organization" data-search="情報共有組織 information-sharing organization  業界等で脅威情報を共有する組織 isac 金融機関同士の共有">
+  <h3>
+    <span data-i18n="ja">情報共有組織<span class="en">Information-sharing organization</span></span>
+    <span data-i18n="en">Information-sharing organization</span>
+    <span data-i18n="es">情報共有組織</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">外部発見に<span class="hl">報奨金</span>を出す制度</p>
+    <p data-i18n="ja" class="one-liner">業界等で脅威情報を<span class="hl">共有</span>する組織</p><p data-i18n="en" class="one-liner">業界等で脅威情報を<span class="hl">共有</span>する組織</p><p data-i18n="es" class="one-liner">業界等で脅威情報を<span class="hl">共有</span>する組織</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>ホワイトハッカーへの報酬</li><li>報告の検証と支払い</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ISAC</li><li>金融機関同士の共有</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ISAC</li><li>金融機関同士の共有</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ISAC</li><li>金融機関同士の共有</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-system-process-audit" data-search="システムやプロセスの監視（監査） system/process audit 方針・規制への準拠を評価する セキュリティ監査 ポリシー遵守の点検">
-  <h3>システムやプロセスの監視（監査）<span class="en">System/process audit</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-dark-web" data-search="ダークウェブ dark web  匿名空間から攻撃・漏洩情報を得る tor上のフォーラム 認証情報売買の監視">
+  <h3>
+    <span data-i18n="ja">ダークウェブ<span class="en">Dark web</span></span>
+    <span data-i18n="en">Dark web</span>
+    <span data-i18n="es">ダークウェブ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">方針・規制への<span class="hl">準拠</span>を評価する</p>
+    <p data-i18n="ja" class="one-liner">匿名空間から<span class="hl">攻撃・漏洩</span>情報を得る</p><p data-i18n="en" class="one-liner">匿名空間から<span class="hl">攻撃・漏洩</span>情報を得る</p><p data-i18n="es" class="one-liner">匿名空間から<span class="hl">攻撃・漏洩</span>情報を得る</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>セキュリティ監査</li><li>ポリシー遵守の点検</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>Tor上のフォーラム</li><li>認証情報売買の監視</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Tor上のフォーラム</li><li>認証情報売買の監視</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Tor上のフォーラム</li><li>認証情報売買の監視</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">分析</h2>
-<article class="memo-card" id="d-3-false-positive" data-search="偽陽性 false positive 問題ないのにありと誤判定する スキャナの誤検知 手動検証で否定">
-  <h3>偽陽性<span class="en">False positive</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">特定（テスト・監査）</span><span data-i18n="en">特定（テスト・監査）</span><span data-i18n="es">特定（テスト・監査）</span></h2>
+<article class="memo-card" id="d-3-penetration-testing" data-search="侵入テスト penetration testing  許可下で攻撃者視点の実効性を試す 入力フォームへの不正データ 依頼ベースの評価">
+  <h3>
+    <span data-i18n="ja">侵入テスト<span class="en">Penetration testing</span></span>
+    <span data-i18n="en">Penetration testing</span>
+    <span data-i18n="es">侵入テスト</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">問題ないのに<span class="hl">あり</span>と誤判定する</p>
+    <p data-i18n="ja" class="one-liner">許可下で攻撃者視点の<span class="hl">実効性</span>を試す</p><p data-i18n="en" class="one-liner">許可下で攻撃者視点の<span class="hl">実効性</span>を試す</p><p data-i18n="es" class="one-liner">許可下で攻撃者視点の<span class="hl">実効性</span>を試す</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>スキャナの誤検知</li><li>手動検証で否定</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="d-3-false-negative" data-search="偽陰性 false negative 問題があるのになしと見逃す 監査で見落とし 後日の侵害で発覚">
-  <h3>偽陰性<span class="en">False negative</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">問題があるのに<span class="hl">なし</span>と見逃す</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>監査で見落とし</li><li>後日の侵害で発覚</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="d-3-prioritize" data-search="優先順位付け prioritize 影響に基づき修正順を決める 中核機能の脆弱性を先に 低影響は後回し">
-  <h3>優先順位付け<span class="en">Prioritize</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">影響に基づき<span class="hl">修正順</span>を決める</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>中核機能の脆弱性を先に</li><li>低影響は後回し</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>入力フォームへの不正データ</li><li>依頼ベースの評価</li></ul>
+      <ul class="example-list" data-i18n="en"><li>入力フォームへの不正データ</li><li>依頼ベースの評価</li></ul>
+      <ul class="example-list" data-i18n="es"><li>入力フォームへの不正データ</li><li>依頼ベースの評価</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-cvss" data-search="cvss common vulnerability scoring system (cvss) 深刻度を0〜10で示す基準 特性の採点 優先度の定量根拠">
-  <h3>CVSS<span class="en">Common Vulnerability Scoring System (CVSS)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-bug-bounty" data-search="バグバウンティプログラム bug bounty program  外部発見に報奨金を出す制度 ホワイトハッカーへの報酬 報告の検証と支払い">
+  <h3>
+    <span data-i18n="ja">バグバウンティプログラム<span class="en">Bug bounty program</span></span>
+    <span data-i18n="en">Bug bounty program</span>
+    <span data-i18n="es">バグバウンティプログラム</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">深刻度を<span class="hl">0〜10</span>で示す基準</p>
+    <p data-i18n="ja" class="one-liner">外部発見に<span class="hl">報奨金</span>を出す制度</p><p data-i18n="en" class="one-liner">外部発見に<span class="hl">報奨金</span>を出す制度</p><p data-i18n="es" class="one-liner">外部発見に<span class="hl">報奨金</span>を出す制度</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>特性の採点</li><li>優先度の定量根拠</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>ホワイトハッカーへの報酬</li><li>報告の検証と支払い</li></ul>
+      <ul class="example-list" data-i18n="en"><li>ホワイトハッカーへの報酬</li><li>報告の検証と支払い</li></ul>
+      <ul class="example-list" data-i18n="es"><li>ホワイトハッカーへの報酬</li><li>報告の検証と支払い</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-cve" data-search="cve common vulnerabilities and exposures (cve) 脆弱性に一意idを付ける仕組み cve-年-番号 exchangeのcve例">
-  <h3>CVE<span class="en">Common Vulnerabilities and Exposures (CVE)</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-system-process-audit" data-search="システムやプロセスの監視（監査） system/process audit  方針・規制への準拠を評価する セキュリティ監査 ポリシー遵守の点検">
+  <h3>
+    <span data-i18n="ja">システムやプロセスの監視（監査）<span class="en">System/process audit</span></span>
+    <span data-i18n="en">System/process audit</span>
+    <span data-i18n="es">システムやプロセスの監視（監査）</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">脆弱性に<span class="hl">一意ID</span>を付ける仕組み</p>
+    <p data-i18n="ja" class="one-liner">方針・規制への<span class="hl">準拠</span>を評価する</p><p data-i18n="en" class="one-liner">方針・規制への<span class="hl">準拠</span>を評価する</p><p data-i18n="es" class="one-liner">方針・規制への<span class="hl">準拠</span>を評価する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>CVE-年-番号</li><li>ExchangeのCVE例</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>セキュリティ監査</li><li>ポリシー遵守の点検</li></ul>
+      <ul class="example-list" data-i18n="en"><li>セキュリティ監査</li><li>ポリシー遵守の点検</li></ul>
+      <ul class="example-list" data-i18n="es"><li>セキュリティ監査</li><li>ポリシー遵守の点検</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">分析</span><span data-i18n="en">分析</span><span data-i18n="es">分析</span></h2>
+<article class="memo-card" id="d-3-false-positive" data-search="偽陽性 false positive  問題ないのにありと誤判定する スキャナの誤検知 手動検証で否定">
+  <h3>
+    <span data-i18n="ja">偽陽性<span class="en">False positive</span></span>
+    <span data-i18n="en">False positive</span>
+    <span data-i18n="es">偽陽性</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">問題ないのに<span class="hl">あり</span>と誤判定する</p><p data-i18n="en" class="one-liner">問題ないのに<span class="hl">あり</span>と誤判定する</p><p data-i18n="es" class="one-liner">問題ないのに<span class="hl">あり</span>と誤判定する</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>スキャナの誤検知</li><li>手動検証で否定</li></ul>
+      <ul class="example-list" data-i18n="en"><li>スキャナの誤検知</li><li>手動検証で否定</li></ul>
+      <ul class="example-list" data-i18n="es"><li>スキャナの誤検知</li><li>手動検証で否定</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-vulnerability-classification" data-search="脆弱性の分類 vulnerability classification 特徴で脆弱性をグループ化する owasp top 10 インジェクション等の類型">
-  <h3>脆弱性の分類<span class="en">Vulnerability classification</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-false-negative" data-search="偽陰性 false negative  問題があるのになしと見逃す 監査で見落とし 後日の侵害で発覚">
+  <h3>
+    <span data-i18n="ja">偽陰性<span class="en">False negative</span></span>
+    <span data-i18n="en">False negative</span>
+    <span data-i18n="es">偽陰性</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">特徴で脆弱性を<span class="hl">グループ化</span>する</p>
+    <p data-i18n="ja" class="one-liner">問題があるのに<span class="hl">なし</span>と見逃す</p><p data-i18n="en" class="one-liner">問題があるのに<span class="hl">なし</span>と見逃す</p><p data-i18n="es" class="one-liner">問題があるのに<span class="hl">なし</span>と見逃す</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>OWASP Top 10</li><li>インジェクション等の類型</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>監査で見落とし</li><li>後日の侵害で発覚</li></ul>
+      <ul class="example-list" data-i18n="en"><li>監査で見落とし</li><li>後日の侵害で発覚</li></ul>
+      <ul class="example-list" data-i18n="es"><li>監査で見落とし</li><li>後日の侵害で発覚</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-environmental-variables" data-search="環境変数 environmental variables 環境上の設定／要因を分析に織り込む db接続情報の保管 環境要因と優先度">
-  <h3>環境変数<span class="en">Environmental variables</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-prioritize" data-search="優先順位付け prioritize  影響に基づき修正順を決める 中核機能の脆弱性を先に 低影響は後回し">
+  <h3>
+    <span data-i18n="ja">優先順位付け<span class="en">Prioritize</span></span>
+    <span data-i18n="en">Prioritize</span>
+    <span data-i18n="es">優先順位付け</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">環境上の設定／要因を分析に<span class="hl">織り込む</span></p>
+    <p data-i18n="ja" class="one-liner">影響に基づき<span class="hl">修正順</span>を決める</p><p data-i18n="en" class="one-liner">影響に基づき<span class="hl">修正順</span>を決める</p><p data-i18n="es" class="one-liner">影響に基づき<span class="hl">修正順</span>を決める</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>DB接続情報の保管</li><li>環境要因と優先度</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>中核機能の脆弱性を先に</li><li>低影響は後回し</li></ul>
+      <ul class="example-list" data-i18n="en"><li>中核機能の脆弱性を先に</li><li>低影響は後回し</li></ul>
+      <ul class="example-list" data-i18n="es"><li>中核機能の脆弱性を先に</li><li>低影響は後回し</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-risk-tolerance" data-search="リスク許容度 risk tolerance 組織が受け入れられるリスク水準 決済情報扱い＝許容低 対応の厳しさに反映">
-  <h3>リスク許容度<span class="en">Risk tolerance</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-cvss" data-search="cvss common vulnerability scoring system (cvss)  深刻度を0〜10で示す基準 特性の採点 優先度の定量根拠">
+  <h3>
+    <span data-i18n="ja">CVSS<span class="en">Common Vulnerability Scoring System (CVSS)</span></span>
+    <span data-i18n="en">Common Vulnerability Scoring System (CVSS)</span>
+    <span data-i18n="es">CVSS</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">組織が受け入れられる<span class="hl">リスク水準</span></p>
+    <p data-i18n="ja" class="one-liner">深刻度を<span class="hl">0〜10</span>で示す基準</p><p data-i18n="en" class="one-liner">深刻度を<span class="hl">0〜10</span>で示す基準</p><p data-i18n="es" class="one-liner">深刻度を<span class="hl">0〜10</span>で示す基準</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>決済情報扱い＝許容低</li><li>対応の厳しさに反映</li></ul>
-    </div>
-  </div>
-</article>
-</section><section class="group"><h2 class="group-title">対応・是正</h2>
-<article class="memo-card" id="d-3-patching" data-search="パッチ patching ベンダー修正を適用して塞ぐ 緊急パッチ展開 メンテ窓での適用">
-  <h3>パッチ<span class="en">Patching</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">ベンダー修正を<span class="hl">適用</span>して塞ぐ</p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>緊急パッチ展開</li><li>メンテ窓での適用</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>特性の採点</li><li>優先度の定量根拠</li></ul>
+      <ul class="example-list" data-i18n="en"><li>特性の採点</li><li>優先度の定量根拠</li></ul>
+      <ul class="example-list" data-i18n="es"><li>特性の採点</li><li>優先度の定量根拠</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-insurance" data-search="保険 insurance 損害を保険で金銭補償する サイバー保険 復旧・賠償のカバー">
-  <h3>保険<span class="en">Insurance</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-cve" data-search="cve common vulnerabilities and exposures (cve)  脆弱性に一意idを付ける仕組み cve-年-番号 exchangeのcve例">
+  <h3>
+    <span data-i18n="ja">CVE<span class="en">Common Vulnerabilities and Exposures (CVE)</span></span>
+    <span data-i18n="en">Common Vulnerabilities and Exposures (CVE)</span>
+    <span data-i18n="es">CVE</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">損害を保険で<span class="hl">金銭補償</span>する</p>
+    <p data-i18n="ja" class="one-liner">脆弱性に<span class="hl">一意ID</span>を付ける仕組み</p><p data-i18n="en" class="one-liner">脆弱性に<span class="hl">一意ID</span>を付ける仕組み</p><p data-i18n="es" class="one-liner">脆弱性に<span class="hl">一意ID</span>を付ける仕組み</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>サイバー保険</li><li>復旧・賠償のカバー</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>CVE-年-番号</li><li>ExchangeのCVE例</li></ul>
+      <ul class="example-list" data-i18n="en"><li>CVE-年-番号</li><li>ExchangeのCVE例</li></ul>
+      <ul class="example-list" data-i18n="es"><li>CVE-年-番号</li><li>ExchangeのCVE例</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-segmentation" data-search="セグメンテーション segmentation 網を分割し横展開を抑える 重要系の分離 最小通信の許可">
-  <h3>セグメンテーション<span class="en">Segmentation</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-vulnerability-classification" data-search="脆弱性の分類 vulnerability classification  特徴で脆弱性をグループ化する owasp top 10 インジェクション等の類型">
+  <h3>
+    <span data-i18n="ja">脆弱性の分類<span class="en">Vulnerability classification</span></span>
+    <span data-i18n="en">Vulnerability classification</span>
+    <span data-i18n="es">脆弱性の分類</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">網を分割し<span class="hl">横展開</span>を抑える</p>
+    <p data-i18n="ja" class="one-liner">特徴で脆弱性を<span class="hl">グループ化</span>する</p><p data-i18n="en" class="one-liner">特徴で脆弱性を<span class="hl">グループ化</span>する</p><p data-i18n="es" class="one-liner">特徴で脆弱性を<span class="hl">グループ化</span>する</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>重要系の分離</li><li>最小通信の許可</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>OWASP Top 10</li><li>インジェクション等の類型</li></ul>
+      <ul class="example-list" data-i18n="en"><li>OWASP Top 10</li><li>インジェクション等の類型</li></ul>
+      <ul class="example-list" data-i18n="es"><li>OWASP Top 10</li><li>インジェクション等の類型</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-compensating-controls" data-search="代替的対策 compensating controls 本来策が不可のとき別手段で抑える パッチ保留中のips 同等効果を目指す制御">
-  <h3>代替的対策<span class="en">Compensating controls</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-environmental-variables" data-search="環境変数 environmental variables  環境上の設定／要因を分析に織り込む db接続情報の保管 環境要因と優先度">
+  <h3>
+    <span data-i18n="ja">環境変数<span class="en">Environmental variables</span></span>
+    <span data-i18n="en">Environmental variables</span>
+    <span data-i18n="es">環境変数</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">本来策が不可のとき<span class="hl">別手段</span>で抑える</p>
+    <p data-i18n="ja" class="one-liner">環境上の設定／要因を分析に<span class="hl">織り込む</span></p><p data-i18n="en" class="one-liner">環境上の設定／要因を分析に<span class="hl">織り込む</span></p><p data-i18n="es" class="one-liner">環境上の設定／要因を分析に<span class="hl">織り込む</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>パッチ保留中のIPS</li><li>同等効果を目指す制御</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>DB接続情報の保管</li><li>環境要因と優先度</li></ul>
+      <ul class="example-list" data-i18n="en"><li>DB接続情報の保管</li><li>環境要因と優先度</li></ul>
+      <ul class="example-list" data-i18n="es"><li>DB接続情報の保管</li><li>環境要因と優先度</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="d-3-exceptions-exemptions" data-search="例外と免除 exceptions and exemptions 例外＝別対応許可、免除＝対応不要 代替策付きパッチ延期 隔離ラボの対応免除">
-  <h3>例外と免除<span class="en">Exceptions and exemptions</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="d-3-risk-tolerance" data-search="リスク許容度 risk tolerance  組織が受け入れられるリスク水準 決済情報扱い＝許容低 対応の厳しさに反映">
+  <h3>
+    <span data-i18n="ja">リスク許容度<span class="en">Risk tolerance</span></span>
+    <span data-i18n="en">Risk tolerance</span>
+    <span data-i18n="es">リスク許容度</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">例外＝別対応許可、免除＝<span class="hl">対応不要</span></p>
+    <p data-i18n="ja" class="one-liner">組織が受け入れられる<span class="hl">リスク水準</span></p><p data-i18n="en" class="one-liner">組織が受け入れられる<span class="hl">リスク水準</span></p><p data-i18n="es" class="one-liner">組織が受け入れられる<span class="hl">リスク水準</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>代替策付きパッチ延期</li><li>隔離ラボの対応免除</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>決済情報扱い＝許容低</li><li>対応の厳しさに反映</li></ul>
+      <ul class="example-list" data-i18n="en"><li>決済情報扱い＝許容低</li><li>対応の厳しさに反映</li></ul>
+      <ul class="example-list" data-i18n="es"><li>決済情報扱い＝許容低</li><li>対応の厳しさに反映</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">対応・是正</span><span data-i18n="en">対応・是正</span><span data-i18n="es">対応・是正</span></h2>
+<article class="memo-card" id="d-3-patching" data-search="パッチ patching  ベンダー修正を適用して塞ぐ 緊急パッチ展開 メンテ窓での適用">
+  <h3>
+    <span data-i18n="ja">パッチ<span class="en">Patching</span></span>
+    <span data-i18n="en">Patching</span>
+    <span data-i18n="es">パッチ</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">ベンダー修正を<span class="hl">適用</span>して塞ぐ</p><p data-i18n="en" class="one-liner">ベンダー修正を<span class="hl">適用</span>して塞ぐ</p><p data-i18n="es" class="one-liner">ベンダー修正を<span class="hl">適用</span>して塞ぐ</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>緊急パッチ展開</li><li>メンテ窓での適用</li></ul>
+      <ul class="example-list" data-i18n="en"><li>緊急パッチ展開</li><li>メンテ窓での適用</li></ul>
+      <ul class="example-list" data-i18n="es"><li>緊急パッチ展開</li><li>メンテ窓での適用</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-3-insurance" data-search="保険 insurance  損害を保険で金銭補償する サイバー保険 復旧・賠償のカバー">
+  <h3>
+    <span data-i18n="ja">保険<span class="en">Insurance</span></span>
+    <span data-i18n="en">Insurance</span>
+    <span data-i18n="es">保険</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">損害を保険で<span class="hl">金銭補償</span>する</p><p data-i18n="en" class="one-liner">損害を保険で<span class="hl">金銭補償</span>する</p><p data-i18n="es" class="one-liner">損害を保険で<span class="hl">金銭補償</span>する</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>サイバー保険</li><li>復旧・賠償のカバー</li></ul>
+      <ul class="example-list" data-i18n="en"><li>サイバー保険</li><li>復旧・賠償のカバー</li></ul>
+      <ul class="example-list" data-i18n="es"><li>サイバー保険</li><li>復旧・賠償のカバー</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-3-segmentation" data-search="セグメンテーション segmentation  網を分割し横展開を抑える 重要系の分離 最小通信の許可">
+  <h3>
+    <span data-i18n="ja">セグメンテーション<span class="en">Segmentation</span></span>
+    <span data-i18n="en">Segmentation</span>
+    <span data-i18n="es">セグメンテーション</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">網を分割し<span class="hl">横展開</span>を抑える</p><p data-i18n="en" class="one-liner">網を分割し<span class="hl">横展開</span>を抑える</p><p data-i18n="es" class="one-liner">網を分割し<span class="hl">横展開</span>を抑える</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>重要系の分離</li><li>最小通信の許可</li></ul>
+      <ul class="example-list" data-i18n="en"><li>重要系の分離</li><li>最小通信の許可</li></ul>
+      <ul class="example-list" data-i18n="es"><li>重要系の分離</li><li>最小通信の許可</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-3-compensating-controls" data-search="代替的対策 compensating controls  本来策が不可のとき別手段で抑える パッチ保留中のips 同等効果を目指す制御">
+  <h3>
+    <span data-i18n="ja">代替的対策<span class="en">Compensating controls</span></span>
+    <span data-i18n="en">Compensating controls</span>
+    <span data-i18n="es">代替的対策</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">本来策が不可のとき<span class="hl">別手段</span>で抑える</p><p data-i18n="en" class="one-liner">本来策が不可のとき<span class="hl">別手段</span>で抑える</p><p data-i18n="es" class="one-liner">本来策が不可のとき<span class="hl">別手段</span>で抑える</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>パッチ保留中のIPS</li><li>同等効果を目指す制御</li></ul>
+      <ul class="example-list" data-i18n="en"><li>パッチ保留中のIPS</li><li>同等効果を目指す制御</li></ul>
+      <ul class="example-list" data-i18n="es"><li>パッチ保留中のIPS</li><li>同等効果を目指す制御</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-3-exceptions-exemptions" data-search="例外と免除 exceptions and exemptions  例外＝別対応許可、免除＝対応不要 代替策付きパッチ延期 隔離ラボの対応免除">
+  <h3>
+    <span data-i18n="ja">例外と免除<span class="en">Exceptions and exemptions</span></span>
+    <span data-i18n="en">Exceptions and exemptions</span>
+    <span data-i18n="es">例外と免除</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">例外＝別対応許可、免除＝<span class="hl">対応不要</span></p><p data-i18n="en" class="one-liner">例外＝別対応許可、免除＝<span class="hl">対応不要</span></p><p data-i18n="es" class="one-liner">例外＝別対応許可、免除＝<span class="hl">対応不要</span></p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>代替策付きパッチ延期</li><li>隔離ラボの対応免除</li></ul>
+      <ul class="example-list" data-i18n="en"><li>代替策付きパッチ延期</li><li>隔離ラボの対応免除</li></ul>
+      <ul class="example-list" data-i18n="es"><li>代替策付きパッチ延期</li><li>隔離ラボの対応免除</li></ul>
     </div>
   </div>
 </article>
@@ -355,19 +510,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（24問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（24問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (24 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (24 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
   <script type="application/json" id="quiz-data">[{"term": "d-3-vulnerability-scan", "stem": "Webサーバーで開いているポートや古いプラグイン版、典型的な入力系弱点の有無を自動ツールで広く洗い出した。これはどれか。", "choices": ["侵入テストのみ", "脆弱性スキャン", "バグバウンティ", "サイバー保険"], "answer": 1, "explain": "システムやネットワークの既知弱点を検査して洗い出すのが脆弱性スキャン。結果はCVE等と照合する。"}, {"term": "d-3-static-analysis", "stem": "アプリを起動せずソースコードを解析ツールにかけ、SQLへ入力を直接連結している箇所を発見した。これはどれか。", "choices": ["動的分析", "ダークウェブ監視", "静的な分析", "セグメンテーション"], "answer": 2, "explain": "実行せずソース／バイナリを解析するのが静的分析（SAST）。開発初期からの実施が有効。"}, {"term": "d-3-dynamic-analysis", "stem": "稼働中のWebアプリに対し、入力を送りページ上の挙動を観察してXSSの成立を確認した。これはどれか。", "choices": ["動的な分析", "静的な分析のみ", "CVE採番", "例外措置"], "answer": 0, "explain": "アプリを動かしながら入出力や挙動を見るのが動的分析（DAST）。静的で見えにくい問題の補完になる。"}, {"term": "d-3-package-monitoring", "stem": "自社アプリが使うOSSライブラリに新規CVEが出ていないかを継続監視し、危険な版を更新する運用にした。これはどれか。", "choices": ["パッケージモニタリング", "ホットサイト", "偽陽性の無視", "物理的セグメンテーションのみ"], "answer": 0, "explain": "依存パッケージの既知脆弱性を監視・更新するのがパッケージモニタリング。"}, {"term": "d-3-osint", "stem": "従業員のSNS投稿から導入ファイアウォールの製品名と版を把握し、その版の既知脆弱性を調べた。主にどの手法か。", "choices": ["パッチ適用そのもの", "OSINT", "免除（exemption）", "UPSの点検"], "answer": 1, "explain": "公開情報を収集・分析して脅威や脆弱性の手がかりを得るのがOSINT。"}, {"term": "d-3-proprietary-third-party", "stem": "セキュリティベンダーの有料フィードを購読し、自社利用ソフトのゼロデイ情報を受けて緊急更新した。これはどれか。", "choices": ["OSINTのみ", "第三者（独自／サードパーティ）の脅威フィード", "コールドサイト", "偽陰性の意図的作成"], "answer": 1, "explain": "外部インテリジェンス提供者の独自／サードパーティ脅威フィードを活用する手法。"}, {"term": "d-3-information-sharing-organization", "stem": "同業の金融機関が参加するコミュニティで攻撃手法や脆弱性情報を持ち寄り共有している。これはどれか。", "choices": ["情報共有組織（ISAC等）", "CVSSの計算式のみ", "発電機の設置", "静的解析ツールのライセンス"], "answer": 0, "explain": "業界などで脅威情報を継続共有する枠組みが情報共有組織。代表例がISAC。"}, {"term": "d-3-dark-web", "stem": "Tor等で到達する匿名サイト上のハッカーフォーラムを監視し、自社関連の攻撃・漏洩情報を収集した。情報源はどれか。", "choices": ["ダークウェブ", "公開プレスリリースのみ", "パッチノートの要約のみ", "オンサイトバックアップ"], "answer": 0, "explain": "匿名性の高い領域から犯罪者・ハッカー動向を把握するのがダークウェブを用いた脅威情報収集。"}, {"term": "d-3-penetration-testing", "stem": "サイト運営者の依頼を受けた専門家が、攻撃者視点で入力欄に不正データを送り防御の抜けを検証した。これはどれか。", "choices": ["脆弱性スキャンの自動実行のみ", "侵入テスト", "サイバー保険の請求", "リスク許容度の引き上げのみ"], "answer": 1, "explain": "許可のもと攻撃者視点で実効性を試すのが侵入テスト（ペネトレーションテスト）。"}, {"term": "d-3-bug-bounty", "stem": "クラウド事業者が外部研究者に対象範囲を公開し、妥当な脆弱性報告に報奨金を支払う制度を始めた。これはどれか。", "choices": ["バグバウンティプログラム", "偽陽性の定義変更", "コールドサイト契約", "環境変数の削除のみ"], "answer": 0, "explain": "外部の発見を奨励し報奨を出す制度がバグバウンティ。責任ある開示の一形態。"}, {"term": "d-3-system-process-audit", "stem": "策定済みセキュリティポリシーが現場で守られているかを、点検や関係者への聞き取りで評価し改善を促した。これはどれか。", "choices": ["CVSSスコアリングのみ", "システム／プロセスの監査", "ダークウェブへの投稿", "パッケージのメジャーアップのみ"], "answer": 1, "explain": "方針・標準・規制への準拠を評価するのがシステム／プロセス監査（講義では監視とも呼ぶ）。"}, {"term": "d-3-false-positive", "stem": "スキャナが「SQLインジェクションあり」と出したが、手動確認では成立せず問題なしだった。この誤判定はどれか。", "choices": ["偽陰性", "偽陽性", "免除", "CVE"], "answer": 1, "explain": "実際は問題ないのに問題ありと出すのが偽陽性。放置すると無駄な対応が増える。"}, {"term": "d-3-false-negative", "stem": "監査では重大な脆弱性なしと報告されたが、後日その見落としが攻撃に使われ情報流出した。この見逃しはどれか。", "choices": ["偽陽性", "ホットサイト障害", "偽陰性", "バグバウンティの成功"], "answer": 2, "explain": "問題があるのになしと判定するのが偽陰性。被害に直結しやすい。"}, {"term": "d-3-prioritize", "stem": "発見した多数の脆弱性のうち、顧客DB侵害につながるものを先に直し、影響がごく一部のものは後回しにした。このプロセスはどれか。", "choices": ["優先順位付け", "保険加入のみ", "OSINTの定義", "静的解析の禁止"], "answer": 0, "explain": "組織への影響などに基づき修正順を決めるのが優先順位付け。"}, {"term": "d-3-cvss", "stem": "ある任意コード実行の弱点を、国際的な基準で複数特性を採点し0〜10の数値で深刻度を表した。これはどれか。", "choices": ["CVE", "CVSS", "ISAC", "免除"], "answer": 1, "explain": "深刻度を定量スコア（0〜10等）で示すのがCVSS。優先順位付けの根拠になる。"}, {"term": "d-3-cve", "stem": "公開されたExchangeの重大な弱点に CVE-2021-26855 のような一意番号を付けて共有・追跡できるようにした。仕組みはどれか。", "choices": ["CVSS", "CVE", "セグメンテーション", "偽陽性"], "answer": 1, "explain": "脆弱性に一意の識別子（CVE-年-番号）を付ける仕組みがCVE。"}, {"term": "d-3-vulnerability-classification", "stem": "診断で出た弱点を、インジェクションや認証不備などOWASP Top 10の類型にマッピングして傾向を見た。これはどれか。", "choices": ["脆弱性の分類", "パッチのロールバックのみ", "ダークウェブへの移行", "UPSの冗長化"], "answer": 0, "explain": "共通の特徴でグループ化するのが脆弱性の分類。OWASP Top 10は代表例。"}, {"term": "d-3-environmental-variables", "stem": "バックエンドがOS上の設定からDBのホストやパスワードを読んでおり、サーバー侵害時に接続情報が抜かれるリスクを分析した。講義で強調される観点はどれか。", "choices": ["環境変数", "バグバウンティの単価", "コールドサイトの広さ", "ジェネレータ燃料"], "answer": 0, "explain": "講義ではプログラムが参照する設定情報（環境変数）の扱いや漏洩リスクを分析観点として扱う。"}, {"term": "d-3-risk-tolerance", "stem": "個人情報と決済情報を扱うECは漏洩影響が大きいため、受け入れ可能なリスクを極めて低く見積もり厳格運用にした。これはどれか。", "choices": ["リスク許容度", "偽陽性の増加策", "パッケージの無視", "侵入テストの禁止"], "answer": 0, "explain": "組織がどの程度のリスクを受け入れられるかの見積もりがリスク許容度。"}, {"term": "d-3-patching", "stem": "ベンダーが公開した修正プログラムを計画停止時間内に適用し、印刷サービス関連の重大な弱点を塞いだ。これはどれか。", "choices": ["保険への加入のみ", "パッチ適用", "偽陰性の放置", "OSINTの購読のみ"], "answer": 1, "explain": "ベンダー提供の修正を適用して脆弱性を塞ぐのがパッチ（パッチ適用）。"}, {"term": "d-3-insurance", "stem": "技術対策だけでは防ぎきれない前提で、漏洩時の賠償やシステム復旧費をカバーするサイバー向けの契約に加入した。これはどれか。", "choices": ["静的分析", "保険", "CVSSの再計算のみ", "ポートスキャン"], "answer": 1, "explain": "損害を金銭補償し経済損失を抑えるのが保険。技術対策の代替ではなく補完・リスク移転。"}, {"term": "d-3-segmentation", "stem": "一般社員PCと経理・顧客管理系を網で分け、感染時に重要システムへ容易に広がらないよう通信を最小限にした。これはどれか。", "choices": ["セグメンテーション", "CVEの削除", "偽陽性の定義", "バグバウンティの廃止"], "answer": 0, "explain": "ネットワークを分割し通信を制御して被害拡大を抑えるのがセグメンテーション。"}, {"term": "d-3-compensating-controls", "stem": "互換性の都合でパッチをすぐ当てられない間、該当攻撃をIDS/IPSで検知・遮断してリスクを抑えた。これはどれか。", "choices": ["免除（対応不要）のみ", "代替的対策", "OSINTの停止", "ホットサイトの撤去"], "answer": 1, "explain": "本来の対策が取れないときに別手段で同等に近い効果を狙うのが代替的対策（補償統制）。"}, {"term": "d-3-exceptions-exemptions", "stem": "基幹系は代替防御を条件にパッチ延期を認め（例外）、完全隔離の非機密ラボ機は対応自体不要と判断した（免除）。まとめて指すのはどれか。", "choices": ["例外と免除", "脆弱性スキャン", "動的分析のみ", "CVSSの廃止"], "answer": 0, "explain": "例外は標準と異なる対応の許可、免除は修正・緩和不要との判断。条件と文書化が重要。"}]</script>
 </section>
 
-<nav class="pager"><a href="d-2.html"><span>前の章</span>D-2 ハードウェアの取得・管理・廃棄</a><a class="next" href="d-4.html"><span>次の章</span>D-4 アラートとモニタリング</a></nav>
+<nav class="pager"><a href="d-2.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>D-2 <span data-i18n="ja">ハードウェアの取得・管理・廃棄</span><span data-i18n="en">ハードウェアの取得・管理・廃棄</span><span data-i18n="es">ハードウェアの取得・管理・廃棄</span></span></a><a class="next" href="d-4.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>D-4 <span data-i18n="ja">アラートとモニタリング</span><span data-i18n="en">アラートとモニタリング</span><span data-i18n="es">アラートとモニタリング</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A-3 変更管理とセキュリティへの影響 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,31 +17,37 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain A</span></a>
-  <a class="nav-back" href="index.html">← Domain A ハブ</a>
+  <a class="nav-back" href="index.html"><span data-i18n="ja">← Domain A ハブ</span><span data-i18n="en">← Domain A hub</span><span data-i18n="es">← Hub del Domain A</span></a>
   <div class="search-wrap">
-    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off"
+      data-ph-ja="用語を検索..." data-ph-en="Search terms..." data-ph-es="Buscar términos...">
   </div>
   <nav class="nav-section">
     <h2>Domain A</h2>
-    <a href="a-1.html">A-1 セキュリティコントロールの比較</a><a href="a-2.html">A-2 セキュリティコンセプトの基礎</a><a href="a-3.html" class="active">A-3 変更管理とセキュリティへの影響</a><a href="a-4.html">A-4 適切な暗号化の選択</a>
+    <a href="a-1.html">A-1 <span data-i18n="ja">セキュリティコントロールの比較</span><span data-i18n="en">Comparing security controls</span><span data-i18n="es">Comparación de controles de seguridad</span></a><a href="a-2.html">A-2 <span data-i18n="ja">セキュリティコンセプトの基礎</span><span data-i18n="en">Fundamental security concepts</span><span data-i18n="es">Conceptos de seguridad fundamentales</span></a><a href="a-3.html" class="active">A-3 <span data-i18n="ja">変更管理とセキュリティへの影響</span><span data-i18n="en">Change management and its security impact</span><span data-i18n="es">Gestión de cambios y su impacto en la seguridad</span></a><a href="a-4.html">A-4 <span data-i18n="ja">適切な暗号化の選択</span><span data-i18n="en">Choosing appropriate cryptography</span><span data-i18n="es">Elección de la criptografía adecuada</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
-    <a href="#quiz-section">この章の小テスト</a>
-    <a href="map.html">Domain A 知識マップ</a>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
+    <a href="#quiz-section"><span data-i18n="ja">この章の小テスト</span><span data-i18n="en">This chapter's quiz</span><span data-i18n="es">Cuestionario de este capítulo</span></a>
+    <a href="map.html">Domain A <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -49,173 +55,256 @@
       
 <header class="hero">
   <p class="eyebrow">Domain A · A-3</p>
-  <h1>変更管理とセキュリティへの影響</h1>
-  <p>変える前に決め、失敗したら戻す</p>
+  <h1><span data-i18n="ja">変更管理とセキュリティへの影響</span><span data-i18n="en">Change management and its security impact</span><span data-i18n="es">Gestión de cambios y su impacto en la seguridad</span></h1>
+  <p data-i18n="ja">変える前に決め、失敗したら戻す</p>
+  <p data-i18n="en">Decide before you change; roll back if it fails</p>
+  <p data-i18n="es">Decide antes de cambiar; revierte si falla</p>
   <div class="meta-row">
-    <span class="chip">用語 13</span>
-    <span class="chip">一言定義 + 代表例</span>
-    <span class="chip">公式 1.3</span>
+    <span class="chip"><span data-i18n="ja">用語 13</span><span data-i18n="en">13 terms</span><span data-i18n="es">13 términos</span></span>
+    <span class="chip"><span data-i18n="ja">一言定義 + 代表例</span><span data-i18n="en">One-line definition + examples</span><span data-i18n="es">Definición breve + ejemplos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 1.3</span><span data-i18n="en">Official 1.3</span><span data-i18n="es">Oficial 1.3</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-primary" href="#quiz-section">小テスト 13問</a>
-    <a class="btn btn-ghost" href="map.html">知識マップ</a>
-    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+    <a class="btn btn-primary" href="#quiz-section"><span data-i18n="ja">小テスト 13問</span><span data-i18n="en">Quiz (13)</span><span data-i18n="es">Cuestionario (13)</span></a>
+    <a class="btn btn-ghost" href="map.html"><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all"
+      data-show-all-ja="すべて表示" data-show-all-en="Show all" data-show-all-es="Mostrar todo"
+      data-hide-all-ja="すべて隠す" data-hide-all-en="Hide all" data-hide-all-es="Ocultar todo"
+    ><span data-i18n="ja">すべて表示</span><span data-i18n="en">Show all</span><span data-i18n="es">Mostrar todo</span></button>
   </div>
 </header>
-<div id="empty-state" class="empty-state">該当する用語がありません</div>
-<section class="group"><h2 class="group-title">変更プロセス</h2>
-<article class="memo-card" id="a-3-approval" data-search="承認プロセス approval process 権限者が変更の可否を審査する 新ソフト導入の承認 持ち出し承認">
-  <h3>承認プロセス<span class="en">Approval Process</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<div id="empty-state" class="empty-state"><span data-i18n="ja">該当する用語がありません</span><span data-i18n="en">No matching terms</span><span data-i18n="es">No se encontraron términos</span></div>
+<section class="group"><h2 class="group-title"><span data-i18n="ja">変更プロセス</span><span data-i18n="en">Change process</span><span data-i18n="es">Proceso de cambio</span></h2>
+<article class="memo-card" id="a-3-approval" data-search="承認プロセス approval process proceso de aprobación 権限者が変更の可否を審査する 新ソフト導入の承認 持ち出し承認">
+  <h3>
+    <span data-i18n="ja">承認プロセス<span class="en">Approval Process</span></span>
+    <span data-i18n="en">Approval Process</span>
+    <span data-i18n="es">Proceso de aprobación</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">権限者が変更の可否を<span class="hl">審査</span>する</p>
+    <p data-i18n="ja" class="one-liner">権限者が変更の可否を<span class="hl">審査</span>する</p><p data-i18n="en" class="one-liner">An authority <span class="hl">reviews</span> whether the change may proceed</p><p data-i18n="es" class="one-liner">Una autoridad <span class="hl">revisa</span> si el cambio puede seguir adelante</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>新ソフト導入の承認</li><li>持ち出し承認</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>新ソフト導入の承認</li><li>持ち出し承認</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Approving new software</li><li>Approving equipment removal</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Aprobación de software nuevo</li><li>Aprobación de salida de equipos</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-3-stakeholder" data-search="ステークホルダー stakeholder 変更に関わる利害関係者 経営者 開発者 利用部門">
-  <h3>ステークホルダー<span class="en">Stakeholder</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-3-stakeholder" data-search="ステークホルダー stakeholder parte interesada 変更に関わる利害関係者 経営者 開発者 利用部門">
+  <h3>
+    <span data-i18n="ja">ステークホルダー<span class="en">Stakeholder</span></span>
+    <span data-i18n="en">Stakeholder</span>
+    <span data-i18n="es">Parte interesada</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">変更に関わる<span class="hl">利害関係者</span></p>
+    <p data-i18n="ja" class="one-liner">変更に関わる<span class="hl">利害関係者</span></p><p data-i18n="en" class="one-liner"><span class="hl">Parties affected</span> by the change</p><p data-i18n="es" class="one-liner"><span class="hl">Partes afectadas</span> por el cambio</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>経営者</li><li>開発者</li><li>利用部門</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>経営者</li><li>開発者</li><li>利用部門</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Executives</li><li>Developers</li><li>Business users</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Directivos</li><li>Desarrolladores</li><li>Departamentos usuarios</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-3-impact" data-search="インパクト分析 impact analysis 変更や事故の影響を事前評価 パッチ前の業務影響評価">
-  <h3>インパクト分析<span class="en">Impact Analysis</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-3-impact" data-search="インパクト分析 impact analysis análisis de impacto 変更や事故の影響を事前評価 パッチ前の業務影響評価">
+  <h3>
+    <span data-i18n="ja">インパクト分析<span class="en">Impact Analysis</span></span>
+    <span data-i18n="en">Impact Analysis</span>
+    <span data-i18n="es">Análisis de impacto</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">変更や事故の影響を<span class="hl">事前評価</span></p>
+    <p data-i18n="ja" class="one-liner">変更や事故の影響を<span class="hl">事前評価</span></p><p data-i18n="en" class="one-liner"><span class="hl">Assesses in advance</span> the effect of a change or incident</p><p data-i18n="es" class="one-liner"><span class="hl">Evalúa de antemano</span> el efecto de un cambio o incidente</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>パッチ前の業務影響評価</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>パッチ前の業務影響評価</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Business impact review before patching</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Evaluación del impacto en el negocio antes de parchear</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-3-test-results" data-search="テスト結果 test results 対策の有効性を検証した成果 脆弱性スキャン 侵入テスト">
-  <h3>テスト結果<span class="en">Test Results</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-3-test-results" data-search="テスト結果 test results resultados de pruebas 対策の有効性を検証した成果 脆弱性スキャン 侵入テスト">
+  <h3>
+    <span data-i18n="ja">テスト結果<span class="en">Test Results</span></span>
+    <span data-i18n="en">Test Results</span>
+    <span data-i18n="es">Resultados de pruebas</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">対策の有効性を<span class="hl">検証した成果</span></p>
+    <p data-i18n="ja" class="one-liner">対策の有効性を<span class="hl">検証した成果</span></p><p data-i18n="en" class="one-liner"><span class="hl">Evidence that verifies</span> a control works</p><p data-i18n="es" class="one-liner"><span class="hl">Evidencia que verifica</span> que un control funciona</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>脆弱性スキャン</li><li>侵入テスト</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>脆弱性スキャン</li><li>侵入テスト</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Vulnerability scans</li><li>Penetration tests</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Análisis de vulnerabilidades</li><li>Pruebas de penetración</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-3-backout" data-search="バックアウトプラン backout plan 失敗したら元に戻す計画 バックアップ 切り戻し手順">
-  <h3>バックアウトプラン<span class="en">Backout Plan</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-3-backout" data-search="バックアウトプラン backout plan plan de reversión 失敗したら元に戻す計画 バックアップ 切り戻し手順">
+  <h3>
+    <span data-i18n="ja">バックアウトプラン<span class="en">Backout Plan</span></span>
+    <span data-i18n="en">Backout Plan</span>
+    <span data-i18n="es">Plan de reversión</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">失敗したら<span class="hl">元に戻す計画</span></p>
+    <p data-i18n="ja" class="one-liner">失敗したら<span class="hl">元に戻す計画</span></p><p data-i18n="en" class="one-liner">A <span class="hl">plan to roll back</span> if it fails</p><p data-i18n="es" class="one-liner">Un <span class="hl">plan para volver atrás</span> si falla</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>バックアップ</li><li>切り戻し手順</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>バックアップ</li><li>切り戻し手順</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Backups</li><li>Rollback procedure</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Copias de seguridad</li><li>Procedimiento de reversión</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-3-maint-window" data-search="メンテナンスウィンドウ maintenance window 影響を抑えて作業する時間枠 深夜の定期メンテ">
-  <h3>メンテナンスウィンドウ<span class="en">Maintenance Window</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-3-maint-window" data-search="メンテナンスウィンドウ maintenance window ventana de mantenimiento 影響を抑えて作業する時間枠 深夜の定期メンテ">
+  <h3>
+    <span data-i18n="ja">メンテナンスウィンドウ<span class="en">Maintenance Window</span></span>
+    <span data-i18n="en">Maintenance Window</span>
+    <span data-i18n="es">Ventana de mantenimiento</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">影響を抑えて作業する<span class="hl">時間枠</span></p>
+    <p data-i18n="ja" class="one-liner">影響を抑えて作業する<span class="hl">時間枠</span></p><p data-i18n="en" class="one-liner">A <span class="hl">time slot</span> for work with minimal impact</p><p data-i18n="es" class="one-liner">Un <span class="hl">intervalo de tiempo</span> para trabajar con impacto mínimo</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>深夜の定期メンテ</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>深夜の定期メンテ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Scheduled late-night maintenance</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Mantenimiento programado de madrugada</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-3-sop" data-search="標準作業手順書 sop 作業を同じ手順で行う文書 パスワード手順 インシデント手順">
-  <h3>標準作業手順書<span class="en">SOP</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-3-sop" data-search="標準作業手順書 sop procedimiento operativo estándar (sop) 作業を同じ手順で行う文書 パスワード手順 インシデント手順">
+  <h3>
+    <span data-i18n="ja">標準作業手順書<span class="en">SOP</span></span>
+    <span data-i18n="en">Standard Operating Procedure (SOP)</span>
+    <span data-i18n="es">Procedimiento operativo estándar (SOP)</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">作業を<span class="hl">同じ手順</span>で行う文書</p>
+    <p data-i18n="ja" class="one-liner">作業を<span class="hl">同じ手順</span>で行う文書</p><p data-i18n="en" class="one-liner">A document so work is done <span class="hl">the same way every time</span></p><p data-i18n="es" class="one-liner">Documento para hacer el trabajo <span class="hl">siempre de la misma forma</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>パスワード手順</li><li>インシデント手順</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>パスワード手順</li><li>インシデント手順</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Password procedure</li><li>Incident procedure</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Procedimiento de contraseñas</li><li>Procedimiento de incidentes</li></ul>
     </div>
   </div>
 </article>
-</section><section class="group"><h2 class="group-title">変更に伴う影響</h2>
-<article class="memo-card" id="a-3-allow-deny" data-search="許可／拒否リスト allow / deny list 通す相手・拒む相手の一覧 fwのipリスト メールフィルタ">
-  <h3>許可／拒否リスト<span class="en">Allow / Deny List</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+</section><section class="group"><h2 class="group-title"><span data-i18n="ja">変更に伴う影響</span><span data-i18n="en">Impacts of change</span><span data-i18n="es">Impactos del cambio</span></h2>
+<article class="memo-card" id="a-3-allow-deny" data-search="許可／拒否リスト allow / deny list lista de permitidos / denegados 通す相手・拒む相手の一覧 fwのipリスト メールフィルタ">
+  <h3>
+    <span data-i18n="ja">許可／拒否リスト<span class="en">Allow / Deny List</span></span>
+    <span data-i18n="en">Allow / Deny List</span>
+    <span data-i18n="es">Lista de permitidos / denegados</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner"><span class="hl">通す相手・拒む相手</span>の一覧</p>
+    <p data-i18n="ja" class="one-liner"><span class="hl">通す相手・拒む相手</span>の一覧</p><p data-i18n="en" class="one-liner">A list of <span class="hl">who gets in and who is blocked</span></p><p data-i18n="es" class="one-liner">Lista de <span class="hl">a quién se deja pasar y a quién se bloquea</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>FWのIPリスト</li><li>メールフィルタ</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-3-restrict" data-search="機能の制限 restricted activities 不要・危険な機能を止める カメラ制限 外部共有制限">
-  <h3>機能の制限<span class="en">Restricted Activities</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">不要・危険な機能を<span class="hl">止める</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>カメラ制限</li><li>外部共有制限</li></ul>
-    </div>
-  </div>
-</article>
-
-<article class="memo-card" id="a-3-downtime" data-search="ダウンタイム downtime システムが使えない時間 パッチ適用の計画停止">
-  <h3>ダウンタイム<span class="en">Downtime</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
-  <div class="answer">
-    <p class="one-liner">システムが<span class="hl">使えない時間</span></p>
-    <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>パッチ適用の計画停止</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>FWのIPリスト</li><li>メールフィルタ</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Firewall IP lists</li><li>Email filters</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Listas de IP del cortafuegos</li><li>Filtros de correo</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-3-restart" data-search="アプリの再起動 application restart 止めて起動し直し変更を反映 設定変更後の再起動">
-  <h3>アプリの再起動<span class="en">Application Restart</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-3-restrict" data-search="機能の制限 restricted activities actividades restringidas 不要・危険な機能を止める カメラ制限 外部共有制限">
+  <h3>
+    <span data-i18n="ja">機能の制限<span class="en">Restricted Activities</span></span>
+    <span data-i18n="en">Restricted Activities</span>
+    <span data-i18n="es">Actividades restringidas</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">止めて起動し直し<span class="hl">変更を反映</span></p>
+    <p data-i18n="ja" class="one-liner">不要・危険な機能を<span class="hl">止める</span></p><p data-i18n="en" class="one-liner"><span class="hl">Turns off</span> unneeded or risky features</p><p data-i18n="es" class="one-liner"><span class="hl">Desactiva</span> funciones innecesarias o peligrosas</p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>設定変更後の再起動</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>カメラ制限</li><li>外部共有制限</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Camera restrictions</li><li>External sharing restrictions</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Restricción de la cámara</li><li>Restricción del uso compartido externo</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-3-legacy" data-search="レガシーアプリ legacy application 更新できない古いアプリ cobol基幹 旧os上の制御系">
-  <h3>レガシーアプリ<span class="en">Legacy Application</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-3-downtime" data-search="ダウンタイム downtime tiempo de inactividad システムが使えない時間 パッチ適用の計画停止">
+  <h3>
+    <span data-i18n="ja">ダウンタイム<span class="en">Downtime</span></span>
+    <span data-i18n="en">Downtime</span>
+    <span data-i18n="es">Tiempo de inactividad</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">更新できない<span class="hl">古いアプリ</span></p>
+    <p data-i18n="ja" class="one-liner">システムが<span class="hl">使えない時間</span></p><p data-i18n="en" class="one-liner">Time when the system is <span class="hl">unavailable</span></p><p data-i18n="es" class="one-liner">Tiempo en que el sistema <span class="hl">no está disponible</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>COBOL基幹</li><li>旧OS上の制御系</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>パッチ適用の計画停止</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Planned outage for patching</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Parada planificada para aplicar parches</li></ul>
     </div>
   </div>
 </article>
 
-<article class="memo-card" id="a-3-dependencies" data-search="依存関係 dependencies 他コンポーネントとのつながり 外部ライブラリ クラウド部品">
-  <h3>依存関係<span class="en">Dependencies</span></h3>
-  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+<article class="memo-card" id="a-3-restart" data-search="アプリの再起動 application restart reinicio de la aplicación 止めて起動し直し変更を反映 設定変更後の再起動">
+  <h3>
+    <span data-i18n="ja">アプリの再起動<span class="en">Application Restart</span></span>
+    <span data-i18n="en">Application Restart</span>
+    <span data-i18n="es">Reinicio de la aplicación</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
   <div class="answer">
-    <p class="one-liner">他コンポーネントとの<span class="hl">つながり</span></p>
+    <p data-i18n="ja" class="one-liner">止めて起動し直し<span class="hl">変更を反映</span></p><p data-i18n="en" class="one-liner">Stop and start again to <span class="hl">apply the change</span></p><p data-i18n="es" class="one-liner">Detener e iniciar de nuevo para <span class="hl">aplicar el cambio</span></p>
     <div class="examples">
-      <div class="field-label">代表例</div>
-      <ul class="example-list"><li>外部ライブラリ</li><li>クラウド部品</li></ul>
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>設定変更後の再起動</li></ul>
+      <ul class="example-list" data-i18n="en"><li>Restart after a config change</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Reinicio tras un cambio de configuración</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-legacy" data-search="レガシーアプリ legacy application aplicación heredada 更新できない古いアプリ cobol基幹 旧os上の制御系">
+  <h3>
+    <span data-i18n="ja">レガシーアプリ<span class="en">Legacy Application</span></span>
+    <span data-i18n="en">Legacy Application</span>
+    <span data-i18n="es">Aplicación heredada</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">更新できない<span class="hl">古いアプリ</span></p><p data-i18n="en" class="one-liner">An <span class="hl">old app</span> that can't be updated</p><p data-i18n="es" class="one-liner">Una <span class="hl">aplicación antigua</span> que no se puede actualizar</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>COBOL基幹</li><li>旧OS上の制御系</li></ul>
+      <ul class="example-list" data-i18n="en"><li>COBOL core systems</li><li>Control systems on old OSes</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Sistemas centrales en COBOL</li><li>Sistemas de control en SO antiguos</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-dependencies" data-search="依存関係 dependencies dependencias 他コンポーネントとのつながり 外部ライブラリ クラウド部品">
+  <h3>
+    <span data-i18n="ja">依存関係<span class="en">Dependencies</span></span>
+    <span data-i18n="en">Dependencies</span>
+    <span data-i18n="es">Dependencias</span>
+  </h3>
+  <button type="button" class="reveal-btn" aria-expanded="false"><span data-i18n="ja">答えを見る</span><span data-i18n="en">Show answer</span><span data-i18n="es">Ver respuesta</span></button>
+  <div class="answer">
+    <p data-i18n="ja" class="one-liner">他コンポーネントとの<span class="hl">つながり</span></p><p data-i18n="en" class="one-liner"><span class="hl">Links</span> to other components</p><p data-i18n="es" class="one-liner"><span class="hl">Vínculos</span> con otros componentes</p>
+    <div class="examples">
+      <div class="field-label"><span data-i18n="ja">代表例</span><span data-i18n="en">Examples</span><span data-i18n="es">Ejemplos</span></div>
+      <ul class="example-list" data-i18n="ja"><li>外部ライブラリ</li><li>クラウド部品</li></ul>
+      <ul class="example-list" data-i18n="en"><li>External libraries</li><li>Cloud components</li></ul>
+      <ul class="example-list" data-i18n="es"><li>Bibliotecas externas</li><li>Componentes en la nube</li></ul>
     </div>
   </div>
 </article>
@@ -223,19 +312,19 @@
 
 <section class="quiz-section" id="quiz-section">
   <header class="quiz-header">
-    <p class="eyebrow">小テスト · SY0-701風 4択</p>
-    <h2>この章の確認問題</h2>
-    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（13問）。</p>
+    <p class="eyebrow"><span data-i18n="ja">小テスト · SY0-701風 4択</span><span data-i18n="en">Quiz · SY0-701 style, 4 choices</span><span data-i18n="es">Cuestionario · estilo SY0-701, 4 opciones</span></p>
+    <h2><span data-i18n="ja">この章の確認問題</span><span data-i18n="en">Chapter review questions</span><span data-i18n="es">Preguntas de repaso del capítulo</span></h2>
+    <p><span data-i18n="ja">本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（13問）。</span><span data-i18n="en">Scenario-based questions in the style of the real exam, covering every term at least once (13 questions).</span><span data-i18n="es">Preguntas basadas en escenarios al estilo del examen real; cada término se cubre al menos una vez (13 preguntas).</span></p>
   </header>
   <div id="quiz" class="quiz"></div>
-  <script type="application/json" id="quiz-data">[{"term": "a-3-approval", "stem": "新ソフトウェア導入前にセキュリティ部門と経営層が可否を審査する。これは変更管理の何にあたるか。", "choices": ["承認プロセス", "トークン化", "暗黙の信頼ゾーン", "鍵の長さ"], "answer": 0, "explain": "権限者が変更の妥当性を審査するのが承認プロセス。"}, {"term": "a-3-stakeholder", "stem": "システム変更の影響を受ける経営者・開発者・利用部門をまとめて何と呼ぶか。", "choices": ["ステークホルダー", "ルートオブトラスト", "PEP", "ソルト"], "answer": 0, "explain": "利害関係者＝ステークホルダー。"}, {"term": "a-3-impact", "stem": "パッチ適用前に、サービス停止やデータ漏えいのリスクを評価して優先度を決めた。これは何か。", "choices": ["インパクト分析", "ステガノグラフィ", "自己署名証明書", "ボラード"], "answer": 0, "explain": "変更や事故の影響を事前に見積もるのがインパクト分析。"}, {"term": "a-3-test-results", "stem": "脆弱性スキャンと侵入テストのレポートを基に修正箇所を決めた。根拠となるものは何か。", "choices": ["テスト結果", "キーエスクロー", "ライティング", "公開鍵"], "answer": 0, "explain": "対策の有効性を検証した成果＝テスト結果。"}, {"term": "a-3-backout", "stem": "アップグレード失敗時に、バックアップから迅速に元へ戻す手順を事前に用意した。これは何か。", "choices": ["バックアウトプラン", "ギャップ分析", "CRL", "フェンシング"], "answer": 0, "explain": "失敗時に切り戻す計画＝バックアウトプラン。"}, {"term": "a-3-maint-window", "stem": "業務影響を抑えるため、深夜帯にパッチ作業の時間枠を確保した。これは何か。", "choices": ["メンテナンスウィンドウ", "デジタル署名", "アダプティブID", "データマスキング"], "answer": 0, "explain": "計画的に確保する作業時間枠＝メンテナンスウィンドウ。"}, {"term": "a-3-sop", "stem": "インシデント時の連絡・証拠保全の手順を文書化し周知した。これは何か。", "choices": ["標準作業手順書（SOP）", "ブロックチェーン", "非対称暗号化", "暗黙の信頼ゾーン"], "answer": 0, "explain": "一貫した実行手順を文書化したものがSOP。"}, {"term": "a-3-allow-deny", "stem": "ファイアウォールで信頼IPのみ通信を許し、悪意ある宛先を拒否する設定を更新した。関係する概念は何か。", "choices": ["許可リスト／拒否リスト", "セキュアエンクレーブ", "CIAの可用性のみ", "ボラード"], "answer": 0, "explain": "通す相手・拒む相手の一覧＝Allow/Deny List。"}, {"term": "a-3-restrict", "stem": "業務スマホのカメラと外部共有を無効化し、攻撃対象領域を減らした。これは何か。", "choices": ["機能の制限", "キーストレッチ", "公開台帳", "抑止的掲示のみ"], "answer": 0, "explain": "不要・危険な機能を止める＝機能の制限。"}, {"term": "a-3-downtime", "stem": "データセンター点検のため、計画的にシステムを停止する時間を利用者へ告知した。この使えない時間を何と呼ぶか。", "choices": ["ダウンタイム", "ソルト", "PEP", "トークン"], "answer": 0, "explain": "システムが利用できない時間＝ダウンタイム。"}, {"term": "a-3-restart", "stem": "セキュリティ設定変更後、反映のためにアプリを停止して起動し直した。必要な作業は何か。", "choices": ["アプリケーションの再起動", "ギャップ分析", "自己署名の発行のみ", "フェンシング"], "answer": 0, "explain": "変更を有効にする再起動＝Application Restart。"}, {"term": "a-3-legacy", "stem": "サポート終了OS上の古い制御アプリを、更新できず使い続けている。主に何が問題か。", "choices": ["レガシーアプリケーション", "キー交換の高速化", "過剰な冗長化", "ルート証明書の多さ"], "answer": 0, "explain": "更新困難な古いアプリ＝レガシー。隔離など代替策が必要になりやすい。"}, {"term": "a-3-dependencies", "stem": "Webアプリが使う古いOSSライブラリに脆弱性があり、全体のリスクになった。管理すべきものは何か。", "choices": ["依存関係（Dependencies）", "ボラード", "指示的方針のみ", "ライティング"], "answer": 0, "explain": "他コンポーネントとのつながり＝依存関係。変更時も要確認。"}]</script>
+  <script type="application/json" id="quiz-data">[{"term": "a-3-approval", "stem": "新ソフトウェア導入前にセキュリティ部門と経営層が可否を審査する。これは変更管理の何にあたるか。", "choices": ["承認プロセス", "トークン化", "暗黙の信頼ゾーン", "鍵の長さ"], "answer": 0, "explain": "権限者が変更の妥当性を審査するのが承認プロセス。", "stem_en": "Before new software is introduced, the security team and management review whether to allow it. What part of change management is this?", "choices_en": ["Approval process", "Tokenization", "Implicit trust zone", "Key length"], "explain_en": "An authority reviewing whether a change is appropriate is the approval process.", "stem_es": "Antes de implantar un software nuevo, el equipo de seguridad y la dirección revisan si se autoriza. ¿Qué parte de la gestión de cambios es?", "choices_es": ["Proceso de aprobación", "Tokenización", "Zona de confianza implícita", "Longitud de clave"], "explain_es": "Que una autoridad revise si un cambio es adecuado es el proceso de aprobación."}, {"term": "a-3-stakeholder", "stem": "システム変更の影響を受ける経営者・開発者・利用部門をまとめて何と呼ぶか。", "choices": ["ステークホルダー", "ルートオブトラスト", "PEP", "ソルト"], "answer": 0, "explain": "利害関係者＝ステークホルダー。", "stem_en": "What do you collectively call the executives, developers, and business users affected by a system change?", "choices_en": ["Stakeholders", "Root of trust", "PEP", "Salt"], "explain_en": "Parties with an interest in the change are stakeholders.", "stem_es": "¿Cómo se llama en conjunto a los directivos, desarrolladores y usuarios afectados por un cambio en el sistema?", "choices_es": ["Partes interesadas", "Raíz de confianza", "PEP", "Sal"], "explain_es": "Quienes tienen intereses en juego son las partes interesadas."}, {"term": "a-3-impact", "stem": "パッチ適用前に、サービス停止やデータ漏えいのリスクを評価して優先度を決めた。これは何か。", "choices": ["インパクト分析", "ステガノグラフィ", "自己署名証明書", "ボラード"], "answer": 0, "explain": "変更や事故の影響を事前に見積もるのがインパクト分析。", "stem_en": "Before patching, you assessed the risk of service outages and data leaks to set priorities. What is this?", "choices_en": ["Impact analysis", "Steganography", "Self-signed certificate", "Bollard"], "explain_en": "Estimating the effect of a change or incident in advance is impact analysis.", "stem_es": "Antes de parchear, evaluaste el riesgo de interrupciones del servicio y fugas de datos para fijar prioridades. ¿Qué es?", "choices_es": ["Análisis de impacto", "Esteganografía", "Certificado autofirmado", "Bolardo"], "explain_es": "Estimar de antemano el efecto de un cambio o incidente es el análisis de impacto."}, {"term": "a-3-test-results", "stem": "脆弱性スキャンと侵入テストのレポートを基に修正箇所を決めた。根拠となるものは何か。", "choices": ["テスト結果", "キーエスクロー", "ライティング", "公開鍵"], "answer": 0, "explain": "対策の有効性を検証した成果＝テスト結果。", "stem_en": "Fixes were chosen based on vulnerability scan and penetration test reports. What is the basis for the decision?", "choices_en": ["Test results", "Key escrow", "Lighting", "Public key"], "explain_en": "Evidence verifying that controls work is test results.", "stem_es": "Las correcciones se eligieron a partir de informes de análisis de vulnerabilidades y pruebas de penetración. ¿En qué se basa la decisión?", "choices_es": ["Resultados de pruebas", "Custodia de claves", "Iluminación", "Clave pública"], "explain_es": "La evidencia que verifica que los controles funcionan son los resultados de pruebas."}, {"term": "a-3-backout", "stem": "アップグレード失敗時に、バックアップから迅速に元へ戻す手順を事前に用意した。これは何か。", "choices": ["バックアウトプラン", "ギャップ分析", "CRL", "フェンシング"], "answer": 0, "explain": "失敗時に切り戻す計画＝バックアウトプラン。", "stem_en": "A procedure was prepared in advance to quickly restore from backup if an upgrade fails. What is this?", "choices_en": ["Backout plan", "Gap analysis", "CRL", "Fencing"], "explain_en": "A plan to roll back on failure is a backout plan.", "stem_es": "Se preparó de antemano un procedimiento para restaurar rápidamente desde la copia de seguridad si falla una actualización. ¿Qué es?", "choices_es": ["Plan de reversión", "Análisis de brechas", "CRL", "Vallado"], "explain_es": "Un plan para volver atrás si algo falla es un plan de reversión."}, {"term": "a-3-maint-window", "stem": "業務影響を抑えるため、深夜帯にパッチ作業の時間枠を確保した。これは何か。", "choices": ["メンテナンスウィンドウ", "デジタル署名", "アダプティブID", "データマスキング"], "answer": 0, "explain": "計画的に確保する作業時間枠＝メンテナンスウィンドウ。", "stem_en": "To limit business impact, a late-night time slot was reserved for patching. What is this?", "choices_en": ["Maintenance window", "Digital signature", "Adaptive identity", "Data masking"], "explain_en": "A planned time slot for work is a maintenance window.", "stem_es": "Para limitar el impacto en el negocio, se reservó una franja de madrugada para aplicar parches. ¿Qué es?", "choices_es": ["Ventana de mantenimiento", "Firma digital", "Identidad adaptativa", "Enmascaramiento de datos"], "explain_es": "Una franja de tiempo planificada para trabajos es una ventana de mantenimiento."}, {"term": "a-3-sop", "stem": "インシデント時の連絡・証拠保全の手順を文書化し周知した。これは何か。", "choices": ["標準作業手順書（SOP）", "ブロックチェーン", "非対称暗号化", "暗黙の信頼ゾーン"], "answer": 0, "explain": "一貫した実行手順を文書化したものがSOP。", "stem_en": "The steps for communication and evidence preservation during incidents were documented and shared. What is this?", "choices_en": ["Standard operating procedure (SOP)", "Blockchain", "Asymmetric encryption", "Implicit trust zone"], "explain_en": "A documented procedure for consistent execution is an SOP.", "stem_es": "Se documentaron y difundieron los pasos de comunicación y conservación de pruebas ante incidentes. ¿Qué es?", "choices_es": ["Procedimiento operativo estándar (SOP)", "Cadena de bloques", "Cifrado asimétrico", "Zona de confianza implícita"], "explain_es": "Un procedimiento documentado para actuar siempre igual es un SOP."}, {"term": "a-3-allow-deny", "stem": "ファイアウォールで信頼IPのみ通信を許し、悪意ある宛先を拒否する設定を更新した。関係する概念は何か。", "choices": ["許可リスト／拒否リスト", "セキュアエンクレーブ", "CIAの可用性のみ", "ボラード"], "answer": 0, "explain": "通す相手・拒む相手の一覧＝Allow/Deny List。", "stem_en": "The firewall was updated to allow only trusted IPs and block malicious destinations. Which concept is involved?", "choices_en": ["Allow list / deny list", "Secure enclave", "Only the availability part of CIA", "Bollard"], "explain_en": "A list of who to let through and who to block is an allow/deny list.", "stem_es": "Se actualizó el cortafuegos para permitir solo IP de confianza y bloquear destinos maliciosos. ¿Qué concepto interviene?", "choices_es": ["Lista de permitidos / denegados", "Enclave seguro", "Solo la disponibilidad de la tríada CIA", "Bolardo"], "explain_es": "Una lista de a quién dejar pasar y a quién bloquear es una lista de permitidos/denegados."}, {"term": "a-3-restrict", "stem": "業務スマホのカメラと外部共有を無効化し、攻撃対象領域を減らした。これは何か。", "choices": ["機能の制限", "キーストレッチ", "公開台帳", "抑止的掲示のみ"], "answer": 0, "explain": "不要・危険な機能を止める＝機能の制限。", "stem_en": "The camera and external sharing on work phones were disabled to reduce the attack surface. What is this?", "choices_en": ["Restricted activities", "Key stretching", "Public ledger", "Only a deterrent sign"], "explain_en": "Turning off unneeded or risky features is restricting activities.", "stem_es": "Se desactivaron la cámara y el uso compartido externo de los móviles de empresa para reducir la superficie de ataque. ¿Qué es?", "choices_es": ["Actividades restringidas", "Estiramiento de claves", "Registro público", "Solo un cartel disuasorio"], "explain_es": "Desactivar funciones innecesarias o peligrosas es restringir actividades."}, {"term": "a-3-downtime", "stem": "データセンター点検のため、計画的にシステムを停止する時間を利用者へ告知した。この使えない時間を何と呼ぶか。", "choices": ["ダウンタイム", "ソルト", "PEP", "トークン"], "answer": 0, "explain": "システムが利用できない時間＝ダウンタイム。", "stem_en": "Users were notified of a planned system shutdown for a data center inspection. What is this period of unavailability called?", "choices_en": ["Downtime", "Salt", "PEP", "Token"], "explain_en": "Time when the system is unavailable is downtime.", "stem_es": "Se avisó a los usuarios de una parada planificada del sistema por la inspección del centro de datos. ¿Cómo se llama ese periodo sin servicio?", "choices_es": ["Tiempo de inactividad", "Sal", "PEP", "Token"], "explain_es": "El tiempo en que el sistema no está disponible es el tiempo de inactividad."}, {"term": "a-3-restart", "stem": "セキュリティ設定変更後、反映のためにアプリを停止して起動し直した。必要な作業は何か。", "choices": ["アプリケーションの再起動", "ギャップ分析", "自己署名の発行のみ", "フェンシング"], "answer": 0, "explain": "変更を有効にする再起動＝Application Restart。", "stem_en": "After changing a security setting, the app was stopped and started again for it to take effect. What task is needed?", "choices_en": ["Application restart", "Gap analysis", "Only issuing a self-signed certificate", "Fencing"], "explain_en": "Restarting so the change takes effect is an application restart.", "stem_es": "Tras cambiar un ajuste de seguridad, se detuvo y volvió a iniciar la aplicación para que surtiera efecto. ¿Qué tarea hace falta?", "choices_es": ["Reinicio de la aplicación", "Análisis de brechas", "Solo emitir un certificado autofirmado", "Vallado"], "explain_es": "Reiniciar para que el cambio surta efecto es el reinicio de la aplicación."}, {"term": "a-3-legacy", "stem": "サポート終了OS上の古い制御アプリを、更新できず使い続けている。主に何が問題か。", "choices": ["レガシーアプリケーション", "キー交換の高速化", "過剰な冗長化", "ルート証明書の多さ"], "answer": 0, "explain": "更新困難な古いアプリ＝レガシー。隔離など代替策が必要になりやすい。", "stem_en": "An old control application on an unsupported OS can't be updated and is still in use. What is mainly the problem?", "choices_en": ["Legacy application", "Faster key exchange", "Excessive redundancy", "Too many root certificates"], "explain_en": "An old app that's hard to update is legacy. It often needs compensating measures such as isolation.", "stem_es": "Una antigua aplicación de control sobre un SO sin soporte no puede actualizarse y sigue en uso. ¿Cuál es el problema principal?", "choices_es": ["Aplicación heredada", "Intercambio de claves más rápido", "Redundancia excesiva", "Demasiados certificados raíz"], "explain_es": "Una aplicación antigua difícil de actualizar es heredada. Suele requerir medidas alternativas como el aislamiento."}, {"term": "a-3-dependencies", "stem": "Webアプリが使う古いOSSライブラリに脆弱性があり、全体のリスクになった。管理すべきものは何か。", "choices": ["依存関係（Dependencies）", "ボラード", "指示的方針のみ", "ライティング"], "answer": 0, "explain": "他コンポーネントとのつながり＝依存関係。変更時も要確認。", "stem_en": "An old open-source library used by a web app has a vulnerability that puts the whole system at risk. What needs to be managed?", "choices_en": ["Dependencies", "Bollards", "Only a directive policy", "Lighting"], "explain_en": "Links to other components are dependencies. Check them during changes too.", "stem_es": "Una antigua biblioteca de código abierto que usa una aplicación web tiene una vulnerabilidad que pone en riesgo todo el sistema. ¿Qué hay que gestionar?", "choices_es": ["Dependencias", "Bolardos", "Solo una política directiva", "Iluminación"], "explain_es": "Los vínculos con otros componentes son dependencias. También hay que revisarlas al hacer cambios."}]</script>
 </section>
 
-<nav class="pager"><a href="a-2.html"><span>前の章</span>A-2 セキュリティコンセプトの基礎</a><a class="next" href="a-4.html"><span>次の章</span>A-4 適切な暗号化の選択</a></nav>
+<nav class="pager"><a href="a-2.html"><span><span data-i18n="ja">前の章</span><span data-i18n="en">Previous chapter</span><span data-i18n="es">Capítulo anterior</span></span><span>A-2 <span data-i18n="ja">セキュリティコンセプトの基礎</span><span data-i18n="en">Fundamental security concepts</span><span data-i18n="es">Conceptos de seguridad fundamentales</span></span></a><a class="next" href="a-4.html"><span><span data-i18n="ja">次の章</span><span data-i18n="en">Next chapter</span><span data-i18n="es">Siguiente capítulo</span></span><span>A-4 <span data-i18n="ja">適切な暗号化の選択</span><span data-i18n="en">Choosing appropriate cryptography</span><span data-i18n="es">Elección de la criptografía adecuada</span></span></a></nav>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
-  <script src="../js/quiz.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
+  <script src="../js/quiz.js?v=44658ee8"></script>
 </body>
 </html>

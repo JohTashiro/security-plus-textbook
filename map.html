@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>全体の知識マップ · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -18,40 +18,45 @@
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="index.html">Security+ Textbook<span>SY0-701</span></a>
   <nav class="nav-section">
-    <h2>Domains</h2>
-    <a href="a/index.html">A. 一般的なセキュリティ概念</a><a href="b/index.html">B. 脅威・脆弱性・緩和</a><a href="c/index.html">C. セキュリティアーキテクチャ</a><a href="d/index.html">D. セキュリティ運用</a><a href="e/index.html">E. セキュリティプログラム管理・監督</a>
+    <h2><span data-i18n="ja">Domains</span><span data-i18n="en">Domains</span><span data-i18n="es">Domains</span></h2>
+    <a href="a/index.html">A. <span data-i18n="ja">一般的なセキュリティ概念</span><span data-i18n="en">General Security Concepts</span><span data-i18n="es">Conceptos generales de seguridad</span></a><a href="b/index.html">B. <span data-i18n="ja">脅威・脆弱性・緩和</span><span data-i18n="en">Threats, Vulnerabilities &amp; Mitigations</span><span data-i18n="es">Amenazas, vulnerabilidades y mitigaciones</span></a><a href="c/index.html">C. <span data-i18n="ja">セキュリティアーキテクチャ</span><span data-i18n="en">Security Architecture</span><span data-i18n="es">Arquitectura de seguridad</span></a><a href="d/index.html">D. <span data-i18n="ja">セキュリティ運用</span><span data-i18n="en">Security Operations</span><span data-i18n="es">Operaciones de seguridad</span></a><a href="e/index.html">E. <span data-i18n="ja">セキュリティプログラム管理・監督</span><span data-i18n="en">Security Program Management &amp; Oversight</span><span data-i18n="es">Gestión y supervisión del programa de seguridad</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>マップ</h2>
-    <a href="map.html" class="active">全体の知識マップ</a>
+    <h2><span data-i18n="ja">マップ</span><span data-i18n="en">Map</span><span data-i18n="es">Mapa</span></h2>
+    <a href="map.html" class="active"><span data-i18n="ja">全体の知識マップ</span><span data-i18n="en">Full knowledge map</span><span data-i18n="es">Mapa de conocimiento completo</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
     <main class="main main-wide">
       <header class="hero">
         <p class="eyebrow">SY0-701 · 全体</p>
-        <h1>知識マップ</h1>
-        <p>Domain を選ぶと、その Domain の用語マップへ進みます。章ラベルは各章の覚えるモードへリンクします（用語 459）。</p>
+        <h1><span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></h1>
+        <p><span data-i18n="ja">Domain を選ぶと、その Domain の用語マップへ進みます。章ラベルは各章の覚えるモードへリンクします（用語 459）。</span><span data-i18n="en">Pick a domain to open its term map. Chapter labels link to that chapter's memorize mode (459 terms).</span><span data-i18n="es">Elige un dominio para abrir su mapa de términos. Las etiquetas de capítulo enlazan al modo memorización de ese capítulo (459 términos).</span></p>
       </header>
       <div class="mindmap-wrap">
         <div id="mindmap" class="mindmap"></div>
       </div>
-      <script type="application/json" id="hubmap-data">{"root": "SY0-701", "domains": [{"code": "A", "title": "一般的なセキュリティ概念", "terms": 64, "map": "a/map.html", "href": "a/index.html", "chapters": [{"id": "A-1", "slug": "a-1", "title": "セキュリティコントロールの比較", "terms": 10}, {"id": "A-2", "slug": "a-2", "title": "セキュリティコンセプトの基礎", "terms": 16}, {"id": "A-3", "slug": "a-3", "title": "変更管理とセキュリティへの影響", "terms": 13}, {"id": "A-4", "slug": "a-4", "title": "適切な暗号化の選択", "terms": 25}]}, {"code": "B", "title": "脅威・脆弱性・緩和", "terms": 101, "map": "b/map.html", "href": "b/index.html", "chapters": [{"id": "B-1", "slug": "b-1", "title": "脅威アクターと動機", "terms": 18}, {"id": "B-2", "slug": "b-2", "title": "脅威ベクトルと攻撃対象領域", "terms": 25}, {"id": "B-3", "slug": "b-3", "title": "脆弱性の種類", "terms": 18}, {"id": "B-4", "slug": "b-4", "title": "悪意のある活動の兆候", "terms": 30}, {"id": "B-5", "slug": "b-5", "title": "緩和策", "terms": 10}]}, {"code": "C", "title": "セキュリティアーキテクチャ", "terms": 85, "map": "c/map.html", "href": "c/index.html", "chapters": [{"id": "C-1", "slug": "c-1", "title": "セキュリティアーキテクチャの全体像", "terms": 24}, {"id": "C-2", "slug": "c-2", "title": "インフラを守るセキュリティ原則", "terms": 19}, {"id": "C-3", "slug": "c-3", "title": "データ保護の戦略と概念", "terms": 23}, {"id": "C-4", "slug": "c-4", "title": "回復性と耐性", "terms": 19}]}, {"code": "D", "title": "セキュリティ運用", "terms": 155, "map": "d/map.html", "href": "d/index.html", "chapters": [{"id": "D-1", "slug": "d-1", "title": "リソースのセキュリティ対策", "terms": 27}, {"id": "D-2", "slug": "d-2", "title": "ハードウェアの取得・管理・廃棄", "terms": 8}, {"id": "D-3", "slug": "d-3", "title": "脆弱性管理手法", "terms": 24}, {"id": "D-4", "slug": "d-4", "title": "アラートとモニタリング", "terms": 15}, {"id": "D-5", "slug": "d-5", "title": "セキュリティ向上策", "terms": 25}, {"id": "D-6", "slug": "d-6", "title": "アクセス管理", "terms": 24}, {"id": "D-7", "slug": "d-7", "title": "自動化", "terms": 21}, {"id": "D-8", "slug": "d-8", "title": "インシデント対応", "terms": 11}]}, {"code": "E", "title": "セキュリティプログラム管理・監督", "terms": 54, "map": "e/map.html", "href": "e/index.html", "chapters": [{"id": "E-1", "slug": "e-1", "title": "セキュリティガバナンスの要素", "terms": 22}, {"id": "E-2", "slug": "e-2", "title": "リスク管理プロセス", "terms": 17}, {"id": "E-3", "slug": "e-3", "title": "第三者のリスク評価", "terms": 7}, {"id": "E-4", "slug": "e-4", "title": "セキュリティコンプライアンス", "terms": 8}]}]}</script>
+      <script type="application/json" id="hubmap-data">{"root": "SY0-701", "domains": [{"code": "A", "title": "一般的なセキュリティ概念", "title_en": "General Security Concepts", "title_es": "Conceptos generales de seguridad", "terms": 64, "map": "a/map.html", "href": "a/index.html", "chapters": [{"id": "A-1", "slug": "a-1", "title": "セキュリティコントロールの比較", "title_en": "Comparing security controls", "title_es": "Comparación de controles de seguridad", "terms": 10}, {"id": "A-2", "slug": "a-2", "title": "セキュリティコンセプトの基礎", "title_en": "Fundamental security concepts", "title_es": "Conceptos de seguridad fundamentales", "terms": 16}, {"id": "A-3", "slug": "a-3", "title": "変更管理とセキュリティへの影響", "title_en": "Change management and its security impact", "title_es": "Gestión de cambios y su impacto en la seguridad", "terms": 13}, {"id": "A-4", "slug": "a-4", "title": "適切な暗号化の選択", "title_en": "Choosing appropriate cryptography", "title_es": "Elección de la criptografía adecuada", "terms": 25}]}, {"code": "B", "title": "脅威・脆弱性・緩和", "title_en": "Threats, Vulnerabilities & Mitigations", "title_es": "Amenazas, vulnerabilidades y mitigaciones", "terms": 101, "map": "b/map.html", "href": "b/index.html", "chapters": [{"id": "B-1", "slug": "b-1", "title": "脅威アクターと動機", "title_en": "脅威アクターと動機", "title_es": "脅威アクターと動機", "terms": 18}, {"id": "B-2", "slug": "b-2", "title": "脅威ベクトルと攻撃対象領域", "title_en": "脅威ベクトルと攻撃対象領域", "title_es": "脅威ベクトルと攻撃対象領域", "terms": 25}, {"id": "B-3", "slug": "b-3", "title": "脆弱性の種類", "title_en": "脆弱性の種類", "title_es": "脆弱性の種類", "terms": 18}, {"id": "B-4", "slug": "b-4", "title": "悪意のある活動の兆候", "title_en": "悪意のある活動の兆候", "title_es": "悪意のある活動の兆候", "terms": 30}, {"id": "B-5", "slug": "b-5", "title": "緩和策", "title_en": "緩和策", "title_es": "緩和策", "terms": 10}]}, {"code": "C", "title": "セキュリティアーキテクチャ", "title_en": "Security Architecture", "title_es": "Arquitectura de seguridad", "terms": 85, "map": "c/map.html", "href": "c/index.html", "chapters": [{"id": "C-1", "slug": "c-1", "title": "セキュリティアーキテクチャの全体像", "title_en": "セキュリティアーキテクチャの全体像", "title_es": "セキュリティアーキテクチャの全体像", "terms": 24}, {"id": "C-2", "slug": "c-2", "title": "インフラを守るセキュリティ原則", "title_en": "インフラを守るセキュリティ原則", "title_es": "インフラを守るセキュリティ原則", "terms": 19}, {"id": "C-3", "slug": "c-3", "title": "データ保護の戦略と概念", "title_en": "データ保護の戦略と概念", "title_es": "データ保護の戦略と概念", "terms": 23}, {"id": "C-4", "slug": "c-4", "title": "回復性と耐性", "title_en": "回復性と耐性", "title_es": "回復性と耐性", "terms": 19}]}, {"code": "D", "title": "セキュリティ運用", "title_en": "Security Operations", "title_es": "Operaciones de seguridad", "terms": 155, "map": "d/map.html", "href": "d/index.html", "chapters": [{"id": "D-1", "slug": "d-1", "title": "リソースのセキュリティ対策", "title_en": "リソースのセキュリティ対策", "title_es": "リソースのセキュリティ対策", "terms": 27}, {"id": "D-2", "slug": "d-2", "title": "ハードウェアの取得・管理・廃棄", "title_en": "ハードウェアの取得・管理・廃棄", "title_es": "ハードウェアの取得・管理・廃棄", "terms": 8}, {"id": "D-3", "slug": "d-3", "title": "脆弱性管理手法", "title_en": "脆弱性管理手法", "title_es": "脆弱性管理手法", "terms": 24}, {"id": "D-4", "slug": "d-4", "title": "アラートとモニタリング", "title_en": "アラートとモニタリング", "title_es": "アラートとモニタリング", "terms": 15}, {"id": "D-5", "slug": "d-5", "title": "セキュリティ向上策", "title_en": "セキュリティ向上策", "title_es": "セキュリティ向上策", "terms": 25}, {"id": "D-6", "slug": "d-6", "title": "アクセス管理", "title_en": "アクセス管理", "title_es": "アクセス管理", "terms": 24}, {"id": "D-7", "slug": "d-7", "title": "自動化", "title_en": "自動化", "title_es": "自動化", "terms": 21}, {"id": "D-8", "slug": "d-8", "title": "インシデント対応", "title_en": "インシデント対応", "title_es": "インシデント対応", "terms": 11}]}, {"code": "E", "title": "セキュリティプログラム管理・監督", "title_en": "Security Program Management & Oversight", "title_es": "Gestión y supervisión del programa de seguridad", "terms": 54, "map": "e/map.html", "href": "e/index.html", "chapters": [{"id": "E-1", "slug": "e-1", "title": "セキュリティガバナンスの要素", "title_en": "セキュリティガバナンスの要素", "title_es": "セキュリティガバナンスの要素", "terms": 22}, {"id": "E-2", "slug": "e-2", "title": "リスク管理プロセス", "title_en": "リスク管理プロセス", "title_es": "リスク管理プロセス", "terms": 17}, {"id": "E-3", "slug": "e-3", "title": "第三者のリスク評価", "title_en": "第三者のリスク評価", "title_es": "第三者のリスク評価", "terms": 7}, {"id": "E-4", "slug": "e-4", "title": "セキュリティコンプライアンス", "title_en": "セキュリティコンプライアンス", "title_es": "セキュリティコンプライアンス", "terms": 8}]}]}</script>
     </main>
   </div>
-  <script src="js/app.js?v=0970edd5"></script>
-  <script src="js/hub-map.js?v=0970edd5"></script>
+  <script src="js/app.js?v=44658ee8"></script>
+  <script src="js/hub-map.js?v=44658ee8"></script>
 </body>
 </html>

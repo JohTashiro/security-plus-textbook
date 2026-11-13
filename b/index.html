@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Domain B 脅威・脆弱性・緩和 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,28 +17,33 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain B</span></a>
-  <a class="nav-back" href="../index.html">← ホーム</a>
+  <a class="nav-back" href="../index.html"><span data-i18n="ja">← ホーム</span><span data-i18n="en">← Home</span><span data-i18n="es">← Inicio</span></a>
   <nav class="nav-section">
     <h2>Domain B</h2>
-    <a href="b-1.html">B-1 脅威アクターと動機</a><a href="b-2.html">B-2 脅威ベクトルと攻撃対象領域</a><a href="b-3.html">B-3 脆弱性の種類</a><a href="b-4.html">B-4 悪意のある活動の兆候</a><a href="b-5.html">B-5 緩和策</a>
+    <a href="b-1.html">B-1 <span data-i18n="ja">脅威アクターと動機</span><span data-i18n="en">脅威アクターと動機</span><span data-i18n="es">脅威アクターと動機</span></a><a href="b-2.html">B-2 <span data-i18n="ja">脅威ベクトルと攻撃対象領域</span><span data-i18n="en">脅威ベクトルと攻撃対象領域</span><span data-i18n="es">脅威ベクトルと攻撃対象領域</span></a><a href="b-3.html">B-3 <span data-i18n="ja">脆弱性の種類</span><span data-i18n="en">脆弱性の種類</span><span data-i18n="es">脆弱性の種類</span></a><a href="b-4.html">B-4 <span data-i18n="ja">悪意のある活動の兆候</span><span data-i18n="en">悪意のある活動の兆候</span><span data-i18n="es">悪意のある活動の兆候</span></a><a href="b-5.html">B-5 <span data-i18n="ja">緩和策</span><span data-i18n="en">緩和策</span><span data-i18n="es">緩和策</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
     
-    <a href="map.html">Domain B 知識マップ</a>
+    <a href="map.html">Domain B <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -46,40 +51,50 @@
       
 <header class="hero">
   <p class="eyebrow">CompTIA Security+ SY0-701 · Domain B</p>
-  <h1>Domain B<br>脅威・脆弱性・緩和</h1>
-  <p>ドメイン2では、攻撃者（脅威アクター）とその手口、システムの脆弱性、攻撃の兆候を体系的に学び、最後にそれらを抑える緩和策を押さえる。</p>
+  <h1>Domain B<br><span data-i18n="ja">脅威・脆弱性・緩和</span><span data-i18n="en">脅威・脆弱性・緩和</span><span data-i18n="es">脅威・脆弱性・緩和</span></h1>
+  <p data-i18n="ja">ドメイン2では、攻撃者（脅威アクター）とその手口、システムの脆弱性、攻撃の兆候を体系的に学び、最後にそれらを抑える緩和策を押さえる。</p><p data-i18n="en">Pick a chapter to study. Check relationships in the Domain knowledge map.</p><p data-i18n="es">Elige un capítulo para estudiar. Revisa las relaciones en el mapa de conocimiento del Domain.</p>
   <div class="meta-row">
-    <span class="chip">用語 101</span>
-    <span class="chip">公式 Domain 2</span>
+    <span class="chip"><span data-i18n="ja">用語 101</span><span data-i18n="en">101 terms</span><span data-i18n="es">101 términos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 Domain 2</span><span data-i18n="en">Official Domain 2</span><span data-i18n="es">Oficial Domain 2</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-ghost" href="map.html">Domain B 知識マップ</a>
+    <a class="btn btn-ghost" href="map.html">Domain B <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </div>
 </header>
 <section class="chapter-grid"><a class="chapter-card" href="b-1.html">
   <div class="code">B-1</div>
-  <h2>脅威アクターと動機</h2>
-  <p>誰が・どんな力で・なぜ攻撃するのか · 18語</p>
+  <h2><span data-i18n="ja">脅威アクターと動機</span><span data-i18n="en">脅威アクターと動機</span><span data-i18n="es">脅威アクターと動機</span></h2>
+  <p data-i18n="ja">誰が・どんな力で・なぜ攻撃するのか · 18語</p>
+  <p data-i18n="en">誰が・どんな力で・なぜ攻撃するのか · 18 terms</p>
+  <p data-i18n="es">誰が・どんな力で・なぜ攻撃するのか · 18 términos</p>
 </a><a class="chapter-card" href="b-2.html">
   <div class="code">B-2</div>
-  <h2>脅威ベクトルと攻撃対象領域</h2>
-  <p>どこから・どうやって攻撃が入るか · 25語</p>
+  <h2><span data-i18n="ja">脅威ベクトルと攻撃対象領域</span><span data-i18n="en">脅威ベクトルと攻撃対象領域</span><span data-i18n="es">脅威ベクトルと攻撃対象領域</span></h2>
+  <p data-i18n="ja">どこから・どうやって攻撃が入るか · 25語</p>
+  <p data-i18n="en">どこから・どうやって攻撃が入るか · 25 terms</p>
+  <p data-i18n="es">どこから・どうやって攻撃が入るか · 25 términos</p>
 </a><a class="chapter-card" href="b-3.html">
   <div class="code">B-3</div>
-  <h2>脆弱性の種類</h2>
-  <p>アプリ・OS・ハード・クラウドの弱点 · 18語</p>
+  <h2><span data-i18n="ja">脆弱性の種類</span><span data-i18n="en">脆弱性の種類</span><span data-i18n="es">脆弱性の種類</span></h2>
+  <p data-i18n="ja">アプリ・OS・ハード・クラウドの弱点 · 18語</p>
+  <p data-i18n="en">アプリ・OS・ハード・クラウドの弱点 · 18 terms</p>
+  <p data-i18n="es">アプリ・OS・ハード・クラウドの弱点 · 18 términos</p>
 </a><a class="chapter-card" href="b-4.html">
   <div class="code">B-4</div>
-  <h2>悪意のある活動の兆候</h2>
-  <p>マルウェア・攻撃手法と異常の兆候を見抜く · 30語</p>
+  <h2><span data-i18n="ja">悪意のある活動の兆候</span><span data-i18n="en">悪意のある活動の兆候</span><span data-i18n="es">悪意のある活動の兆候</span></h2>
+  <p data-i18n="ja">マルウェア・攻撃手法と異常の兆候を見抜く · 30語</p>
+  <p data-i18n="en">マルウェア・攻撃手法と異常の兆候を見抜く · 30 terms</p>
+  <p data-i18n="es">マルウェア・攻撃手法と異常の兆候を見抜く · 30 términos</p>
 </a><a class="chapter-card" href="b-5.html">
   <div class="code">B-5</div>
-  <h2>緩和策</h2>
-  <p>企業を守るための軽減テクニック · 10語</p>
+  <h2><span data-i18n="ja">緩和策</span><span data-i18n="en">緩和策</span><span data-i18n="es">緩和策</span></h2>
+  <p data-i18n="ja">企業を守るための軽減テクニック · 10語</p>
+  <p data-i18n="en">企業を守るための軽減テクニック · 10 terms</p>
+  <p data-i18n="es">企業を守るための軽減テクニック · 10 términos</p>
 </a></section>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
 </body>
 </html>

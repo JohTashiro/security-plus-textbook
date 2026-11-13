@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Domain D セキュリティ運用 · Security+ Textbook</title>
-  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');if(s.lang==='en')c.add('lang-en');if(s.lang==='es')c.add('lang-es');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+  <link rel="stylesheet" href="../css/app.css?v=44658ee8">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -17,28 +17,33 @@
     
 <aside class="sidebar" id="sidebar">
   <a class="brand" href="../index.html">Security+ Textbook<span>Domain D</span></a>
-  <a class="nav-back" href="../index.html">← ホーム</a>
+  <a class="nav-back" href="../index.html"><span data-i18n="ja">← ホーム</span><span data-i18n="en">← Home</span><span data-i18n="es">← Inicio</span></a>
   <nav class="nav-section">
     <h2>Domain D</h2>
-    <a href="d-1.html">D-1 リソースのセキュリティ対策</a><a href="d-2.html">D-2 ハードウェアの取得・管理・廃棄</a><a href="d-3.html">D-3 脆弱性管理手法</a><a href="d-4.html">D-4 アラートとモニタリング</a><a href="d-5.html">D-5 セキュリティ向上策</a><a href="d-6.html">D-6 アクセス管理</a><a href="d-7.html">D-7 自動化</a><a href="d-8.html">D-8 インシデント対応</a>
+    <a href="d-1.html">D-1 <span data-i18n="ja">リソースのセキュリティ対策</span><span data-i18n="en">リソースのセキュリティ対策</span><span data-i18n="es">リソースのセキュリティ対策</span></a><a href="d-2.html">D-2 <span data-i18n="ja">ハードウェアの取得・管理・廃棄</span><span data-i18n="en">ハードウェアの取得・管理・廃棄</span><span data-i18n="es">ハードウェアの取得・管理・廃棄</span></a><a href="d-3.html">D-3 <span data-i18n="ja">脆弱性管理手法</span><span data-i18n="en">脆弱性管理手法</span><span data-i18n="es">脆弱性管理手法</span></a><a href="d-4.html">D-4 <span data-i18n="ja">アラートとモニタリング</span><span data-i18n="en">アラートとモニタリング</span><span data-i18n="es">アラートとモニタリング</span></a><a href="d-5.html">D-5 <span data-i18n="ja">セキュリティ向上策</span><span data-i18n="en">セキュリティ向上策</span><span data-i18n="es">セキュリティ向上策</span></a><a href="d-6.html">D-6 <span data-i18n="ja">アクセス管理</span><span data-i18n="en">アクセス管理</span><span data-i18n="es">アクセス管理</span></a><a href="d-7.html">D-7 <span data-i18n="ja">自動化</span><span data-i18n="en">自動化</span><span data-i18n="es">自動化</span></a><a href="d-8.html">D-8 <span data-i18n="ja">インシデント対応</span><span data-i18n="en">インシデント対応</span><span data-i18n="es">インシデント対応</span></a>
   </nav>
   <nav class="nav-section">
-    <h2>ツール</h2>
+    <h2><span data-i18n="ja">ツール</span><span data-i18n="en">Tools</span><span data-i18n="es">Herramientas</span></h2>
     
-    <a href="map.html">Domain D 知識マップ</a>
+    <a href="map.html">Domain D <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </nav>
   <section class="nav-section settings" aria-label="設定">
-    <h2>設定</h2>
+    <h2><span data-i18n="ja">設定</span><span data-i18n="en">Settings</span><span data-i18n="es">Ajustes</span></h2>
     <label class="switch-row">
-      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <span><span data-i18n="ja">覚えるモード</span><span data-i18n="en">Memorize mode</span><span data-i18n="es">Modo memorización</span><small><span data-i18n="ja">答えを隠してタップで表示</span><span data-i18n="en">Hide answers, tap to reveal</span><span data-i18n="es">Oculta las respuestas, toca para verlas</span></small></span>
       <input type="checkbox" role="switch" data-setting="memorize">
       <span class="switch" aria-hidden="true"></span>
     </label>
     <label class="switch-row">
-      <span>ダークモード</span>
+      <span><span data-i18n="ja">ダークモード</span><span data-i18n="en">Dark mode</span><span data-i18n="es">Modo oscuro</span></span>
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <div class="lang-row" role="group" aria-label="言語 / Language / Idioma">
+      <button type="button" class="lang-btn" data-lang-btn="ja">日本語</button>
+      <button type="button" class="lang-btn" data-lang-btn="en">EN</button>
+      <button type="button" class="lang-btn" data-lang-btn="es">ES</button>
+    </div>
   </section>
 </aside>
 
@@ -46,52 +51,68 @@
       
 <header class="hero">
   <p class="eyebrow">CompTIA Security+ SY0-701 · Domain D</p>
-  <h1>Domain D<br>セキュリティ運用</h1>
-  <p>ドメイン4はセキュリティオペレーション、すなわち守りを「どう運用するか」を学ぶ領域である。9つの小項目は比較的独立しており、端末・サーバへの対策から監視・インシデント対応まで実務寄りのテーマが並ぶ。</p>
+  <h1>Domain D<br><span data-i18n="ja">セキュリティ運用</span><span data-i18n="en">セキュリティ運用</span><span data-i18n="es">セキュリティ運用</span></h1>
+  <p data-i18n="ja">ドメイン4はセキュリティオペレーション、すなわち守りを「どう運用するか」を学ぶ領域である。9つの小項目は比較的独立しており、端末・サーバへの対策から監視・インシデント対応まで実務寄りのテーマが並ぶ。</p><p data-i18n="en">Pick a chapter to study. Check relationships in the Domain knowledge map.</p><p data-i18n="es">Elige un capítulo para estudiar. Revisa las relaciones en el mapa de conocimiento del Domain.</p>
   <div class="meta-row">
-    <span class="chip">用語 155</span>
-    <span class="chip">公式 Domain 4</span>
+    <span class="chip"><span data-i18n="ja">用語 155</span><span data-i18n="en">155 terms</span><span data-i18n="es">155 términos</span></span>
+    <span class="chip"><span data-i18n="ja">公式 Domain 4</span><span data-i18n="en">Official Domain 4</span><span data-i18n="es">Oficial Domain 4</span></span>
   </div>
   <div class="action-row">
-    <a class="btn btn-ghost" href="map.html">Domain D 知識マップ</a>
+    <a class="btn btn-ghost" href="map.html">Domain D <span data-i18n="ja">知識マップ</span><span data-i18n="en">Knowledge map</span><span data-i18n="es">Mapa de conocimiento</span></a>
   </div>
 </header>
 <section class="chapter-grid"><a class="chapter-card" href="d-1.html">
   <div class="code">D-1</div>
-  <h2>リソースのセキュリティ対策</h2>
-  <p>端末・サーバ・クラウドの守り方 · 27語</p>
+  <h2><span data-i18n="ja">リソースのセキュリティ対策</span><span data-i18n="en">リソースのセキュリティ対策</span><span data-i18n="es">リソースのセキュリティ対策</span></h2>
+  <p data-i18n="ja">端末・サーバ・クラウドの守り方 · 27語</p>
+  <p data-i18n="en">端末・サーバ・クラウドの守り方 · 27 terms</p>
+  <p data-i18n="es">端末・サーバ・クラウドの守り方 · 27 términos</p>
 </a><a class="chapter-card" href="d-2.html">
   <div class="code">D-2</div>
-  <h2>ハードウェアの取得・管理・廃棄</h2>
-  <p>調達から追跡、廃棄までの資産管理 · 8語</p>
+  <h2><span data-i18n="ja">ハードウェアの取得・管理・廃棄</span><span data-i18n="en">ハードウェアの取得・管理・廃棄</span><span data-i18n="es">ハードウェアの取得・管理・廃棄</span></h2>
+  <p data-i18n="ja">調達から追跡、廃棄までの資産管理 · 8語</p>
+  <p data-i18n="en">調達から追跡、廃棄までの資産管理 · 8 terms</p>
+  <p data-i18n="es">調達から追跡、廃棄までの資産管理 · 8 términos</p>
 </a><a class="chapter-card" href="d-3.html">
   <div class="code">D-3</div>
-  <h2>脆弱性管理手法</h2>
-  <p>特定・分析・対応の一連の活動 · 24語</p>
+  <h2><span data-i18n="ja">脆弱性管理手法</span><span data-i18n="en">脆弱性管理手法</span><span data-i18n="es">脆弱性管理手法</span></h2>
+  <p data-i18n="ja">特定・分析・対応の一連の活動 · 24語</p>
+  <p data-i18n="en">特定・分析・対応の一連の活動 · 24 terms</p>
+  <p data-i18n="es">特定・分析・対応の一連の活動 · 24 términos</p>
 </a><a class="chapter-card" href="d-4.html">
   <div class="code">D-4</div>
-  <h2>アラートとモニタリング</h2>
-  <p>監視対象・活動・対応とツール · 15語</p>
+  <h2><span data-i18n="ja">アラートとモニタリング</span><span data-i18n="en">アラートとモニタリング</span><span data-i18n="es">アラートとモニタリング</span></h2>
+  <p data-i18n="ja">監視対象・活動・対応とツール · 15語</p>
+  <p data-i18n="en">監視対象・活動・対応とツール · 15 terms</p>
+  <p data-i18n="es">監視対象・活動・対応とツール · 15 términos</p>
 </a><a class="chapter-card" href="d-5.html">
   <div class="code">D-5</div>
-  <h2>セキュリティ向上策</h2>
-  <p>FW・IDS/IPS・Webフィルタ・安全プロトコル・メール認証など · 25語</p>
+  <h2><span data-i18n="ja">セキュリティ向上策</span><span data-i18n="en">セキュリティ向上策</span><span data-i18n="es">セキュリティ向上策</span></h2>
+  <p data-i18n="ja">FW・IDS/IPS・Webフィルタ・安全プロトコル・メール認証など · 25語</p>
+  <p data-i18n="en">FW・IDS/IPS・Webフィルタ・安全プロトコル・メール認証など · 25 terms</p>
+  <p data-i18n="es">FW・IDS/IPS・Webフィルタ・安全プロトコル・メール認証など · 25 términos</p>
 </a><a class="chapter-card" href="d-6.html">
   <div class="code">D-6</div>
-  <h2>アクセス管理</h2>
-  <p>IAM・アクセス制御・MFA・パスワード · 24語</p>
+  <h2><span data-i18n="ja">アクセス管理</span><span data-i18n="en">アクセス管理</span><span data-i18n="es">アクセス管理</span></h2>
+  <p data-i18n="ja">IAM・アクセス制御・MFA・パスワード · 24語</p>
+  <p data-i18n="en">IAM・アクセス制御・MFA・パスワード · 24 terms</p>
+  <p data-i18n="es">IAM・アクセス制御・MFA・パスワード · 24 términos</p>
 </a><a class="chapter-card" href="d-7.html">
   <div class="code">D-7</div>
-  <h2>自動化</h2>
-  <p>ユースケース・メリット・考慮事項 · 21語</p>
+  <h2><span data-i18n="ja">自動化</span><span data-i18n="en">自動化</span><span data-i18n="es">自動化</span></h2>
+  <p data-i18n="ja">ユースケース・メリット・考慮事項 · 21語</p>
+  <p data-i18n="en">ユースケース・メリット・考慮事項 · 21 terms</p>
+  <p data-i18n="es">ユースケース・メリット・考慮事項 · 21 términos</p>
 </a><a class="chapter-card" href="d-8.html">
   <div class="code">D-8</div>
-  <h2>インシデント対応</h2>
-  <p>IRプロセス・訓練・根本原因・脅威ハンティング · 11語</p>
+  <h2><span data-i18n="ja">インシデント対応</span><span data-i18n="en">インシデント対応</span><span data-i18n="es">インシデント対応</span></h2>
+  <p data-i18n="ja">IRプロセス・訓練・根本原因・脅威ハンティング · 11語</p>
+  <p data-i18n="en">IRプロセス・訓練・根本原因・脅威ハンティング · 11 terms</p>
+  <p data-i18n="es">IRプロセス・訓練・根本原因・脅威ハンティング · 11 términos</p>
 </a></section>
 
     </main>
   </div>
-  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/app.js?v=44658ee8"></script>
 </body>
 </html>
