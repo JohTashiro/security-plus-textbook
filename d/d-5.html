@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D-5 セキュリティ向上策 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain D</span></a>
+  <a class="nav-back" href="index.html">← Domain D ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain D</h2>
+    <a href="d-1.html">D-1 リソースのセキュリティ対策</a><a href="d-2.html">D-2 ハードウェアの取得・管理・廃棄</a><a href="d-3.html">D-3 脆弱性管理手法</a><a href="d-4.html">D-4 アラートとモニタリング</a><a href="d-5.html" class="active">D-5 セキュリティ向上策</a><a href="d-6.html">D-6 アクセス管理</a><a href="d-7.html">D-7 自動化</a><a href="d-8.html">D-8 インシデント対応</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain D 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain D · D-5</p>
+  <h1>セキュリティ向上策</h1>
+  <p>FW・IDS/IPS・Webフィルタ・安全プロトコル・メール認証など</p>
+  <div class="meta-row">
+    <span class="chip">用語 25</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 4.5</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 25問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">ファイアウォール</h2>
+<article class="memo-card" id="d-5-rules" data-search="ルール rules fwで許可／拒否する通信条件 特定ipのみ許可 悪意ipのブロック">
+  <h3>ルール<span class="en">Rules</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">FWで<span class="hl">許可／拒否</span>する通信条件</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>特定IPのみ許可</li><li>悪意IPのブロック</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-access-lists" data-search="アクセスリスト access lists 出入りトラフィックを制御する規則の集合 部門ipのみ許可 国・ipレンジの拒否">
+  <h3>アクセスリスト<span class="en">Access lists</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">出入りトラフィックを制御する<span class="hl">規則の集合</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>部門IPのみ許可</li><li>国・IPレンジの拒否</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-ports-protocols" data-search="ポート、プロトコル ports/protocols 不要なポート／プロトコルを閉じる 未使用の80/443閉鎖 ftpポート閉鎖">
+  <h3>ポート、プロトコル<span class="en">Ports/protocols</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">不要な<span class="hl">ポート／プロトコルを閉じる</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>未使用の80/443閉鎖</li><li>FTPポート閉鎖</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">IDS/IPS</h2>
+<article class="memo-card" id="d-5-ids-ips-trends" data-search="ids/ipsのトレンド ids/ips trends 最新脅威動向やai/ml検知を活用する 行動逸脱の検知 未知脅威の早期発見">
+  <h3>IDS/IPSのトレンド<span class="en">IDS/IPS trends</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">最新脅威動向や<span class="hl">AI/ML検知</span>を活用する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>行動逸脱の検知</li><li>未知脅威の早期発見</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-ids-ips-signatures" data-search="ids/ipsのシグネチャ ids/ips signatures 既知攻撃のパターン一致で警告／ブロック c2通信シグネチャ 定期更新と誤検知調整">
+  <h3>IDS/IPSのシグネチャ<span class="en">IDS/IPS signatures</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">既知攻撃の<span class="hl">パターン一致</span>で警告／ブロック</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>C2通信シグネチャ</li><li>定期更新と誤検知調整</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">Webフィルタ</h2>
+<article class="memo-card" id="d-5-agent-based" data-search="エージェントベース agent-based 端末にエージェントを入れてwebを制御 悪意サイトのローカル遮断 ユーザー単位ポリシー">
+  <h3>エージェントベース<span class="en">Agent-based</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">端末に<span class="hl">エージェント</span>を入れてWebを制御</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>悪意サイトのローカル遮断</li><li>ユーザー単位ポリシー</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-centralized-proxy" data-search="セントラルプロキシ centralized proxy web通信を一元管理するプロキシ 中央でのブロック アクセスログ可視化">
+  <h3>セントラルプロキシ<span class="en">Centralized proxy</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">Web通信を<span class="hl">一元管理</span>するプロキシ</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>中央でのブロック</li><li>アクセスログ可視化</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-url-scanning" data-search="urlスキャニング url scanning アクセス先urlをリアルタイム検査 フィッシングurl遮断 マルウェア配布url検知">
+  <h3>URLスキャニング<span class="en">URL scanning</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">アクセス先URLを<span class="hl">リアルタイム検査</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>フィッシングURL遮断</li><li>マルウェア配布URL検知</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-content-categorization" data-search="コンテンツ分類 content categorization サイトをカテゴリ分けして制御 snsカテゴリのブロック 業務必須サイトの確保">
+  <h3>コンテンツ分類<span class="en">Content categorization</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">サイトを<span class="hl">カテゴリ分け</span>して制御</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SNSカテゴリのブロック</li><li>業務必須サイトの確保</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-block-rules" data-search="ブロックルール block rules 特定url等を明示的に禁止 特定snsのurl禁止 ip単位のブロック">
+  <h3>ブロックルール<span class="en">Block rules</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">特定URL等を<span class="hl">明示的に禁止</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>特定SNSのURL禁止</li><li>IP単位のブロック</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-reputation" data-search="レピュテーション reputation サイトの評判スコアで許可／拒否 悪評サイトの自動遮断 閾値の調整">
+  <h3>レピュテーション<span class="en">Reputation</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">サイトの<span class="hl">評判スコア</span>で許可／拒否</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>悪評サイトの自動遮断</li><li>閾値の調整</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">OSセキュリティ</h2>
+<article class="memo-card" id="d-5-group-policy" data-search="グループポリシー group policy windows設定を一元管理する仕組み 自動アップデート強制 パスワード／ロックアウト">
+  <h3>グループポリシー<span class="en">Group Policy</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">Windows設定を<span class="hl">一元管理</span>する仕組み</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>自動アップデート強制</li><li>パスワード／ロックアウト</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-selinux" data-search="selinux selinux linuxでラベルとポリシーによる強制アクセス制御 httpdのディレクトリ制限 許可ポートの限定">
+  <h3>SELinux<span class="en">SELinux</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">Linuxで<span class="hl">ラベルとポリシー</span>による強制アクセス制御</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>httpdのディレクトリ制限</li><li>許可ポートの限定</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">安全なプロトコル実装</h2>
+<article class="memo-card" id="d-5-protocol-selection" data-search="プロトコルの選択 protocol selection 可能な限り暗号化プロトコルを選ぶ http→https tls付きメール">
+  <h3>プロトコルの選択<span class="en">Protocol selection</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">可能な限り<span class="hl">暗号化プロトコル</span>を選ぶ</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>HTTP→HTTPS</li><li>TLS付きメール</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-port-selection" data-search="ポートの選択 port selection サービス待ち受けポートを適切に選ぶ sshの22番変更 自動攻撃の回避">
+  <h3>ポートの選択<span class="en">Port selection</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">サービス待ち受け<span class="hl">ポートを適切に選ぶ</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SSHの22番変更</li><li>自動攻撃の回避</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-transport-method" data-search="転送方法 transport method 暗号化通信路でデータを送る tls転送 sftp/ftps">
+  <h3>転送方法<span class="en">Transport method</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">暗号化通信路</span>でデータを送る</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>TLS転送</li><li>SFTP/FTPS</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">DNSとメール認証</h2>
+<article class="memo-card" id="d-5-dns-filtering" data-search="dnsフィルタリング dns filtering 名前解決時に悪質ドメインを遮断 ランサムc2遮断 偽サイト解決の拒否">
+  <h3>DNSフィルタリング<span class="en">DNS filtering</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">名前解決時に<span class="hl">悪質ドメインを遮断</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ランサムC2遮断</li><li>偽サイト解決の拒否</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-dmarc" data-search="dmarc dmarc spf/dkim結果でなりすましメールの扱いを決める 認証失敗メールの拒否 dnsのdmarcレコード">
+  <h3>DMARC<span class="en">DMARC</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">SPF/DKIM結果で<span class="hl">なりすましメールの扱い</span>を決める</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>認証失敗メールの拒否</li><li>DNSのDMARCレコード</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-dkim" data-search="dkim dkim メールにデジタル署名を付けて正当性を示す 秘密鍵で署名 公開鍵をdns公開">
+  <h3>DKIM<span class="en">DKIM</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">メールに<span class="hl">デジタル署名</span>を付けて正当性を示す</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>秘密鍵で署名</li><li>公開鍵をDNS公開</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-spf" data-search="spf spf 正規の送信ipをdnsで宣言し照合 許可ipのみ送信可 詐称メールの検知">
+  <h3>SPF<span class="en">SPF</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">正規の<span class="hl">送信IPをDNSで宣言</span>し照合</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>許可IPのみ送信可</li><li>詐称メールの検知</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">データ保護とエンドポイント</h2>
+<article class="memo-card" id="d-5-fim" data-search="ファイル完全性監視 file integrity monitoring 重要ファイルの改変をハッシュで検知 ベースライン比較 システムファイル監視">
+  <h3>ファイル完全性監視<span class="en">File integrity monitoring</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">重要ファイルの<span class="hl">改変をハッシュで検知</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ベースライン比較</li><li>システムファイル監視</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-dlp" data-search="dlp dlp 重要情報の漏洩・持ち出しを防ぐ 機密の特定と保護 不正持ち出しの抑止">
+  <h3>DLP<span class="en">DLP</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">重要情報の<span class="hl">漏洩・持ち出しを防ぐ</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>機密の特定と保護</li><li>不正持ち出しの抑止</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-nac" data-search="nac nac 接続前に端末健全性を検証し非準拠を制限 パッチ未適用の隔離 byodの準拠確認">
+  <h3>NAC<span class="en">NAC</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">接続前に端末<span class="hl">健全性を検証</span>し非準拠を制限</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>パッチ未適用の隔離</li><li>BYODの準拠確認</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-edr-xdr" data-search="edr/xdr edr/xdr 端末〜横断で検知と対応を行う エンドポイント封じ込め nw/クラウド横断検知">
+  <h3>EDR/XDR<span class="en">EDR/XDR</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">端末〜横断で<span class="hl">検知と対応</span>を行う</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>エンドポイント封じ込め</li><li>NW/クラウド横断検知</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-5-uba" data-search="ユーザー行動分析 user behavior analytics 通常行動からの逸脱を検知 異常ログイン検知 大量dlの予兆検知">
+  <h3>ユーザー行動分析<span class="en">User behavior analytics</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">通常行動からの<span class="hl">逸脱を検知</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>異常ログイン検知</li><li>大量DLの予兆検知</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（25問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "d-5-rules", "stem": "社内サーバーへは業務に必要な特定IPのみ許可し、既知の悪意あるIPへの接続は拒否するようファイアウォールに条件を設定した。これはどれか。", "choices": ["レピュテーションのみ", "ルール", "DKIM", "ファイル完全性監視"], "answer": 1, "explain": "許可／拒否の通信条件を定めるのがファイアウォールのルール。最小権限がポイント。"}, {"term": "d-5-access-lists", "stem": "経理サーバーへは経理部門のIPからのみアクセスできるよう、許可するアドレスをリスト化して出入りを制御した。これはどれか。", "choices": ["アクセスリスト", "SELinux", "URLスキャニング", "転送方法"], "answer": 0, "explain": "トラフィック制御のための規則の集合がアクセスリスト（ACL）。信頼できるIP／ネットワークのリスト化が典型。"}, {"term": "d-5-ports-protocols", "stem": "社内でWebもFTPも使っていないため、ファイアウォールでHTTP/HTTPSやFTP用のポートを閉じ、不要プロトコル通信も遮断した。主に何をしているか。", "choices": ["DMARCの導入", "ポート、プロトコルの制御", "ユーザー行動分析", "グループポリシーのみ"], "answer": 1, "explain": "不要なポートやプロトコルを閉じて攻撃面を減らすのが Ports/protocols の考え方。"}, {"term": "d-5-ids-ips-trends", "stem": "IDS/IPSにAI/機械学習を取り入れ、ユーザーの通常行動から外れた動きで未知の脅威や内部不正を早期検知する最新手法を導入した。主にどの観点か。", "choices": ["SPFレコード", "ブロックルール", "IDS/IPSのトレンド", "コールドサイト"], "answer": 2, "explain": "最新の脅威動向やAI/ML検知の活用が IDS/IPS のトレンド。"}, {"term": "d-5-ids-ips-signatures", "stem": "既知マルウェアが特定IPへ通信するパターンを定義し、IDS/IPSに適用して一致時にブロック。シグネチャは定期更新し誤検知も調整している。これはどれか。", "choices": ["IDS/IPSのシグネチャ", "NAC", "コンテンツ分類", "ポートの選択"], "answer": 0, "explain": "既知攻撃の特徴パターン一致で警告／ブロックするのがシグネチャ。更新と精度調整が重要。"}, {"term": "d-5-agent-based", "stem": "各PCにソフトを入れ、悪意あるWebサイトへのアクセスを端末側でブロックし、ユーザー単位のポリシーも適用できるようにした。これはどれか。", "choices": ["セントラルプロキシ", "エージェントベースのWebフィルタ", "DNSフィルタリングのみ", "スクリーンサブネット"], "answer": 1, "explain": "エンドポイントにエージェントを入れてWebを制御するのがエージェントベース。"}, {"term": "d-5-centralized-proxy", "stem": "組織内のすべてのWeb通信を1台のサーバー経由で検査し、危険サイトをブロックしつつアクセスログで可視化した。これはどれか。", "choices": ["セントラルプロキシ", "SELinux", "ファイル完全性監視", "SPF"], "answer": 0, "explain": "Web通信を一元管理するプロキシがセントラルプロキシ。ブロックとログ可視化が特徴。"}, {"term": "d-5-url-scanning", "stem": "ユーザーが開こうとしたURLをリアルタイム分析し、既知フィッシングのパターンと一致したためアクセスを遮断した。これはどれか。", "choices": ["グループポリシー", "URLスキャニング", "転送方法", "ホットサイト"], "answer": 1, "explain": "アクセス先URLをリアルタイム検査して安全性を判定するのがURLスキャニング。"}, {"term": "d-5-content-categorization", "stem": "業務外のSNSをまとめて禁止するため、サイトをニュース・SNS・ギャンブル等に分類し、SNSカテゴリをブロックするポリシーにした。これはどれか。", "choices": ["DKIM", "コンテンツ分類", "UPS", "EDRのみ"], "answer": 1, "explain": "内容に基づきカテゴリ分けして制御するのがコンテンツ分類。過剰ブロック回避もポイント。"}, {"term": "d-5-block-rules", "stem": "カテゴリ一括ではなく、特定のSNSのURLを明示的に禁止リストへ追加してアクセスできなくした。これはどれか。", "choices": ["ブロックルール", "ジャーナリング", "マルチクラウド", "プロトコルの選択"], "answer": 0, "explain": "特定サイト／コンテンツを明示禁止するのがブロックルール。カテゴリより細かい制御。"}, {"term": "d-5-reputation", "stem": "多くのユーザーやベンダーからマルウェア配布と報告されているサイトを、評判スコアに基づき自動で危険と判断して遮断した。これはどれか。", "choices": ["レピュテーション", "コールドサイト", "ポートの選択のみ", "アカウントロックアウトのみ"], "answer": 0, "explain": "サイトの評判に基づき許可／拒否するのがレピュテーション。閾値設定で誤検知を抑える。"}, {"term": "d-5-group-policy", "stem": "ドメイン参加PCすべてにOS更新の自動適用、パスワードポリシー、アカウントロックアウトを一括配布した。これはどれか。", "choices": ["SELinux", "グループポリシー", "DMARC", "URLスキャニング"], "answer": 1, "explain": "Windows等でセキュリティ設定を一元管理するのがグループポリシー。"}, {"term": "d-5-selinux", "stem": "Linux上でApacheプロセスにラベルを付け、HTMLディレクトリとポート80/443以外へのアクセスをポリシーで禁止した。これはどれか。", "choices": ["グループポリシー", "SELinux", "NAC", "コンテンツ分類"], "answer": 1, "explain": "ラベルとポリシーでプロセスの権限を強制制限するのがSELinux。"}, {"term": "d-5-protocol-selection", "stem": "Webは平文HTTPではなくHTTPS、メールもTLSで保護される方式を選び、盗聴・改ざんリスクを下げた。主に何をしているか。", "choices": ["プロトコルの選択", "ファイル完全性監視", "レピュテーションのみ", "アクセスリストの削除"], "answer": 0, "explain": "より安全な（暗号化）プロトコルを選ぶのがプロトコルの選択。"}, {"term": "d-5-port-selection", "stem": "SSHの既定ポート22番を別番号に変え、ポートスキャンや自動化された攻撃での発見を難しくした。これはどれか。", "choices": ["ポートの選択", "DLP", "SPF", "ユーザー行動分析"], "answer": 0, "explain": "サービス待ち受けポートを適切に選ぶ（非標準化含む）のがポートの選択。"}, {"term": "d-5-transport-method", "stem": "重要ファイルを平文FTPではなく、TLSやSFTP/FTPSなど暗号化された通信路で送る方針にした。これはどれか。", "choices": ["転送方法", "スクリーンサブネット", "シグネチャのみ", "コールドサイト"], "answer": 0, "explain": "暗号化通信路など安全な送り方を選ぶのが転送方法（Transport method）。"}, {"term": "d-5-dns-filtering", "stem": "名前解決の段階でランサムウェアのC2やフィッシング偽サイトのドメインへの解決を遮断し、端末が到達できないようにした。これはどれか。", "choices": ["DNSフィルタリング", "ホットサイト", "SELinux", "ブロックルール（ポート80全閉のみ）"], "answer": 0, "explain": "DNSクエリ段階で悪質ドメインを遮断するのがDNSフィルタリング。"}, {"term": "d-5-dmarc", "stem": "自社ドメインを詐称したフィッシングメールがSPF/DKIM認証に失敗したため、DNSに置いた方針に従い受信側が拒否した。この方針の仕組みはどれか。", "choices": ["NAC", "DMARC", "エージェントベース", "ポート、プロトコル"], "answer": 1, "explain": "SPFとDKIMの結果を用い、失敗時の扱いを定めるのがDMARC。"}, {"term": "d-5-dkim", "stem": "送信メールサーバーが秘密鍵で署名し、公開鍵をDNSのTXTに公開して、受信側が改ざんされていない正当なメールか検証できるようにした。これはどれか。", "choices": ["SPF", "DKIM", "FIM", "セントラルプロキシ"], "answer": 1, "explain": "デジタル署名でメールの正当性・改ざん検知を行うのがDKIM。"}, {"term": "d-5-spf", "stem": "自社ドメインのDNSに、許可するメール送信サーバーのIPだけを宣言するレコードを置き、受信側がそのIPかを照合できるようにした。これはどれか。", "choices": ["SPF", "EDR", "コンテンツ分類", "転送方法"], "answer": 0, "explain": "正規送信IPをDNSで宣言し照合するのがSPF（Sender Policy Framework）。"}, {"term": "d-5-fim", "stem": "重要システムファイルのハッシュをベースライン保存し、値が変わったらアラートして不正な改変を検知する運用にした。これはどれか。", "choices": ["ファイル完全性監視", "DMARC", "アクセスリスト", "ポートの選択"], "answer": 0, "explain": "ハッシュ比較で改変を検知するのがファイル完全性監視（FIM）。"}, {"term": "d-5-dlp", "stem": "機密データを特定し、従業員が意図せず外部へ持ち出したり流出させたりしないよう監視・制御する仕組みを導入した。これはどれか。", "choices": ["DLP", "IDSシグネチャのみ", "コールドサイト", "ポートスキャン"], "answer": 0, "explain": "重要情報の漏洩防止がDLP（Data Loss Prevention）。"}, {"term": "d-5-nac", "stem": "社員のスマホを社内網へつなぐ前にOS更新・パッチ・AV稼働を確認し、未準拠なら隔離セグメントへ回してリソースを制限した。これはどれか。", "choices": ["NAC", "DKIM", "レピュテーションのみ", "グループポリシーのみ"], "answer": 0, "explain": "接続前の健全性検証と非準拠端末の制限／拒否がNAC。"}, {"term": "d-5-edr-xdr", "stem": "端末感染を検知して封じ込めつつ、ネットワークやクラウドまで横断して脅威を相関検知・対応する製品群を導入した。これはどれか。", "choices": ["EDR/XDR", "SPFのみ", "コールドサイト", "コンテンツ分類"], "answer": 0, "explain": "EDRはエンドポイントの検知・対応、XDRはその拡張・横断。両方で脅威対応を強化する。"}, {"term": "d-5-uba", "stem": "普段アクセスしないシステムへの突然のログインや、機密ファイルの大量ダウンロードを、通常行動からの逸脱として検知した。これはどれか。", "choices": ["ユーザー行動分析", "スクリーンサブネット", "ポート、プロトコル", "SELinuxラベルのみ"], "answer": 0, "explain": "行動ベースラインからの逸脱検知がユーザー行動分析（UBA）。乗っ取り・内部不正の予兆に有効。"}]</script>
+</section>
+
+<nav class="pager"><a href="d-4.html"><span>前の章</span>D-4 アラートとモニタリング</a><a class="next" href="d-6.html"><span>次の章</span>D-6 アクセス管理</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

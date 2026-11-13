@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B-5 緩和策 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain B</span></a>
+  <a class="nav-back" href="index.html">← Domain B ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain B</h2>
+    <a href="b-1.html">B-1 脅威アクターと動機</a><a href="b-2.html">B-2 脅威ベクトルと攻撃対象領域</a><a href="b-3.html">B-3 脆弱性の種類</a><a href="b-4.html">B-4 悪意のある活動の兆候</a><a href="b-5.html" class="active">B-5 緩和策</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain B 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain B · B-5</p>
+  <h1>緩和策</h1>
+  <p>企業を守るための軽減テクニック</p>
+  <div class="meta-row">
+    <span class="chip">用語 10</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 2.5</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 12問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">範囲を絞る（アクセスと影響範囲の制限）</h2>
+<article class="memo-card" id="b-5-segmentation" data-search="セグメンテーション segmentation ネットワークを分割して被害を局所化 部署別セグメント vlan">
+  <h3>セグメンテーション<span class="en">Segmentation</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">ネットワークを<span class="hl">分割</span>して被害を局所化</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>部署別セグメント</li><li>VLAN</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-5-acl" data-search="アクセスコントロールリスト access control list (acl) 許可／拒否のルールの集合 ルーターのacl sshを特定ipのみ許可">
+  <h3>アクセスコントロールリスト<span class="en">Access control list (ACL)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">許可／拒否の<span class="hl">ルールの集合</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ルーターのACL</li><li>SSHを特定IPのみ許可</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-5-permissions" data-search="パーミッション permissions ユーザーや機器に操作権限を割り当て 閲覧のみ／編集可 管理者権限の制限">
+  <h3>パーミッション<span class="en">Permissions</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">ユーザーや機器に<span class="hl">操作権限</span>を割り当て</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>閲覧のみ／編集可</li><li>管理者権限の制限</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-5-isolation" data-search="アイソレーション（隔離） isolation 切り離して被害を閉じ込める 仮想マシンでの閲覧 サンドボックス">
+  <h3>アイソレーション（隔離）<span class="en">Isolation</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">切り離して被害を<span class="hl">閉じ込める</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>仮想マシンでの閲覧</li><li>サンドボックス</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-5-least-privilege" data-search="最小特権の原則 least privilege 必要最小限の権限だけを付与 人事情報は人事部のみ 一般ユーザー運用">
+  <h3>最小特権の原則<span class="en">Least privilege</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">必要最小限</span>の権限だけを付与</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>人事情報は人事部のみ</li><li>一般ユーザー運用</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">弱点を減らす（システムの堅牢化）</h2>
+<article class="memo-card" id="b-5-patching" data-search="パッチ patching 更新を適用して脆弱性を修正 windows update patch tuesday">
+  <h3>パッチ<span class="en">Patching</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">更新を適用して<span class="hl">脆弱性を修正</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>Windows Update</li><li>Patch Tuesday</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-5-encryption" data-search="暗号化 encryption 盗まれても読めなくする https（tls） ディスク暗号化">
+  <h3>暗号化<span class="en">Encryption</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">盗まれても<span class="hl">読めなくする</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>HTTPS（TLS）</li><li>ディスク暗号化</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-5-configuration-enforcement" data-search="設定の強制 configuration enforcement 設定を一括管理し勝手な変更を防ぐ mdm パスワードポリシー適用">
+  <h3>設定の強制<span class="en">Configuration enforcement</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">設定を<span class="hl">一括管理</span>し勝手な変更を防ぐ</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>MDM</li><li>パスワードポリシー適用</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">見張る・始末する（運用とライフサイクル）</h2>
+<article class="memo-card" id="b-5-monitoring" data-search="モニタリング monitoring 継続的に監視して異常を早期検出 通信量の監視 ログ監視">
+  <h3>モニタリング<span class="en">Monitoring</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">継続的に監視</span>して異常を早期検出</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>通信量の監視</li><li>ログ監視</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-5-decommissioning" data-search="廃棄 decommissioning 不要な資産を適切に処分する データ完全消去 ディスク物理破壊">
+  <h3>廃棄<span class="en">Decommissioning</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">不要な資産を<span class="hl">適切に処分</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>データ完全消去</li><li>ディスク物理破壊</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（12問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "b-5-segmentation", "stem": "ある企業では、営業部門のPCがマルウェアに感染しても経理部門の財務データに到達できないよう、部署ごとにネットワークを分割し、部署間の通信を制限したい。最も適切な緩和策はどれか。", "choices": ["パッチ", "セグメンテーション", "モニタリング", "廃棄"], "answer": 1, "explain": "ネットワークを部署単位に分割し区画間の通信を制御するのがセグメンテーション。攻撃範囲の限定とデータ流出防止に効果がある。"}, {"term": "b-5-acl", "stem": "ネットワーク管理者が、ルーターへのSSH接続を管理用端末のIPアドレスからのみ許可し、それ以外は拒否するルールを設定した。この緩和策はどれか。", "choices": ["暗号化", "アイソレーション", "設定の強制", "アクセスコントロールリスト（ACL）"], "answer": 3, "explain": "送信元などに基づきアクセスを許可／拒否するルールの集合をネットワーク機器に適用するのはACL。特定IPに限定することで不正アクセスのリスクを下げる。"}, {"term": "b-5-permissions", "stem": "監査の結果、社内システムで全従業員に管理者権限が付与されており、誰でも重要データの閲覧や設定変更が可能だと判明した。まず見直すべきものはどれか。", "choices": ["パーミッション", "暗号化", "セグメンテーション", "廃棄"], "answer": 0, "explain": "ユーザーに割り当てる操作権限（パーミッション）が過剰であることが問題。業務に応じた適切な権限に付け直す必要がある。"}, {"term": "b-5-isolation", "stem": "セキュリティ担当者は、従業員のWeb閲覧を仮想マシン上のブラウザで行わせ、ブラウザがマルウェアに感染しても物理マシンに影響が及ばないようにした。この緩和策はどれか。", "choices": ["モニタリング", "パッチ", "アイソレーション", "アクセスコントロールリスト（ACL）"], "answer": 2, "explain": "被害を隔離環境の中に閉じ込め外部へ波及させないのがアイソレーション。仮想化やサンドボックスが代表的な手段。"}, {"term": "b-5-patching", "stem": "ベンダーが毎月定例で公開するセキュリティ更新プログラムを、社内のWindows端末とOfficeに速やかに適用する運用を始めた。この緩和策はどれか。", "choices": ["設定の強制", "パッチ", "暗号化", "最小特権の原則"], "answer": 1, "explain": "脆弱性やバグを修正する更新ファイルを適用するのはパッチ。基本的に最新のものを適用することが重要。"}, {"term": "b-5-encryption", "stem": "ECサイトでクレジットカード番号が通信途中で盗聴されても内容を読まれないようにしたい。最も適切な緩和策はどれか。", "choices": ["暗号化（HTTPS／TLS）", "セグメンテーション", "廃棄", "モニタリング"], "answer": 0, "explain": "通信を暗号化すれば盗聴されても内容を読めず機密性が守られる。HTTPSのURLやブラウザの鍵マークが目印。"}, {"term": "b-5-monitoring", "stem": "システム管理者が社内ネットワークの通信量を常時監視し、深夜にサーバーへのアクセスが急増したことを検知して調査を開始した。この緩和策はどれか。", "choices": ["パーミッション", "設定の強制", "アイソレーション", "モニタリング"], "answer": 3, "explain": "動作や利用状況を継続的に監視し、普段と異なる動きを早期に検出するのがモニタリング。"}, {"term": "b-5-least-privilege", "stem": "ファイルサーバーの人事フォルダについて、業務上必要な人事部の社員にのみアクセスを許可し、総務部など他部署には一切権限を与えないことにした。この運用が従う考え方はどれか。", "choices": ["設定の強制", "セグメンテーション", "最小特権の原則", "廃棄"], "answer": 2, "explain": "業務に必要な最小限の権限だけを与えるのが最小特権の原則。権限の乱用を防ぎ、攻撃者の横断的な移動も困難にする。"}, {"term": "b-5-configuration-enforcement", "stem": "会社支給のスマートフォンで従業員が勝手にアプリを入れたりセキュリティ設定を変更したりしないよう、MDMでパスワードポリシーなどの設定を一括管理することにした。この緩和策はどれか。", "choices": ["設定の強制", "パッチ", "モニタリング", "アクセスコントロールリスト（ACL）"], "answer": 0, "explain": "設定を一貫した状態に保ち、個別の変更や誤設定を許さないのが設定の強制。MDMはその代表的な手段。"}, {"term": "b-5-decommissioning", "stem": "老朽化したPCを入れ替える際、ハードディスクに残った顧客情報が流出しないよう、データを完全に消去してから処分する手順を定めた。この緩和策はどれか。", "choices": ["暗号化", "アイソレーション", "パッチ", "廃棄"], "answer": 3, "explain": "不要になったハードウェアやデータを適切に処分して情報漏洩を防ぐのが廃棄（Decommissioning）。"}, {"term": "b-5-least-privilege", "stem": "ある従業員のアカウントが攻撃者に乗っ取られたが、そのアカウントには担当業務に必要な権限しか与えられていなかったため、他のサーバーへの横展開を防げた。被害を抑えた主な要因はどれか。", "choices": ["モニタリング", "最小特権の原則", "暗号化", "廃棄"], "answer": 1, "explain": "必要最小限の権限しか付与しない最小特権の原則により、侵害されたアカウントでできることが限られ、横断的な移動が困難になった。"}, {"term": "b-5-acl", "stem": "人事異動のたびに、異動前の部署のリソースへのアクセス許可が残ったままになっていることが判明した。緩和策として最も適切なのはどれか。", "choices": ["パッチを最新にする", "通信を暗号化する", "ACLを定期的に見直し不要な許可を削除する", "端末を仮想マシンで隔離する"], "answer": 2, "explain": "ACLはユーザーの異動や組織変更に合わせて定期的に見直し、不要な権限を削除することが重要。"}]</script>
+</section>
+
+<nav class="pager"><a href="b-4.html"><span>前の章</span>B-4 悪意のある活動の兆候</a><a class="next" href="index.html"><span>戻る</span>Domain B ハブ</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C-3 データ保護の戦略と概念 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain C</span></a>
+  <a class="nav-back" href="index.html">← Domain C ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain C</h2>
+    <a href="c-1.html">C-1 セキュリティアーキテクチャの全体像</a><a href="c-2.html">C-2 インフラを守るセキュリティ原則</a><a href="c-3.html" class="active">C-3 データ保護の戦略と概念</a><a href="c-4.html">C-4 回復性と耐性</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain C 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain C · C-3</p>
+  <h1>データ保護の戦略と概念</h1>
+  <p>分類・状態・保護手法</p>
+  <div class="meta-row">
+    <span class="chip">用語 23</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 3.3</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 23問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">データの種類（何のデータか）</h2>
+<article class="memo-card" id="c-3-regulated" data-search="規制されたデータ regulated 法律・業界規制で特別扱いが必要 医療記録 口座・信用情報 gdpr対象">
+  <h3>規制されたデータ<span class="en">Regulated</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">法律・業界規制</span>で特別扱いが必要</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>医療記録</li><li>口座・信用情報</li><li>GDPR対象</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-intellectual-property" data-search="知的財産 intellectual property 特許・商標・著作権などの無形資産 企業ロゴの商標 特許技術">
+  <h3>知的財産<span class="en">Intellectual property</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">特許・商標・著作権</span>などの無形資産</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>企業ロゴの商標</li><li>特許技術</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-financial" data-search="財務情報 financial information 組織の財務・経営状態を示す情報 開示前の決算短信 売上・利益">
+  <h3>財務情報<span class="en">Financial information</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">組織の<span class="hl">財務・経営状態</span>を示す情報</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>開示前の決算短信</li><li>売上・利益</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-human-readable" data-search="人が読める／読めないデータ human-readable / non-human-readable 人が判読できるか否かで区分 平文メール 暗号化後の記号列">
+  <h3>人が読める／読めないデータ<span class="en">Human-readable / Non-human-readable</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">人が<span class="hl">判読できるか否か</span>で区分</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>平文メール</li><li>暗号化後の記号列</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">機密度分類（どれだけ守るか）</h2>
+<article class="memo-card" id="c-3-sensitive" data-search="センシティブ sensitive 漏えいで重大な影響が出る高機密データ 診療記録 病名・処方">
+  <h3>センシティブ<span class="en">Sensitive</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">漏えいで<span class="hl">重大な影響</span>が出る高機密データ</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>診療記録</li><li>病名・処方</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-confidential" data-search="機密情報 confidential 競争力・継続に関わる重要情報 軍事機密 最小権限での区分管理">
+  <h3>機密情報<span class="en">Confidential</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">競争力・継続に関わる<span class="hl">重要情報</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>軍事機密</li><li>最小権限での区分管理</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-public" data-search="公開情報 public 一般公開が前提の情報 白書・統計 人口推計">
+  <h3>公開情報<span class="en">Public</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">一般公開</span>が前提の情報</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>白書・統計</li><li>人口推計</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-restricted" data-search="制限された情報 restricted 機密ほどではないが一定の制限あり dcの所在地詳細 建物構造情報">
+  <h3>制限された情報<span class="en">Restricted</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">機密ほどではないが<span class="hl">一定の制限</span>あり</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>DCの所在地詳細</li><li>建物構造情報</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-private" data-search="プライベート情報 private 個人に関する特に機密性の高い情報 管理者のid/pw 個人情報保護法の対象">
+  <h3>プライベート情報<span class="en">Private</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">個人に関する</span>特に機密性の高い情報</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>管理者のID/PW</li><li>個人情報保護法の対象</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-critical" data-search="クリティカルな情報 critical 喪失で組織存続が危ぶまれる情報 国家機密 軍事技術の詳細">
+  <h3>クリティカルな情報<span class="en">Critical</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">喪失で<span class="hl">組織存続が危ぶまれる</span>情報</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>国家機密</li><li>軍事技術の詳細</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">データの状態（いつ・どこにあるか）</h2>
+<article class="memo-card" id="c-3-at-rest" data-search="保管中のデータ data at rest ストレージに保管中で未アクセス hdd上の顧客db usb・テープ保存">
+  <h3>保管中のデータ<span class="en">Data at rest</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">ストレージに<span class="hl">保管中</span>で未アクセス</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>HDD上の顧客DB</li><li>USB・テープ保存</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-in-transit" data-search="転送中のデータ data in transit ネットワークを転送中のデータ 送信中のカード情報 tlsで保護">
+  <h3>転送中のデータ<span class="en">Data in transit</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">ネットワークを<span class="hl">転送中</span>のデータ</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>送信中のカード情報</li><li>TLSで保護</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-in-use" data-search="使用中のデータ data in use アプリ／osが利用中のデータ 入力中のパスワード メモリ上の平文">
+  <h3>使用中のデータ<span class="en">Data in use</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">アプリ／OSが<span class="hl">利用中</span>のデータ</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>入力中のパスワード</li><li>メモリ上の平文</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">地理・主権（どこで扱うか）</h2>
+<article class="memo-card" id="c-3-sovereignty" data-search="データ主権 data sovereignty 所在国の法に従い制御・管理する権利 gdprと域外クラウド 所在地の検討">
+  <h3>データ主権<span class="en">Data sovereignty</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">所在国の法に従い<span class="hl">制御・管理する権利</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>GDPRと域外クラウド</li><li>所在地の検討</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-geolocation" data-search="ジオロケーション geolocation 位置情報の取扱いとプライバシー 車載の位置送信 行動パターン推察">
+  <h3>ジオロケーション<span class="en">Geolocation</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">位置情報</span>の取扱いとプライバシー</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>車載の位置送信</li><li>行動パターン推察</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-geographic-restrictions" data-search="地理的制限 geographic restrictions 保存・処理・アクセスを特定地域に限定 eu域内dc保管 域外転送の制限">
+  <h3>地理的制限<span class="en">Geographic restrictions</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">保存・処理・アクセスを<span class="hl">特定地域に限定</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>EU域内DC保管</li><li>域外転送の制限</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">保護技法（どう守るか）</h2>
+<article class="memo-card" id="c-3-encryption" data-search="暗号化 encryption 解読困難な形式に変え機密性を守る tls通信 カード情報の保護">
+  <h3>暗号化<span class="en">Encryption</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">解読困難な形式に変え<span class="hl">機密性</span>を守る</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>TLS通信</li><li>カード情報の保護</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-hashing" data-search="ハッシュ hashing 一方向変換で元データを復元困難に パスワードのハッシュ保存 db漏えい時の保護">
+  <h3>ハッシュ<span class="en">Hashing</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">一方向</span>変換で元データを復元困難に</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>パスワードのハッシュ保存</li><li>DB漏えい時の保護</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-masking" data-search="マスキング masking 機密の一部を記号で隠す カード番号の****表示 下4桁以外を隠蔽">
+  <h3>マスキング<span class="en">Masking</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">機密の<span class="hl">一部を記号で隠す</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>カード番号の****表示</li><li>下4桁以外を隠蔽</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-tokenization" data-search="トークン化 tokenization 原本を無意味なトークンに置換 ecのカード番号置換 決済時に原本へ戻す">
+  <h3>トークン化<span class="en">Tokenization</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">原本を<span class="hl">無意味なトークン</span>に置換</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ECのカード番号置換</li><li>決済時に原本へ戻す</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-obfuscation" data-search="難読化 obfuscation コードやデータを解読困難にする アプリの変数名変換 解析耐性の向上">
+  <h3>難読化<span class="en">Obfuscation</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">コードやデータを<span class="hl">解読困難</span>にする</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>アプリの変数名変換</li><li>解析耐性の向上</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-segmentation" data-search="セグメンテーション segmentation 領域を分割して到達範囲を狭める 業務網とゲストwi-fi分離 侵害時の影響局限">
+  <h3>セグメンテーション<span class="en">Segmentation</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">領域を<span class="hl">分割</span>して到達範囲を狭める</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>業務網とゲストWi-Fi分離</li><li>侵害時の影響局限</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-3-permission-restrictions" data-search="権限制限 permission restrictions 誰が何に触れるか権限で制限 電子カルテのrbac 必要スタッフのみアクセス">
+  <h3>権限制限<span class="en">Permission restrictions</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">誰が何に触れるか<span class="hl">権限で制限</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>電子カルテのRBAC</li><li>必要スタッフのみアクセス</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（23問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "c-3-regulated", "stem": "医療機関が患者の病歴や処方箋を、医療関連法規に従って厳格に管理している。このデータの種類として最も適切なものはどれか。", "choices": ["公開情報", "規制されたデータ", "人が読めないデータ", "地理的制限"], "answer": 1, "explain": "法律や業界規制により特別な取り扱いが求められるのは規制されたデータ。"}, {"term": "c-3-intellectual-property", "stem": "企業のロゴや商品名が商標として登録され、他社の無断使用が禁じられている。この資産の分類として最も近いものはどれか。", "choices": ["財務情報", "データ主権", "知的財産", "マスキング"], "answer": 2, "explain": "特許・著作権・商標などの無形資産は知的財産。"}, {"term": "c-3-financial", "stem": "上場企業が四半期の決算短信を開示する前、売上高や純利益を社内の極秘情報として管理している。これは主にどの種類か。", "choices": ["公開情報", "財務情報", "ジオロケーション", "セグメンテーション"], "answer": 1, "explain": "組織の財務・経営状態を示す情報は財務情報。開示前は特に厳重管理が必要。"}, {"term": "c-3-human-readable", "stem": "平文のメール本文は受信者が内容を理解できるが、暗号化すると記号の羅列になり人間には判読不能になる。この区分を表す用語はどれか。", "choices": ["人が読める／読めないデータ", "データ主権", "権限制限", "クリティカルな情報"], "answer": 0, "explain": "人間が判読できるか（human-readable）否か（non-human-readable）でデータの種類を分ける。"}, {"term": "c-3-sensitive", "stem": "病院の診療記録に含まれる病名や治療内容が外部へ漏れると、プライバシー侵害と信用低下が大きい。この機密度の呼び方として最も適切なものはどれか。", "choices": ["公開情報", "センシティブ", "データ at rest", "難読化"], "answer": 1, "explain": "漏えいや不正アクセスで重大な影響が出る機密性の高いデータがセンシティブ。"}, {"term": "c-3-confidential", "stem": "国家の軍事機密が敵対国に漏れると防衛力が損なわれるため、必要最小限の関係者だけがアクセスできるよう区分管理されている。講義上の分類として最も近いものはどれか。", "choices": ["公開情報", "人が読めるデータ", "機密情報（Confidential）", "地理的制限"], "answer": 2, "explain": "組織の競争力や継続に関わる重要情報を機密（Confidential）として厳しく制限する。"}, {"term": "c-3-public", "stem": "総務省が発表する人口推計は、誰でも自由にアクセスして利用できる。この分類はどれか。", "choices": ["制限された情報", "プライベート情報", "クリティカルな情報", "公開情報"], "answer": 3, "explain": "一般に公開されている、または組織が積極的に公開している情報が公開情報。"}, {"term": "c-3-restricted", "stem": "クラウド事業者が、データセンターの具体的な所在地や建物構造を一般に開示せず管理している。機密ほどではないが共有を抑えるこの分類はどれか。", "choices": ["公開情報", "制限された情報", "ハッシュ", "転送中のデータ"], "answer": 1, "explain": "機密ほどの厳重さはないが、アクセスや共有に一定の制限が必要なのが制限された情報。"}, {"term": "c-3-private", "stem": "インフラ運用担当者のログインIDやパスワードなど、個人に紐づく悪用されやすい情報を慎重に扱っている。この分類として最も適切なものはどれか。", "choices": ["プライベート情報", "公開情報", "セグメンテーション", "データ in transit"], "answer": 0, "explain": "個人に関する特に機密性の高い情報がプライベート情報。個人情報保護法などの対象にもなる。"}, {"term": "c-3-critical", "stem": "外交秘密や軍事技術の詳細など、漏えい・改ざん・破壊で組織（国家）の存続が危ぶまれる情報を指す用語はどれか。", "choices": ["公開情報", "人が読めないデータ", "クリティカルな情報", "マスキング"], "answer": 2, "explain": "喪失や改ざんの影響が甚大で存続が危ぶまれるほど危険な情報がクリティカル。"}, {"term": "c-3-at-rest", "stem": "顧客情報がデータベースサーバーのハードディスクに格納され、現在アクセスされていない。このデータの状態はどれか。", "choices": ["Data in transit", "Data in use", "Data at rest", "Geographic restrictions"], "answer": 2, "explain": "ストレージに保管中でアクセスされていない状態が data at rest。"}, {"term": "c-3-in-transit", "stem": "オンラインショップへクレジットカード情報を送信している最中、傍受を防ぐため TLS で保護している。このデータの状態はどれか。", "choices": ["Data at rest", "Data in transit", "Data in use", "Trade secret"], "answer": 1, "explain": "ネットワークを介して転送中のデータが data in transit。"}, {"term": "c-3-in-use", "stem": "オンラインバンキングのログイン画面でパスワード入力中、ブラウザのメモリ上に一時的に平文で保持されている。この状態はどれか。", "choices": ["Data at rest", "Data in transit", "Data in use", "Public"], "answer": 2, "explain": "アプリや OS が利用している最中のデータが data in use。メモリ保護が課題になる。"}, {"term": "c-3-sovereignty", "stem": "欧州企業が顧客情報を米国クラウドに保存する際、GDPR に沿い所在地と管理方法を検討している。根拠となる考え方はどれか。", "choices": ["難読化", "データ主権", "ハッシュ", "人が読めるデータ"], "answer": 1, "explain": "データ所有者が制御・管理する権利と、データが存在する国の法律に従う必要がデータ主権。"}, {"term": "c-3-geolocation", "stem": "車載システムが車両の位置をサーバーへ送りルート案内に使う一方、行動パターンが推察されるため暗号化等で保護している。この考慮事項はどれか。", "choices": ["ジオロケーション", "財務情報", "トークン化", "公開情報"], "answer": 0, "explain": "位置情報の取扱いとプライバシーが geolocation の論点。"}, {"term": "c-3-geographic-restrictions", "stem": "GDPR 対応のため、クラウド事業者が EU 域内のデータセンターにデータを保管するオプションを提供している。この保護の考え方はどれか。", "choices": ["マスキング", "地理的制限", "クリティカル", "Data in use"], "answer": 1, "explain": "保存・処理・アクセスを特定の地理的領域内に限定するのが geographic restrictions。"}, {"term": "c-3-encryption", "stem": "通信が傍受されてもカード情報を解読されにくくするため、オンライン決済で TLS を用いる。この保護手法はどれか。", "choices": ["ハッシュ", "マスキング", "暗号化", "セグメンテーション"], "answer": 2, "explain": "データを解読困難な形式に変換して機密性を守るのが暗号化。"}, {"term": "c-3-hashing", "stem": "Webサイトがユーザーのパスワードを平文のまま保存せず、一方向関数の出力だけをデータベースに保存している。この手法はどれか。", "choices": ["暗号化", "ハッシュ", "トークン化", "権限制限"], "answer": 1, "explain": "ハッシュは一方向性のため、値から元パスワードを復元することが極めて困難。"}, {"term": "c-3-masking", "stem": "画面表示ではクレジットカード番号の下4桁以外をアスタリスクに置き換えている。この手法はどれか。", "choices": ["マスキング", "データ主権", "Data at rest", "知的財産"], "answer": 0, "explain": "機密の一部を別の文字・記号で置き換えて隠すのがマスキング。"}, {"term": "c-3-tokenization", "stem": "ECサイトがカード番号の代わりにランダムな文字列を保存し、決済時だけカード会社側で番号に戻している。この手法はどれか。", "choices": ["マスキング", "難読化", "トークン化", "公開情報"], "answer": 2, "explain": "機密データを無意味なトークンに置き換え、サイト側が原本を持たなくてよくするのがトークン化。"}, {"term": "c-3-obfuscation", "stem": "モバイルアプリ配布前に、変数名や関数名をあえて分かりにくく変換し、解析されても理解しづらくしている。この手法はどれか。", "choices": ["暗号化", "難読化", "地理的制限", "規制されたデータ"], "answer": 1, "explain": "コードやデータの構造・意味を理解しにくくするのが難読化（obfuscation）。"}, {"term": "c-3-segmentation", "stem": "企業ネットワークを業務用とゲスト用 Wi-Fi に分け、ゲスト側が侵害されても業務サーバーへの影響を抑えている。データ保護としてのこの手法はどれか。", "choices": ["セグメンテーション", "ハッシュ", "財務情報", "Data in transit"], "answer": 0, "explain": "ネットワークやシステムを分割してアクセス範囲を制限するのがセグメンテーション。"}, {"term": "c-3-permission-restrictions", "stem": "病院の電子カルテで、医師や看護師など業務上必要なロールだけがアクセスできるよう RBAC を導入した。この手法はどれか。", "choices": ["ジオロケーション", "人が読めないデータ", "権限制限", "知的財産"], "answer": 2, "explain": "ユーザーやプロセスへの権限割当てでアクセスを制限するのが permission restrictions。"}]</script>
+</section>
+
+<nav class="pager"><a href="c-2.html"><span>前の章</span>C-2 インフラを守るセキュリティ原則</a><a class="next" href="c-4.html"><span>次の章</span>C-4 回復性と耐性</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

@@ -1,0 +1,1315 @@
+{
+  "domain": "B",
+  "official": "2",
+  "title": "脅威・脆弱性・緩和",
+  "intro": "ドメイン2では、攻撃者（脅威アクター）とその手口、システムの脆弱性、攻撃の兆候を体系的に学び、最後にそれらを抑える緩和策を押さえる。",
+  "chapters": [
+    {
+      "id": "B-1",
+      "slug": "b-1",
+      "official": "2.1",
+      "title": "脅威アクターと動機",
+      "blurb": "誰が・どんな力で・なぜ攻撃するのか",
+      "groups": [
+        {
+          "id": "outsiders",
+          "title": "外部の攻撃者（組織の外から攻めるのは誰か）",
+          "terms": [
+            {
+              "id": "b-1-nation-state",
+              "key": "nation-state",
+              "ja": "国家支援型攻撃者",
+              "en": "Nation-state",
+              "one_liner": "**国家の後ろ盾**を持つ最強の攻撃者",
+              "examples": [
+                "重要インフラ攻撃",
+                "APT"
+              ]
+            },
+            {
+              "id": "b-1-organized-crime",
+              "key": "organized-crime",
+              "ja": "組織犯罪",
+              "en": "Organized crime",
+              "one_liner": "**金銭目的**で組織化された犯罪集団",
+              "examples": [
+                "ランサムウェア集団",
+                "SamSam"
+              ]
+            },
+            {
+              "id": "b-1-hacktivist",
+              "key": "hacktivist",
+              "ja": "ハクティビスト",
+              "en": "Hacktivist",
+              "one_liner": "**政治・社会的な主張**のために攻撃",
+              "examples": [
+                "サイト改ざん",
+                "情報の暴露",
+                "アノニマス"
+              ]
+            },
+            {
+              "id": "b-1-unskilled-attacker",
+              "key": "unskilled-attacker",
+              "ja": "スキルに乏しい攻撃者",
+              "en": "Unskilled attacker",
+              "one_liner": "**既存ツール頼み**の素人攻撃者",
+              "examples": [
+                "総当たりツール",
+                "公開スクリプト"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "insiders",
+          "title": "内部の脅威（組織の中から生じるリスク）",
+          "terms": [
+            {
+              "id": "b-1-insider-threat",
+              "key": "insider-threat",
+              "ja": "内部脅威者",
+              "en": "Insider threat",
+              "one_liner": "**正規のアクセス権**を悪用する内部者",
+              "examples": [
+                "経理システムで横領",
+                "元社員の持ち出し"
+              ]
+            },
+            {
+              "id": "b-1-shadow-it",
+              "key": "shadow-it",
+              "ja": "シャドーIT",
+              "en": "Shadow IT",
+              "one_liner": "IT部門が**承認していない**機器・ソフト",
+              "examples": [
+                "無許可のクラウド",
+                "私物アプリ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "attributes",
+          "title": "脅威アクターの属性（どの観点で比べるか）",
+          "terms": [
+            {
+              "id": "b-1-internal-external",
+              "key": "internal-external",
+              "ja": "内部と外部",
+              "en": "Internal/external",
+              "one_liner": "脅威が**組織の内か外か**で分ける",
+              "examples": [
+                "従業員・パートナー",
+                "外部ハッカー"
+              ]
+            },
+            {
+              "id": "b-1-resources-funding",
+              "key": "resources-funding",
+              "ja": "資金力とリソース",
+              "en": "Resources/funding",
+              "one_liner": "攻撃に使える**資金・人材・装備**の量",
+              "examples": [
+                "国家＝豊富",
+                "素人＝乏しい"
+              ]
+            },
+            {
+              "id": "b-1-sophistication",
+              "key": "sophistication",
+              "ja": "洗練さと能力",
+              "en": "Level of sophistication/capability",
+              "one_liner": "攻撃者の**技術力・能力**の高さ",
+              "examples": [
+                "国家＝高",
+                "素人＝低"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "motive-target",
+          "title": "情報・業務を狙う動機（何を奪う／止めるか）",
+          "terms": [
+            {
+              "id": "b-1-data-exfiltration",
+              "key": "data-exfiltration",
+              "ja": "データ窃取",
+              "en": "Data exfiltration",
+              "one_liner": "機密データを**外へ持ち出す**",
+              "examples": [
+                "顧客情報の転売",
+                "内部情報の暴露"
+              ]
+            },
+            {
+              "id": "b-1-espionage",
+              "key": "espionage",
+              "ja": "スパイ行為",
+              "en": "Espionage",
+              "one_liner": "**競争優位**のため機密を盗み見る",
+              "examples": [
+                "設計図の入手",
+                "技術情報の盗用"
+              ]
+            },
+            {
+              "id": "b-1-service-disruption",
+              "key": "service-disruption",
+              "ja": "サービス妨害",
+              "en": "Service disruption",
+              "one_liner": "サービスを**使えなくして**邪魔する",
+              "examples": [
+                "DDoS攻撃",
+                "ECサイト停止"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "motive-money",
+          "title": "金銭を狙う動機（どうやってお金を得るか）",
+          "terms": [
+            {
+              "id": "b-1-blackmail",
+              "key": "blackmail",
+              "ja": "脅迫",
+              "en": "Blackmail",
+              "one_liner": "弱みを握り**脅して従わせる**",
+              "examples": [
+                "ランサムウェア",
+                "改ざんして復旧料要求"
+              ]
+            },
+            {
+              "id": "b-1-financial-gain",
+              "key": "financial-gain",
+              "ja": "金銭的利益",
+              "en": "Financial gain",
+              "one_liner": "**お金を得ること**が最終目的",
+              "examples": [
+                "フィッシング",
+                "不正送金",
+                "身代金"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "motive-belief",
+          "title": "信念・感情の動機（なぜ攻撃を思い立つか）",
+          "terms": [
+            {
+              "id": "b-1-philosophical-political",
+              "key": "philosophical-political",
+              "ja": "哲学的・政治的信念",
+              "en": "Philosophical/political beliefs",
+              "one_liner": "**思想・政治的主張**に基づく攻撃",
+              "examples": [
+                "アノニマス",
+                "動物愛護の攻撃"
+              ]
+            },
+            {
+              "id": "b-1-ethical",
+              "key": "ethical",
+              "ja": "倫理観",
+              "en": "Ethical",
+              "one_liner": "**不正を正す**という倫理的な動機",
+              "examples": [
+                "内部告発",
+                "ウィキリークス"
+              ]
+            },
+            {
+              "id": "b-1-revenge",
+              "key": "revenge",
+              "ja": "復讐",
+              "en": "Revenge",
+              "one_liner": "**恨みを晴らす**ための報復攻撃",
+              "examples": [
+                "解雇された元社員",
+                "不満を持つ顧客"
+              ]
+            },
+            {
+              "id": "b-1-chaos",
+              "key": "chaos",
+              "ja": "混沌",
+              "en": "Disruption/chaos",
+              "one_liner": "**混乱そのもの**を楽しむ愉快犯",
+              "examples": [
+                "LulzSec",
+                "無差別攻撃"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B-2",
+      "slug": "b-2",
+      "official": "2.2",
+      "title": "脅威ベクトルと攻撃対象領域",
+      "blurb": "どこから・どうやって攻撃が入るか",
+      "groups": [
+        {
+          "id": "message",
+          "title": "メッセージ系（メッセージを媒体とする経路）",
+          "terms": [
+            {
+              "id": "b-2-email",
+              "key": "email",
+              "ja": "Eメール",
+              "en": "Email",
+              "one_liner": "**メール**を媒介に侵入する経路",
+              "examples": [
+                "標的型メール攻撃",
+                "悪性添付ファイル",
+                "ビジネスメール詐欺"
+              ]
+            },
+            {
+              "id": "b-2-sms",
+              "key": "sms",
+              "ja": "SMS",
+              "en": "Short Message Service (SMS)",
+              "one_liner": "**ショートメッセージ**を使う経路",
+              "examples": [
+                "偽のログイン確認SMS",
+                "OTP詐取のURL"
+              ]
+            },
+            {
+              "id": "b-2-im",
+              "key": "im",
+              "ja": "インスタントメッセージング",
+              "en": "Instant messaging (IM)",
+              "one_liner": "**メッセンジャー**アプリを悪用する経路",
+              "examples": [
+                "友人を装うマルウェア",
+                "偽の公式アカウント",
+                "投資詐欺メッセージ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "media",
+          "title": "ファイル・媒体系（コンテンツや機器を運び役にする経路）",
+          "terms": [
+            {
+              "id": "b-2-image",
+              "key": "image",
+              "ja": "画像",
+              "en": "Image-based",
+              "one_liner": "**画像ファイル**にマルウェアを潜ませる",
+              "examples": [
+                "ステガノグラフィ",
+                "マルウェア入りミーム"
+              ]
+            },
+            {
+              "id": "b-2-file",
+              "key": "file",
+              "ja": "ファイル",
+              "en": "File-based",
+              "one_liner": "**悪意のあるファイル**を開かせる経路",
+              "examples": [
+                "偽装PDF・Word",
+                "クラウド共有の不正ファイル"
+              ]
+            },
+            {
+              "id": "b-2-voice-call",
+              "key": "voice-call",
+              "ja": "ボイスコール",
+              "en": "Voice call",
+              "one_liner": "**音声通話**で情報や金銭を狙う経路",
+              "examples": [
+                "銀行を名乗る電話",
+                "公的機関を装う電話"
+              ]
+            },
+            {
+              "id": "b-2-removable-device",
+              "key": "removable-device",
+              "ja": "リムーバブルデバイス",
+              "en": "Removable device",
+              "one_liner": "**USBメモリ**など物理媒体を使う経路",
+              "examples": [
+                "駐車場に置かれたUSB",
+                "業務用を装うUSB"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "system",
+          "title": "システム・ネットワーク系（狙われる自組織側の弱点）",
+          "terms": [
+            {
+              "id": "b-2-unsupported",
+              "key": "unsupported",
+              "ja": "非サポートのシステムやアプリ",
+              "en": "Unsupported systems and applications",
+              "one_liner": "**サポート終了**でパッチが出ない製品",
+              "examples": [
+                "Windows XP",
+                "BlueKeep",
+                "Flash Player"
+              ]
+            },
+            {
+              "id": "b-2-wired",
+              "key": "wired",
+              "ja": "有線ネットワーク",
+              "en": "Wired",
+              "one_liner": "安全でない**有線LAN**を突く経路",
+              "examples": [
+                "LANケーブルへの割り込み",
+                "空きポートへの接続"
+              ]
+            },
+            {
+              "id": "b-2-wireless",
+              "key": "wireless",
+              "ja": "無線ネットワーク",
+              "en": "Wireless",
+              "one_liner": "安全でない**無線LAN**を突く経路",
+              "examples": [
+                "ウォードライビング",
+                "不正AP（Rogue AP）",
+                "暗号化なしWi-Fi"
+              ]
+            },
+            {
+              "id": "b-2-bluetooth",
+              "key": "bluetooth",
+              "ja": "Bluetooth",
+              "en": "Bluetooth",
+              "one_liner": "**Bluetooth**の弱い認証を突く経路",
+              "examples": [
+                "ブルースナーフィング",
+                "ウェアラブルの傍受"
+              ]
+            },
+            {
+              "id": "b-2-open-ports",
+              "key": "open-ports",
+              "ja": "開かれたポート",
+              "en": "Open service ports",
+              "one_liner": "サービス用の**開放ポート**が入口になる",
+              "examples": [
+                "HTTPS 443番",
+                "SMTP 25",
+                "ポートスキャン"
+              ]
+            },
+            {
+              "id": "b-2-default-credentials",
+              "key": "default-credentials",
+              "ja": "デフォルトクレデンシャル",
+              "en": "Default credentials",
+              "one_liner": "**初期設定のID・パスワード**のまま",
+              "examples": [
+                "admin/admin",
+                "Miraiボットネット",
+                "初期設定のルーター"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "supply-chain",
+          "title": "サプライチェーン系（外部委託先・取引先を経由）",
+          "terms": [
+            {
+              "id": "b-2-msp",
+              "key": "msp",
+              "ja": "MSP（マネージドサービスプロバイダー）",
+              "en": "Managed service providers (MSPs)",
+              "one_liner": "IT運用の**外注先**経由で攻撃される",
+              "examples": [
+                "IT保守の委託先",
+                "複数顧客の一括管理"
+              ]
+            },
+            {
+              "id": "b-2-vendor",
+              "key": "vendor",
+              "ja": "ベンダー",
+              "en": "Vendors",
+              "one_liner": "**製品の提供元**を起点に侵入される",
+              "examples": [
+                "NotPetya",
+                "改ざんされた更新"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "human",
+          "title": "ソーシャルエンジニアリング系（人を狙う攻撃ベクトル）",
+          "terms": [
+            {
+              "id": "b-2-phishing",
+              "key": "phishing",
+              "ja": "フィッシング",
+              "en": "Phishing",
+              "one_liner": "実在組織を装う**メール詐欺**",
+              "examples": [
+                "偽の請求書メール",
+                "偽ログインページ"
+              ]
+            },
+            {
+              "id": "b-2-vishing",
+              "key": "vishing",
+              "ja": "ビッシング",
+              "en": "Vishing",
+              "one_liner": "**電話**を使ったフィッシング",
+              "examples": [
+                "銀行を名乗る電話",
+                "税務署を装う電話"
+              ]
+            },
+            {
+              "id": "b-2-smishing",
+              "key": "smishing",
+              "ja": "スミッシング",
+              "en": "Smishing",
+              "one_liner": "**SMS**を使ったフィッシング",
+              "examples": [
+                "不在通知を装うSMS",
+                "OTP入力を促すSMS"
+              ]
+            },
+            {
+              "id": "b-2-misinformation",
+              "key": "misinformation",
+              "ja": "誤情報／偽情報",
+              "en": "Misinformation/disinformation",
+              "one_liner": "**偽の情報**で人の判断を操作する",
+              "examples": [
+                "SNSの偽ニュース",
+                "評判を落とすデマ"
+              ]
+            },
+            {
+              "id": "b-2-impersonation",
+              "key": "impersonation",
+              "ja": "なりすまし",
+              "en": "Impersonation",
+              "one_liner": "**別の人物や組織**を装って欺く",
+              "examples": [
+                "経営者を装う送金指示",
+                "偽のITサポート電話"
+              ]
+            },
+            {
+              "id": "b-2-bec",
+              "key": "bec",
+              "ja": "ビジネスメール詐欺",
+              "en": "Business email compromise (BEC)",
+              "one_liner": "幹部を装う**メールで不正送金**させる",
+              "examples": [
+                "幹部を装う送金指示",
+                "偽の振込先変更"
+              ]
+            },
+            {
+              "id": "b-2-pretexting",
+              "key": "pretexting",
+              "ja": "プリテキシング",
+              "en": "Pretexting",
+              "one_liner": "**もっともらしい口実**で信頼を得る",
+              "examples": [
+                "宅配業者を装う",
+                "ピギーバック"
+              ]
+            },
+            {
+              "id": "b-2-watering-hole",
+              "key": "watering-hole",
+              "ja": "水飲み場攻撃",
+              "en": "Watering hole",
+              "one_liner": "標的が**よく訪れるサイト**を改ざん",
+              "examples": [
+                "技術情報サイト改ざん",
+                "業界ニュースサイト"
+              ]
+            },
+            {
+              "id": "b-2-brand-impersonation",
+              "key": "brand-impersonation",
+              "ja": "ブランドインパーソネーション",
+              "en": "Brand impersonation",
+              "one_liner": "正規の**ブランド**を装ってだます",
+              "examples": [
+                "Amazonを装うメール",
+                "銀行ロゴの偽サイト"
+              ]
+            },
+            {
+              "id": "b-2-typosquatting",
+              "key": "typosquatting",
+              "ja": "タイポスクワッティング",
+              "en": "Typosquatting",
+              "one_liner": "**打ち間違い**狙いの似たドメイン",
+              "examples": [
+                "amazom.com",
+                "g00gle.com"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B-3",
+      "slug": "b-3",
+      "official": "2.3",
+      "title": "脆弱性の種類",
+      "blurb": "アプリ・OS・ハード・クラウドの弱点",
+      "groups": [
+        {
+          "id": "application",
+          "title": "アプリケーション（コードと入力の弱点）",
+          "terms": [
+            {
+              "id": "b-3-memory-injection",
+              "key": "memory-injection",
+              "ja": "メモリインジェクション",
+              "en": "Memory injection",
+              "one_liner": "**メモリ**に悪意あるコードを潜り込ませる",
+              "examples": [
+                "入力欄へのコード注入",
+                "eval() の悪用"
+              ]
+            },
+            {
+              "id": "b-3-time-of-use",
+              "key": "time-of-use",
+              "ja": "タイムオブユース",
+              "en": "Time-of-use (TOU)",
+              "one_liner": "確認後〜**使用時**までに状態が変わる",
+              "examples": [
+                "ログアウト後のセッション",
+                "競合状態"
+              ]
+            },
+            {
+              "id": "b-3-time-of-check",
+              "key": "time-of-check",
+              "ja": "タイムオブチェック",
+              "en": "Time-of-check (TOC)",
+              "one_liner": "**権限チェック後**に割り込み改変する",
+              "examples": [
+                "ファイル差し替え",
+                "二重送金"
+              ]
+            },
+            {
+              "id": "b-3-malicious-update",
+              "key": "malicious-update",
+              "ja": "悪意のあるアップデート",
+              "en": "Malicious update",
+              "one_liner": "**正規の更新**を装い不正プログラムを入れる",
+              "examples": [
+                "偽アプリの自動更新",
+                "マルウェア入り更新"
+              ]
+            },
+            {
+              "id": "b-3-sql-injection",
+              "key": "sql-injection",
+              "ja": "SQLインジェクション",
+              "en": "SQL injection (SQLi)",
+              "one_liner": "**不正なSQL文**でDBを操作する",
+              "examples": [
+                "' OR 1=1 --",
+                "検索欄からの全件取得"
+              ]
+            },
+            {
+              "id": "b-3-xss",
+              "key": "xss",
+              "ja": "クロスサイトスクリプティング",
+              "en": "Cross-site scripting (XSS)",
+              "one_liner": "閲覧者の**ブラウザ**で悪意あるスクリプト実行",
+              "examples": [
+                "<script>の埋め込み",
+                "掲示板への悪性投稿"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "os-hardware",
+          "title": "OS・ハードウェア（基盤と機器の弱点）",
+          "terms": [
+            {
+              "id": "b-3-os-based",
+              "key": "os-based",
+              "ja": "OSベースの脆弱性",
+              "en": "Operating system (OS)-based",
+              "one_liner": "**OS自体**に存在する脆弱性",
+              "examples": [
+                "EternalBlue",
+                "未適用の緊急パッチ"
+              ]
+            },
+            {
+              "id": "b-3-firmware",
+              "key": "firmware",
+              "ja": "ファームウェアの脆弱性",
+              "en": "Firmware",
+              "one_liner": "**ハード制御ソフト**の脆弱性",
+              "examples": [
+                "Broadpwn",
+                "改ざんされたFW更新"
+              ]
+            },
+            {
+              "id": "b-3-end-of-life",
+              "key": "end-of-life",
+              "ja": "エンドオブライフ",
+              "en": "End-of-life (EOL)",
+              "one_liner": "**メーカーサポート終了**で修正されない",
+              "examples": [
+                "Windows 7 の継続利用"
+              ]
+            },
+            {
+              "id": "b-3-legacy",
+              "key": "legacy",
+              "ja": "レガシーハードウェア",
+              "en": "Legacy",
+              "one_liner": "**古い機器**で最新パッチを当てられない",
+              "examples": [
+                "XP搭載の古いATM",
+                "フロッピーディスク",
+                "VHSテープ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "virtualization-cloud",
+          "title": "仮想化・クラウド（共有基盤の弱点）",
+          "terms": [
+            {
+              "id": "b-3-vm-escape",
+              "key": "vm-escape",
+              "ja": "VMエスケープ",
+              "en": "Virtual machine (VM) escape",
+              "one_liner": "VM内から**ホストへ**分離を突破する",
+              "examples": [
+                "ゲスト→ホスト侵入",
+                "ZombieLoad"
+              ]
+            },
+            {
+              "id": "b-3-resource-reuse",
+              "key": "resource-reuse",
+              "ja": "リソースの再利用",
+              "en": "Resource reuse",
+              "one_liner": "再割当リソースの**残存データ**が漏れる",
+              "examples": [
+                "未消去メモリの再割当"
+              ]
+            },
+            {
+              "id": "b-3-cloud-specific",
+              "key": "cloud-specific",
+              "ja": "クラウド固有の脆弱性",
+              "en": "Cloud-specific",
+              "one_liner": "**マルチテナント**などクラウド特有の弱点",
+              "examples": [
+                "テナント間データ漏えい",
+                "責任分担の曖昧さ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "supply-chain",
+          "title": "サプライチェーン（提供元に起因する弱点）",
+          "terms": [
+            {
+              "id": "b-3-service-provider",
+              "key": "service-provider",
+              "ja": "サービスプロバイダー起因の脆弱性",
+              "en": "Service provider",
+              "one_liner": "**事業者側の管理不備**が利用者に波及",
+              "examples": [
+                "事業者の設定ミス",
+                "ハイパーバイザー欠陥",
+                "事業者の内部不正"
+              ]
+            },
+            {
+              "id": "b-3-hardware-provider",
+              "key": "hardware-provider",
+              "ja": "ハードウェアプロバイダー起因の脆弱性",
+              "en": "Hardware provider",
+              "one_liner": "**CPU等の設計・実装**に起因する",
+              "examples": [
+                "Spectre",
+                "Meltdown"
+              ]
+            },
+            {
+              "id": "b-3-software-provider",
+              "key": "software-provider",
+              "ja": "ソフトウェアプロバイダー起因の脆弱性",
+              "en": "Software provider",
+              "one_liner": "**サードパーティ製ソフト**の弱点が波及",
+              "examples": [
+                "SolarWinds事件",
+                "改ざんされた正規更新"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "crypto-config",
+          "title": "暗号・設定（運用上の弱点）",
+          "terms": [
+            {
+              "id": "b-3-cryptographic",
+              "key": "cryptographic",
+              "ja": "暗号化の脆弱性",
+              "en": "Cryptographic",
+              "one_liner": "**弱い暗号**や鍵管理不備による弱点",
+              "examples": [
+                "SSL 2.0 の使用",
+                "鍵の不用意な公開"
+              ]
+            },
+            {
+              "id": "b-3-misconfiguration",
+              "key": "misconfiguration",
+              "ja": "誤った設定による脆弱性",
+              "en": "Misconfiguration",
+              "one_liner": "**設定ミス**や初期設定のままの弱点",
+              "examples": [
+                "ストレージ誤公開",
+                "初期設定のまま"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B-4",
+      "slug": "b-4",
+      "official": "2.4",
+      "title": "悪意のある活動の兆候",
+      "blurb": "マルウェア・攻撃手法と異常の兆候を見抜く",
+      "groups": [
+        {
+          "id": "malware",
+          "title": "マルウェア（悪意あるソフトの種類）",
+          "terms": [
+            {
+              "id": "b-4-ransomware",
+              "key": "ransomware",
+              "ja": "ランサムウェア",
+              "en": "Ransomware",
+              "one_liner": "データを暗号化し**身代金**を要求",
+              "examples": [
+                "WannaCry",
+                "請求書を装う添付"
+              ]
+            },
+            {
+              "id": "b-4-trojan",
+              "key": "trojan",
+              "ja": "トロイの木馬",
+              "en": "Trojan",
+              "one_liner": "**正規ソフトを装って**侵入・潜伏",
+              "examples": [
+                "取引先を装う添付",
+                "RAT"
+              ]
+            },
+            {
+              "id": "b-4-worm",
+              "key": "worm",
+              "ja": "ワーム",
+              "en": "Worm",
+              "one_liner": "**自己増殖**してネットワークに拡散",
+              "examples": [
+                "社内PCに一斉感染",
+                "脆弱性経由の拡散"
+              ]
+            },
+            {
+              "id": "b-4-spyware",
+              "key": "spyware",
+              "ja": "スパイウェア",
+              "en": "Spyware",
+              "one_liner": "潜伏して利用者情報を**密かに収集**",
+              "examples": [
+                "無料ツールバー同梱",
+                "閲覧履歴の送信"
+              ]
+            },
+            {
+              "id": "b-4-bloatware",
+              "key": "bloatware",
+              "ja": "ブロートウェア",
+              "en": "Bloatware",
+              "one_liner": "**プリインストール**の不要ソフト",
+              "examples": [
+                "新品PCの付属アプリ",
+                "中古PCの残存アプリ"
+              ]
+            },
+            {
+              "id": "b-4-keylogger",
+              "key": "keylogger",
+              "ja": "キーロガー",
+              "en": "Keylogger",
+              "one_liner": "**キー入力を記録**して情報を盗む",
+              "examples": [
+                "ホテルのレンタルPC",
+                "USB型キーロガー"
+              ]
+            },
+            {
+              "id": "b-4-logic-bomb",
+              "key": "logic-bomb",
+              "ja": "ロジックボム",
+              "en": "Logic bomb",
+              "one_liner": "**条件成立**で発動する不正プログラム",
+              "examples": [
+                "退職後にデータ消去",
+                "特定日時に起動"
+              ]
+            },
+            {
+              "id": "b-4-rootkit",
+              "key": "rootkit",
+              "ja": "ルートキット",
+              "en": "Rootkit",
+              "one_liner": "OS中核で**管理者権限**を奪い隠蔽",
+              "examples": [
+                "カーネル改ざん",
+                "マルウェアの隠蔽"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "physical-network",
+          "title": "物理・ネットワーク攻撃（どの経路を狙うか）",
+          "terms": [
+            {
+              "id": "b-4-rfid-cloning",
+              "key": "rfid-cloning",
+              "ja": "RFIDクローニング",
+              "en": "RFID cloning",
+              "one_liner": "RFIDタグを読み取り**複製**する",
+              "examples": [
+                "入館カードの複製",
+                "非接触IC読取"
+              ]
+            },
+            {
+              "id": "b-4-ddos",
+              "key": "ddos",
+              "ja": "DDoS攻撃",
+              "en": "Distributed denial-of-service (DDoS)",
+              "one_liner": "多数から**大量トラフィック**で停止",
+              "examples": [
+                "ECサイト停止",
+                "増幅・反射型"
+              ]
+            },
+            {
+              "id": "b-4-dns-attack",
+              "key": "dns-attack",
+              "ja": "DNS攻撃",
+              "en": "DNS attacks",
+              "one_liner": "名前解決を偽り**偽サイトへ誘導**",
+              "examples": [
+                "DNSスプーフィング",
+                "キャッシュポイズニング"
+              ]
+            },
+            {
+              "id": "b-4-wireless",
+              "key": "wireless",
+              "ja": "ワイヤレス攻撃",
+              "en": "Wireless attacks",
+              "one_liner": "**無線LAN**の弱点で侵入・盗聴",
+              "examples": [
+                "イービルツイン",
+                "公衆Wi-Fiの盗聴"
+              ]
+            },
+            {
+              "id": "b-4-on-path",
+              "key": "on-path",
+              "ja": "オンパス攻撃",
+              "en": "On-path attack",
+              "one_liner": "**通信経路上**で傍受・改ざんする",
+              "examples": [
+                "セッションハイジャック",
+                "中間者攻撃"
+              ]
+            },
+            {
+              "id": "b-4-credential-replay",
+              "key": "credential-replay",
+              "ja": "クレデンシャルリプレイ",
+              "en": "Credential replay",
+              "one_liner": "盗聴した**認証情報**を再送しなりすまし",
+              "examples": [
+                "傍受したID/PW再送",
+                "パスザハッシュ"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "application",
+          "title": "アプリケーション攻撃（アプリの欠陥を突く）",
+          "terms": [
+            {
+              "id": "b-4-injection",
+              "key": "injection",
+              "ja": "インジェクション攻撃",
+              "en": "Injection",
+              "one_liner": "入力に**悪意あるコード**を挿入",
+              "examples": [
+                "SQLインジェクション",
+                "' OR 1=1 --",
+                "OSコマンド注入"
+              ]
+            },
+            {
+              "id": "b-4-replay",
+              "key": "replay",
+              "ja": "リプレイ攻撃",
+              "en": "Replay attack",
+              "one_liner": "傍受した通信を**再送信**して悪用",
+              "examples": [
+                "送金リクエスト再送",
+                "同じ操作の反復"
+              ]
+            },
+            {
+              "id": "b-4-privilege-escalation",
+              "key": "privilege-escalation",
+              "ja": "権限昇格攻撃",
+              "en": "Privilege escalation",
+              "one_liner": "本来より**高い権限**を不正に得る",
+              "examples": [
+                "ゼロデイで管理者化",
+                "一般→管理者"
+              ]
+            },
+            {
+              "id": "b-4-directory-traversal",
+              "key": "directory-traversal",
+              "ja": "ディレクトリトラバーサル",
+              "en": "Directory traversal",
+              "one_liner": "**../**で上位の非公開ファイルへ",
+              "examples": [
+                "../etc/passwd",
+                "DL機能の悪用"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "crypto-password",
+          "title": "暗号・パスワード攻撃（暗号や認証を破る）",
+          "terms": [
+            {
+              "id": "b-4-downgrade",
+              "key": "downgrade",
+              "ja": "ダウングレード攻撃",
+              "en": "Downgrade attack",
+              "one_liner": "**古く弱い方式**へ強制的に切替",
+              "examples": [
+                "TLS→旧SSLへ",
+                "POODLE"
+              ]
+            },
+            {
+              "id": "b-4-collision",
+              "key": "collision",
+              "ja": "衝突攻撃",
+              "en": "Collision attack",
+              "one_liner": "異なる入力で**同じハッシュ値**を作る",
+              "examples": [
+                "MD5の衝突",
+                "SHA-1の衝突"
+              ]
+            },
+            {
+              "id": "b-4-birthday",
+              "key": "birthday",
+              "ja": "バースデイ攻撃",
+              "en": "Birthday attack",
+              "one_liner": "**誕生日のパラドックス**で衝突探索",
+              "examples": [
+                "23人で一致率50%超",
+                "短いハッシュ値"
+              ]
+            },
+            {
+              "id": "b-4-brute-force",
+              "key": "brute-force",
+              "ja": "ブルートフォース攻撃",
+              "en": "Brute force",
+              "one_liner": "全組み合わせを**総当たり**で試す",
+              "examples": [
+                "銀行ログインへの試行",
+                "自動化ツール"
+              ]
+            },
+            {
+              "id": "b-4-password-spraying",
+              "key": "password-spraying",
+              "ja": "パスワードスプレー攻撃",
+              "en": "Password spraying",
+              "one_liner": "**多数のアカウント**に弱いPWを少数回",
+              "examples": [
+                "123456を全員に試行",
+                "qwerty"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "indicators",
+          "title": "兆候（Indicators：攻撃を示すサイン）",
+          "terms": [
+            {
+              "id": "b-4-account-lockout",
+              "key": "account-lockout",
+              "ja": "アカウントのロックアウト",
+              "en": "Account lockout",
+              "one_liner": "ログイン失敗で**自動ロック**された状態",
+              "examples": [
+                "複数アカウント同時ロック",
+                "総当たりの痕跡"
+              ]
+            },
+            {
+              "id": "b-4-concurrent-session",
+              "key": "concurrent-session",
+              "ja": "セッションの同時使用",
+              "en": "Concurrent session usage",
+              "one_liner": "同一アカウントが**同時に**複数ログイン",
+              "examples": [
+                "東京とNYで同時ログイン"
+              ]
+            },
+            {
+              "id": "b-4-blocked-content",
+              "key": "blocked-content",
+              "ja": "ブロックされたコンテンツ",
+              "en": "Blocked content",
+              "one_liner": "**禁止された宛先**へのアクセス試行",
+              "examples": [
+                "禁止国IPへの通信",
+                "プロキシの遮断ログ"
+              ]
+            },
+            {
+              "id": "b-4-impossible-travel",
+              "key": "impossible-travel",
+              "ja": "不可能な旅行",
+              "en": "Impossible travel",
+              "one_liner": "**移動不可能な短時間**で遠隔地ログイン",
+              "examples": [
+                "東京の10分後にNY"
+              ]
+            },
+            {
+              "id": "b-4-resource-consumption",
+              "key": "resource-consumption",
+              "ja": "リソースの消費",
+              "en": "Resource consumption",
+              "one_liner": "CPU等が**異常に多く**消費される",
+              "examples": [
+                "DDoSでCPU急上昇",
+                "帯域の逼迫"
+              ]
+            },
+            {
+              "id": "b-4-resource-inaccessibility",
+              "key": "resource-inaccessibility",
+              "ja": "リソースへのアクセス不能",
+              "en": "Resource inaccessibility",
+              "one_liner": "普段のリソースに**突然入れない**",
+              "examples": [
+                "顧客DBが暗号化",
+                "ランサムウェア被害"
+              ]
+            },
+            {
+              "id": "b-4-out-of-cycle-logging",
+              "key": "out-of-cycle-logging",
+              "ja": "サイクル外でのロギング",
+              "en": "Out-of-cycle logging",
+              "one_liner": "**普段と違う時間帯**にログが出る",
+              "examples": [
+                "深夜の大量アクセス",
+                "休日のログイン"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B-5",
+      "slug": "b-5",
+      "official": "2.5",
+      "title": "緩和策",
+      "blurb": "企業を守るための軽減テクニック",
+      "groups": [
+        {
+          "id": "limit",
+          "title": "範囲を絞る（アクセスと影響範囲の制限）",
+          "terms": [
+            {
+              "id": "b-5-segmentation",
+              "key": "segmentation",
+              "ja": "セグメンテーション",
+              "en": "Segmentation",
+              "one_liner": "ネットワークを**分割**して被害を局所化",
+              "examples": [
+                "部署別セグメント",
+                "VLAN"
+              ]
+            },
+            {
+              "id": "b-5-acl",
+              "key": "acl",
+              "ja": "アクセスコントロールリスト",
+              "en": "Access control list (ACL)",
+              "one_liner": "許可／拒否の**ルールの集合**",
+              "examples": [
+                "ルーターのACL",
+                "SSHを特定IPのみ許可"
+              ]
+            },
+            {
+              "id": "b-5-permissions",
+              "key": "permissions",
+              "ja": "パーミッション",
+              "en": "Permissions",
+              "one_liner": "ユーザーや機器に**操作権限**を割り当て",
+              "examples": [
+                "閲覧のみ／編集可",
+                "管理者権限の制限"
+              ]
+            },
+            {
+              "id": "b-5-isolation",
+              "key": "isolation",
+              "ja": "アイソレーション（隔離）",
+              "en": "Isolation",
+              "one_liner": "切り離して被害を**閉じ込める**",
+              "examples": [
+                "仮想マシンでの閲覧",
+                "サンドボックス"
+              ]
+            },
+            {
+              "id": "b-5-least-privilege",
+              "key": "least-privilege",
+              "ja": "最小特権の原則",
+              "en": "Least privilege",
+              "one_liner": "**必要最小限**の権限だけを付与",
+              "examples": [
+                "人事情報は人事部のみ",
+                "一般ユーザー運用"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "harden",
+          "title": "弱点を減らす（システムの堅牢化）",
+          "terms": [
+            {
+              "id": "b-5-patching",
+              "key": "patching",
+              "ja": "パッチ",
+              "en": "Patching",
+              "one_liner": "更新を適用して**脆弱性を修正**",
+              "examples": [
+                "Windows Update",
+                "Patch Tuesday"
+              ]
+            },
+            {
+              "id": "b-5-encryption",
+              "key": "encryption",
+              "ja": "暗号化",
+              "en": "Encryption",
+              "one_liner": "盗まれても**読めなくする**",
+              "examples": [
+                "HTTPS（TLS）",
+                "ディスク暗号化"
+              ]
+            },
+            {
+              "id": "b-5-configuration-enforcement",
+              "key": "configuration-enforcement",
+              "ja": "設定の強制",
+              "en": "Configuration enforcement",
+              "one_liner": "設定を**一括管理**し勝手な変更を防ぐ",
+              "examples": [
+                "MDM",
+                "パスワードポリシー適用"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "operate",
+          "title": "見張る・始末する（運用とライフサイクル）",
+          "terms": [
+            {
+              "id": "b-5-monitoring",
+              "key": "monitoring",
+              "ja": "モニタリング",
+              "en": "Monitoring",
+              "one_liner": "**継続的に監視**して異常を早期検出",
+              "examples": [
+                "通信量の監視",
+                "ログ監視"
+              ]
+            },
+            {
+              "id": "b-5-decommissioning",
+              "key": "decommissioning",
+              "ja": "廃棄",
+              "en": "Decommissioning",
+              "one_liner": "不要な資産を**適切に処分**する",
+              "examples": [
+                "データ完全消去",
+                "ディスク物理破壊"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

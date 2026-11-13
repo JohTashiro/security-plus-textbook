@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A-4 適切な暗号化の選択 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain A</span></a>
+  <a class="nav-back" href="index.html">← Domain A ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain A</h2>
+    <a href="a-1.html">A-1 セキュリティコントロールの比較</a><a href="a-2.html">A-2 セキュリティコンセプトの基礎</a><a href="a-3.html">A-3 変更管理とセキュリティへの影響</a><a href="a-4.html" class="active">A-4 適切な暗号化の選択</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain A 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain A · A-4</p>
+  <h1>適切な暗号化の選択</h1>
+  <p>鍵・隠す・ハッシュ・証明書</p>
+  <div class="meta-row">
+    <span class="chip">用語 25</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 1.4</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 25問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">鍵と暗号方式</h2>
+<article class="memo-card" id="a-4-pub-priv" data-search="公開鍵と秘密鍵 public / private key 対になる2つの鍵で暗号・署名 公開鍵で暗号化 秘密鍵で復号">
+  <h3>公開鍵と秘密鍵<span class="en">Public / Private Key</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">対になる<span class="hl">2つの鍵</span>で暗号・署名</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>公開鍵で暗号化</li><li>秘密鍵で復号</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-key-escrow" data-search="キーエスクロー key escrow 鍵を信頼できる第三者に預ける 紛失時の鍵復旧">
+  <h3>キーエスクロー<span class="en">Key Escrow</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">鍵を信頼できる<span class="hl">第三者に預ける</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>紛失時の鍵復旧</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-enc-scope" data-search="暗号化の範囲 level of encryption どの粒度で暗号化するかを決める フルディスク ファイル単位">
+  <h3>暗号化の範囲<span class="en">Level of Encryption</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">どの粒度</span>で暗号化するかを決める</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>フルディスク</li><li>ファイル単位</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-asymmetric" data-search="非対称暗号化 asymmetric 公開鍵と秘密鍵の2鍵方式 メール暗号化 デジタル署名">
+  <h3>非対称暗号化<span class="en">Asymmetric</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">公開鍵と秘密鍵の<span class="hl">2鍵方式</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>メール暗号化</li><li>デジタル署名</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-symmetric" data-search="対称暗号化 symmetric 同じ鍵で暗号も復号もする aes 大量データ暗号">
+  <h3>対称暗号化<span class="en">Symmetric</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">同じ鍵</span>で暗号も復号もする</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>AES</li><li>大量データ暗号</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-key-exchange" data-search="鍵交換 key exchange 共通鍵を安全に共有する手順 diffie-hellman rsa鍵交換">
+  <h3>鍵交換<span class="en">Key Exchange</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">共通鍵を<span class="hl">安全に共有</span>する手順</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>Diffie-Hellman</li><li>RSA鍵交換</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-algorithm" data-search="アルゴリズム algorithm 平文を暗号文にする計算手順 aes">
+  <h3>アルゴリズム<span class="en">Algorithm</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">平文を暗号文にする<span class="hl">計算手順</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>AES</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-key-length" data-search="鍵の長さ key length 長いほど強いが処理は重い 128ビット 256ビット">
+  <h3>鍵の長さ<span class="en">Key Length</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">長いほど強いが<span class="hl">処理は重い</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>128ビット</li><li>256ビット</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">鍵の保護</h2>
+<article class="memo-card" id="a-4-hsm" data-search="hsm hardware security module 鍵を守る専用ハードウェア 銀行の鍵管理 署名鍵保護">
+  <h3>HSM<span class="en">Hardware Security Module</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">鍵を守る<span class="hl">専用ハードウェア</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>銀行の鍵管理</li><li>署名鍵保護</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-kms" data-search="キー管理システム kms 鍵の一生をまとめて管理 クラウドの暗号鍵管理">
+  <h3>キー管理システム<span class="en">KMS</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">鍵の一生を<span class="hl">まとめて管理</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>クラウドの暗号鍵管理</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-enclave" data-search="セキュアエンクレーブ secure enclave 端末内の隔離された保護領域 生体認証データの保護">
+  <h3>セキュアエンクレーブ<span class="en">Secure Enclave</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">端末内の<span class="hl">隔離された保護領域</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>生体認証データの保護</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">難読化・データ隠蔽</h2>
+<article class="memo-card" id="a-4-stego" data-search="ステガノグラフィ steganography データの中に秘密を隠す 画像へのメッセージ埋め込み">
+  <h3>ステガノグラフィ<span class="en">Steganography</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">データの中に<span class="hl">秘密を隠す</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>画像へのメッセージ埋め込み</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-tokenize" data-search="トークン化 tokenization 機密を別の無害な値に置換 カード番号のトークン">
+  <h3>トークン化<span class="en">Tokenization</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">機密を別の<span class="hl">無害な値に置換</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>カード番号のトークン</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-masking" data-search="データマスキング data masking 一部を伏せて見せる **** **** **** 3456">
+  <h3>データマスキング<span class="en">Data Masking</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">一部を<span class="hl">伏せて見せる</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>**** **** **** 3456</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">ハッシュと署名</h2>
+<article class="memo-card" id="a-4-hash" data-search="ハッシュ値 hash 戻せない固定長の指紋 パスワード保存 改ざん検知">
+  <h3>ハッシュ値<span class="en">Hash</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">戻せない<span class="hl">固定長の指紋</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>パスワード保存</li><li>改ざん検知</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-salt" data-search="ソルト salt ハッシュ前に足すランダム値 レインボーテーブル対策">
+  <h3>ソルト<span class="en">Salt</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">ハッシュ前に足す<span class="hl">ランダム値</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>レインボーテーブル対策</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-digital-sig" data-search="デジタル署名 digital signature 誰が送り改ざんがないかを証明 署名付きメール 電子契約">
+  <h3>デジタル署名<span class="en">Digital Signature</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">誰が送り<span class="hl">改ざんがないか</span>を証明</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>署名付きメール</li><li>電子契約</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-key-stretch" data-search="キーストレッチ key stretching 何度もハッシュして総当たりを遅くする pbkdf2 bcrypt">
+  <h3>キーストレッチ<span class="en">Key Stretching</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">何度もハッシュして<span class="hl">総当たりを遅く</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>PBKDF2</li><li>bcrypt</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">分散台帳</h2>
+<article class="memo-card" id="a-4-blockchain" data-search="ブロックチェーン blockchain 改ざんしにくい分散型の台帳 ビットコイン取引">
+  <h3>ブロックチェーン<span class="en">Blockchain</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">改ざんしにくい<span class="hl">分散型の台帳</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ビットコイン取引</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-public-ledger" data-search="公開台帳 public ledger 誰でも見られる不変の記録 公開取引履歴">
+  <h3>公開台帳<span class="en">Public Ledger</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">誰でも見られる<span class="hl">不変の記録</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>公開取引履歴</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">証明書と信頼</h2>
+<article class="memo-card" id="a-4-ca" data-search="認証局 ca 証明書を発行する信頼できる機関 ssl/tls証明書の発行">
+  <h3>認証局<span class="en">CA</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">証明書を発行する<span class="hl">信頼できる機関</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SSL/TLS証明書の発行</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-crl" data-search="証明書失効リスト crl 期限前に無効にした証明書一覧 鍵漏洩時の失効">
+  <h3>証明書失効リスト<span class="en">CRL</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">期限前に無効にした<span class="hl">証明書一覧</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>鍵漏洩時の失効</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-self-signed" data-search="自己署名証明書 self-signed 自分で発行する試験・開発用証明書 ローカルhttps">
+  <h3>自己署名証明書<span class="en">Self-Signed</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">自分で発行する<span class="hl">試験・開発用</span>証明書</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ローカルHTTPS</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-third-party-cert" data-search="サードパーティ証明書 third-party certificate caが身元確認して発行する証明書 公開webサイトの証明書">
+  <h3>サードパーティ証明書<span class="en">Third-party Certificate</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">CAが身元確認して発行する証明書</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>公開Webサイトの証明書</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-4-root-of-trust" data-search="信頼の起点 root of trust 信頼の連鎖の出発点 ルート証明書">
+  <h3>信頼の起点<span class="en">Root of Trust</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">信頼の連鎖の<span class="hl">出発点</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ルート証明書</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（25問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "a-4-pub-priv", "stem": "受信者の公開鍵で暗号化したメールを、受信者だけが読める。復号に使うのは何か。", "choices": ["受信者の秘密鍵", "送信者の公開鍵", "共有の対称鍵のみ（常に）", "CRL"], "answer": 0, "explain": "公開鍵で暗号化したデータは対応する秘密鍵でのみ復号できる。"}, {"term": "a-4-key-escrow", "stem": "鍵紛失に備え、秘密鍵を信頼できる第三者機関に預けた。この仕組みは何か。", "choices": ["キーエスクロー", "ステガノグラフィ", "データマスキング", "フェンシング"], "answer": 0, "explain": "鍵の第三者預託＝キーエスクロー。"}, {"term": "a-4-enc-scope", "stem": "ノートPC紛失対策としてディスク全体を暗号化した。これは暗号化の範囲のどれに近いか。", "choices": ["フルディスク暗号化", "レコード単位のみ", "CRL登録", "ギャップ分析"], "answer": 0, "explain": "ディスク全体の暗号化はフルディスク。範囲（粒度）の選択問題。"}, {"term": "a-4-asymmetric", "stem": "公開鍵と秘密鍵の対を使い、暗号化やデジタル署名を行う方式は何か。", "choices": ["非対称暗号化", "対称暗号化", "ソルトのみ", "許可リスト"], "answer": 0, "explain": "2鍵方式＝非対称（公開鍵暗号）。"}, {"term": "a-4-symmetric", "stem": "同じ鍵で暗号化と復号を行い、大量データの高速処理に向く方式は何か。", "choices": ["対称暗号化", "非対称暗号化", "否認防止", "ボラード"], "answer": 0, "explain": "同一鍵＝対称。AESなどが代表。鍵配送が課題。"}, {"term": "a-4-key-exchange", "stem": "通信開始時に共通鍵を安全に共有するため Diffie-Hellman を使う。目的は何か。", "choices": ["鍵交換", "データマスキング", "入退室管理", "インパクト分析"], "answer": 0, "explain": "共通鍵を安全に共有するプロセス＝鍵交換。"}, {"term": "a-4-algorithm", "stem": "AESのように、平文を暗号文へ変換する数学的手順を何と呼ぶか。", "choices": ["アルゴリズム", "ステークホルダー", "PEP", "ダウンタイム"], "answer": 0, "explain": "変換の手順・規則＝暗号アルゴリズム。"}, {"term": "a-4-key-length", "stem": "一般に、暗号鍵のビット数を長くするとどうなるか。", "choices": ["安全性は上がりがちだが処理は重くなりやすい", "必ず可用性だけが上がる", "CRLが不要になる", "物理フェンスが不要になる"], "answer": 0, "explain": "鍵が長いほど強いが暗号化・復号の負荷が増える。"}, {"term": "a-4-hsm", "stem": "銀行がPINや署名鍵を、耐タンパー性のある専用機器内で生成・保管する。これは何か。", "choices": ["HSM", "フェンシング", "ギャップ分析", "ライティング"], "answer": 0, "explain": "鍵保護の専用ハードウェア＝HSM。"}, {"term": "a-4-kms", "stem": "クラウド上で鍵の生成・配布・更新・破棄を一元管理する仕組みは何か。", "choices": ["キー管理システム（KMS）", "ボラード", "抑止掲示", "SOPのみ"], "answer": 0, "explain": "鍵ライフサイクルの一元管理＝KMS。"}, {"term": "a-4-enclave", "stem": "スマホ内で生体情報を、メインOSから隔離された領域に保存する。これは何か。", "choices": ["セキュアエンクレーブ", "公開台帳", "メンテナンスウィンドウ", "依存関係"], "answer": 0, "explain": "端末内の隔離保護領域＝Secure Enclave。"}, {"term": "a-4-stego", "stem": "画像ファイルの中に秘密メッセージを埋め込み、存在自体を隠した。これは何か。", "choices": ["ステガノグラフィ", "対称暗号のみ", "承認プロセス", "アクセスバッジ"], "answer": 0, "explain": "データの中に秘密を隠す＝ステガノグラフィ（難読化）。"}, {"term": "a-4-tokenize", "stem": "カード番号をランダムなトークンに置き換え、決済処理ではトークンだけ扱う。これは何か。", "choices": ["トークン化", "フルディスク暗号化と同一", "フェンシング", "指示的コントロール"], "answer": 0, "explain": "機密を無害な値に置換＝トークン化。"}, {"term": "a-4-masking", "stem": "画面表示でカード番号を **** **** **** 1234 のように一部だけ見せる。これは何か。", "choices": ["データマスキング", "鍵交換", "CRL", "ボラード"], "answer": 0, "explain": "一部を伏せて形式を保つ＝データマスキング。"}, {"term": "a-4-hash", "stem": "パスワードを不可逆な固定長値に変換して保存し、改ざん検知にも使う。これは何か。", "choices": ["ハッシュ", "対称鍵の共有そのもの", "警備員", "ダウンタイム"], "answer": 0, "explain": "不可逆の固定長指紋＝ハッシュ。完全性確認にも使用。"}, {"term": "a-4-salt", "stem": "同じパスワードでも異なるハッシュになるよう、ハッシュ前にランダム値を加える。これは何か。", "choices": ["ソルト", "ボラード", "承認プロセス", "ライティング"], "answer": 0, "explain": "ハッシュ前のランダム値＝ソルト。レインボーテーブル対策。"}, {"term": "a-4-digital-sig", "stem": "送信者の秘密鍵で署名し、受信者が公開鍵で検証して改ざんと送信者を確認する。これは何か。", "choices": ["デジタル署名", "データマスキング", "フェンシング", "機能の制限"], "answer": 0, "explain": "完全性・認証・否認防止に寄与するのがデジタル署名。"}, {"term": "a-4-key-stretch", "stem": "パスワードを意図的に何度もハッシュし、総当たり攻撃を遅くする。これは何か。", "choices": ["キーストレッチ", "暗黙の信頼ゾーン", "ボラード", "メンテナンスウィンドウ"], "answer": 0, "explain": "計算を重くして攻撃を遅くする＝キーストレッチ（PBKDF2等）。"}, {"term": "a-4-blockchain", "stem": "取引を分散ノードで共有し、改ざんが極めて困難な台帳技術は何か。", "choices": ["ブロックチェーン", "アクセスバッジ", "SOP", "抑止掲示"], "answer": 0, "explain": "分散型で耐改ざん性の高い台帳＝ブロックチェーン。"}, {"term": "a-4-public-ledger", "stem": "誰でも取引履歴を検証できる、変更困難な公開記録を何と呼ぶか。", "choices": ["公開台帳", "自己署名証明書", "ギャップ分析", "警備員"], "answer": 0, "explain": "誰でも見られる不変の記録＝公開台帳。"}, {"term": "a-4-ca", "stem": "Webサイト運営者の身元を確認し、TLS証明書を発行する信頼された機関は何か。", "choices": ["認証局（CA）", "ボラード", "ステークホルダーのみ", "ダウンタイム"], "answer": 0, "explain": "証明書を発行する第三者＝Certificate Authority。"}, {"term": "a-4-crl", "stem": "秘密鍵漏洩のため、有効期限内の証明書を無効化し一覧で公開した。この一覧は何か。", "choices": ["証明書失効リスト（CRL）", "許可リスト", "SOP", "フェンシング"], "answer": 0, "explain": "期限前に無効化した証明書の一覧＝CRL。"}, {"term": "a-4-self-signed", "stem": "開発環境でコストを抑え、自分自身で署名した証明書を使う。これは何か。", "choices": ["自己署名証明書", "サードパーティ証明書と同一の信頼", "HSM必須", "公開台帳"], "answer": 0, "explain": "所有者自身が発行＝自己署名。外部からの広範な信頼は得にくい。"}, {"term": "a-4-third-party-cert", "stem": "一般公開サイトが、第三者CAに身元確認してもらい発行した証明書を使う。これは何か。", "choices": ["サードパーティ証明書", "自己署名のみ", "ソルト", "ボラード"], "answer": 0, "explain": "CA発行の証明書＝サードパーティ証明書。"}, {"term": "a-4-root-of-trust", "stem": "ブラウザが証明書チェーンをたどった最終的な信頼の出発点（ルート証明書など）を何と呼ぶか。", "choices": ["信頼の起点（Root of Trust）", "ダウンタイム", "機能の制限", "抑止的掲示"], "answer": 0, "explain": "信頼連鎖の根＝Root of Trust。"}]</script>
+</section>
+
+<nav class="pager"><a href="a-3.html"><span>前の章</span>A-3 変更管理とセキュリティへの影響</a><a class="next" href="index.html"><span>戻る</span>Domain A ハブ</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

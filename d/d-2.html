@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D-2 ハードウェアの取得・管理・廃棄 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain D</span></a>
+  <a class="nav-back" href="index.html">← Domain D ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain D</h2>
+    <a href="d-1.html">D-1 リソースのセキュリティ対策</a><a href="d-2.html" class="active">D-2 ハードウェアの取得・管理・廃棄</a><a href="d-3.html">D-3 脆弱性管理手法</a><a href="d-4.html">D-4 アラートとモニタリング</a><a href="d-5.html">D-5 セキュリティ向上策</a><a href="d-6.html">D-6 アクセス管理</a><a href="d-7.html">D-7 自動化</a><a href="d-8.html">D-8 インシデント対応</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain D 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain D · D-2</p>
+  <h1>ハードウェアの取得・管理・廃棄</h1>
+  <p>調達から追跡、廃棄までの資産管理</p>
+  <div class="meta-row">
+    <span class="chip">用語 8</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 4.2</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 8問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">調達と所有</h2>
+<article class="memo-card" id="d-2-acquisition-procurement" data-search="取得／調達プロセス acquisition / procurement process 購入前にセキュリティ要件を定義し信頼経路で調達する 正規ルートの新品pc 納品時の不要ソフト削除">
+  <h3>取得／調達プロセス<span class="en">Acquisition / procurement process</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">購入前に<span class="hl">セキュリティ要件</span>を定義し信頼経路で調達する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>正規ルートの新品PC</li><li>納品時の不要ソフト削除</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-2-ownership" data-search="オーナーシップ ownership 資産の所有者・管理者を明確にし割り当てを記録する 社員へのpc貸与台帳 シリアル番号での管理">
+  <h3>オーナーシップ<span class="en">Ownership</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">資産の<span class="hl">所有者・管理者</span>を明確にし割り当てを記録する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>社員へのPC貸与台帳</li><li>シリアル番号での管理</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">追跡（インベントリと列挙）</h2>
+<article class="memo-card" id="d-2-inventory" data-search="インベントリ inventory it資産を台帳で一覧化し継続的に追跡する hw／swの資産台帳 ライセンス・サポート期限の確認">
+  <h3>インベントリ<span class="en">Inventory</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">IT資産を<span class="hl">台帳で一覧化</span>し継続的に追跡する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>HW／SWの資産台帳</li><li>ライセンス・サポート期限の確認</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-2-enumeration" data-search="列挙 enumeration スキャン等で条件に合う機器・情報を洗い出す ip範囲スキャン 開ポート・osの発見">
+  <h3>列挙<span class="en">Enumeration</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">スキャン等で条件に合う機器・情報を<span class="hl">洗い出す</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>IP範囲スキャン</li><li>開ポート・OSの発見</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">廃棄・廃止</h2>
+<article class="memo-card" id="d-2-sanitization" data-search="サニタイゼーション sanitization データを復元不可能な状態にする（削除だけでは不十分） サニタイズソフトによる消去 廃棄前の情報漏洩防止">
+  <h3>サニタイゼーション<span class="en">Sanitization</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">データを<span class="hl">復元不可能</span>な状態にする（削除だけでは不十分）</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>サニタイズソフトによる消去</li><li>廃棄前の情報漏洩防止</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-2-destruction" data-search="破壊 destruction メディアを物理的に破壊し復元を不可能にする hddシュレッダー粉砕 穿孔・消磁">
+  <h3>破壊<span class="en">Destruction</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">メディアを<span class="hl">物理的に破壊</span>し復元を不可能にする</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>HDDシュレッダー粉砕</li><li>穿孔・消磁</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-2-certification" data-search="第三者認証 certification 適正な廃棄・消去を第三者の証明で示す 破壊証明書の取得 規格に沿った廃棄">
+  <h3>第三者認証<span class="en">Certification</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">適正な廃棄・消去を<span class="hl">第三者の証明</span>で示す</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>破壊証明書の取得</li><li>規格に沿った廃棄</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-2-data-retention" data-search="データ保持 data retention 廃棄前に必要データを法定・業務要件どおり保持する 廃棄前バックアップ 財務データの保存期間">
+  <h3>データ保持<span class="en">Data retention</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">廃棄前に必要データを<span class="hl">法定・業務要件どおり保持</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>廃棄前バックアップ</li><li>財務データの保存期間</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（8問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "d-2-acquisition-procurement", "stem": "新PC導入にあたり、業務に必要十分なスペックを決め、信頼ベンダーの正規ルートで購入し、納品時に不要なプリインストールソフトを削除した。主にどのプロセスか。", "choices": ["列挙", "取得／調達プロセス", "破壊", "第三者認証"], "answer": 1, "explain": "調達前のセキュリティ要件定義、信頼経路での購入、納品検査が取得／調達プロセスの要点。"}, {"term": "d-2-ownership", "stem": "社員へのPC貸与で、役割に応じた機種を割り当て、誰にどのシリアル番号を渡したかを台帳に残し、紛失時に特定できるようにした。主にどの概念か。", "choices": ["サニタイゼーション", "列挙", "オーナーシップ", "データ保持"], "answer": 2, "explain": "所有者・管理者を明確にし、割り当てと記録を行うのがオーナーシップ。"}, {"term": "d-2-inventory", "stem": "使用中のPC・サーバー・OS・アプリを洗い出し、製品名・型番・バージョン・ライセンスを台帳にまとめてサポート切れを点検した。これはどれか。", "choices": ["インベントリ", "破壊", "取得／調達プロセス", "第三者認証"], "answer": 0, "explain": "資産を台帳として一覧化し追跡するのがインベントリ。ライセンス違反やEOL確認にも使う。"}, {"term": "d-2-enumeration", "stem": "ネットワークスキャンでIP範囲内の機器のIP／MACや開いているポート、OS情報をその場で洗い出した。インベントリ台帳の更新とは区別されるこの活動はどれか。", "choices": ["データ保持", "オーナーシップ", "列挙", "サニタイゼーション"], "answer": 2, "explain": "条件に基づき機器やサービス情報を洗い出すのが列挙。台帳の継続記録であるインベントリと対比して覚える。"}, {"term": "d-2-sanitization", "stem": "廃棄するPCのHDDに機密があるため、ファイル削除だけでは足りず、専用ソフトでデータを復元不可能な状態にしてから破棄することにした。これはどれか。", "choices": ["列挙", "インベントリ", "サニタイゼーション", "取得／調達プロセス"], "answer": 2, "explain": "削除だけでは不十分で、データを復元不可能にするのがサニタイゼーション。"}, {"term": "d-2-destruction", "stem": "再利用しないHDDを専用シュレッダーで1cm以下に粉砕し、破片からのデータ復元を事実上不可能にした。これはどれか。", "choices": ["破壊", "インベントリ", "オーナーシップ", "列挙"], "answer": 0, "explain": "メディアを物理的に破壊して復元不能にするのが破壊。穿孔・消磁・粉砕が典型。"}, {"term": "d-2-certification", "stem": "機密HDDの廃棄で、自社処理だけでは対外的な証明が難しいため、第三者機関に依頼し破壊証明書を取得した。主にどの概念か。", "choices": ["インベントリ", "第三者認証", "列挙", "取得／調達プロセス"], "answer": 1, "explain": "適正な廃棄・消去を第三者の証明で示すのが Certification（第三者認証）。廃棄の信頼性を高める。"}, {"term": "d-2-data-retention", "stem": "PC廃棄の前に、必要な業務データを別媒体へバックアップし、法定保存期間内の財務データは期間終了まで残す方針にした。これはどれか。", "choices": ["破壊のみ", "列挙", "データ保持", "オーナーシップ"], "answer": 2, "explain": "廃棄・破壊の前に、法律や業務要件に沿って必要データを保持するのがデータ保持。"}]</script>
+</section>
+
+<nav class="pager"><a href="d-1.html"><span>前の章</span>D-1 リソースのセキュリティ対策</a><a class="next" href="d-3.html"><span>次の章</span>D-3 脆弱性管理手法</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

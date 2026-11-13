@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-3 第三者のリスク評価 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain E</span></a>
+  <a class="nav-back" href="index.html">← Domain E ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain E</h2>
+    <a href="e-1.html">E-1 セキュリティガバナンスの要素</a><a href="e-2.html">E-2 リスク管理プロセス</a><a href="e-3.html" class="active">E-3 第三者のリスク評価</a><a href="e-4.html">E-4 セキュリティコンプライアンス</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain E 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain E · E-3</p>
+  <h1>第三者のリスク評価</h1>
+  <p>ベンダー評価と合意書面</p>
+  <div class="meta-row">
+    <span class="chip">用語 7</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 5.3</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 7問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">ベンダー評価</h2>
+<article class="memo-card" id="e-3-penetration-testing" data-search="侵入テスト penetration testing ベンダー対策を自ら検証する 委託先の耐性確認 課題の共有・改善">
+  <h3>侵入テスト<span class="en">Penetration testing</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">ベンダー対策を<span class="hl">自ら検証</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>委託先の耐性確認</li><li>課題の共有・改善</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-3-due-diligence" data-search="デューデリジェンス due diligence 選定前の入念な調査 財務・法令遵守 セキュリティ体制">
+  <h3>デューデリジェンス<span class="en">Due diligence</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">選定<span class="hl">前</span>の入念な調査</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>財務・法令遵守</li><li>セキュリティ体制</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-3-evidence-of-internal-audits" data-search="内部監査の証跡 evidence of internal audits ベンダーの内部監査記録を確認 監査頻度・範囲 記録の保持確認">
+  <h3>内部監査の証跡<span class="en">Evidence of internal audits</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">ベンダーの<span class="hl">内部監査記録</span>を確認</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>監査頻度・範囲</li><li>記録の保持確認</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-3-conflict-of-interest" data-search="利益相反 conflict of interest 私的利害で公正選定が歪まないか 知人企業への優先発注 選定時の利害確認">
+  <h3>利益相反<span class="en">Conflict of interest</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">私的利害で<span class="hl">公正選定</span>が歪まないか</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>知人企業への優先発注</li><li>選定時の利害確認</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">合意書面</h2>
+<article class="memo-card" id="e-3-moa" data-search="moa memorandum of agreement 合意内容を明文化する覚書 役割・期間の定義 契約ではないが疑義低減">
+  <h3>MOA<span class="en">Memorandum of Agreement</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">合意内容を<span class="hl">明文化</span>する覚書</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>役割・期間の定義</li><li>契約ではないが疑義低減</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-3-mou" data-search="mou memorandum of understanding 理解・方向性を残す了解覚書 共同研究の目的整理 パートナーシップの基礎">
+  <h3>MOU<span class="en">Memorandum of Understanding</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">理解・方向性を残す<span class="hl">了解覚書</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>共同研究の目的整理</li><li>パートナーシップの基礎</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-3-sla" data-search="sla service level agreement サービス品質・範囲を定めた合意 稼働率・応答時間 障害対応手順">
+  <h3>SLA<span class="en">Service Level Agreement</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">サービス<span class="hl">品質・範囲</span>を定めた合意</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>稼働率・応答時間</li><li>障害対応手順</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（7問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "e-3-penetration-testing", "stem": "委託先ベンダーのセキュリティ対策を無条件に信じず、合意のうえで攻撃シミュレーション等により自ら耐性を確かめた。これは主にどの評価手法か。", "choices": ["デューデリジェンスのみ", "侵入テスト", "利益相反の確認のみ", "MOUの締結のみ"], "answer": 1, "explain": "第三者の対策を自ら検証するのが侵入テスト（ベンダー評価としての位置づけ）。"}, {"term": "e-3-due-diligence", "stem": "ベンダー選定前に、財務健全性・法令遵守・セキュリティ体制・過去実績などを徹底的に調査した。この活動は何か。", "choices": ["SLAの定義", "内部監査の証跡確認のみ", "デューデリジェンス", "利益相反"], "answer": 2, "explain": "選定前の入念な調査がデューデリジェンス（デューデリ）である。"}, {"term": "e-3-evidence-of-internal-audits", "stem": "ベンダーが定期的に内部監査を実施し記録を保持しているか、監査の頻度や範囲が分かる報告書を提出させて確認した。主にどの概念か。", "choices": ["内部監査の証跡（Evidence of internal audits）", "利益相反", "MOA", "侵入テスト"], "answer": 0, "explain": "ベンダー自身の内部監査の証拠・記録を確認するのが Evidence of internal audits。"}, {"term": "e-3-conflict-of-interest", "stem": "選定担当が同級生の会社へ、他社より高い見積もりでも優先発注しようとしている。公正なベンダー選定のためにまず確認すべき概念はどれか。", "choices": ["SLA", "MOU", "ヒートマップ", "利益相反"], "answer": 3, "explain": "私的利害が職務上の決定を歪める状況が利益相反。選定時に有無を確認する。"}, {"term": "e-3-moa", "stem": "提携先との役割分担・費用負担・期間など、議論でまとまった合意事項を文書に残し、のちの疑義を減らしたい。契約そのものではないが明文化したい。最も近いのはどれか。", "choices": ["利益相反チェックのみ", "MOA（Memorandum of Agreement）", "侵入テスト報告書のみ", "デューデリジェンスのみ"], "answer": 1, "explain": "MOAは合意内容を記した覚書で、講義では契約ではないが記録として疑義を減らすと整理される。"}, {"term": "e-3-mou", "stem": "共同研究の大きな方向性や、当事者がどう理解しているかを書面で整理し、パートナーシップの基礎を築きたい。講義でMOAより「薄い」とされる文書はどれか。", "choices": ["SLA", "内部監査の証跡", "MOU（Memorandum of Understanding）", "侵入テスト"], "answer": 2, "explain": "MOUは理解・方向性を残す了解覚書で、講義ではMOAより緩やかな位置づけ。"}, {"term": "e-3-sla", "stem": "ITサービス提供者と利用者の間で、稼働率・応答時間・障害対応手順などサービスの品質と範囲を契約的に定めた。これは何か。", "choices": ["SLA（Service Level Agreement）", "利益相反", "デューデリジェンス", "MOUのみ"], "answer": 0, "explain": "サービス品質・範囲・性能指標・対応手順を定めるのがSLA。"}]</script>
+</section>
+
+<nav class="pager"><a href="e-2.html"><span>前の章</span>E-2 リスク管理プロセス</a><a class="next" href="e-4.html"><span>次の章</span>E-4 セキュリティコンプライアンス</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

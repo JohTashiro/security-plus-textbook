@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D-1 リソースのセキュリティ対策 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain D</span></a>
+  <a class="nav-back" href="index.html">← Domain D ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain D</h2>
+    <a href="d-1.html" class="active">D-1 リソースのセキュリティ対策</a><a href="d-2.html">D-2 ハードウェアの取得・管理・廃棄</a><a href="d-3.html">D-3 脆弱性管理手法</a><a href="d-4.html">D-4 アラートとモニタリング</a><a href="d-5.html">D-5 セキュリティ向上策</a><a href="d-6.html">D-6 アクセス管理</a><a href="d-7.html">D-7 自動化</a><a href="d-8.html">D-8 インシデント対応</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain D 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain D · D-1</p>
+  <h1>リソースのセキュリティ対策</h1>
+  <p>端末・サーバ・クラウドの守り方</p>
+  <div class="meta-row">
+    <span class="chip">用語 27</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 4.1</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 27問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">ベースラインと端末・ネットワーク機器</h2>
+<article class="memo-card" id="d-1-secure-baseline" data-search="セキュアベースライン secure baseline 安全運用の最低限設定の基準 パスワード方針 fw・更新・av">
+  <h3>セキュアベースライン<span class="en">Secure baseline</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">安全運用の<span class="hl">最低限設定</span>の基準</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>パスワード方針</li><li>FW・更新・AV</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-mobile-devices" data-search="モバイルデバイス mobile devices スマホ等を一元管理して守る対象 mdm導入 施策の維持">
+  <h3>モバイルデバイス<span class="en">Mobile devices</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">スマホ等を<span class="hl">一元管理</span>して守る対象</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>MDM導入</li><li>施策の維持</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-workstations" data-search="ワークステーション workstations 業務pcを物理と論理で守る 入退室・ロック 強力なパスワード">
+  <h3>ワークステーション<span class="en">Workstations</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">業務PCを<span class="hl">物理と論理</span>で守る</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>入退室・ロック</li><li>強力なパスワード</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-switches" data-search="スイッチ switches ポートで接続端末を制限する ポートセキュリティ macアドレス登録">
+  <h3>スイッチ<span class="en">Switches</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">ポートで接続端末を<span class="hl">制限</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ポートセキュリティ</li><li>MACアドレス登録</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-routers" data-search="ルーター routers 管理pwとファーム最新化で守る デフォルトpw禁止 ファーム更新">
+  <h3>ルーター<span class="en">Routers</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">管理PWと<span class="hl">ファーム最新化</span>で守る</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>デフォルトPW禁止</li><li>ファーム更新</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">サーバ・クラウド・制御系・IoT</h2>
+<article class="memo-card" id="d-1-cloud-infrastructure" data-search="クラウドインフラ cloud infrastructure iam等で権限とログを適切設定 iam最小権限 監視・ログ">
+  <h3>クラウドインフラ<span class="en">Cloud infrastructure</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">IAM等で<span class="hl">権限とログ</span>を適切設定</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>IAM最小権限</li><li>監視・ログ</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-servers" data-search="サーバー servers パッチと設定機密の保護 osパッチ 接続情報の暗号化">
+  <h3>サーバー<span class="en">Servers</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">パッチ</span>と設定機密の保護</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>OSパッチ</li><li>接続情報の暗号化</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-ics-scada" data-search="ics／scada ics / scada 制御系を業務網から分離する インターネット分離 fw・vlan分割">
+  <h3>ICS／SCADA<span class="en">ICS / SCADA</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">制御系を業務網から<span class="hl">分離</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>インターネット分離</li><li>FW・VLAN分割</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-embedded-systems" data-search="組込みシステム embedded systems 機器内蔵系のファーム更新 家電の更新 産業機器ファーム">
+  <h3>組込みシステム<span class="en">Embedded systems</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">機器内蔵系の<span class="hl">ファーム更新</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>家電の更新</li><li>産業機器ファーム</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-rtos" data-search="rtos real-time operating system 時間制約osを最新に保つ エンジン制御 ベンダーパッチ">
+  <h3>RTOS<span class="en">Real-Time Operating System</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">時間制約OSを<span class="hl">最新に保つ</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>エンジン制御</li><li>ベンダーパッチ</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-iot" data-search="iot internet of things 初期パスワード変更が最優先 デフォルトpw変更 遠隔エアコン">
+  <h3>IoT<span class="en">Internet of Things</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">初期パスワード変更</span>が最優先</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>デフォルトPW変更</li><li>遠隔エアコン</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">無線の調査と可視化</h2>
+<article class="memo-card" id="d-1-site-survey" data-search="サイトサーベイ site survey 無線構築前の電波状況調査 ap配置決定 干渉・死角の把握">
+  <h3>サイトサーベイ<span class="en">Site survey</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">無線構築前の<span class="hl">電波状況調査</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>AP配置決定</li><li>干渉・死角の把握</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-heat-map" data-search="ヒートマップ heat map 電波強度を色で可視化する図 弱いエリア表示 チャンネル調整">
+  <h3>ヒートマップ<span class="en">Heat map</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">電波強度を<span class="hl">色で可視化</span>する図</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>弱いエリア表示</li><li>チャンネル調整</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">モバイル管理・配備・接続方式</h2>
+<article class="memo-card" id="d-1-mdm" data-search="mdm mobile device management モバイルを一元管理する仕組み ポリシー一括適用 リモートワイプ">
+  <h3>MDM<span class="en">Mobile Device Management</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">モバイルを<span class="hl">一元管理</span>する仕組み</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ポリシー一括適用</li><li>リモートワイプ</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-byod" data-search="byod bring your own device 私物端末を業務利用する方式 私物スマホ業務 mdmで管理">
+  <h3>BYOD<span class="en">Bring Your Own Device</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">私物端末</span>を業務利用する方式</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>私物スマホ業務</li><li>MDMで管理</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-cyod" data-search="cyod choose your own device 会社承認端末から選んで使う 承認リスト選択 基準の事前策定">
+  <h3>CYOD<span class="en">Choose Your Own Device</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">会社承認端末から<span class="hl">選んで使う</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>承認リスト選択</li><li>基準の事前策定</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-cellular" data-search="セルラー cellular 携帯キャリア網で接続する方式 simの暗号化 キャリア接続">
+  <h3>セルラー<span class="en">Cellular</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">携帯キャリア網</span>で接続する方式</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SIMの暗号化</li><li>キャリア接続</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-wifi" data-search="wi-fi wi-fi 無線lanは暗号と認証で守る 暗号化の有効化 オープン網回避">
+  <h3>Wi-Fi<span class="en">Wi-Fi</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">無線LANは<span class="hl">暗号と認証</span>で守る</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>暗号化の有効化</li><li>オープン網回避</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-bluetooth" data-search="bluetooth bluetooth 最新版と必要時のみペアリング バージョン更新 ペアリング無効化">
+  <h3>Bluetooth<span class="en">Bluetooth</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">最新版と<span class="hl">必要時のみペアリング</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>バージョン更新</li><li>ペアリング無効化</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">無線のセキュリティ設定</h2>
+<article class="memo-card" id="d-1-wpa3" data-search="wpa3 wi-fi protected access 3 新しいwi-fi保護で辞書攻撃に強い sae認証 wpa2より耐性">
+  <h3>WPA3<span class="en">Wi-Fi Protected Access 3</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">新しいWi-Fi保護で<span class="hl">辞書攻撃に強い</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SAE認証</li><li>WPA2より耐性</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-cryptographic-protocols" data-search="暗号化プロトコル cryptographic protocols 通信データを暗号化して守る 強い鍵長 pfs">
+  <h3>暗号化プロトコル<span class="en">Cryptographic protocols</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">通信データを<span class="hl">暗号化</span>して守る</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>強い鍵長</li><li>PFS</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">アプリセキュリティと監視</h2>
+<article class="memo-card" id="d-1-input-validation" data-search="入力バリデーション input validation 入力が適切か検証して不正を弾く ホワイトリスト エスケープ処理">
+  <h3>入力バリデーション<span class="en">Input validation</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">入力が適切か<span class="hl">検証して不正を弾く</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ホワイトリスト</li><li>エスケープ処理</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-secure-cookies" data-search="セキュアクッキー secure cookies https時のみcookieを送る属性 secure属性 傍受防止">
+  <h3>セキュアクッキー<span class="en">Secure cookies</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">HTTPS時のみ</span>Cookieを送る属性</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>Secure属性</li><li>傍受防止</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-static-code-analysis" data-search="静的コード分析 static code analysis ソースを実行せず解析する sastツール 記述パターン検査">
+  <h3>静的コード分析<span class="en">Static code analysis</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">ソースを<span class="hl">実行せず解析</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SASTツール</li><li>記述パターン検査</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-code-signing" data-search="コードサイニング code signing 署名でコードの真正性を保証 デジタル署名 不明な発行元警告">
+  <h3>コードサイニング<span class="en">Code signing</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">署名でコードの<span class="hl">真正性を保証</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>デジタル署名</li><li>不明な発行元警告</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-sandboxing" data-search="サンドボックス sandboxing 制限環境に閉じ込めて実行 ブラウザ隔離 アプリ領域分離">
+  <h3>サンドボックス<span class="en">Sandboxing</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">制限環境に<span class="hl">閉じ込めて実行</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ブラウザ隔離</li><li>アプリ領域分離</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-1-monitoring" data-search="モニタリング monitoring 負荷やログを見て異常に気づく cpu急上昇検知 操作ログ監視">
+  <h3>モニタリング<span class="en">Monitoring</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">負荷やログを見て<span class="hl">異常に気づく</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>CPU急上昇検知</li><li>操作ログ監視</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（27問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "d-1-secure-baseline", "stem": "パスワード方針・ファイアウォール・更新・アンチウイルスなどを「最低限これだけは守る」設定として定め、業界標準を踏まえて維持更新している。これは何か。", "choices": ["サイトサーベイ", "セキュアベースライン", "サンドボックス", "コードサイニング"], "answer": 1, "explain": "安全運用のための最低限のセキュリティ設定・要件がセキュアベースラインである。"}, {"term": "d-1-mobile-devices", "stem": "従業員のスマートフォンを企業でまとめて管理し、セキュリティ施策の実装と維持を容易にしたい。講義がまず挙げる代表的なアプローチはどれか。", "choices": ["エアギャップのみ", "オープンWi-Fiの利用", "モバイルデバイス管理（MDM）の導入", "ポートセキュリティのみ"], "answer": 2, "explain": "モバイルデバイスのセキュリティ向上の代表例として、MDMによる一元管理が挙げられる。"}, {"term": "d-1-workstations", "stem": "業務用PCについて、オフィスの入退室管理や端末ロックに加え、強力なパスワード方針を適用している。この守りの対象として最も適切なものはどれか。", "choices": ["ICS/SCADAのみ", "ワークステーション", "ヒートマップ", "セルラー"], "answer": 1, "explain": "ワークステーションは物理（入退室・ロック）と論理（パスワード）の両面で守る。"}, {"term": "d-1-switches", "stem": "各ポートに登録したMACアドレスの端末だけ接続を許可し、未登録端末ではポートを閉じる設定をした。これは主にどの機器の対策か。", "choices": ["スイッチ（ポートセキュリティ）", "サンドボックス", "コードサイニング", "BYOD"], "answer": 0, "explain": "ポートセキュリティによるMAC制限はスイッチの代表的なハードニングである。"}, {"term": "d-1-routers", "stem": "家庭用・事業所のルータで、工場出荷の管理パスワードをそのまま使い、古いファームウェアのまま運用している。講義が強調する改善として最も適切なものはどれか。", "choices": ["ヒートマップの色を変えるだけ", "強力な管理パスワードとファームウェア最新化", "ペアリングモードの常時有効化", "入力バリデーションの無効化"], "answer": 1, "explain": "ルータはデフォルトパスワードの廃止とファーム最新化が要点である。"}, {"term": "d-1-cloud-infrastructure", "stem": "AWS上で開発者にEC2起動は許可しつつ、機密データへの権限は限定し、あわせてログも監視している。この考え方に最も近い対象はどれか。", "choices": ["Bluetoothペアリング", "クラウドインフラ（IAM等の適切な設定）", "サイトサーベイのみ", "WPA3の辞書だけ"], "answer": 1, "explain": "クラウドインフラではIAM等のきめ細かい権限と監視・ログが重要である。"}, {"term": "d-1-servers", "stem": "WannaCryのようにOSの既知脆弱性を突く攻撃を防ぐため、サーバでまず徹底すべき対策として講義が示すものはどれか。", "choices": ["OSパッチの適用と最新化", "オープンWi-Fiの推奨", "デフォルトパスワードの維持", "ペアリングモード常時ON"], "answer": 0, "explain": "サーバはOSを最新に保ちパッチを適用することが基本である。設定ファイルの機密保護も重要。"}, {"term": "d-1-ics-scada", "stem": "発電所の制御システムを、業務用ネットワークやインターネットからファイアウォールやVLANで切り離している。主目的に最も近いものはどれか。", "choices": ["BYODの利便性向上", "ICS/SCADAの攻撃面縮小（分離）", "CookieのSecure属性設定", "コードの静的解析"], "answer": 1, "explain": "重要インフラ制御系はインターネット／業務網からの分離が推奨される。"}, {"term": "d-1-embedded-systems", "stem": "家電や産業機器に内蔵された専用コンピュータで、既知の脆弱性を残さないために講義が強調する対策はどれか。", "choices": ["ファームウェアの最新化", "オープンネットワークの公開", "入力長制限の撤廃", "ヒートマップの廃止"], "answer": 0, "explain": "組込みシステムではファームウェアを最新に保つことが重要である。"}, {"term": "d-1-rtos", "stem": "自動車のエンジン制御など、決められた時間内に処理する必要があるOSに対し、講義が示すセキュリティの基本はどれか。", "choices": ["バージョンを意図的に古く保つ", "ベンダーパッチを適用し最新に保つ", "管理パスワードをデフォルトのままにする", "モニタリングを一切行わない"], "answer": 1, "explain": "RTOSも他と同様、パッチ適用と最新化がセキュリティ向上の基本である。"}, {"term": "d-1-iot", "stem": "ネットワーク接続のエアコン等で、出荷時パスワードを変更せず使っている利用者が多い。講義が特に重要とする対策はどれか。", "choices": ["デフォルトパスワードの変更", "サイトサーベイの省略", "Secure属性の削除", "コード署名の無効化"], "answer": 0, "explain": "IoTはデフォルトクレデンシャルの変更が最重要ポイントである。"}, {"term": "d-1-site-survey", "stem": "無線LANを設計する前に、設置エリアの電波強度や干渉を調べ、APの位置を決めている。この調査はどれか。", "choices": ["コードサイニング", "サイトサーベイ", "入力バリデーション", "COPE"], "answer": 1, "explain": "構築前の電波状況調査がサイトサーベイである。"}, {"term": "d-1-heat-map", "stem": "電波の強弱を色の濃淡の地図で示し、届きにくい場所や干渉箇所を一目で把握している。これは何か。", "choices": ["ヒートマップ", "サンドボックス", "IAM", "ポートセキュリティ"], "answer": 0, "explain": "ヒートマップは電波強度・品質を色で可視化した地図である。"}, {"term": "d-1-mdm", "stem": "全社のスマホにパスワード要件や暗号化を一括適用し、紛失時はリモートでロックやデータ消去ができる。この仕組みはどれか。", "choices": ["ヒートマップ", "MDM", "静的コード分析", "WPA3"], "answer": 1, "explain": "モバイルの一元管理・ポリシー適用・リモートロック／ワイプはMDMの役割である。"}, {"term": "d-1-byod", "stem": "従業員が自分のスマホを業務に使い、会社はポリシーとMDMで管理している。この配備モデルはどれか。", "choices": ["エアギャップ", "CYODのみ", "BYOD", "ICS分離"], "answer": 2, "explain": "私物端末の業務利用がBYODである。MDM連携が重要。"}, {"term": "d-1-cyod", "stem": "会社が承認した機種リストの中から、従業員が好みの端末を選んで使う方式はどれか。", "choices": ["BYOD", "CYOD", "オープンWi-Fi", "ポートミラーリング"], "answer": 1, "explain": "会社用意・承認端末から選択するのがCYODである。"}, {"term": "d-1-cellular", "stem": "スマホが携帯電話キャリアのネットワーク経由でインターネットに接続する方式を、講義では何と呼んでいるか。", "choices": ["サイトサーベイ", "セルラー", "コードサイニング", "静的解析"], "answer": 1, "explain": "キャリア網経由の接続がセルラーである。SIMによる暗号化なども触れる。"}, {"term": "d-1-wifi", "stem": "無線LAN接続で傍受リスクを下げるため、講義が特に強調する二つの対策はどれか。", "choices": ["暗号化と認証", "ペアリング常時ONのみ", "デフォルトPWの維持", "パッチの意図的遅延"], "answer": 0, "explain": "Wi-Fiは通信の暗号化と、オープン網を避ける認証設定が要点である。"}, {"term": "d-1-bluetooth", "stem": "イヤホン接続などで使う近距離無線について、不正ペアリングを防ぐ実務的な注意として講義が示すものはどれか。", "choices": ["ペアリングモードを常時有効にする", "必要なときだけペアリングし、終了後は無効化する", "常に最も古いバージョンを使う", "暗号化を必ずオフにする"], "answer": 1, "explain": "最新版の利用に加え、ペアリングは必要時のみ有効化する。"}, {"term": "d-1-wpa3", "stem": "2018年発表の新しいWi-Fi保護で、SAEなどを用い辞書攻撃への耐性を高めたプロトコルはどれか。", "choices": ["WPA2のPSKのみ", "WPA3", "MDM", "ヒートマップ"], "answer": 1, "explain": "WPA3は新しい無線セキュリティプロトコルで、辞書攻撃耐性がポイントである。"}, {"term": "d-1-cryptographic-protocols", "stem": "ネットワーク上のデータを暗号化し、強いアルゴリズムと十分な鍵長、場合によりPFSで過去鍵漏洩の影響を抑える。これは何の話か。", "choices": ["暗号化プロトコル", "入退室管理のみ", "サイトサーベイのみ", "BYODポリシーのみ"], "answer": 0, "explain": "通信の機密性を守る暗号化プロトコルの選定・最新化の話である。"}, {"term": "d-1-input-validation", "stem": "Webフォームで許可された形式以外を拒否し、特殊文字をエスケープしてSQLインジェクションやXSSを防ぐ。この対策はどれか。", "choices": ["ヒートマップ", "入力バリデーション", "セルラー", "ポートセキュリティ"], "answer": 1, "explain": "入力が適切かを検証し不正入力を排除するのが入力バリデーションである。"}, {"term": "d-1-secure-cookies", "stem": "ブラウザがCookieをHTTPS接続のときだけ送るよう属性を付け、平文傍受による漏洩を防ぐ。この属性・考え方はどれか。", "choices": ["セキュアクッキー（Secure属性）", "サイトサーベイ", "CYOD", "ICS分離"], "answer": 0, "explain": "Secure属性によりHTTPS時のみCookieを送信する。"}, {"term": "d-1-static-code-analysis", "stem": "アプリを動かさず、ソースの構造や記述パターンをツールで調べて潜在的な問題を見つける手法はどれか。", "choices": ["動的負荷試験のみ", "静的コード分析", "ヒートマップ", "リモートワイプ"], "answer": 1, "explain": "実行せずにソースを解析するのが静的コード分析である。"}, {"term": "d-1-code-signing", "stem": "開発者がアプリにデジタル署名を付け、未署名だと「不明な発行元」警告が出る。この手法はどれか。", "choices": ["コードサイニング", "ポートセキュリティ", "サイトサーベイ", "セルラー"], "answer": 0, "explain": "コードサイニングは署名により完全性・真正性を保証する。"}, {"term": "d-1-sandboxing", "stem": "ブラウザの各タブやモバイルアプリを制限された領域で動かし、侵害が他へ広がりにくくしている。この技術はどれか。", "choices": ["BYOD", "サンドボックス", "WPA3", "ヒートマップ"], "answer": 1, "explain": "制限環境に閉じ込めて安全に実行するのがサンドボックスである。"}, {"term": "d-1-monitoring", "stem": "普段CPU20%のサーバが突然80%超になったり、深夜に大量ファイル削除のログが出たりしたことを捉えて攻撃を疑う。これは何か。", "choices": ["コードサイニング", "モニタリング", "CYOD", "Secure属性"], "answer": 1, "explain": "リソース使用率や操作ログの監視（モニタリング）で異常・不正を早期検知する。"}]</script>
+</section>
+
+<nav class="pager"><a href="index.html"><span>戻る</span>Domain D ハブ</a><a class="next" href="d-2.html"><span>次の章</span>D-2 ハードウェアの取得・管理・廃棄</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

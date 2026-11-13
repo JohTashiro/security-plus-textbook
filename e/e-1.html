@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-1 セキュリティガバナンスの要素 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain E</span></a>
+  <a class="nav-back" href="index.html">← Domain E ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain E</h2>
+    <a href="e-1.html" class="active">E-1 セキュリティガバナンスの要素</a><a href="e-2.html">E-2 リスク管理プロセス</a><a href="e-3.html">E-3 第三者のリスク評価</a><a href="e-4.html">E-4 セキュリティコンプライアンス</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain E 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain E · E-1</p>
+  <h1>セキュリティガバナンスの要素</h1>
+  <p>方針・基準・役割・監視</p>
+  <div class="meta-row">
+    <span class="chip">用語 22</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 5.1</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 22問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">ガイドラインと方針</h2>
+<article class="memo-card" id="e-1-guidelines" data-search="ガイドライン guidelines 目標達成の具体指針 pw長さ・文字種 持ち出し暗号化">
+  <h3>ガイドライン<span class="en">Guidelines</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">目標達成の<span class="hl">具体指針</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>PW長さ・文字種</li><li>持ち出し暗号化</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-incident-response" data-search="インシデント対応 incident response 事故時の事前手順で復旧 端末隔離 役割と指揮系統">
+  <h3>インシデント対応<span class="en">Incident response</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">事故時の<span class="hl">事前手順</span>で復旧</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>端末隔離</li><li>役割と指揮系統</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-sdlc" data-search="sdlc software development lifecycle 企画〜運用でセキュ要件組込 要件に法規 設計で入力検証">
+  <h3>SDLC<span class="en">Software Development Lifecycle</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">企画〜運用で<span class="hl">セキュ要件</span>組込</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>要件に法規</li><li>設計で入力検証</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-change-management" data-search="変更管理 change management 変更リスクを申請承認で抑える 委員会申請 検証環境テスト">
+  <h3>変更管理<span class="en">Change management</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">変更リスクを<span class="hl">申請承認</span>で抑える</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>委員会申請</li><li>検証環境テスト</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">基準と手続き</h2>
+<article class="memo-card" id="e-1-password-standards" data-search="パスワードの基準 password standards pwの長さ等を基準化して遵守 最低8文字 総当たり対策">
+  <h3>パスワードの基準<span class="en">Password standards</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">PWの長さ等を<span class="hl">基準化</span>して遵守</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>最低8文字</li><li>総当たり対策</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-access-control-standards" data-search="アクセスコントロールの基準 access control standards 最小権限と特権の厳格管理 職務に応じ付与 特権ログ監査">
+  <h3>アクセスコントロールの基準<span class="en">Access control standards</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">最小権限</span>と特権の厳格管理</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>職務に応じ付与</li><li>特権ログ監査</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-physical-security-standards" data-search="物理的セキュリティの基準 physical security standards 施設を入退室基準で守る ic＋pin 生体認証・施錠">
+  <h3>物理的セキュリティの基準<span class="en">Physical security standards</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">施設を<span class="hl">入退室基準</span>で守る</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>IC＋PIN</li><li>生体認証・施錠</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-encryption-standards" data-search="暗号化の基準 encryption standards 通信・保管の暗号ルール tls1.2以上 透過的暗号化">
+  <h3>暗号化の基準<span class="en">Encryption standards</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">通信・保管の<span class="hl">暗号ルール</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>TLS1.2以上</li><li>透過的暗号化</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-change-management-procedures" data-search="変更管理の手続き change management procedures 依頼〜レビューの手続き化 変更依頼登録 高リスク差戻し">
+  <h3>変更管理の手続き<span class="en">Change management procedures</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">依頼〜レビューの<span class="hl">手続き化</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>変更依頼登録</li><li>高リスク差戻し</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">外部要因</h2>
+<article class="memo-card" id="e-1-regulatory" data-search="規制 regulatory 規制要求をポリシー反映 個人情報保護法 準拠の定期評価">
+  <h3>規制<span class="en">Regulatory</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">規制要求を<span class="hl">ポリシー反映</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>個人情報保護法</li><li>準拠の定期評価</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-legal" data-search="法律 legal 法律を理解し手順へ反映 不正アクセス禁止法 id管理・ログ">
+  <h3>法律<span class="en">Legal</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">法律を理解し<span class="hl">手順へ反映</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>不正アクセス禁止法</li><li>ID管理・ログ</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-industry" data-search="業界 industry 業種特有の高い要求水準 金融のmfa 当局ガイドライン">
+  <h3>業界<span class="en">Industry</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">業種特有</span>の高い要求水準</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>金融のMFA</li><li>当局ガイドライン</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-local-regional" data-search="ローカル／リージョナル local / regional 地域法への追加準拠 gdpr データ現地保存">
+  <h3>ローカル／リージョナル<span class="en">Local / Regional</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">地域法</span>への追加準拠</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>GDPR</li><li>データ現地保存</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-national" data-search="ナショナル national 国内法・国家戦略の影響 サイバー基本法 省庁ガイドライン">
+  <h3>ナショナル<span class="en">National</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">国内法</span>・国家戦略の影響</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>サイバー基本法</li><li>省庁ガイドライン</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-global" data-search="グローバル global 国際枠組みを体制へ取込 サイバー犯罪条約 国際協力">
+  <h3>グローバル<span class="en">Global</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">国際枠組み</span>を体制へ取込</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>サイバー犯罪条約</li><li>国際協力</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">監視・改訂と統治構造</h2>
+<article class="memo-card" id="e-1-monitoring-revision" data-search="セキュリティポリシーの監視と改訂 monitoring and revision 監査で監視し必要なら改訂 定期監査 教育強化">
+  <h3>セキュリティポリシーの監視と改訂<span class="en">Monitoring and revision</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">監査で監視し<span class="hl">必要なら改訂</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>定期監査</li><li>教育強化</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-boards" data-search="取締役会 boards 戦略を定める最高意思決定 ciso選任 ポリシー承認">
+  <h3>取締役会<span class="en">Boards</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">戦略を定める<span class="hl">最高意思決定</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>CISO選任</li><li>ポリシー承認</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-committees" data-search="委員会 committees 特定課題の専門組織 対応方針決定 再発防止立案">
+  <h3>委員会<span class="en">Committees</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">特定課題の<span class="hl">専門組織</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>対応方針決定</li><li>再発防止立案</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-government-entities" data-search="国や自治体など government entities 公共機関の戦略・施策 国家戦略 自治体クラウド">
+  <h3>国や自治体など<span class="en">Government entities</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">公共機関</span>の戦略・施策</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>国家戦略</li><li>自治体クラウド</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-centralized-decentralized" data-search="中央集権と分散 centralized / decentralized 責任の集中か委任か 本社ciso統括 拠点自律">
+  <h3>中央集権と分散<span class="en">Centralized / Decentralized</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">責任の<span class="hl">集中か委任か</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>本社CISO統括</li><li>拠点自律</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">データの役割</h2>
+<article class="memo-card" id="e-1-data-owners" data-search="データ所有者 data owners 分類と対策の実施責任 極秘格付け 権限棚卸し">
+  <h3>データ所有者<span class="en">Data owners</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">分類と対策の<span class="hl">実施責任</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>極秘格付け</li><li>権限棚卸し</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="e-1-data-controllers" data-search="データコントローラー data controllers 利用目的を決定する責任 目的の通知 プラポリ公表">
+  <h3>データコントローラー<span class="en">Data controllers</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">利用目的を<span class="hl">決定する責任</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>目的の通知</li><li>プラポリ公表</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（22問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "e-1-guidelines", "stem": "組織のセキュリティ目標達成に向け、パスワードの文字種や機密持ち出し時の暗号化など具体的な指針を文書化した。これは何か。", "choices": ["ガイドライン", "データ所有者", "取締役会", "グローバル要因のみ"], "answer": 0, "explain": "目標達成のための具体的な指針・方針がガイドラインである。"}, {"term": "e-1-incident-response", "stem": "マルウェア感染時に端末を隔離し、対応チームを招集して復旧まで進める。ガバナンス上、事前に手順・役割・指揮系統を定めておく対象はどれか。", "choices": ["暗号化の基準のみ", "インシデント対応", "ナショナル要因のみ", "データコントローラー"], "answer": 1, "explain": "事故時の一連プロセスを事前手順化するのがインシデント対応である。"}, {"term": "e-1-sdlc", "stem": "新システムの要件定義からセキュリティ要件を盛り込み、設計で入力検証などを組み、運用でも対策を続ける。このライフサイクルの考え方はどれか。", "choices": ["物理的セキュリティの基準", "業界要因のみ", "SDLC", "委員会のみ"], "answer": 2, "explain": "企画から運用までセキュリティを組み込むのがSDLCである。"}, {"term": "e-1-change-management", "stem": "グループウェア更新で、委員会へ目的・影響・テスト計画を申請し承認後に検証環境で確認する。変更リスクを抑えるこの仕組みはどれか。", "choices": ["GDPR", "変更管理", "データ所有者", "グローバル条約のみ"], "answer": 1, "explain": "変更の申請・承認・検証の仕組みが変更管理である。"}, {"term": "e-1-password-standards", "stem": "総当たり攻撃を抑えるため、最低8文字以上などパスワード設定のルールを定め利用者に守らせる。これは何か。", "choices": ["パスワードの基準", "取締役会", "分散型ガバナンスのみ", "プレイブックのみ"], "answer": 0, "explain": "長さ等を明確に定めて遵守させるのがパスワードの基準である。"}, {"term": "e-1-access-control-standards", "stem": "財務システムで職務上必要な範囲だけ権限を付与し、特権ユーザーは少数に絞って操作ログを監査する。この基準の中心はどれか。", "choices": ["無線サイトサーベイ", "アクセスコントロールの基準（最小権限）", "ヒートマップ", "コードサイニング"], "answer": 1, "explain": "最小権限と特権の厳格管理がアクセスコントロール基準の要点である。"}, {"term": "e-1-physical-security-standards", "stem": "データセンター入口にICカードと暗証番号、サーバ室に生体認証とラック施錠を求めるルールを定めた。これは何か。", "choices": ["暗号化の基準のみ", "物理的セキュリティの基準", "SDLC", "ローカル要因のみ"], "answer": 1, "explain": "施設・設備を守るための基準が物理的セキュリティの基準である。"}, {"term": "e-1-encryption-standards", "stem": "カード情報を扱うサイトでTLS 1.2以上を必須とし、DB保管データには透過的暗号化を求めるルールはどれか。", "choices": ["委員会", "暗号化の基準", "オンボーディング", "分散型のみ"], "answer": 1, "explain": "通信・保管でどの強度・方式を使うかを定めたのが暗号化の基準である。"}, {"term": "e-1-change-management-procedures", "stem": "Webアプリに機能追加する際、変更依頼を登録し責任者がレビューし、高リスクなら差戻す流れを手続きにした。これは何か。", "choices": ["変更管理の手続き", "データコントローラー", "業界要因のみ", "ガイドラインの別名ではない"], "answer": 0, "explain": "依頼登録からレビュー・差戻しまでの規則が変更管理の手続きである。"}, {"term": "e-1-regulatory", "stem": "個人情報保護法の安全管理措置をセキュリティポリシーへ反映し、準拠状況を定期評価する。主にどの外部要因か。", "choices": ["サイトサーベイ", "規制（Regulatory）", "ヒートマップ", "コードサイニング"], "answer": 1, "explain": "規制要求のポリシー反映と準拠監視がRegulatoryの要点である。"}, {"term": "e-1-legal", "stem": "不正アクセス禁止法を理解し、ID管理やログ監視をポリシー・手順に落とし込む。主にどの外部要因か。", "choices": ["法律（Legal）", "物理基準のみ", "サンドボックス", "WPA3"], "answer": 0, "explain": "法律の理解とポリシー／手順への反映がLegal要因である。"}, {"term": "e-1-industry", "stem": "金融機関が多要素認証や暗号化、監督当局ガイドラインに基づく監査を強く求められる。主にどの外部要因か。", "choices": ["SDLCのみ", "業界（Industry）", "データ所有者のみ", "パスワード基準のみ"], "answer": 1, "explain": "業種特有の高い要求水準がIndustry要因である。"}, {"term": "e-1-local-regional", "stem": "EU域内事業でGDPRに沿いデータ主体の権利へ対応し、中国ではデータ現地保存等が求められる。主にどの要因か。", "choices": ["ローカル／リージョナル", "取締役会のみ", "変更管理手続きのみ", "セキュアクッキー"], "answer": 0, "explain": "地域ごとの法・規制への準拠がLocal/Regionalである。"}, {"term": "e-1-national", "stem": "日本のサイバーセキュリティ基本法や省庁ガイドラインが企業の対策方針に影響する。主にどの要因か。", "choices": ["ナショナル（National）", "暗号化基準のみ", "インシデント対応のみ", "BYOD"], "answer": 0, "explain": "国内法・国家戦略・省庁ガイドラインがNational要因である。"}, {"term": "e-1-global", "stem": "国境を越えるサイバー犯罪対策の国際条約動向を注視し、グローバルなコンプライアンス体制に取り込む。これはどの要因か。", "choices": ["物理基準のみ", "グローバル（Global）", "パスワード基準のみ", "最小権限のみ"], "answer": 1, "explain": "国際協力・条約などを体制へ取り込むのがGlobal要因である。"}, {"term": "e-1-monitoring-revision", "stem": "定期監査でパスワード変更の実施状況を確認し、遵守率が低ければ教育を強化し、必要ならルール自体を変える。これは何か。", "choices": ["セキュリティポリシーの監視と改訂", "サイトサーベイ", "ヒートマップ", "コードサイニング"], "answer": 0, "explain": "監査による監視と必要に応じた改訂がMonitoring and revisionである。"}, {"term": "e-1-boards", "stem": "CISO選任やセキュリティ委員会設置を決め、ポリシー承認や監査結果を評価する最高意思決定機関はどれか。", "choices": ["データプロセッサーのみ", "取締役会", "パスワード基準", "ローカル要因のみ"], "answer": 1, "explain": "戦略の方向付けと監督を行う最高意思決定が取締役会である。"}, {"term": "e-1-committees", "stem": "重大インシデント時に影響評価や復旧優先度、対外通知の方針を定め、再発防止も立案する専門組織はどれか。", "choices": ["委員会", "暗号化基準のみ", "SDLCのみ", "WPA3"], "answer": 0, "explain": "特定課題に専門知見で対処するのが委員会である。"}, {"term": "e-1-government-entities", "stem": "国家のサイバー戦略策定や省庁のガイドライン、自治体セキュリティクラウドなど、公共側の統治・支援を指す用語はどれか。", "choices": ["変更管理手続きのみ", "国や自治体など（Government entities）", "データ所有者のみ", "セキュアベースラインのみ"], "answer": 1, "explain": "国・自治体などの公共機関による戦略・施策がGovernment entitiesである。"}, {"term": "e-1-centralized-decentralized", "stem": "本社CISOが全社を統括するモデルと、各拠点が自律して対策するモデルを対比するガバナンス構造はどれか。", "choices": ["中央集権と分散", "パスワード基準のみ", "TLS基準のみ", "プレイブックのみ"], "answer": 0, "explain": "責任の集中（中央集権）か委任（分散）かがCentralized/Decentralizedである。"}, {"term": "e-1-data-owners", "stem": "顧客情報を極秘に格付けし、アクセス要件を定義して権限の棚卸しや利用目的の限定を行う責任者はどれか。", "choices": ["データ所有者", "ヒートマップ", "サイトサーベイ", "WPA3"], "answer": 0, "explain": "分類・格付けと対策実施の責任がデータ所有者である。"}, {"term": "e-1-data-controllers", "stem": "オンラインショップが顧客個人情報の利用目的を決め通知し、プライバシーポリシーを公表して問合せ窓口を置く。この役割はどれか。", "choices": ["変更管理委員会のみ", "データコントローラー", "物理基準のみ", "ナショナル要因のみ"], "answer": 1, "explain": "利用目的や取扱い方針を決定する責任がデータコントローラーである。"}]</script>
+</section>
+
+<nav class="pager"><a href="index.html"><span>戻る</span>Domain E ハブ</a><a class="next" href="e-2.html"><span>次の章</span>E-2 リスク管理プロセス</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

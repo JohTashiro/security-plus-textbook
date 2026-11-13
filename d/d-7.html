@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D-7 自動化 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain D</span></a>
+  <a class="nav-back" href="index.html">← Domain D ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain D</h2>
+    <a href="d-1.html">D-1 リソースのセキュリティ対策</a><a href="d-2.html">D-2 ハードウェアの取得・管理・廃棄</a><a href="d-3.html">D-3 脆弱性管理手法</a><a href="d-4.html">D-4 アラートとモニタリング</a><a href="d-5.html">D-5 セキュリティ向上策</a><a href="d-6.html">D-6 アクセス管理</a><a href="d-7.html" class="active">D-7 自動化</a><a href="d-8.html">D-8 インシデント対応</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain D 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain D · D-7</p>
+  <h1>自動化</h1>
+  <p>ユースケース・メリット・考慮事項</p>
+  <div class="meta-row">
+    <span class="chip">用語 21</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 4.7</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 21問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">ユースケース</h2>
+<article class="memo-card" id="d-7-user-provisioning" data-search="ユーザープロビジョニング user provisioning アカウントの作成・権限・更新・削除を自動化 入退社のアカウント自動作成 人事システム連携トリガー">
+  <h3>ユーザープロビジョニング<span class="en">User provisioning</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">アカウントの<span class="hl">作成・権限・更新・削除</span>を自動化</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>入退社のアカウント自動作成</li><li>人事システム連携トリガー</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-resource-provisioning" data-search="リソースプロビジョニング resource provisioning サーバー等の割当・設定を自動化（iac） 需要に応じたサーバー増減 iacでの構成自動適用">
+  <h3>リソースプロビジョニング<span class="en">Resource provisioning</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">サーバー等の<span class="hl">割当・設定</span>を自動化（IaC）</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>需要に応じたサーバー増減</li><li>IaCでの構成自動適用</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-guardrails" data-search="ガードレール guard rails 危険な操作を検知・防止する枠 ファイアウォール wafによる攻撃ブロック">
+  <h3>ガードレール<span class="en">Guard rails</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">危険な操作を<span class="hl">検知・防止</span>する枠</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ファイアウォール</li><li>WAFによる攻撃ブロック</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-security-groups" data-search="セキュリティグループ security groups vm／コンテナ向け仮想fwルールの集合 http公開・sshは管理者のみ クラウドnsgの自動適用">
+  <h3>セキュリティグループ<span class="en">Security groups</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">VM／コンテナ向け<span class="hl">仮想FWルールの集合</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>HTTP公開・SSHは管理者のみ</li><li>クラウドNSGの自動適用</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-ticket-creation" data-search="チケット作成 ticket creation 障害・要求のチケットを自動起票する メール受信で自動起票 セルフサービス要求から発行">
+  <h3>チケット作成<span class="en">Ticket creation</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">障害・要求の<span class="hl">チケットを自動起票</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>メール受信で自動起票</li><li>セルフサービス要求から発行</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-escalation" data-search="エスカレーション escalation 優先度・経過時間で上位／専門へ自動通知 sla超過で上長通知 重大インシデントの自動回付">
+  <h3>エスカレーション<span class="en">Escalation</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">優先度・経過時間で<span class="hl">上位／専門へ自動通知</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SLA超過で上長通知</li><li>重大インシデントの自動回付</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-enable-disable-services-access" data-search="サービスやアクセスの有効化／無効化 enabling/disabling services and access 権限・サービスのオン／オフを自動化 入社時の権限付与 退社時の一括無効化">
+  <h3>サービスやアクセスの有効化／無効化<span class="en">Enabling/disabling services and access</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">権限・サービスの<span class="hl">オン／オフを自動化</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>入社時の権限付与</li><li>退社時の一括無効化</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-continuous-integration-testing" data-search="継続的な統合とテスト continuous integration and testing コミットごとにビルド・テストを自動実行 リポジトリ連携のci マージ前の自動テスト">
+  <h3>継続的な統合とテスト<span class="en">Continuous integration and testing</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">コミットごとに<span class="hl">ビルド・テストを自動実行</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>リポジトリ連携のCI</li><li>マージ前の自動テスト</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-integrations-apis" data-search="統合とapi integrations and apis apiでシステム間データ連携を自動化 crmから販売管理へ自動連携 https apiでの受け渡し">
+  <h3>統合とAPI<span class="en">Integrations and APIs</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">APIで<span class="hl">システム間データ連携を自動化</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>CRMから販売管理へ自動連携</li><li>HTTPS APIでの受け渡し</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">メリット</h2>
+<article class="memo-card" id="d-7-time-saving" data-search="時間の削減 efficiency / time saving 定型作業の自動化で工数・時間を短縮 請求書のocr取込 手入力ワークフローの削減">
+  <h3>時間の削減<span class="en">Efficiency / time saving</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">定型作業の自動化で<span class="hl">工数・時間を短縮</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>請求書のOCR取込</li><li>手入力ワークフローの削減</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-enforcing-baselines" data-search="ベースラインの強制 enforcing baselines 最低限のセキュリティ基準を自動で強制 静的解析での脆弱性検出 リンター＋セキュリティプラグイン">
+  <h3>ベースラインの強制<span class="en">Enforcing baselines</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">最低限の<span class="hl">セキュリティ基準を自動で強制</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>静的解析での脆弱性検出</li><li>リンター＋セキュリティプラグイン</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-standard-infrastructure" data-search="標準的なインフラの設定 standard infrastructure configurations iac等で環境間の構成を均一化 開発・ステージ・本番の同構成 nw／sg／lbのコード管理">
+  <h3>標準的なインフラの設定<span class="en">Standard infrastructure configurations</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">IaC等で<span class="hl">環境間の構成を均一化</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>開発・ステージ・本番の同構成</li><li>NW／SG／LBのコード管理</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-secure-scaling" data-search="安全なスケーリング scaling in a secure manner 安全な設定のまま需要に応じて自動拡張 ec2 auto scaling セール時の自動台数調整">
+  <h3>安全なスケーリング<span class="en">Scaling in a secure manner</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">安全な設定のまま<span class="hl">需要に応じて自動拡張</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>EC2 Auto Scaling</li><li>セール時の自動台数調整</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-employee-retention" data-search="従業員の定着 employee retention 単調作業を減らし創造的仕事へ集中させる ciによるテスト／デプロイ自動化 繰り返し手作業の削減">
+  <h3>従業員の定着<span class="en">Employee retention</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">単調作業を減らし<span class="hl">創造的仕事へ集中</span>させる</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>CIによるテスト／デプロイ自動化</li><li>繰り返し手作業の削減</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-reaction-time" data-search="対応速度 reaction time 事象・申請への反応・完了を高速化 自動審査・自動通知 数日かかった処理を数分に">
+  <h3>対応速度<span class="en">Reaction time</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">事象・申請への<span class="hl">反応・完了を高速化</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>自動審査・自動通知</li><li>数日かかった処理を数分に</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-workforce-multiplier" data-search="人材の乗数効果 workforce multiplier 同じ人数でより高い価値を乗数的に生む 入力自動化→分析へ再配分 少人数で広い範囲をカバー">
+  <h3>人材の乗数効果<span class="en">Workforce multiplier</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">同じ人数で<span class="hl">より高い価値を乗数的に生む</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>入力自動化→分析へ再配分</li><li>少人数で広い範囲をカバー</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">考慮事項</h2>
+<article class="memo-card" id="d-7-complexity" data-search="複雑さ complexity 自動化が増えると依存と予測困難さが増す 部門横断の相互依存 一変更が他へ波及">
+  <h3>複雑さ<span class="en">Complexity</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">自動化が増えると<span class="hl">依存と予測困難さが増す</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>部門横断の相互依存</li><li>一変更が他へ波及</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-cost" data-search="コスト cost 導入・保守・外注など自動化自体の費用 ツールライセンス やりすぎによる保守費増大">
+  <h3>コスト<span class="en">Cost</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">導入・保守・外注など<span class="hl">自動化自体の費用</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ツールライセンス</li><li>やりすぎによる保守費増大</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-single-point-of-failure" data-search="単一障害点 single point of failure 一点障害で全体停止する依存点（spof） 中央制御サーバの故障 自動化基盤の全面停止">
+  <h3>単一障害点<span class="en">Single point of failure</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">一点障害で全体停止</span>する依存点（SPOF）</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>中央制御サーバの故障</li><li>自動化基盤の全面停止</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-technical-debt" data-search="技術的負債 technical debt 品質を犠牲にした結果の後払いコスト テストなしスクリプト 文書不足で改修不能">
+  <h3>技術的負債<span class="en">Technical debt</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">品質を犠牲にした結果の<span class="hl">後払いコスト</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>テストなしスクリプト</li><li>文書不足で改修不能</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="d-7-ongoing-supportability" data-search="継続的なサポート性 ongoing supportability 要件変化・更新に追従し続けられるか ルールの継続更新 パッチ／バージョン追従">
+  <h3>継続的なサポート性<span class="en">Ongoing supportability</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">要件変化・更新に<span class="hl">追従し続けられるか</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ルールの継続更新</li><li>パッチ／バージョン追従</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（21問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "d-7-user-provisioning", "stem": "人事システムに新入社員が登録された時点で、メールや業務アプリのアカウント作成と権限付与が自動で走る仕組みを導入した。これはどのユースケースか。", "choices": ["ユーザープロビジョニング", "リソースプロビジョニング", "安全なスケーリング", "単一障害点の排除"], "answer": 0, "explain": "ユーザーアカウントの作成・権限・更新・削除などを自動化するのがユーザープロビジョニング。HR連携トリガーが典型。"}, {"term": "d-7-resource-provisioning", "stem": "アクセス増減に合わせ、IaCで記述した構成を自動適用してサーバーやストレージを割り当て・設定する。これはどれか。", "choices": ["チケット作成", "リソースプロビジョニング", "従業員の定着", "技術的負債"], "answer": 1, "explain": "ITリソースの割当・設定・利用可能化の自動化がリソースプロビジョニング。IaCが代表的手段。"}, {"term": "d-7-guardrails", "stem": "ネットワークやアプリで危険な操作や不正アクセスを検知し、ポリシー違反を実行前に防ぐ枠組みを置いた。主に何と呼ぶか。", "choices": ["人材の乗数効果", "継続的なサポート性", "ガードレール", "時間の削減のみ"], "answer": 2, "explain": "問題のある操作を検知・防止する仕組みがガードレール。FWやWAFがその例。"}, {"term": "d-7-security-groups", "stem": "クラウド上のVMに対し、HTTPは公開・SSHは管理者のみ、といった通信許可をルール集合として適用した。これはどれか。", "choices": ["セキュリティグループ", "対応速度", "コスト最適化のみ", "ジャーナリング"], "answer": 0, "explain": "VM／コンテナ等のトラフィック制御用ファイアウォールルール集合がセキュリティグループ（実態は仮想FW）。"}, {"term": "d-7-ticket-creation", "stem": "障害報告メールの受信をトリガーに、チケット管理システムへ内容を自動起票し、手動入力の抜け漏れを減らした。これはどれか。", "choices": ["エスカレーションのみ", "ベースラインの強制", "チケット作成", "単一障害点"], "answer": 2, "explain": "問題追跡のためのチケット発行を自動化するのがチケット作成。メールやポータルがトリガーになる。"}, {"term": "d-7-escalation", "stem": "チケットが一定時間未対応、または優先度が高い場合に、自動で上位エンジニアや専門チームへ通知するルールを設けた。これはどれか。", "choices": ["ユーザープロビジョニング", "エスカレーション", "標準的なインフラの設定", "複雑さの増大を放置"], "answer": 1, "explain": "適切な担当・上位へ問題を上げて迅速解決を促すのがエスカレーション。優先度・経過時間ルールが典型。"}, {"term": "d-7-enable-disable-services-access", "stem": "退職が確定した瞬間に、メール・VPN・業務アプリのアクセス権を一括で無効化し、残存アカウントによる漏えいリスクを下げる。主にどの自動化か。", "choices": ["安全なスケーリング", "統合とAPIのみ", "サービスやアクセスの有効化／無効化", "発電機の自動起動"], "answer": 2, "explain": "サービスやアクセス権のオン／オフ自動化。入社付与・退社無効化が代表シナリオ。"}, {"term": "d-7-continuous-integration-testing", "stem": "開発者がコードをリポジトリにコミットするたびに、自動でビルドとテストが走り、統合時の不整合を早期発見する。これはどれか。", "choices": ["継続的な統合とテスト", "単一障害点", "従業員の定着のみを目的とした人事制度", "オフサイトバックアップ"], "answer": 0, "explain": "CI（継続的インテグレーション）と自動テスト。コミットをトリガーにビルド・テストを回す。"}, {"term": "d-7-integrations-apis", "stem": "顧客管理に新規顧客が登録されたら、HTTPSのAPI経由で販売管理へ顧客ID付きデータを自動連携する。これはどれか。", "choices": ["コールドサイト", "統合とAPI", "ベースラインの強制のみ", "物理的分散"], "answer": 1, "explain": "APIを用いたシステム間連携の自動化が統合とAPI。手作業連携のミス削減が狙い。"}, {"term": "d-7-time-saving", "stem": "毎月の請求書手入力をOCRとワークフロー自動化に置き換え、担当者の作業時間を大幅に減らした。主にどのメリットか。", "choices": ["単一障害点の増加", "時間の削減", "技術的負債の意図的な積み上げ", "ガードレールの撤去"], "answer": 1, "explain": "定型作業の自動化による Efficiency／time saving（時間の削減）。"}, {"term": "d-7-enforcing-baselines", "stem": "開発者の知識差があっても、静的解析ツールで不安全な関数や入力無害化の欠如を検出し、最低限のセキュアコーディング基準を通すようにした。これはどのメリットか。", "choices": ["コストの無視", "対応速度のみ", "ベースラインの強制", "リソースプロビジョニングの禁止"], "answer": 2, "explain": "守るべき最低基準を自動化で強制するのが Enforcing baselines（ベースラインの強制）。"}, {"term": "d-7-standard-infrastructure", "stem": "本番・ステージング・開発でNW・セキュリティグループ・LBなどの設定差が出ないよう、IaCで同じ標準構成をデプロイする運用にした。主にどのメリットか。", "choices": ["標準的なインフラの設定", "単一障害点の意図的設置", "チケット作成の廃止", "エスカレーションの無効化"], "answer": 0, "explain": "環境間の一貫した標準構成が Standard infrastructure configurations。"}, {"term": "d-7-secure-scaling", "stem": "ECサイトのセール時、あらかじめ定義した安全なテンプレートのままオートスケールでEC2台数を増やし、手動追加による設定ミスを避ける。これはどのメリットか。", "choices": ["技術的負債", "複雑さの放置", "安全なスケーリング", "ユーザープロビジョニングのみ"], "answer": 2, "explain": "セキュアな設定を保ったまま需要に応じて拡張するのが Scaling in a secure manner。"}, {"term": "d-7-employee-retention", "stem": "手動の繰り返しテストやデプロイをCIで自動化し、エンジニアが創造的な開発に集中できるようにして離職要因を減らした。主にどのメリットか。", "choices": ["従業員の定着", "単一障害点", "コストの無制限投下", "ガードレールの削除"], "answer": 0, "explain": "単調作業削減によるやりがい向上・定着が Employee retention。"}, {"term": "d-7-reaction-time", "stem": "融資申請の確認・信用調査・結果通知を自動化し、従来数日かかっていたプロセスを数分まで短縮した。主にどのメリットか。", "choices": ["継続的なサポート性の放棄", "対応速度", "リソースプロビジョニングの禁止", "複雑さそのもの"], "answer": 1, "explain": "事象や申請への反応・完了時間の短縮が Reaction time（対応速度）。"}, {"term": "d-7-workforce-multiplier", "stem": "データ入力を自動化し、同じ人数のチームが分析や戦略立案など高付加価値業務まで担えるようになった。主にどのメリットか。", "choices": ["人材の乗数効果", "単一障害点の推奨", "チケット作成の手作業化", "ベースラインの撤廃"], "answer": 0, "explain": "自動化で空いた時間を高度業務へ回し、同じ人員の成果を乗数的に高めるのが Workforce multiplier。"}, {"term": "d-7-complexity", "stem": "部門ごとに自動化を積み重ねた結果、プロセスが相互依存し、一箇所のルール変更が他部門に予期せぬ影響を与えるようになった。これはどの考慮事項か。", "choices": ["時間の削減", "複雑さ", "従業員の定着", "安全なスケーリング"], "answer": 1, "explain": "自動化による依存の増加と全体挙動の予測困難さが Complexity（複雑さ）。"}, {"term": "d-7-cost", "stem": "まれな手作業まで全部自動化したところ、ツール費用とスクリプト保守の方が高くつき、投資対効果を見直すことになった。これはどの考慮事項か。", "choices": ["対応速度の向上そのもの", "ユーザープロビジョニング", "コスト", "統合とAPIの定義"], "answer": 2, "explain": "自動化の導入・保守・外注にも費用がかかる。やりすぎを含め Cost を考慮する。"}, {"term": "d-7-single-point-of-failure", "stem": "製造ライン全体の自動制御を1台の中央コンピュータに依存させたため、その故障でライン全体が停止した。自動化におけるどのリスクか。", "choices": ["ベースラインの強制", "時間の削減", "単一障害点", "継続的な統合とテスト"], "answer": 2, "explain": "一点障害で全体が止まる依存が Single point of failure（SPOF）。自動化基盤自体も対象。"}, {"term": "d-7-technical-debt", "stem": "納期優先で自動化スクリプトの文書化とテストを省略した結果、後の要件変更で誰も安全に改修できなくなった。これはどの考慮事項か。", "choices": ["技術的負債", "従業員の定着", "セキュリティグループ", "対応速度の定義"], "answer": 0, "explain": "短期利益のために品質を犠牲にし、後から払うコストが Technical debt（技術的負債）。"}, {"term": "d-7-ongoing-supportability", "stem": "業務要件の変化や製品のバージョンアップ・パッチに合わせて、自動化ルールを継続更新できる設計と体制を最初から求めた。これはどの考慮事項か。", "choices": ["チケット作成の手作業化", "継続的なサポート性", "ガードレールの無効化", "リソースの手動固定"], "answer": 1, "explain": "変化に追従し続けられるかが Ongoing supportability（継続的なサポート性）。"}]</script>
+</section>
+
+<nav class="pager"><a href="d-6.html"><span>前の章</span>D-6 アクセス管理</a><a class="next" href="d-8.html"><span>次の章</span>D-8 インシデント対応</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

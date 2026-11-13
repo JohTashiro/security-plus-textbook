@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domain E 知識マップ · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain E</span></a>
+  <a class="nav-back" href="index.html">← Domain E ハブ</a>
+  <nav class="nav-section">
+    <h2>Domain E</h2>
+    <a href="e-1.html">E-1 セキュリティガバナンスの要素</a><a href="e-2.html">E-2 リスク管理プロセス</a><a href="e-3.html">E-3 第三者のリスク評価</a><a href="e-4.html">E-4 セキュリティコンプライアンス</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    
+    <a href="map.html" class="active">Domain E 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main main-wide">
+      
+<header class="hero">
+  <p class="eyebrow">Domain E</p>
+  <h1>知識マップ</h1>
+  <p>用語だけを階層表示。同じカテゴリは同じ階層。タップすると意味と教科書リンクが出ます。</p>
+</header>
+<div class="mindmap-wrap">
+  <div id="mindmap" class="mindmap"></div>
+</div>
+<aside class="term-panel" id="term-panel" aria-hidden="true">
+  <button type="button" class="term-panel-close" id="term-panel-close" aria-label="閉じる">×</button>
+  <p class="term-panel-kicker">意味</p>
+  <h2 id="term-panel-title"></h2>
+  <button type="button" class="reveal-btn" id="term-panel-reveal" aria-expanded="false">答えを見る</button>
+  <p class="term-panel-meaning" id="term-panel-meaning"></p>
+  <a class="term-panel-link" id="term-panel-link" href="#">教科書で見る</a>
+</aside>
+<script type="application/json" id="mindmap-data">{"domain": "E", "official": "5", "title": "セキュリティプログラム管理・監督", "intro": "ドメイン5はセキュリティプログラムの管理・監督を学ぶ領域である。大きなキーワードはガバナンス（統治）とコンプライアンス（法令遵守）で、方針・体制・外部要因・役割を通じて組織の守りを整える。", "chapters": [{"id": "E-1", "slug": "e-1", "official": "5.1", "title": "セキュリティガバナンスの要素", "blurb": "方針・基準・役割・監視", "groups": [{"id": "guidelines-policies", "title": "ガイドラインと方針", "terms": [{"id": "e-1-guidelines", "key": "guidelines", "ja": "ガイドライン", "en": "Guidelines", "one_liner": "目標達成の**具体指針**", "examples": ["PW長さ・文字種", "持ち出し暗号化"]}, {"id": "e-1-incident-response", "key": "incident-response", "ja": "インシデント対応", "en": "Incident response", "one_liner": "事故時の**事前手順**で復旧", "examples": ["端末隔離", "役割と指揮系統"]}, {"id": "e-1-sdlc", "key": "sdlc", "ja": "SDLC", "en": "Software Development Lifecycle", "one_liner": "企画〜運用で**セキュ要件**組込", "examples": ["要件に法規", "設計で入力検証"]}, {"id": "e-1-change-management", "key": "change-management", "ja": "変更管理", "en": "Change management", "one_liner": "変更リスクを**申請承認**で抑える", "examples": ["委員会申請", "検証環境テスト"]}]}, {"id": "standards-procedures", "title": "基準と手続き", "terms": [{"id": "e-1-password-standards", "key": "password-standards", "ja": "パスワードの基準", "en": "Password standards", "one_liner": "PWの長さ等を**基準化**して遵守", "examples": ["最低8文字", "総当たり対策"]}, {"id": "e-1-access-control-standards", "key": "access-control-standards", "ja": "アクセスコントロールの基準", "en": "Access control standards", "one_liner": "**最小権限**と特権の厳格管理", "examples": ["職務に応じ付与", "特権ログ監査"]}, {"id": "e-1-physical-security-standards", "key": "physical-security-standards", "ja": "物理的セキュリティの基準", "en": "Physical security standards", "one_liner": "施設を**入退室基準**で守る", "examples": ["IC＋PIN", "生体認証・施錠"]}, {"id": "e-1-encryption-standards", "key": "encryption-standards", "ja": "暗号化の基準", "en": "Encryption standards", "one_liner": "通信・保管の**暗号ルール**", "examples": ["TLS1.2以上", "透過的暗号化"]}, {"id": "e-1-change-management-procedures", "key": "change-management-procedures", "ja": "変更管理の手続き", "en": "Change management procedures", "one_liner": "依頼〜レビューの**手続き化**", "examples": ["変更依頼登録", "高リスク差戻し"]}]}, {"id": "external", "title": "外部要因", "terms": [{"id": "e-1-regulatory", "key": "regulatory", "ja": "規制", "en": "Regulatory", "one_liner": "規制要求を**ポリシー反映**", "examples": ["個人情報保護法", "準拠の定期評価"]}, {"id": "e-1-legal", "key": "legal", "ja": "法律", "en": "Legal", "one_liner": "法律を理解し**手順へ反映**", "examples": ["不正アクセス禁止法", "ID管理・ログ"]}, {"id": "e-1-industry", "key": "industry", "ja": "業界", "en": "Industry", "one_liner": "**業種特有**の高い要求水準", "examples": ["金融のMFA", "当局ガイドライン"]}, {"id": "e-1-local-regional", "key": "local-regional", "ja": "ローカル／リージョナル", "en": "Local / Regional", "one_liner": "**地域法**への追加準拠", "examples": ["GDPR", "データ現地保存"]}, {"id": "e-1-national", "key": "national", "ja": "ナショナル", "en": "National", "one_liner": "**国内法**・国家戦略の影響", "examples": ["サイバー基本法", "省庁ガイドライン"]}, {"id": "e-1-global", "key": "global", "ja": "グローバル", "en": "Global", "one_liner": "**国際枠組み**を体制へ取込", "examples": ["サイバー犯罪条約", "国際協力"]}]}, {"id": "monitoring-governance", "title": "監視・改訂と統治構造", "terms": [{"id": "e-1-monitoring-revision", "key": "monitoring-revision", "ja": "セキュリティポリシーの監視と改訂", "en": "Monitoring and revision", "one_liner": "監査で監視し**必要なら改訂**", "examples": ["定期監査", "教育強化"]}, {"id": "e-1-boards", "key": "boards", "ja": "取締役会", "en": "Boards", "one_liner": "戦略を定める**最高意思決定**", "examples": ["CISO選任", "ポリシー承認"]}, {"id": "e-1-committees", "key": "committees", "ja": "委員会", "en": "Committees", "one_liner": "特定課題の**専門組織**", "examples": ["対応方針決定", "再発防止立案"]}, {"id": "e-1-government-entities", "key": "government-entities", "ja": "国や自治体など", "en": "Government entities", "one_liner": "**公共機関**の戦略・施策", "examples": ["国家戦略", "自治体クラウド"]}, {"id": "e-1-centralized-decentralized", "key": "centralized-decentralized", "ja": "中央集権と分散", "en": "Centralized / Decentralized", "one_liner": "責任の**集中か委任か**", "examples": ["本社CISO統括", "拠点自律"]}]}, {"id": "data-roles", "title": "データの役割", "terms": [{"id": "e-1-data-owners", "key": "data-owners", "ja": "データ所有者", "en": "Data owners", "one_liner": "分類と対策の**実施責任**", "examples": ["極秘格付け", "権限棚卸し"]}, {"id": "e-1-data-controllers", "key": "data-controllers", "ja": "データコントローラー", "en": "Data controllers", "one_liner": "利用目的を**決定する責任**", "examples": ["目的の通知", "プラポリ公表"]}]}]}, {"id": "E-2", "slug": "e-2", "official": "5.2", "title": "リスク管理プロセス", "blurb": "特定・評価・分析とアペタイト", "groups": [{"id": "identify-assess", "title": "特定と評価の進め方", "terms": [{"id": "e-2-risk-identification", "key": "risk-identification", "ja": "リスクの特定", "en": "Risk identification", "one_liner": "資産・脅威・脆弱性を**洗い出す**", "examples": ["開発遅延リスクの列挙", "過去案件の教訓活用"]}, {"id": "e-2-ad-hoc", "key": "ad-hoc", "ja": "アドホック", "en": "Ad hoc", "one_liner": "環境変化に応じ**随時・迅速**に評価", "examples": ["専門家の自由レビュー", "新機能直後の分析"]}, {"id": "e-2-one-time", "key": "one-time", "ja": "ワンタイム", "en": "One-time", "one_liner": "導入・変更の契機に**一回限り**評価", "examples": ["クラウド導入前評価", "ポリシー適合確認"]}, {"id": "e-2-continuous", "key": "continuous", "ja": "継続的", "en": "Continuous", "one_liner": "運用中に**定期または常時**評価", "examples": ["ログ常時監視", "四半期脆弱性スキャン"]}]}, {"id": "analysis-metrics", "title": "分析手法と損失指標", "terms": [{"id": "e-2-qualitative", "key": "qualitative", "ja": "定性的", "en": "Qualitative", "one_liner": "可能性・影響を**高中低**で主観評価", "examples": ["リスクの色分け", "離職リスク＝低"]}, {"id": "e-2-quantitative", "key": "quantitative", "ja": "定量的", "en": "Quantitative", "one_liner": "確率と損失を**数値**で表す", "examples": ["年間確率の見積もり", "金額との掛け合わせ"]}, {"id": "e-2-sle", "key": "sle", "ja": "SLE", "en": "Single Loss Expectancy", "one_liner": "**1回の**事故で予想される損失額", "examples": ["障害1回の機会損失", "信用失墜コスト"]}, {"id": "e-2-ale", "key": "ale", "ja": "ALE", "en": "Annualized Loss Expectancy", "one_liner": "**年間**の期待損失（SLE×ARO）", "examples": ["対策コストとの比較", "年あたり損失の算出"]}, {"id": "e-2-probability-likelihood", "key": "probability-likelihood", "ja": "確率と可能性", "en": "Probability and Likelihood", "one_liner": "確率＝**数値**／可能性＝**定性**", "examples": ["発生確率0.1", "可能性＝高"]}, {"id": "e-2-exposure-factor", "key": "exposure-factor", "ja": "暴露係数", "en": "Exposure factor", "one_liner": "脅威時に失う**資産の割合**", "examples": ["火災でPC20%損失", "EF=0.2"]}, {"id": "e-2-impact", "key": "impact", "ja": "インパクト", "en": "Impact", "one_liner": "顕在化時の**影響の大きさ**", "examples": ["財務損失", "業務中断・評判低下"]}]}, {"id": "register-appetite", "title": "登録簿とアペタイト", "terms": [{"id": "e-2-kri", "key": "kri", "ja": "キーリスクインジケーター", "en": "Key risk indicator", "one_liner": "リスク悪化を**早期察知**する指標", "examples": ["在庫回転率", "欠品率"]}, {"id": "e-2-risk-owner", "key": "risk-owner", "ja": "リスクオーナー", "en": "Risk owner", "one_liner": "リスク管理を**主導する責任者**", "examples": ["品質管理責任者", "対応策の立案・監視"]}, {"id": "e-2-risk-threshold", "key": "risk-threshold", "ja": "リスク閾値", "en": "Risk threshold", "one_liner": "許容できる**限界点**で優先付け", "examples": ["超えたら必ず対策", "登録簿での強弱付け"]}, {"id": "e-2-expansionary-risk-appetite", "key": "expansionary-risk-appetite", "ja": "拡大的リスクアペタイト", "en": "Expansionary risk appetite", "one_liner": "高リターンのため**積極的**にテイク", "examples": ["革新的製品開発", "スタートアップの挑戦"]}, {"id": "e-2-conservative-risk-appetite", "key": "conservative-risk-appetite", "ja": "保守的リスクアペタイト", "en": "Conservative risk appetite", "one_liner": "安定重視でリスクを**最小化**", "examples": ["老舗ブランド保護", "慎重な新施策"]}, {"id": "e-2-neutral-risk-appetite", "key": "neutral-risk-appetite", "ja": "中立的リスクアペタイト", "en": "Neutral risk appetite", "one_liner": "リスクと機会の**バランス**を取る", "examples": ["案件ごとの秤量", "状況応変のテイク"]}]}]}, {"id": "E-3", "slug": "e-3", "official": "5.3", "title": "第三者のリスク評価", "blurb": "ベンダー評価と合意書面", "groups": [{"id": "vendor-assessment", "title": "ベンダー評価", "terms": [{"id": "e-3-penetration-testing", "key": "penetration-testing", "ja": "侵入テスト", "en": "Penetration testing", "one_liner": "ベンダー対策を**自ら検証**する", "examples": ["委託先の耐性確認", "課題の共有・改善"]}, {"id": "e-3-due-diligence", "key": "due-diligence", "ja": "デューデリジェンス", "en": "Due diligence", "one_liner": "選定**前**の入念な調査", "examples": ["財務・法令遵守", "セキュリティ体制"]}, {"id": "e-3-evidence-of-internal-audits", "key": "evidence-of-internal-audits", "ja": "内部監査の証跡", "en": "Evidence of internal audits", "one_liner": "ベンダーの**内部監査記録**を確認", "examples": ["監査頻度・範囲", "記録の保持確認"]}, {"id": "e-3-conflict-of-interest", "key": "conflict-of-interest", "ja": "利益相反", "en": "Conflict of interest", "one_liner": "私的利害で**公正選定**が歪まないか", "examples": ["知人企業への優先発注", "選定時の利害確認"]}]}, {"id": "agreements", "title": "合意書面", "terms": [{"id": "e-3-moa", "key": "moa", "ja": "MOA", "en": "Memorandum of Agreement", "one_liner": "合意内容を**明文化**する覚書", "examples": ["役割・期間の定義", "契約ではないが疑義低減"]}, {"id": "e-3-mou", "key": "mou", "ja": "MOU", "en": "Memorandum of Understanding", "one_liner": "理解・方向性を残す**了解覚書**", "examples": ["共同研究の目的整理", "パートナーシップの基礎"]}, {"id": "e-3-sla", "key": "sla", "ja": "SLA", "en": "Service Level Agreement", "one_liner": "サービス**品質・範囲**を定めた合意", "examples": ["稼働率・応答時間", "障害対応手順"]}]}]}, {"id": "E-4", "slug": "e-4", "official": "5.4", "title": "セキュリティコンプライアンス", "blurb": "報告・非遵守の結果・モニタリング", "groups": [{"id": "compliance-reporting", "title": "コンプライアンス報告", "terms": [{"id": "e-4-internal-compliance-reporting", "key": "internal-compliance-reporting", "ja": "内部コンプライアンス報告書", "en": "Internal compliance reporting", "one_liner": "遵守状況を**社内**（経営・監査委）へ報告する", "examples": ["監査委員会への四半期報告", "訓練完了・ギャップの共有"]}, {"id": "e-4-external-compliance-reporting", "key": "external-compliance-reporting", "ja": "外部コンプライアンス報告書", "en": "External compliance reporting", "one_liner": "規制当局・顧客など**組織外**へ提出する", "examples": ["監督官庁への届出", "顧客向け年次レポート"]}]}, {"id": "non-compliance-consequences", "title": "非遵守の結果", "terms": [{"id": "e-4-fines", "key": "fines", "ja": "罰金", "en": "Fines", "one_liner": "違反に対する**金銭的**ペナルティ", "examples": ["個人情報保護違反の罰金", "重大度で金額が変動"]}, {"id": "e-4-sanctions", "key": "sanctions", "ja": "制裁", "en": "Sanctions", "one_liner": "業務停止・指名停止など**不利益措置**で抑止する", "examples": ["談合での指名停止", "許認可の取消"]}, {"id": "e-4-reputational-damage", "key": "reputational-damage", "ja": "評判被害", "en": "Reputational damage", "one_liner": "信頼・ブランドが**大きく損なわれる**こと", "examples": ["原産地偽装による信用喪失", "顧客離れ・株価下落"]}, {"id": "e-4-contractual-impacts", "key": "contractual-impacts", "ja": "契約上の影響", "en": "Contractual impacts", "one_liner": "違反を理由に**契約解除・改定・新規困難**になる", "examples": ["脆弱性起因の委託解除", "損害賠償請求リスク"]}]}, {"id": "compliance-monitoring", "title": "コンプライアンスのモニタリング", "terms": [{"id": "e-4-due-diligence", "key": "due-diligence", "ja": "デューデリジェンス", "en": "Due diligence", "one_liner": "取引先の遵守状況を**事前に十分調査**する", "examples": ["サプライヤーの法令遵守確認", "贈収賄リスク評価"]}, {"id": "e-4-attestation", "key": "attestation", "ja": "アテステーション", "en": "Attestation", "one_liner": "事実・声明の正当性を**署名等で証明**する", "examples": ["監査での対策実施の証明", "経営責任者の署名確認"]}]}]}]}</script>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/map.js?v=0970edd5"></script>
+</body>
+</html>

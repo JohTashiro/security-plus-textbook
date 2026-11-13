@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B-1 脅威アクターと動機 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain B</span></a>
+  <a class="nav-back" href="index.html">← Domain B ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain B</h2>
+    <a href="b-1.html" class="active">B-1 脅威アクターと動機</a><a href="b-2.html">B-2 脅威ベクトルと攻撃対象領域</a><a href="b-3.html">B-3 脆弱性の種類</a><a href="b-4.html">B-4 悪意のある活動の兆候</a><a href="b-5.html">B-5 緩和策</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain B 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain B · B-1</p>
+  <h1>脅威アクターと動機</h1>
+  <p>誰が・どんな力で・なぜ攻撃するのか</p>
+  <div class="meta-row">
+    <span class="chip">用語 18</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 2.1</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 22問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">外部の攻撃者（組織の外から攻めるのは誰か）</h2>
+<article class="memo-card" id="b-1-nation-state" data-search="国家支援型攻撃者 nation-state 国家の後ろ盾を持つ最強の攻撃者 重要インフラ攻撃 apt">
+  <h3>国家支援型攻撃者<span class="en">Nation-state</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">国家の後ろ盾</span>を持つ最強の攻撃者</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>重要インフラ攻撃</li><li>APT</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-organized-crime" data-search="組織犯罪 organized crime 金銭目的で組織化された犯罪集団 ランサムウェア集団 samsam">
+  <h3>組織犯罪<span class="en">Organized crime</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">金銭目的</span>で組織化された犯罪集団</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ランサムウェア集団</li><li>SamSam</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-hacktivist" data-search="ハクティビスト hacktivist 政治・社会的な主張のために攻撃 サイト改ざん 情報の暴露 アノニマス">
+  <h3>ハクティビスト<span class="en">Hacktivist</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">政治・社会的な主張</span>のために攻撃</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>サイト改ざん</li><li>情報の暴露</li><li>アノニマス</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-unskilled-attacker" data-search="スキルに乏しい攻撃者 unskilled attacker 既存ツール頼みの素人攻撃者 総当たりツール 公開スクリプト">
+  <h3>スキルに乏しい攻撃者<span class="en">Unskilled attacker</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">既存ツール頼み</span>の素人攻撃者</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>総当たりツール</li><li>公開スクリプト</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">内部の脅威（組織の中から生じるリスク）</h2>
+<article class="memo-card" id="b-1-insider-threat" data-search="内部脅威者 insider threat 正規のアクセス権を悪用する内部者 経理システムで横領 元社員の持ち出し">
+  <h3>内部脅威者<span class="en">Insider threat</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">正規のアクセス権</span>を悪用する内部者</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>経理システムで横領</li><li>元社員の持ち出し</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-shadow-it" data-search="シャドーit shadow it it部門が承認していない機器・ソフト 無許可のクラウド 私物アプリ">
+  <h3>シャドーIT<span class="en">Shadow IT</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">IT部門が<span class="hl">承認していない</span>機器・ソフト</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>無許可のクラウド</li><li>私物アプリ</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">脅威アクターの属性（どの観点で比べるか）</h2>
+<article class="memo-card" id="b-1-internal-external" data-search="内部と外部 internal/external 脅威が組織の内か外かで分ける 従業員・パートナー 外部ハッカー">
+  <h3>内部と外部<span class="en">Internal/external</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">脅威が<span class="hl">組織の内か外か</span>で分ける</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>従業員・パートナー</li><li>外部ハッカー</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-resources-funding" data-search="資金力とリソース resources/funding 攻撃に使える資金・人材・装備の量 国家＝豊富 素人＝乏しい">
+  <h3>資金力とリソース<span class="en">Resources/funding</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">攻撃に使える<span class="hl">資金・人材・装備</span>の量</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>国家＝豊富</li><li>素人＝乏しい</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-sophistication" data-search="洗練さと能力 level of sophistication/capability 攻撃者の技術力・能力の高さ 国家＝高 素人＝低">
+  <h3>洗練さと能力<span class="en">Level of sophistication/capability</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">攻撃者の<span class="hl">技術力・能力</span>の高さ</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>国家＝高</li><li>素人＝低</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">情報・業務を狙う動機（何を奪う／止めるか）</h2>
+<article class="memo-card" id="b-1-data-exfiltration" data-search="データ窃取 data exfiltration 機密データを外へ持ち出す 顧客情報の転売 内部情報の暴露">
+  <h3>データ窃取<span class="en">Data exfiltration</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">機密データを<span class="hl">外へ持ち出す</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>顧客情報の転売</li><li>内部情報の暴露</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-espionage" data-search="スパイ行為 espionage 競争優位のため機密を盗み見る 設計図の入手 技術情報の盗用">
+  <h3>スパイ行為<span class="en">Espionage</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">競争優位</span>のため機密を盗み見る</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>設計図の入手</li><li>技術情報の盗用</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-service-disruption" data-search="サービス妨害 service disruption サービスを使えなくして邪魔する ddos攻撃 ecサイト停止">
+  <h3>サービス妨害<span class="en">Service disruption</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">サービスを<span class="hl">使えなくして</span>邪魔する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>DDoS攻撃</li><li>ECサイト停止</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">金銭を狙う動機（どうやってお金を得るか）</h2>
+<article class="memo-card" id="b-1-blackmail" data-search="脅迫 blackmail 弱みを握り脅して従わせる ランサムウェア 改ざんして復旧料要求">
+  <h3>脅迫<span class="en">Blackmail</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">弱みを握り<span class="hl">脅して従わせる</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ランサムウェア</li><li>改ざんして復旧料要求</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-financial-gain" data-search="金銭的利益 financial gain お金を得ることが最終目的 フィッシング 不正送金 身代金">
+  <h3>金銭的利益<span class="en">Financial gain</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">お金を得ること</span>が最終目的</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>フィッシング</li><li>不正送金</li><li>身代金</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">信念・感情の動機（なぜ攻撃を思い立つか）</h2>
+<article class="memo-card" id="b-1-philosophical-political" data-search="哲学的・政治的信念 philosophical/political beliefs 思想・政治的主張に基づく攻撃 アノニマス 動物愛護の攻撃">
+  <h3>哲学的・政治的信念<span class="en">Philosophical/political beliefs</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">思想・政治的主張</span>に基づく攻撃</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>アノニマス</li><li>動物愛護の攻撃</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-ethical" data-search="倫理観 ethical 不正を正すという倫理的な動機 内部告発 ウィキリークス">
+  <h3>倫理観<span class="en">Ethical</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">不正を正す</span>という倫理的な動機</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>内部告発</li><li>ウィキリークス</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-revenge" data-search="復讐 revenge 恨みを晴らすための報復攻撃 解雇された元社員 不満を持つ顧客">
+  <h3>復讐<span class="en">Revenge</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">恨みを晴らす</span>ための報復攻撃</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>解雇された元社員</li><li>不満を持つ顧客</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-1-chaos" data-search="混沌 disruption/chaos 混乱そのものを楽しむ愉快犯 lulzsec 無差別攻撃">
+  <h3>混沌<span class="en">Disruption/chaos</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">混乱そのもの</span>を楽しむ愉快犯</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>LulzSec</li><li>無差別攻撃</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（22問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "b-1-nation-state", "stem": "ある国の電力網と交通システムが、数年がかりで準備された高度なマルウェアによって同時に停止した。攻撃者は膨大な人材と資金を投入していたと分析されている。最も可能性の高い脅威アクターはどれか。", "choices": ["ハクティビスト", "国家支援型攻撃者", "スキルに乏しい攻撃者", "内部脅威者"], "answer": 1, "explain": "重要インフラを狙う長期・大規模な作戦は、高度な技術と豊富なリソースを持つ国家支援型攻撃者の典型である。"}, {"term": "b-1-unskilled-attacker", "stem": "プログラミング経験のない人物が、ネット上で配布されているパスワード総当たりツールをダウンロードし、好奇心から企業のログイン画面を攻撃した。この攻撃者に最も当てはまるものはどれか。", "choices": ["組織犯罪", "国家支援型攻撃者", "ハクティビスト", "スキルに乏しい攻撃者"], "answer": 3, "explain": "技術力が低く既存のツールに頼り、個人的な動機で動くのはスキルに乏しい攻撃者である。"}, {"term": "b-1-hacktivist", "stem": "環境規制を無視している化学メーカーのWebサイトが改ざんされ、「環境を破壊する企業の犯罪を暴露する」というメッセージが掲載された。金銭の要求はない。攻撃者として最も可能性が高いのはどれか。", "choices": ["ハクティビスト", "組織犯罪", "内部脅威者", "シャドーIT"], "answer": 0, "explain": "社会的・政治的な主張のためにサイト改ざんを行い、金銭を目的としないのはハクティビストの特徴である。"}, {"term": "b-1-insider-threat", "stem": "会社に恨みを持つ経理担当者が、業務で付与されたシステムのアクセス権を使って会社の資金を自分の口座へ送金していた。この脅威はどれに分類されるか。", "choices": ["シャドーIT", "スキルに乏しい攻撃者", "内部脅威者", "組織犯罪"], "answer": 2, "explain": "組織内部の人物が正規のアクセス権を悪用して損害を与えているため、内部脅威者に該当する。"}, {"term": "b-1-organized-crime", "stem": "複数の役割分担を持つハッカー集団が、米国の自治体やインフラ施設へランサムウェア攻撃を繰り返し、総額数百万ドルの身代金を得た。この脅威アクターとして最も適切なものはどれか。", "choices": ["ハクティビスト", "スキルに乏しい攻撃者", "内部脅威者", "組織犯罪"], "answer": 3, "explain": "金銭目的で組織化され、高度な技術と資金で大規模攻撃を行うのは組織犯罪（例: SamSam）である。"}, {"term": "b-1-shadow-it", "stem": "営業担当者が業務効率化のため、IT部門に無断で無料のクラウド顧客管理アプリを使い、顧客の連絡先や商談内容を登録していた。このリスクを最もよく表す用語はどれか。", "choices": ["シャドーIT", "内部脅威者", "データ窃取", "スパイ行為"], "answer": 0, "explain": "IT部門やポリシーで承認されていないソフトウェアの利用はシャドーITであり、悪意がなくても漏えいリスクを生む。"}, {"term": "b-1-shadow-it", "stem": "シャドーITへの対応方針として、講義の趣旨に最も合うものはどれか。", "choices": ["利用者を内部脅威者として懲戒処分する", "従業員の利便性とセキュリティのバランスを取る", "すべてのクラウドサービスを恒久的に禁止する", "外部の攻撃者として法執行機関に通報する"], "answer": 1, "explain": "シャドーITは業務効率化という正当な理由で生じることが多いため、利便性とセキュリティのバランスを取ることが重要とされる。"}, {"term": "b-1-internal-external", "stem": "セキュリティ担当者が脅威を「従業員や取引先パートナーから発生するもの」と「外部のハッカーやスパイから発生するもの」に分けて評価している。どの属性で分類しているか。", "choices": ["資金力とリソース", "洗練さと能力", "内部と外部", "動機"], "answer": 2, "explain": "脅威の発生源が組織の内側か外側かで分けるのは「内部と外部」の属性である。"}, {"term": "b-1-resources-funding", "stem": "ある攻撃者は高度な技術者を多数抱え、専用の装備をそろえ、長期的かつ大規模な作戦を継続できる。この特徴を最も直接的に表す属性はどれか。", "choices": ["資金力とリソース", "内部と外部", "混沌", "シャドーIT"], "answer": 0, "explain": "技術・人材・装備をそろえ長期作戦を展開できるかどうかは、資金力とリソースの観点である。"}, {"term": "b-1-sophistication", "stem": "脅威アクターを「洗練さと能力」の観点で比較した場合、一般に最も高いと評価されるものはどれか。", "choices": ["スキルに乏しい攻撃者", "シャドーIT", "ハクティビスト", "国家支援型攻撃者"], "answer": 3, "explain": "国家支援型攻撃者は洗練さも能力も高い。ハクティビストは集団によって幅があり、スキルに乏しい攻撃者は低い。"}, {"term": "b-1-sophistication", "stem": "スキルに乏しい攻撃者について、洗練さと能力の観点から最も適切な説明はどれか。", "choices": ["洗練さは高いが資金力が乏しい", "洗練さは低いが、ネット上の情報やツールで攻撃できるため軽視できない", "洗練さが低いので脅威として考慮する必要はない", "洗練さは国家支援型攻撃者と同程度である"], "answer": 1, "explain": "スキルに乏しい攻撃者は洗練さの度合いが低いが、既存のツールや情報で攻撃が可能なため甘く見てはいけない。"}, {"term": "b-1-data-exfiltration", "stem": "退職予定の従業員が在職中に顧客リストや設計図面をUSBメモリへコピーし、転職先の競合企業に売却した。この行為の動機として最も適切なものはどれか。", "choices": ["サービス妨害", "混沌", "データ窃取", "倫理観"], "answer": 2, "explain": "機密情報を不正に持ち出すこと自体が焦点であり、データ窃取（Data exfiltration）に該当する。"}, {"term": "b-1-espionage", "stem": "新興企業が研究開発コストを抑えるため、大手企業の新製品の製造工程や販売戦略を密かに入手しようと攻撃を仕掛けた。この動機として最も適切なものはどれか。", "choices": ["復讐", "スパイ行為", "脅迫", "哲学的・政治的信念"], "answer": 1, "explain": "競争優位を得るために他社の知的財産や機密を盗み見るのはスパイ行為（Espionage）である。"}, {"term": "b-1-service-disruption", "stem": "セール期間中、ライバル企業のECサイトに大量のリクエストが送りつけられ、サイトが閲覧不能になって販売機会が失われた。金銭要求はない。攻撃の動機として最も適切なものはどれか。", "choices": ["サービス妨害", "データ窃取", "脅迫", "倫理観"], "answer": 0, "explain": "DDoS攻撃でサービスを使えなくし業務を妨げることが目的なので、サービス妨害に該当する。"}, {"term": "b-1-blackmail", "stem": "攻撃者が企業のWebサイトを改ざんし、「元に戻してほしければ指定の金額を支払え」と連絡してきた。この攻撃の動機を最も直接的に表すものはどれか。", "choices": ["混沌", "スパイ行為", "サービス妨害", "脅迫"], "answer": 3, "explain": "被害を人質に取り要求を飲ませようと脅す構図は脅迫（Blackmail）である。"}, {"term": "b-1-financial-gain", "stem": "攻撃者がフィッシングメールでオンラインバンキングのIDとパスワードを盗み、被害者の口座から不正送金を行った。この攻撃の動機として最も適切なものはどれか。", "choices": ["倫理観", "哲学的・政治的信念", "金銭的利益", "復讐"], "answer": 2, "explain": "盗んだ認証情報で不正送金を行い、お金を得ることが目的なので金銭的利益に該当する。"}, {"term": "b-1-financial-gain", "stem": "ランサムウェア攻撃と動機の関係について、最も適切な説明はどれか。", "choices": ["脅迫の手口であると同時に、背景には金銭的利益の動機がある", "動機は常に1つに限定され、ランサムウェアはサービス妨害のみに分類される", "ランサムウェアは混沌を目的とした攻撃に限られる", "ランサムウェアは倫理観に基づく攻撃の代表例である"], "answer": 0, "explain": "動機は重なり合うものであり、ランサムウェアは脅迫であると同時に最終的には金銭的利益を狙っている。"}, {"term": "b-1-philosophical-political", "stem": "言論の自由を掲げるハッカー集団が、独裁政権を批判するために政府関連サイトへDDoS攻撃を行った。この集団の動機として最も適切なものはどれか。", "choices": ["金銭的利益", "哲学的・政治的信念", "復讐", "データ窃取"], "answer": 1, "explain": "理念や政治的主張に基づき、それに反する組織を攻撃するのは哲学的・政治的信念による動機で、ハクティビストに典型的である。"}, {"term": "b-1-ethical", "stem": "ある人物が「組織の不正を世に知らせることが正しい」と考え、内部告発サイトを通じて政治陣営の大量のメールを公開した。この動機として最も適切なものはどれか。", "choices": ["混沌", "金銭的利益", "脅迫", "倫理観"], "answer": 3, "explain": "不正を正す・情報公開は正しいという道義的信念に基づく行動であり、倫理観（Ethical）の動機に該当する。"}, {"term": "b-1-revenge", "stem": "解雇された元システム管理者が、無効化されていなかったアカウントで元職場のサーバーに侵入し、業務データを削除した。この攻撃の動機として最も可能性が高いものはどれか。", "choices": ["スパイ行為", "復讐", "哲学的・政治的信念", "混沌"], "answer": 1, "explain": "解雇への恨みを晴らすための報復であり、内部脅威者と結び付きやすい復讐の動機に該当する。"}, {"term": "b-1-chaos", "stem": "あるハッカー集団が、特定の主張も金銭要求もなく、企業や政府機関を無差別に攻撃しては機密情報を暴露し、社会の混乱を面白がっていた。この動機として最も適切なものはどれか。", "choices": ["倫理観", "金銭的利益", "混沌", "スパイ行為"], "answer": 2, "explain": "明確な目的がなく、混乱を引き起こすこと自体を楽しむのは混沌（Disruption/chaos）の動機である（例: LulzSec）。"}, {"term": "b-1-insider-threat", "stem": "内部脅威者が外部の攻撃者と比べて深刻な被害をもたらしやすい最大の理由はどれか。", "choices": ["国家から豊富な資金提供を受けているため", "既存の攻撃ツールしか使わないため", "IT部門が承認していない機器を使うため", "ネットワークやシステムへの正規のアクセス権を持っているため"], "answer": 3, "explain": "内部脅威者は最初から正規のアクセス権を持つため、侵入の手間なく重大な損害を与え得る。"}]</script>
+</section>
+
+<nav class="pager"><a href="index.html"><span>戻る</span>Domain B ハブ</a><a class="next" href="b-2.html"><span>次の章</span>B-2 脅威ベクトルと攻撃対象領域</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

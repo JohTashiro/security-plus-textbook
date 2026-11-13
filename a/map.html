@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domain A 知識マップ · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain A</span></a>
+  <a class="nav-back" href="index.html">← Domain A ハブ</a>
+  <nav class="nav-section">
+    <h2>Domain A</h2>
+    <a href="a-1.html">A-1 セキュリティコントロールの比較</a><a href="a-2.html">A-2 セキュリティコンセプトの基礎</a><a href="a-3.html">A-3 変更管理とセキュリティへの影響</a><a href="a-4.html">A-4 適切な暗号化の選択</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    
+    <a href="map.html" class="active">Domain A 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main main-wide">
+      
+<header class="hero">
+  <p class="eyebrow">Domain A</p>
+  <h1>知識マップ</h1>
+  <p>用語だけを階層表示。同じカテゴリは同じ階層。タップすると意味と教科書リンクが出ます。</p>
+</header>
+<div class="mindmap-wrap">
+  <div id="mindmap" class="mindmap"></div>
+</div>
+<aside class="term-panel" id="term-panel" aria-hidden="true">
+  <button type="button" class="term-panel-close" id="term-panel-close" aria-label="閉じる">×</button>
+  <p class="term-panel-kicker">意味</p>
+  <h2 id="term-panel-title"></h2>
+  <button type="button" class="reveal-btn" id="term-panel-reveal" aria-expanded="false">答えを見る</button>
+  <p class="term-panel-meaning" id="term-panel-meaning"></p>
+  <a class="term-panel-link" id="term-panel-link" href="#">教科書で見る</a>
+</aside>
+<script type="application/json" id="mindmap-data">{"domain": "A", "official": "1", "title": "一般的なセキュリティ概念", "chapters": [{"id": "A-1", "slug": "a-1", "official": "1.1", "title": "セキュリティコントロールの比較", "blurb": "カテゴリ × 種類で対策を分類する", "groups": [{"id": "category", "title": "カテゴリ（何に着目するか）", "terms": [{"id": "a-1-technical", "key": "technical", "ja": "技術的コントロール", "en": "Technical", "one_liner": "**技術・ソフト**で守る対策", "examples": ["暗号化", "認証", "アクセス制御"]}, {"id": "a-1-managerial", "key": "managerial", "ja": "管理的コントロール", "en": "Managerial", "one_liner": "**方針・体制**づくりの対策", "examples": ["セキュリティポリシー", "監査", "手順書"]}, {"id": "a-1-operational", "key": "operational", "ja": "運営的コントロール", "en": "Operational", "one_liner": "**日々の運用**で回す対策", "examples": ["教育訓練", "ログ分析", "パッチ適用"]}, {"id": "a-1-physical", "key": "physical", "ja": "物理的コントロール", "en": "Physical", "one_liner": "**施設・設備**で守る対策", "examples": ["入退室管理", "フェンス", "ボラード"]}]}, {"id": "type", "title": "種類（いつ・何のためか）", "terms": [{"id": "a-1-preventive", "key": "preventive", "ja": "予防的コントロール", "en": "Preventive", "one_liner": "起きる前に**未然に防ぐ**", "examples": ["ファイアウォール", "アクセス制御"]}, {"id": "a-1-deterrent", "key": "deterrent", "ja": "抑止的コントロール", "en": "Deterrent", "one_liner": "**心理的に**思いとどまらせる", "examples": ["監視カメラ掲示", "警告バナー"]}, {"id": "a-1-detective", "key": "detective", "ja": "検出的コントロール", "en": "Detective", "one_liner": "異常や攻撃に**早く気づく**", "examples": ["ログ監視", "IDS/IPS"]}, {"id": "a-1-corrective", "key": "corrective", "ja": "是正的コントロール", "en": "Corrective", "one_liner": "発生後に**直して再発防止**", "examples": ["隔離・駆除", "バックアップ復旧", "パッチ"]}, {"id": "a-1-compensating", "key": "compensating", "ja": "代替的コントロール", "en": "Compensating", "one_liner": "本命が無理なときの**次善策**", "examples": ["レガシーのネットワーク分離"]}, {"id": "a-1-directive", "key": "directive", "ja": "指示的コントロール", "en": "Directive", "one_liner": "**トップダウン**で方針を示す", "examples": ["情報セキュリティ方針", "法令準拠の要求"]}]}]}, {"id": "A-2", "slug": "a-2", "official": "1.2", "title": "セキュリティコンセプトの基礎", "blurb": "CIA・ゼロトラスト・物理セキュリティ", "groups": [{"id": "core", "title": "基本概念", "terms": [{"id": "a-2-cia", "key": "cia", "ja": "CIA", "en": "Confidentiality / Integrity / Availability", "one_liner": "**機密性・完全性・可用性**の3要素", "examples": ["暗号化（機密）", "ハッシュ（完全）", "冗長化（可用）"]}, {"id": "a-2-non-repudiation", "key": "non-repudiation", "ja": "否認防止", "en": "Non-repudiation", "one_liner": "後から「やってない」と**否定できない**", "examples": ["デジタル署名", "証明書"]}, {"id": "a-2-gap-analysis", "key": "gap-analysis", "ja": "ギャップ分析", "en": "Gap Analysis", "one_liner": "**現状と目標の差**を洗い出す", "examples": ["対策不足の一覧化", "目標水準との比較"]}]}, {"id": "zero-trust", "title": "ゼロトラスト関連", "terms": [{"id": "a-2-adaptive-identity", "key": "adaptive-identity", "ja": "アダプティブID", "en": "Adaptive Identity", "one_liner": "状況に応じて認証を**動的に変える**", "examples": ["普段と違う場所で追加認証"]}, {"id": "a-2-threat-scope", "key": "threat-scope", "ja": "脅威範囲の縮小", "en": "Threat Scope Reduction", "one_liner": "被害が広がる**範囲を狭める**", "examples": ["最小権限", "高リスク端末の制限"]}, {"id": "a-2-policy-driven", "key": "policy-driven", "ja": "ポリシー駆動型アクセス制御", "en": "Policy-driven Access Control", "one_liner": "**定義済み方針**で権限を決める", "examples": ["役割別アクセスポリシー"]}, {"id": "a-2-policy-admin", "key": "policy-admin", "ja": "ポリシー管理者", "en": "Policy Administrator", "one_liner": "アクセスルールを**決めて更新**する役割", "examples": ["職種別ポリシーの定義"]}, {"id": "a-2-implicit-trust", "key": "implicit-trust", "ja": "暗黙の信頼ゾーン", "en": "Implicit Trust Zone", "one_liner": "社内なら信用する領域（**排除対象**）", "examples": ["境界内は無検証の従来型"]}, {"id": "a-2-subject-system", "key": "subject-system", "ja": "サブジェクト／システム", "en": "Subject / System", "one_liner": "**アクセスする側**と守る対象", "examples": ["医師→電子カルテ"]}, {"id": "a-2-pep", "key": "pep", "ja": "ポリシー実施ポイント", "en": "PEP", "one_liner": "現場で**許可／拒否を執行**する点", "examples": ["ゲートウェイでの判定", "アクセスログ"]}]}, {"id": "physical", "title": "物理セキュリティ", "terms": [{"id": "a-2-bollard", "key": "bollard", "ja": "ボラード", "en": "Bollard", "one_liner": "**車両の侵入**を防ぐ柱", "examples": ["建物前の車止め"]}, {"id": "a-2-fencing", "key": "fencing", "ja": "フェンシング", "en": "Fencing", "one_liner": "境界を示し**人の侵入**を防ぐ柵", "examples": ["チェーンリンクフェンス"]}, {"id": "a-2-video", "key": "video", "ja": "ビデオ監視", "en": "Video Surveillance", "one_liner": "カメラで**監視・録画**する", "examples": ["集中監視", "AI映像解析"]}, {"id": "a-2-guard", "key": "guard", "ja": "警備員", "en": "Security Guard", "one_liner": "**人が巡回・確認**する対策", "examples": ["受付確認", "巡回警備"]}, {"id": "a-2-badge", "key": "badge", "ja": "アクセスバッジ", "en": "Access Badge", "one_liner": "電子的に**入退室を許可**する証", "examples": ["IC社員証"]}, {"id": "a-2-lighting", "key": "lighting", "ja": "ライティング", "en": "Lighting", "one_liner": "明るくして**抑止・監視**を助ける", "examples": ["駐車場照明", "出入口照明"]}]}]}, {"id": "A-3", "slug": "a-3", "official": "1.3", "title": "変更管理とセキュリティへの影響", "blurb": "変える前に決め、失敗したら戻す", "groups": [{"id": "process", "title": "変更プロセス", "terms": [{"id": "a-3-approval", "key": "approval", "ja": "承認プロセス", "en": "Approval Process", "one_liner": "権限者が変更の可否を**審査**する", "examples": ["新ソフト導入の承認", "持ち出し承認"]}, {"id": "a-3-stakeholder", "key": "stakeholder", "ja": "ステークホルダー", "en": "Stakeholder", "one_liner": "変更に関わる**利害関係者**", "examples": ["経営者", "開発者", "利用部門"]}, {"id": "a-3-impact", "key": "impact", "ja": "インパクト分析", "en": "Impact Analysis", "one_liner": "変更や事故の影響を**事前評価**", "examples": ["パッチ前の業務影響評価"]}, {"id": "a-3-test-results", "key": "test-results", "ja": "テスト結果", "en": "Test Results", "one_liner": "対策の有効性を**検証した成果**", "examples": ["脆弱性スキャン", "侵入テスト"]}, {"id": "a-3-backout", "key": "backout", "ja": "バックアウトプラン", "en": "Backout Plan", "one_liner": "失敗したら**元に戻す計画**", "examples": ["バックアップ", "切り戻し手順"]}, {"id": "a-3-maint-window", "key": "maint-window", "ja": "メンテナンスウィンドウ", "en": "Maintenance Window", "one_liner": "影響を抑えて作業する**時間枠**", "examples": ["深夜の定期メンテ"]}, {"id": "a-3-sop", "key": "sop", "ja": "標準作業手順書", "en": "SOP", "one_liner": "作業を**同じ手順**で行う文書", "examples": ["パスワード手順", "インシデント手順"]}]}, {"id": "impact-biz", "title": "変更に伴う影響", "terms": [{"id": "a-3-allow-deny", "key": "allow-deny", "ja": "許可／拒否リスト", "en": "Allow / Deny List", "one_liner": "**通す相手・拒む相手**の一覧", "examples": ["FWのIPリスト", "メールフィルタ"]}, {"id": "a-3-restrict", "key": "restrict", "ja": "機能の制限", "en": "Restricted Activities", "one_liner": "不要・危険な機能を**止める**", "examples": ["カメラ制限", "外部共有制限"]}, {"id": "a-3-downtime", "key": "downtime", "ja": "ダウンタイム", "en": "Downtime", "one_liner": "システムが**使えない時間**", "examples": ["パッチ適用の計画停止"]}, {"id": "a-3-restart", "key": "restart", "ja": "アプリの再起動", "en": "Application Restart", "one_liner": "止めて起動し直し**変更を反映**", "examples": ["設定変更後の再起動"]}, {"id": "a-3-legacy", "key": "legacy", "ja": "レガシーアプリ", "en": "Legacy Application", "one_liner": "更新できない**古いアプリ**", "examples": ["COBOL基幹", "旧OS上の制御系"]}, {"id": "a-3-dependencies", "key": "dependencies", "ja": "依存関係", "en": "Dependencies", "one_liner": "他コンポーネントとの**つながり**", "examples": ["外部ライブラリ", "クラウド部品"]}]}]}, {"id": "A-4", "slug": "a-4", "official": "1.4", "title": "適切な暗号化の選択", "blurb": "鍵・隠す・ハッシュ・証明書", "groups": [{"id": "keys", "title": "鍵と暗号方式", "terms": [{"id": "a-4-pub-priv", "key": "pub-priv", "ja": "公開鍵と秘密鍵", "en": "Public / Private Key", "one_liner": "対になる**2つの鍵**で暗号・署名", "examples": ["公開鍵で暗号化", "秘密鍵で復号"]}, {"id": "a-4-key-escrow", "key": "key-escrow", "ja": "キーエスクロー", "en": "Key Escrow", "one_liner": "鍵を信頼できる**第三者に預ける**", "examples": ["紛失時の鍵復旧"]}, {"id": "a-4-enc-scope", "key": "enc-scope", "ja": "暗号化の範囲", "en": "Level of Encryption", "one_liner": "**どの粒度**で暗号化するかを決める", "examples": ["フルディスク", "ファイル単位"]}, {"id": "a-4-asymmetric", "key": "asymmetric", "ja": "非対称暗号化", "en": "Asymmetric", "one_liner": "公開鍵と秘密鍵の**2鍵方式**", "examples": ["メール暗号化", "デジタル署名"]}, {"id": "a-4-symmetric", "key": "symmetric", "ja": "対称暗号化", "en": "Symmetric", "one_liner": "**同じ鍵**で暗号も復号もする", "examples": ["AES", "大量データ暗号"]}, {"id": "a-4-key-exchange", "key": "key-exchange", "ja": "鍵交換", "en": "Key Exchange", "one_liner": "共通鍵を**安全に共有**する手順", "examples": ["Diffie-Hellman", "RSA鍵交換"]}, {"id": "a-4-algorithm", "key": "algorithm", "ja": "アルゴリズム", "en": "Algorithm", "one_liner": "平文を暗号文にする**計算手順**", "examples": ["AES"]}, {"id": "a-4-key-length", "key": "key-length", "ja": "鍵の長さ", "en": "Key Length", "one_liner": "長いほど強いが**処理は重い**", "examples": ["128ビット", "256ビット"]}]}, {"id": "key-protect", "title": "鍵の保護", "terms": [{"id": "a-4-hsm", "key": "hsm", "ja": "HSM", "en": "Hardware Security Module", "one_liner": "鍵を守る**専用ハードウェア**", "examples": ["銀行の鍵管理", "署名鍵保護"]}, {"id": "a-4-kms", "key": "kms", "ja": "キー管理システム", "en": "KMS", "one_liner": "鍵の一生を**まとめて管理**", "examples": ["クラウドの暗号鍵管理"]}, {"id": "a-4-enclave", "key": "enclave", "ja": "セキュアエンクレーブ", "en": "Secure Enclave", "one_liner": "端末内の**隔離された保護領域**", "examples": ["生体認証データの保護"]}]}, {"id": "obfuscation", "title": "難読化・データ隠蔽", "terms": [{"id": "a-4-stego", "key": "stego", "ja": "ステガノグラフィ", "en": "Steganography", "one_liner": "データの中に**秘密を隠す**", "examples": ["画像へのメッセージ埋め込み"]}, {"id": "a-4-tokenize", "key": "tokenize", "ja": "トークン化", "en": "Tokenization", "one_liner": "機密を別の**無害な値に置換**", "examples": ["カード番号のトークン"]}, {"id": "a-4-masking", "key": "masking", "ja": "データマスキング", "en": "Data Masking", "one_liner": "一部を**伏せて見せる**", "examples": ["**** **** **** 3456"]}]}, {"id": "hash", "title": "ハッシュと署名", "terms": [{"id": "a-4-hash", "key": "hash", "ja": "ハッシュ値", "en": "Hash", "one_liner": "戻せない**固定長の指紋**", "examples": ["パスワード保存", "改ざん検知"]}, {"id": "a-4-salt", "key": "salt", "ja": "ソルト", "en": "Salt", "one_liner": "ハッシュ前に足す**ランダム値**", "examples": ["レインボーテーブル対策"]}, {"id": "a-4-digital-sig", "key": "digital-sig", "ja": "デジタル署名", "en": "Digital Signature", "one_liner": "誰が送り**改ざんがないか**を証明", "examples": ["署名付きメール", "電子契約"]}, {"id": "a-4-key-stretch", "key": "key-stretch", "ja": "キーストレッチ", "en": "Key Stretching", "one_liner": "何度もハッシュして**総当たりを遅く**する", "examples": ["PBKDF2", "bcrypt"]}]}, {"id": "ledger", "title": "分散台帳", "terms": [{"id": "a-4-blockchain", "key": "blockchain", "ja": "ブロックチェーン", "en": "Blockchain", "one_liner": "改ざんしにくい**分散型の台帳**", "examples": ["ビットコイン取引"]}, {"id": "a-4-public-ledger", "key": "public-ledger", "ja": "公開台帳", "en": "Public Ledger", "one_liner": "誰でも見られる**不変の記録**", "examples": ["公開取引履歴"]}]}, {"id": "certs", "title": "証明書と信頼", "terms": [{"id": "a-4-ca", "key": "ca", "ja": "認証局", "en": "CA", "one_liner": "証明書を発行する**信頼できる機関**", "examples": ["SSL/TLS証明書の発行"]}, {"id": "a-4-crl", "key": "crl", "ja": "証明書失効リスト", "en": "CRL", "one_liner": "期限前に無効にした**証明書一覧**", "examples": ["鍵漏洩時の失効"]}, {"id": "a-4-self-signed", "key": "self-signed", "ja": "自己署名証明書", "en": "Self-Signed", "one_liner": "自分で発行する**試験・開発用**証明書", "examples": ["ローカルHTTPS"]}, {"id": "a-4-third-party-cert", "key": "third-party-cert", "ja": "サードパーティ証明書", "en": "Third-party Certificate", "one_liner": "CAが身元確認して発行する証明書", "examples": ["公開Webサイトの証明書"]}, {"id": "a-4-root-of-trust", "key": "root-of-trust", "ja": "信頼の起点", "en": "Root of Trust", "one_liner": "信頼の連鎖の**出発点**", "examples": ["ルート証明書"]}]}]}]}</script>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/map.js?v=0970edd5"></script>
+</body>
+</html>

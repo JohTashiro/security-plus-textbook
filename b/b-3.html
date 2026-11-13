@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B-3 脆弱性の種類 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain B</span></a>
+  <a class="nav-back" href="index.html">← Domain B ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain B</h2>
+    <a href="b-1.html">B-1 脅威アクターと動機</a><a href="b-2.html">B-2 脅威ベクトルと攻撃対象領域</a><a href="b-3.html" class="active">B-3 脆弱性の種類</a><a href="b-4.html">B-4 悪意のある活動の兆候</a><a href="b-5.html">B-5 緩和策</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain B 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain B · B-3</p>
+  <h1>脆弱性の種類</h1>
+  <p>アプリ・OS・ハード・クラウドの弱点</p>
+  <div class="meta-row">
+    <span class="chip">用語 18</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 2.3</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 20問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">アプリケーション（コードと入力の弱点）</h2>
+<article class="memo-card" id="b-3-memory-injection" data-search="メモリインジェクション memory injection メモリに悪意あるコードを潜り込ませる 入力欄へのコード注入 eval() の悪用">
+  <h3>メモリインジェクション<span class="en">Memory injection</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">メモリ</span>に悪意あるコードを潜り込ませる</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>入力欄へのコード注入</li><li>eval() の悪用</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-time-of-use" data-search="タイムオブユース time-of-use (tou) 確認後〜使用時までに状態が変わる ログアウト後のセッション 競合状態">
+  <h3>タイムオブユース<span class="en">Time-of-use (TOU)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">確認後〜<span class="hl">使用時</span>までに状態が変わる</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ログアウト後のセッション</li><li>競合状態</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-time-of-check" data-search="タイムオブチェック time-of-check (toc) 権限チェック後に割り込み改変する ファイル差し替え 二重送金">
+  <h3>タイムオブチェック<span class="en">Time-of-check (TOC)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">権限チェック後</span>に割り込み改変する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ファイル差し替え</li><li>二重送金</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-malicious-update" data-search="悪意のあるアップデート malicious update 正規の更新を装い不正プログラムを入れる 偽アプリの自動更新 マルウェア入り更新">
+  <h3>悪意のあるアップデート<span class="en">Malicious update</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">正規の更新</span>を装い不正プログラムを入れる</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>偽アプリの自動更新</li><li>マルウェア入り更新</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-sql-injection" data-search="sqlインジェクション sql injection (sqli) 不正なsql文でdbを操作する ' or 1=1 -- 検索欄からの全件取得">
+  <h3>SQLインジェクション<span class="en">SQL injection (SQLi)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">不正なSQL文</span>でDBを操作する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>' OR 1=1 --</li><li>検索欄からの全件取得</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-xss" data-search="クロスサイトスクリプティング cross-site scripting (xss) 閲覧者のブラウザで悪意あるスクリプト実行 &lt;script&gt;の埋め込み 掲示板への悪性投稿">
+  <h3>クロスサイトスクリプティング<span class="en">Cross-site scripting (XSS)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">閲覧者の<span class="hl">ブラウザ</span>で悪意あるスクリプト実行</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>&lt;script&gt;の埋め込み</li><li>掲示板への悪性投稿</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">OS・ハードウェア（基盤と機器の弱点）</h2>
+<article class="memo-card" id="b-3-os-based" data-search="osベースの脆弱性 operating system (os)-based os自体に存在する脆弱性 eternalblue 未適用の緊急パッチ">
+  <h3>OSベースの脆弱性<span class="en">Operating system (OS)-based</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">OS自体</span>に存在する脆弱性</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>EternalBlue</li><li>未適用の緊急パッチ</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-firmware" data-search="ファームウェアの脆弱性 firmware ハード制御ソフトの脆弱性 broadpwn 改ざんされたfw更新">
+  <h3>ファームウェアの脆弱性<span class="en">Firmware</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">ハード制御ソフト</span>の脆弱性</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>Broadpwn</li><li>改ざんされたFW更新</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-end-of-life" data-search="エンドオブライフ end-of-life (eol) メーカーサポート終了で修正されない windows 7 の継続利用">
+  <h3>エンドオブライフ<span class="en">End-of-life (EOL)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">メーカーサポート終了</span>で修正されない</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>Windows 7 の継続利用</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-legacy" data-search="レガシーハードウェア legacy 古い機器で最新パッチを当てられない xp搭載の古いatm フロッピーディスク vhsテープ">
+  <h3>レガシーハードウェア<span class="en">Legacy</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">古い機器</span>で最新パッチを当てられない</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>XP搭載の古いATM</li><li>フロッピーディスク</li><li>VHSテープ</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">仮想化・クラウド（共有基盤の弱点）</h2>
+<article class="memo-card" id="b-3-vm-escape" data-search="vmエスケープ virtual machine (vm) escape vm内からホストへ分離を突破する ゲスト→ホスト侵入 zombieload">
+  <h3>VMエスケープ<span class="en">Virtual machine (VM) escape</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">VM内から<span class="hl">ホストへ</span>分離を突破する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ゲスト→ホスト侵入</li><li>ZombieLoad</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-resource-reuse" data-search="リソースの再利用 resource reuse 再割当リソースの残存データが漏れる 未消去メモリの再割当">
+  <h3>リソースの再利用<span class="en">Resource reuse</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">再割当リソースの<span class="hl">残存データ</span>が漏れる</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>未消去メモリの再割当</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-cloud-specific" data-search="クラウド固有の脆弱性 cloud-specific マルチテナントなどクラウド特有の弱点 テナント間データ漏えい 責任分担の曖昧さ">
+  <h3>クラウド固有の脆弱性<span class="en">Cloud-specific</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">マルチテナント</span>などクラウド特有の弱点</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>テナント間データ漏えい</li><li>責任分担の曖昧さ</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">サプライチェーン（提供元に起因する弱点）</h2>
+<article class="memo-card" id="b-3-service-provider" data-search="サービスプロバイダー起因の脆弱性 service provider 事業者側の管理不備が利用者に波及 事業者の設定ミス ハイパーバイザー欠陥 事業者の内部不正">
+  <h3>サービスプロバイダー起因の脆弱性<span class="en">Service provider</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">事業者側の管理不備</span>が利用者に波及</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>事業者の設定ミス</li><li>ハイパーバイザー欠陥</li><li>事業者の内部不正</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-hardware-provider" data-search="ハードウェアプロバイダー起因の脆弱性 hardware provider cpu等の設計・実装に起因する spectre meltdown">
+  <h3>ハードウェアプロバイダー起因の脆弱性<span class="en">Hardware provider</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">CPU等の設計・実装</span>に起因する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>Spectre</li><li>Meltdown</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-software-provider" data-search="ソフトウェアプロバイダー起因の脆弱性 software provider サードパーティ製ソフトの弱点が波及 solarwinds事件 改ざんされた正規更新">
+  <h3>ソフトウェアプロバイダー起因の脆弱性<span class="en">Software provider</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">サードパーティ製ソフト</span>の弱点が波及</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SolarWinds事件</li><li>改ざんされた正規更新</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">暗号・設定（運用上の弱点）</h2>
+<article class="memo-card" id="b-3-cryptographic" data-search="暗号化の脆弱性 cryptographic 弱い暗号や鍵管理不備による弱点 ssl 2.0 の使用 鍵の不用意な公開">
+  <h3>暗号化の脆弱性<span class="en">Cryptographic</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">弱い暗号</span>や鍵管理不備による弱点</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SSL 2.0 の使用</li><li>鍵の不用意な公開</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="b-3-misconfiguration" data-search="誤った設定による脆弱性 misconfiguration 設定ミスや初期設定のままの弱点 ストレージ誤公開 初期設定のまま">
+  <h3>誤った設定による脆弱性<span class="en">Misconfiguration</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">設定ミス</span>や初期設定のままの弱点</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ストレージ誤公開</li><li>初期設定のまま</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（20問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "b-3-memory-injection", "stem": "セキュリティアナリストが、正規プロセスの実行中メモリ領域に攻撃者のコードが書き込まれ、そのプロセスの権限で実行されている痕跡を発見した。最も当てはまる脆弱性・攻撃はどれか。", "choices": ["SQLインジェクション", "メモリインジェクション", "リソースの再利用", "VMエスケープ"], "answer": 1, "explain": "メモリ領域に悪意あるコードを潜り込ませて実行させるのはメモリインジェクション。DBやVM分離は関係しない。"}, {"term": "b-3-time-of-use", "stem": "あるプログラムはファイルの状態を確認した後、実際にそのファイルを使用するまでに数秒の待ちがある。その間に状態が変更され、使用時には確認時と異なる内容が処理されていた。この脆弱性の名称として最も適切なのはどれか。", "choices": ["悪意のあるアップデート", "誤った設定", "メモリインジェクション", "タイムオブユース（TOU）"], "answer": 3, "explain": "確認後から使用時までの間にリソースの状態が変わることで生じる競合状態はタイムオブユース（TOU）。"}, {"term": "b-3-time-of-check", "stem": "銀行システムで残高チェックが通った直後、処理が完了する前に別の送金リクエストが割り込み、1回分の残高で2回の送金が実行された。この問題の原因として最も適切なのはどれか。", "choices": ["タイムオブチェック（TOC）の競合状態", "クロスサイトスクリプティング", "暗号化の脆弱性", "エンドオブライフ"], "answer": 0, "explain": "権限や条件のチェック後、アクセス（処理）前に割り込まれて結果が覆るのはタイムオブチェック（TOC）の競合状態。"}, {"term": "b-3-time-of-check", "stem": "プログラムがファイルのアクセス権限を確認して「開いてよい」と判定した直後、攻撃者がそのファイルを別のファイルに置き換え、アクセス制御を回避した。これは何に該当するか。", "choices": ["リソースの再利用", "OSベースの脆弱性", "タイムオブチェック（TOC）", "ファームウェアの脆弱性"], "answer": 2, "explain": "権限チェックと実際のアクセスの間に攻撃者が割り込み内容を変更するのがタイムオブチェック（TOC）。"}, {"term": "b-3-malicious-update", "stem": "ユーザーがアプリストアで正規アプリに似せたアプリをインストールしたところ、後日アプリの自動アップデート機能経由でマルウェアを含む更新ファイルがダウンロードされた。この攻撃手法はどれか。", "choices": ["SQLインジェクション", "VMエスケープ", "悪意のあるアップデート", "誤った設定による脆弱性"], "answer": 2, "explain": "正規のソフトウェア更新を装って不正プログラムを導入させるのは悪意のあるアップデート（Malicious update）。"}, {"term": "b-3-os-based", "stem": "OSベンダーが、悪用されると任意のコード実行を許す脆弱性に対する緊急パッチを公開した。この種の脆弱性のリスクを低減する対策として最も適切な組み合わせはどれか。", "choices": ["最新パッチの適用と不要なサービスの無効化", "パラメータ化クエリの導入", "VMのメモリのゼロクリア", "SSL 2.0 への切り替え"], "answer": 0, "explain": "OSベースの脆弱性には最新のセキュリティパッチ適用と、不要なサービス・機能の無効化による攻撃対象の最小化が有効。"}, {"term": "b-3-sql-injection", "stem": "ショッピングサイトの商品検索欄に「' OR 1=1 --」と入力したところ、全商品と会員情報が表示された。この攻撃と最も有効な対策の組み合わせはどれか。", "choices": ["XSS／出力時のエスケープ", "TOC／処理のロック", "メモリインジェクション／メモリ保護", "SQLインジェクション／パラメータ化クエリ"], "answer": 3, "explain": "常に真となる条件を注入してDBに不正なクエリを発行させるのはSQLインジェクション。入力値を命令ではなく値として扱うパラメータ化クエリが有効。"}, {"term": "b-3-xss", "stem": "掲示板に <script> タグを含むコメントが投稿され、そのページを閲覧した他のユーザーのブラウザで攻撃者のスクリプトが実行された。この脆弱性はどれか。", "choices": ["SQLインジェクション", "クロスサイトスクリプティング（XSS）", "悪意のあるアップデート", "タイムオブユース"], "answer": 1, "explain": "Webサイトに潜り込ませたスクリプトを訪問者のブラウザ上で実行させるのはXSS。SQLiはサーバー側のDBを狙う。"}, {"term": "b-3-xss", "stem": "開発チームが「SQLインジェクションとXSSの違い」を整理している。XSSの説明として正しいものはどれか。", "choices": ["攻撃対象は閲覧ユーザーのブラウザで、主にJavaScriptが実行される", "攻撃対象はDBで、不正なSQL文が実行される", "VM内部からホストOSへアクセスする", "確認と使用の時間差を突く"], "answer": 0, "explain": "XSSは悪意あるスクリプト（主にJavaScript）を閲覧者のブラウザで実行させる攻撃。DBへの不正SQLはSQLインジェクション。"}, {"term": "b-3-firmware", "stem": "多数のスマートフォンに搭載されたWi-Fiチップセットの制御ソフトに欠陥があり、細工したWi-Fiパケットを送るだけでリモートから任意コードを実行できることが判明した。どの脆弱性に分類されるか。", "choices": ["クラウド固有の脆弱性", "誤った設定による脆弱性", "ファームウェアの脆弱性", "リソースの再利用"], "answer": 2, "explain": "ハードウェアを制御するソフトウェア（ファームウェア）の欠陥であり、Broadpwn のようなファームウェアの脆弱性に当たる。"}, {"term": "b-3-end-of-life", "stem": "ある企業はメーカーのサポートが終了したOS・機器を使い続けており、新たに見つかった脆弱性に対するセキュリティ更新が一切提供されていない。このリスクを最も適切に表すのはどれか。", "choices": ["タイムオブチェック", "エンドオブライフ（EOL）", "サービスプロバイダー起因の脆弱性", "メモリインジェクション"], "answer": 1, "explain": "製造メーカーのサポート終了によりパッチやファームウェア更新が提供されなくなるのはエンドオブライフ。計画的な交換・廃棄が重要。"}, {"term": "b-3-legacy", "stem": "銀行の古いATMはWindows XPで動作しており、メモリやストレージ不足のため新しいOSやセキュリティソフトを導入できない。この状況を最も適切に表す脆弱性はどれか。", "choices": ["悪意のあるアップデート", "暗号化の脆弱性", "VMエスケープ", "レガシーハードウェア"], "answer": 3, "explain": "古い機器のため最新パッチや新しいソフトを適用できないのはレガシーハードウェアの脆弱性。"}, {"term": "b-3-vm-escape", "stem": "クラウド事業者の調査で、攻撃者が自分のゲストVMから仮想化の分離を突破し、ホストOSや同居する他の顧客のVMにアクセスしていたことが判明した。この攻撃はどれか。", "choices": ["リソースの再利用", "タイムオブユース", "誤った設定による脆弱性", "VMエスケープ"], "answer": 3, "explain": "VM内部から分離を突破してホストシステムへ不正アクセスするのがVMエスケープ。"}, {"term": "b-3-resource-reuse", "stem": "機密データを扱っていたVMがシャットダウンされ、そのメモリが別のVMに割り当てられた。メモリが消去されていなかったため、新しいVMから前のデータが読み取れた。この脆弱性はどれか。", "choices": ["リソースの再利用", "VMエスケープ", "メモリインジェクション", "エンドオブライフ"], "answer": 0, "explain": "再割り当てされたリソースに前の利用者のデータが残存して漏えいするのはリソースの再利用。分離の突破（VMエスケープ）ではない。"}, {"term": "b-3-cloud-specific", "stem": "複数の企業が同じクラウド基盤を共有する環境で、ある顧客のデータが別のテナントから参照できる状態になっていた。このリスクの軽減に最も関係する取り組みはどれか。", "choices": ["SSL 2.0 の無効化", "ATMの更新計画", "責任共有モデルに基づく管理責任とデータ所在の明確化", "入力フォームのエスケープ処理"], "answer": 2, "explain": "マルチテナントに起因するテナント間データ漏えいはクラウド固有の脆弱性。責任共有モデルでデータの所在と管理責任を明確にすることが重要。"}, {"term": "b-3-service-provider", "stem": "自社のクラウド上のアクセス制御は適切に設定していたが、クラウド事業者側の管理不備により認証が回避され、自社データが漏えいした。この脆弱性の分類として最も適切なのはどれか。", "choices": ["ハードウェアプロバイダー起因", "サービスプロバイダー起因", "ソフトウェアプロバイダー起因", "レガシーハードウェア"], "answer": 1, "explain": "利用者の設定ではなく、事業者が管理するシステム・ネットワークの不備が原因なのでサービスプロバイダーに起因する脆弱性。"}, {"term": "b-3-hardware-provider", "stem": "主要CPUベンダー各社の製品の設計上の欠陥により、本来アクセスできないメモリ領域のデータが読み取れることが判明し、クラウドでは他顧客のデータ漏えいが懸念された。どの分類に当たるか。", "choices": ["ハードウェアプロバイダー起因の脆弱性", "誤った設定による脆弱性", "悪意のあるアップデート", "OSベースの脆弱性"], "answer": 0, "explain": "Spectre／Meltdown のように、CPU等のハードウェアの設計・実装そのものが原因なのはハードウェアプロバイダー起因の脆弱性。"}, {"term": "b-3-software-provider", "stem": "IT監視ソフトのベンダーの正規アップデートに攻撃者がバックドアを混入させ、そのソフトを導入していた多数の政府機関・企業が侵害された。この事例が示す脆弱性として最も適切なのはどれか。", "choices": ["クラウド固有の脆弱性", "リソースの再利用", "エンドオブライフ", "ソフトウェアプロバイダー起因の脆弱性"], "answer": 3, "explain": "SolarWinds Orion 事件のように、サードパーティ製ソフトウェアの提供元に起因する問題が自組織に波及するのはソフトウェアプロバイダー起因の脆弱性。"}, {"term": "b-3-cryptographic", "stem": "監査で、社内Webサーバーが依然としてSSL 2.0での通信を許可しており、中間者攻撃による盗聴・改ざんのリスクがあると指摘された。この指摘が示す脆弱性はどれか。", "choices": ["タイムオブユース", "暗号化の脆弱性", "ファームウェアの脆弱性", "VMエスケープ"], "answer": 1, "explain": "脆弱な暗号プロトコル・アルゴリズムの使用は暗号化の脆弱性。TLS（1.2／1.3）への移行が必要。"}, {"term": "b-3-misconfiguration", "stem": "社員がクラウドストレージ上の機密フォルダを誤って「公開」に設定し、インターネット上の誰もがアクセスできる状態になっていた。最も当てはまる脆弱性はどれか。", "choices": ["サービスプロバイダー起因の脆弱性", "SQLインジェクション", "誤った設定による脆弱性", "ハードウェアプロバイダー起因の脆弱性"], "answer": 2, "explain": "利用者側のアクセス権限の設定ミスによる情報公開は誤った設定（Misconfiguration）による脆弱性。初期設定のままの機器も狙われやすい。"}]</script>
+</section>
+
+<nav class="pager"><a href="b-2.html"><span>前の章</span>B-2 脅威ベクトルと攻撃対象領域</a><a class="next" href="b-4.html"><span>次の章</span>B-4 悪意のある活動の兆候</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

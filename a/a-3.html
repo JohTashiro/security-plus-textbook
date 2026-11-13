@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A-3 変更管理とセキュリティへの影響 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain A</span></a>
+  <a class="nav-back" href="index.html">← Domain A ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain A</h2>
+    <a href="a-1.html">A-1 セキュリティコントロールの比較</a><a href="a-2.html">A-2 セキュリティコンセプトの基礎</a><a href="a-3.html" class="active">A-3 変更管理とセキュリティへの影響</a><a href="a-4.html">A-4 適切な暗号化の選択</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain A 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain A · A-3</p>
+  <h1>変更管理とセキュリティへの影響</h1>
+  <p>変える前に決め、失敗したら戻す</p>
+  <div class="meta-row">
+    <span class="chip">用語 13</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 1.3</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 13問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">変更プロセス</h2>
+<article class="memo-card" id="a-3-approval" data-search="承認プロセス approval process 権限者が変更の可否を審査する 新ソフト導入の承認 持ち出し承認">
+  <h3>承認プロセス<span class="en">Approval Process</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">権限者が変更の可否を<span class="hl">審査</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>新ソフト導入の承認</li><li>持ち出し承認</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-stakeholder" data-search="ステークホルダー stakeholder 変更に関わる利害関係者 経営者 開発者 利用部門">
+  <h3>ステークホルダー<span class="en">Stakeholder</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">変更に関わる<span class="hl">利害関係者</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>経営者</li><li>開発者</li><li>利用部門</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-impact" data-search="インパクト分析 impact analysis 変更や事故の影響を事前評価 パッチ前の業務影響評価">
+  <h3>インパクト分析<span class="en">Impact Analysis</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">変更や事故の影響を<span class="hl">事前評価</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>パッチ前の業務影響評価</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-test-results" data-search="テスト結果 test results 対策の有効性を検証した成果 脆弱性スキャン 侵入テスト">
+  <h3>テスト結果<span class="en">Test Results</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">対策の有効性を<span class="hl">検証した成果</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>脆弱性スキャン</li><li>侵入テスト</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-backout" data-search="バックアウトプラン backout plan 失敗したら元に戻す計画 バックアップ 切り戻し手順">
+  <h3>バックアウトプラン<span class="en">Backout Plan</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">失敗したら<span class="hl">元に戻す計画</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>バックアップ</li><li>切り戻し手順</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-maint-window" data-search="メンテナンスウィンドウ maintenance window 影響を抑えて作業する時間枠 深夜の定期メンテ">
+  <h3>メンテナンスウィンドウ<span class="en">Maintenance Window</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">影響を抑えて作業する<span class="hl">時間枠</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>深夜の定期メンテ</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-sop" data-search="標準作業手順書 sop 作業を同じ手順で行う文書 パスワード手順 インシデント手順">
+  <h3>標準作業手順書<span class="en">SOP</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">作業を<span class="hl">同じ手順</span>で行う文書</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>パスワード手順</li><li>インシデント手順</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">変更に伴う影響</h2>
+<article class="memo-card" id="a-3-allow-deny" data-search="許可／拒否リスト allow / deny list 通す相手・拒む相手の一覧 fwのipリスト メールフィルタ">
+  <h3>許可／拒否リスト<span class="en">Allow / Deny List</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">通す相手・拒む相手</span>の一覧</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>FWのIPリスト</li><li>メールフィルタ</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-restrict" data-search="機能の制限 restricted activities 不要・危険な機能を止める カメラ制限 外部共有制限">
+  <h3>機能の制限<span class="en">Restricted Activities</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">不要・危険な機能を<span class="hl">止める</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>カメラ制限</li><li>外部共有制限</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-downtime" data-search="ダウンタイム downtime システムが使えない時間 パッチ適用の計画停止">
+  <h3>ダウンタイム<span class="en">Downtime</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">システムが<span class="hl">使えない時間</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>パッチ適用の計画停止</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-restart" data-search="アプリの再起動 application restart 止めて起動し直し変更を反映 設定変更後の再起動">
+  <h3>アプリの再起動<span class="en">Application Restart</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">止めて起動し直し<span class="hl">変更を反映</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>設定変更後の再起動</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-legacy" data-search="レガシーアプリ legacy application 更新できない古いアプリ cobol基幹 旧os上の制御系">
+  <h3>レガシーアプリ<span class="en">Legacy Application</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">更新できない<span class="hl">古いアプリ</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>COBOL基幹</li><li>旧OS上の制御系</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="a-3-dependencies" data-search="依存関係 dependencies 他コンポーネントとのつながり 外部ライブラリ クラウド部品">
+  <h3>依存関係<span class="en">Dependencies</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">他コンポーネントとの<span class="hl">つながり</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>外部ライブラリ</li><li>クラウド部品</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（13問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "a-3-approval", "stem": "新ソフトウェア導入前にセキュリティ部門と経営層が可否を審査する。これは変更管理の何にあたるか。", "choices": ["承認プロセス", "トークン化", "暗黙の信頼ゾーン", "鍵の長さ"], "answer": 0, "explain": "権限者が変更の妥当性を審査するのが承認プロセス。"}, {"term": "a-3-stakeholder", "stem": "システム変更の影響を受ける経営者・開発者・利用部門をまとめて何と呼ぶか。", "choices": ["ステークホルダー", "ルートオブトラスト", "PEP", "ソルト"], "answer": 0, "explain": "利害関係者＝ステークホルダー。"}, {"term": "a-3-impact", "stem": "パッチ適用前に、サービス停止やデータ漏えいのリスクを評価して優先度を決めた。これは何か。", "choices": ["インパクト分析", "ステガノグラフィ", "自己署名証明書", "ボラード"], "answer": 0, "explain": "変更や事故の影響を事前に見積もるのがインパクト分析。"}, {"term": "a-3-test-results", "stem": "脆弱性スキャンと侵入テストのレポートを基に修正箇所を決めた。根拠となるものは何か。", "choices": ["テスト結果", "キーエスクロー", "ライティング", "公開鍵"], "answer": 0, "explain": "対策の有効性を検証した成果＝テスト結果。"}, {"term": "a-3-backout", "stem": "アップグレード失敗時に、バックアップから迅速に元へ戻す手順を事前に用意した。これは何か。", "choices": ["バックアウトプラン", "ギャップ分析", "CRL", "フェンシング"], "answer": 0, "explain": "失敗時に切り戻す計画＝バックアウトプラン。"}, {"term": "a-3-maint-window", "stem": "業務影響を抑えるため、深夜帯にパッチ作業の時間枠を確保した。これは何か。", "choices": ["メンテナンスウィンドウ", "デジタル署名", "アダプティブID", "データマスキング"], "answer": 0, "explain": "計画的に確保する作業時間枠＝メンテナンスウィンドウ。"}, {"term": "a-3-sop", "stem": "インシデント時の連絡・証拠保全の手順を文書化し周知した。これは何か。", "choices": ["標準作業手順書（SOP）", "ブロックチェーン", "非対称暗号化", "暗黙の信頼ゾーン"], "answer": 0, "explain": "一貫した実行手順を文書化したものがSOP。"}, {"term": "a-3-allow-deny", "stem": "ファイアウォールで信頼IPのみ通信を許し、悪意ある宛先を拒否する設定を更新した。関係する概念は何か。", "choices": ["許可リスト／拒否リスト", "セキュアエンクレーブ", "CIAの可用性のみ", "ボラード"], "answer": 0, "explain": "通す相手・拒む相手の一覧＝Allow/Deny List。"}, {"term": "a-3-restrict", "stem": "業務スマホのカメラと外部共有を無効化し、攻撃対象領域を減らした。これは何か。", "choices": ["機能の制限", "キーストレッチ", "公開台帳", "抑止的掲示のみ"], "answer": 0, "explain": "不要・危険な機能を止める＝機能の制限。"}, {"term": "a-3-downtime", "stem": "データセンター点検のため、計画的にシステムを停止する時間を利用者へ告知した。この使えない時間を何と呼ぶか。", "choices": ["ダウンタイム", "ソルト", "PEP", "トークン"], "answer": 0, "explain": "システムが利用できない時間＝ダウンタイム。"}, {"term": "a-3-restart", "stem": "セキュリティ設定変更後、反映のためにアプリを停止して起動し直した。必要な作業は何か。", "choices": ["アプリケーションの再起動", "ギャップ分析", "自己署名の発行のみ", "フェンシング"], "answer": 0, "explain": "変更を有効にする再起動＝Application Restart。"}, {"term": "a-3-legacy", "stem": "サポート終了OS上の古い制御アプリを、更新できず使い続けている。主に何が問題か。", "choices": ["レガシーアプリケーション", "キー交換の高速化", "過剰な冗長化", "ルート証明書の多さ"], "answer": 0, "explain": "更新困難な古いアプリ＝レガシー。隔離など代替策が必要になりやすい。"}, {"term": "a-3-dependencies", "stem": "Webアプリが使う古いOSSライブラリに脆弱性があり、全体のリスクになった。管理すべきものは何か。", "choices": ["依存関係（Dependencies）", "ボラード", "指示的方針のみ", "ライティング"], "answer": 0, "explain": "他コンポーネントとのつながり＝依存関係。変更時も要確認。"}]</script>
+</section>
+
+<nav class="pager"><a href="a-2.html"><span>前の章</span>A-2 セキュリティコンセプトの基礎</a><a class="next" href="a-4.html"><span>次の章</span>A-4 適切な暗号化の選択</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>

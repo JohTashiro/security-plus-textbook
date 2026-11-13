@@ -1,0 +1,22 @@
+# 作業用・バックアップ
+_work/
+_backup*/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Claude Code local settings
+.claude/
+
+# OS / エディタ
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*~

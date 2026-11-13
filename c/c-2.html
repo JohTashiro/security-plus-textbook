@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C-2 インフラを守るセキュリティ原則 · Security+ Textbook</title>
+  <script>try{var s=JSON.parse(localStorage.getItem('spt-settings')||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=0970edd5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+    
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">Security+ Textbook<span>Domain C</span></a>
+  <a class="nav-back" href="index.html">← Domain C ハブ</a>
+  <div class="search-wrap">
+    <input id="term-search" type="search" placeholder="用語を検索..." autocomplete="off">
+  </div>
+  <nav class="nav-section">
+    <h2>Domain C</h2>
+    <a href="c-1.html">C-1 セキュリティアーキテクチャの全体像</a><a href="c-2.html" class="active">C-2 インフラを守るセキュリティ原則</a><a href="c-3.html">C-3 データ保護の戦略と概念</a><a href="c-4.html">C-4 回復性と耐性</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href="#quiz-section">この章の小テスト</a>
+    <a href="map.html">Domain C 知識マップ</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>覚えるモード<small>答えを隠してタップで表示</small></span>
+      <input type="checkbox" role="switch" data-setting="memorize">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+
+    <main class="main">
+      
+<header class="hero">
+  <p class="eyebrow">Domain C · C-2</p>
+  <h1>インフラを守るセキュリティ原則</h1>
+  <p>ゾーン・装置・セキュア通信</p>
+  <div class="meta-row">
+    <span class="chip">用語 19</span>
+    <span class="chip">一言定義 + 代表例</span>
+    <span class="chip">公式 3.2</span>
+  </div>
+  <div class="action-row">
+    <a class="btn btn-primary" href="#quiz-section">小テスト 19問</a>
+    <a class="btn btn-ghost" href="map.html">知識マップ</a>
+    <button type="button" class="btn btn-ghost memorize-only" id="reveal-all">すべて表示</button>
+  </div>
+</header>
+<div id="empty-state" class="empty-state">該当する用語がありません</div>
+<section class="group"><h2 class="group-title">配置とゾーン</h2>
+<article class="memo-card" id="c-2-device-placement" data-search="デバイスの場所 device placement 重要機器を物理的に安全な場所へ置く 中間階のサーバルーム 入退室管理">
+  <h3>デバイスの場所<span class="en">Device placement</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">重要機器を<span class="hl">物理的に安全な場所</span>へ置く</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>中間階のサーバルーム</li><li>入退室管理</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-security-zones" data-search="セキュリティゾーン security zones 信頼度に応じてネットワークを分割する dmz 内部／機密ネットワーク">
+  <h3>セキュリティゾーン<span class="en">Security zones</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">信頼度に応じてネットワークを<span class="hl">分割</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>DMZ</li><li>内部／機密ネットワーク</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-attack-surface" data-search="アタックサーフェス attack surface 攻撃の入り口・接点の総体 ログインフォーム 不要ポートの開放">
+  <h3>アタックサーフェス<span class="en">Attack surface</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">攻撃の<span class="hl">入り口・接点の総体</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ログインフォーム</li><li>不要ポートの開放</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-connectivity" data-search="接続性 connectivity 接続を維持する可用性の考え方 サーバー冗長化 代替ネットワーク経路">
+  <h3>接続性<span class="en">Connectivity</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">接続を維持する<span class="hl">可用性</span>の考え方</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>サーバー冗長化</li><li>代替ネットワーク経路</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">フェイルセーフ</h2>
+<article class="memo-card" id="c-2-fail-open" data-search="フェイルオープン fail open 故障時もアクセス継続（可用性優先） 障害時にドア開放 業務継続を優先">
+  <h3>フェイルオープン<span class="en">Fail open</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">故障時も<span class="hl">アクセス継続</span>（可用性優先）</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>障害時にドア開放</li><li>業務継続を優先</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-fail-closed" data-search="フェイルクローズ fail closed 故障時は閉じる／止める（安全優先） ゲート自動ロック 機密システムの停止">
+  <h3>フェイルクローズ<span class="en">Fail closed</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">故障時は<span class="hl">閉じる／止める</span>（安全優先）</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ゲート自動ロック</li><li>機密システムの停止</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">中間装置</h2>
+<article class="memo-card" id="c-2-jump-server" data-search="ジャンプサーバー jump server 管理アクセスの中継点 本番サーバーへの踏み台 操作ログの一元化">
+  <h3>ジャンプサーバー<span class="en">Jump server</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">管理アクセスの<span class="hl">中継点</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>本番サーバーへの踏み台</li><li>操作ログの一元化</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-proxy" data-search="プロキシサーバー proxy server クライアントの代理として中継する webキャッシュ urlフィルタ">
+  <h3>プロキシサーバー<span class="en">Proxy server</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">クライアントの<span class="hl">代理</span>として中継する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>Webキャッシュ</li><li>URLフィルタ</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-ips-ids" data-search="ipsとids ips/ids 不審通信を検知／防止する シグネチャ照合 異常トラフィック検知">
+  <h3>IPSとIDS<span class="en">IPS/IDS</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">不審通信を<span class="hl">検知／防止</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>シグネチャ照合</li><li>異常トラフィック検知</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-load-balancer" data-search="ロードバランサー load balancer 複数サーバーへ負荷を分散する ラウンドロビン webサーバー振り分け">
+  <h3>ロードバランサー<span class="en">Load balancer</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">複数サーバーへ<span class="hl">負荷を分散</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>ラウンドロビン</li><li>Webサーバー振り分け</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-sensors" data-search="センサー sensors 異常や障害の兆候を監視する サーバルーム温度 ネットワーク監視センサー">
+  <h3>センサー<span class="en">Sensors</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">異常や障害の<span class="hl">兆候を監視</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>サーバルーム温度</li><li>ネットワーク監視センサー</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">境界・アプリ防御</h2>
+<article class="memo-card" id="c-2-eap" data-search="eap extensible authentication protocol (eap) 拡張性の高い認証フレームワーク eap-tls 無線lanの相互認証">
+  <h3>EAP<span class="en">Extensible Authentication Protocol (EAP)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">拡張性の高い<span class="hl">認証フレームワーク</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>EAP-TLS</li><li>無線LANの相互認証</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-waf" data-search="waf web application firewall (waf) webアプリ向けの攻撃を防ぐfw sqlインジェクション遮断 xss対策">
+  <h3>WAF<span class="en">Web application firewall (WAF)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner"><span class="hl">Webアプリ</span>向けの攻撃を防ぐFW</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SQLインジェクション遮断</li><li>XSS対策</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-ngfw" data-search="次世代ファイアウォール next-generation firewall (ngfw) アプリ認識など多機能を統合したfw sns利用制限 urlフィルタ＋ips">
+  <h3>次世代ファイアウォール<span class="en">Next-generation firewall (NGFW)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">アプリ認識など<span class="hl">多機能を統合</span>したFW</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>SNS利用制限</li><li>URLフィルタ＋IPS</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-firewall-l4-l7" data-search="ファイアウォール（layer 4／7） firewall (layer 4/7) osiの層ごとに制御粒度が違うfw l4: ip・ポート制御 l7: http内容制御">
+  <h3>ファイアウォール（Layer 4／7）<span class="en">Firewall (Layer 4/7)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">OSIの<span class="hl">層ごとに制御粒度</span>が違うFW</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>L4: IP・ポート制御</li><li>L7: HTTP内容制御</li></ul>
+    </div>
+  </div>
+</article>
+</section><section class="group"><h2 class="group-title">セキュア接続</h2>
+<article class="memo-card" id="c-2-vpn" data-search="vpn virtual private network (vpn) 公衆網上に暗号化トンネルを張る 在宅からの社内接続 出張先の安全アクセス">
+  <h3>VPN<span class="en">Virtual private network (VPN)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">公衆網上に<span class="hl">暗号化トンネル</span>を張る</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>在宅からの社内接続</li><li>出張先の安全アクセス</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-tls" data-search="tls transport layer security (tls) 通信の暗号化・完全性・認証 https カード情報の保護">
+  <h3>TLS<span class="en">Transport Layer Security (TLS)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">通信の<span class="hl">暗号化・完全性・認証</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>HTTPS</li><li>カード情報の保護</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-sd-wan" data-search="sd-wan software-defined wide area network (sd-wan) wanをソフトで最適制御する 店舗ごとの最適回線 アプリ別経路選択">
+  <h3>SD-WAN<span class="en">Software-defined wide area network (SD-WAN)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">WANを<span class="hl">ソフトで最適制御</span>する</p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>店舗ごとの最適回線</li><li>アプリ別経路選択</li></ul>
+    </div>
+  </div>
+</article>
+
+<article class="memo-card" id="c-2-sase" data-search="sase secure access service edge (sase) 接続とセキュリティをクラウド統合 fw＋vpn＋ztnaの統合 エッジでの一元防御">
+  <h3>SASE<span class="en">Secure access service edge (SASE)</span></h3>
+  <button type="button" class="reveal-btn" aria-expanded="false">答えを見る</button>
+  <div class="answer">
+    <p class="one-liner">接続とセキュリティを<span class="hl">クラウド統合</span></p>
+    <div class="examples">
+      <div class="field-label">代表例</div>
+      <ul class="example-list"><li>FW＋VPN＋ZTNAの統合</li><li>エッジでの一元防御</li></ul>
+    </div>
+  </div>
+</article>
+</section>
+
+<section class="quiz-section" id="quiz-section">
+  <header class="quiz-header">
+    <p class="eyebrow">小テスト · SY0-701風 4択</p>
+    <h2>この章の確認問題</h2>
+    <p>本番同様のシナリオ型・用語分類問題です。各用語を最低1回カバーしています（19問）。</p>
+  </header>
+  <div id="quiz" class="quiz"></div>
+  <script type="application/json" id="quiz-data">[{"term": "c-2-device-placement", "stem": "重要サーバーを、窓のない中間階のサーバルームに置き、ICカードで入退室を厳格に管理している。主にどの原則か。", "choices": ["デバイスの場所（Device placement）", "アタックサーフェス", "フェイルオープン", "SD-WAN"], "answer": 0, "explain": "物理的にどこへ機器を置くか・入退室管理はデバイスの場所（Device placement）の話。"}, {"term": "c-2-security-zones", "stem": "外部公開用のWebサーバーをインターネットと社内網の中間領域に置き、社内業務システムや機密DBとは分離した。この中間領域を何と呼ぶか。", "choices": ["フェイルクローズ", "DMZ（セキュリティゾーン）", "ジャンプサーバー", "ロードバランサー"], "answer": 1, "explain": "信頼度に応じた分割のうち、外部公開サーバーを置く中間領域がDMZ。セキュリティゾーンの代表例。"}, {"term": "c-2-attack-surface", "stem": "公開Webアプリのログインフォーム、検索ボックス、URLパラメータなど、攻撃者が狙える入力点が多数ある状態を何と捉えるか。", "choices": ["接続性", "フェイルオープン", "アタックサーフェス", "SASE"], "answer": 2, "explain": "攻撃の入り口・接点の総体がアタックサーフェス。多いほど悪用されやすい。"}, {"term": "c-2-connectivity", "stem": "Webサーバーを複数台用意し、障害時にも別サーバーや代替経路でサービスを継続できるようにした。講義でいう接続性に最も近い目的はどれか。", "choices": ["可用性の維持", "フェイルクローズの徹底", "アタックサーフェスの拡大", "証明書による相互認証"], "answer": 0, "explain": "接続性は冗長化などで接続・サービスを維持する話で、可用性に近い。"}, {"term": "c-2-fail-open", "stem": "入退館管理システムが停止したとき、ドアを自動開放して社員証なしでも入れるようにした。この設計はどれか。", "choices": ["フェイルクローズ", "フェイルオープン", "ジャンプサーバー", "WAF"], "answer": 1, "explain": "故障時もアクセスを継続するのはフェイルオープン。可用性優先でセキュリティリスクは上がる。"}, {"term": "c-2-fail-closed", "stem": "セキュリティゲートの制御障害時にゲートを自動で閉じてロックし、未認証者の侵入を防いだ。この設計はどれか。", "choices": ["フェイルオープン", "ロードバランサー", "フェイルクローズ", "プロキシサーバー"], "answer": 2, "explain": "故障時に閉じる／止めるのはフェイルクローズ。セキュリティ優先で可用性を犠牲にする。"}, {"term": "c-2-jump-server", "stem": "管理者が本番サーバーへ直接ログインせず、いったん中継用サーバーに入ってから目的サーバーへ接続し、操作ログもそこに集約している。この中継サーバーは何か。", "choices": ["プロキシサーバー", "ジャンプサーバー", "ロードバランサー", "WAF"], "answer": 1, "explain": "管理アクセスの中継点として使うのがジャンプサーバー。一元管理とログ追跡が利点。"}, {"term": "c-2-proxy", "stem": "社員のWebアクセスをいったん中継サーバー経由にし、キャッシュやACLによる許可／拒否、怪しいサイトの遮断を行っている。この中継は何か。", "choices": ["ジャンプサーバー", "センサー", "プロキシサーバー", "SD-WAN"], "answer": 2, "explain": "クライアントの代理としてリクエストを送るのがプロキシサーバー。"}, {"term": "c-2-ips-ids", "stem": "社内トラフィックを常時監視し、既知攻撃のシグネチャや異常な通信量を検出して管理者に通知する仕組みの総称として適切なのはどれか。", "choices": ["IPS/IDS", "ロードバランサー", "フェイルオープン", "SD-WAN"], "answer": 0, "explain": "侵入の検知（IDS）や防止（IPS）を行うのがIPS/IDS。"}, {"term": "c-2-load-balancer", "stem": "ユーザーリクエストを受け取り、アルゴリズムに従って複数のWebサーバーへ振り分け、1台への負荷集中を防いている装置は何か。", "choices": ["ジャンプサーバー", "ロードバランサー", "WAF", "センサー"], "answer": 1, "explain": "複数サーバーへの負荷分散を行うのがロードバランサー。"}, {"term": "c-2-sensors", "stem": "サーバルームに温度監視装置を置き、空調故障による異常昇温を早期に検知できるようにした。講義でいうセンサーの役割として最も近いのはどれか。", "choices": ["暗号化トンネルの確立", "障害・インシデント兆候の監視", "SQLインジェクションの遮断", "WAN経路のソフト定義"], "answer": 1, "explain": "センサーは運用状況を監視し、セキュリティや障害の兆候を発見するために配置する。"}, {"term": "c-2-eap", "stem": "企業無線LANで、クライアントとアクセスポイントがそれぞれ証明書を使って身元を証明し、相互認証する枠組みとして講義で挙げられたものはどれか。", "choices": ["EAP（例: EAP-TLS）", "フェイルクローズ", "アタックサーフェス", "ロードバランサー"], "answer": 0, "explain": "EAPは拡張性の高い認証フレームワーク。EAP-TLSは証明書による相互認証の例。"}, {"term": "c-2-waf", "stem": "ECサイトへのSQLインジェクションやXSSを、Webアプリの入力を監視して検知・ブロックする装置は何か。", "choices": ["ロードバランサー", "ジャンプサーバー", "WAF", "SD-WAN"], "answer": 2, "explain": "Webアプリケーションに特化して入力攻撃を防ぐのがWAF。"}, {"term": "c-2-ngfw", "stem": "アプリを識別してファイル共有ソフトを拒否し、SNSは業務時間外のみ許可するなど、複数の脅威対策機能を組み合わせたファイアウォールは何か。", "choices": ["次世代ファイアウォール（NGFW）", "フェイルオープン", "センサー", "アタックサーフェス"], "answer": 0, "explain": "アプリ認識・IPS・URLフィルタ等を統合したのがNGFW。"}, {"term": "c-2-firewall-l4-l7", "stem": "送信元／宛先IPとポート番号で制御するファイアウォールと、HTTP/HTTPSなどアプリプロトコルの内容に基づき制御するファイアウォールの違いを表す区分はどれか。", "choices": ["フェイルオープン／クローズ", "Layer 4／Layer 7", "Active／Passiveのみ", "ホット／コールドサイト"], "answer": 1, "explain": "L4はトランスポート層（IP・ポート等）、L7はアプリケーション層での制御。"}, {"term": "c-2-vpn", "stem": "自宅からインターネット経由で社内へ接続する際、PCと社内VPNサーバーの間に暗号化トンネルを張って通信内容を保護している。これは何か。", "choices": ["WAF", "センサー", "VPN", "アタックサーフェス"], "answer": 2, "explain": "公衆網上に仮想的な私設網（暗号化トンネル）を作るのがVPN。"}, {"term": "c-2-tls", "stem": "オンラインショッピングでカード情報を入力するとき、ブラウザとWebサーバー間の通信を暗号化し、盗聴・改ざんを防ぐプロトコルはどれか。", "choices": ["TLS（HTTPSの土台）", "フェイルクローズ", "ジャンプサーバー", "ロードバランサー"], "answer": 0, "explain": "TLSは機密性・完全性・認証を提供する通信保護プロトコル。HTTPSで利用される。"}, {"term": "c-2-sd-wan", "stem": "全国多店舗の小売が、ソフトウェア制御により店舗ごと・アプリごとに最適な回線を選んでWANコストを削減している。該当するものはどれか。", "choices": ["WAF", "SD-WAN", "フェイルオープン", "IDSのみ"], "answer": 1, "explain": "ソフトウェアで定義・制御するWANがSD-WAN。最適経路選択と効率化が要点。"}, {"term": "c-2-sase", "stem": "ファイアウォール、VPN、ゼロトラストアクセス、CASBなどをネットワーク接続と統合し、クラウドサービスとして提供するアーキテクチャ概念はどれか。", "choices": ["アタックサーフェス", "デバイスの場所", "SASE", "フェイルクローズ"], "answer": 2, "explain": "接続とセキュリティをクラウドで統合し一元管理するのがSASE（Secure Access Service Edge）。"}]</script>
+</section>
+
+<nav class="pager"><a href="c-1.html"><span>前の章</span>C-1 セキュリティアーキテクチャの全体像</a><a class="next" href="c-3.html"><span>次の章</span>C-3 データ保護の戦略と概念</a></nav>
+
+    </main>
+  </div>
+  <script src="../js/app.js?v=0970edd5"></script>
+  <script src="../js/quiz.js?v=0970edd5"></script>
+</body>
+</html>
