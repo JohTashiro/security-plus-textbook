@@ -997,6 +997,111 @@ html.memorize .term-panel:not(.revealed) .reveal-btn {
   line-height: 1.55;
 }
 
+/* Read-aloud (quiz) */
+.quiz-card.has-tts,
+.quiz-explain.has-tts {
+  position: relative;
+}
+
+.quiz-card.has-tts .quiz-stem {
+  padding-right: 2.4rem;
+}
+
+.quiz-explain.has-tts {
+  padding-right: 2.6rem;
+}
+
+.tts-btn {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--accent);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.quiz-explain .tts-btn {
+  top: 0.4rem;
+  right: 0.4rem;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.tts-btn svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.tts-btn:hover {
+  border-color: var(--accent-soft);
+  background: var(--accent-dimmer);
+}
+
+.tts-btn.speaking {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.tts-rate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.tts-rate-icon {
+  display: inline-flex;
+  margin-right: 0.15rem;
+  color: var(--text-muted);
+}
+
+.tts-rate-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tts-rate button {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tts-rate button.active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.tts-off .tts-btn,
+.tts-off .tts-rate {
+  display: none;
+}
+
+.tts-off .quiz-card.has-tts .quiz-stem,
+.tts-off .quiz-explain.has-tts {
+  padding-right: 0.75rem;
+}
+
+.tts-off .quiz-card.has-tts .quiz-stem {
+  padding-right: 0;
+}
+
 .chapter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
