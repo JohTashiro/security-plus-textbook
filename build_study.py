@@ -55,13 +55,16 @@ def esc(text: str) -> str:
 
 
 def rich(text: str) -> str:
-    """Escape HTML; **bold** becomes highlight span."""
-    parts = re.split(r"(\*\*.+?\*\*)", text)
+    """Escape HTML; **bold** becomes highlight span, `code` becomes <code>."""
+    parts = re.split(r"(\*\*.+?\*\*|`[^`]+`)", text)
     out = []
     for part in parts:
         m = re.fullmatch(r"\*\*(.+?)\*\*", part)
+        c = re.fullmatch(r"`([^`]+)`", part)
         if m:
             out.append(f'<span class="hl">{esc(m.group(1))}</span>')
+        elif c:
+            out.append(f"<code>{esc(c.group(1))}</code>")
         else:
             out.append(esc(part))
     return "".join(out)
@@ -151,6 +154,16 @@ UI = {
     "retry": ("復習して再挑戦しよう", "Review and try again", "Repasa e inténtalo de nuevo"),
     "quiz_score": ("正解", "Score", "Aciertos"),
     "prep": ("準備中", "Coming soon", "Próximamente"),
+    "tts_speed": ("読み上げ速度", "Speech speed", "Velocidad de lectura"),
+    "detail_summary": ("詳しく（仕組みと対策）", "Details: how it works & defenses", "Detalles: cómo funciona y defensas"),
+    "d_how": ("仕組み", "How it works", "Cómo funciona"),
+    "d_case": ("実例", "Real-world case", "Caso real"),
+    "d_signs": ("兆候", "Warning signs", "Señales de alerta"),
+    "d_prevent": ("対策：予防", "Defense: prevent", "Defensa: prevenir"),
+    "d_detect": ("対策：検知", "Defense: detect", "Defensa: detectar"),
+    "d_respond": ("対策：対応", "Defense: respond", "Defensa: responder"),
+    "d_exam": ("試験のポイント", "Exam tip", "Clave para el examen"),
+    "d_related": ("関連用語", "Related terms", "Términos relacionados"),
 }
 
 
@@ -198,6 +211,14 @@ def settings_nav(prefix: str) -> str:
       {lang_btn("ja", "日本語")}
       {lang_btn("en", "EN")}
       {lang_btn("es", "ES")}
+    </div>
+    <div class="tts-rate-row">
+      <span>{t("tts_speed")}</span>
+      <div class="tts-rate" role="group">
+        <button type="button" data-tts-rate="0.8">0.8×</button>
+        <button type="button" data-tts-rate="1">1×</button>
+        <button type="button" data-tts-rate="1.2">1.2×</button>
+      </div>
     </div>
   </section>"""
 
@@ -305,6 +326,11 @@ def validate_data(data: dict, quizzes: dict) -> None:
                 elif not key and not tid.startswith(f"{ch_slug}-"):
                     errors.append(f"term {tid!r} must start with {ch_slug}-")
 
+    for ch in data.get("chapters", []):
+        for g in ch.get("groups", []):
+            for t in g.get("terms", []):
+                errors.extend(detail_errors(t))
+
     for label, values in (
         ("chapter id", chapter_ids),
         ("chapter slug", chapter_slugs),
@@ -344,6 +370,37 @@ def validate_data(data: dict, quizzes: dict) -> None:
     if errors:
         msg = "Data validation failed:\n- " + "\n- ".join(errors)
         raise SystemExit(msg)
+
+
+def detail_errors(term: dict) -> list[str]:
+    """A term's attack detail must be complete in all three languages."""
+    tid = term.get("id", "?")
+    if "detail" not in term:
+        stray = [k for k in ("detail_en", "detail_es") if k in term]
+        return [f"{tid}: {k} without detail" for k in stray]
+    errs = []
+    for suffix in ("", "_en", "_es"):
+        key = f"detail{suffix}"
+        d = term.get(key)
+        if not isinstance(d, dict):
+            errs.append(f"{tid}: {key} missing")
+            continue
+        for k in DETAIL_LIST_KEYS:
+            v = d.get(k)
+            if not (isinstance(v, list) and v and all(isinstance(x, str) and x.strip() for x in v)):
+                errs.append(f"{tid}: {key}.{k} must be a non-empty list of strings")
+        for k in DETAIL_TEXT_KEYS:
+            if not (isinstance(d.get(k), str) and d[k].strip()):
+                errs.append(f"{tid}: {key}.{k} must be a non-empty string")
+        extra = set(d) - set(DETAIL_KEYS) - ({"related"} if suffix == "" else set())
+        if extra:
+            errs.append(f"{tid}: {key} has unknown keys {sorted(extra)}")
+    if not errs:
+        for k in DETAIL_LIST_KEYS:
+            lens = {len(term[f"detail{s}"][k]) for s in ("", "_en", "_es")}
+            if len(lens) > 1:
+                errs.append(f"{tid}: detail.{k} item counts differ across languages")
+    return errs
 
 
 def answer_position_errors(domain: str, quizzes: dict) -> list[str]:
@@ -443,7 +500,7 @@ def page(
     quiz_anchor: str | None = None,
     wide: bool = False,
 ) -> str:
-    scripts = f'<script src="../js/app.js?v={V}"></script>'
+    scripts = f'<script src="../js/tts.js?v={V}"></script>\n  <script src="../js/app.js?v={V}"></script>'
     extras = extra_js if isinstance(extra_js, list) else ([extra_js] if extra_js else [])
     for src in extras:
         scripts += f'\n  <script src="{src}?v={V}"></script>'
@@ -475,6 +532,63 @@ def page(
 """
 
 
+DETAIL_LIST_KEYS = ("how", "signs", "prevent", "detect", "respond")
+DETAIL_TEXT_KEYS = ("case", "exam")
+DETAIL_KEYS = ("how", "case", "signs", "prevent", "detect", "respond", "exam")
+
+# term id -> {"ja","en","es","href"} across all domains; filled in main() before pages are written
+TERM_INDEX: dict[str, dict] = {}
+
+
+def detail_body(d: dict, lang: str) -> str:
+    def items(key: str, tag: str = "ul") -> str:
+        lis = "".join(f"<li>{rich(x)}</li>" for x in d[key])
+        return f"<{tag}>{lis}</{tag}>"
+
+    def sec(key: str, inner: str, extra: str = "") -> str:
+        label = UI[f"d_{key}"][("ja", "en", "es").index(lang)]
+        return (
+            f'<section class="detail-sec detail-{key}{extra}">'
+            f'<h4 class="detail-label">{esc(label)}</h4>{inner}</section>'
+        )
+
+    return (
+        f'<div class="detail-body" data-i18n="{lang}">'
+        + sec("how", items("how", "ol"))
+        + sec("case", f"<p>{rich(d['case'])}</p>")
+        + sec("signs", items("signs"))
+        + '<div class="detail-defense">'
+        + sec("prevent", items("prevent"), " defense")
+        + sec("detect", items("detect"), " defense")
+        + sec("respond", items("respond"), " defense")
+        + "</div>"
+        + sec("exam", f"<p>{rich(d['exam'])}</p>")
+        + "</div>"
+    )
+
+
+def term_detail(term: dict) -> str:
+    d = term.get("detail")
+    if not d:
+        return ""
+    bodies = detail_body(d, "ja") + detail_body(term["detail_en"], "en") + detail_body(term["detail_es"], "es")
+    related = ""
+    links = []
+    for rid in d.get("related", []):
+        info = TERM_INDEX[rid]
+        links.append(f'<a href="{info["href"]}">{i18n(info["ja"], info["en"], info["es"])}</a>')
+    if links:
+        related = (
+            f'<section class="detail-related"><h4 class="detail-label">{t("d_related")}</h4>'
+            f'<div class="related-links">{"".join(links)}</div></section>'
+        )
+    return f"""
+    <details class="term-detail">
+      <summary>{t("detail_summary")}</summary>
+      <div class="detail-wrap">{bodies}{related}</div>
+    </details>"""
+
+
 def term_card(term: dict) -> str:
     examples_ja = "".join(f"<li>{esc(x)}</li>" for x in term["examples"])
     examples_en = "".join(f"<li>{esc(x)}</li>" for x in term.get("examples_en", [])) or examples_ja
@@ -503,7 +617,7 @@ def term_card(term: dict) -> str:
       <ul class="example-list" data-i18n="ja">{examples_ja}</ul>
       <ul class="example-list" data-i18n="en">{examples_en}</ul>
       <ul class="example-list" data-i18n="es">{examples_es}</ul>
-    </div>
+    </div>{term_detail(term)}
   </div>
 </article>
 """
@@ -756,6 +870,7 @@ def root_index(term_counts: dict[str, int]) -> str:
       </section>
     </main>
   </div>
+  <script src="js/tts.js?v={V}"></script>
   <script src="js/app.js?v={V}"></script>
 </body>
 </html>
@@ -797,6 +912,7 @@ def global_map_page(hub_domains: list[dict]) -> str:
       <script type="application/json" id="hubmap-data">{payload}</script>
     </main>
   </div>
+  <script src="js/tts.js?v={V}"></script>
   <script src="js/app.js?v={V}"></script>
   <script src="js/hub-map.js?v={V}"></script>
 </body>
@@ -817,6 +933,27 @@ def main() -> None:
     dupes = sorted(i for i, n in seen_ids.items() if n > 1)
     if dupes:
         raise SystemExit(f"term id duplicated across domains: {dupes}")
+    for d, data, _ in loaded:
+        for ch in data["chapters"]:
+            for g in ch["groups"]:
+                for term in g["terms"]:
+                    TERM_INDEX[term["id"]] = {
+                        "ja": term["ja"],
+                        "en": term.get("name_en") or term.get("en") or term["ja"],
+                        "es": term.get("es") or term["ja"],
+                        "href": f'../{d["code"].lower()}/{slug_of(ch)}.html#{term["id"]}',
+                    }
+    bad_related = [
+        f'{term["id"]} -> {rid}'
+        for _, data, _ in loaded
+        for ch in data["chapters"]
+        for g in ch["groups"]
+        for term in g["terms"]
+        for rid in term.get("detail", {}).get("related", [])
+        if rid not in TERM_INDEX or rid == term["id"]
+    ]
+    if bad_related:
+        raise SystemExit("detail.related points to unknown terms:\n- " + "\n- ".join(bad_related))
     print(f"validated: {len(seen_ids)} unique term ids across {len(ready)} domain(s)")
 
     term_counts: dict[str, int] = {}

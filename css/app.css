@@ -1052,22 +1052,19 @@ html.memorize .term-panel:not(.revealed) .reveal-btn {
   color: #fff;
 }
 
+.tts-rate-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
 .tts-rate {
   display: inline-flex;
-  align-items: center;
   gap: 0.25rem;
-  margin-left: auto;
-}
-
-.tts-rate-icon {
-  display: inline-flex;
-  margin-right: 0.15rem;
-  color: var(--text-muted);
-}
-
-.tts-rate-icon svg {
-  width: 1rem;
-  height: 1rem;
 }
 
 .tts-rate button {
@@ -1077,7 +1074,7 @@ html.memorize .term-panel:not(.revealed) .reveal-btn {
   background: var(--bg-card);
   color: var(--text-muted);
   font: inherit;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -1088,18 +1085,185 @@ html.memorize .term-panel:not(.revealed) .reveal-btn {
   color: #fff;
 }
 
-.tts-off .tts-btn,
-.tts-off .tts-rate {
+html.tts-off .tts-btn,
+html.no-tts .tts-rate-row {
   display: none;
 }
 
-.tts-off .quiz-card.has-tts .quiz-stem,
-.tts-off .quiz-explain.has-tts {
+html.tts-off .quiz-card.has-tts .quiz-stem,
+html.tts-off .memo-card.has-tts h3 {
+  padding-right: 0;
+}
+
+html.tts-off .quiz-explain.has-tts {
   padding-right: 0.75rem;
 }
 
-.tts-off .quiz-card.has-tts .quiz-stem {
-  padding-right: 0;
+/* Read-aloud (term cards) */
+.memo-card.has-tts {
+  position: relative;
+}
+
+.memo-card.has-tts h3 {
+  padding-right: 2.4rem;
+}
+
+/* Attack detail (collapsible) */
+.term-detail {
+  margin-top: 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+}
+
+.term-detail > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 0.85rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.term-detail > summary::-webkit-details-marker {
+  display: none;
+}
+
+.term-detail > summary::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+.term-detail[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+.term-detail[open] > summary {
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-wrap {
+  position: relative;
+  padding: 0.85rem 0.95rem 1rem;
+}
+
+.detail-wrap > .tts-btn {
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+.detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.detail-sec {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.detail-sec p,
+.detail-sec ul,
+.detail-sec ol {
+  margin: 0.3rem 0 0;
+}
+
+.detail-sec ul,
+.detail-sec ol {
+  padding-left: 1.25rem;
+}
+
+.detail-sec li + li {
+  margin-top: 0.2rem;
+}
+
+.detail-sec .hl {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.detail-label {
+  display: inline-block;
+  margin: 0;
+  padding: 0.12rem 0.6rem;
+  border-radius: 999px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.detail-how .detail-label {
+  margin-right: 2.4rem;
+}
+
+.detail-defense {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.6rem;
+}
+
+.detail-sec.defense {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid color-mix(in srgb, #16a34a 30%, transparent);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, #16a34a 6%, transparent);
+}
+
+.detail-sec.defense .detail-label {
+  background: color-mix(in srgb, #16a34a 16%, transparent);
+  color: #15803d;
+}
+
+html.dark .detail-sec.defense .detail-label {
+  color: #4ade80;
+}
+
+.detail-exam {
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent-dimmer);
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.detail-exam .detail-label {
+  background: var(--accent);
+  color: #fff;
+}
+
+.detail-related {
+  margin-top: 0.85rem;
+}
+
+.related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.related-links a {
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--accent-soft);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.related-links a:hover {
+  background: var(--accent-dimmer);
 }
 
 .chapter-grid {
@@ -1378,4 +1542,12 @@ html.memorize .term-panel:not(.revealed) .reveal-btn {
   .main {
     padding-top: 4rem;
   }
+}
+
+.detail-sec code {
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  background: var(--gray-soft);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85em;
 }

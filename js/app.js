@@ -113,6 +113,62 @@
   applySearchPlaceholder();
   syncRevealAll();
 
+  // ---- Read-aloud buttons on term cards ----
+  const tts = window.SPT_TTS && window.SPT_TTS.supported ? window.SPT_TTS : null;
+  const TERM_SPEAK = { ja: "用語を読み上げ", en: "Read term aloud", es: "Leer el término en voz alta" };
+  const DETAIL_SPEAK = { ja: "詳しい説明を読み上げ", en: "Read details aloud", es: "Leer los detalles en voz alta" };
+  const EXAMPLES_LEAD = { ja: "代表例。", en: "Examples:", es: "Ejemplos:" };
+
+  function activeEl(container, selector) {
+    const lang = currentLang();
+    return container.querySelector(`${selector}[data-i18n="${lang}"]`);
+  }
+
+  function termChunks(card) {
+    const lang = currentLang();
+    const nameEl = activeEl(card, "h3 > span");
+    // ja heading carries the English name in a child span; read only the first text node
+    const name = nameEl ? (nameEl.firstChild ? nameEl.firstChild.textContent : nameEl.textContent) : "";
+    const chunks = [name];
+    const hidden = html.classList.contains("memorize") && !card.classList.contains("revealed");
+    if (hidden) return chunks;
+    const oneLiner = activeEl(card, ".one-liner");
+    if (oneLiner) chunks.push(...tts.splitSentences(oneLiner.textContent));
+    const examples = activeEl(card, ".example-list");
+    if (examples) {
+      const items = [...examples.querySelectorAll("li")].map((li) => li.textContent.trim());
+      if (items.length) chunks.push(`${EXAMPLES_LEAD[lang]} ${items.join(lang === "ja" ? "、" : ", ")}`);
+    }
+    return chunks;
+  }
+
+  function detailChunks(detail) {
+    const body = activeEl(detail, ".detail-body");
+    if (!body) return [];
+    const chunks = [];
+    for (const sec of body.querySelectorAll(".detail-sec")) {
+      const label = sec.querySelector(".detail-label");
+      if (label) chunks.push(label.textContent);
+      for (const el of sec.querySelectorAll("li, p")) chunks.push(...tts.splitSentences(el.textContent));
+    }
+    return chunks;
+  }
+
+  if (tts) {
+    for (const card of cards) {
+      card.classList.add("has-tts");
+      card.appendChild(tts.button(TERM_SPEAK, () => termChunks(card), "term-tts"));
+      const detail = card.querySelector(".term-detail");
+      if (detail) {
+        const wrap = detail.querySelector(".detail-wrap");
+        wrap.prepend(tts.button(DETAIL_SPEAK, () => detailChunks(detail), "detail-tts"));
+        detail.addEventListener("toggle", () => {
+          if (!detail.open && tts.isSpeaking(detail)) tts.stop();
+        });
+      }
+    }
+  }
+
   const input = document.getElementById("term-search");
   const terms = [...document.querySelectorAll(".term, .memo-card")];
   const empty = document.getElementById("empty-state");

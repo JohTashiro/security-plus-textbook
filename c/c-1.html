@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/app.css?v=be335e5d">
+  <link rel="stylesheet" href="../css/app.css?v=d3852885">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -47,6 +47,14 @@
       <button type="button" class="lang-btn" data-lang-btn="ja"><img class="lang-flag" src="../flags/jp.svg" alt="">日本語</button>
       <button type="button" class="lang-btn" data-lang-btn="en"><img class="lang-flag" src="../flags/gb.svg" alt="">EN</button>
       <button type="button" class="lang-btn" data-lang-btn="es"><img class="lang-flag" src="../flags/es.svg" alt="">ES</button>
+    </div>
+    <div class="tts-rate-row">
+      <span><span data-i18n="ja">読み上げ速度</span><span data-i18n="en">Speech speed</span><span data-i18n="es">Velocidad de lectura</span></span>
+      <div class="tts-rate" role="group">
+        <button type="button" data-tts-rate="0.8">0.8×</button>
+        <button type="button" data-tts-rate="1">1×</button>
+        <button type="button" data-tts-rate="1.2">1.2×</button>
+      </div>
     </div>
   </section>
 </aside>
@@ -522,7 +530,8 @@
 
     </main>
   </div>
-  <script src="../js/app.js?v=be335e5d"></script>
-  <script src="../js/quiz.js?v=be335e5d"></script>
+  <script src="../js/tts.js?v=d3852885"></script>
+  <script src="../js/app.js?v=d3852885"></script>
+  <script src="../js/quiz.js?v=d3852885"></script>
 </body>
 </html>
