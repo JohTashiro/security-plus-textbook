@@ -5,26 +5,26 @@
       "stem": "パスワード方針・ファイアウォール・更新・アンチウイルスなどを「最低限これだけは守る」設定として定め、業界標準を踏まえて維持更新している。これは何か。",
       "choices": [
         "サイトサーベイ",
-        "セキュアベースライン",
         "サンドボックス",
-        "コードサイニング"
+        "コードサイニング",
+        "セキュアベースライン"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "安全運用のための最低限のセキュリティ設定・要件がセキュアベースラインである。",
       "stem_en": "Password policy, firewall, updates, antivirus and so on are defined as the settings that must always be in place, and maintained in line with industry standards. What is this?",
       "choices_en": [
         "Site survey",
-        "Secure baseline",
         "Sandbox",
-        "Code signing"
+        "Code signing",
+        "Secure baseline"
       ],
       "explain_en": "The minimum security settings and requirements for secure operation are a secure baseline.",
       "stem_es": "Política de contraseñas, cortafuegos, actualizaciones, antivirus, etc., se definen como la configuración que siempre debe cumplirse y se mantienen según los estándares del sector. ¿Qué es?",
       "choices_es": [
         "Estudio del sitio",
-        "Línea base segura",
         "Sandbox",
-        "Firma de código"
+        "Firma de código",
+        "Línea base segura"
       ],
       "explain_es": "La configuración y los requisitos mínimos de seguridad para operar con seguridad son la línea base segura."
     },
@@ -32,26 +32,26 @@
       "term": "d-1-mobile-devices",
       "stem": "従業員のスマートフォンを企業でまとめて管理し、セキュリティ施策の実装と維持を容易にしたい。講義がまず挙げる代表的なアプローチはどれか。",
       "choices": [
+        "モバイルデバイス管理（MDM）の導入",
         "エアギャップのみ",
         "オープンWi-Fiの利用",
-        "モバイルデバイス管理（MDM）の導入",
         "ポートセキュリティのみ"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "モバイルデバイスのセキュリティ向上の代表例として、MDMによる一元管理が挙げられる。",
       "stem_en": "A company wants to manage employees' smartphones centrally to make it easier to implement and maintain security measures. Which typical approach does the lesson cite first?",
       "choices_en": [
+        "Deploying mobile device management (MDM)",
         "Air gap only",
         "Using open Wi-Fi",
-        "Deploying mobile device management (MDM)",
         "Port security only"
       ],
       "explain_en": "Central management with MDM is the typical example for improving mobile device security.",
       "stem_es": "Una empresa quiere gestionar de forma centralizada los smartphones de los empleados para facilitar la implantación y el mantenimiento de las medidas de seguridad. ¿Qué enfoque típico cita primero la lección?",
       "choices_es": [
+        "Implantar la gestión de dispositivos móviles (MDM)",
         "Solo aislamiento físico",
         "Usar Wi-Fi abierta",
-        "Implantar la gestión de dispositivos móviles (MDM)",
         "Solo seguridad de puertos"
       ],
       "explain_es": "La gestión centralizada con MDM es el ejemplo típico para mejorar la seguridad de los móviles."
@@ -117,25 +117,25 @@
       "stem": "家庭用・事業所のルータで、工場出荷の管理パスワードをそのまま使い、古いファームウェアのまま運用している。講義が強調する改善として最も適切なものはどれか。",
       "choices": [
         "ヒートマップの色を変えるだけ",
-        "強力な管理パスワードとファームウェア最新化",
         "ペアリングモードの常時有効化",
+        "強力な管理パスワードとファームウェア最新化",
         "入力バリデーションの無効化"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "ルータはデフォルトパスワードの廃止とファーム最新化が要点である。",
       "stem_en": "A home or office router is still using its factory admin password and old firmware. Which improvement does the lesson stress most?",
       "choices_en": [
         "Just changing the heat map colors",
-        "A strong admin password and up-to-date firmware",
         "Leaving pairing mode always on",
+        "A strong admin password and up-to-date firmware",
         "Disabling input validation"
       ],
       "explain_en": "For routers, the key points are getting rid of default passwords and keeping firmware current.",
       "stem_es": "Un router doméstico o de oficina sigue con la contraseña de administración de fábrica y un firmware antiguo. ¿Qué mejora destaca más la lección?",
       "choices_es": [
         "Solo cambiar los colores del mapa de calor",
-        "Una contraseña de administración robusta y firmware actualizado",
         "Dejar siempre activado el modo de emparejamiento",
+        "Una contraseña de administración robusta y firmware actualizado",
         "Desactivar la validación de entradas"
       ],
       "explain_es": "En los routers, lo clave es eliminar las contraseñas predeterminadas y mantener el firmware al día."
@@ -172,25 +172,25 @@
       "term": "d-1-servers",
       "stem": "WannaCryのようにOSの既知脆弱性を突く攻撃を防ぐため、サーバでまず徹底すべき対策として講義が示すものはどれか。",
       "choices": [
-        "OSパッチの適用と最新化",
         "オープンWi-Fiの推奨",
+        "OSパッチの適用と最新化",
         "デフォルトパスワードの維持",
         "ペアリングモード常時ON"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "サーバはOSを最新に保ちパッチを適用することが基本である。設定ファイルの機密保護も重要。",
       "stem_en": "To prevent attacks that exploit known OS vulnerabilities, like WannaCry, what does the lesson say servers should do first?",
       "choices_en": [
-        "Apply OS patches and stay up to date",
         "Recommend open Wi-Fi",
+        "Apply OS patches and stay up to date",
         "Keep default passwords",
         "Keep pairing mode always on"
       ],
       "explain_en": "The basics for servers are keeping the OS current and applying patches. Protecting secrets in configuration files also matters.",
       "stem_es": "Para evitar ataques que explotan vulnerabilidades conocidas del SO, como WannaCry, ¿qué indica la lección que deben hacer primero los servidores?",
       "choices_es": [
-        "Aplicar los parches del SO y mantenerlo actualizado",
         "Recomendar Wi-Fi abierta",
+        "Aplicar los parches del SO y mantenerlo actualizado",
         "Mantener las contraseñas predeterminadas",
         "Mantener siempre activado el modo de emparejamiento"
       ],
@@ -201,26 +201,26 @@
       "stem": "発電所の制御システムを、業務用ネットワークやインターネットからファイアウォールやVLANで切り離している。主目的に最も近いものはどれか。",
       "choices": [
         "BYODの利便性向上",
-        "ICS/SCADAの攻撃面縮小（分離）",
         "CookieのSecure属性設定",
-        "コードの静的解析"
+        "コードの静的解析",
+        "ICS/SCADAの攻撃面縮小（分離）"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "重要インフラ制御系はインターネット／業務網からの分離が推奨される。",
       "stem_en": "A power plant's control systems are separated from the business network and the internet with firewalls and VLANs. What is the main purpose?",
       "choices_en": [
         "Making BYOD more convenient",
-        "Shrinking the ICS/SCADA attack surface (separation)",
         "Setting the cookie Secure attribute",
-        "Static code analysis"
+        "Static code analysis",
+        "Shrinking the ICS/SCADA attack surface (separation)"
       ],
       "explain_en": "Separating critical-infrastructure control systems from the internet and business networks is recommended.",
       "stem_es": "Los sistemas de control de una central eléctrica están separados de la red corporativa e internet mediante cortafuegos y VLAN. ¿Cuál es el objetivo principal?",
       "choices_es": [
         "Hacer más cómodo el BYOD",
-        "Reducir la superficie de ataque de ICS/SCADA (separación)",
         "Configurar el atributo Secure de las cookies",
-        "Análisis estático de código"
+        "Análisis estático de código",
+        "Reducir la superficie de ataque de ICS/SCADA (separación)"
       ],
       "explain_es": "Se recomienda separar los sistemas de control de infraestructuras críticas de internet y de las redes corporativas."
     },
@@ -228,26 +228,26 @@
       "term": "d-1-embedded-systems",
       "stem": "家電や産業機器に内蔵された専用コンピュータで、既知の脆弱性を残さないために講義が強調する対策はどれか。",
       "choices": [
-        "ファームウェアの最新化",
         "オープンネットワークの公開",
         "入力長制限の撤廃",
+        "ファームウェアの最新化",
         "ヒートマップの廃止"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "組込みシステムではファームウェアを最新に保つことが重要である。",
       "stem_en": "For dedicated computers built into appliances and industrial equipment, which measure does the lesson stress to avoid leaving known vulnerabilities?",
       "choices_en": [
-        "Keeping firmware up to date",
         "Exposing them on open networks",
         "Removing input length limits",
+        "Keeping firmware up to date",
         "Abolishing heat maps"
       ],
       "explain_en": "For embedded systems, keeping firmware up to date is essential.",
       "stem_es": "En los ordenadores dedicados integrados en electrodomésticos y equipos industriales, ¿qué medida destaca la lección para no dejar vulnerabilidades conocidas?",
       "choices_es": [
-        "Mantener el firmware actualizado",
         "Exponerlos en redes abiertas",
         "Eliminar los límites de longitud de entrada",
+        "Mantener el firmware actualizado",
         "Suprimir los mapas de calor"
       ],
       "explain_es": "En los sistemas embebidos es esencial mantener el firmware actualizado."
@@ -284,27 +284,27 @@
       "term": "d-1-iot",
       "stem": "ネットワーク接続のエアコン等で、出荷時パスワードを変更せず使っている利用者が多い。講義が特に重要とする対策はどれか。",
       "choices": [
-        "デフォルトパスワードの変更",
         "サイトサーベイの省略",
         "Secure属性の削除",
-        "コード署名の無効化"
+        "コード署名の無効化",
+        "デフォルトパスワードの変更"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "IoTはデフォルトクレデンシャルの変更が最重要ポイントである。",
       "stem_en": "Many users of internet-connected air conditioners and similar devices never change the factory password. Which measure does the lesson consider especially important?",
       "choices_en": [
-        "Changing default passwords",
         "Skipping the site survey",
         "Removing the Secure attribute",
-        "Disabling code signing"
+        "Disabling code signing",
+        "Changing default passwords"
       ],
       "explain_en": "For IoT, changing default credentials is the top priority.",
       "stem_es": "Muchos usuarios de aires acondicionados conectados y dispositivos similares nunca cambian la contraseña de fábrica. ¿Qué medida considera la lección especialmente importante?",
       "choices_es": [
-        "Cambiar las contraseñas predeterminadas",
         "Saltarse el estudio del sitio",
         "Quitar el atributo Secure",
-        "Desactivar la firma de código"
+        "Desactivar la firma de código",
+        "Cambiar las contraseñas predeterminadas"
       ],
       "explain_es": "En IoT, cambiar las credenciales predeterminadas es lo primero."
     },
@@ -312,25 +312,25 @@
       "term": "d-1-site-survey",
       "stem": "無線LANを設計する前に、設置エリアの電波強度や干渉を調べ、APの位置を決めている。この調査はどれか。",
       "choices": [
-        "コードサイニング",
         "サイトサーベイ",
+        "コードサイニング",
         "入力バリデーション",
         "COPE"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "構築前の電波状況調査がサイトサーベイである。",
       "stem_en": "Before designing a wireless LAN, the team checks signal strength and interference in the area and decides where to put APs. What is this survey?",
       "choices_en": [
-        "Code signing",
         "Site survey",
+        "Code signing",
         "Input validation",
         "COPE"
       ],
       "explain_en": "Surveying radio conditions before building is a site survey.",
       "stem_es": "Antes de diseñar una red inalámbrica, el equipo comprueba la intensidad de señal y las interferencias en la zona y decide dónde colocar los AP. ¿Qué estudio es?",
       "choices_es": [
-        "Firma de código",
         "Estudio del sitio",
+        "Firma de código",
         "Validación de entradas",
         "COPE"
       ],
@@ -340,27 +340,27 @@
       "term": "d-1-heat-map",
       "stem": "電波の強弱を色の濃淡の地図で示し、届きにくい場所や干渉箇所を一目で把握している。これは何か。",
       "choices": [
-        "ヒートマップ",
         "サンドボックス",
         "IAM",
-        "ポートセキュリティ"
+        "ポートセキュリティ",
+        "ヒートマップ"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "ヒートマップは電波強度・品質を色で可視化した地図である。",
       "stem_en": "Signal strength is shown as shades of color on a map, making hard-to-reach spots and interference visible at a glance. What is this?",
       "choices_en": [
-        "Heat map",
         "Sandbox",
         "IAM",
-        "Port security"
+        "Port security",
+        "Heat map"
       ],
       "explain_en": "A heat map visualizes signal strength and quality in color.",
       "stem_es": "La intensidad de la señal se muestra con tonos de color en un mapa, de modo que las zonas de difícil cobertura y las interferencias se ven de un vistazo. ¿Qué es?",
       "choices_es": [
-        "Mapa de calor",
         "Sandbox",
         "IAM",
-        "Seguridad de puertos"
+        "Seguridad de puertos",
+        "Mapa de calor"
       ],
       "explain_es": "Un mapa de calor muestra con colores la intensidad y la calidad de la señal."
     },
@@ -368,25 +368,25 @@
       "term": "d-1-mdm",
       "stem": "全社のスマホにパスワード要件や暗号化を一括適用し、紛失時はリモートでロックやデータ消去ができる。この仕組みはどれか。",
       "choices": [
-        "ヒートマップ",
         "MDM",
+        "ヒートマップ",
         "静的コード分析",
         "WPA3"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "モバイルの一元管理・ポリシー適用・リモートロック／ワイプはMDMの役割である。",
       "stem_en": "Password requirements and encryption are applied to all company phones at once, and lost devices can be locked or wiped remotely. What is this system?",
       "choices_en": [
-        "Heat map",
         "MDM",
+        "Heat map",
         "Static code analysis",
         "WPA3"
       ],
       "explain_en": "Central management, policy enforcement and remote lock/wipe of mobile devices are what MDM does.",
       "stem_es": "Los requisitos de contraseña y el cifrado se aplican a la vez a todos los móviles de la empresa, y los dispositivos perdidos pueden bloquearse o borrarse en remoto. ¿Qué sistema es?",
       "choices_es": [
-        "Mapa de calor",
         "MDM",
+        "Mapa de calor",
         "Análisis estático de código",
         "WPA3"
       ],
@@ -424,25 +424,25 @@
       "term": "d-1-cyod",
       "stem": "会社が承認した機種リストの中から、従業員が好みの端末を選んで使う方式はどれか。",
       "choices": [
-        "BYOD",
         "CYOD",
+        "BYOD",
         "オープンWi-Fi",
         "ポートミラーリング"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "会社用意・承認端末から選択するのがCYODである。",
       "stem_en": "Which model lets employees pick a device they like from a company-approved list of models?",
       "choices_en": [
-        "BYOD",
         "CYOD",
+        "BYOD",
         "Open Wi-Fi",
         "Port mirroring"
       ],
       "explain_en": "Choosing from devices the company provides or approves is CYOD.",
       "stem_es": "¿Qué modelo permite a los empleados elegir el dispositivo que prefieran de una lista de modelos aprobada por la empresa?",
       "choices_es": [
-        "BYOD",
         "CYOD",
+        "BYOD",
         "Wi-Fi abierta",
         "Duplicación de puertos"
       ],
@@ -453,26 +453,26 @@
       "stem": "スマホが携帯電話キャリアのネットワーク経由でインターネットに接続する方式を、講義では何と呼んでいるか。",
       "choices": [
         "サイトサーベイ",
-        "セルラー",
         "コードサイニング",
-        "静的解析"
+        "静的解析",
+        "セルラー"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "キャリア網経由の接続がセルラーである。SIMによる暗号化なども触れる。",
       "stem_en": "What does the lesson call the way a smartphone connects to the internet through a mobile carrier's network?",
       "choices_en": [
         "Site survey",
-        "Cellular",
         "Code signing",
-        "Static analysis"
+        "Static analysis",
+        "Cellular"
       ],
       "explain_en": "Connecting via a carrier network is cellular; SIM-based encryption is also mentioned.",
       "stem_es": "¿Cómo llama la lección a la forma en que un smartphone se conecta a internet a través de la red de un operador móvil?",
       "choices_es": [
         "Estudio del sitio",
-        "Celular",
         "Firma de código",
-        "Análisis estático"
+        "Análisis estático",
+        "Celular"
       ],
       "explain_es": "Conectarse a través de la red de un operador es la conexión celular; también se menciona el cifrado basado en la SIM."
     },
@@ -480,26 +480,26 @@
       "term": "d-1-wifi",
       "stem": "無線LAN接続で傍受リスクを下げるため、講義が特に強調する二つの対策はどれか。",
       "choices": [
-        "暗号化と認証",
         "ペアリング常時ONのみ",
         "デフォルトPWの維持",
+        "暗号化と認証",
         "パッチの意図的遅延"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "Wi-Fiは通信の暗号化と、オープン網を避ける認証設定が要点である。",
       "stem_en": "To reduce the risk of interception on wireless LAN connections, which two measures does the lesson especially emphasize?",
       "choices_en": [
-        "Encryption and authentication",
         "Only keeping pairing always on",
         "Keeping default passwords",
+        "Encryption and authentication",
         "Deliberately delaying patches"
       ],
       "explain_en": "For Wi-Fi, the key points are encrypting traffic and using authentication settings that avoid open networks.",
       "stem_es": "Para reducir el riesgo de interceptación en las conexiones inalámbricas, ¿qué dos medidas destaca especialmente la lección?",
       "choices_es": [
-        "Cifrado y autenticación",
         "Solo mantener el emparejamiento siempre activo",
         "Mantener las contraseñas predeterminadas",
+        "Cifrado y autenticación",
         "Retrasar los parches a propósito"
       ],
       "explain_es": "En Wi-Fi, lo clave es cifrar el tráfico y usar autenticación que evite las redes abiertas."
@@ -508,25 +508,25 @@
       "term": "d-1-bluetooth",
       "stem": "イヤホン接続などで使う近距離無線について、不正ペアリングを防ぐ実務的な注意として講義が示すものはどれか。",
       "choices": [
-        "ペアリングモードを常時有効にする",
         "必要なときだけペアリングし、終了後は無効化する",
+        "ペアリングモードを常時有効にする",
         "常に最も古いバージョンを使う",
         "暗号化を必ずオフにする"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "最新版の利用に加え、ペアリングは必要時のみ有効化する。",
       "stem_en": "For short-range wireless used to connect earbuds and the like, which practical precaution does the lesson give to prevent unauthorized pairing?",
       "choices_en": [
-        "Keep pairing mode always on",
         "Pair only when needed and turn it off afterward",
+        "Keep pairing mode always on",
         "Always use the oldest version",
         "Always turn encryption off"
       ],
       "explain_en": "Besides using the latest version, enable pairing only when needed.",
       "stem_es": "Para la conexión inalámbrica de corto alcance que se usa con auriculares y similares, ¿qué precaución práctica da la lección para evitar emparejamientos no autorizados?",
       "choices_es": [
-        "Mantener siempre activado el modo de emparejamiento",
         "Emparejar solo cuando haga falta y desactivarlo después",
+        "Mantener siempre activado el modo de emparejamiento",
         "Usar siempre la versión más antigua",
         "Desactivar siempre el cifrado"
       ],
@@ -537,25 +537,25 @@
       "stem": "2018年発表の新しいWi-Fi保護で、SAEなどを用い辞書攻撃への耐性を高めたプロトコルはどれか。",
       "choices": [
         "WPA2のPSKのみ",
-        "WPA3",
         "MDM",
+        "WPA3",
         "ヒートマップ"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "WPA3は新しい無線セキュリティプロトコルで、辞書攻撃耐性がポイントである。",
       "stem_en": "Which newer Wi-Fi protection, announced in 2018, uses SAE and similar mechanisms to strengthen resistance to dictionary attacks?",
       "choices_en": [
         "WPA2 PSK only",
-        "WPA3",
         "MDM",
+        "WPA3",
         "Heat map"
       ],
       "explain_en": "WPA3 is a newer wireless security protocol whose key feature is resistance to dictionary attacks.",
       "stem_es": "¿Qué protección Wi-Fi más reciente, anunciada en 2018, usa SAE y mecanismos similares para resistir mejor los ataques de diccionario?",
       "choices_es": [
         "Solo WPA2 PSK",
-        "WPA3",
         "MDM",
+        "WPA3",
         "Mapa de calor"
       ],
       "explain_es": "WPA3 es un protocolo de seguridad inalámbrica más reciente cuya clave es la resistencia a los ataques de diccionario."
@@ -564,27 +564,27 @@
       "term": "d-1-cryptographic-protocols",
       "stem": "ネットワーク上のデータを暗号化し、強いアルゴリズムと十分な鍵長、場合によりPFSで過去鍵漏洩の影響を抑える。これは何の話か。",
       "choices": [
-        "暗号化プロトコル",
         "入退室管理のみ",
         "サイトサーベイのみ",
-        "BYODポリシーのみ"
+        "BYODポリシーのみ",
+        "暗号化プロトコル"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "通信の機密性を守る暗号化プロトコルの選定・最新化の話である。",
       "stem_en": "Data on the network is encrypted with strong algorithms and sufficient key lengths, sometimes with PFS to limit the impact of past key leaks. What is this about?",
       "choices_en": [
-        "Cryptographic protocols",
         "Entry control only",
         "Site survey only",
-        "BYOD policy only"
+        "BYOD policy only",
+        "Cryptographic protocols"
       ],
       "explain_en": "This is about choosing and updating cryptographic protocols that protect the confidentiality of traffic.",
       "stem_es": "Los datos de la red se cifran con algoritmos robustos y claves de longitud suficiente, a veces con PFS para limitar el impacto de filtraciones de claves pasadas. ¿De qué trata esto?",
       "choices_es": [
-        "Protocolos criptográficos",
         "Solo control de acceso",
         "Solo estudio del sitio",
-        "Solo política BYOD"
+        "Solo política BYOD",
+        "Protocolos criptográficos"
       ],
       "explain_es": "Trata de elegir y mantener al día protocolos criptográficos que protejan la confidencialidad del tráfico."
     },
@@ -593,25 +593,25 @@
       "stem": "Webフォームで許可された形式以外を拒否し、特殊文字をエスケープしてSQLインジェクションやXSSを防ぐ。この対策はどれか。",
       "choices": [
         "ヒートマップ",
-        "入力バリデーション",
         "セルラー",
+        "入力バリデーション",
         "ポートセキュリティ"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "入力が適切かを検証し不正入力を排除するのが入力バリデーションである。",
       "stem_en": "A web form rejects anything outside the allowed format and escapes special characters to prevent SQL injection and XSS. What measure is this?",
       "choices_en": [
         "Heat map",
-        "Input validation",
         "Cellular",
+        "Input validation",
         "Port security"
       ],
       "explain_en": "Checking that input is appropriate and rejecting bad input is input validation.",
       "stem_es": "Un formulario web rechaza todo lo que no tenga el formato permitido y escapa los caracteres especiales para evitar la inyección SQL y el XSS. ¿Qué medida es?",
       "choices_es": [
         "Mapa de calor",
-        "Validación de entradas",
         "Celular",
+        "Validación de entradas",
         "Seguridad de puertos"
       ],
       "explain_es": "Comprobar que la entrada es adecuada y rechazar la indebida es la validación de entradas."
@@ -620,25 +620,25 @@
       "term": "d-1-secure-cookies",
       "stem": "ブラウザがCookieをHTTPS接続のときだけ送るよう属性を付け、平文傍受による漏洩を防ぐ。この属性・考え方はどれか。",
       "choices": [
-        "セキュアクッキー（Secure属性）",
         "サイトサーベイ",
+        "セキュアクッキー（Secure属性）",
         "CYOD",
         "ICS分離"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "Secure属性によりHTTPS時のみCookieを送信する。",
       "stem_en": "An attribute makes the browser send a cookie only over HTTPS connections, preventing leaks from plaintext interception. Which attribute or concept is this?",
       "choices_en": [
-        "Secure cookies (Secure attribute)",
         "Site survey",
+        "Secure cookies (Secure attribute)",
         "CYOD",
         "ICS separation"
       ],
       "explain_en": "The Secure attribute sends cookies only over HTTPS.",
       "stem_es": "Un atributo hace que el navegador envíe una cookie solo por conexiones HTTPS, evitando fugas por interceptación en texto claro. ¿Qué atributo o concepto es?",
       "choices_es": [
-        "Cookies seguras (atributo Secure)",
         "Estudio del sitio",
+        "Cookies seguras (atributo Secure)",
         "CYOD",
         "Separación de ICS"
       ],
@@ -733,26 +733,26 @@
       "stem": "普段CPU20%のサーバが突然80%超になったり、深夜に大量ファイル削除のログが出たりしたことを捉えて攻撃を疑う。これは何か。",
       "choices": [
         "コードサイニング",
-        "モニタリング",
         "CYOD",
-        "Secure属性"
+        "Secure属性",
+        "モニタリング"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "リソース使用率や操作ログの監視（モニタリング）で異常・不正を早期検知する。",
       "stem_en": "An attack is suspected after a server that normally runs at 20% CPU suddenly exceeds 80%, or logs show mass file deletions late at night. What is this?",
       "choices_en": [
         "Code signing",
-        "Monitoring",
         "CYOD",
-        "Secure attribute"
+        "Secure attribute",
+        "Monitoring"
       ],
       "explain_en": "Monitoring resource usage and activity logs catches anomalies and misuse early.",
       "stem_es": "Se sospecha un ataque cuando un servidor que suele estar al 20 % de CPU supera de repente el 80 %, o los registros muestran borrados masivos de archivos de madrugada. ¿Qué es?",
       "choices_es": [
         "Firma de código",
-        "Supervisión",
         "CYOD",
-        "Atributo Secure"
+        "Atributo Secure",
+        "Supervisión"
       ],
       "explain_es": "Supervisar el uso de recursos y los registros de actividad permite detectar pronto anomalías y abusos."
     }
@@ -790,26 +790,26 @@
       "term": "d-2-ownership",
       "stem": "社員へのPC貸与で、役割に応じた機種を割り当て、誰にどのシリアル番号を渡したかを台帳に残し、紛失時に特定できるようにした。主にどの概念か。",
       "choices": [
+        "オーナーシップ",
         "サニタイゼーション",
         "列挙",
-        "オーナーシップ",
         "データ保持"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "所有者・管理者を明確にし、割り当てと記録を行うのがオーナーシップ。",
       "stem_en": "When lending PCs to employees, models were assigned by role, and a register records which serial number went to whom so lost devices can be identified. Which concept is this mainly?",
       "choices_en": [
+        "Ownership",
         "Sanitization",
         "Enumeration",
-        "Ownership",
         "Data retention"
       ],
       "explain_en": "Clarifying owners and custodians and recording assignments is ownership.",
       "stem_es": "Al prestar PC a los empleados, se asignaron modelos según el puesto y un registro anota qué número de serie se entregó a quién para identificar los equipos perdidos. ¿Qué concepto es principalmente?",
       "choices_es": [
+        "Propiedad",
         "Saneamiento",
         "Enumeración",
-        "Propiedad",
         "Retención de datos"
       ],
       "explain_es": "Aclarar propietarios y responsables y registrar las asignaciones es la propiedad (ownership)."
@@ -818,26 +818,26 @@
       "term": "d-2-inventory",
       "stem": "使用中のPC・サーバー・OS・アプリを洗い出し、製品名・型番・バージョン・ライセンスを台帳にまとめてサポート切れを点検した。これはどれか。",
       "choices": [
-        "インベントリ",
         "破壊",
         "取得／調達プロセス",
+        "インベントリ",
         "第三者認証"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "資産を台帳として一覧化し追跡するのがインベントリ。ライセンス違反やEOL確認にも使う。",
       "stem_en": "The PCs, servers, OSes and apps in use were listed, with product names, models, versions and licenses compiled in a register to check for end of support. What is this?",
       "choices_en": [
-        "Inventory",
         "Destruction",
         "Acquisition/procurement process",
+        "Inventory",
         "Certification"
       ],
       "explain_en": "Listing assets in a register and tracking them is inventory, which is also used to check for license violations and EOL.",
       "stem_es": "Se listaron los PC, servidores, SO y aplicaciones en uso, y se recopilaron en un registro nombres de producto, modelos, versiones y licencias para comprobar el fin del soporte. ¿Qué es?",
       "choices_es": [
-        "Inventario",
         "Destrucción",
         "Proceso de adquisición / compra",
+        "Inventario",
         "Certificación"
       ],
       "explain_es": "Listar los activos en un registro y seguirlos es el inventario, que también sirve para detectar incumplimientos de licencias y equipos al final de su vida."
@@ -848,25 +848,25 @@
       "choices": [
         "データ保持",
         "オーナーシップ",
-        "列挙",
-        "サニタイゼーション"
+        "サニタイゼーション",
+        "列挙"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "条件に基づき機器やサービス情報を洗い出すのが列挙。台帳の継続記録であるインベントリと対比して覚える。",
       "stem_en": "A network scan discovered, on the spot, the IP/MAC addresses, open ports and OS details of devices in an IP range. Which activity, distinct from updating the inventory register, is this?",
       "choices_en": [
         "Data retention",
         "Ownership",
-        "Enumeration",
-        "Sanitization"
+        "Sanitization",
+        "Enumeration"
       ],
       "explain_en": "Discovering devices and service information based on criteria is enumeration; remember it in contrast to inventory, the ongoing register.",
       "stem_es": "Un escaneo de red descubrió al momento las direcciones IP/MAC, los puertos abiertos y los datos del SO de los dispositivos de un rango de IP. ¿Qué actividad, distinta de actualizar el registro de inventario, es esta?",
       "choices_es": [
         "Retención de datos",
         "Propiedad",
-        "Enumeración",
-        "Saneamiento"
+        "Saneamiento",
+        "Enumeración"
       ],
       "explain_es": "Descubrir dispositivos e información de servicios según unos criterios es la enumeración; recuérdala en contraste con el inventario, que es el registro continuo."
     },
@@ -902,27 +902,27 @@
       "term": "d-2-destruction",
       "stem": "再利用しないHDDを専用シュレッダーで1cm以下に粉砕し、破片からのデータ復元を事実上不可能にした。これはどれか。",
       "choices": [
-        "破壊",
         "インベントリ",
         "オーナーシップ",
-        "列挙"
+        "列挙",
+        "破壊"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "メディアを物理的に破壊して復元不能にするのが破壊。穿孔・消磁・粉砕が典型。",
       "stem_en": "HDDs that won't be reused were ground into pieces under 1 cm in a dedicated shredder, making data recovery from the fragments practically impossible. What is this?",
       "choices_en": [
-        "Destruction",
         "Inventory",
         "Ownership",
-        "Enumeration"
+        "Enumeration",
+        "Destruction"
       ],
       "explain_en": "Physically destroying media so nothing can be recovered is destruction; drilling, degaussing and shredding are typical.",
       "stem_es": "Los discos duros que no se reutilizarán se trituraron en trozos de menos de 1 cm en una trituradora especial, haciendo prácticamente imposible recuperar datos de los fragmentos. ¿Qué es?",
       "choices_es": [
-        "Destrucción",
         "Inventario",
         "Propiedad",
-        "Enumeración"
+        "Enumeración",
+        "Destrucción"
       ],
       "explain_es": "Destruir físicamente los medios para que nada pueda recuperarse es la destrucción; la perforación, la desmagnetización y el triturado son típicos."
     },
@@ -930,25 +930,25 @@
       "term": "d-2-certification",
       "stem": "機密HDDの廃棄で、自社処理だけでは対外的な証明が難しいため、第三者機関に依頼し破壊証明書を取得した。主にどの概念か。",
       "choices": [
-        "インベントリ",
         "第三者認証",
+        "インベントリ",
         "列挙",
         "取得／調達プロセス"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "適正な廃棄・消去を第三者の証明で示すのが Certification（第三者認証）。廃棄の信頼性を高める。",
       "stem_en": "When disposing of confidential HDDs, in-house processing alone is hard to prove to outsiders, so a third party was hired and a certificate of destruction obtained. Which concept is this mainly?",
       "choices_en": [
-        "Inventory",
         "Certification",
+        "Inventory",
         "Enumeration",
         "Acquisition/procurement process"
       ],
       "explain_en": "Showing proper disposal or erasure through third-party proof is certification, which makes disposal more trustworthy.",
       "stem_es": "Al desechar discos con datos confidenciales, es difícil demostrar a terceros un tratamiento solo interno, así que se contrató a una entidad externa y se obtuvo un certificado de destrucción. ¿Qué concepto es principalmente?",
       "choices_es": [
-        "Inventario",
         "Certificación",
+        "Inventario",
         "Enumeración",
         "Proceso de adquisición / compra"
       ],
@@ -959,25 +959,25 @@
       "stem": "PC廃棄の前に、必要な業務データを別媒体へバックアップし、法定保存期間内の財務データは期間終了まで残す方針にした。これはどれか。",
       "choices": [
         "破壊のみ",
-        "列挙",
         "データ保持",
+        "列挙",
         "オーナーシップ"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "廃棄・破壊の前に、法律や業務要件に沿って必要データを保持するのがデータ保持。",
       "stem_en": "Before disposing of PCs, the policy is to back up needed business data to other media and keep financial data until its legal retention period ends. What is this?",
       "choices_en": [
         "Destruction only",
-        "Enumeration",
         "Data retention",
+        "Enumeration",
         "Ownership"
       ],
       "explain_en": "Keeping needed data according to laws and business requirements before disposal or destruction is data retention.",
       "stem_es": "Antes de desechar los PC, la política es copiar los datos de negocio necesarios en otros medios y conservar los datos financieros hasta que termine su plazo legal de conservación. ¿Qué es?",
       "choices_es": [
         "Solo destrucción",
-        "Enumeración",
         "Retención de datos",
+        "Enumeración",
         "Propiedad"
       ],
       "explain_es": "Conservar los datos necesarios según la ley y los requisitos del negocio antes de desechar o destruir es la retención de datos."
@@ -989,26 +989,26 @@
       "stem": "Webサーバーで開いているポートや古いプラグイン版、典型的な入力系弱点の有無を自動ツールで広く洗い出した。これはどれか。",
       "choices": [
         "侵入テストのみ",
-        "脆弱性スキャン",
         "バグバウンティ",
-        "サイバー保険"
+        "サイバー保険",
+        "脆弱性スキャン"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "システムやネットワークの既知弱点を検査して洗い出すのが脆弱性スキャン。結果はCVE等と照合する。",
       "stem_en": "An automated tool broadly checked a web server for open ports, outdated plugin versions and typical input-related weaknesses. What is this?",
       "choices_en": [
         "Penetration testing only",
-        "Vulnerability scan",
         "Bug bounty",
-        "Cyber insurance"
+        "Cyber insurance",
+        "Vulnerability scan"
       ],
       "explain_en": "Inspecting systems and networks for known weaknesses is a vulnerability scan; results are matched against CVEs and the like.",
       "stem_es": "Una herramienta automatizada revisó a fondo un servidor web en busca de puertos abiertos, versiones antiguas de complementos y debilidades típicas de entrada. ¿Qué es?",
       "choices_es": [
         "Solo pruebas de penetración",
-        "Análisis de vulnerabilidades",
         "Bug bounty",
-        "Ciberseguro"
+        "Ciberseguro",
+        "Análisis de vulnerabilidades"
       ],
       "explain_es": "Revisar sistemas y redes en busca de debilidades conocidas es un análisis de vulnerabilidades; los resultados se cotejan con CVE y similares."
     },
@@ -1017,25 +1017,25 @@
       "stem": "アプリを起動せずソースコードを解析ツールにかけ、SQLへ入力を直接連結している箇所を発見した。これはどれか。",
       "choices": [
         "動的分析",
-        "ダークウェブ監視",
         "静的な分析",
+        "ダークウェブ監視",
         "セグメンテーション"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "実行せずソース／バイナリを解析するのが静的分析（SAST）。開発初期からの実施が有効。",
       "stem_en": "Without launching the app, its source code was run through an analysis tool, which found places where input is concatenated directly into SQL. What is this?",
       "choices_en": [
         "Dynamic analysis",
-        "Dark web monitoring",
         "Static analysis",
+        "Dark web monitoring",
         "Segmentation"
       ],
       "explain_en": "Analyzing source or binaries without running them is static analysis (SAST); doing it from early in development is effective.",
       "stem_es": "Sin ejecutar la aplicación, se pasó su código fuente por una herramienta de análisis que encontró lugares donde la entrada se concatena directamente en SQL. ¿Qué es?",
       "choices_es": [
         "Análisis dinámico",
-        "Supervisión de la web oscura",
         "Análisis estático",
+        "Supervisión de la web oscura",
         "Segmentación"
       ],
       "explain_es": "Analizar el código fuente o los binarios sin ejecutarlos es el análisis estático (SAST); conviene hacerlo desde el inicio del desarrollo."
@@ -1044,27 +1044,27 @@
       "term": "d-3-dynamic-analysis",
       "stem": "稼働中のWebアプリに対し、入力を送りページ上の挙動を観察してXSSの成立を確認した。これはどれか。",
       "choices": [
-        "動的な分析",
         "静的な分析のみ",
         "CVE採番",
-        "例外措置"
+        "例外措置",
+        "動的な分析"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "アプリを動かしながら入出力や挙動を見るのが動的分析（DAST）。静的で見えにくい問題の補完になる。",
       "stem_en": "Input was sent to a running web app and the page behavior observed to confirm that XSS works. What is this?",
       "choices_en": [
-        "Dynamic analysis",
         "Static analysis only",
         "CVE numbering",
-        "Exception"
+        "Exception",
+        "Dynamic analysis"
       ],
       "explain_en": "Watching inputs, outputs and behavior while the app runs is dynamic analysis (DAST), which complements issues static analysis may miss.",
       "stem_es": "Se envió entrada a una aplicación web en ejecución y se observó el comportamiento de la página para confirmar que el XSS funciona. ¿Qué es?",
       "choices_es": [
-        "Análisis dinámico",
         "Solo análisis estático",
         "Asignación de CVE",
-        "Excepción"
+        "Excepción",
+        "Análisis dinámico"
       ],
       "explain_es": "Observar entradas, salidas y comportamiento mientras la aplicación se ejecuta es el análisis dinámico (DAST), que complementa lo que el estático puede no ver."
     },
@@ -1129,25 +1129,25 @@
       "stem": "セキュリティベンダーの有料フィードを購読し、自社利用ソフトのゼロデイ情報を受けて緊急更新した。これはどれか。",
       "choices": [
         "OSINTのみ",
-        "第三者（独自／サードパーティ）の脅威フィード",
         "コールドサイト",
+        "第三者（独自／サードパーティ）の脅威フィード",
         "偽陰性の意図的作成"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "外部インテリジェンス提供者の独自／サードパーティ脅威フィードを活用する手法。",
       "stem_en": "The company subscribes to a security vendor's paid feed, received zero-day information about software it uses, and updated urgently. What is this?",
       "choices_en": [
         "OSINT only",
-        "Proprietary/third-party threat feeds",
         "Cold site",
+        "Proprietary/third-party threat feeds",
         "Deliberately creating false negatives"
       ],
       "explain_en": "This approach uses proprietary or third-party threat feeds from outside intelligence providers.",
       "stem_es": "La empresa está suscrita a una fuente de pago de un proveedor de seguridad, recibió información de un día cero sobre software que usa y actualizó con urgencia. ¿Qué es?",
       "choices_es": [
         "Solo OSINT",
-        "Fuentes de amenazas propietarias / de terceros",
         "Sitio frío",
+        "Fuentes de amenazas propietarias / de terceros",
         "Crear falsos negativos a propósito"
       ],
       "explain_es": "Este enfoque usa fuentes de amenazas propietarias o de terceros de proveedores de inteligencia externos."
@@ -1156,27 +1156,27 @@
       "term": "d-3-information-sharing-organization",
       "stem": "同業の金融機関が参加するコミュニティで攻撃手法や脆弱性情報を持ち寄り共有している。これはどれか。",
       "choices": [
-        "情報共有組織（ISAC等）",
         "CVSSの計算式のみ",
         "発電機の設置",
-        "静的解析ツールのライセンス"
+        "静的解析ツールのライセンス",
+        "情報共有組織（ISAC等）"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "業界などで脅威情報を継続共有する枠組みが情報共有組織。代表例がISAC。",
       "stem_en": "Financial institutions in the same industry pool and share attack techniques and vulnerability information in a community. What is this?",
       "choices_en": [
-        "Information-sharing organization (e.g., ISAC)",
         "Only the CVSS formula",
         "Installing generators",
-        "Static analysis tool licenses"
+        "Static analysis tool licenses",
+        "Information-sharing organization (e.g., ISAC)"
       ],
       "explain_en": "A framework for ongoing sharing of threat information within an industry is an information-sharing organization; ISACs are the typical example.",
       "stem_es": "Entidades financieras del mismo sector reúnen y comparten técnicas de ataque e información de vulnerabilidades en una comunidad. ¿Qué es?",
       "choices_es": [
-        "Organización de intercambio de información (p. ej., ISAC)",
         "Solo la fórmula de CVSS",
         "Instalación de generadores",
-        "Licencias de herramientas de análisis estático"
+        "Licencias de herramientas de análisis estático",
+        "Organización de intercambio de información (p. ej., ISAC)"
       ],
       "explain_es": "Un marco para compartir de forma continua información de amenazas dentro de un sector es una organización de intercambio de información; los ISAC son el ejemplo típico."
     },
@@ -1184,25 +1184,25 @@
       "term": "d-3-dark-web",
       "stem": "Tor等で到達する匿名サイト上のハッカーフォーラムを監視し、自社関連の攻撃・漏洩情報を収集した。情報源はどれか。",
       "choices": [
-        "ダークウェブ",
         "公開プレスリリースのみ",
+        "ダークウェブ",
         "パッチノートの要約のみ",
         "オンサイトバックアップ"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "匿名性の高い領域から犯罪者・ハッカー動向を把握するのがダークウェブを用いた脅威情報収集。",
       "stem_en": "Hacker forums on anonymous sites reachable via Tor and the like were monitored to gather attack and leak information related to the company. What is the information source?",
       "choices_en": [
-        "Dark web",
         "Public press releases only",
+        "Dark web",
         "Patch note summaries only",
         "Onsite backups"
       ],
       "explain_en": "Learning about criminal and hacker activity from highly anonymous spaces is threat intelligence gathering via the dark web.",
       "stem_es": "Se vigilaron foros de hackers en sitios anónimos accesibles mediante Tor y similares para recopilar información de ataques y filtraciones relacionados con la empresa. ¿Cuál es la fuente de información?",
       "choices_es": [
-        "Web oscura",
         "Solo comunicados de prensa públicos",
+        "Web oscura",
         "Solo resúmenes de notas de parches",
         "Copias de seguridad en el sitio"
       ],
@@ -1212,25 +1212,25 @@
       "term": "d-3-penetration-testing",
       "stem": "サイト運営者の依頼を受けた専門家が、攻撃者視点で入力欄に不正データを送り防御の抜けを検証した。これはどれか。",
       "choices": [
-        "脆弱性スキャンの自動実行のみ",
         "侵入テスト",
+        "脆弱性スキャンの自動実行のみ",
         "サイバー保険の請求",
         "リスク許容度の引き上げのみ"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "許可のもと攻撃者視点で実効性を試すのが侵入テスト（ペネトレーションテスト）。",
       "stem_en": "At the site operator's request, a specialist sent malicious data into input fields from an attacker's perspective to find gaps in the defenses. What is this?",
       "choices_en": [
-        "Running automated vulnerability scans only",
         "Penetration testing",
+        "Running automated vulnerability scans only",
         "Filing a cyber insurance claim",
         "Only raising risk tolerance"
       ],
       "explain_en": "Testing real-world effectiveness from an attacker's view, with permission, is penetration testing.",
       "stem_es": "A petición del responsable del sitio, un especialista envió datos maliciosos a los campos de entrada desde el punto de vista de un atacante para encontrar fallos en las defensas. ¿Qué es?",
       "choices_es": [
-        "Solo ejecutar análisis de vulnerabilidades automáticos",
         "Pruebas de penetración",
+        "Solo ejecutar análisis de vulnerabilidades automáticos",
         "Reclamar al ciberseguro",
         "Solo aumentar la tolerancia al riesgo"
       ],
@@ -1269,26 +1269,26 @@
       "stem": "策定済みセキュリティポリシーが現場で守られているかを、点検や関係者への聞き取りで評価し改善を促した。これはどれか。",
       "choices": [
         "CVSSスコアリングのみ",
-        "システム／プロセスの監査",
         "ダークウェブへの投稿",
-        "パッケージのメジャーアップのみ"
+        "パッケージのメジャーアップのみ",
+        "システム／プロセスの監査"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "方針・標準・規制への準拠を評価するのがシステム／プロセス監査（講義では監視とも呼ぶ）。",
       "stem_en": "Whether established security policies are actually followed was evaluated through inspections and interviews, and improvements were encouraged. What is this?",
       "choices_en": [
         "CVSS scoring only",
-        "System/process audit",
         "Posting on the dark web",
-        "Only major package upgrades"
+        "Only major package upgrades",
+        "System/process audit"
       ],
       "explain_en": "Evaluating compliance with policies, standards and regulations is a system/process audit (the lesson also calls it monitoring).",
       "stem_es": "Se evaluó mediante inspecciones y entrevistas si las políticas de seguridad establecidas se cumplen en la práctica, y se impulsaron mejoras. ¿Qué es?",
       "choices_es": [
         "Solo puntuación CVSS",
-        "Auditoría de sistemas / procesos",
         "Publicar en la web oscura",
-        "Solo actualizaciones mayores de paquetes"
+        "Solo actualizaciones mayores de paquetes",
+        "Auditoría de sistemas / procesos"
       ],
       "explain_es": "Evaluar el cumplimiento de políticas, estándares y normativas es una auditoría de sistemas o procesos (la lección también lo llama supervisión)."
     },
@@ -1296,25 +1296,25 @@
       "term": "d-3-false-positive",
       "stem": "スキャナが「SQLインジェクションあり」と出したが、手動確認では成立せず問題なしだった。この誤判定はどれか。",
       "choices": [
-        "偽陰性",
         "偽陽性",
+        "偽陰性",
         "免除",
         "CVE"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "実際は問題ないのに問題ありと出すのが偽陽性。放置すると無駄な対応が増える。",
       "stem_en": "A scanner reported \"SQL injection present,\" but a manual check showed it didn't work and there was no problem. Which misjudgment is this?",
       "choices_en": [
-        "False negative",
         "False positive",
+        "False negative",
         "Exemption",
         "CVE"
       ],
       "explain_en": "Reporting a problem when there isn't one is a false positive; left unchecked, it creates wasted work.",
       "stem_es": "Un escáner informó de «inyección SQL presente», pero una comprobación manual mostró que no funcionaba y no había problema. ¿Qué error de juicio es?",
       "choices_es": [
-        "Falso negativo",
         "Falso positivo",
+        "Falso negativo",
         "Exención",
         "CVE"
       ],
@@ -1352,25 +1352,25 @@
       "term": "d-3-prioritize",
       "stem": "発見した多数の脆弱性のうち、顧客DB侵害につながるものを先に直し、影響がごく一部のものは後回しにした。このプロセスはどれか。",
       "choices": [
-        "優先順位付け",
         "保険加入のみ",
+        "優先順位付け",
         "OSINTの定義",
         "静的解析の禁止"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "組織への影響などに基づき修正順を決めるのが優先順位付け。",
       "stem_en": "Of the many vulnerabilities found, those that could lead to a customer database breach were fixed first, and ones affecting only a small part were deferred. What process is this?",
       "choices_en": [
-        "Prioritization",
         "Buying insurance only",
+        "Prioritization",
         "Defining OSINT",
         "Banning static analysis"
       ],
       "explain_en": "Deciding the order of fixes based on impact to the organization is prioritization.",
       "stem_es": "De las muchas vulnerabilidades halladas, se corrigieron primero las que podían llevar a una intrusión en la base de datos de clientes y se aplazaron las que afectaban a una parte mínima. ¿Qué proceso es?",
       "choices_es": [
-        "Priorización",
         "Solo contratar un seguro",
+        "Priorización",
         "Definir OSINT",
         "Prohibir el análisis estático"
       ],
@@ -1381,25 +1381,25 @@
       "stem": "ある任意コード実行の弱点を、国際的な基準で複数特性を採点し0〜10の数値で深刻度を表した。これはどれか。",
       "choices": [
         "CVE",
-        "CVSS",
         "ISAC",
+        "CVSS",
         "免除"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "深刻度を定量スコア（0〜10等）で示すのがCVSS。優先順位付けの根拠になる。",
       "stem_en": "An arbitrary-code-execution weakness was scored on several characteristics under an international standard, and its severity expressed as a number from 0 to 10. What is this?",
       "choices_en": [
         "CVE",
-        "CVSS",
         "ISAC",
+        "CVSS",
         "Exemption"
       ],
       "explain_en": "Showing severity as a quantitative score (0–10, etc.) is CVSS, which supports prioritization.",
       "stem_es": "Una debilidad de ejecución de código arbitrario se puntuó en varias características según un estándar internacional y su gravedad se expresó con un número de 0 a 10. ¿Qué es?",
       "choices_es": [
         "CVE",
-        "CVSS",
         "ISAC",
+        "CVSS",
         "Exención"
       ],
       "explain_es": "Expresar la gravedad con una puntuación cuantitativa (de 0 a 10, etc.) es CVSS, que sirve de base para priorizar."
@@ -1436,26 +1436,26 @@
       "term": "d-3-vulnerability-classification",
       "stem": "診断で出た弱点を、インジェクションや認証不備などOWASP Top 10の類型にマッピングして傾向を見た。これはどれか。",
       "choices": [
-        "脆弱性の分類",
         "パッチのロールバックのみ",
         "ダークウェブへの移行",
+        "脆弱性の分類",
         "UPSの冗長化"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "共通の特徴でグループ化するのが脆弱性の分類。OWASP Top 10は代表例。",
       "stem_en": "Weaknesses found in an assessment were mapped to OWASP Top 10 categories such as injection and broken authentication to see trends. What is this?",
       "choices_en": [
-        "Vulnerability classification",
         "Patch rollback only",
         "Moving to the dark web",
+        "Vulnerability classification",
         "Redundant UPS"
       ],
       "explain_en": "Grouping by common characteristics is vulnerability classification; the OWASP Top 10 is the typical example.",
       "stem_es": "Las debilidades halladas en una evaluación se asignaron a categorías del OWASP Top 10, como inyección o autenticación defectuosa, para ver tendencias. ¿Qué es?",
       "choices_es": [
-        "Clasificación de vulnerabilidades",
         "Solo revertir parches",
         "Trasladarse a la web oscura",
+        "Clasificación de vulnerabilidades",
         "SAI redundante"
       ],
       "explain_es": "Agrupar por características comunes es la clasificación de vulnerabilidades; el OWASP Top 10 es el ejemplo típico."
@@ -1464,26 +1464,26 @@
       "term": "d-3-environmental-variables",
       "stem": "バックエンドがOS上の設定からDBのホストやパスワードを読んでおり、サーバー侵害時に接続情報が抜かれるリスクを分析した。講義で強調される観点はどれか。",
       "choices": [
-        "環境変数",
         "バグバウンティの単価",
         "コールドサイトの広さ",
+        "環境変数",
         "ジェネレータ燃料"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "講義ではプログラムが参照する設定情報（環境変数）の扱いや漏洩リスクを分析観点として扱う。",
       "stem_en": "The backend reads the DB host and password from settings on the OS, and the risk of connection details being stolen if the server is breached was analyzed. Which perspective does the lesson emphasize?",
       "choices_en": [
-        "Environmental variables",
         "The bug bounty payout rate",
         "The size of the cold site",
+        "Environmental variables",
         "Generator fuel"
       ],
       "explain_en": "The lesson treats how settings a program reads (environment variables) are handled, and their leak risk, as an analysis perspective.",
       "stem_es": "El backend lee el host y la contraseña de la BD de la configuración del SO, y se analizó el riesgo de que roben los datos de conexión si se compromete el servidor. ¿Qué perspectiva destaca la lección?",
       "choices_es": [
-        "Variables del entorno",
         "La cuantía de las recompensas del bug bounty",
         "El tamaño del sitio frío",
+        "Variables del entorno",
         "El combustible del generador"
       ],
       "explain_es": "La lección trata como perspectiva de análisis cómo se manejan los ajustes que lee un programa (variables de entorno) y su riesgo de filtración."
@@ -1492,25 +1492,25 @@
       "term": "d-3-risk-tolerance",
       "stem": "個人情報と決済情報を扱うECは漏洩影響が大きいため、受け入れ可能なリスクを極めて低く見積もり厳格運用にした。これはどれか。",
       "choices": [
-        "リスク許容度",
         "偽陽性の増加策",
+        "リスク許容度",
         "パッケージの無視",
         "侵入テストの禁止"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "組織がどの程度のリスクを受け入れられるかの見積もりがリスク許容度。",
       "stem_en": "An online store handling personal and payment data faces a big impact from leaks, so it set its acceptable risk extremely low and runs things strictly. What is this?",
       "choices_en": [
-        "Risk tolerance",
         "A plan to increase false positives",
+        "Risk tolerance",
         "Ignoring packages",
         "Banning penetration tests"
       ],
       "explain_en": "Estimating how much risk an organization can accept is risk tolerance.",
       "stem_es": "Una tienda en línea que maneja datos personales y de pago sufriría mucho con una filtración, así que fijó un riesgo aceptable muy bajo y opera de forma estricta. ¿Qué es?",
       "choices_es": [
-        "Tolerancia al riesgo",
         "Un plan para aumentar los falsos positivos",
+        "Tolerancia al riesgo",
         "Ignorar los paquetes",
         "Prohibir las pruebas de penetración"
       ],
@@ -1521,26 +1521,26 @@
       "stem": "ベンダーが公開した修正プログラムを計画停止時間内に適用し、印刷サービス関連の重大な弱点を塞いだ。これはどれか。",
       "choices": [
         "保険への加入のみ",
-        "パッチ適用",
         "偽陰性の放置",
-        "OSINTの購読のみ"
+        "OSINTの購読のみ",
+        "パッチ適用"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "ベンダー提供の修正を適用して脆弱性を塞ぐのがパッチ（パッチ適用）。",
       "stem_en": "A fix released by the vendor was applied during a planned downtime window, closing a serious weakness in the print service. What is this?",
       "choices_en": [
         "Buying insurance only",
-        "Patching",
         "Leaving false negatives alone",
-        "Subscribing to OSINT only"
+        "Subscribing to OSINT only",
+        "Patching"
       ],
       "explain_en": "Applying vendor-provided fixes to close vulnerabilities is patching.",
       "stem_es": "Se aplicó una corrección publicada por el fabricante durante una ventana de parada planificada, cerrando una debilidad grave del servicio de impresión. ¿Qué es?",
       "choices_es": [
         "Solo contratar un seguro",
-        "Aplicación de parches",
         "Dejar los falsos negativos sin tratar",
-        "Solo suscribirse a OSINT"
+        "Solo suscribirse a OSINT",
+        "Aplicación de parches"
       ],
       "explain_es": "Aplicar las correcciones del fabricante para cerrar vulnerabilidades es aplicar parches."
     },
@@ -1549,25 +1549,25 @@
       "stem": "技術対策だけでは防ぎきれない前提で、漏洩時の賠償やシステム復旧費をカバーするサイバー向けの契約に加入した。これはどれか。",
       "choices": [
         "静的分析",
-        "保険",
         "CVSSの再計算のみ",
+        "保険",
         "ポートスキャン"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "損害を金銭補償し経済損失を抑えるのが保険。技術対策の代替ではなく補完・リスク移転。",
       "stem_en": "Assuming technical measures can't stop everything, the company signed a cyber policy covering damages and system recovery costs after a leak. What is this?",
       "choices_en": [
         "Static analysis",
-        "Insurance",
         "Only recalculating CVSS",
+        "Insurance",
         "Port scanning"
       ],
       "explain_en": "Financially compensating for losses to limit economic damage is insurance: a complement and risk transfer, not a substitute for technical measures.",
       "stem_es": "Partiendo de que las medidas técnicas no pueden frenarlo todo, la empresa contrató una póliza cibernética que cubre indemnizaciones y costes de recuperación tras una filtración. ¿Qué es?",
       "choices_es": [
         "Análisis estático",
-        "Seguro",
         "Solo recalcular el CVSS",
+        "Seguro",
         "Escaneo de puertos"
       ],
       "explain_es": "Compensar económicamente las pérdidas para limitar el daño económico es el seguro: un complemento y una transferencia del riesgo, no un sustituto de las medidas técnicas."
@@ -1604,25 +1604,25 @@
       "term": "d-3-compensating-controls",
       "stem": "互換性の都合でパッチをすぐ当てられない間、該当攻撃をIDS/IPSで検知・遮断してリスクを抑えた。これはどれか。",
       "choices": [
-        "免除（対応不要）のみ",
         "代替的対策",
+        "免除（対応不要）のみ",
         "OSINTの停止",
         "ホットサイトの撤去"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "本来の対策が取れないときに別手段で同等に近い効果を狙うのが代替的対策（補償統制）。",
       "stem_en": "While a patch can't be applied right away for compatibility reasons, the attack in question is detected and blocked with IDS/IPS to contain the risk. What is this?",
       "choices_en": [
-        "Exemption (no action needed) only",
         "Compensating controls",
+        "Exemption (no action needed) only",
         "Stopping OSINT",
         "Removing the hot site"
       ],
       "explain_en": "Using other means to achieve a nearly equivalent effect when the primary measure can't be taken is a compensating control.",
       "stem_es": "Mientras no se puede aplicar un parche por compatibilidad, el ataque en cuestión se detecta y bloquea con IDS/IPS para contener el riesgo. ¿Qué es?",
       "choices_es": [
-        "Solo exención (no requiere acción)",
         "Controles compensatorios",
+        "Solo exención (no requiere acción)",
         "Detener OSINT",
         "Retirar el sitio caliente"
       ],
@@ -1632,27 +1632,27 @@
       "term": "d-3-exceptions-exemptions",
       "stem": "基幹系は代替防御を条件にパッチ延期を認め（例外）、完全隔離の非機密ラボ機は対応自体不要と判断した（免除）。まとめて指すのはどれか。",
       "choices": [
-        "例外と免除",
         "脆弱性スキャン",
         "動的分析のみ",
-        "CVSSの廃止"
+        "CVSSの廃止",
+        "例外と免除"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "例外は標準と異なる対応の許可、免除は修正・緩和不要との判断。条件と文書化が重要。",
       "stem_en": "Patching of core systems was allowed to be postponed on condition of alternative defenses (exception), and a fully isolated, non-confidential lab machine was judged to need no action at all (exemption). What do these collectively refer to?",
       "choices_en": [
-        "Exceptions and exemptions",
         "Vulnerability scan",
         "Dynamic analysis only",
-        "Abolishing CVSS"
+        "Abolishing CVSS",
+        "Exceptions and exemptions"
       ],
       "explain_en": "An exception permits handling different from the standard; an exemption is a judgment that no fix or mitigation is needed. Conditions and documentation are important.",
       "stem_es": "Se permitió aplazar los parches de los sistemas centrales con la condición de aplicar defensas alternativas (excepción), y se decidió que una máquina de laboratorio aislada y sin datos confidenciales no requería ninguna acción (exención). ¿A qué se refieren en conjunto?",
       "choices_es": [
-        "Excepciones y exenciones",
         "Análisis de vulnerabilidades",
         "Solo análisis dinámico",
-        "Suprimir el CVSS"
+        "Suprimir el CVSS",
+        "Excepciones y exenciones"
       ],
       "explain_es": "Una excepción permite un tratamiento distinto del estándar; una exención es la decisión de que no hace falta corregir ni mitigar. Son importantes las condiciones y la documentación."
     }
@@ -1662,25 +1662,25 @@
       "term": "d-4-systems-monitoring",
       "stem": "WebサーバーのCPU・メモリ・ディスク・ネットワーク指標を継続収集し、応答時間の異常から高負荷を早期に見つける運用をしている。主にどれか。",
       "choices": [
-        "データ損失防止（DLP）",
         "システム監視",
+        "データ損失防止（DLP）",
         "隔離",
         "ベンチマークのみ"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "正常性・可用性・パフォーマンスを継続確認するのがシステム監視。",
       "stem_en": "CPU, memory, disk and network metrics for web servers are collected continuously, and heavy load is caught early from abnormal response times. What is this mainly?",
       "choices_en": [
-        "Data loss prevention (DLP)",
         "Systems monitoring",
+        "Data loss prevention (DLP)",
         "Quarantine",
         "Benchmarks only"
       ],
       "explain_en": "Continuously checking health, availability and performance is systems monitoring.",
       "stem_es": "Se recogen de forma continua las métricas de CPU, memoria, disco y red de los servidores web, y la carga elevada se detecta pronto por tiempos de respuesta anómalos. ¿Qué es principalmente?",
       "choices_es": [
-        "Prevención de pérdida de datos (DLP)",
         "Supervisión de sistemas",
+        "Prevención de pérdida de datos (DLP)",
         "Cuarentena",
         "Solo benchmarks"
       ],
@@ -1690,27 +1690,27 @@
       "term": "d-4-application-monitoring",
       "stem": "業務アプリの応答時間とエラー率を常時チェックし、遅延時に管理者へ通知する。主にどれか。",
       "choices": [
-        "アプリケーション監視",
         "NetFlow",
         "サニタイゼーション",
-        "コールドサイト"
+        "コールドサイト",
+        "アプリケーション監視"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "ソフトウェアの可用性・パフォーマンス・エラーを継続追跡するのがアプリケーション監視。",
       "stem_en": "A business app's response time and error rate are checked constantly, and admins are notified when it slows down. What is this mainly?",
       "choices_en": [
-        "Application monitoring",
         "NetFlow",
         "Sanitization",
-        "Cold site"
+        "Cold site",
+        "Application monitoring"
       ],
       "explain_en": "Continuously tracking software availability, performance and errors is application monitoring.",
       "stem_es": "Se comprueban constantemente el tiempo de respuesta y la tasa de errores de una aplicación de negocio, y se avisa a los administradores cuando se ralentiza. ¿Qué es principalmente?",
       "choices_es": [
-        "Supervisión de aplicaciones",
         "NetFlow",
         "Saneamiento",
-        "Sitio frío"
+        "Sitio frío",
+        "Supervisión de aplicaciones"
       ],
       "explain_es": "Seguir de forma continua la disponibilidad, el rendimiento y los errores del software es la supervisión de aplicaciones."
     },
@@ -1747,26 +1747,26 @@
       "stem": "多数サーバーに散らばるログを中央の収集サーバーへ転送し、1箇所で管理して障害調査を速くした。これはどれか。",
       "choices": [
         "隔離",
-        "ログ集約",
         "エージェントレスのみ",
-        "破壊"
+        "破壊",
+        "ログ集約"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "機器・サーバーのログを一箇所に集めて管理するのがログ集約。",
       "stem_en": "Logs scattered across many servers are forwarded to a central collection server and managed in one place, speeding up troubleshooting. What is this?",
       "choices_en": [
         "Quarantine",
-        "Log aggregation",
         "Agentless only",
-        "Destruction"
+        "Destruction",
+        "Log aggregation"
       ],
       "explain_en": "Collecting logs from devices and servers in one place for management is log aggregation.",
       "stem_es": "Los registros repartidos entre muchos servidores se envían a un servidor central de recogida y se gestionan en un solo lugar, lo que agiliza la investigación de fallos. ¿Qué es?",
       "choices_es": [
         "Cuarentena",
-        "Agregación de registros",
         "Solo sin agente",
-        "Destrucción"
+        "Destrucción",
+        "Agregación de registros"
       ],
       "explain_es": "Reunir en un solo lugar los registros de equipos y servidores para gestionarlos es la agregación de registros."
     },
@@ -1774,27 +1774,27 @@
       "term": "d-4-alerting",
       "stem": "CPU使用率が90%を超えたときや、IDSが不正侵入を検知したときに、管理者へ即座に通知する仕組みを入れた。これはどれか。",
       "choices": [
-        "アラート",
         "データ保持",
         "列挙のみ",
-        "マルチクラウド"
+        "マルチクラウド",
+        "アラート"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "異常やセキュリティ問題を検知して関係者へ通知するのがアラート。",
       "stem_en": "A mechanism was added to notify admins immediately when CPU usage exceeds 90% or the IDS detects an intrusion. What is this?",
       "choices_en": [
-        "Alerting",
         "Data retention",
         "Enumeration only",
-        "Multi-cloud"
+        "Multi-cloud",
+        "Alerting"
       ],
       "explain_en": "Detecting anomalies or security problems and notifying the people involved is alerting.",
       "stem_es": "Se añadió un mecanismo que avisa al instante a los administradores cuando el uso de CPU supera el 90 % o el IDS detecta una intrusión. ¿Qué es?",
       "choices_es": [
-        "Alertas",
         "Retención de datos",
         "Solo enumeración",
-        "Multinube"
+        "Multinube",
+        "Alertas"
       ],
       "explain_es": "Detectar anomalías o problemas de seguridad y avisar a las personas implicadas son las alertas."
     },
@@ -1886,25 +1886,25 @@
       "term": "d-4-scap",
       "stem": "OVALなどで機械可読な基準を使い、システムの設定や脆弱性を自動チェックして不適合を報告する枠組みはどれか。",
       "choices": [
-        "NetFlow",
         "SCAP",
+        "NetFlow",
         "UPS",
         "スナップショット"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "セキュリティ設定・脆弱性評価の自動化フレームワークが SCAP。OVAL はその構成要素の一例。",
       "stem_en": "Which framework uses machine-readable standards such as OVAL to automatically check system settings and vulnerabilities and report noncompliance?",
       "choices_en": [
-        "NetFlow",
         "SCAP",
+        "NetFlow",
         "UPS",
         "Snapshot"
       ],
       "explain_en": "SCAP is the framework for automating security configuration and vulnerability assessment; OVAL is one of its components.",
       "stem_es": "¿Qué marco usa estándares legibles por máquina como OVAL para comprobar automáticamente la configuración y las vulnerabilidades de los sistemas e informar de los incumplimientos?",
       "choices_es": [
-        "NetFlow",
         "SCAP",
+        "NetFlow",
         "SAI (UPS)",
         "Instantánea"
       ],
@@ -1915,25 +1915,25 @@
       "stem": "Webアプリの応答時間監視で、アラートを出す閾値を決めるための評価基準・指標として使うものはどれか。",
       "choices": [
         "隔離",
-        "ベンチマーク",
         "発電機",
+        "ベンチマーク",
         "コールドサイト"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "セキュリティ状態を評価するための基準・指標がベンチマーク。",
       "stem_en": "In monitoring a web app's response time, what is used as the evaluation standard or metric for deciding the alert threshold?",
       "choices_en": [
         "Quarantine",
-        "Benchmark",
         "Generator",
+        "Benchmark",
         "Cold site"
       ],
       "explain_en": "Standards and metrics for evaluating security posture are benchmarks.",
       "stem_es": "Al supervisar el tiempo de respuesta de una aplicación web, ¿qué se usa como estándar o métrica de evaluación para decidir el umbral de alerta?",
       "choices_es": [
         "Cuarentena",
-        "Benchmark",
         "Generador",
+        "Benchmark",
         "Sitio frío"
       ],
       "explain_es": "Los estándares y métricas para evaluar el estado de seguridad son los benchmarks."
@@ -1970,25 +1970,25 @@
       "term": "d-4-siem",
       "stem": "数百台のサーバーとネットワーク機器のログを一元収集し、相関分析でセキュリティインシデントを検知・対応支援する中央システムはどれか。",
       "choices": [
-        "SIEM",
         "発電機",
+        "SIEM",
         "コールドサイト",
         "データ保持のみ"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "ログ収集・分析・脅威検知・対処支援の中央管理が SIEM（Security Information and Event Management）。",
       "stem_en": "What central system collects logs from hundreds of servers and network devices, correlates them to detect security incidents, and supports response?",
       "choices_en": [
-        "SIEM",
         "Generator",
+        "SIEM",
         "Cold site",
         "Data retention only"
       ],
       "explain_en": "Central management of log collection, analysis, threat detection and response support is SIEM (Security Information and Event Management).",
       "stem_es": "¿Qué sistema central recoge registros de cientos de servidores y equipos de red, los correlaciona para detectar incidentes de seguridad y ayuda en la respuesta?",
       "choices_es": [
-        "SIEM",
         "Generador",
+        "SIEM",
         "Sitio frío",
         "Solo retención de datos"
       ],
@@ -1998,25 +1998,25 @@
       "term": "d-4-antivirus",
       "stem": "怪しいメール添付に仕込まれたランサムウェアを検知し、端末の感染・ファイル暗号化を防ぐソフトウェアはどれか。",
       "choices": [
-        "NetFlow",
         "アンチウイルス",
+        "NetFlow",
         "ウォームサイト",
         "ログ集約のみ"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "マルウェアの検出・防止・除去を行うのがアンチウイルス。",
       "stem_en": "What software detects ransomware hidden in a suspicious email attachment and prevents device infection and file encryption?",
       "choices_en": [
-        "NetFlow",
         "Antivirus",
+        "NetFlow",
         "Warm site",
         "Log aggregation only"
       ],
       "explain_en": "Detecting, preventing and removing malware is what antivirus does.",
       "stem_es": "¿Qué software detecta un ransomware oculto en un adjunto sospechoso e impide la infección del equipo y el cifrado de archivos?",
       "choices_es": [
-        "NetFlow",
         "Antivirus",
+        "NetFlow",
         "Sitio templado",
         "Solo agregación de registros"
       ],
@@ -2026,26 +2026,26 @@
       "term": "d-4-dlp",
       "stem": "顧客個人情報を含む文書のUSBコピーを検知し、ポリシー違反としてブロックして管理者へアラートした。主にどの対策か。",
       "choices": [
-        "データ損失防止（DLP）",
         "ホットサイト",
         "インフラ監視のみ",
+        "データ損失防止（DLP）",
         "スナップショット"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "機密データの漏えい・不正持ち出しを防ぐのが DLP（Data Loss Prevention）。",
       "stem_en": "A USB copy of a document containing customers' personal data was detected, blocked as a policy violation, and reported to admins. Which measure is this mainly?",
       "choices_en": [
-        "Data loss prevention (DLP)",
         "Hot site",
         "Infrastructure monitoring only",
+        "Data loss prevention (DLP)",
         "Snapshot"
       ],
       "explain_en": "Preventing leaks and unauthorized removal of sensitive data is DLP (Data Loss Prevention).",
       "stem_es": "Se detectó la copia a USB de un documento con datos personales de clientes, se bloqueó por infringir la política y se avisó a los administradores. ¿Qué medida es principalmente?",
       "choices_es": [
-        "Prevención de pérdida de datos (DLP)",
         "Sitio caliente",
         "Solo supervisión de la infraestructura",
+        "Prevención de pérdida de datos (DLP)",
         "Instantánea"
       ],
       "explain_es": "Evitar fugas y salidas no autorizadas de datos sensibles es la DLP (prevención de pérdida de datos)."
@@ -2055,25 +2055,25 @@
       "stem": "普段アクセスの少ない海外拠点サーバーへの大量通信を、送信元／宛先IP・プロトコル・ポートのフロー単位で分析した。使う技術はどれか。",
       "choices": [
         "サニタイゼーション",
-        "NetFlow",
         "コールドサイト",
+        "NetFlow",
         "データ保持"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "Cisco発のフロー単位トラフィック監視技術が NetFlow。",
       "stem_en": "Heavy traffic to an overseas server that's rarely accessed was analyzed per flow, by source/destination IP, protocol and port. What technology is used?",
       "choices_en": [
         "Sanitization",
-        "NetFlow",
         "Cold site",
+        "NetFlow",
         "Data retention"
       ],
       "explain_en": "NetFlow, originally from Cisco, monitors traffic on a per-flow basis.",
       "stem_es": "Se analizó por flujos (IP de origen y destino, protocolo y puerto) un tráfico intenso hacia un servidor en el extranjero al que casi nunca se accede. ¿Qué tecnología se usa?",
       "choices_es": [
         "Saneamiento",
-        "NetFlow",
         "Sitio frío",
+        "NetFlow",
         "Retención de datos"
       ],
       "explain_es": "NetFlow, creado por Cisco, supervisa el tráfico por flujos."
@@ -2085,25 +2085,25 @@
       "stem": "社内サーバーへは業務に必要な特定IPのみ許可し、既知の悪意あるIPへの接続は拒否するようファイアウォールに条件を設定した。これはどれか。",
       "choices": [
         "レピュテーションのみ",
-        "ルール",
         "DKIM",
+        "ルール",
         "ファイル完全性監視"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "許可／拒否の通信条件を定めるのがファイアウォールのルール。最小権限がポイント。",
       "stem_en": "The firewall was configured to allow only specific IPs needed for business to reach internal servers, and to deny connections to known malicious IPs. What is this?",
       "choices_en": [
         "Reputation only",
-        "Rules",
         "DKIM",
+        "Rules",
         "File integrity monitoring"
       ],
       "explain_en": "Defining the traffic conditions to allow or deny is firewall rules; least privilege is the key point.",
       "stem_es": "Se configuró el cortafuegos para que solo las IP necesarias para el negocio lleguen a los servidores internos y para denegar las conexiones a IP maliciosas conocidas. ¿Qué es?",
       "choices_es": [
         "Solo reputación",
-        "Reglas",
         "DKIM",
+        "Reglas",
         "Supervisión de la integridad de archivos"
       ],
       "explain_es": "Definir las condiciones de tráfico que se permiten o deniegan son las reglas del cortafuegos; la clave es el mínimo privilegio."
@@ -2141,26 +2141,26 @@
       "stem": "社内でWebもFTPも使っていないため、ファイアウォールでHTTP/HTTPSやFTP用のポートを閉じ、不要プロトコル通信も遮断した。主に何をしているか。",
       "choices": [
         "DMARCの導入",
-        "ポート、プロトコルの制御",
         "ユーザー行動分析",
-        "グループポリシーのみ"
+        "グループポリシーのみ",
+        "ポート、プロトコルの制御"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "不要なポートやプロトコルを閉じて攻撃面を減らすのが Ports/protocols の考え方。",
       "stem_en": "Since the company uses neither web nor FTP internally, the firewall closed the HTTP/HTTPS and FTP ports and blocked unneeded protocol traffic. What is mainly being done?",
       "choices_en": [
         "Introducing DMARC",
-        "Controlling ports and protocols",
         "User behavior analytics",
-        "Group Policy only"
+        "Group Policy only",
+        "Controlling ports and protocols"
       ],
       "explain_en": "Closing unneeded ports and protocols to reduce the attack surface is the ports/protocols idea.",
       "stem_es": "Como la empresa no usa web ni FTP internamente, el cortafuegos cerró los puertos de HTTP/HTTPS y FTP y bloqueó el tráfico de protocolos innecesarios. ¿Qué se está haciendo principalmente?",
       "choices_es": [
         "Implantar DMARC",
-        "Controlar puertos y protocolos",
         "Análisis del comportamiento de usuarios",
-        "Solo directiva de grupo"
+        "Solo directiva de grupo",
+        "Controlar puertos y protocolos"
       ],
       "explain_es": "Cerrar puertos y protocolos innecesarios para reducir la superficie de ataque es la idea de puertos/protocolos."
     },
@@ -2169,25 +2169,25 @@
       "stem": "IDS/IPSにAI/機械学習を取り入れ、ユーザーの通常行動から外れた動きで未知の脅威や内部不正を早期検知する最新手法を導入した。主にどの観点か。",
       "choices": [
         "SPFレコード",
-        "ブロックルール",
         "IDS/IPSのトレンド",
+        "ブロックルール",
         "コールドサイト"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "最新の脅威動向やAI/ML検知の活用が IDS/IPS のトレンド。",
       "stem_en": "AI/machine learning was added to the IDS/IPS, introducing a modern approach that catches unknown threats and insider misuse early from deviations in users' normal behavior. Which perspective is this mainly?",
       "choices_en": [
         "SPF record",
-        "Block rules",
         "IDS/IPS trends",
+        "Block rules",
         "Cold site"
       ],
       "explain_en": "Leveraging the latest threat trends and AI/ML detection is the IDS/IPS trends topic.",
       "stem_es": "Se incorporó IA/aprendizaje automático al IDS/IPS, con un enfoque moderno que detecta pronto amenazas desconocidas y abusos internos a partir de desviaciones del comportamiento habitual. ¿Qué perspectiva es principalmente?",
       "choices_es": [
         "Registro SPF",
-        "Reglas de bloqueo",
         "Tendencias de IDS/IPS",
+        "Reglas de bloqueo",
         "Sitio frío"
       ],
       "explain_es": "Aprovechar las últimas tendencias de amenazas y la detección con IA/ML es el tema de las tendencias de IDS/IPS."
@@ -2196,27 +2196,27 @@
       "term": "d-5-ids-ips-signatures",
       "stem": "既知マルウェアが特定IPへ通信するパターンを定義し、IDS/IPSに適用して一致時にブロック。シグネチャは定期更新し誤検知も調整している。これはどれか。",
       "choices": [
-        "IDS/IPSのシグネチャ",
         "NAC",
         "コンテンツ分類",
-        "ポートの選択"
+        "ポートの選択",
+        "IDS/IPSのシグネチャ"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "既知攻撃の特徴パターン一致で警告／ブロックするのがシグネチャ。更新と精度調整が重要。",
       "stem_en": "A pattern for known malware communicating with a specific IP was defined and applied to the IDS/IPS, blocking on a match. Signatures are updated regularly and false positives tuned. What is this?",
       "choices_en": [
-        "IDS/IPS signatures",
         "NAC",
         "Content categorization",
-        "Port selection"
+        "Port selection",
+        "IDS/IPS signatures"
       ],
       "explain_en": "Alerting or blocking on pattern matches for known attacks is signatures; updates and accuracy tuning are important.",
       "stem_es": "Se definió el patrón de un malware conocido que se comunica con una IP concreta y se aplicó al IDS/IPS para bloquear cuando coincide. Las firmas se actualizan periódicamente y se ajustan los falsos positivos. ¿Qué es?",
       "choices_es": [
-        "Firmas de IDS/IPS",
         "NAC",
         "Categorización de contenido",
-        "Selección de puertos"
+        "Selección de puertos",
+        "Firmas de IDS/IPS"
       ],
       "explain_es": "Alertar o bloquear por coincidencia de patrones de ataques conocidos son las firmas; son importantes las actualizaciones y el ajuste de precisión."
     },
@@ -2252,27 +2252,27 @@
       "term": "d-5-centralized-proxy",
       "stem": "組織内のすべてのWeb通信を1台のサーバー経由で検査し、危険サイトをブロックしつつアクセスログで可視化した。これはどれか。",
       "choices": [
-        "セントラルプロキシ",
         "SELinux",
         "ファイル完全性監視",
-        "SPF"
+        "SPF",
+        "セントラルプロキシ"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "Web通信を一元管理するプロキシがセントラルプロキシ。ブロックとログ可視化が特徴。",
       "stem_en": "All web traffic in the organization is inspected through a single server, which blocks dangerous sites and gives visibility through access logs. What is this?",
       "choices_en": [
-        "Centralized proxy",
         "SELinux",
         "File integrity monitoring",
-        "SPF"
+        "SPF",
+        "Centralized proxy"
       ],
       "explain_en": "A proxy that centrally manages web traffic is a centralized proxy; blocking and log visibility are its features.",
       "stem_es": "Todo el tráfico web de la organización se inspecciona a través de un único servidor, que bloquea sitios peligrosos y da visibilidad mediante registros de acceso. ¿Qué es?",
       "choices_es": [
-        "Proxy centralizado",
         "SELinux",
         "Supervisión de la integridad de archivos",
-        "SPF"
+        "SPF",
+        "Proxy centralizado"
       ],
       "explain_es": "Un proxy que gestiona de forma centralizada el tráfico web es un proxy centralizado; sus rasgos son el bloqueo y la visibilidad de los registros."
     },
@@ -2280,25 +2280,25 @@
       "term": "d-5-url-scanning",
       "stem": "ユーザーが開こうとしたURLをリアルタイム分析し、既知フィッシングのパターンと一致したためアクセスを遮断した。これはどれか。",
       "choices": [
-        "グループポリシー",
         "URLスキャニング",
+        "グループポリシー",
         "転送方法",
         "ホットサイト"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "アクセス先URLをリアルタイム検査して安全性を判定するのがURLスキャニング。",
       "stem_en": "A URL a user tried to open was analyzed in real time and access was blocked because it matched a known phishing pattern. What is this?",
       "choices_en": [
-        "Group Policy",
         "URL scanning",
+        "Group Policy",
         "Transport method",
         "Hot site"
       ],
       "explain_en": "Inspecting the destination URL in real time to judge its safety is URL scanning.",
       "stem_es": "Se analizó en tiempo real una URL que un usuario intentó abrir y se bloqueó el acceso porque coincidía con un patrón de phishing conocido. ¿Qué es?",
       "choices_es": [
-        "Directiva de grupo",
         "Análisis de URL",
+        "Directiva de grupo",
         "Método de transporte",
         "Sitio caliente"
       ],
@@ -2336,26 +2336,26 @@
       "term": "d-5-block-rules",
       "stem": "カテゴリ一括ではなく、特定のSNSのURLを明示的に禁止リストへ追加してアクセスできなくした。これはどれか。",
       "choices": [
-        "ブロックルール",
         "ジャーナリング",
         "マルチクラウド",
+        "ブロックルール",
         "プロトコルの選択"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "特定サイト／コンテンツを明示禁止するのがブロックルール。カテゴリより細かい制御。",
       "stem_en": "Instead of blocking a whole category, a specific social media site's URL was explicitly added to a deny list so it can't be accessed. What is this?",
       "choices_en": [
-        "Block rules",
         "Journaling",
         "Multi-cloud",
+        "Block rules",
         "Protocol selection"
       ],
       "explain_en": "Explicitly forbidding specific sites or content is block rules, which give finer control than categories.",
       "stem_es": "En lugar de bloquear una categoría entera, se añadió explícitamente la URL de una red social concreta a una lista de denegados para que no se pueda acceder. ¿Qué es?",
       "choices_es": [
-        "Reglas de bloqueo",
         "Registro por diario",
         "Multinube",
+        "Reglas de bloqueo",
         "Selección de protocolos"
       ],
       "explain_es": "Prohibir expresamente sitios o contenidos concretos son las reglas de bloqueo, que dan un control más fino que las categorías."
@@ -2364,25 +2364,25 @@
       "term": "d-5-reputation",
       "stem": "多くのユーザーやベンダーからマルウェア配布と報告されているサイトを、評判スコアに基づき自動で危険と判断して遮断した。これはどれか。",
       "choices": [
-        "レピュテーション",
         "コールドサイト",
+        "レピュテーション",
         "ポートの選択のみ",
         "アカウントロックアウトのみ"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "サイトの評判に基づき許可／拒否するのがレピュテーション。閾値設定で誤検知を抑える。",
       "stem_en": "A site reported by many users and vendors as distributing malware was automatically judged dangerous based on its reputation score and blocked. What is this?",
       "choices_en": [
-        "Reputation",
         "Cold site",
+        "Reputation",
         "Port selection only",
         "Account lockout only"
       ],
       "explain_en": "Allowing or denying based on a site's reputation is reputation filtering; setting thresholds keeps false positives down.",
       "stem_es": "Un sitio señalado por muchos usuarios y proveedores como distribuidor de malware se consideró peligroso automáticamente según su puntuación de reputación y se bloqueó. ¿Qué es?",
       "choices_es": [
-        "Reputación",
         "Sitio frío",
+        "Reputación",
         "Solo selección de puertos",
         "Solo bloqueo de cuentas"
       ],
@@ -2392,25 +2392,25 @@
       "term": "d-5-group-policy",
       "stem": "ドメイン参加PCすべてにOS更新の自動適用、パスワードポリシー、アカウントロックアウトを一括配布した。これはどれか。",
       "choices": [
-        "SELinux",
         "グループポリシー",
+        "SELinux",
         "DMARC",
         "URLスキャニング"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "Windows等でセキュリティ設定を一元管理するのがグループポリシー。",
       "stem_en": "Automatic OS updates, password policies and account lockout were pushed out at once to every domain-joined PC. What is this?",
       "choices_en": [
-        "SELinux",
         "Group Policy",
+        "SELinux",
         "DMARC",
         "URL scanning"
       ],
       "explain_en": "Centrally managing security settings on Windows and similar systems is Group Policy.",
       "stem_es": "Las actualizaciones automáticas del SO, las políticas de contraseñas y el bloqueo de cuentas se distribuyeron a la vez a todos los PC unidos al dominio. ¿Qué es?",
       "choices_es": [
-        "SELinux",
         "Directiva de grupo",
+        "SELinux",
         "DMARC",
         "Análisis de URL"
       ],
@@ -2420,25 +2420,25 @@
       "term": "d-5-selinux",
       "stem": "Linux上でApacheプロセスにラベルを付け、HTMLディレクトリとポート80/443以外へのアクセスをポリシーで禁止した。これはどれか。",
       "choices": [
-        "グループポリシー",
         "SELinux",
+        "グループポリシー",
         "NAC",
         "コンテンツ分類"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "ラベルとポリシーでプロセスの権限を強制制限するのがSELinux。",
       "stem_en": "On Linux, the Apache process was given a label, and policy forbids it from accessing anything other than the HTML directory and ports 80/443. What is this?",
       "choices_en": [
-        "Group Policy",
         "SELinux",
+        "Group Policy",
         "NAC",
         "Content categorization"
       ],
       "explain_en": "Forcibly restricting process privileges with labels and policies is SELinux.",
       "stem_es": "En Linux, se asignó una etiqueta al proceso de Apache y la política le prohíbe acceder a nada que no sea el directorio HTML y los puertos 80/443. ¿Qué es?",
       "choices_es": [
-        "Directiva de grupo",
         "SELinux",
+        "Directiva de grupo",
         "NAC",
         "Categorización de contenido"
       ],
@@ -2448,26 +2448,26 @@
       "term": "d-5-protocol-selection",
       "stem": "Webは平文HTTPではなくHTTPS、メールもTLSで保護される方式を選び、盗聴・改ざんリスクを下げた。主に何をしているか。",
       "choices": [
-        "プロトコルの選択",
         "ファイル完全性監視",
         "レピュテーションのみ",
+        "プロトコルの選択",
         "アクセスリストの削除"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "より安全な（暗号化）プロトコルを選ぶのがプロトコルの選択。",
       "stem_en": "HTTPS was chosen for the web instead of plaintext HTTP, and TLS-protected methods for email, lowering the risk of eavesdropping and tampering. What is mainly being done?",
       "choices_en": [
-        "Protocol selection",
         "File integrity monitoring",
         "Reputation only",
+        "Protocol selection",
         "Deleting access lists"
       ],
       "explain_en": "Choosing more secure (encrypted) protocols is protocol selection.",
       "stem_es": "Se eligió HTTPS para la web en lugar de HTTP en texto claro, y métodos protegidos con TLS para el correo, reduciendo el riesgo de escuchas y manipulaciones. ¿Qué se está haciendo principalmente?",
       "choices_es": [
-        "Selección de protocolos",
         "Supervisión de la integridad de archivos",
         "Solo reputación",
+        "Selección de protocolos",
         "Eliminar listas de acceso"
       ],
       "explain_es": "Elegir protocolos más seguros (cifrados) es la selección de protocolos."
@@ -2476,25 +2476,25 @@
       "term": "d-5-port-selection",
       "stem": "SSHの既定ポート22番を別番号に変え、ポートスキャンや自動化された攻撃での発見を難しくした。これはどれか。",
       "choices": [
-        "ポートの選択",
         "DLP",
+        "ポートの選択",
         "SPF",
         "ユーザー行動分析"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "サービス待ち受けポートを適切に選ぶ（非標準化含む）のがポートの選択。",
       "stem_en": "SSH's default port 22 was changed to another number, making it harder to find through port scans and automated attacks. What is this?",
       "choices_en": [
-        "Port selection",
         "DLP",
+        "Port selection",
         "SPF",
         "User behavior analytics"
       ],
       "explain_en": "Choosing listening ports for services appropriately (including nonstandard ones) is port selection.",
       "stem_es": "Se cambió el puerto predeterminado 22 de SSH por otro número, lo que dificulta encontrarlo con escaneos de puertos y ataques automatizados. ¿Qué es?",
       "choices_es": [
-        "Selección de puertos",
         "DLP",
+        "Selección de puertos",
         "SPF",
         "Análisis del comportamiento de usuarios"
       ],
@@ -2504,27 +2504,27 @@
       "term": "d-5-transport-method",
       "stem": "重要ファイルを平文FTPではなく、TLSやSFTP/FTPSなど暗号化された通信路で送る方針にした。これはどれか。",
       "choices": [
-        "転送方法",
         "スクリーンサブネット",
         "シグネチャのみ",
-        "コールドサイト"
+        "コールドサイト",
+        "転送方法"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "暗号化通信路など安全な送り方を選ぶのが転送方法（Transport method）。",
       "stem_en": "The policy is to send important files not over plaintext FTP but over encrypted channels such as TLS or SFTP/FTPS. What is this?",
       "choices_en": [
-        "Transport method",
         "Screened subnet",
         "Signatures only",
-        "Cold site"
+        "Cold site",
+        "Transport method"
       ],
       "explain_en": "Choosing a secure way to send data, such as an encrypted channel, is the transport method.",
       "stem_es": "La política es enviar los archivos importantes no por FTP en texto claro sino por canales cifrados como TLS o SFTP/FTPS. ¿Qué es?",
       "choices_es": [
-        "Método de transporte",
         "Subred filtrada",
         "Solo firmas",
-        "Sitio frío"
+        "Sitio frío",
+        "Método de transporte"
       ],
       "explain_es": "Elegir una forma segura de enviar los datos, como un canal cifrado, es el método de transporte."
     },
@@ -2532,26 +2532,26 @@
       "term": "d-5-dns-filtering",
       "stem": "名前解決の段階でランサムウェアのC2やフィッシング偽サイトのドメインへの解決を遮断し、端末が到達できないようにした。これはどれか。",
       "choices": [
-        "DNSフィルタリング",
         "ホットサイト",
         "SELinux",
+        "DNSフィルタリング",
         "ブロックルール（ポート80全閉のみ）"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "DNSクエリ段階で悪質ドメインを遮断するのがDNSフィルタリング。",
       "stem_en": "At the name-resolution stage, resolving domains for ransomware C2 and fake phishing sites was blocked so devices can't reach them. What is this?",
       "choices_en": [
-        "DNS filtering",
         "Hot site",
         "SELinux",
+        "DNS filtering",
         "Block rules (only closing all of port 80)"
       ],
       "explain_en": "Blocking malicious domains at the DNS query stage is DNS filtering.",
       "stem_es": "En la fase de resolución de nombres, se bloqueó la resolución de dominios de C2 de ransomware y de sitios de phishing falsos para que los equipos no puedan llegar a ellos. ¿Qué es?",
       "choices_es": [
-        "Filtrado DNS",
         "Sitio caliente",
         "SELinux",
+        "Filtrado DNS",
         "Reglas de bloqueo (solo cerrar todo el puerto 80)"
       ],
       "explain_es": "Bloquear dominios maliciosos en la fase de consulta DNS es el filtrado DNS."
@@ -2561,26 +2561,26 @@
       "stem": "自社ドメインを詐称したフィッシングメールがSPF/DKIM認証に失敗したため、DNSに置いた方針に従い受信側が拒否した。この方針の仕組みはどれか。",
       "choices": [
         "NAC",
-        "DMARC",
         "エージェントベース",
-        "ポート、プロトコル"
+        "ポート、プロトコル",
+        "DMARC"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "SPFとDKIMの結果を用い、失敗時の扱いを定めるのがDMARC。",
       "stem_en": "A phishing email spoofing the company domain failed SPF/DKIM authentication, so the receiver rejected it according to a policy published in DNS. What mechanism defines this policy?",
       "choices_en": [
         "NAC",
-        "DMARC",
         "Agent-based",
-        "Ports and protocols"
+        "Ports and protocols",
+        "DMARC"
       ],
       "explain_en": "DMARC uses SPF and DKIM results to define how to handle mail that fails.",
       "stem_es": "Un correo de phishing que suplantaba el dominio de la empresa no superó la autenticación SPF/DKIM, así que el receptor lo rechazó según una política publicada en el DNS. ¿Qué mecanismo define esta política?",
       "choices_es": [
         "NAC",
-        "DMARC",
         "Basado en agente",
-        "Puertos y protocolos"
+        "Puertos y protocolos",
+        "DMARC"
       ],
       "explain_es": "DMARC usa los resultados de SPF y DKIM para definir qué hacer con el correo que no los supera."
     },
@@ -2589,25 +2589,25 @@
       "stem": "送信メールサーバーが秘密鍵で署名し、公開鍵をDNSのTXTに公開して、受信側が改ざんされていない正当なメールか検証できるようにした。これはどれか。",
       "choices": [
         "SPF",
-        "DKIM",
         "FIM",
+        "DKIM",
         "セントラルプロキシ"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "デジタル署名でメールの正当性・改ざん検知を行うのがDKIM。",
       "stem_en": "The sending mail server signs with a private key and publishes the public key in a DNS TXT record so receivers can verify the mail is legitimate and unaltered. What is this?",
       "choices_en": [
         "SPF",
-        "DKIM",
         "FIM",
+        "DKIM",
         "Centralized proxy"
       ],
       "explain_en": "Verifying email legitimacy and detecting tampering with a digital signature is DKIM.",
       "stem_es": "El servidor de correo saliente firma con una clave privada y publica la clave pública en un registro TXT del DNS para que los receptores verifiquen que el correo es legítimo y no se ha alterado. ¿Qué es?",
       "choices_es": [
         "SPF",
-        "DKIM",
         "FIM",
+        "DKIM",
         "Proxy centralizado"
       ],
       "explain_es": "Verificar la legitimidad del correo y detectar manipulaciones con una firma digital es DKIM."
@@ -2644,27 +2644,27 @@
       "term": "d-5-fim",
       "stem": "重要システムファイルのハッシュをベースライン保存し、値が変わったらアラートして不正な改変を検知する運用にした。これはどれか。",
       "choices": [
-        "ファイル完全性監視",
         "DMARC",
         "アクセスリスト",
-        "ポートの選択"
+        "ポートの選択",
+        "ファイル完全性監視"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "ハッシュ比較で改変を検知するのがファイル完全性監視（FIM）。",
       "stem_en": "Hashes of important system files are saved as a baseline, and an alert fires when a value changes, detecting unauthorized modification. What is this?",
       "choices_en": [
-        "File integrity monitoring",
         "DMARC",
         "Access list",
-        "Port selection"
+        "Port selection",
+        "File integrity monitoring"
       ],
       "explain_en": "Detecting modification by comparing hashes is file integrity monitoring (FIM).",
       "stem_es": "Los hashes de archivos importantes del sistema se guardan como línea base y salta una alerta si cambia algún valor, lo que detecta modificaciones no autorizadas. ¿Qué es?",
       "choices_es": [
-        "Supervisión de la integridad de archivos",
         "DMARC",
         "Lista de acceso",
-        "Selección de puertos"
+        "Selección de puertos",
+        "Supervisión de la integridad de archivos"
       ],
       "explain_es": "Detectar modificaciones comparando hashes es la supervisión de la integridad de archivos (FIM)."
     },
@@ -2672,26 +2672,26 @@
       "term": "d-5-dlp",
       "stem": "機密データを特定し、従業員が意図せず外部へ持ち出したり流出させたりしないよう監視・制御する仕組みを導入した。これはどれか。",
       "choices": [
-        "DLP",
         "IDSシグネチャのみ",
         "コールドサイト",
+        "DLP",
         "ポートスキャン"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "重要情報の漏洩防止がDLP（Data Loss Prevention）。",
       "stem_en": "A system was introduced that identifies confidential data and monitors and controls it so employees don't unintentionally take it outside or leak it. What is this?",
       "choices_en": [
-        "DLP",
         "IDS signatures only",
         "Cold site",
+        "DLP",
         "Port scan"
       ],
       "explain_en": "Preventing leaks of important information is DLP (Data Loss Prevention).",
       "stem_es": "Se implantó un sistema que identifica los datos confidenciales y los supervisa y controla para que los empleados no los saquen ni filtren sin querer. ¿Qué es?",
       "choices_es": [
-        "DLP",
         "Solo firmas del IDS",
         "Sitio frío",
+        "DLP",
         "Escaneo de puertos"
       ],
       "explain_es": "Evitar fugas de información importante es la DLP (prevención de pérdida de datos)."
@@ -2700,27 +2700,27 @@
       "term": "d-5-nac",
       "stem": "社員のスマホを社内網へつなぐ前にOS更新・パッチ・AV稼働を確認し、未準拠なら隔離セグメントへ回してリソースを制限した。これはどれか。",
       "choices": [
-        "NAC",
         "DKIM",
         "レピュテーションのみ",
-        "グループポリシーのみ"
+        "グループポリシーのみ",
+        "NAC"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "接続前の健全性検証と非準拠端末の制限／拒否がNAC。",
       "stem_en": "Before an employee's phone joins the internal network, OS updates, patches and antivirus are checked; noncompliant devices are moved to an isolated segment with limited resources. What is this?",
       "choices_en": [
-        "NAC",
         "DKIM",
         "Reputation only",
-        "Group Policy only"
+        "Group Policy only",
+        "NAC"
       ],
       "explain_en": "Verifying device health before connection and restricting or denying noncompliant devices is NAC.",
       "stem_es": "Antes de que el móvil de un empleado se una a la red interna, se comprueban las actualizaciones del SO, los parches y el antivirus; los que no cumplen pasan a un segmento aislado con recursos limitados. ¿Qué es?",
       "choices_es": [
-        "NAC",
         "DKIM",
         "Solo reputación",
-        "Solo directiva de grupo"
+        "Solo directiva de grupo",
+        "NAC"
       ],
       "explain_es": "Verificar el estado del equipo antes de conectarlo y restringir o denegar los que no cumplen es NAC."
     },
@@ -2756,25 +2756,25 @@
       "term": "d-5-uba",
       "stem": "普段アクセスしないシステムへの突然のログインや、機密ファイルの大量ダウンロードを、通常行動からの逸脱として検知した。これはどれか。",
       "choices": [
-        "ユーザー行動分析",
         "スクリーンサブネット",
+        "ユーザー行動分析",
         "ポート、プロトコル",
         "SELinuxラベルのみ"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "行動ベースラインからの逸脱検知がユーザー行動分析（UBA）。乗っ取り・内部不正の予兆に有効。",
       "stem_en": "A sudden login to a system the user doesn't normally access, and mass downloads of confidential files, were detected as deviations from normal behavior. What is this?",
       "choices_en": [
-        "User behavior analytics",
         "Screened subnet",
+        "User behavior analytics",
         "Ports and protocols",
         "SELinux labels only"
       ],
       "explain_en": "Detecting deviations from a behavioral baseline is user behavior analytics (UBA), effective for spotting early signs of account takeover or insider misuse.",
       "stem_es": "Un inicio de sesión repentino en un sistema al que el usuario no suele acceder y descargas masivas de archivos confidenciales se detectaron como desviaciones del comportamiento habitual. ¿Qué es?",
       "choices_es": [
-        "Análisis del comportamiento de usuarios",
         "Subred filtrada",
+        "Análisis del comportamiento de usuarios",
         "Puertos y protocolos",
         "Solo etiquetas de SELinux"
       ],
@@ -2786,25 +2786,25 @@
       "term": "d-6-provisioning",
       "stem": "新入社員に各システムのIDを発行して最小限の権限を付け、退職時はアカウントを無効化して全権限を取り消す運用を導入した。これは主にどれか。",
       "choices": [
-        "アテステーションのみ",
         "プロビジョニング（とデプロビジョニング）",
+        "アテステーションのみ",
         "MAC",
         "パスワードレス"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "アカウント発行と権限付与、退職時の無効化・取消しがプロビジョニング／デプロビジョニングの中核。",
       "stem_en": "The company issues IDs for each system to new hires with minimal rights, and on departure disables accounts and revokes all rights. What is this mainly?",
       "choices_en": [
-        "Attestation only",
         "Provisioning (and deprovisioning)",
+        "Attestation only",
         "MAC",
         "Passwordless"
       ],
       "explain_en": "Issuing accounts and granting rights, then disabling and revoking them on departure, is the core of provisioning/deprovisioning.",
       "stem_es": "La empresa crea ID en cada sistema para las nuevas incorporaciones con permisos mínimos y, al salir, desactiva las cuentas y revoca todos los permisos. ¿Qué es principalmente?",
       "choices_es": [
-        "Solo atestación",
         "Aprovisionamiento (y desaprovisionamiento)",
+        "Solo atestación",
         "MAC",
         "Sin contraseña"
       ],
@@ -2842,27 +2842,27 @@
       "term": "d-6-identity-proofing",
       "stem": "アカウント申請時に人事情報と身分証明書を照合し、申請者が真正な社員であることを確認した。これはどれか。",
       "choices": [
-        "アイデンティティ・プルーフィング",
         "時間帯制限",
         "DAC",
-        "パスワードの再利用"
+        "パスワードの再利用",
+        "アイデンティティ・プルーフィング"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "主張するアイデンティティが本物かを確認するのが Identity proofing（本人確認）。",
       "stem_en": "When an account was requested, HR records and an ID document were cross-checked to confirm the applicant is a genuine employee. What is this?",
       "choices_en": [
-        "Identity proofing",
         "Time-of-day restrictions",
         "DAC",
-        "Password reuse"
+        "Password reuse",
+        "Identity proofing"
       ],
       "explain_en": "Confirming that a claimed identity is genuine is identity proofing.",
       "stem_es": "Al solicitar una cuenta, se cotejaron los datos de RR. HH. con un documento de identidad para confirmar que el solicitante es un empleado real. ¿Qué es?",
       "choices_es": [
-        "Verificación de identidad (identity proofing)",
         "Restricciones horarias",
         "DAC",
-        "Reutilización de contraseñas"
+        "Reutilización de contraseñas",
+        "Verificación de identidad (identity proofing)"
       ],
       "explain_es": "Confirmar que una identidad declarada es auténtica es la verificación de identidad (identity proofing)."
     },
@@ -2870,25 +2870,25 @@
       "term": "d-6-federation",
       "stem": "Googleアカウントで自社以外の複数サービスにもログインできるよう、異システム間で認証情報を共有している。これはどれか。",
       "choices": [
-        "最小特権",
         "フェデレーション",
+        "最小特権",
         "パスワードの複雑さ",
         "強制アクセス制御"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "異なるシステム間で認証・認可情報を共有するのがフェデレーション。",
       "stem_en": "Authentication information is shared between different systems so a Google account can be used to sign in to several services outside the company. What is this?",
       "choices_en": [
-        "Least privilege",
         "Federation",
+        "Least privilege",
         "Password complexity",
         "Mandatory access control"
       ],
       "explain_en": "Sharing authentication and authorization information between different systems is federation.",
       "stem_es": "Se comparte información de autenticación entre sistemas distintos para que una cuenta de Google sirva para iniciar sesión en varios servicios ajenos a la empresa. ¿Qué es?",
       "choices_es": [
-        "Mínimo privilegio",
         "Federación",
+        "Mínimo privilegio",
         "Complejidad de la contraseña",
         "Control de acceso obligatorio"
       ],
@@ -2898,26 +2898,26 @@
       "term": "d-6-ldap",
       "stem": "社内ディレクトリを参照するプロトコルを使い、中央のユーザー情報で複数アプリの認証・アクセス制御を行う。このプロトコルはどれか。",
       "choices": [
-        "LDAP",
         "SMTP",
         "FTP",
+        "LDAP",
         "DHCP"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "LDAPはディレクトリサービス上のユーザー情報管理・アクセス制御に使われるプロトコル。",
       "stem_en": "A protocol that queries the internal directory is used so central user information handles authentication and access control for multiple apps. Which protocol is it?",
       "choices_en": [
-        "LDAP",
         "SMTP",
         "FTP",
+        "LDAP",
         "DHCP"
       ],
       "explain_en": "LDAP is the protocol used to manage user information and access control on directory services.",
       "stem_es": "Se usa un protocolo que consulta el directorio interno para que la información central de usuarios gestione la autenticación y el control de acceso de varias aplicaciones. ¿Qué protocolo es?",
       "choices_es": [
-        "LDAP",
         "SMTP",
         "FTP",
+        "LDAP",
         "DHCP"
       ],
       "explain_es": "LDAP es el protocolo que se usa para gestionar la información de usuarios y el control de acceso en servicios de directorio."
@@ -2927,25 +2927,25 @@
       "stem": "社内IAMとクラウドをSAML等の標準プロトコルでつなぎ、シングルサインオンやユーザー同期を可能にした。主にどの能力か。",
       "choices": [
         "バイオメトリクス",
-        "相互運用性",
         "パスワードの長さ",
+        "相互運用性",
         "コールドサイト"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "標準インターフェース／プロトコルで異システムが相互利用できる能力が相互運用性（Interoperability）。",
       "stem_en": "Internal IAM and the cloud were connected with standard protocols such as SAML, enabling single sign-on and user synchronization. Which capability is this mainly?",
       "choices_en": [
         "Biometrics",
-        "Interoperability",
         "Password length",
+        "Interoperability",
         "Cold site"
       ],
       "explain_en": "The ability of different systems to work together through standard interfaces and protocols is interoperability.",
       "stem_es": "Se conectaron el IAM interno y la nube con protocolos estándar como SAML, lo que permite el inicio de sesión único y la sincronización de usuarios. ¿Qué capacidad es principalmente?",
       "choices_es": [
         "Biometría",
-        "Interoperabilidad",
         "Longitud de la contraseña",
+        "Interoperabilidad",
         "Sitio frío"
       ],
       "explain_es": "La capacidad de sistemas distintos para trabajar juntos mediante interfaces y protocolos estándar es la interoperabilidad."
@@ -2954,25 +2954,25 @@
       "term": "d-6-attestation",
       "stem": "営業から経理へ異動した社員の権限を見直し、不要になった営業系権限を削除して結果を記録した。これはどれか。",
       "choices": [
-        "アテステーション",
         "フェデレーション",
+        "アテステーション",
         "セキュリティキー",
         "パスワードレス"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "現職務に必要な範囲か権限を検証し記録するのがアテステーション（アクセスレビュー）。",
       "stem_en": "The rights of an employee who moved from sales to accounting were reviewed, sales rights no longer needed were removed, and the result recorded. What is this?",
       "choices_en": [
-        "Attestation",
         "Federation",
+        "Attestation",
         "Security key",
         "Passwordless"
       ],
       "explain_en": "Verifying and recording whether rights fit the current job is attestation (an access review).",
       "stem_es": "Se revisaron los permisos de un empleado que pasó de ventas a contabilidad, se eliminaron los permisos de ventas que ya no necesitaba y se registró el resultado. ¿Qué es?",
       "choices_es": [
-        "Atestación",
         "Federación",
+        "Atestación",
         "Llave de seguridad",
         "Sin contraseña"
       ],
@@ -3010,25 +3010,25 @@
       "term": "d-6-discretionary",
       "stem": "ファイル所有者があるユーザーに読取、別ユーザーに読取＋書込を自分の判断で設定した。このモデルはどれか。",
       "choices": [
-        "MAC",
         "任意アクセス制御（DAC）",
+        "MAC",
         "Somewhere you are",
         "プロビジョニング"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "所有者／管理者の裁量で権限を定義するのがDAC。",
       "stem_en": "A file's owner, at their own discretion, gave one user read access and another read + write. Which model is this?",
       "choices_en": [
-        "MAC",
         "Discretionary access control (DAC)",
+        "MAC",
         "Somewhere you are",
         "Provisioning"
       ],
       "explain_en": "Defining permissions at the owner's or administrator's discretion is DAC.",
       "stem_es": "El propietario de un archivo, a su criterio, dio a un usuario permiso de lectura y a otro de lectura y escritura. ¿Qué modelo es?",
       "choices_es": [
-        "MAC",
         "Control de acceso discrecional (DAC)",
+        "MAC",
         "Algo dónde estás (somewhere you are)",
         "Aprovisionamiento"
       ],
@@ -3038,27 +3038,27 @@
       "term": "d-6-role-based",
       "stem": "「経理」ロールに会計システム権限を束ね、そのロールを割り当てたユーザーが自動で権限を継承する。これはどれか。",
       "choices": [
-        "RBAC（ロールベース）",
         "バイオメトリクス",
         "パスワードの期限",
-        "LDAPの暗号化のみ"
+        "LDAPの暗号化のみ",
+        "RBAC（ロールベース）"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "職務・役割に権限を束ねて管理するのがRBAC。",
       "stem_en": "Accounting system rights are bundled into an \"Accounting\" role, and users assigned that role inherit the rights automatically. What is this?",
       "choices_en": [
-        "RBAC (role-based)",
         "Biometrics",
         "Password expiration",
-        "LDAP encryption only"
+        "LDAP encryption only",
+        "RBAC (role-based)"
       ],
       "explain_en": "Managing rights by bundling them into jobs and roles is RBAC.",
       "stem_es": "Los permisos del sistema contable se agrupan en un rol «Contabilidad», y los usuarios con ese rol heredan los permisos automáticamente. ¿Qué es?",
       "choices_es": [
-        "RBAC (basado en roles)",
         "Biometría",
         "Caducidad de la contraseña",
-        "Solo cifrado de LDAP"
+        "Solo cifrado de LDAP",
+        "RBAC (basado en roles)"
       ],
       "explain_es": "Gestionar los permisos agrupándolos en puestos y roles es RBAC."
     },
@@ -3066,26 +3066,26 @@
       "term": "d-6-rule-based",
       "stem": "「部長以上かつ就業時間内かつ機密度が中以下なら読取許可」という条件で可否を決める。これはどれか。",
       "choices": [
-        "ルールベースアクセス制御",
         "パスワードレス",
         "セキュリティキー",
+        "ルールベースアクセス制御",
         "アイデンティティ・プルーフィング"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "事前定義ルール（条件）に基づき動的に判定するのがルールベース。",
       "stem_en": "Access is decided by the condition \"manager or above, during working hours, and sensitivity medium or lower → read allowed.\" What is this?",
       "choices_en": [
-        "Rule-based access control",
         "Passwordless",
         "Security key",
+        "Rule-based access control",
         "Identity proofing"
       ],
       "explain_en": "Deciding dynamically based on predefined rules (conditions) is rule-based access control.",
       "stem_es": "El acceso se decide con la condición «jefe o superior, en horario laboral y sensibilidad media o inferior → lectura permitida». ¿Qué es?",
       "choices_es": [
-        "Control de acceso basado en reglas",
         "Sin contraseña",
         "Llave de seguridad",
+        "Control de acceso basado en reglas",
         "Verificación de identidad"
       ],
       "explain_es": "Decidir de forma dinámica según reglas (condiciones) predefinidas es el control de acceso basado en reglas."
@@ -3095,25 +3095,25 @@
       "stem": "所属部門・リソース種別・現在時刻などの属性を組み合わせて読取／書込を動的に許可する。これはどれか。",
       "choices": [
         "DACのみ",
-        "属性ベース（ABAC）",
         "パスワードの再利用",
+        "属性ベース（ABAC）",
         "ハードトークン"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "ユーザー・リソース・環境の属性組合せで細かく制御するのがABAC。",
       "stem_en": "Read/write is allowed dynamically by combining attributes such as department, resource type and the current time. What is this?",
       "choices_en": [
         "DAC only",
-        "Attribute-based (ABAC)",
         "Password reuse",
+        "Attribute-based (ABAC)",
         "Hardware token"
       ],
       "explain_en": "Fine-grained control by combining user, resource and environment attributes is ABAC.",
       "stem_es": "La lectura y escritura se permiten de forma dinámica combinando atributos como el departamento, el tipo de recurso y la hora actual. ¿Qué es?",
       "choices_es": [
         "Solo DAC",
-        "Basado en atributos (ABAC)",
         "Reutilización de contraseñas",
+        "Basado en atributos (ABAC)",
         "Token físico"
       ],
       "explain_es": "El control de grano fino combinando atributos del usuario, el recurso y el entorno es ABAC."
@@ -3150,27 +3150,27 @@
       "term": "d-6-least-privilege",
       "stem": "一般社員には自業務のファイルだけ、IT管理者にも不要な個人情報へのアクセスは与えない方針にした。これはどれか。",
       "choices": [
-        "最小特権",
         "相互運用性",
         "パスワードの長さ",
-        "フェデレーション"
+        "フェデレーション",
+        "最小特権"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "必要最小限の権限だけを与えるのが最小特権（Least privilege）。",
       "stem_en": "The policy gives regular employees access only to files for their own work, and even IT admins no access to personal data they don't need. What is this?",
       "choices_en": [
-        "Least privilege",
         "Interoperability",
         "Password length",
-        "Federation"
+        "Federation",
+        "Least privilege"
       ],
       "explain_en": "Granting only the minimum rights needed is least privilege.",
       "stem_es": "La política da a los empleados acceso solo a los archivos de su propio trabajo, e incluso a los administradores de TI ningún acceso a datos personales que no necesiten. ¿Qué es?",
       "choices_es": [
-        "Mínimo privilegio",
         "Interoperabilidad",
         "Longitud de la contraseña",
-        "Federación"
+        "Federación",
+        "Mínimo privilegio"
       ],
       "explain_es": "Conceder solo los derechos mínimos necesarios es el mínimo privilegio."
     },
@@ -3178,25 +3178,25 @@
       "term": "d-6-biometrics",
       "stem": "空港ゲートでパスポートICの顔写真とカメラ映像を照合し本人確認する。どの実装か。",
       "choices": [
-        "バイオメトリクス",
         "LDAP",
+        "バイオメトリクス",
         "DAC",
         "パスワードの期限"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "指紋・顔・虹彩など生体情報で検証するのがバイオメトリクス。",
       "stem_en": "At an airport gate, the face photo in a passport's chip is matched against a camera image to verify identity. Which implementation is this?",
       "choices_en": [
-        "Biometrics",
         "LDAP",
+        "Biometrics",
         "DAC",
         "Password expiration"
       ],
       "explain_en": "Verifying with biological traits such as fingerprints, face or iris is biometrics.",
       "stem_es": "En una puerta de aeropuerto, la foto del chip del pasaporte se compara con la imagen de una cámara para verificar la identidad. ¿Qué implementación es?",
       "choices_es": [
-        "Biometría",
         "LDAP",
+        "Biometría",
         "DAC",
         "Caducidad de la contraseña"
       ],
@@ -3206,25 +3206,25 @@
       "term": "d-6-token",
       "stem": "ログイン時にパスワードに加え、Authenticatorアプリが表示する定期更新コードを入力させる。これはどれか。",
       "choices": [
-        "ソフトトークン（認証トークン）",
         "MAC",
+        "ソフトトークン（認証トークン）",
         "アテステーション",
         "時間帯制限"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "OTP等を生成するハード／ソフト手段が認証トークン。アプリはソフトトークンの典型。",
       "stem_en": "At login, in addition to a password, users enter a regularly refreshed code shown by an authenticator app. What is this?",
       "choices_en": [
-        "Soft token (authentication token)",
         "MAC",
+        "Soft token (authentication token)",
         "Attestation",
         "Time-of-day restrictions"
       ],
       "explain_en": "Hardware or software means of generating OTPs and the like are authentication tokens; apps are the classic soft token.",
       "stem_es": "Al iniciar sesión, además de la contraseña, se introduce un código que se renueva periódicamente y que muestra una aplicación autenticadora. ¿Qué es?",
       "choices_es": [
-        "Token de software (token de autenticación)",
         "MAC",
+        "Token de software (token de autenticación)",
         "Atestación",
         "Restricciones horarias"
       ],
@@ -3234,26 +3234,26 @@
       "term": "d-6-security-key",
       "stem": "USBの物理デバイスを挿してボタンを押し、公開鍵認証などで多要素ログインする。これはどれか。",
       "choices": [
-        "セキュリティキー",
         "パスワードの再利用",
         "RBAC",
+        "セキュリティキー",
         "プロビジョニング"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "YubiKey等の物理認証デバイスがセキュリティキー。",
       "stem_en": "Users insert a physical USB device and press its button to log in with multiple factors via public-key authentication and the like. What is this?",
       "choices_en": [
-        "Security key",
         "Password reuse",
         "RBAC",
+        "Security key",
         "Provisioning"
       ],
       "explain_en": "Physical authentication devices such as a YubiKey are security keys.",
       "stem_es": "Los usuarios insertan un dispositivo USB físico y pulsan su botón para iniciar sesión con varios factores mediante autenticación de clave pública y similares. ¿Qué es?",
       "choices_es": [
-        "Llave de seguridad",
         "Reutilización de contraseñas",
         "RBAC",
+        "Llave de seguridad",
         "Aprovisionamiento"
       ],
       "explain_es": "Los dispositivos físicos de autenticación como una YubiKey son llaves de seguridad."
@@ -3262,27 +3262,27 @@
       "term": "d-6-auth-factors",
       "stem": "パスワード（知っていること）とトークン（持っているもの）、さらに社内Wi-Fi上か（いる場所）を組み合わせて判定する。整理している概念はどれか。",
       "choices": [
-        "認証の要素（Authentication factors）",
         "パスワードの長さのみ",
         "DAC",
-        "デプロビジョニングのみ"
+        "デプロビジョニングのみ",
+        "認証の要素（Authentication factors）"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "know／have／are／somewhere のカテゴリが認証の要素。異カテゴリ組合せが真のMFA。",
       "stem_en": "A decision combines a password (something you know), a token (something you have), and whether the user is on corporate Wi-Fi (somewhere you are). Which concept is being organized?",
       "choices_en": [
-        "Authentication factors",
         "Password length only",
         "DAC",
-        "Deprovisioning only"
+        "Deprovisioning only",
+        "Authentication factors"
       ],
       "explain_en": "The know/have/are/somewhere categories are authentication factors; combining different categories is true MFA.",
       "stem_es": "Una decisión combina una contraseña (algo que sabes), un token (algo que tienes) y si el usuario está en la Wi-Fi corporativa (dónde estás). ¿Qué concepto se está organizando?",
       "choices_es": [
-        "Factores de autenticación",
         "Solo longitud de la contraseña",
         "DAC",
-        "Solo desaprovisionamiento"
+        "Solo desaprovisionamiento",
+        "Factores de autenticación"
       ],
       "explain_es": "Las categorías saber/tener/ser/dónde son los factores de autenticación; combinar categorías distintas es la verdadera MFA."
     },
@@ -3290,27 +3290,27 @@
       "term": "d-6-password-length",
       "stem": "短すぎるパスワードは総当たりで破られやすいため、最低12文字などをポリシーで要求した。主に何のベストプラクティスか。",
       "choices": [
-        "パスワードの長さ",
         "フェデレーション",
         "MAC",
-        "アテステーション"
+        "アテステーション",
+        "パスワードの長さ"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "十分な文字数を確保するのがパスワードの長さ（Length）。",
       "stem_en": "Because passwords that are too short are easy to brute-force, the policy requires a minimum such as 12 characters. Which best practice is this mainly?",
       "choices_en": [
-        "Password length",
         "Federation",
         "MAC",
-        "Attestation"
+        "Attestation",
+        "Password length"
       ],
       "explain_en": "Ensuring enough characters is password length.",
       "stem_es": "Como las contraseñas demasiado cortas son fáciles de romper por fuerza bruta, la política exige un mínimo, por ejemplo 12 caracteres. ¿Qué buena práctica es principalmente?",
       "choices_es": [
-        "Longitud de la contraseña",
         "Federación",
         "MAC",
-        "Atestación"
+        "Atestación",
+        "Longitud de la contraseña"
       ],
       "explain_es": "Asegurar suficientes caracteres es la longitud de la contraseña."
     },
@@ -3318,25 +3318,25 @@
       "term": "d-6-password-complexity",
       "stem": "大文字・小文字・数字・記号を必須にし、辞書に載る単語を禁止するポリシーにした。これはどれか。",
       "choices": [
-        "パスワードの複雑さ",
         "時間帯制限",
+        "パスワードの複雑さ",
         "LDAP",
         "最小特権"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "文字種の多様化と辞書攻撃対策が複雑さ（Complexity）の要点。",
       "stem_en": "The policy requires uppercase, lowercase, numbers and symbols, and bans dictionary words. What is this?",
       "choices_en": [
-        "Password complexity",
         "Time-of-day restrictions",
+        "Password complexity",
         "LDAP",
         "Least privilege"
       ],
       "explain_en": "Varied character types and defense against dictionary attacks are the key points of complexity.",
       "stem_es": "La política exige mayúsculas, minúsculas, números y símbolos, y prohíbe las palabras de diccionario. ¿Qué es?",
       "choices_es": [
-        "Complejidad de la contraseña",
         "Restricciones horarias",
+        "Complejidad de la contraseña",
         "LDAP",
         "Mínimo privilegio"
       ],
@@ -3374,27 +3374,27 @@
       "term": "d-6-password-expiration",
       "stem": "90日ごとの強制変更は、簡単なパスワードやメモ書きを招き逆効果になり得る、という整理のもと方針を見直した。関係する概念はどれか。",
       "choices": [
-        "パスワードの期限（Expiration）",
         "セキュリティキー",
         "MAC",
-        "フェデレーション"
+        "フェデレーション",
+        "パスワードの期限（Expiration）"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "定期変更（期限）は従来推奨されがちだが、頻繁変更の副作用にも注意、が試験でも押さえどころ。",
       "stem_en": "The policy was revised on the understanding that forced changes every 90 days can backfire by encouraging simple passwords or written notes. Which concept is involved?",
       "choices_en": [
-        "Password expiration",
         "Security key",
         "MAC",
-        "Federation"
+        "Federation",
+        "Password expiration"
       ],
       "explain_en": "Periodic changes (expiration) were traditionally recommended, but the side effects of frequent changes are a point to remember for the exam.",
       "stem_es": "Se revisó la política entendiendo que forzar cambios cada 90 días puede ser contraproducente al fomentar contraseñas sencillas o apuntadas en papel. ¿Qué concepto interviene?",
       "choices_es": [
-        "Caducidad de la contraseña",
         "Llave de seguridad",
         "MAC",
-        "Federación"
+        "Federación",
+        "Caducidad de la contraseña"
       ],
       "explain_es": "Tradicionalmente se recomendaba el cambio periódico (caducidad), pero los efectos secundarios de los cambios frecuentes son un punto que hay que recordar para el examen."
     },
@@ -3402,26 +3402,26 @@
       "term": "d-6-password-manager",
       "stem": "各サイトの強力で一意なパスワードを暗号化して保管し、ユーザーの暗記負担を減らす仕組みを導入した。これはどれか。",
       "choices": [
-        "パスワードマネージャー",
         "強制アクセス制御",
         "時間帯制限",
+        "パスワードマネージャー",
         "アイデンティティ・プルーフィング"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "パスワードの暗号化保管と一意・強力なパスワード運用を支援するのがパスワードマネージャー。",
       "stem_en": "A system was introduced that stores strong, unique passwords for each site in encrypted form, reducing what users must memorize. What is this?",
       "choices_en": [
-        "Password manager",
         "Mandatory access control",
         "Time-of-day restrictions",
+        "Password manager",
         "Identity proofing"
       ],
       "explain_en": "Storing passwords encrypted and supporting unique, strong passwords is what a password manager does.",
       "stem_es": "Se implantó un sistema que guarda cifradas contraseñas robustas y únicas para cada sitio, reduciendo lo que los usuarios deben memorizar. ¿Qué es?",
       "choices_es": [
-        "Gestor de contraseñas",
         "Control de acceso obligatorio",
         "Restricciones horarias",
+        "Gestor de contraseñas",
         "Verificación de identidad"
       ],
       "explain_es": "Guardar las contraseñas cifradas y facilitar el uso de contraseñas únicas y robustas es lo que hace un gestor de contraseñas."
@@ -3488,25 +3488,25 @@
       "term": "d-7-resource-provisioning",
       "stem": "アクセス増減に合わせ、IaCで記述した構成を自動適用してサーバーやストレージを割り当て・設定する。これはどれか。",
       "choices": [
-        "チケット作成",
         "リソースプロビジョニング",
+        "チケット作成",
         "従業員の定着",
         "技術的負債"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "ITリソースの割当・設定・利用可能化の自動化がリソースプロビジョニング。IaCが代表的手段。",
       "stem_en": "As traffic rises and falls, configurations written in IaC are applied automatically to allocate and configure servers and storage. What is this?",
       "choices_en": [
-        "Ticket creation",
         "Resource provisioning",
+        "Ticket creation",
         "Employee retention",
         "Technical debt"
       ],
       "explain_en": "Automating the allocation, configuration and availability of IT resources is resource provisioning; IaC is the typical means.",
       "stem_es": "A medida que sube y baja el tráfico, se aplican automáticamente configuraciones escritas en IaC para asignar y configurar servidores y almacenamiento. ¿Qué es?",
       "choices_es": [
-        "Creación de tickets",
         "Aprovisionamiento de recursos",
+        "Creación de tickets",
         "Retención de empleados",
         "Deuda técnica"
       ],
@@ -3518,25 +3518,25 @@
       "choices": [
         "人材の乗数効果",
         "継続的なサポート性",
-        "ガードレール",
-        "時間の削減のみ"
+        "時間の削減のみ",
+        "ガードレール"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "問題のある操作を検知・防止する仕組みがガードレール。FWやWAFがその例。",
       "stem_en": "A framework was put in place in the network and apps to detect dangerous operations and unauthorized access and stop policy violations before they execute. What is this mainly called?",
       "choices_en": [
         "Workforce multiplier",
         "Ongoing supportability",
-        "Guardrails",
-        "Time saving only"
+        "Time saving only",
+        "Guardrails"
       ],
       "explain_en": "A mechanism that detects and prevents problematic operations is a guardrail; firewalls and WAFs are examples.",
       "stem_es": "Se implantó en la red y en las aplicaciones un marco que detecta operaciones peligrosas y accesos no autorizados e impide las infracciones de política antes de que se ejecuten. ¿Cómo se llama principalmente?",
       "choices_es": [
         "Multiplicador de la plantilla",
         "Mantenibilidad continua",
-        "Barreras de protección (guardrails)",
-        "Solo ahorro de tiempo"
+        "Solo ahorro de tiempo",
+        "Barreras de protección (guardrails)"
       ],
       "explain_es": "Un mecanismo que detecta e impide operaciones problemáticas es una barrera de protección (guardrail); los cortafuegos y los WAF son ejemplos."
     },
@@ -3544,26 +3544,26 @@
       "term": "d-7-security-groups",
       "stem": "クラウド上のVMに対し、HTTPは公開・SSHは管理者のみ、といった通信許可をルール集合として適用した。これはどれか。",
       "choices": [
-        "セキュリティグループ",
         "対応速度",
         "コスト最適化のみ",
+        "セキュリティグループ",
         "ジャーナリング"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "VM／コンテナ等のトラフィック制御用ファイアウォールルール集合がセキュリティグループ（実態は仮想FW）。",
       "stem_en": "For VMs in the cloud, traffic permissions such as \"HTTP public, SSH for admins only\" were applied as a set of rules. What is this?",
       "choices_en": [
-        "Security group",
         "Reaction time",
         "Cost optimization only",
+        "Security group",
         "Journaling"
       ],
       "explain_en": "A set of firewall rules for controlling traffic to VMs, containers and the like is a security group (effectively a virtual firewall).",
       "stem_es": "En las VM de la nube, se aplicaron como un conjunto de reglas permisos de tráfico como «HTTP público, SSH solo para administradores». ¿Qué es?",
       "choices_es": [
-        "Grupo de seguridad",
         "Tiempo de reacción",
         "Solo optimización de costes",
+        "Grupo de seguridad",
         "Registro por diario"
       ],
       "explain_es": "Un conjunto de reglas de cortafuegos para controlar el tráfico de VM, contenedores y similares es un grupo de seguridad (en la práctica, un cortafuegos virtual)."
@@ -3572,26 +3572,26 @@
       "term": "d-7-ticket-creation",
       "stem": "障害報告メールの受信をトリガーに、チケット管理システムへ内容を自動起票し、手動入力の抜け漏れを減らした。これはどれか。",
       "choices": [
+        "チケット作成",
         "エスカレーションのみ",
         "ベースラインの強制",
-        "チケット作成",
         "単一障害点"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "問題追跡のためのチケット発行を自動化するのがチケット作成。メールやポータルがトリガーになる。",
       "stem_en": "Receiving a failure-report email now automatically creates a ticket in the ticketing system, reducing gaps from manual entry. What is this?",
       "choices_en": [
+        "Ticket creation",
         "Escalation only",
         "Enforcing baselines",
-        "Ticket creation",
         "Single point of failure"
       ],
       "explain_en": "Automating the issuing of tickets for tracking problems is ticket creation; emails and portals act as triggers.",
       "stem_es": "Ahora, al recibir un correo de aviso de fallo, se abre automáticamente un ticket en el sistema de tickets, lo que reduce los olvidos de la introducción manual. ¿Qué es?",
       "choices_es": [
+        "Creación de tickets",
         "Solo escalado",
         "Aplicación de líneas base",
-        "Creación de tickets",
         "Punto único de fallo"
       ],
       "explain_es": "Automatizar la apertura de tickets para seguir los problemas es la creación de tickets; los correos y portales actúan como disparadores."
@@ -3601,26 +3601,26 @@
       "stem": "チケットが一定時間未対応、または優先度が高い場合に、自動で上位エンジニアや専門チームへ通知するルールを設けた。これはどれか。",
       "choices": [
         "ユーザープロビジョニング",
-        "エスカレーション",
         "標準的なインフラの設定",
-        "複雑さの増大を放置"
+        "複雑さの増大を放置",
+        "エスカレーション"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "適切な担当・上位へ問題を上げて迅速解決を促すのがエスカレーション。優先度・経過時間ルールが典型。",
       "stem_en": "A rule was set up to automatically notify senior engineers or specialist teams when a ticket goes unhandled for a set time or has high priority. What is this?",
       "choices_en": [
         "User provisioning",
-        "Escalation",
         "Standard infrastructure configurations",
-        "Leaving growing complexity unchecked"
+        "Leaving growing complexity unchecked",
+        "Escalation"
       ],
       "explain_en": "Raising problems to the right people or higher levels for quick resolution is escalation; priority and elapsed-time rules are typical.",
       "stem_es": "Se creó una regla que avisa automáticamente a ingenieros sénior o equipos especializados cuando un ticket lleva cierto tiempo sin atender o tiene prioridad alta. ¿Qué es?",
       "choices_es": [
         "Aprovisionamiento de usuarios",
-        "Escalado",
         "Configuraciones de infraestructura estándar",
-        "Dejar crecer la complejidad sin control"
+        "Dejar crecer la complejidad sin control",
+        "Escalado"
       ],
       "explain_es": "Elevar los problemas a las personas adecuadas o a niveles superiores para resolverlos pronto es el escalado; las reglas de prioridad y tiempo transcurrido son típicas."
     },
@@ -3628,26 +3628,26 @@
       "term": "d-7-enable-disable-services-access",
       "stem": "退職が確定した瞬間に、メール・VPN・業務アプリのアクセス権を一括で無効化し、残存アカウントによる漏えいリスクを下げる。主にどの自動化か。",
       "choices": [
+        "サービスやアクセスの有効化／無効化",
         "安全なスケーリング",
         "統合とAPIのみ",
-        "サービスやアクセスの有効化／無効化",
         "発電機の自動起動"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "サービスやアクセス権のオン／オフ自動化。入社付与・退社無効化が代表シナリオ。",
       "stem_en": "The moment someone's departure is confirmed, their access to email, VPN and business apps is disabled in bulk, lowering the risk of leaks through leftover accounts. Which automation is this mainly?",
       "choices_en": [
+        "Enabling/disabling services and access",
         "Secure scaling",
         "Integrations and APIs only",
-        "Enabling/disabling services and access",
         "Automatic generator start"
       ],
       "explain_en": "Automating turning services and access rights on and off; granting on joining and disabling on leaving are the typical scenarios.",
       "stem_es": "En cuanto se confirma la salida de alguien, se desactivan en bloque sus accesos al correo, la VPN y las aplicaciones de negocio, lo que reduce el riesgo de fugas por cuentas residuales. ¿Qué automatización es principalmente?",
       "choices_es": [
+        "Habilitar / deshabilitar servicios y accesos",
         "Escalado seguro",
         "Solo integraciones y API",
-        "Habilitar / deshabilitar servicios y accesos",
         "Arranque automático del generador"
       ],
       "explain_es": "Automatizar la activación y desactivación de servicios y permisos; conceder al incorporarse y desactivar al salir son los escenarios típicos."
@@ -3713,25 +3713,25 @@
       "stem": "毎月の請求書手入力をOCRとワークフロー自動化に置き換え、担当者の作業時間を大幅に減らした。主にどのメリットか。",
       "choices": [
         "単一障害点の増加",
-        "時間の削減",
         "技術的負債の意図的な積み上げ",
+        "時間の削減",
         "ガードレールの撤去"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "定型作業の自動化による Efficiency／time saving（時間の削減）。",
       "stem_en": "Monthly manual entry of invoices was replaced with OCR and workflow automation, greatly reducing staff time. Which benefit is this mainly?",
       "choices_en": [
         "More single points of failure",
-        "Time saving",
         "Deliberately piling up technical debt",
+        "Time saving",
         "Removing guardrails"
       ],
       "explain_en": "This is efficiency / time saving from automating routine work.",
       "stem_es": "La introducción manual mensual de facturas se sustituyó por OCR y automatización de flujos, lo que redujo mucho el tiempo del personal. ¿Qué ventaja es principalmente?",
       "choices_es": [
         "Más puntos únicos de fallo",
-        "Ahorro de tiempo",
         "Acumular deuda técnica a propósito",
+        "Ahorro de tiempo",
         "Retirar las barreras de protección"
       ],
       "explain_es": "Es la eficiencia y el ahorro de tiempo que da automatizar el trabajo rutinario."
@@ -3768,25 +3768,25 @@
       "term": "d-7-standard-infrastructure",
       "stem": "本番・ステージング・開発でNW・セキュリティグループ・LBなどの設定差が出ないよう、IaCで同じ標準構成をデプロイする運用にした。主にどのメリットか。",
       "choices": [
-        "標準的なインフラの設定",
         "単一障害点の意図的設置",
+        "標準的なインフラの設定",
         "チケット作成の廃止",
         "エスカレーションの無効化"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "環境間の一貫した標準構成が Standard infrastructure configurations。",
       "stem_en": "To avoid differences in network, security group and load balancer settings between production, staging and development, the same standard configuration is deployed with IaC. Which benefit is this mainly?",
       "choices_en": [
-        "Standard infrastructure configurations",
         "Deliberately adding a single point of failure",
+        "Standard infrastructure configurations",
         "Abolishing ticket creation",
         "Disabling escalation"
       ],
       "explain_en": "Consistent standard configurations across environments are standard infrastructure configurations.",
       "stem_es": "Para evitar diferencias de configuración de red, grupos de seguridad y balanceadores entre producción, preproducción y desarrollo, se despliega con IaC la misma configuración estándar. ¿Qué ventaja es principalmente?",
       "choices_es": [
-        "Configuraciones de infraestructura estándar",
         "Añadir a propósito un punto único de fallo",
+        "Configuraciones de infraestructura estándar",
         "Suprimir la creación de tickets",
         "Desactivar el escalado"
       ],
@@ -3824,25 +3824,25 @@
       "term": "d-7-employee-retention",
       "stem": "手動の繰り返しテストやデプロイをCIで自動化し、エンジニアが創造的な開発に集中できるようにして離職要因を減らした。主にどのメリットか。",
       "choices": [
-        "従業員の定着",
         "単一障害点",
+        "従業員の定着",
         "コストの無制限投下",
         "ガードレールの削除"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "単調作業削減によるやりがい向上・定着が Employee retention。",
       "stem_en": "Repetitive manual testing and deployment were automated with CI so engineers can focus on creative development, reducing reasons to quit. Which benefit is this mainly?",
       "choices_en": [
-        "Employee retention",
         "Single point of failure",
+        "Employee retention",
         "Unlimited spending",
         "Removing guardrails"
       ],
       "explain_en": "Greater job satisfaction and retention from cutting tedious work is employee retention.",
       "stem_es": "Las pruebas y despliegues manuales repetitivos se automatizaron con CI para que los ingenieros se centren en el desarrollo creativo, reduciendo motivos para marcharse. ¿Qué ventaja es principalmente?",
       "choices_es": [
-        "Retención de empleados",
         "Punto único de fallo",
+        "Retención de empleados",
         "Gasto ilimitado",
         "Retirar las barreras de protección"
       ],
@@ -3853,25 +3853,25 @@
       "stem": "融資申請の確認・信用調査・結果通知を自動化し、従来数日かかっていたプロセスを数分まで短縮した。主にどのメリットか。",
       "choices": [
         "継続的なサポート性の放棄",
-        "対応速度",
         "リソースプロビジョニングの禁止",
+        "対応速度",
         "複雑さそのもの"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "事象や申請への反応・完了時間の短縮が Reaction time（対応速度）。",
       "stem_en": "Loan application checks, credit checks and result notifications were automated, cutting a process that used to take days down to minutes. Which benefit is this mainly?",
       "choices_en": [
         "Abandoning ongoing supportability",
-        "Reaction time",
         "Banning resource provisioning",
+        "Reaction time",
         "Complexity itself"
       ],
       "explain_en": "Shortening the time to react to and complete events and requests is reaction time.",
       "stem_es": "Se automatizaron la revisión de solicitudes de préstamo, la comprobación de solvencia y el aviso del resultado, reduciendo a minutos un proceso que antes tardaba días. ¿Qué ventaja es principalmente?",
       "choices_es": [
         "Renunciar a la mantenibilidad continua",
-        "Tiempo de reacción",
         "Prohibir el aprovisionamiento de recursos",
+        "Tiempo de reacción",
         "La propia complejidad"
       ],
       "explain_es": "Reducir el tiempo de reacción y de resolución de eventos y solicitudes es el tiempo de reacción."
@@ -3880,27 +3880,27 @@
       "term": "d-7-workforce-multiplier",
       "stem": "データ入力を自動化し、同じ人数のチームが分析や戦略立案など高付加価値業務まで担えるようになった。主にどのメリットか。",
       "choices": [
-        "人材の乗数効果",
         "単一障害点の推奨",
         "チケット作成の手作業化",
-        "ベースラインの撤廃"
+        "ベースラインの撤廃",
+        "人材の乗数効果"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "自動化で空いた時間を高度業務へ回し、同じ人員の成果を乗数的に高めるのが Workforce multiplier。",
       "stem_en": "Data entry was automated, and a team of the same size can now also take on high-value work such as analysis and strategy. Which benefit is this mainly?",
       "choices_en": [
-        "Workforce multiplier",
         "Recommending single points of failure",
         "Making ticket creation manual",
-        "Abolishing baselines"
+        "Abolishing baselines",
+        "Workforce multiplier"
       ],
       "explain_en": "Redirecting time freed by automation to higher-level work, multiplying what the same staff achieve, is the workforce multiplier.",
       "stem_es": "Se automatizó la introducción de datos y un equipo del mismo tamaño puede asumir ahora también trabajo de alto valor como el análisis y la estrategia. ¿Qué ventaja es principalmente?",
       "choices_es": [
-        "Multiplicador de la plantilla",
         "Recomendar puntos únicos de fallo",
         "Volver manual la creación de tickets",
-        "Suprimir las líneas base"
+        "Suprimir las líneas base",
+        "Multiplicador de la plantilla"
       ],
       "explain_es": "Dedicar el tiempo que libera la automatización a trabajo de más nivel, multiplicando lo que logra la misma plantilla, es el multiplicador de la plantilla."
     },
@@ -3937,25 +3937,25 @@
       "stem": "まれな手作業まで全部自動化したところ、ツール費用とスクリプト保守の方が高くつき、投資対効果を見直すことになった。これはどの考慮事項か。",
       "choices": [
         "対応速度の向上そのもの",
-        "ユーザープロビジョニング",
         "コスト",
+        "ユーザープロビジョニング",
         "統合とAPIの定義"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "自動化の導入・保守・外注にも費用がかかる。やりすぎを含め Cost を考慮する。",
       "stem_en": "After automating even rare manual tasks, tool costs and script maintenance ended up costing more, so the return on investment had to be reviewed. Which consideration is this?",
       "choices_en": [
         "Faster reaction time itself",
-        "User provisioning",
         "Cost",
+        "User provisioning",
         "Defining integrations and APIs"
       ],
       "explain_en": "Implementing, maintaining and outsourcing automation also costs money; consider cost, including overdoing it.",
       "stem_es": "Tras automatizar incluso tareas manuales poco frecuentes, el coste de las herramientas y del mantenimiento de scripts acabó siendo mayor, así que hubo que revisar el retorno de la inversión. ¿Qué consideración es?",
       "choices_es": [
         "La mayor rapidez de reacción en sí",
-        "Aprovisionamiento de usuarios",
         "Coste",
+        "Aprovisionamiento de usuarios",
         "Definir integraciones y API"
       ],
       "explain_es": "Implantar, mantener y externalizar la automatización también cuesta dinero; hay que tener en cuenta el coste, incluido el de excederse."
@@ -3966,25 +3966,25 @@
       "choices": [
         "ベースラインの強制",
         "時間の削減",
-        "単一障害点",
-        "継続的な統合とテスト"
+        "継続的な統合とテスト",
+        "単一障害点"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "一点障害で全体が止まる依存が Single point of failure（SPOF）。自動化基盤自体も対象。",
       "stem_en": "Automatic control of an entire production line depended on one central computer, so when it failed the whole line stopped. Which automation risk is this?",
       "choices_en": [
         "Enforcing baselines",
         "Time saving",
-        "Single point of failure",
-        "Continuous integration and testing"
+        "Continuous integration and testing",
+        "Single point of failure"
       ],
       "explain_en": "A dependency where one failure stops everything is a single point of failure (SPOF); the automation platform itself counts too.",
       "stem_es": "El control automático de toda una línea de producción dependía de un único ordenador central, así que al fallar este se detuvo toda la línea. ¿Qué riesgo de la automatización es?",
       "choices_es": [
         "Aplicación de líneas base",
         "Ahorro de tiempo",
-        "Punto único de fallo",
-        "Integración y pruebas continuas"
+        "Integración y pruebas continuas",
+        "Punto único de fallo"
       ],
       "explain_es": "Una dependencia en la que un solo fallo lo detiene todo es un punto único de fallo (SPOF); la propia plataforma de automatización también cuenta."
     },
@@ -3992,26 +3992,26 @@
       "term": "d-7-technical-debt",
       "stem": "納期優先で自動化スクリプトの文書化とテストを省略した結果、後の要件変更で誰も安全に改修できなくなった。これはどの考慮事項か。",
       "choices": [
-        "技術的負債",
         "従業員の定着",
         "セキュリティグループ",
+        "技術的負債",
         "対応速度の定義"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "短期利益のために品質を犠牲にし、後から払うコストが Technical debt（技術的負債）。",
       "stem_en": "Documentation and tests for automation scripts were skipped to meet a deadline, and when requirements later changed, nobody could modify them safely. Which consideration is this?",
       "choices_en": [
-        "Technical debt",
         "Employee retention",
         "Security group",
+        "Technical debt",
         "Defining reaction time"
       ],
       "explain_en": "The cost you pay later after sacrificing quality for short-term gain is technical debt.",
       "stem_es": "Para cumplir un plazo se omitieron la documentación y las pruebas de los scripts de automatización, y cuando después cambiaron los requisitos nadie pudo modificarlos con seguridad. ¿Qué consideración es?",
       "choices_es": [
-        "Deuda técnica",
         "Retención de empleados",
         "Grupo de seguridad",
+        "Deuda técnica",
         "Definir el tiempo de reacción"
       ],
       "explain_es": "El coste que se paga después por sacrificar la calidad a cambio de beneficios a corto plazo es la deuda técnica."
@@ -4021,26 +4021,26 @@
       "stem": "業務要件の変化や製品のバージョンアップ・パッチに合わせて、自動化ルールを継続更新できる設計と体制を最初から求めた。これはどの考慮事項か。",
       "choices": [
         "チケット作成の手作業化",
-        "継続的なサポート性",
         "ガードレールの無効化",
-        "リソースの手動固定"
+        "リソースの手動固定",
+        "継続的なサポート性"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "変化に追従し続けられるかが Ongoing supportability（継続的なサポート性）。",
       "stem_en": "From the start, the team required a design and organization able to keep updating automation rules as business requirements change and products get new versions and patches. Which consideration is this?",
       "choices_en": [
         "Making ticket creation manual",
-        "Ongoing supportability",
         "Disabling guardrails",
-        "Manually fixing resources"
+        "Manually fixing resources",
+        "Ongoing supportability"
       ],
       "explain_en": "Whether you can keep up with change is ongoing supportability.",
       "stem_es": "Desde el principio, el equipo exigió un diseño y una organización capaces de seguir actualizando las reglas de automatización a medida que cambian los requisitos y los productos reciben nuevas versiones y parches. ¿Qué consideración es?",
       "choices_es": [
         "Volver manual la creación de tickets",
-        "Mantenibilidad continua",
         "Desactivar las barreras de protección",
-        "Fijar los recursos a mano"
+        "Fijar los recursos a mano",
+        "Mantenibilidad continua"
       ],
       "explain_es": "Poder seguir el ritmo de los cambios es la mantenibilidad continua."
     }
@@ -4051,25 +4051,25 @@
       "stem": "ECサイトが顧客情報流出に備え、対応チームを編成し、検知・連絡・報告手順を記した計画と監視ツールをあらかじめ用意した。これはどの段階か。",
       "choices": [
         "検出",
-        "準備",
         "封じ込め",
+        "準備",
         "教訓"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "インシデント発生前に計画・体制・ツール・訓練を整えるのが準備（Preparation）。",
       "stem_en": "To prepare for a customer data leak, an online store formed a response team and prepared in advance a plan describing detection, contact and reporting procedures, along with monitoring tools. Which phase is this?",
       "choices_en": [
         "Detection",
-        "Preparation",
         "Containment",
+        "Preparation",
         "Lessons learned"
       ],
       "explain_en": "Setting up plans, teams, tools and training before an incident is preparation.",
       "stem_es": "Para prepararse ante una fuga de datos de clientes, una tienda en línea formó un equipo de respuesta y preparó de antemano un plan con los procedimientos de detección, contacto e informe, junto con herramientas de supervisión. ¿Qué fase es?",
       "choices_es": [
         "Detección",
-        "Preparación",
         "Contención",
+        "Preparación",
         "Lecciones aprendidas"
       ],
       "explain_es": "Preparar planes, equipos, herramientas y formación antes de un incidente es la preparación."
@@ -4079,25 +4079,25 @@
       "stem": "管理者がネットワーク監視中に通常と異なる大量データ転送を見つけ、IDSが異常ふるまいのアラートを出した。これはどの段階か。",
       "choices": [
         "復旧",
-        "机上演習",
         "検出",
+        "机上演習",
         "教訓"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "ログ・IDS/IPS/SIEM・ユーザー報告などで脅威をいち早く発見するのが検出（Detection）。",
       "stem_en": "While monitoring the network, an admin noticed unusually large data transfers, and the IDS raised an abnormal-behavior alert. Which phase is this?",
       "choices_en": [
         "Recovery",
-        "Tabletop exercise",
         "Detection",
+        "Tabletop exercise",
         "Lessons learned"
       ],
       "explain_en": "Spotting threats as early as possible through logs, IDS/IPS/SIEM and user reports is detection.",
       "stem_es": "Mientras supervisaba la red, un administrador vio transferencias de datos inusualmente grandes y el IDS lanzó una alerta de comportamiento anómalo. ¿Qué fase es?",
       "choices_es": [
         "Recuperación",
-        "Ejercicio de mesa",
         "Detección",
+        "Ejercicio de mesa",
         "Lecciones aprendidas"
       ],
       "explain_es": "Detectar las amenazas lo antes posible mediante registros, IDS/IPS/SIEM e informes de usuarios es la detección."
@@ -4106,25 +4106,25 @@
       "term": "d-8-analysis",
       "stem": "顧客情報流出の疑いがあり、対応チームがDBアクセスログから不正アクセスの時間帯と件数、影響レコードを特定した。これはどの段階か。",
       "choices": [
-        "分析",
         "準備",
+        "分析",
         "シミュレーション",
         "封じ込めのみ"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "検出後に原因と影響範囲を評価するのが分析（Analysis）。フォレンジックや経路調査も含む。",
       "stem_en": "With a customer data leak suspected, the response team used database access logs to identify when unauthorized access occurred, how many times, and which records were affected. Which phase is this?",
       "choices_en": [
-        "Analysis",
         "Preparation",
+        "Analysis",
         "Simulation",
         "Containment only"
       ],
       "explain_en": "Assessing the cause and scope after detection is analysis, which also includes forensics and tracing the attack path.",
       "stem_es": "Ante la sospecha de una fuga de datos de clientes, el equipo de respuesta usó los registros de acceso a la base de datos para determinar cuándo hubo accesos no autorizados, cuántas veces y qué registros se vieron afectados. ¿Qué fase es?",
       "choices_es": [
-        "Análisis",
         "Preparación",
+        "Análisis",
         "Simulación",
         "Solo contención"
       ],
@@ -4134,25 +4134,25 @@
       "term": "d-8-containment",
       "stem": "ランサムウェア感染が確認されたPCのLANケーブルを抜き、共有フォルダへのアクセスを一時制限して拡散を防いだ。これはどの段階か。",
       "choices": [
-        "教訓",
         "封じ込め",
+        "教訓",
         "脅威ハンティング",
         "準備"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "隔離・遮断などで被害拡大を止めるのが封じ込め（Containment）。",
       "stem_en": "The LAN cable of a PC confirmed to be infected with ransomware was unplugged, and access to shared folders was temporarily restricted to stop the spread. Which phase is this?",
       "choices_en": [
-        "Lessons learned",
         "Containment",
+        "Lessons learned",
         "Threat hunting",
         "Preparation"
       ],
       "explain_en": "Stopping damage from spreading by isolating and blocking is containment.",
       "stem_es": "Se desenchufó el cable de red de un PC con infección de ransomware confirmada y se restringió temporalmente el acceso a las carpetas compartidas para frenar la propagación. ¿Qué fase es?",
       "choices_es": [
-        "Lecciones aprendidas",
         "Contención",
+        "Lecciones aprendidas",
         "Búsqueda de amenazas",
         "Preparación"
       ],
@@ -4164,25 +4164,25 @@
       "choices": [
         "検出",
         "机上演習",
-        "復旧",
-        "ルート原因分析のみ"
+        "ルート原因分析のみ",
+        "復旧"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "バックアップやDRによりシステム・データを正常状態へ戻すのが復旧（Recovery）。",
       "stem_en": "Files encrypted by ransomware were restored from pre-infection backups, and in a disaster operations failed over to a DR site to resume business. Which phase is this?",
       "choices_en": [
         "Detection",
         "Tabletop exercise",
-        "Recovery",
-        "Root cause analysis only"
+        "Root cause analysis only",
+        "Recovery"
       ],
       "explain_en": "Returning systems and data to a normal state through backups and DR is recovery.",
       "stem_es": "Los archivos cifrados por el ransomware se restauraron desde copias previas a la infección y, ante un desastre, se conmutó a un sitio de recuperación para reanudar la actividad. ¿Qué fase es?",
       "choices_es": [
         "Detección",
         "Ejercicio de mesa",
-        "Recuperación",
-        "Solo análisis de la causa raíz"
+        "Solo análisis de la causa raíz",
+        "Recuperación"
       ],
       "explain_es": "Devolver sistemas y datos a un estado normal mediante copias de seguridad y recuperación ante desastres es la recuperación."
     },
@@ -4190,27 +4190,27 @@
       "term": "d-8-lessons-learned",
       "stem": "大規模な個人情報漏えいの対応後、連絡体制や脆弱性診断・パッチ優先度の不足を洗い出し、次回に向けてプロセスを改めた。これはどの段階か。",
       "choices": [
+        "教訓",
         "封じ込め",
         "検出",
-        "シミュレーション",
-        "教訓"
+        "シミュレーション"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "事後振り返りで得た知見を再発防止・改善に活かすのが教訓（Lessons learned）。",
       "stem_en": "After responding to a major personal data leak, the team identified shortcomings in contact procedures, vulnerability assessments and patch prioritization, and revised the processes for next time. Which phase is this?",
       "choices_en": [
+        "Lessons learned",
         "Containment",
         "Detection",
-        "Simulation",
-        "Lessons learned"
+        "Simulation"
       ],
       "explain_en": "Using knowledge from the post-incident review to prevent recurrence and improve is lessons learned.",
       "stem_es": "Tras responder a una gran fuga de datos personales, el equipo identificó carencias en los procedimientos de contacto, las evaluaciones de vulnerabilidades y la priorización de parches, y revisó los procesos para la próxima vez. ¿Qué fase es?",
       "choices_es": [
+        "Lecciones aprendidas",
         "Contención",
         "Detección",
-        "Simulación",
-        "Lecciones aprendidas"
+        "Simulación"
       ],
       "explain_es": "Aprovechar lo aprendido en la revisión posterior para evitar que se repita y mejorar son las lecciones aprendidas."
     },
@@ -4219,26 +4219,26 @@
       "stem": "フォレンジック担当が、ログ解析・メモリダンプ取得から報告書作成まで、実機と事例で一連の手順を習熟する演習を行った。これはどれか。",
       "choices": [
         "封じ込め",
-        "トレーニング",
         "準備の計画文書作成のみ",
-        "復旧のリストア実施のみ"
+        "復旧のリストア実施のみ",
+        "トレーニング"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "実インシデントに備え手順の習熟と改善を図る取り組みがトレーニング（Training）。",
       "stem_en": "Forensics staff ran an exercise to master the full procedure, from log analysis and memory dumps to writing the report, using real machines and case studies. What is this?",
       "choices_en": [
         "Containment",
-        "Training",
         "Only writing preparation plan documents",
-        "Only performing recovery restores"
+        "Only performing recovery restores",
+        "Training"
       ],
       "explain_en": "Efforts to master and improve procedures in readiness for real incidents are training.",
       "stem_es": "El personal de análisis forense hizo un ejercicio para dominar todo el procedimiento, desde el análisis de registros y los volcados de memoria hasta la redacción del informe, con equipos reales y casos prácticos. ¿Qué es?",
       "choices_es": [
         "Contención",
-        "Formación",
         "Solo redactar documentos del plan de preparación",
-        "Solo hacer restauraciones de recuperación"
+        "Solo hacer restauraciones de recuperación",
+        "Formación"
       ],
       "explain_es": "Los esfuerzos por dominar y mejorar los procedimientos para estar listos ante incidentes reales son la formación."
     },
@@ -4246,26 +4246,26 @@
       "term": "d-8-tabletop",
       "stem": "ランサム想定シナリオを会議室で提示し、技術・広報などの役割に分かれて遮断や復旧方針を議論した。実機は動かしていない。これはどれか。",
       "choices": [
+        "机上演習",
         "シミュレーション",
         "脅威ハンティング",
-        "机上演習",
         "封じ込め"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "シナリオを議論中心で進める低コストな訓練が机上演習（Tabletop）。",
       "stem_en": "A ransomware scenario was presented in a meeting room, and participants split into roles such as technical and PR to discuss blocking and recovery policies. No real systems were used. What is this?",
       "choices_en": [
+        "Tabletop exercise",
         "Simulation",
         "Threat hunting",
-        "Tabletop exercise",
         "Containment"
       ],
       "explain_en": "A low-cost exercise that walks through a scenario mainly by discussion is a tabletop exercise.",
       "stem_es": "Se presentó un escenario de ransomware en una sala de reuniones y los participantes se repartieron funciones, como la técnica y la de comunicación, para debatir las políticas de bloqueo y recuperación. No se usaron sistemas reales. ¿Qué es?",
       "choices_es": [
+        "Ejercicio de mesa",
         "Simulación",
         "Búsqueda de amenazas",
-        "Ejercicio de mesa",
         "Contención"
       ],
       "explain_es": "Un ejercicio de bajo coste que recorre un escenario sobre todo mediante el debate es un ejercicio de mesa."
@@ -4275,25 +4275,25 @@
       "stem": "実際のネットワークで疑似DoSトラフィックを発生させ、FWルール調整やISPへのフィルタ依頼、サーバー負荷監視まで役割分担で実施した。これはどれか。",
       "choices": [
         "机上演習",
-        "シミュレーション",
         "教訓",
+        "シミュレーション",
         "準備の文書レビューのみ"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "実環境に近い状況で実践対応する訓練がシミュレーション（Simulation）。机上より高負荷・高効果。",
       "stem_en": "Simulated DoS traffic was generated on the real network, and roles were divided to carry out FW rule tuning, filtering requests to the ISP and server load monitoring. What is this?",
       "choices_en": [
         "Tabletop exercise",
-        "Simulation",
         "Lessons learned",
+        "Simulation",
         "Only reviewing preparation documents"
       ],
       "explain_en": "An exercise with hands-on response in conditions close to the real environment is a simulation, more demanding and more effective than a tabletop.",
       "stem_es": "Se generó tráfico DoS simulado en la red real y se repartieron funciones para ajustar las reglas del cortafuegos, pedir filtrado al ISP y supervisar la carga de los servidores. ¿Qué es?",
       "choices_es": [
         "Ejercicio de mesa",
-        "Simulación",
         "Lecciones aprendidas",
+        "Simulación",
         "Solo revisar documentos de preparación"
       ],
       "explain_es": "Un ejercicio con respuesta práctica en condiciones cercanas al entorno real es una simulación, más exigente y eficaz que un ejercicio de mesa."
@@ -4302,26 +4302,26 @@
       "term": "d-8-root-cause-analysis",
       "stem": "Web不通の報告を受け、ログを時系列で追った結果、特定IPからの大量リクエストによるDoSが根本原因だと特定した。これはどれか。",
       "choices": [
-        "ルート原因分析",
         "机上演習",
         "封じ込めのみ",
+        "ルート原因分析",
         "準備"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "表面症状から掘り下げて根本原因を特定し再発防止につなげるのがルート原因分析（Root cause analysis）。",
       "stem_en": "After reports that the website was unreachable, logs were traced chronologically and a DoS from massive requests from a specific IP was identified as the root cause. What is this?",
       "choices_en": [
-        "Root cause analysis",
         "Tabletop exercise",
         "Containment only",
+        "Root cause analysis",
         "Preparation"
       ],
       "explain_en": "Digging beneath surface symptoms to identify the underlying cause and prevent recurrence is root cause analysis.",
       "stem_es": "Tras recibir avisos de que el sitio web no respondía, se siguieron los registros en orden cronológico y se identificó como causa raíz un DoS por solicitudes masivas desde una IP concreta. ¿Qué es?",
       "choices_es": [
-        "Análisis de la causa raíz",
         "Ejercicio de mesa",
         "Solo contención",
+        "Análisis de la causa raíz",
         "Preparación"
       ],
       "explain_es": "Profundizar más allá de los síntomas para identificar la causa de fondo y evitar que se repita es el análisis de la causa raíz."
@@ -4332,25 +4332,25 @@
       "choices": [
         "机上演習",
         "教訓",
-        "脅威ハンティング",
-        "復旧"
+        "復旧",
+        "脅威ハンティング"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "ネットワーク内の潜在脅威を能動的に探索・検知・駆除するのが脅威ハンティング（Threat hunting）。",
       "stem_en": "Rather than just waiting for alerts, the team proactively searched for hidden malware, using clues such as large transfers at odd hours and traffic to systems not normally accessed. What is this?",
       "choices_en": [
         "Tabletop exercise",
         "Lessons learned",
-        "Threat hunting",
-        "Recovery"
+        "Recovery",
+        "Threat hunting"
       ],
       "explain_en": "Proactively searching for, detecting and removing hidden threats in the network is threat hunting.",
       "stem_es": "En lugar de limitarse a esperar alertas, el equipo buscó de forma proactiva malware oculto, usando pistas como transferencias grandes a horas inusuales y tráfico hacia sistemas a los que no se suele acceder. ¿Qué es?",
       "choices_es": [
         "Ejercicio de mesa",
         "Lecciones aprendidas",
-        "Búsqueda de amenazas",
-        "Recuperación"
+        "Recuperación",
+        "Búsqueda de amenazas"
       ],
       "explain_es": "Buscar, detectar y eliminar de forma proactiva amenazas ocultas en la red es la búsqueda de amenazas (threat hunting)."
     }

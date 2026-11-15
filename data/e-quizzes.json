@@ -33,26 +33,26 @@
       "stem": "マルウェア感染時に端末を隔離し、対応チームを招集して復旧まで進める。ガバナンス上、事前に手順・役割・指揮系統を定めておく対象はどれか。",
       "choices": [
         "暗号化の基準のみ",
-        "インシデント対応",
         "ナショナル要因のみ",
-        "データコントローラー"
+        "データコントローラー",
+        "インシデント対応"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "事故時の一連プロセスを事前手順化するのがインシデント対応である。",
       "stem_en": "On malware infection, devices are isolated and a response team is convened to carry things through to recovery. In governance terms, what are procedures, roles and chain of command defined in advance for?",
       "choices_en": [
         "Encryption standards only",
-        "Incident response",
         "National factors only",
-        "Data controller"
+        "Data controller",
+        "Incident response"
       ],
       "explain_en": "Turning the full process for incidents into predefined procedures is incident response.",
       "stem_es": "Ante una infección de malware, se aíslan los equipos y se convoca a un equipo de respuesta hasta completar la recuperación. Desde el punto de vista de la gobernanza, ¿para qué se definen de antemano procedimientos, funciones y cadena de mando?",
       "choices_es": [
         "Solo estándares de cifrado",
-        "Respuesta a incidentes",
         "Solo factores nacionales",
-        "Responsable del tratamiento"
+        "Responsable del tratamiento",
+        "Respuesta a incidentes"
       ],
       "explain_es": "Convertir en procedimientos predefinidos todo el proceso ante incidentes es la respuesta a incidentes."
     },
@@ -61,25 +61,25 @@
       "stem": "新システムの要件定義からセキュリティ要件を盛り込み、設計で入力検証などを組み、運用でも対策を続ける。このライフサイクルの考え方はどれか。",
       "choices": [
         "物理的セキュリティの基準",
-        "業界要因のみ",
         "SDLC",
+        "業界要因のみ",
         "委員会のみ"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "企画から運用までセキュリティを組み込むのがSDLCである。",
       "stem_en": "Security requirements are included from the requirements definition of a new system, input validation is built into the design, and protections continue in operation. Which lifecycle concept is this?",
       "choices_en": [
         "Physical security standards",
-        "Industry factors only",
         "SDLC",
+        "Industry factors only",
         "Committees only"
       ],
       "explain_en": "Building security in from planning through operation is the SDLC.",
       "stem_es": "Se incluyen requisitos de seguridad desde la definición de requisitos de un sistema nuevo, se incorpora la validación de entradas en el diseño y las protecciones continúan en la operación. ¿Qué concepto de ciclo de vida es?",
       "choices_es": [
         "Estándares de seguridad física",
-        "Solo factores del sector",
         "SDLC",
+        "Solo factores del sector",
         "Solo comités"
       ],
       "explain_es": "Incorporar la seguridad desde la planificación hasta la operación es el SDLC."
@@ -116,27 +116,27 @@
       "term": "e-1-password-standards",
       "stem": "総当たり攻撃を抑えるため、最低8文字以上などパスワード設定のルールを定め利用者に守らせる。これは何か。",
       "choices": [
-        "パスワードの基準",
         "取締役会",
         "分散型ガバナンスのみ",
-        "プレイブックのみ"
+        "プレイブックのみ",
+        "パスワードの基準"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "長さ等を明確に定めて遵守させるのがパスワードの基準である。",
       "stem_en": "To curb brute-force attacks, rules for setting passwords, such as a minimum of 8 characters, are defined and users must follow them. What is this?",
       "choices_en": [
-        "Password standards",
         "Board",
         "Decentralized governance only",
-        "Playbook only"
+        "Playbook only",
+        "Password standards"
       ],
       "explain_en": "Clearly defining length and the like and enforcing compliance is password standards.",
       "stem_es": "Para frenar los ataques de fuerza bruta, se definen reglas para crear contraseñas, como un mínimo de 8 caracteres, y los usuarios deben cumplirlas. ¿Qué es?",
       "choices_es": [
-        "Estándares de contraseñas",
         "Consejo de administración",
         "Solo gobernanza descentralizada",
-        "Solo manual de actuación"
+        "Solo manual de actuación",
+        "Estándares de contraseñas"
       ],
       "explain_es": "Definir claramente la longitud y otros aspectos y exigir su cumplimiento son los estándares de contraseñas."
     },
@@ -173,26 +173,26 @@
       "stem": "データセンター入口にICカードと暗証番号、サーバ室に生体認証とラック施錠を求めるルールを定めた。これは何か。",
       "choices": [
         "暗号化の基準のみ",
-        "物理的セキュリティの基準",
         "SDLC",
-        "ローカル要因のみ"
+        "ローカル要因のみ",
+        "物理的セキュリティの基準"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "施設・設備を守るための基準が物理的セキュリティの基準である。",
       "stem_en": "Rules were set requiring a smart card and PIN at the data center entrance, and biometrics and rack locks for the server room. What is this?",
       "choices_en": [
         "Encryption standards only",
-        "Physical security standards",
         "SDLC",
-        "Local factors only"
+        "Local factors only",
+        "Physical security standards"
       ],
       "explain_en": "Standards for protecting facilities and equipment are physical security standards.",
       "stem_es": "Se fijaron reglas que exigen tarjeta y PIN en la entrada del centro de datos, y biometría y racks cerrados con llave en la sala de servidores. ¿Qué es?",
       "choices_es": [
         "Solo estándares de cifrado",
-        "Estándares de seguridad física",
         "SDLC",
-        "Solo factores locales"
+        "Solo factores locales",
+        "Estándares de seguridad física"
       ],
       "explain_es": "Los estándares para proteger instalaciones y equipos son los estándares de seguridad física."
     },
@@ -201,25 +201,25 @@
       "stem": "カード情報を扱うサイトでTLS 1.2以上を必須とし、DB保管データには透過的暗号化を求めるルールはどれか。",
       "choices": [
         "委員会",
-        "暗号化の基準",
         "オンボーディング",
+        "暗号化の基準",
         "分散型のみ"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "通信・保管でどの強度・方式を使うかを定めたのが暗号化の基準である。",
       "stem_en": "Which rule requires TLS 1.2 or later for a site handling card data and transparent encryption for data stored in the database?",
       "choices_en": [
         "Committees",
-        "Encryption standards",
         "Onboarding",
+        "Encryption standards",
         "Decentralized only"
       ],
       "explain_en": "Rules setting the strength and method used in transit and at rest are encryption standards.",
       "stem_es": "¿Qué regla exige TLS 1.2 o superior en un sitio que maneja datos de tarjetas y cifrado transparente para los datos almacenados en la base de datos?",
       "choices_es": [
         "Comités",
-        "Estándares de cifrado",
         "Incorporación (onboarding)",
+        "Estándares de cifrado",
         "Solo descentralizado"
       ],
       "explain_es": "Las reglas que fijan la robustez y el método que se usan en tránsito y en reposo son los estándares de cifrado."
@@ -228,27 +228,27 @@
       "term": "e-1-change-management-procedures",
       "stem": "Webアプリに機能追加する際、変更依頼を登録し責任者がレビューし、高リスクなら差戻す流れを手続きにした。これは何か。",
       "choices": [
-        "変更管理の手続き",
         "データコントローラー",
         "業界要因のみ",
-        "ガイドラインの別名ではない"
+        "ガイドラインの別名ではない",
+        "変更管理の手続き"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "依頼登録からレビュー・差戻しまでの規則が変更管理の手続きである。",
       "stem_en": "When adding features to a web app, a flow was made into procedure: change requests are logged, the responsible person reviews them, and high-risk ones are sent back. What is this?",
       "choices_en": [
-        "Change management procedures",
         "Data controller",
         "Industry factors only",
-        "Not just another name for guidelines"
+        "Not just another name for guidelines",
+        "Change management procedures"
       ],
       "explain_en": "The rules running from logging requests through review and sending back are change management procedures.",
       "stem_es": "Al añadir funciones a una aplicación web, se convirtió en procedimiento este flujo: se registran las solicitudes de cambio, el responsable las revisa y las de alto riesgo se devuelven. ¿Qué es?",
       "choices_es": [
-        "Procedimientos de gestión de cambios",
         "Responsable del tratamiento",
         "Solo factores del sector",
-        "No es otro nombre de las directrices"
+        "No es otro nombre de las directrices",
+        "Procedimientos de gestión de cambios"
       ],
       "explain_es": "Las reglas que van desde el registro de la solicitud hasta la revisión y la devolución son los procedimientos de gestión de cambios."
     },
@@ -257,26 +257,26 @@
       "stem": "個人情報保護法の安全管理措置をセキュリティポリシーへ反映し、準拠状況を定期評価する。主にどの外部要因か。",
       "choices": [
         "サイトサーベイ",
-        "規制（Regulatory）",
         "ヒートマップ",
-        "コードサイニング"
+        "コードサイニング",
+        "規制（Regulatory）"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "規制要求のポリシー反映と準拠監視がRegulatoryの要点である。",
       "stem_en": "The safeguards required by the personal information protection law are reflected in the security policy, and compliance is assessed regularly. Which external factor is this mainly?",
       "choices_en": [
         "Site survey",
-        "Regulatory",
         "Heat map",
-        "Code signing"
+        "Code signing",
+        "Regulatory"
       ],
       "explain_en": "Reflecting regulatory requirements in policy and monitoring compliance are the key points of the regulatory factor.",
       "stem_es": "Las medidas de seguridad que exige la ley de protección de datos personales se reflejan en la política de seguridad y el cumplimiento se evalúa periódicamente. ¿Qué factor externo es principalmente?",
       "choices_es": [
         "Estudio del sitio",
-        "Regulatorio",
         "Mapa de calor",
-        "Firma de código"
+        "Firma de código",
+        "Regulatorio"
       ],
       "explain_es": "Reflejar los requisitos normativos en las políticas y supervisar su cumplimiento son lo clave del factor regulatorio."
     },
@@ -340,25 +340,25 @@
       "term": "e-1-local-regional",
       "stem": "EU域内事業でGDPRに沿いデータ主体の権利へ対応し、中国ではデータ現地保存等が求められる。主にどの要因か。",
       "choices": [
-        "ローカル／リージョナル",
         "取締役会のみ",
+        "ローカル／リージョナル",
         "変更管理手続きのみ",
         "セキュアクッキー"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "地域ごとの法・規制への準拠がLocal/Regionalである。",
       "stem_en": "Business in the EU must respect data subjects' rights under GDPR, and in China data localization and the like are required. Which factor is this mainly?",
       "choices_en": [
-        "Local/regional",
         "Board only",
+        "Local/regional",
         "Change management procedures only",
         "Secure cookies"
       ],
       "explain_en": "Complying with each region's laws and regulations is the local/regional factor.",
       "stem_es": "Operar en la UE exige respetar los derechos de los interesados según el RGPD, y en China se exige, entre otras cosas, almacenar los datos localmente. ¿Qué factor es principalmente?",
       "choices_es": [
-        "Local / regional",
         "Solo consejo de administración",
+        "Local / regional",
         "Solo procedimientos de gestión de cambios",
         "Cookies seguras"
       ],
@@ -397,25 +397,25 @@
       "stem": "国境を越えるサイバー犯罪対策の国際条約動向を注視し、グローバルなコンプライアンス体制に取り込む。これはどの要因か。",
       "choices": [
         "物理基準のみ",
-        "グローバル（Global）",
         "パスワード基準のみ",
+        "グローバル（Global）",
         "最小権限のみ"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "国際協力・条約などを体制へ取り込むのがGlobal要因である。",
       "stem_en": "The company follows developments in international treaties against cross-border cybercrime and builds them into its global compliance structure. Which factor is this?",
       "choices_en": [
         "Physical standards only",
-        "Global",
         "Password standards only",
+        "Global",
         "Least privilege only"
       ],
       "explain_en": "Bringing international cooperation and treaties into the organization is the global factor.",
       "stem_es": "La empresa sigue la evolución de los tratados internacionales contra la ciberdelincuencia transfronteriza y los incorpora a su estructura global de cumplimiento. ¿Qué factor es?",
       "choices_es": [
         "Solo estándares físicos",
-        "Global",
         "Solo estándares de contraseñas",
+        "Global",
         "Solo mínimo privilegio"
       ],
       "explain_es": "Incorporar la cooperación y los tratados internacionales a la organización es el factor global."
@@ -424,26 +424,26 @@
       "term": "e-1-monitoring-revision",
       "stem": "定期監査でパスワード変更の実施状況を確認し、遵守率が低ければ教育を強化し、必要ならルール自体を変える。これは何か。",
       "choices": [
-        "セキュリティポリシーの監視と改訂",
         "サイトサーベイ",
         "ヒートマップ",
+        "セキュリティポリシーの監視と改訂",
         "コードサイニング"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "監査による監視と必要に応じた改訂がMonitoring and revisionである。",
       "stem_en": "Regular audits check whether passwords are being changed; if compliance is low, training is strengthened, and if needed the rule itself is changed. What is this?",
       "choices_en": [
-        "Monitoring and revision of security policy",
         "Site survey",
         "Heat map",
+        "Monitoring and revision of security policy",
         "Code signing"
       ],
       "explain_en": "Monitoring through audits and revising as needed is monitoring and revision.",
       "stem_es": "Las auditorías periódicas comprueban si se cambian las contraseñas; si el cumplimiento es bajo, se refuerza la formación y, si hace falta, se cambia la propia regla. ¿Qué es?",
       "choices_es": [
-        "Supervisión y revisión de la política de seguridad",
         "Estudio del sitio",
         "Mapa de calor",
+        "Supervisión y revisión de la política de seguridad",
         "Firma de código"
       ],
       "explain_es": "Supervisar mediante auditorías y revisar cuando sea necesario es la supervisión y revisión."
@@ -452,25 +452,25 @@
       "term": "e-1-boards",
       "stem": "CISO選任やセキュリティ委員会設置を決め、ポリシー承認や監査結果を評価する最高意思決定機関はどれか。",
       "choices": [
-        "データプロセッサーのみ",
         "取締役会",
+        "データプロセッサーのみ",
         "パスワード基準",
         "ローカル要因のみ"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "戦略の方向付けと監督を行う最高意思決定が取締役会である。",
       "stem_en": "Which top decision-making body decides on appointing a CISO and setting up a security committee, approves policies and evaluates audit results?",
       "choices_en": [
-        "Data processor only",
         "Board",
+        "Data processor only",
         "Password standards",
         "Local factors only"
       ],
       "explain_en": "The top decision-making body that sets strategic direction and oversees is the board.",
       "stem_es": "¿Qué máximo órgano de decisión decide nombrar a un CISO y crear un comité de seguridad, aprueba las políticas y evalúa los resultados de las auditorías?",
       "choices_es": [
-        "Solo encargado del tratamiento",
         "Consejo de administración",
+        "Solo encargado del tratamiento",
         "Estándares de contraseñas",
         "Solo factores locales"
       ],
@@ -509,26 +509,26 @@
       "stem": "国家のサイバー戦略策定や省庁のガイドライン、自治体セキュリティクラウドなど、公共側の統治・支援を指す用語はどれか。",
       "choices": [
         "変更管理手続きのみ",
-        "国や自治体など（Government entities）",
         "データ所有者のみ",
-        "セキュアベースラインのみ"
+        "セキュアベースラインのみ",
+        "国や自治体など（Government entities）"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "国・自治体などの公共機関による戦略・施策がGovernment entitiesである。",
       "stem_en": "Which term refers to governance and support from the public side, such as drafting national cyber strategy, ministry guidelines and municipal security clouds?",
       "choices_en": [
         "Change management procedures only",
-        "Government entities",
         "Data owner only",
-        "Secure baseline only"
+        "Secure baseline only",
+        "Government entities"
       ],
       "explain_en": "Strategies and measures by public bodies such as national and local governments are government entities.",
       "stem_es": "¿Qué término se refiere a la gobernanza y el apoyo del sector público, como la elaboración de la estrategia nacional de ciberseguridad, las directrices ministeriales y las nubes de seguridad municipales?",
       "choices_es": [
         "Solo procedimientos de gestión de cambios",
-        "Entidades gubernamentales",
         "Solo propietario de los datos",
-        "Solo línea base segura"
+        "Solo línea base segura",
+        "Entidades gubernamentales"
       ],
       "explain_es": "Las estrategias y medidas de organismos públicos como los gobiernos nacionales y locales son las entidades gubernamentales."
     },
@@ -536,26 +536,26 @@
       "term": "e-1-centralized-decentralized",
       "stem": "本社CISOが全社を統括するモデルと、各拠点が自律して対策するモデルを対比するガバナンス構造はどれか。",
       "choices": [
-        "中央集権と分散",
         "パスワード基準のみ",
         "TLS基準のみ",
+        "中央集権と分散",
         "プレイブックのみ"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "責任の集中（中央集権）か委任（分散）かがCentralized/Decentralizedである。",
       "stem_en": "Which governance structure contrasts a model where the HQ CISO oversees the whole company with one where each site handles security autonomously?",
       "choices_en": [
-        "Centralized and decentralized",
         "Password standards only",
         "TLS standards only",
+        "Centralized and decentralized",
         "Playbook only"
       ],
       "explain_en": "Whether responsibility is concentrated (centralized) or delegated (decentralized) is what centralized/decentralized describes.",
       "stem_es": "¿Qué estructura de gobernanza contrapone un modelo en el que el CISO de la sede supervisa toda la empresa con otro en el que cada sede gestiona la seguridad de forma autónoma?",
       "choices_es": [
-        "Centralizado y descentralizado",
         "Solo estándares de contraseñas",
         "Solo estándares TLS",
+        "Centralizado y descentralizado",
         "Solo manual de actuación"
       ],
       "explain_es": "Si la responsabilidad se concentra (centralizado) o se delega (descentralizado) es lo que distingue lo centralizado de lo descentralizado."
@@ -564,26 +564,26 @@
       "term": "e-1-data-owners",
       "stem": "顧客情報を極秘に格付けし、アクセス要件を定義して権限の棚卸しや利用目的の限定を行う責任者はどれか。",
       "choices": [
-        "データ所有者",
         "ヒートマップ",
         "サイトサーベイ",
+        "データ所有者",
         "WPA3"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "分類・格付けと対策実施の責任がデータ所有者である。",
       "stem_en": "Who classifies customer information as top secret, defines access requirements, reviews access rights and limits the purposes of use?",
       "choices_en": [
-        "Data owner",
         "Heat map",
         "Site survey",
+        "Data owner",
         "WPA3"
       ],
       "explain_en": "Responsibility for classification and implementing controls lies with the data owner.",
       "stem_es": "¿Quién clasifica la información de clientes como alto secreto, define los requisitos de acceso, revisa los permisos y limita las finalidades de uso?",
       "choices_es": [
-        "Propietario de los datos",
         "Mapa de calor",
         "Estudio del sitio",
+        "Propietario de los datos",
         "WPA3"
       ],
       "explain_es": "La responsabilidad de clasificar y aplicar los controles corresponde al propietario de los datos."
@@ -592,25 +592,25 @@
       "term": "e-1-data-controllers",
       "stem": "オンラインショップが顧客個人情報の利用目的を決め通知し、プライバシーポリシーを公表して問合せ窓口を置く。この役割はどれか。",
       "choices": [
-        "変更管理委員会のみ",
         "データコントローラー",
+        "変更管理委員会のみ",
         "物理基準のみ",
         "ナショナル要因のみ"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "利用目的や取扱い方針を決定する責任がデータコントローラーである。",
       "stem_en": "An online shop decides and announces the purposes for using customers' personal data, publishes a privacy policy and sets up a contact point for inquiries. What role is this?",
       "choices_en": [
-        "Change management committee only",
         "Data controller",
+        "Change management committee only",
         "Physical standards only",
         "National factors only"
       ],
       "explain_en": "Responsibility for deciding the purposes and handling policies of data belongs to the data controller.",
       "stem_es": "Una tienda en línea decide y comunica las finalidades de uso de los datos personales de los clientes, publica una política de privacidad y habilita un punto de contacto para consultas. ¿Qué función es?",
       "choices_es": [
-        "Solo comité de gestión de cambios",
         "Responsable del tratamiento",
+        "Solo comité de gestión de cambios",
         "Solo estándares físicos",
         "Solo factores nacionales"
       ],
@@ -622,27 +622,27 @@
       "term": "e-2-risk-identification",
       "stem": "ソフトウェア開発で、要員不足・仕様変更・予算超過・競合先行など、起こりうるリスクシナリオを洗い出している。このプロセスはどれか。",
       "choices": [
-        "リスクの特定",
         "ALEの算出のみ",
         "中立的アペタイトの決定",
-        "ワンタイム評価のみ"
+        "ワンタイム評価のみ",
+        "リスクの特定"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "組織の資産・脅威・脆弱性などを洗い出しリスクシナリオを特定するのがリスクの特定である。",
       "stem_en": "In a software project, possible risk scenarios are being listed: staff shortages, spec changes, budget overruns, competitors getting there first, and so on. What process is this?",
       "choices_en": [
-        "Risk identification",
         "Calculating ALE only",
         "Deciding a neutral appetite",
-        "One-time assessment only"
+        "One-time assessment only",
+        "Risk identification"
       ],
       "explain_en": "Listing an organization's assets, threats, vulnerabilities and the like to identify risk scenarios is risk identification.",
       "stem_es": "En un proyecto de software se están enumerando posibles escenarios de riesgo: falta de personal, cambios de especificación, sobrecostes, que la competencia se adelante, etc. ¿Qué proceso es?",
       "choices_es": [
-        "Identificación de riesgos",
         "Solo calcular la ALE",
         "Decidir un apetito neutral",
-        "Solo evaluación puntual"
+        "Solo evaluación puntual",
+        "Identificación de riesgos"
       ],
       "explain_es": "Enumerar los activos, amenazas, vulnerabilidades, etc., de una organización para identificar escenarios de riesgo es la identificación de riesgos."
     },
@@ -651,25 +651,25 @@
       "stem": "新機能追加の直後、体系的な固定手順ではなく経験豊富な専門家が素早く脆弱性をレビューし影響を見積もった。この評価の進め方はどれか。",
       "choices": [
         "ワンタイムのみ",
-        "アドホック",
         "ALE",
+        "アドホック",
         "保守的アペタイト"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "新たに見つかったリスクや変化に応じて随時・迅速に行うのがアドホック評価である。",
       "stem_en": "Right after a new feature was added, an experienced expert quickly reviewed it for vulnerabilities and estimated the impact, rather than following a fixed systematic procedure. How is this assessment conducted?",
       "choices_en": [
         "One-time only",
-        "Ad hoc",
         "ALE",
+        "Ad hoc",
         "Conservative appetite"
       ],
       "explain_en": "Assessing as needed and quickly in response to newly found risks or changes is an ad hoc assessment.",
       "stem_es": "Justo después de añadir una función nueva, un experto con experiencia la revisó rápidamente en busca de vulnerabilidades y estimó el impacto, en lugar de seguir un procedimiento sistemático fijo. ¿Cómo se realiza esta evaluación?",
       "choices_es": [
         "Solo puntual",
-        "Ad hoc",
         "ALE",
+        "Ad hoc",
         "Apetito conservador"
       ],
       "explain_es": "Evaluar cuando haga falta y con rapidez ante riesgos o cambios nuevos es una evaluación ad hoc."
@@ -680,25 +680,25 @@
       "choices": [
         "継続的評価",
         "拡大的アペタイト",
-        "ワンタイム",
-        "KRI"
+        "KRI",
+        "ワンタイム"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "導入前や大きな変更前など、特定契機で一回限り実施するのがワンタイム評価である。",
       "stem_en": "Before adopting a new cloud service, the company checked once whether its encryption and log retention period meet company policy. What is this?",
       "choices_en": [
         "Continuous assessment",
         "Expansionary appetite",
-        "One-time",
-        "KRI"
+        "KRI",
+        "One-time"
       ],
       "explain_en": "An assessment done once at a specific trigger, such as before adoption or a major change, is a one-time assessment.",
       "stem_es": "Antes de adoptar un servicio en la nube nuevo, la empresa comprobó una sola vez si su cifrado y su periodo de conservación de registros cumplen la política interna. ¿Qué es?",
       "choices_es": [
         "Evaluación continua",
         "Apetito expansivo",
-        "Puntual",
-        "KRI"
+        "KRI",
+        "Puntual"
       ],
       "explain_es": "Una evaluación que se hace una sola vez ante un hecho concreto, como antes de una adopción o un gran cambio, es una evaluación puntual."
     },
@@ -708,25 +708,25 @@
       "choices": [
         "ワンタイム",
         "アドホックのみ",
-        "SLE",
-        "継続的"
+        "継続的",
+        "SLE"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "運用開始後に定期または常時モニタリングする形式が継続的リスク評価である。",
       "stem_en": "On the internal network, firewall logs are checked constantly, and vulnerability scans of all servers are run every quarter. What form of assessment is this?",
       "choices_en": [
         "One-time",
         "Ad hoc only",
-        "SLE",
-        "Continuous"
+        "Continuous",
+        "SLE"
       ],
       "explain_en": "Monitoring regularly or constantly after operations begin is continuous risk assessment.",
       "stem_es": "En la red interna se revisan constantemente los registros del cortafuegos y cada trimestre se analizan las vulnerabilidades de todos los servidores. ¿Qué forma de evaluación es?",
       "choices_es": [
         "Puntual",
         "Solo ad hoc",
-        "SLE",
-        "Continua"
+        "Continua",
+        "SLE"
       ],
       "explain_es": "Supervisar de forma periódica o constante una vez iniciada la operación es la evaluación continua de riesgos."
     },
@@ -734,25 +734,25 @@
       "term": "e-2-qualitative",
       "stem": "新製品開発リスクを、発生可能性と影響度で「高／中／低」と言葉で付けている。この分析はどれか。",
       "choices": [
-        "定量的",
         "定性的",
+        "定量的",
         "ALE",
         "暴露係数"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "主観的に高中低などで表すのが定性的リスク分析である。",
       "stem_en": "Risks in new product development are labeled \"high/medium/low\" in words according to likelihood and impact. What analysis is this?",
       "choices_en": [
-        "Quantitative",
         "Qualitative",
+        "Quantitative",
         "ALE",
         "Exposure factor"
       ],
       "explain_en": "Expressing risk subjectively as high/medium/low is qualitative risk analysis.",
       "stem_es": "Los riesgos del desarrollo de un producto nuevo se etiquetan con palabras como «alto/medio/bajo» según la probabilidad y el impacto. ¿Qué análisis es?",
       "choices_es": [
-        "Cuantitativo",
         "Cualitativo",
+        "Cuantitativo",
         "ALE",
         "Factor de exposición"
       ],
@@ -762,26 +762,26 @@
       "term": "e-2-quantitative",
       "stem": "SQLi漏えいの年間発生確率を0.1%、損失額と掛け合わせてリスク量を数値で比較している。この分析はどれか。",
       "choices": [
-        "定量的",
         "定性的のみ",
         "アドホック",
+        "定量的",
         "リスク閾値"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "発生確率と損失額を数値で表すのが定量的リスク分析である。",
       "stem_en": "The annual probability of a leak via SQLi is put at 0.1% and multiplied by the loss amount to compare risk numerically. What analysis is this?",
       "choices_en": [
-        "Quantitative",
         "Qualitative only",
         "Ad hoc",
+        "Quantitative",
         "Risk threshold"
       ],
       "explain_en": "Expressing probability and loss amounts in numbers is quantitative risk analysis.",
       "stem_es": "La probabilidad anual de una fuga por SQLi se fija en el 0,1 % y se multiplica por el importe de la pérdida para comparar el riesgo en cifras. ¿Qué análisis es?",
       "choices_es": [
-        "Cuantitativo",
         "Solo cualitativo",
         "Ad hoc",
+        "Cuantitativo",
         "Umbral de riesgo"
       ],
       "explain_es": "Expresar en cifras la probabilidad y el importe de las pérdidas es el análisis cuantitativo de riesgos."
@@ -791,25 +791,25 @@
       "stem": "基幹障害が一度起きたときの機会損失・緊急調達・信用失墜による売上減を合計し、「1回あたりの予想損失」を出した。この指標はどれか。",
       "choices": [
         "ARO",
-        "KRI",
         "SLE",
+        "KRI",
         "Likelihood"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "単一損失期待値（SLE）は1回のインシデントで予想される損失額である。",
       "stem_en": "Lost business, emergency procurement and lost sales from damaged trust were added up for a single core-system outage to get the \"expected loss per occurrence.\" Which metric is this?",
       "choices_en": [
         "ARO",
-        "KRI",
         "SLE",
+        "KRI",
         "Likelihood"
       ],
       "explain_en": "Single loss expectancy (SLE) is the expected loss from one incident.",
       "stem_es": "Se sumaron el negocio perdido, las compras urgentes y las ventas perdidas por la pérdida de confianza en una sola caída del sistema central para obtener la «pérdida esperada por suceso». ¿Qué métrica es?",
       "choices_es": [
         "ARO",
-        "KRI",
         "SLE",
+        "KRI",
         "Verosimilitud"
       ],
       "explain_es": "La expectativa de pérdida única (SLE) es la pérdida esperada de un solo incidente."
@@ -846,26 +846,26 @@
       "term": "e-2-probability-likelihood",
       "stem": "試験対策として、0〜1の数値で表す尺度と、高中低など主観で表す尺度を区別したい。正しい対応はどれか。",
       "choices": [
+        "Probability＝確率（数値）、Likelihood＝可能性（定性）",
         "Probability＝可能性（定性）、Likelihood＝確率（数値）",
         "どちらもALEの別名",
-        "Probability＝確率（数値）、Likelihood＝可能性（定性）",
         "どちらも暴露係数"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "講義ではProbabilityを確率（数値）、Likelihoodを可能性（定性）として整理する。",
       "stem_en": "For the exam, you want to tell apart a scale expressed as a number from 0 to 1 and one expressed subjectively as high/medium/low. Which mapping is correct?",
       "choices_en": [
+        "Probability is numeric; likelihood is qualitative",
         "Probability is qualitative; likelihood is numeric",
         "Both are other names for ALE",
-        "Probability is numeric; likelihood is qualitative",
         "Both are exposure factors"
       ],
       "explain_en": "The lesson treats probability as a numeric chance and likelihood as a qualitative possibility.",
       "stem_es": "Para el examen, quieres distinguir una escala expresada con un número de 0 a 1 de otra expresada de forma subjetiva como alto/medio/bajo. ¿Qué correspondencia es correcta?",
       "choices_es": [
+        "La probabilidad es numérica y la verosimilitud es cualitativa",
         "La probabilidad es cualitativa y la verosimilitud es numérica",
         "Ambas son otros nombres de la ALE",
-        "La probabilidad es numérica y la verosimilitud es cualitativa",
         "Ambas son factores de exposición"
       ],
       "explain_es": "La lección trata la probabilidad (probability) como un valor numérico y la verosimilitud (likelihood) como una posibilidad cualitativa."
@@ -874,26 +874,26 @@
       "term": "e-2-exposure-factor",
       "stem": "火災時に耐火保管のPCは資産価値の20%が失われると見積もり、EF=0.2とした。この指標はどれか。",
       "choices": [
-        "暴露係数",
         "リスクオーナー",
         "拡大的アペタイト",
+        "暴露係数",
         "ワンタイム"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "暴露係数（Exposure factor）は脅威発生時に失われる資産の割合である。",
       "stem_en": "It was estimated that fireproof-stored PCs would lose 20% of their asset value in a fire, so EF = 0.2. Which metric is this?",
       "choices_en": [
-        "Exposure factor",
         "Risk owner",
         "Expansionary appetite",
+        "Exposure factor",
         "One-time"
       ],
       "explain_en": "The exposure factor is the share of an asset lost when a threat occurs.",
       "stem_es": "Se estimó que los PC guardados en un almacén ignífugo perderían el 20 % de su valor en un incendio, así que EF = 0,2. ¿Qué métrica es?",
       "choices_es": [
-        "Factor de exposición",
         "Propietario del riesgo",
         "Apetito expansivo",
+        "Factor de exposición",
         "Puntual"
       ],
       "explain_es": "El factor de exposición es la proporción del activo que se pierde cuando se materializa una amenaza."
@@ -903,26 +903,26 @@
       "stem": "主要部品の供給停止について、財務損失・業務中断時間・評判低下を踏まえ「影響が大きい」と判断した。この概念はどれか。",
       "choices": [
         "アドホック",
-        "インパクト",
         "ARO",
-        "KRI"
+        "KRI",
+        "インパクト"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "脅威顕在化時に組織が受ける影響の大きさがインパクトである。",
       "stem_en": "A stoppage in supply of a key component was judged to have a \"large effect\" based on financial loss, downtime and reputational harm. Which concept is this?",
       "choices_en": [
         "Ad hoc",
-        "Impact",
         "ARO",
-        "KRI"
+        "KRI",
+        "Impact"
       ],
       "explain_en": "The size of the effect on the organization when a threat materializes is impact.",
       "stem_es": "Se consideró que una interrupción del suministro de un componente clave tendría un «efecto grande» por las pérdidas económicas, el tiempo de parada y el daño a la reputación. ¿Qué concepto es?",
       "choices_es": [
         "Ad hoc",
-        "Impacto",
         "ARO",
-        "KRI"
+        "KRI",
+        "Impacto"
       ],
       "explain_es": "La magnitud del efecto en la organización cuando se materializa una amenaza es el impacto."
     },
@@ -960,25 +960,25 @@
       "choices": [
         "暴露係数",
         "ALE",
-        "リスクオーナー",
-        "アドホック評価者のみ"
+        "アドホック評価者のみ",
+        "リスクオーナー"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "リスクに責任を持ち管理を主導する人物・部門がリスクオーナーである。",
       "stem_en": "For product defect risk, the head of quality control leads planning responses, monitoring progress and coordinating with other departments, and is recorded in the register. What role is this?",
       "choices_en": [
         "Exposure factor",
         "ALE",
-        "Risk owner",
-        "Ad hoc assessor only"
+        "Ad hoc assessor only",
+        "Risk owner"
       ],
       "explain_en": "The person or department responsible for a risk and leading its management is the risk owner.",
       "stem_es": "Para el riesgo de defectos del producto, el responsable de control de calidad dirige la planificación de respuestas, el seguimiento y la coordinación con otros departamentos, y figura en el registro. ¿Qué función es?",
       "choices_es": [
         "Factor de exposición",
         "ALE",
-        "Propietario del riesgo",
-        "Solo evaluador ad hoc"
+        "Solo evaluador ad hoc",
+        "Propietario del riesgo"
       ],
       "explain_es": "La persona o el departamento responsable de un riesgo que dirige su gestión es el propietario del riesgo."
     },
@@ -986,26 +986,26 @@
       "term": "e-2-risk-threshold",
       "stem": "プロジェクトのリスク一覧で、ある水準を超えたものだけ必ず対策する、と線引きして優先順位を付けた。この基準点はどれか。",
       "choices": [
-        "リスク閾値",
         "サイトサーベイ",
         "定性的＝金額計算",
+        "リスク閾値",
         "継続的＝一回限り"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "許容できる限界を示す基準点がリスク閾値で、対応の強弱付けに使う。",
       "stem_en": "In a project's risk list, a line was drawn so that only risks above a certain level must always be addressed, setting priorities. What is this reference point?",
       "choices_en": [
-        "Risk threshold",
         "Site survey",
         "Qualitative = monetary calculation",
+        "Risk threshold",
         "Continuous = one-off"
       ],
       "explain_en": "The reference point marking the tolerable limit is the risk threshold, used to decide how strongly to respond.",
       "stem_es": "En la lista de riesgos de un proyecto, se trazó una línea para que solo los riesgos por encima de cierto nivel deban tratarse siempre, fijando prioridades. ¿Qué es este punto de referencia?",
       "choices_es": [
-        "Umbral de riesgo",
         "Estudio del sitio",
         "Cualitativo = cálculo monetario",
+        "Umbral de riesgo",
         "Continuo = único"
       ],
       "explain_es": "El punto de referencia que marca el límite tolerable es el umbral de riesgo, que sirve para decidir la intensidad de la respuesta."
@@ -1014,25 +1014,25 @@
       "term": "e-2-expansionary-risk-appetite",
       "stem": "失敗時の損害は大きいが得られるリターンも大きい新コンセプトEV開発に、スタートアップが積極的に踏み込む。この方針はどれか。",
       "choices": [
-        "保守的リスクアペタイト",
         "拡大的リスクアペタイト",
+        "保守的リスクアペタイト",
         "SLE",
         "ワンタイム"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "高いリターンを求めてリスクテイクに積極的なのが拡大的アペタイトである。",
       "stem_en": "A startup boldly pursues developing a new-concept EV: the damage if it fails is large, but so is the potential return. Which stance is this?",
       "choices_en": [
-        "Conservative risk appetite",
         "Expansionary risk appetite",
+        "Conservative risk appetite",
         "SLE",
         "One-time"
       ],
       "explain_en": "Actively taking risks in pursuit of high returns is an expansionary appetite.",
       "stem_es": "Una startup se lanza con decisión a desarrollar un vehículo eléctrico de concepto nuevo: el daño si fracasa es grande, pero también el posible rendimiento. ¿Qué postura es?",
       "choices_es": [
-        "Apetito de riesgo conservador",
         "Apetito de riesgo expansivo",
+        "Apetito de riesgo conservador",
         "SLE",
         "Puntual"
       ],
@@ -1042,26 +1042,26 @@
       "term": "e-2-conservative-risk-appetite",
       "stem": "老舗食品メーカーがブランドと信頼を最優先し、大きなリスクを避けて安定収益を選ぶ。この方針はどれか。",
       "choices": [
+        "保守的リスクアペタイト",
         "拡大的リスクアペタイト",
         "継続的評価",
-        "保守的リスクアペタイト",
         "定量的分析のみ"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "安定性を重視しリスク最小化を優先するのが保守的アペタイトである。",
       "stem_en": "A long-established food maker puts its brand and trust first, avoiding big risks and choosing stable earnings. Which stance is this?",
       "choices_en": [
+        "Conservative risk appetite",
         "Expansionary risk appetite",
         "Continuous assessment",
-        "Conservative risk appetite",
         "Quantitative analysis only"
       ],
       "explain_en": "Prioritizing stability and minimizing risk is a conservative appetite.",
       "stem_es": "Un fabricante de alimentos de larga tradición antepone su marca y la confianza, evita los grandes riesgos y elige ingresos estables. ¿Qué postura es?",
       "choices_es": [
+        "Apetito de riesgo conservador",
         "Apetito de riesgo expansivo",
         "Evaluación continua",
-        "Apetito de riesgo conservador",
         "Solo análisis cuantitativo"
       ],
       "explain_es": "Priorizar la estabilidad y minimizar el riesgo es un apetito conservador."
@@ -1070,25 +1070,25 @@
       "term": "e-2-neutral-risk-appetite",
       "stem": "受託ソフト会社が、案件ごとに安全な既存手法とやや新しい挑戦を秤にかけ、リスクと機会のバランスで判断する。この方針はどれか。",
       "choices": [
-        "中立的リスクアペタイト",
         "拡大的のみ",
+        "中立的リスクアペタイト",
         "暴露係数",
         "リスクの特定のみ"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "リスクと機会のバランスを状況に応じて取るのが中立的アペタイトである。",
       "stem_en": "A contract software firm weighs safe, established methods against somewhat newer challenges for each project, deciding on the balance between risk and opportunity. Which stance is this?",
       "choices_en": [
-        "Neutral risk appetite",
         "Expansionary only",
+        "Neutral risk appetite",
         "Exposure factor",
         "Risk identification only"
       ],
       "explain_en": "Balancing risk and opportunity according to the situation is a neutral appetite.",
       "stem_es": "Una empresa de desarrollo por encargo sopesa en cada proyecto métodos seguros y probados frente a retos algo más novedosos, y decide según el equilibrio entre riesgo y oportunidad. ¿Qué postura es?",
       "choices_es": [
-        "Apetito de riesgo neutral",
         "Solo expansivo",
+        "Apetito de riesgo neutral",
         "Factor de exposición",
         "Solo identificación de riesgos"
       ],
@@ -1101,26 +1101,26 @@
       "stem": "委託先ベンダーのセキュリティ対策を無条件に信じず、合意のうえで攻撃シミュレーション等により自ら耐性を確かめた。これは主にどの評価手法か。",
       "choices": [
         "デューデリジェンスのみ",
-        "侵入テスト",
         "利益相反の確認のみ",
-        "MOUの締結のみ"
+        "MOUの締結のみ",
+        "侵入テスト"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "第三者の対策を自ら検証するのが侵入テスト（ベンダー評価としての位置づけ）。",
       "stem_en": "Rather than trusting a contracted vendor's security unconditionally, the company verified its resilience itself, by agreement, using attack simulations and the like. Which assessment method is this mainly?",
       "choices_en": [
         "Due diligence only",
-        "Penetration testing",
         "Only checking for conflicts of interest",
-        "Only signing an MOU"
+        "Only signing an MOU",
+        "Penetration testing"
       ],
       "explain_en": "Verifying a third party's controls yourself is penetration testing, here as part of vendor assessment.",
       "stem_es": "En lugar de fiarse sin más de la seguridad de un proveedor contratado, la empresa comprobó ella misma su resistencia, de mutuo acuerdo, con simulaciones de ataque y similares. ¿Qué método de evaluación es principalmente?",
       "choices_es": [
         "Solo diligencia debida",
-        "Pruebas de penetración",
         "Solo comprobar conflictos de intereses",
-        "Solo firmar un MOU"
+        "Solo firmar un MOU",
+        "Pruebas de penetración"
       ],
       "explain_es": "Verificar uno mismo los controles de un tercero son las pruebas de penetración, aquí como parte de la evaluación de proveedores."
     },
@@ -1130,25 +1130,25 @@
       "choices": [
         "SLAの定義",
         "内部監査の証跡確認のみ",
-        "デューデリジェンス",
-        "利益相反"
+        "利益相反",
+        "デューデリジェンス"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "選定前の入念な調査がデューデリジェンス（デューデリ）である。",
       "stem_en": "Before selecting a vendor, the company thoroughly investigated its financial health, legal compliance, security posture, track record and so on. What is this activity?",
       "choices_en": [
         "Defining an SLA",
         "Only checking evidence of internal audits",
-        "Due diligence",
-        "Conflict of interest"
+        "Conflict of interest",
+        "Due diligence"
       ],
       "explain_en": "Thorough investigation before selection is due diligence.",
       "stem_es": "Antes de seleccionar un proveedor, la empresa investigó a fondo su solidez financiera, cumplimiento legal, situación de seguridad, historial, etc. ¿Qué actividad es?",
       "choices_es": [
         "Definir un SLA",
         "Solo revisar evidencias de auditorías internas",
-        "Diligencia debida",
-        "Conflicto de intereses"
+        "Conflicto de intereses",
+        "Diligencia debida"
       ],
       "explain_es": "La investigación exhaustiva antes de la selección es la diligencia debida."
     },
@@ -1184,27 +1184,27 @@
       "term": "e-3-conflict-of-interest",
       "stem": "選定担当が同級生の会社へ、他社より高い見積もりでも優先発注しようとしている。公正なベンダー選定のためにまず確認すべき概念はどれか。",
       "choices": [
+        "利益相反",
         "SLA",
         "MOU",
-        "ヒートマップ",
-        "利益相反"
+        "ヒートマップ"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "私的利害が職務上の決定を歪める状況が利益相反。選定時に有無を確認する。",
       "stem_en": "The person in charge of selection wants to give priority to a former classmate's company, even with a higher quote than others. Which concept should be checked first for fair vendor selection?",
       "choices_en": [
+        "Conflict of interest",
         "SLA",
         "MOU",
-        "Heat map",
-        "Conflict of interest"
+        "Heat map"
       ],
       "explain_en": "A situation where personal interests distort job decisions is a conflict of interest; check for it during selection.",
       "stem_es": "La persona encargada de la selección quiere dar prioridad a la empresa de un antiguo compañero de clase, aunque su presupuesto sea más alto. ¿Qué concepto debe comprobarse primero para una selección justa?",
       "choices_es": [
+        "Conflicto de intereses",
         "SLA",
         "MOU",
-        "Mapa de calor",
-        "Conflicto de intereses"
+        "Mapa de calor"
       ],
       "explain_es": "Una situación en la que los intereses personales distorsionan las decisiones del puesto es un conflicto de intereses; hay que comprobarlo durante la selección."
     },
@@ -1268,25 +1268,25 @@
       "term": "e-3-sla",
       "stem": "ITサービス提供者と利用者の間で、稼働率・応答時間・障害対応手順などサービスの品質と範囲を契約的に定めた。これは何か。",
       "choices": [
-        "SLA（Service Level Agreement）",
         "利益相反",
+        "SLA（Service Level Agreement）",
         "デューデリジェンス",
         "MOUのみ"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "サービス品質・範囲・性能指標・対応手順を定めるのがSLA。",
       "stem_en": "Between an IT service provider and its users, service quality and scope such as uptime, response time and incident procedures were defined contractually. What is this?",
       "choices_en": [
-        "SLA (Service Level Agreement)",
         "Conflict of interest",
+        "SLA (Service Level Agreement)",
         "Due diligence",
         "MOU only"
       ],
       "explain_en": "Defining service quality, scope, performance metrics and response procedures is an SLA.",
       "stem_es": "Entre un proveedor de servicios de TI y sus usuarios, se definieron contractualmente la calidad y el alcance del servicio, como la disponibilidad, el tiempo de respuesta y los procedimientos ante incidencias. ¿Qué es?",
       "choices_es": [
-        "SLA (acuerdo de nivel de servicio)",
         "Conflicto de intereses",
+        "SLA (acuerdo de nivel de servicio)",
         "Diligencia debida",
         "Solo MOU"
       ],
@@ -1299,25 +1299,25 @@
       "stem": "四半期ごとに監査委員会へ、個人情報取扱いの遵守状況や訓練完了率をまとめて提出し、社内の改善判断に使っている。これはどれか。",
       "choices": [
         "外部コンプライアンス報告書",
-        "内部コンプライアンス報告書",
         "罰金",
+        "内部コンプライアンス報告書",
         "アテステーションのみ"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "経営・監査委員会など社内向けに遵守状況を報告するのが内部コンプライアンス報告（Internal）。",
       "stem_en": "Every quarter, compliance with personal data handling and training completion rates are compiled and submitted to the audit committee, and used for internal improvement decisions. What is this?",
       "choices_en": [
         "External compliance report",
-        "Internal compliance report",
         "Fines",
+        "Internal compliance report",
         "Attestation only"
       ],
       "explain_en": "Reporting compliance status internally, to management, the audit committee and so on, is internal compliance reporting.",
       "stem_es": "Cada trimestre, el cumplimiento en el tratamiento de datos personales y las tasas de finalización de la formación se recopilan y presentan al comité de auditoría, y se usan para decidir mejoras internas. ¿Qué es?",
       "choices_es": [
         "Informe de cumplimiento externo",
-        "Informe de cumplimiento interno",
         "Multas",
+        "Informe de cumplimiento interno",
         "Solo atestación"
       ],
       "explain_es": "Informar del estado de cumplimiento dentro de la organización, a la dirección, al comité de auditoría, etc., es el informe de cumplimiento interno."
@@ -1326,26 +1326,26 @@
       "term": "e-4-external-compliance-reporting",
       "stem": "個人情報漏えい後、法令で定められた様式・期限内に監督官庁へ状況を届け出た。これはどれか。",
       "choices": [
+        "外部コンプライアンス報告書",
         "内部コンプライアンス報告書",
         "デューデリジェンス",
-        "外部コンプライアンス報告書",
         "評判被害"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "規制当局・顧客など組織外へ提出する報告が外部コンプライアンス報告（External）。",
       "stem_en": "After a personal data leak, the company reported the situation to the regulator in the legally required format and within the deadline. What is this?",
       "choices_en": [
+        "External compliance report",
         "Internal compliance report",
         "Due diligence",
-        "External compliance report",
         "Reputational damage"
       ],
       "explain_en": "Reports submitted outside the organization, to regulators, customers and so on, are external compliance reporting.",
       "stem_es": "Tras una fuga de datos personales, la empresa notificó la situación al organismo regulador en el formato y el plazo que exige la ley. ¿Qué es?",
       "choices_es": [
+        "Informe de cumplimiento externo",
         "Informe de cumplimiento interno",
         "Diligencia debida",
-        "Informe de cumplimiento externo",
         "Daño a la reputación"
       ],
       "explain_es": "Los informes que se presentan fuera de la organización, a reguladores, clientes, etc., son informes de cumplimiento externos."
@@ -1355,26 +1355,26 @@
       "stem": "個人情報の不適切管理が発覚し、監督機関から数百万円規模の金銭支払いを命じられた。これはどれか。",
       "choices": [
         "評判被害",
+        "罰金",
         "契約上の影響",
-        "デューデリジェンス",
-        "罰金"
+        "デューデリジェンス"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "法令違反に対する金銭的ペナルティが罰金（Fines）。重大度で金額が決まる。",
       "stem_en": "After improper handling of personal data came to light, the regulator ordered a payment of several million yen. What is this?",
       "choices_en": [
         "Reputational damage",
+        "Fines",
         "Contractual impacts",
-        "Due diligence",
-        "Fines"
+        "Due diligence"
       ],
       "explain_en": "A monetary penalty for violating the law is a fine; the amount depends on severity.",
       "stem_es": "Tras descubrirse un tratamiento inadecuado de datos personales, el regulador ordenó pagar varios millones de yenes. ¿Qué es?",
       "choices_es": [
         "Daño a la reputación",
+        "Multas",
         "Impactos contractuales",
-        "Diligencia debida",
-        "Multas"
+        "Diligencia debida"
       ],
       "explain_es": "Una sanción económica por infringir la ley es una multa; el importe depende de la gravedad."
     },
@@ -1382,25 +1382,25 @@
       "term": "e-4-sanctions",
       "stem": "公共工事の談合が発覚し、制裁金に加え一定期間の指名停止となり、入札参加ができなくなった。これはどれか。",
       "choices": [
-        "制裁",
         "内部コンプライアンス報告書",
+        "制裁",
         "アテステーション",
         "罰金のみ（金銭以外の措置は含まない）"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "業務停止・指名停止・許認可取消など不利益を科して抑止するのが制裁（Sanctions）。金銭以外も含む。",
       "stem_en": "Bid-rigging on public works came to light, and in addition to a penalty payment the company was excluded from bidding for a period. What is this?",
       "choices_en": [
-        "Sanctions",
         "Internal compliance report",
+        "Sanctions",
         "Attestation",
         "Fines only (no non-monetary measures)"
       ],
       "explain_en": "Imposing adverse measures such as suspension, exclusion from bidding or license revocation to deter is sanctions, which include non-monetary measures.",
       "stem_es": "Se descubrió una colusión en licitaciones de obra pública y, además de una sanción económica, la empresa quedó excluida de las licitaciones durante un tiempo. ¿Qué es?",
       "choices_es": [
-        "Sanciones",
         "Informe de cumplimiento interno",
+        "Sanciones",
         "Atestación",
         "Solo multas (sin medidas no económicas)"
       ],
@@ -1411,26 +1411,26 @@
       "stem": "原産地偽装が明るみに出て顧客の信用を失い、ブランドイメージが大きく傷つき株価も下落した。これはどれか。",
       "choices": [
         "罰金",
-        "評判被害",
         "デューデリジェンス",
-        "内部報告"
+        "内部報告",
+        "評判被害"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "ステークホルダーからの信頼・ブランドが損なわれるのが評判被害（Reputational damage）。",
       "stem_en": "Falsified country-of-origin labeling came to light, the company lost customers' trust, its brand image was badly hurt, and its stock fell. What is this?",
       "choices_en": [
         "Fines",
-        "Reputational damage",
         "Due diligence",
-        "Internal report"
+        "Internal report",
+        "Reputational damage"
       ],
       "explain_en": "Loss of trust and brand among stakeholders is reputational damage.",
       "stem_es": "Salió a la luz que la empresa falseaba el país de origen, perdió la confianza de los clientes, su imagen de marca quedó muy dañada y su cotización cayó. ¿Qué es?",
       "choices_es": [
         "Multas",
-        "Daño a la reputación",
         "Diligencia debida",
-        "Informe interno"
+        "Informe interno",
+        "Daño a la reputación"
       ],
       "explain_es": "La pérdida de confianza y de imagen de marca ante las partes interesadas es el daño a la reputación."
     },
@@ -1440,25 +1440,25 @@
       "choices": [
         "外部コンプライアンス報告書",
         "アテステーション",
-        "契約上の影響",
-        "罰金"
+        "罰金",
+        "契約上の影響"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "違反を理由に契約解除・改定や新規締結困難になるのが契約上の影響（Contractual impacts）。",
       "stem_en": "A serious vulnerability in delivered software turned out to stem from skipped security testing, and the customer terminated a large development contract. What is this?",
       "choices_en": [
         "External compliance report",
         "Attestation",
-        "Contractual impacts",
-        "Fines"
+        "Fines",
+        "Contractual impacts"
       ],
       "explain_en": "Violations leading to contracts being terminated, revised or hard to win are contractual impacts.",
       "stem_es": "Se descubrió que una vulnerabilidad grave del software entregado se debía a que no se hicieron pruebas de seguridad, y el cliente rescindió un gran contrato de desarrollo. ¿Qué es?",
       "choices_es": [
         "Informe de cumplimiento externo",
         "Atestación",
-        "Impactos contractuales",
-        "Multas"
+        "Multas",
+        "Impactos contractuales"
       ],
       "explain_es": "Las infracciones que llevan a rescindir, modificar o dificultar contratos son los impactos contractuales."
     },
@@ -1466,27 +1466,27 @@
       "term": "e-4-due-diligence",
       "stem": "新規部品サプライヤーとの取引前に、法令遵守状況や贈収賄リスクを調査し、問題がないか確認した。これはどれか。",
       "choices": [
+        "デューデリジェンス",
         "制裁",
         "評判被害",
-        "外部報告のみ",
-        "デューデリジェンス"
+        "外部報告のみ"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "取引先等のコンプライアンス状況を事前に十分調査するのがデューデリジェンス（Due diligence）。",
       "stem_en": "Before doing business with a new parts supplier, the company investigated its legal compliance and bribery risk to confirm there were no problems. What is this?",
       "choices_en": [
+        "Due diligence",
         "Sanctions",
         "Reputational damage",
-        "External reporting only",
-        "Due diligence"
+        "External reporting only"
       ],
       "explain_en": "Thoroughly investigating a business partner's compliance in advance is due diligence.",
       "stem_es": "Antes de trabajar con un nuevo proveedor de piezas, la empresa investigó su cumplimiento legal y el riesgo de soborno para confirmar que no había problemas. ¿Qué es?",
       "choices_es": [
+        "Diligencia debida",
         "Sanciones",
         "Daño a la reputación",
-        "Solo informes externos",
-        "Diligencia debida"
+        "Solo informes externos"
       ],
       "explain_es": "Investigar a fondo de antemano el cumplimiento de un socio comercial es la diligencia debida."
     },
@@ -1494,26 +1494,26 @@
       "term": "e-4-attestation",
       "stem": "セキュリティ監査で、ポリシー遵守・アクセス制御・ログを確認したうえで、対策が適切に実施されていることを署名付き文書で証明した。これはどれか。",
       "choices": [
-        "アテステーション",
         "罰金",
         "内部コンプライアンス報告書のみ（証明行為ではない）",
+        "アテステーション",
         "契約上の影響"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "特定の事実や声明の正当性を署名等で証明・宣誓するのがアテステーション（Attestation）。",
       "stem_en": "In a security audit, after checking policy compliance, access control and logs, a signed document certified that controls are properly in place. What is this?",
       "choices_en": [
-        "Attestation",
         "Fines",
         "Internal compliance report only (not an act of certification)",
+        "Attestation",
         "Contractual impacts"
       ],
       "explain_en": "Certifying or swearing to the validity of specific facts or statements by signature is attestation.",
       "stem_es": "En una auditoría de seguridad, tras revisar el cumplimiento de políticas, el control de acceso y los registros, un documento firmado certificó que los controles están bien implantados. ¿Qué es?",
       "choices_es": [
-        "Atestación",
         "Multas",
         "Solo informe de cumplimiento interno (no es un acto de certificación)",
+        "Atestación",
         "Impactos contractuales"
       ],
       "explain_es": "Certificar o declarar bajo firma la validez de hechos o declaraciones concretos es la atestación."

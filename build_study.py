@@ -339,9 +339,44 @@ def validate_data(data: dict, quizzes: dict) -> None:
     for ch_id in orphan_quiz_chapters:
         errors.append(f"quizzes has unknown chapter: {ch_id}")
 
+    errors.extend(answer_position_errors(domain, quizzes))
+
     if errors:
-        msg = "ID validation failed:\n- " + "\n- ".join(errors)
+        msg = "Data validation failed:\n- " + "\n- ".join(errors)
         raise SystemExit(msg)
+
+
+def answer_position_errors(domain: str, quizzes: dict) -> list[str]:
+    """Quiz.js shows choices in stored order, so a skewed `answer` lets learners guess by position."""
+    errors: list[str] = []
+    letters = "ABCD"
+    domain_counts = Counter()
+    for ch_id, qs in quizzes.items():
+        positions = []
+        for i, q in enumerate(qs):
+            lengths = {len(q[k]) for k in ("choices", "choices_en", "choices_es") if k in q}
+            if lengths != {4} or not 0 <= q.get("answer", -1) < 4:
+                errors.append(f"{ch_id}#{i}: needs 4 choices per language and answer 0-3")
+                continue
+            positions.append(q["answer"])
+        domain_counts.update(positions)
+        run = 1
+        for prev, cur in zip(positions, positions[1:]):
+            run = run + 1 if cur == prev else 1
+            if run > 3:
+                errors.append(f"{ch_id}: answer {letters[cur]} repeats more than 3 times in a row")
+                break
+        if len(positions) >= 8:
+            top, count = Counter(positions).most_common(1)[0]
+            if count > len(positions) / 2:
+                errors.append(f"{ch_id}: answer {letters[top]} is {count}/{len(positions)} (over half)")
+    total = sum(domain_counts.values())
+    if total >= 8:
+        for p in range(4):
+            share = domain_counts[p] / total
+            if not 0.15 <= share <= 0.35:
+                errors.append(f"Domain {domain}: answer {letters[p]} is {share:.0%} (keep each letter at 15-35%)")
+    return errors
 
 
 def slug_of(ch: dict) -> str:

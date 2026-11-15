@@ -89,26 +89,26 @@
       "stem": "ECサイトのユーザー管理・商品・注文・決済を別サービスに分け、注文だけを独立してデプロイできるようにした。この設計はどれか。",
       "choices": [
         "モノリスのみの設計",
+        "マイクロサービス",
         "エアギャップ",
-        "リスク移転",
-        "マイクロサービス"
+        "リスク移転"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "機能を独立サービスに分割し、独立デプロイ・スケーリングできるのがマイクロサービスである。",
       "stem_en": "An online store split user management, products, orders and payments into separate services so orders alone can be deployed independently. What design is this?",
       "choices_en": [
         "Monolith-only design",
+        "Microservices",
         "Air gap",
-        "Risk transference",
-        "Microservices"
+        "Risk transference"
       ],
       "explain_en": "Splitting features into independent services that can be deployed and scaled separately is microservices.",
       "stem_es": "Una tienda en línea separó la gestión de usuarios, productos, pedidos y pagos en servicios distintos para poder desplegar solo los pedidos de forma independiente. ¿Qué diseño es?",
       "choices_es": [
         "Diseño solo monolítico",
+        "Microservicios",
         "Aislamiento físico",
-        "Transferencia del riesgo",
-        "Microservicios"
+        "Transferencia del riesgo"
       ],
       "explain_es": "Dividir las funciones en servicios independientes que se despliegan y escalan por separado es una arquitectura de microservicios."
     },
@@ -118,25 +118,25 @@
       "choices": [
         "SDN",
         "サーバーレス",
-        "エアギャップ",
-        "コンテナ化"
+        "コンテナ化",
+        "エアギャップ"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "外部ネットワークから物理的に隔離するのがエアギャップである。",
       "stem_en": "A government agency physically disconnected a classified system from the internet and strictly controls any data brought in. What configuration is this?",
       "choices_en": [
         "SDN",
         "Serverless",
-        "Air gap",
-        "Containerization"
+        "Containerization",
+        "Air gap"
       ],
       "explain_en": "Physically isolating a system from outside networks is an air gap.",
       "stem_es": "Un organismo público desconectó físicamente de internet un sistema clasificado y controla estrictamente cualquier dato que se introduzca. ¿Qué configuración es?",
       "choices_es": [
         "SDN",
         "Sin servidor",
-        "Aislamiento físico (air gap)",
-        "Contenedorización"
+        "Contenedorización",
+        "Aislamiento físico (air gap)"
       ],
       "explain_es": "Aislar físicamente un sistema de las redes externas es un air gap."
     },
@@ -144,27 +144,27 @@
       "term": "c-1-sdn",
       "stem": "データセンターで、個々のスイッチ設定ではなくコントローラに制御を集約し、データプレーンとコントロールプレーンを分離して運用している。この技術はどれか。",
       "choices": [
+        "SDN",
         "エアギャップ",
         "RTOS",
-        "リスク移転",
-        "SDN"
+        "リスク移転"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "ソフトウェアでネットワークを集中制御し、プレーンを分離するのが SDN である。",
       "stem_en": "A data center centralizes control in a controller instead of configuring each switch, and separates the data plane from the control plane. What technology is this?",
       "choices_en": [
+        "SDN",
         "Air gap",
         "RTOS",
-        "Risk transference",
-        "SDN"
+        "Risk transference"
       ],
       "explain_en": "Controlling the network centrally in software and separating the planes is SDN.",
       "stem_es": "Un centro de datos centraliza el control en un controlador en lugar de configurar cada switch, y separa el plano de datos del plano de control. ¿Qué tecnología es?",
       "choices_es": [
+        "SDN",
         "Aislamiento físico",
         "RTOS",
-        "Transferencia del riesgo",
-        "SDN"
+        "Transferencia del riesgo"
       ],
       "explain_es": "Controlar la red de forma centralizada por software y separar los planos es SDN."
     },
@@ -173,26 +173,26 @@
       "stem": "従来の銀行システム（中央で一括処理）と、多数ノードで検証するブロックチェーン型システムを比較するとき、講義が示す対比の軸はどれか。",
       "choices": [
         "対称暗号と非対称暗号",
-        "集中型と分散型",
         "予防的と検出的",
-        "IaaSとPaaSのみ"
+        "IaaSとPaaSのみ",
+        "集中型と分散型"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "統一性・効率と障害影響範囲、耐障害性と管理コストなど、集中型と分散型の一長一短を比較する。",
       "stem_en": "When comparing a traditional banking system (central batch processing) with a blockchain-style system verified by many nodes, what axis of comparison does the lesson present?",
       "choices_en": [
         "Symmetric vs. asymmetric encryption",
-        "Centralized vs. decentralized",
         "Preventive vs. detective",
-        "IaaS vs. PaaS only"
+        "IaaS vs. PaaS only",
+        "Centralized vs. decentralized"
       ],
       "explain_en": "You compare the pros and cons of centralized vs. decentralized: consistency and efficiency vs. blast radius, fault tolerance vs. management cost, and so on.",
       "stem_es": "Al comparar un sistema bancario tradicional (procesamiento central por lotes) con un sistema tipo blockchain verificado por muchos nodos, ¿qué eje de comparación presenta la lección?",
       "choices_es": [
         "Cifrado simétrico frente a asimétrico",
-        "Centralizado frente a descentralizado",
         "Preventivo frente a de detección",
-        "Solo IaaS frente a PaaS"
+        "Solo IaaS frente a PaaS",
+        "Centralizado frente a descentralizado"
       ],
       "explain_es": "Se comparan ventajas e inconvenientes de lo centralizado frente a lo descentralizado: coherencia y eficiencia frente a alcance de los fallos, tolerancia a fallos frente a coste de gestión, etc."
     },
@@ -228,26 +228,26 @@
       "term": "c-1-virtualization",
       "stem": "1台の物理サーバー上に複数の仮想マシンを作り、それぞれが独自のOSを実行している。この技術はどれか。",
       "choices": [
-        "仮想化",
         "エアギャップ",
         "リスク移転",
+        "仮想化",
         "パッチ適用不可"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "物理ハードを仮想分割し、複数VM（各々独自OS）を動かすのが仮想化である。",
       "stem_en": "Several virtual machines are created on one physical server, each running its own OS. What technology is this?",
       "choices_en": [
-        "Virtualization",
         "Air gap",
         "Risk transference",
+        "Virtualization",
         "Inability to patch"
       ],
       "explain_en": "Dividing physical hardware virtually to run multiple VMs, each with its own OS, is virtualization.",
       "stem_es": "En un servidor físico se crean varias máquinas virtuales, cada una con su propio SO. ¿Qué tecnología es?",
       "choices_es": [
-        "Virtualización",
         "Aislamiento físico",
         "Transferencia del riesgo",
+        "Virtualización",
         "Imposibilidad de aplicar parches"
       ],
       "explain_es": "Dividir virtualmente el hardware físico para ejecutar varias VM, cada una con su propio SO, es virtualización."
@@ -257,26 +257,26 @@
       "stem": "工場出荷時のデフォルトパスワードのままの大量の接続機器が乗っ取られ、大規模DDoSの踏み台になった。講義で示すこの問題領域はどれか。",
       "choices": [
         "SDN",
+        "IoT",
         "IaC",
-        "マイクロサービス",
-        "IoT"
+        "マイクロサービス"
       ],
-      "answer": 3,
+      "answer": 1,
       "explain": "Mirai に代表されるように、IoT デバイスの弱い初期設定がネットワーク全体のリスクにつながる。",
       "stem_en": "Huge numbers of connected devices still on factory-default passwords were hijacked and used as launchpads for a massive DDoS. Which problem area from the lesson is this?",
       "choices_en": [
         "SDN",
+        "IoT",
         "IaC",
-        "Microservices",
-        "IoT"
+        "Microservices"
       ],
       "explain_en": "As Mirai showed, weak default settings on IoT devices put the whole network at risk.",
       "stem_es": "Enormes cantidades de dispositivos conectados con las contraseñas de fábrica fueron secuestrados y usados como plataforma para un DDoS masivo. ¿Qué área problemática de la lección es esta?",
       "choices_es": [
         "SDN",
+        "IoT",
         "IaC",
-        "Microservicios",
-        "IoT"
+        "Microservicios"
       ],
       "explain_es": "Como demostró Mirai, la configuración inicial débil de los dispositivos IoT pone en riesgo toda la red."
     },
@@ -284,25 +284,25 @@
       "term": "c-1-ics-scada",
       "stem": "電力会社が発電・送電設備の出力や電圧を常時監視し、需要に応じて自動調整している。この種の産業制御の枠組みとして最も適切なものはどれか。",
       "choices": [
-        "サーバーレス",
         "ICSとSCADA",
+        "サーバーレス",
         "シャドーIT",
         "コンテナ化"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "電力・ガス・水道などのプラント監視制御は ICS／SCADA の領域である。",
       "stem_en": "A power company constantly monitors the output and voltage of its generation and transmission equipment and adjusts them automatically to demand. Which industrial control framework fits best?",
       "choices_en": [
-        "Serverless",
         "ICS and SCADA",
+        "Serverless",
         "Shadow IT",
         "Containerization"
       ],
       "explain_en": "Supervisory control of plants for electricity, gas and water belongs to ICS/SCADA.",
       "stem_es": "Una eléctrica supervisa constantemente la potencia y la tensión de sus equipos de generación y transmisión y las ajusta automáticamente a la demanda. ¿Qué marco de control industrial encaja mejor?",
       "choices_es": [
-        "Sin servidor",
         "ICS y SCADA",
+        "Sin servidor",
         "TI en la sombra",
         "Contenedorización"
       ],
@@ -314,25 +314,25 @@
       "choices": [
         "汎用デスクトップOSのみ",
         "SDNコントローラ",
-        "RTOS",
-        "責任マトリクス"
+        "責任マトリクス",
+        "RTOS"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "応答性と予測可能性を重視し、締切どおりの処理を保証するのが RTOS である。",
       "stem_en": "A car's engine control uses an OS that processes sensor data within set time limits to guarantee fuel injection timing. What is it?",
       "choices_en": [
         "General-purpose desktop OS only",
         "SDN controller",
-        "RTOS",
-        "Responsibility matrix"
+        "Responsibility matrix",
+        "RTOS"
       ],
       "explain_en": "An OS that prioritizes responsiveness and predictability and guarantees processing by the deadline is an RTOS.",
       "stem_es": "El control del motor de un coche usa un SO que procesa los datos de los sensores en un tiempo fijado para garantizar el momento de la inyección de combustible. ¿Qué es?",
       "choices_es": [
         "Solo un SO de escritorio de uso general",
         "Controlador SDN",
-        "RTOS",
-        "Matriz de responsabilidad"
+        "Matriz de responsabilidad",
+        "RTOS"
       ],
       "explain_es": "Un SO que prioriza la capacidad de respuesta y la previsibilidad y garantiza el procesamiento en plazo es un RTOS."
     },
@@ -342,25 +342,25 @@
       "choices": [
         "ステガノグラフィ",
         "鍵エスクロー",
-        "データマスキング",
-        "可用性"
+        "可用性",
+        "データマスキング"
       ],
-      "answer": 3,
+      "answer": 2,
       "explain": "必要なときに利用できる度合いが可用性であり、冗長化や負荷分散で高める。",
       "stem_en": "An online store was unreachable for hours because of a single point of failure and a DDoS, so nobody could shop. Which design consideration was mainly compromised?",
       "choices_en": [
         "Steganography",
         "Key escrow",
-        "Data masking",
-        "Availability"
+        "Availability",
+        "Data masking"
       ],
       "explain_en": "How far a system is usable when needed is availability; redundancy and load balancing improve it.",
       "stem_es": "Una tienda en línea estuvo inaccesible durante horas por un punto único de fallo y un DDoS, y nadie podía comprar. ¿Qué consideración de diseño se vio afectada principalmente?",
       "choices_es": [
         "Esteganografía",
         "Custodia de claves",
-        "Enmascaramiento de datos",
-        "Disponibilidad"
+        "Disponibilidad",
+        "Enmascaramiento de datos"
       ],
       "explain_es": "El grado en que un sistema está disponible cuando se necesita es la disponibilidad; la redundancia y el balanceo de carga la mejoran."
     },
@@ -368,25 +368,25 @@
       "term": "c-1-resilience",
       "stem": "データセンター被災後も、冗長構成と自動復旧の仕組みによりサービス機能を維持し早期に平常運転へ戻した。この能力を最もよく表す用語はどれか。",
       "choices": [
-        "レジリエンス",
         "コスト削減のみ",
+        "レジリエンス",
         "パッチ適用不可",
         "エアギャップ"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "障害・攻撃下での機能維持と速やかな回復がレジリエンスである。",
       "stem_en": "After a data center was hit by a disaster, redundant configurations and automatic recovery kept services running and quickly restored normal operation. Which term best describes this capability?",
       "choices_en": [
-        "Resilience",
         "Cost cutting only",
+        "Resilience",
         "Inability to patch",
         "Air gap"
       ],
       "explain_en": "Maintaining functions under failure or attack and recovering quickly is resilience.",
       "stem_es": "Tras un desastre en un centro de datos, la configuración redundante y la recuperación automática mantuvieron los servicios y devolvieron pronto la normalidad. ¿Qué término describe mejor esta capacidad?",
       "choices_es": [
-        "Resiliencia",
         "Solo reducción de costes",
+        "Resiliencia",
         "Imposibilidad de aplicar parches",
         "Aislamiento físico"
       ],
@@ -396,26 +396,26 @@
       "term": "c-1-cost",
       "stem": "24時間365日の有人監視は効果的だが費用が膨大なため、重要システムに限定し自動化も併用した。この判断が示す考慮事項はどれか。",
       "choices": [
+        "コスト",
         "エアギャップ",
         "IoTセグメンテーションのみ",
-        "コスト",
         "RTOS"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "安全性と費用のバランスを取り、リスク評価に基づき優先順位を付けるのがコストの観点である。",
       "stem_en": "24/7 staffed monitoring is effective but very expensive, so it was limited to critical systems and combined with automation. Which consideration does this decision reflect?",
       "choices_en": [
+        "Cost",
         "Air gap",
         "IoT segmentation only",
-        "Cost",
         "RTOS"
       ],
       "explain_en": "Balancing security against expense and prioritizing based on risk assessment is the cost consideration.",
       "stem_es": "La supervisión con personal 24/7 es eficaz pero muy cara, así que se limitó a los sistemas críticos y se combinó con automatización. ¿Qué consideración refleja esta decisión?",
       "choices_es": [
+        "Coste",
         "Aislamiento físico",
         "Solo segmentación IoT",
-        "Coste",
         "RTOS"
       ],
       "explain_es": "Equilibrar seguridad y gasto, y priorizar según la evaluación de riesgos, es la consideración del coste."
@@ -452,26 +452,26 @@
       "term": "c-1-scalability",
       "stem": "利用者増加に合わせ認証サーバーのインスタンスを自動で増減できるように設計した。この能力はどれか。",
       "choices": [
-        "スケーラビリティ",
         "パッチ適用不可",
         "エアギャップ",
+        "スケーラビリティ",
         "鍵エスクロー"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "負荷や要件変化に応じて拡張・縮小できる能力がスケーラビリティである。",
       "stem_en": "The authentication servers were designed so instances automatically increase and decrease with the number of users. What capability is this?",
       "choices_en": [
-        "Scalability",
         "Inability to patch",
         "Air gap",
+        "Scalability",
         "Key escrow"
       ],
       "explain_en": "The ability to scale out and in as load and requirements change is scalability.",
       "stem_es": "Los servidores de autenticación se diseñaron para que el número de instancias aumente y disminuya automáticamente según los usuarios. ¿Qué capacidad es?",
       "choices_es": [
-        "Escalabilidad",
         "Imposibilidad de aplicar parches",
         "Aislamiento físico",
+        "Escalabilidad",
         "Custodia de claves"
       ],
       "explain_es": "La capacidad de ampliarse y reducirse según cambian la carga y los requisitos es la escalabilidad."
@@ -537,25 +537,25 @@
       "stem": "ランサムウェアでデータが暗号化されても、オフサイトの定期バックアップから迅速に復元できるよう手順と訓練を整えている。焦点となっている考慮事項はどれか。",
       "choices": [
         "サーバーレス",
-        "回復の容易さ",
         "SDN",
+        "回復の容易さ",
         "マイクロサービス"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "インシデント後に迅速復旧できる能力が回復の容易さであり、バックアップと復旧訓練が典型策である。",
       "stem_en": "Even if ransomware encrypts data, procedures and drills are in place to restore quickly from regular offsite backups. Which consideration is the focus?",
       "choices_en": [
         "Serverless",
-        "Ease of recovery",
         "SDN",
+        "Ease of recovery",
         "Microservices"
       ],
       "explain_en": "The ability to recover quickly after an incident is ease of recovery; backups and recovery drills are typical measures.",
       "stem_es": "Aunque el ransomware cifre los datos, hay procedimientos y simulacros para restaurar rápido desde copias externas periódicas. ¿En qué consideración se centra?",
       "choices_es": [
         "Sin servidor",
-        "Facilidad de recuperación",
         "SDN",
+        "Facilidad de recuperación",
         "Microservicios"
       ],
       "explain_es": "La capacidad de recuperarse rápido tras un incidente es la facilidad de recuperación; las copias y los simulacros de recuperación son medidas típicas."
@@ -564,25 +564,25 @@
       "term": "c-1-patch-availability",
       "stem": "導入予定の製品について、脆弱性発見後にベンダーが修正パッチを速やかに出せるかを評価している。この考慮事項はどれか。",
       "choices": [
-        "パッチの可用性",
         "エアギャップ",
+        "パッチの可用性",
         "集中型のみ",
         "ステガノグラフィ"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "修正パッチが迅速に提供されるかどうかがパッチの可用性である。",
       "stem_en": "For a product being considered, the team evaluates whether the vendor can quickly release fixes after a vulnerability is found. Which consideration is this?",
       "choices_en": [
-        "Patch availability",
         "Air gap",
+        "Patch availability",
         "Centralized only",
         "Steganography"
       ],
       "explain_en": "Whether fixes are released promptly is patch availability.",
       "stem_es": "Para un producto que se va a adquirir, el equipo evalúa si el fabricante puede publicar correcciones con rapidez tras descubrirse una vulnerabilidad. ¿Qué consideración es?",
       "choices_es": [
-        "Disponibilidad de parches",
         "Aislamiento físico",
+        "Disponibilidad de parches",
         "Solo centralizado",
         "Esteganografía"
       ],
@@ -592,27 +592,27 @@
       "term": "c-1-inability-to-patch",
       "stem": "レガシー制御システムは互換性の問題と停止不可の業務要件からセキュリティ更新を当てられず、代替の防御策を検討している。この状況はどれか。",
       "choices": [
-        "パッチ適用不可",
         "サーバーレス",
         "IaC",
-        "責任マトリクスの廃止"
+        "責任マトリクスの廃止",
+        "パッチ適用不可"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "パッチを適用できない状況では理由の明確化・リスク評価と代替対策が必要になる。",
       "stem_en": "A legacy control system can't take security updates because of compatibility issues and a business requirement that it never stop, so alternative defenses are being considered. What situation is this?",
       "choices_en": [
-        "Inability to patch",
         "Serverless",
         "IaC",
-        "Abolishing the responsibility matrix"
+        "Abolishing the responsibility matrix",
+        "Inability to patch"
       ],
       "explain_en": "When patches can't be applied, you need to clarify why, assess the risk and put compensating measures in place.",
       "stem_es": "Un sistema de control heredado no admite actualizaciones de seguridad por problemas de compatibilidad y porque el negocio exige que nunca se detenga, así que se estudian defensas alternativas. ¿Qué situación es?",
       "choices_es": [
-        "Imposibilidad de aplicar parches",
         "Sin servidor",
         "IaC",
-        "Eliminar la matriz de responsabilidad"
+        "Eliminar la matriz de responsabilidad",
+        "Imposibilidad de aplicar parches"
       ],
       "explain_es": "Cuando no se pueden aplicar parches, hay que aclarar el motivo, evaluar el riesgo y aplicar medidas compensatorias."
     },
@@ -620,25 +620,25 @@
       "term": "c-1-power",
       "stem": "停電時もシステムを保護するためUPSを導入し、電源経路を二重化して単一障害点を減らした。この考慮事項はどれか。",
       "choices": [
-        "マイクロサービス",
         "電力",
+        "マイクロサービス",
         "コンテナ化",
         "IaC"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "安定供給と停電対策（UPS・冗長電源）は電力の観点である。",
       "stem_en": "To protect systems during outages, a UPS was installed and power paths were duplicated to reduce single points of failure. Which consideration is this?",
       "choices_en": [
-        "Microservices",
         "Power",
+        "Microservices",
         "Containerization",
         "IaC"
       ],
       "explain_en": "Stable supply and outage protection (UPS, redundant power) are the power consideration.",
       "stem_es": "Para proteger los sistemas durante los cortes, se instaló un SAI y se duplicaron las vías de alimentación para reducir los puntos únicos de fallo. ¿Qué consideración es?",
       "choices_es": [
-        "Microservicios",
         "Energía",
+        "Microservicios",
         "Contenedorización",
         "IaC"
       ],
@@ -648,26 +648,26 @@
       "term": "c-1-compute",
       "stem": "高トラフィックサイトでTLSの暗号化・復号がCPUを逼迫し、ボトルネックになりそうなので処理能力を見積もり直した。この考慮事項はどれか。",
       "choices": [
+        "演算能力",
         "エアギャップ",
         "リスク移転",
-        "演算能力",
         "シャドーIT"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "セキュリティ機能の実行に必要な処理能力を見積もるのが演算能力（Compute）の観点である。",
       "stem_en": "On a high-traffic site, TLS encryption and decryption were straining the CPU and threatening to become a bottleneck, so processing capacity was re-estimated. Which consideration is this?",
       "choices_en": [
+        "Compute",
         "Air gap",
         "Risk transference",
-        "Compute",
         "Shadow IT"
       ],
       "explain_en": "Estimating the processing power needed to run security functions is the compute consideration.",
       "stem_es": "En un sitio con mucho tráfico, el cifrado y descifrado TLS estaba saturando la CPU y amenazaba con convertirse en un cuello de botella, así que se recalculó la capacidad de procesamiento. ¿Qué consideración es?",
       "choices_es": [
+        "Capacidad de cómputo",
         "Aislamiento físico",
         "Transferencia del riesgo",
-        "Capacidad de cómputo",
         "TI en la sombra"
       ],
       "explain_es": "Estimar la potencia de procesamiento necesaria para ejecutar las funciones de seguridad es la consideración de la capacidad de cómputo."
@@ -678,25 +678,25 @@
       "term": "c-2-device-placement",
       "stem": "重要サーバーを、窓のない中間階のサーバルームに置き、ICカードで入退室を厳格に管理している。主にどの原則か。",
       "choices": [
-        "デバイスの場所（Device placement）",
         "アタックサーフェス",
+        "デバイスの場所（Device placement）",
         "フェイルオープン",
         "SD-WAN"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "物理的にどこへ機器を置くか・入退室管理はデバイスの場所（Device placement）の話。",
       "stem_en": "Critical servers are kept in a windowless server room on a middle floor, with strict smart-card entry control. Which principle is this mainly?",
       "choices_en": [
-        "Device placement",
         "Attack surface",
+        "Device placement",
         "Fail open",
         "SD-WAN"
       ],
       "explain_en": "Where equipment is physically placed and how entry is controlled is about device placement.",
       "stem_es": "Los servidores críticos están en una sala sin ventanas de una planta intermedia, con control estricto de acceso por tarjeta. ¿Qué principio es principalmente?",
       "choices_es": [
-        "Ubicación de dispositivos",
         "Superficie de ataque",
+        "Ubicación de dispositivos",
         "Fallo abierto",
         "SD-WAN"
       ],
@@ -707,25 +707,25 @@
       "stem": "外部公開用のWebサーバーをインターネットと社内網の中間領域に置き、社内業務システムや機密DBとは分離した。この中間領域を何と呼ぶか。",
       "choices": [
         "フェイルクローズ",
-        "DMZ（セキュリティゾーン）",
         "ジャンプサーバー",
+        "DMZ（セキュリティゾーン）",
         "ロードバランサー"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "信頼度に応じた分割のうち、外部公開サーバーを置く中間領域がDMZ。セキュリティゾーンの代表例。",
       "stem_en": "A public web server was placed in an intermediate zone between the internet and the internal network, separated from internal business systems and confidential databases. What is this intermediate zone called?",
       "choices_en": [
         "Fail closed",
-        "DMZ (security zone)",
         "Jump server",
+        "DMZ (security zone)",
         "Load balancer"
       ],
       "explain_en": "Of the trust-based divisions, the intermediate zone for public-facing servers is the DMZ, a classic security zone.",
       "stem_es": "Un servidor web público se colocó en una zona intermedia entre internet y la red interna, separado de los sistemas internos y de las bases de datos confidenciales. ¿Cómo se llama esta zona intermedia?",
       "choices_es": [
         "Fallo cerrado",
-        "DMZ (zona de seguridad)",
         "Servidor de salto",
+        "DMZ (zona de seguridad)",
         "Balanceador de carga"
       ],
       "explain_es": "Entre las divisiones por nivel de confianza, la zona intermedia para servidores públicos es la DMZ, una zona de seguridad típica."
@@ -734,26 +734,26 @@
       "term": "c-2-attack-surface",
       "stem": "公開Webアプリのログインフォーム、検索ボックス、URLパラメータなど、攻撃者が狙える入力点が多数ある状態を何と捉えるか。",
       "choices": [
+        "アタックサーフェス",
         "接続性",
         "フェイルオープン",
-        "アタックサーフェス",
         "SASE"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "攻撃の入り口・接点の総体がアタックサーフェス。多いほど悪用されやすい。",
       "stem_en": "A public web app has many input points an attacker could target: login forms, search boxes, URL parameters and more. How is this situation understood?",
       "choices_en": [
+        "Attack surface",
         "Connectivity",
         "Fail open",
-        "Attack surface",
         "SASE"
       ],
       "explain_en": "The sum of all entry points for an attack is the attack surface. The larger it is, the easier it is to exploit.",
       "stem_es": "Una aplicación web pública tiene muchos puntos de entrada que un atacante podría usar: formularios de inicio de sesión, cuadros de búsqueda, parámetros de URL, etc. ¿Cómo se entiende esta situación?",
       "choices_es": [
+        "Superficie de ataque",
         "Conectividad",
         "Fallo abierto",
-        "Superficie de ataque",
         "SASE"
       ],
       "explain_es": "El conjunto de puntos de entrada para un ataque es la superficie de ataque. Cuanto mayor es, más fácil es explotarla."
@@ -762,25 +762,25 @@
       "term": "c-2-connectivity",
       "stem": "Webサーバーを複数台用意し、障害時にも別サーバーや代替経路でサービスを継続できるようにした。講義でいう接続性に最も近い目的はどれか。",
       "choices": [
-        "可用性の維持",
         "フェイルクローズの徹底",
+        "可用性の維持",
         "アタックサーフェスの拡大",
         "証明書による相互認証"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "接続性は冗長化などで接続・サービスを維持する話で、可用性に近い。",
       "stem_en": "Several web servers were set up so service can continue on another server or an alternate path during failures. Which goal is closest to what the lesson calls connectivity?",
       "choices_en": [
-        "Maintaining availability",
         "Strict fail-closed operation",
+        "Maintaining availability",
         "Expanding the attack surface",
         "Mutual authentication with certificates"
       ],
       "explain_en": "Connectivity is about keeping connections and services up through redundancy and the like, which is close to availability.",
       "stem_es": "Se instalaron varios servidores web para que el servicio continúe en otro servidor o por una ruta alternativa si hay fallos. ¿Qué objetivo se acerca más a lo que la lección llama conectividad?",
       "choices_es": [
-        "Mantener la disponibilidad",
         "Aplicar estrictamente el fallo cerrado",
+        "Mantener la disponibilidad",
         "Ampliar la superficie de ataque",
         "Autenticación mutua con certificados"
       ],
@@ -791,25 +791,25 @@
       "stem": "入退館管理システムが停止したとき、ドアを自動開放して社員証なしでも入れるようにした。この設計はどれか。",
       "choices": [
         "フェイルクローズ",
-        "フェイルオープン",
         "ジャンプサーバー",
+        "フェイルオープン",
         "WAF"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "故障時もアクセスを継続するのはフェイルオープン。可用性優先でセキュリティリスクは上がる。",
       "stem_en": "When the building access system went down, doors were unlocked automatically so people could enter without an ID badge. What design is this?",
       "choices_en": [
         "Fail closed",
-        "Fail open",
         "Jump server",
+        "Fail open",
         "WAF"
       ],
       "explain_en": "Continuing to allow access during a failure is fail open. Availability comes first, at the cost of higher security risk.",
       "stem_es": "Cuando cayó el sistema de control de acceso del edificio, las puertas se abrieron automáticamente y se podía entrar sin tarjeta. ¿Qué diseño es?",
       "choices_es": [
         "Fallo cerrado",
-        "Fallo abierto",
         "Servidor de salto",
+        "Fallo abierto",
         "WAF"
       ],
       "explain_es": "Seguir permitiendo el acceso durante un fallo es el fallo abierto. Prioriza la disponibilidad a costa de un mayor riesgo de seguridad."
@@ -818,26 +818,26 @@
       "term": "c-2-fail-closed",
       "stem": "セキュリティゲートの制御障害時にゲートを自動で閉じてロックし、未認証者の侵入を防いだ。この設計はどれか。",
       "choices": [
+        "フェイルクローズ",
         "フェイルオープン",
         "ロードバランサー",
-        "フェイルクローズ",
         "プロキシサーバー"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "故障時に閉じる／止めるのはフェイルクローズ。セキュリティ優先で可用性を犠牲にする。",
       "stem_en": "When a security gate's controller failed, the gate closed and locked automatically to keep unauthenticated people out. What design is this?",
       "choices_en": [
+        "Fail closed",
         "Fail open",
         "Load balancer",
-        "Fail closed",
         "Proxy server"
       ],
       "explain_en": "Closing or stopping on failure is fail closed. Security comes first, at the expense of availability.",
       "stem_es": "Al fallar el controlador de un torno de seguridad, este se cerró y bloqueó automáticamente para impedir la entrada de personas no autenticadas. ¿Qué diseño es?",
       "choices_es": [
+        "Fallo cerrado",
         "Fallo abierto",
         "Balanceador de carga",
-        "Fallo cerrado",
         "Servidor proxy"
       ],
       "explain_es": "Cerrar o detenerse ante un fallo es el fallo cerrado. Prioriza la seguridad a costa de la disponibilidad."
@@ -847,25 +847,25 @@
       "stem": "管理者が本番サーバーへ直接ログインせず、いったん中継用サーバーに入ってから目的サーバーへ接続し、操作ログもそこに集約している。この中継サーバーは何か。",
       "choices": [
         "プロキシサーバー",
-        "ジャンプサーバー",
         "ロードバランサー",
+        "ジャンプサーバー",
         "WAF"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "管理アクセスの中継点として使うのがジャンプサーバー。一元管理とログ追跡が利点。",
       "stem_en": "Admins don't log in to production servers directly; they first enter a relay server, connect onward to the target from there, and operation logs are collected there too. What is this relay server?",
       "choices_en": [
         "Proxy server",
-        "Jump server",
         "Load balancer",
+        "Jump server",
         "WAF"
       ],
       "explain_en": "A relay point for administrative access is a jump server; centralized management and log tracking are its benefits.",
       "stem_es": "Los administradores no inician sesión directamente en los servidores de producción: primero entran en un servidor intermedio, desde allí se conectan al destino y los registros de operación también se recogen allí. ¿Qué es este servidor intermedio?",
       "choices_es": [
         "Servidor proxy",
-        "Servidor de salto",
         "Balanceador de carga",
+        "Servidor de salto",
         "WAF"
       ],
       "explain_es": "Un punto intermedio para el acceso administrativo es un servidor de salto; sus ventajas son la gestión centralizada y el seguimiento de registros."
@@ -902,25 +902,25 @@
       "term": "c-2-ips-ids",
       "stem": "社内トラフィックを常時監視し、既知攻撃のシグネチャや異常な通信量を検出して管理者に通知する仕組みの総称として適切なのはどれか。",
       "choices": [
-        "IPS/IDS",
         "ロードバランサー",
+        "IPS/IDS",
         "フェイルオープン",
         "SD-WAN"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "侵入の検知（IDS）や防止（IPS）を行うのがIPS/IDS。",
       "stem_en": "What is the general term for a mechanism that continuously monitors internal traffic, detects known attack signatures or abnormal volumes, and alerts administrators?",
       "choices_en": [
-        "IPS/IDS",
         "Load balancer",
+        "IPS/IDS",
         "Fail open",
         "SD-WAN"
       ],
       "explain_en": "Detecting (IDS) or preventing (IPS) intrusions is what IPS/IDS do.",
       "stem_es": "¿Cuál es el término general para un mecanismo que supervisa continuamente el tráfico interno, detecta firmas de ataques conocidos o volúmenes anómalos y avisa a los administradores?",
       "choices_es": [
-        "IPS / IDS",
         "Balanceador de carga",
+        "IPS / IDS",
         "Fallo abierto",
         "SD-WAN"
       ],
@@ -931,26 +931,26 @@
       "stem": "ユーザーリクエストを受け取り、アルゴリズムに従って複数のWebサーバーへ振り分け、1台への負荷集中を防いている装置は何か。",
       "choices": [
         "ジャンプサーバー",
-        "ロードバランサー",
         "WAF",
-        "センサー"
+        "センサー",
+        "ロードバランサー"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "複数サーバーへの負荷分散を行うのがロードバランサー。",
       "stem_en": "What device receives user requests and distributes them across several web servers according to an algorithm, preventing load from concentrating on one?",
       "choices_en": [
         "Jump server",
-        "Load balancer",
         "WAF",
-        "Sensor"
+        "Sensor",
+        "Load balancer"
       ],
       "explain_en": "Distributing load across multiple servers is the job of a load balancer.",
       "stem_es": "¿Qué dispositivo recibe las solicitudes de los usuarios y las reparte entre varios servidores web según un algoritmo, evitando que la carga se concentre en uno?",
       "choices_es": [
         "Servidor de salto",
-        "Balanceador de carga",
         "WAF",
-        "Sensor"
+        "Sensor",
+        "Balanceador de carga"
       ],
       "explain_es": "Repartir la carga entre varios servidores es la función de un balanceador de carga."
     },
@@ -959,25 +959,25 @@
       "stem": "サーバルームに温度監視装置を置き、空調故障による異常昇温を早期に検知できるようにした。講義でいうセンサーの役割として最も近いのはどれか。",
       "choices": [
         "暗号化トンネルの確立",
-        "障害・インシデント兆候の監視",
         "SQLインジェクションの遮断",
+        "障害・インシデント兆候の監視",
         "WAN経路のソフト定義"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "センサーは運用状況を監視し、セキュリティや障害の兆候を発見するために配置する。",
       "stem_en": "A temperature monitor was installed in the server room to catch abnormal heat from a cooling failure early. Which role is closest to what the lesson calls a sensor?",
       "choices_en": [
         "Establishing an encrypted tunnel",
-        "Monitoring for signs of failures and incidents",
         "Blocking SQL injection",
+        "Monitoring for signs of failures and incidents",
         "Software-defining WAN paths"
       ],
       "explain_en": "Sensors are placed to monitor operations and spot signs of security issues or failures.",
       "stem_es": "Se instaló un monitor de temperatura en la sala de servidores para detectar pronto un calentamiento anómalo por una avería de la climatización. ¿Qué función se acerca más a lo que la lección llama sensor?",
       "choices_es": [
         "Establecer un túnel cifrado",
-        "Vigilar las señales de fallos e incidentes",
         "Bloquear la inyección SQL",
+        "Vigilar las señales de fallos e incidentes",
         "Definir por software las rutas WAN"
       ],
       "explain_es": "Los sensores se colocan para supervisar la operación y detectar señales de problemas de seguridad o fallos."
@@ -1016,25 +1016,25 @@
       "choices": [
         "ロードバランサー",
         "ジャンプサーバー",
-        "WAF",
-        "SD-WAN"
+        "SD-WAN",
+        "WAF"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "Webアプリケーションに特化して入力攻撃を防ぐのがWAF。",
       "stem_en": "What device monitors a web app's input to detect and block SQL injection and XSS aimed at an online store?",
       "choices_en": [
         "Load balancer",
         "Jump server",
-        "WAF",
-        "SD-WAN"
+        "SD-WAN",
+        "WAF"
       ],
       "explain_en": "Specializing in web applications to stop input-based attacks is what a WAF does.",
       "stem_es": "¿Qué dispositivo supervisa la entrada de una aplicación web para detectar y bloquear la inyección SQL y el XSS dirigidos a una tienda en línea?",
       "choices_es": [
         "Balanceador de carga",
         "Servidor de salto",
-        "WAF",
-        "SD-WAN"
+        "SD-WAN",
+        "WAF"
       ],
       "explain_es": "Especializarse en aplicaciones web para frenar ataques que llegan por la entrada es lo que hace un WAF."
     },
@@ -1042,27 +1042,27 @@
       "term": "c-2-ngfw",
       "stem": "アプリを識別してファイル共有ソフトを拒否し、SNSは業務時間外のみ許可するなど、複数の脅威対策機能を組み合わせたファイアウォールは何か。",
       "choices": [
-        "次世代ファイアウォール（NGFW）",
         "フェイルオープン",
         "センサー",
-        "アタックサーフェス"
+        "アタックサーフェス",
+        "次世代ファイアウォール（NGFW）"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "アプリ認識・IPS・URLフィルタ等を統合したのがNGFW。",
       "stem_en": "Which firewall identifies applications (for example, denying file-sharing software and allowing social media only outside work hours) and combines several threat-protection features?",
       "choices_en": [
-        "Next-generation firewall (NGFW)",
         "Fail open",
         "Sensor",
-        "Attack surface"
+        "Attack surface",
+        "Next-generation firewall (NGFW)"
       ],
       "explain_en": "An NGFW integrates app awareness, IPS, URL filtering and more.",
       "stem_es": "¿Qué cortafuegos identifica aplicaciones (por ejemplo, deniega software de intercambio de archivos y permite redes sociales solo fuera del horario laboral) y combina varias funciones de protección?",
       "choices_es": [
-        "Cortafuegos de nueva generación (NGFW)",
         "Fallo abierto",
         "Sensor",
-        "Superficie de ataque"
+        "Superficie de ataque",
+        "Cortafuegos de nueva generación (NGFW)"
       ],
       "explain_es": "Un NGFW integra reconocimiento de aplicaciones, IPS, filtrado de URL y más."
     },
@@ -1070,25 +1070,25 @@
       "term": "c-2-firewall-l4-l7",
       "stem": "送信元／宛先IPとポート番号で制御するファイアウォールと、HTTP/HTTPSなどアプリプロトコルの内容に基づき制御するファイアウォールの違いを表す区分はどれか。",
       "choices": [
-        "フェイルオープン／クローズ",
         "Layer 4／Layer 7",
+        "フェイルオープン／クローズ",
         "Active／Passiveのみ",
         "ホット／コールドサイト"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "L4はトランスポート層（IP・ポート等）、L7はアプリケーション層での制御。",
       "stem_en": "Which classification describes the difference between a firewall that controls by source/destination IP and port, and one that controls based on application protocol content such as HTTP/HTTPS?",
       "choices_en": [
-        "Fail open / closed",
         "Layer 4 / Layer 7",
+        "Fail open / closed",
         "Active / passive only",
         "Hot / cold site"
       ],
       "explain_en": "L4 controls at the transport layer (IP, ports, etc.); L7 controls at the application layer.",
       "stem_es": "¿Qué clasificación describe la diferencia entre un cortafuegos que controla por IP y puerto de origen/destino y otro que controla según el contenido del protocolo de aplicación, como HTTP/HTTPS?",
       "choices_es": [
-        "Fallo abierto / cerrado",
         "Capa 4 / capa 7",
+        "Fallo abierto / cerrado",
         "Solo activo / pasivo",
         "Sitio caliente / frío"
       ],
@@ -1100,25 +1100,25 @@
       "choices": [
         "WAF",
         "センサー",
-        "VPN",
-        "アタックサーフェス"
+        "アタックサーフェス",
+        "VPN"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "公衆網上に仮想的な私設網（暗号化トンネル）を作るのがVPN。",
       "stem_en": "When connecting to the office from home over the internet, an encrypted tunnel between the PC and the corporate VPN server protects the traffic. What is this?",
       "choices_en": [
         "WAF",
         "Sensor",
-        "VPN",
-        "Attack surface"
+        "Attack surface",
+        "VPN"
       ],
       "explain_en": "Creating a virtual private network (an encrypted tunnel) over a public network is a VPN.",
       "stem_es": "Al conectarse a la oficina desde casa por internet, un túnel cifrado entre el PC y el servidor VPN corporativo protege el tráfico. ¿Qué es?",
       "choices_es": [
         "WAF",
         "Sensor",
-        "VPN",
-        "Superficie de ataque"
+        "Superficie de ataque",
+        "VPN"
       ],
       "explain_es": "Crear una red privada virtual (un túnel cifrado) sobre una red pública es una VPN."
     },
@@ -1126,27 +1126,27 @@
       "term": "c-2-tls",
       "stem": "オンラインショッピングでカード情報を入力するとき、ブラウザとWebサーバー間の通信を暗号化し、盗聴・改ざんを防ぐプロトコルはどれか。",
       "choices": [
-        "TLS（HTTPSの土台）",
         "フェイルクローズ",
         "ジャンプサーバー",
-        "ロードバランサー"
+        "ロードバランサー",
+        "TLS（HTTPSの土台）"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "TLSは機密性・完全性・認証を提供する通信保護プロトコル。HTTPSで利用される。",
       "stem_en": "When entering card details while shopping online, which protocol encrypts traffic between the browser and the web server to prevent eavesdropping and tampering?",
       "choices_en": [
-        "TLS (the basis of HTTPS)",
         "Fail closed",
         "Jump server",
-        "Load balancer"
+        "Load balancer",
+        "TLS (the basis of HTTPS)"
       ],
       "explain_en": "TLS is a communication-protection protocol providing confidentiality, integrity and authentication; HTTPS uses it.",
       "stem_es": "Al introducir los datos de la tarjeta en una compra en línea, ¿qué protocolo cifra el tráfico entre el navegador y el servidor web para evitar escuchas y manipulaciones?",
       "choices_es": [
-        "TLS (la base de HTTPS)",
         "Fallo cerrado",
         "Servidor de salto",
-        "Balanceador de carga"
+        "Balanceador de carga",
+        "TLS (la base de HTTPS)"
       ],
       "explain_es": "TLS es un protocolo de protección de las comunicaciones que aporta confidencialidad, integridad y autenticación; HTTPS lo utiliza."
     },
@@ -1182,26 +1182,26 @@
       "term": "c-2-sase",
       "stem": "ファイアウォール、VPN、ゼロトラストアクセス、CASBなどをネットワーク接続と統合し、クラウドサービスとして提供するアーキテクチャ概念はどれか。",
       "choices": [
+        "SASE",
         "アタックサーフェス",
         "デバイスの場所",
-        "SASE",
         "フェイルクローズ"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "接続とセキュリティをクラウドで統合し一元管理するのがSASE（Secure Access Service Edge）。",
       "stem_en": "Which architecture concept integrates firewalls, VPN, zero trust access, CASB and so on with network connectivity and delivers them as a cloud service?",
       "choices_en": [
+        "SASE",
         "Attack surface",
         "Device placement",
-        "SASE",
         "Fail closed"
       ],
       "explain_en": "Integrating connectivity and security in the cloud for unified management is SASE (Secure Access Service Edge).",
       "stem_es": "¿Qué concepto de arquitectura integra cortafuegos, VPN, acceso de confianza cero, CASB, etc., con la conectividad de red y los ofrece como servicio en la nube?",
       "choices_es": [
+        "SASE",
         "Superficie de ataque",
         "Ubicación de dispositivos",
-        "SASE",
         "Fallo cerrado"
       ],
       "explain_es": "Integrar conectividad y seguridad en la nube para una gestión unificada es SASE (Secure Access Service Edge)."
@@ -1213,26 +1213,26 @@
       "stem": "医療機関が患者の病歴や処方箋を、医療関連法規に従って厳格に管理している。このデータの種類として最も適切なものはどれか。",
       "choices": [
         "公開情報",
-        "規制されたデータ",
         "人が読めないデータ",
-        "地理的制限"
+        "地理的制限",
+        "規制されたデータ"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "法律や業界規制により特別な取り扱いが求められるのは規制されたデータ。",
       "stem_en": "A medical institution strictly manages patients' histories and prescriptions in line with healthcare laws. Which data type fits best?",
       "choices_en": [
         "Public",
-        "Regulated data",
         "Non-human-readable data",
-        "Geographic restrictions"
+        "Geographic restrictions",
+        "Regulated data"
       ],
       "explain_en": "Data that laws or industry rules require special handling for is regulated data.",
       "stem_es": "Una institución médica gestiona estrictamente los historiales y recetas de los pacientes conforme a la normativa sanitaria. ¿Qué tipo de datos encaja mejor?",
       "choices_es": [
         "Pública",
-        "Datos regulados",
         "Datos no legibles por humanos",
-        "Restricciones geográficas"
+        "Restricciones geográficas",
+        "Datos regulados"
       ],
       "explain_es": "Los datos que las leyes o las normas del sector obligan a tratar de forma especial son datos regulados."
     },
@@ -1240,26 +1240,26 @@
       "term": "c-3-intellectual-property",
       "stem": "企業のロゴや商品名が商標として登録され、他社の無断使用が禁じられている。この資産の分類として最も近いものはどれか。",
       "choices": [
+        "知的財産",
         "財務情報",
         "データ主権",
-        "知的財産",
         "マスキング"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "特許・著作権・商標などの無形資産は知的財産。",
       "stem_en": "A company's logo and product names are registered as trademarks, and other companies may not use them without permission. Which classification is closest for this asset?",
       "choices_en": [
+        "Intellectual property",
         "Financial information",
         "Data sovereignty",
-        "Intellectual property",
         "Masking"
       ],
       "explain_en": "Intangible assets such as patents, copyrights and trademarks are intellectual property.",
       "stem_es": "El logotipo y los nombres de producto de una empresa están registrados como marcas y otras empresas no pueden usarlos sin permiso. ¿Qué clasificación se acerca más a este activo?",
       "choices_es": [
+        "Propiedad intelectual",
         "Información financiera",
         "Soberanía de los datos",
-        "Propiedad intelectual",
         "Enmascaramiento"
       ],
       "explain_es": "Los activos intangibles como patentes, derechos de autor y marcas son propiedad intelectual."
@@ -1268,25 +1268,25 @@
       "term": "c-3-financial",
       "stem": "上場企業が四半期の決算短信を開示する前、売上高や純利益を社内の極秘情報として管理している。これは主にどの種類か。",
       "choices": [
-        "公開情報",
         "財務情報",
+        "公開情報",
         "ジオロケーション",
         "セグメンテーション"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "組織の財務・経営状態を示す情報は財務情報。開示前は特に厳重管理が必要。",
       "stem_en": "Before a listed company discloses its quarterly earnings report, it manages revenue and net income as top-secret internal information. Which type is this mainly?",
       "choices_en": [
-        "Public",
         "Financial information",
+        "Public",
         "Geolocation",
         "Segmentation"
       ],
       "explain_en": "Information showing an organization's finances and business condition is financial information, which needs especially strict handling before disclosure.",
       "stem_es": "Antes de publicar su informe trimestral de resultados, una empresa cotizada gestiona los ingresos y el beneficio neto como información interna altamente secreta. ¿Qué tipo es principalmente?",
       "choices_es": [
-        "Pública",
         "Información financiera",
+        "Pública",
         "Geolocalización",
         "Segmentación"
       ],
@@ -1296,25 +1296,25 @@
       "term": "c-3-human-readable",
       "stem": "平文のメール本文は受信者が内容を理解できるが、暗号化すると記号の羅列になり人間には判読不能になる。この区分を表す用語はどれか。",
       "choices": [
-        "人が読める／読めないデータ",
         "データ主権",
+        "人が読める／読めないデータ",
         "権限制限",
         "クリティカルな情報"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "人間が判読できるか（human-readable）否か（non-human-readable）でデータの種類を分ける。",
       "stem_en": "A recipient can understand a plaintext email, but once encrypted it becomes a string of symbols no human can read. Which term describes this distinction?",
       "choices_en": [
-        "Human-readable / non-human-readable data",
         "Data sovereignty",
+        "Human-readable / non-human-readable data",
         "Permission restrictions",
         "Critical information"
       ],
       "explain_en": "Data is classified by whether humans can read it (human-readable) or not (non-human-readable).",
       "stem_es": "El destinatario entiende un correo en texto claro, pero una vez cifrado se convierte en una cadena de símbolos que nadie puede leer. ¿Qué término describe esta distinción?",
       "choices_es": [
-        "Datos legibles / no legibles por humanos",
         "Soberanía de los datos",
+        "Datos legibles / no legibles por humanos",
         "Restricciones de permisos",
         "Información crítica"
       ],
@@ -1324,25 +1324,25 @@
       "term": "c-3-sensitive",
       "stem": "病院の診療記録に含まれる病名や治療内容が外部へ漏れると、プライバシー侵害と信用低下が大きい。この機密度の呼び方として最も適切なものはどれか。",
       "choices": [
-        "公開情報",
         "センシティブ",
+        "公開情報",
         "データ at rest",
         "難読化"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "漏えいや不正アクセスで重大な影響が出る機密性の高いデータがセンシティブ。",
       "stem_en": "If the diagnoses and treatments in a hospital's medical records leak, the privacy harm and loss of trust are severe. What is the most appropriate name for this sensitivity level?",
       "choices_en": [
-        "Public",
         "Sensitive",
+        "Public",
         "Data at rest",
         "Obfuscation"
       ],
       "explain_en": "Highly confidential data whose leak or unauthorized access has serious impact is sensitive.",
       "stem_es": "Si se filtran los diagnósticos y tratamientos de los historiales de un hospital, el daño a la privacidad y la pérdida de confianza son graves. ¿Cuál es el nombre más adecuado para este nivel de sensibilidad?",
       "choices_es": [
-        "Pública",
         "Sensible",
+        "Pública",
         "Datos en reposo",
         "Ofuscación"
       ],
@@ -1380,27 +1380,27 @@
       "term": "c-3-public",
       "stem": "総務省が発表する人口推計は、誰でも自由にアクセスして利用できる。この分類はどれか。",
       "choices": [
+        "公開情報",
         "制限された情報",
         "プライベート情報",
-        "クリティカルな情報",
-        "公開情報"
+        "クリティカルな情報"
       ],
-      "answer": 3,
+      "answer": 0,
       "explain": "一般に公開されている、または組織が積極的に公開している情報が公開情報。",
       "stem_en": "Population estimates published by a government ministry can be freely accessed and used by anyone. Which classification is this?",
       "choices_en": [
+        "Public",
         "Restricted",
         "Private",
-        "Critical",
-        "Public"
+        "Critical"
       ],
       "explain_en": "Information that is publicly available, or that the organization actively publishes, is public information.",
       "stem_es": "Las estimaciones de población que publica un ministerio pueden consultarlas y usarlas libremente cualquier persona. ¿Qué clasificación es?",
       "choices_es": [
+        "Pública",
         "Restringida",
         "Privada",
-        "Crítica",
-        "Pública"
+        "Crítica"
       ],
       "explain_es": "La información disponible públicamente, o que la organización publica activamente, es información pública."
     },
@@ -1409,25 +1409,25 @@
       "stem": "クラウド事業者が、データセンターの具体的な所在地や建物構造を一般に開示せず管理している。機密ほどではないが共有を抑えるこの分類はどれか。",
       "choices": [
         "公開情報",
-        "制限された情報",
         "ハッシュ",
+        "制限された情報",
         "転送中のデータ"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "機密ほどの厳重さはないが、アクセスや共有に一定の制限が必要なのが制限された情報。",
       "stem_en": "A cloud provider doesn't publicly disclose the exact locations or building structures of its data centers. Which classification limits sharing like this, though not as strictly as confidential?",
       "choices_en": [
         "Public",
-        "Restricted",
         "Hashing",
+        "Restricted",
         "Data in transit"
       ],
       "explain_en": "Information that isn't as tightly held as confidential but still needs some limits on access and sharing is restricted.",
       "stem_es": "Un proveedor de nube no divulga la ubicación exacta ni la estructura de sus centros de datos. ¿Qué clasificación limita así la difusión, aunque no tan estrictamente como la confidencial?",
       "choices_es": [
         "Pública",
-        "Restringida",
         "Hash",
+        "Restringida",
         "Datos en tránsito"
       ],
       "explain_es": "La información que no es tan estricta como la confidencial pero requiere ciertos límites de acceso y difusión es restringida."
@@ -1436,26 +1436,26 @@
       "term": "c-3-private",
       "stem": "インフラ運用担当者のログインIDやパスワードなど、個人に紐づく悪用されやすい情報を慎重に扱っている。この分類として最も適切なものはどれか。",
       "choices": [
-        "プライベート情報",
         "公開情報",
         "セグメンテーション",
+        "プライベート情報",
         "データ in transit"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "個人に関する特に機密性の高い情報がプライベート情報。個人情報保護法などの対象にもなる。",
       "stem_en": "Information tied to individuals and easily abused, such as infrastructure operators' login IDs and passwords, is handled carefully. Which classification fits best?",
       "choices_en": [
-        "Private",
         "Public",
         "Segmentation",
+        "Private",
         "Data in transit"
       ],
       "explain_en": "Highly sensitive information about individuals is private information, also covered by laws such as privacy acts.",
       "stem_es": "La información vinculada a personas y fácil de abusar, como los ID y contraseñas de los operadores de infraestructura, se trata con cuidado. ¿Qué clasificación encaja mejor?",
       "choices_es": [
-        "Privada",
         "Pública",
         "Segmentación",
+        "Privada",
         "Datos en tránsito"
       ],
       "explain_es": "La información muy sensible sobre personas es información privada, también amparada por leyes de protección de datos."
@@ -1466,25 +1466,25 @@
       "choices": [
         "公開情報",
         "人が読めないデータ",
-        "クリティカルな情報",
-        "マスキング"
+        "マスキング",
+        "クリティカルな情報"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "喪失や改ざんの影響が甚大で存続が危ぶまれるほど危険な情報がクリティカル。",
       "stem_en": "Which term refers to information, such as diplomatic secrets or details of military technology, whose leak, alteration or destruction would threaten the organization's (or nation's) survival?",
       "choices_en": [
         "Public",
         "Non-human-readable data",
-        "Critical information",
-        "Masking"
+        "Masking",
+        "Critical information"
       ],
       "explain_en": "Information so dangerous to lose or alter that survival is at stake is critical.",
       "stem_es": "¿Qué término designa la información, como secretos diplomáticos o detalles de tecnología militar, cuya filtración, alteración o destrucción pondría en peligro la supervivencia de la organización (o del país)?",
       "choices_es": [
         "Pública",
         "Datos no legibles por humanos",
-        "Información crítica",
-        "Enmascaramiento"
+        "Enmascaramiento",
+        "Información crítica"
       ],
       "explain_es": "La información tan peligrosa de perder o alterar que pone en juego la supervivencia es crítica."
     },
@@ -1493,25 +1493,25 @@
       "stem": "顧客情報がデータベースサーバーのハードディスクに格納され、現在アクセスされていない。このデータの状態はどれか。",
       "choices": [
         "Data in transit",
-        "Data in use",
         "Data at rest",
+        "Data in use",
         "Geographic restrictions"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "ストレージに保管中でアクセスされていない状態が data at rest。",
       "stem_en": "Customer information is stored on a database server's hard disk and isn't currently being accessed. What state is this data in?",
       "choices_en": [
         "Data in transit",
-        "Data in use",
         "Data at rest",
+        "Data in use",
         "Geographic restrictions"
       ],
       "explain_en": "Stored and not being accessed is data at rest.",
       "stem_es": "La información de clientes está almacenada en el disco duro de un servidor de bases de datos y no se está accediendo a ella. ¿En qué estado están estos datos?",
       "choices_es": [
         "Datos en tránsito",
-        "Datos en uso",
         "Datos en reposo",
+        "Datos en uso",
         "Restricciones geográficas"
       ],
       "explain_es": "Almacenados y sin que se acceda a ellos son datos en reposo."
@@ -1521,26 +1521,26 @@
       "stem": "オンラインショップへクレジットカード情報を送信している最中、傍受を防ぐため TLS で保護している。このデータの状態はどれか。",
       "choices": [
         "Data at rest",
-        "Data in transit",
         "Data in use",
-        "Trade secret"
+        "Trade secret",
+        "Data in transit"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "ネットワークを介して転送中のデータが data in transit。",
       "stem_en": "While credit card details are being sent to an online shop, they're protected with TLS against interception. What state is this data in?",
       "choices_en": [
         "Data at rest",
-        "Data in transit",
         "Data in use",
-        "Trade secret"
+        "Trade secret",
+        "Data in transit"
       ],
       "explain_en": "Data being transferred over a network is data in transit.",
       "stem_es": "Mientras se envían los datos de una tarjeta de crédito a una tienda en línea, se protegen con TLS frente a interceptaciones. ¿En qué estado están estos datos?",
       "choices_es": [
         "Datos en reposo",
-        "Datos en tránsito",
         "Datos en uso",
-        "Secreto comercial"
+        "Secreto comercial",
+        "Datos en tránsito"
       ],
       "explain_es": "Los datos que se transfieren por una red son datos en tránsito."
     },
@@ -1549,25 +1549,25 @@
       "stem": "オンラインバンキングのログイン画面でパスワード入力中、ブラウザのメモリ上に一時的に平文で保持されている。この状態はどれか。",
       "choices": [
         "Data at rest",
-        "Data in transit",
         "Data in use",
+        "Data in transit",
         "Public"
       ],
-      "answer": 2,
+      "answer": 1,
       "explain": "アプリや OS が利用している最中のデータが data in use。メモリ保護が課題になる。",
       "stem_en": "While a password is being typed on an online banking login screen, it is temporarily held in plaintext in the browser's memory. What state is this?",
       "choices_en": [
         "Data at rest",
-        "Data in transit",
         "Data in use",
+        "Data in transit",
         "Public"
       ],
       "explain_en": "Data being used by an app or OS is data in use; protecting memory is the challenge.",
       "stem_es": "Mientras se escribe una contraseña en la pantalla de inicio de sesión de la banca en línea, se guarda temporalmente en texto claro en la memoria del navegador. ¿Qué estado es?",
       "choices_es": [
         "Datos en reposo",
-        "Datos en tránsito",
         "Datos en uso",
+        "Datos en tránsito",
         "Pública"
       ],
       "explain_es": "Los datos que usa una aplicación o el SO son datos en uso; el reto es proteger la memoria."
@@ -1577,26 +1577,26 @@
       "stem": "欧州企業が顧客情報を米国クラウドに保存する際、GDPR に沿い所在地と管理方法を検討している。根拠となる考え方はどれか。",
       "choices": [
         "難読化",
-        "データ主権",
         "ハッシュ",
-        "人が読めるデータ"
+        "人が読めるデータ",
+        "データ主権"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "データ所有者が制御・管理する権利と、データが存在する国の法律に従う必要がデータ主権。",
       "stem_en": "When a European company stores customer information in a U.S. cloud, it reviews location and management methods in line with GDPR. What concept underlies this?",
       "choices_en": [
         "Obfuscation",
-        "Data sovereignty",
         "Hashing",
-        "Human-readable data"
+        "Human-readable data",
+        "Data sovereignty"
       ],
       "explain_en": "The data owner's right to control and manage data, and the need to follow the laws of the country where it resides, is data sovereignty.",
       "stem_es": "Cuando una empresa europea guarda información de clientes en una nube estadounidense, revisa la ubicación y la forma de gestión conforme al RGPD. ¿Qué concepto lo fundamenta?",
       "choices_es": [
         "Ofuscación",
-        "Soberanía de los datos",
         "Hash",
-        "Datos legibles por humanos"
+        "Datos legibles por humanos",
+        "Soberanía de los datos"
       ],
       "explain_es": "El derecho del propietario a controlar y gestionar los datos, y la obligación de seguir las leyes del país donde residen, es la soberanía de los datos."
     },
@@ -1604,27 +1604,27 @@
       "term": "c-3-geolocation",
       "stem": "車載システムが車両の位置をサーバーへ送りルート案内に使う一方、行動パターンが推察されるため暗号化等で保護している。この考慮事項はどれか。",
       "choices": [
-        "ジオロケーション",
         "財務情報",
         "トークン化",
-        "公開情報"
+        "公開情報",
+        "ジオロケーション"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "位置情報の取扱いとプライバシーが geolocation の論点。",
       "stem_en": "An in-car system sends the vehicle's location to a server for route guidance, but because behavior patterns could be inferred, it's protected with encryption and the like. What consideration is this?",
       "choices_en": [
-        "Geolocation",
         "Financial information",
         "Tokenization",
-        "Public"
+        "Public",
+        "Geolocation"
       ],
       "explain_en": "Handling location data and privacy is the geolocation issue.",
       "stem_es": "Un sistema del coche envía la ubicación del vehículo a un servidor para el guiado de rutas, pero como podrían deducirse patrones de comportamiento, se protege con cifrado y medidas similares. ¿Qué consideración es?",
       "choices_es": [
-        "Geolocalización",
         "Información financiera",
         "Tokenización",
-        "Pública"
+        "Pública",
+        "Geolocalización"
       ],
       "explain_es": "El tratamiento de los datos de ubicación y la privacidad es la cuestión de la geolocalización."
     },
@@ -1632,25 +1632,25 @@
       "term": "c-3-geographic-restrictions",
       "stem": "GDPR 対応のため、クラウド事業者が EU 域内のデータセンターにデータを保管するオプションを提供している。この保護の考え方はどれか。",
       "choices": [
-        "マスキング",
         "地理的制限",
+        "マスキング",
         "クリティカル",
         "Data in use"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "保存・処理・アクセスを特定の地理的領域内に限定するのが geographic restrictions。",
       "stem_en": "For GDPR compliance, a cloud provider offers an option to store data in data centers inside the EU. Which protection concept is this?",
       "choices_en": [
-        "Masking",
         "Geographic restrictions",
+        "Masking",
         "Critical",
         "Data in use"
       ],
       "explain_en": "Limiting storage, processing and access to a specific geographic area is geographic restrictions.",
       "stem_es": "Para cumplir el RGPD, un proveedor de nube ofrece la opción de almacenar los datos en centros de datos dentro de la UE. ¿Qué concepto de protección es?",
       "choices_es": [
-        "Enmascaramiento",
         "Restricciones geográficas",
+        "Enmascaramiento",
         "Crítica",
         "Datos en uso"
       ],
@@ -1662,25 +1662,25 @@
       "choices": [
         "ハッシュ",
         "マスキング",
-        "暗号化",
-        "セグメンテーション"
+        "セグメンテーション",
+        "暗号化"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "データを解読困難な形式に変換して機密性を守るのが暗号化。",
       "stem_en": "Online payments use TLS so card details are hard to decipher even if the traffic is intercepted. Which protection method is this?",
       "choices_en": [
         "Hashing",
         "Masking",
-        "Encryption",
-        "Segmentation"
+        "Segmentation",
+        "Encryption"
       ],
       "explain_en": "Converting data into a hard-to-decipher form to protect confidentiality is encryption.",
       "stem_es": "Los pagos en línea usan TLS para que los datos de la tarjeta sean difíciles de descifrar aunque se intercepte el tráfico. ¿Qué método de protección es?",
       "choices_es": [
         "Hash",
         "Enmascaramiento",
-        "Cifrado",
-        "Segmentación"
+        "Segmentación",
+        "Cifrado"
       ],
       "explain_es": "Convertir los datos en una forma difícil de descifrar para proteger la confidencialidad es el cifrado."
     },
@@ -1716,25 +1716,25 @@
       "term": "c-3-masking",
       "stem": "画面表示ではクレジットカード番号の下4桁以外をアスタリスクに置き換えている。この手法はどれか。",
       "choices": [
-        "マスキング",
         "データ主権",
+        "マスキング",
         "Data at rest",
         "知的財産"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "機密の一部を別の文字・記号で置き換えて隠すのがマスキング。",
       "stem_en": "On screen, all but the last four digits of a credit card number are replaced with asterisks. What method is this?",
       "choices_en": [
-        "Masking",
         "Data sovereignty",
+        "Masking",
         "Data at rest",
         "Intellectual property"
       ],
       "explain_en": "Hiding part of sensitive data by replacing it with other characters or symbols is masking.",
       "stem_es": "En pantalla, todos los dígitos de un número de tarjeta salvo los cuatro últimos se sustituyen por asteriscos. ¿Qué método es?",
       "choices_es": [
-        "Enmascaramiento",
         "Soberanía de los datos",
+        "Enmascaramiento",
         "Datos en reposo",
         "Propiedad intelectual"
       ],
@@ -1800,26 +1800,26 @@
       "term": "c-3-segmentation",
       "stem": "企業ネットワークを業務用とゲスト用 Wi-Fi に分け、ゲスト側が侵害されても業務サーバーへの影響を抑えている。データ保護としてのこの手法はどれか。",
       "choices": [
-        "セグメンテーション",
         "ハッシュ",
         "財務情報",
+        "セグメンテーション",
         "Data in transit"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "ネットワークやシステムを分割してアクセス範囲を制限するのがセグメンテーション。",
       "stem_en": "The corporate network was split into business and guest Wi-Fi, so even if the guest side is compromised, the impact on business servers is limited. Which data protection method is this?",
       "choices_en": [
-        "Segmentation",
         "Hashing",
         "Financial information",
+        "Segmentation",
         "Data in transit"
       ],
       "explain_en": "Dividing networks or systems to limit the scope of access is segmentation.",
       "stem_es": "La red corporativa se dividió en Wi-Fi de empresa y de invitados, de modo que si se compromete la de invitados, el impacto en los servidores de la empresa es limitado. ¿Qué método de protección de datos es?",
       "choices_es": [
-        "Segmentación",
         "Hash",
         "Información financiera",
+        "Segmentación",
         "Datos en tránsito"
       ],
       "explain_es": "Dividir redes o sistemas para limitar el alcance del acceso es la segmentación."
@@ -1828,26 +1828,26 @@
       "term": "c-3-permission-restrictions",
       "stem": "病院の電子カルテで、医師や看護師など業務上必要なロールだけがアクセスできるよう RBAC を導入した。この手法はどれか。",
       "choices": [
+        "権限制限",
         "ジオロケーション",
         "人が読めないデータ",
-        "権限制限",
         "知的財産"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "ユーザーやプロセスへの権限割当てでアクセスを制限するのが permission restrictions。",
       "stem_en": "A hospital introduced RBAC to its electronic medical records so only roles that need access for their work, such as doctors and nurses, can get in. What method is this?",
       "choices_en": [
+        "Permission restrictions",
         "Geolocation",
         "Non-human-readable data",
-        "Permission restrictions",
         "Intellectual property"
       ],
       "explain_en": "Restricting access by assigning permissions to users and processes is permission restrictions.",
       "stem_es": "Un hospital implantó RBAC en sus historias clínicas electrónicas para que solo accedan los roles que lo necesitan por su trabajo, como médicos y enfermeras. ¿Qué método es?",
       "choices_es": [
+        "Restricciones de permisos",
         "Geolocalización",
         "Datos no legibles por humanos",
-        "Restricciones de permisos",
         "Propiedad intelectual"
       ],
       "explain_es": "Restringir el acceso asignando permisos a usuarios y procesos son las restricciones de permisos."
@@ -1860,25 +1860,25 @@
       "choices": [
         "コールドサイト",
         "ウォームサイト",
-        "ホットサイト",
-        "オンサイトバックアップのみ"
+        "オンサイトバックアップのみ",
+        "ホットサイト"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "主要系と同等機能を常備し即切替できるのがホットサイト。コストは高いが復旧は最短に近い。",
       "stem_en": "A financial institution set up a remote backup site running essentially full-time, so it can switch immediately to equivalent servers, lines and replicated data if the main data center stops. What is this?",
       "choices_en": [
         "Cold site",
         "Warm site",
-        "Hot site",
-        "Onsite backup only"
+        "Onsite backup only",
+        "Hot site"
       ],
       "explain_en": "A site with capability equivalent to the primary, ready to take over instantly, is a hot site. It's costly, but recovery is about as fast as it gets.",
       "stem_es": "Una entidad financiera montó un sitio de respaldo remoto que funciona prácticamente siempre, para poder pasar al instante a servidores, líneas y datos replicados equivalentes si se detiene el centro de datos principal. ¿Qué es?",
       "choices_es": [
         "Sitio frío",
         "Sitio templado",
-        "Sitio caliente",
-        "Solo copia en el sitio"
+        "Solo copia en el sitio",
+        "Sitio caliente"
       ],
       "explain_es": "Un sitio con capacidad equivalente a la principal, listo para asumir el servicio al instante, es un sitio caliente. Es caro, pero la recuperación es casi inmediata."
     },
@@ -1942,26 +1942,26 @@
       "term": "c-4-geographic-dispersion",
       "stem": "津波や広域停電で両方の拠点が同時に使えなくなるのを避けるため、メインDCとバックアップDCを十分離れた場所に置いた。主にどの考え方か。",
       "choices": [
+        "物理的な距離（地理的分散）",
         "スナップショット",
         "キャパシティプランニング（人員）",
-        "物理的な距離（地理的分散）",
         "バックアップの暗号化"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "同一災害による同時被災を避けるため拠点を地理的に離すのが物理的な距離／Geographic dispersion。",
       "stem_en": "To avoid both sites becoming unusable at once from a tsunami or wide-area outage, the main and backup data centers were placed far apart. Which concept is this mainly?",
       "choices_en": [
+        "Geographic dispersion",
         "Snapshots",
         "Capacity planning (people)",
-        "Geographic dispersion",
         "Backup encryption"
       ],
       "explain_en": "Keeping sites geographically apart to avoid being hit by the same disaster is geographic dispersion.",
       "stem_es": "Para evitar que ambos sitios queden inutilizados a la vez por un tsunami o un apagón extenso, el centro de datos principal y el de respaldo se situaron muy lejos entre sí. ¿Qué concepto es principalmente?",
       "choices_es": [
+        "Dispersión geográfica",
         "Instantáneas",
         "Planificación de capacidad (personas)",
-        "Dispersión geográfica",
         "Cifrado de copias de seguridad"
       ],
       "explain_es": "Mantener los sitios separados geográficamente para no verse afectados por el mismo desastre es la dispersión geográfica."
@@ -1970,25 +1970,25 @@
       "term": "c-4-platform-diversity",
       "stem": "単一ベンダーや単一拠点の障害で全体が止まらないよう、サーバーやストレージを複数拠点・異ベンダー環境に分けて配置した。これはどれか。",
       "choices": [
-        "プラットフォームの分散",
         "UPS",
+        "プラットフォームの分散",
         "コールドサイト",
         "頻度の見直しのみ"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "拠点・環境・ベンダーを分散し単一障害点を減らすのがプラットフォームの分散（Platform diversity）。",
       "stem_en": "So that a failure of one vendor or one site doesn't stop everything, servers and storage were spread across several sites and different vendors' environments. What is this?",
       "choices_en": [
-        "Platform diversity",
         "UPS",
+        "Platform diversity",
         "Cold site",
         "Reviewing frequency only"
       ],
       "explain_en": "Spreading sites, environments and vendors to reduce single points of failure is platform diversity.",
       "stem_es": "Para que el fallo de un proveedor o de un sitio no lo detenga todo, los servidores y el almacenamiento se repartieron entre varios sitios y entornos de proveedores distintos. ¿Qué es?",
       "choices_es": [
-        "Diversidad de plataformas",
         "SAI (UPS)",
+        "Diversidad de plataformas",
         "Sitio frío",
         "Solo revisar la frecuencia"
       ],
@@ -1999,26 +1999,26 @@
       "stem": "EC事業者がAWSとAzureを併用し、一方のリージョン障害時も他方のクラウド上のバックアップでサービス継続できるようにした。これはどれか。",
       "choices": [
         "ホットサイトのみ",
-        "マルチクラウド",
         "オンサイトバックアップ",
-        "負荷試験なしの単一クラウド固定"
+        "負荷試験なしの単一クラウド固定",
+        "マルチクラウド"
       ],
-      "answer": 1,
+      "answer": 3,
       "explain": "複数のクラウドサービスプロバイダーを併用するのがマルチクラウド。可用性・DR・コスト最適化が狙い。",
       "stem_en": "An online retailer uses both AWS and Azure so that if one region fails, service can continue from backups on the other cloud. What is this?",
       "choices_en": [
         "Hot site only",
-        "Multi-cloud",
         "Onsite backup",
-        "Locked into a single cloud without load testing"
+        "Locked into a single cloud without load testing",
+        "Multi-cloud"
       ],
       "explain_en": "Using several cloud service providers together is multi-cloud; the aims are availability, DR and cost optimization.",
       "stem_es": "Un comercio en línea usa AWS y Azure a la vez para que, si falla una región, el servicio continúe con las copias de la otra nube. ¿Qué es?",
       "choices_es": [
         "Solo sitio caliente",
-        "Multinube",
         "Copia en el sitio",
-        "Atado a una sola nube sin pruebas de carga"
+        "Atado a una sola nube sin pruebas de carga",
+        "Multinube"
       ],
       "explain_es": "Usar varios proveedores de servicios en la nube a la vez es multinube; busca disponibilidad, recuperación ante desastres y optimización de costes."
     },
@@ -2026,25 +2026,25 @@
       "term": "c-4-continuity-of-operations",
       "stem": "地震でDCが被災しても重要業務を止めないよう、BCPを策定しRTO/RPOや安否確認・連絡手段をあらかじめ決めておいた。主にどの概念か。",
       "choices": [
-        "スナップショット",
         "運営の継続性",
+        "スナップショット",
         "発電機",
         "プラットフォームの分散"
       ],
-      "answer": 1,
+      "answer": 0,
       "explain": "障害時も事業を継続するための枠組みが運営の継続性（Continuity of operations）。BCPや連絡体制が含まれる。",
       "stem_en": "So critical operations don't stop even if an earthquake hits the data center, the company drafted a BCP and set RTO/RPO, staff safety checks and contact methods in advance. Which concept is this mainly?",
       "choices_en": [
-        "Snapshots",
         "Continuity of operations",
+        "Snapshots",
         "Generators",
         "Platform diversity"
       ],
       "explain_en": "The framework for keeping the business running during disruptions is continuity of operations, including the BCP and contact arrangements.",
       "stem_es": "Para que las operaciones críticas no se detengan aunque un terremoto afecte al centro de datos, la empresa elaboró un BCP y fijó de antemano RTO/RPO, comprobación de la seguridad del personal y medios de contacto. ¿Qué concepto es principalmente?",
       "choices_es": [
-        "Instantáneas",
         "Continuidad de las operaciones",
+        "Instantáneas",
         "Generadores",
         "Diversidad de plataformas"
       ],
@@ -2054,26 +2054,26 @@
       "term": "c-4-capacity-people",
       "stem": "大規模障害に備え、専門スキルを持つエンジニアのシフト体制と他部門からの応援・外部ベンダー協力を事前に計画した。これはどのキャパシティ計画か。",
       "choices": [
+        "キャパシティプランニング（人員）",
         "キャパシティプランニング（技術）",
         "キャパシティプランニング（インフラ）",
-        "キャパシティプランニング（人員）",
         "バックアップ頻度の計画のみ"
       ],
-      "answer": 2,
+      "answer": 0,
       "explain": "復旧・継続に必要な人的リソースの事前確保が人員のキャパシティプランニング。",
       "stem_en": "For a major outage, the company planned shift rotations for skilled engineers plus backup from other departments and outside vendors in advance. Which kind of capacity planning is this?",
       "choices_en": [
+        "Capacity planning (people)",
         "Capacity planning (technology)",
         "Capacity planning (infrastructure)",
-        "Capacity planning (people)",
         "Planning backup frequency only"
       ],
       "explain_en": "Securing in advance the human resources needed for recovery and continuity is capacity planning for people.",
       "stem_es": "Ante una gran avería, la empresa planificó de antemano turnos de ingenieros cualificados y refuerzos de otros departamentos y proveedores externos. ¿Qué tipo de planificación de capacidad es?",
       "choices_es": [
+        "Planificación de capacidad (personas)",
         "Planificación de capacidad (tecnología)",
         "Planificación de capacidad (infraestructura)",
-        "Planificación de capacidad (personas)",
         "Solo planificar la frecuencia de las copias"
       ],
       "explain_es": "Asegurar de antemano los recursos humanos necesarios para la recuperación y la continuidad es la planificación de capacidad de personas."
@@ -2082,26 +2082,26 @@
       "term": "c-4-capacity-technology",
       "stem": "ピーク需要を予測し、障害時にオートスケールで処理能力を足せ、可用性ゾーンで一部DC停止にも耐えるよう設計した。これはどの計画か。",
       "choices": [
-        "キャパシティプランニング（技術）",
         "キャパシティプランニング（人員）",
         "コールドサイト選定",
+        "キャパシティプランニング（技術）",
         "UPSの電池交換周期のみ"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "システムの処理能力・容量を維持・拡張する計画が技術のキャパシティプランニング。",
       "stem_en": "Peak demand was forecast, and the design lets autoscaling add capacity during failures and availability zones withstand some data center outages. Which plan is this?",
       "choices_en": [
-        "Capacity planning (technology)",
         "Capacity planning (people)",
         "Choosing a cold site",
+        "Capacity planning (technology)",
         "UPS battery replacement cycle only"
       ],
       "explain_en": "Planning to maintain and expand a system's processing power and capacity is capacity planning for technology.",
       "stem_es": "Se previó la demanda máxima y el diseño permite que el escalado automático añada capacidad durante los fallos y que las zonas de disponibilidad resistan la caída de algunos centros de datos. ¿Qué planificación es?",
       "choices_es": [
-        "Planificación de capacidad (tecnología)",
         "Planificación de capacidad (personas)",
         "Elección de un sitio frío",
+        "Planificación de capacidad (tecnología)",
         "Solo el ciclo de cambio de baterías del SAI"
       ],
       "explain_es": "Planificar cómo mantener y ampliar la potencia de procesamiento y la capacidad de un sistema es la planificación de capacidad tecnológica."
@@ -2111,25 +2111,25 @@
       "stem": "復旧拠点で業務を続けるため、電力・空調・ラック・回線に加え、非常用発電機や水・衛星電話などライフライン途絶への備えを計画した。これはどれか。",
       "choices": [
         "ジャーナリング",
-        "キャパシティプランニング（インフラ）",
         "マルチクラウド",
+        "キャパシティプランニング（インフラ）",
         "スナップショット"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "施設・電力・ネットワークなどインフラ資源の確保・配分がインフラのキャパシティプランニング。",
       "stem_en": "To keep working at the recovery site, the company planned for power, cooling, racks and lines, plus emergency generators, water and satellite phones in case lifelines are cut. What is this?",
       "choices_en": [
         "Journaling",
-        "Capacity planning (infrastructure)",
         "Multi-cloud",
+        "Capacity planning (infrastructure)",
         "Snapshots"
       ],
       "explain_en": "Securing and allocating infrastructure resources such as facilities, power and network is capacity planning for infrastructure.",
       "stem_es": "Para seguir trabajando en el sitio de recuperación, la empresa planificó energía, climatización, racks y líneas, además de generadores de emergencia, agua y teléfonos por satélite por si se cortan los suministros básicos. ¿Qué es?",
       "choices_es": [
         "Registro por diario",
-        "Planificación de capacidad (infraestructura)",
         "Multinube",
+        "Planificación de capacidad (infraestructura)",
         "Instantáneas"
       ],
       "explain_es": "Asegurar y asignar recursos de infraestructura como instalaciones, energía y red es la planificación de capacidad de infraestructura."
@@ -2138,25 +2138,25 @@
       "term": "c-4-onsite-offsite",
       "stem": "短時間復旧用に同一ビルのサーバールームへバックアップし、同時にクラウド上の別拠点にも転送して保管する運用にした。区別している概念はどれか。",
       "choices": [
-        "オンサイトとオフサイト",
         "ホットサイトとウォームサイトのみ",
+        "オンサイトとオフサイト",
         "負荷分散とクラスタリング",
         "机上演習とシミュレーション"
       ],
-      "answer": 0,
+      "answer": 1,
       "explain": "同じ場所（オンサイト）か別場所（オフサイト）かがバックアップ保管場所の基本区分。",
       "stem_en": "For quick recovery, backups go to the server room in the same building, and they're also transferred to a separate site in the cloud. Which concept is being distinguished?",
       "choices_en": [
-        "Onsite vs. offsite",
         "Hot vs. warm site only",
+        "Onsite vs. offsite",
         "Load balancing vs. clustering",
         "Tabletop exercise vs. simulation"
       ],
       "explain_en": "Same place (onsite) or a different place (offsite) is the basic distinction for where backups are stored.",
       "stem_es": "Para recuperar rápido, las copias se guardan en la sala de servidores del mismo edificio y además se envían a otro sitio en la nube. ¿Qué concepto se está distinguiendo?",
       "choices_es": [
-        "En el sitio frente a fuera del sitio",
         "Solo sitio caliente frente a templado",
+        "En el sitio frente a fuera del sitio",
         "Balanceo de carga frente a clúster",
         "Ejercicio de mesa frente a simulación"
       ],
@@ -2167,25 +2167,25 @@
       "stem": "注文データが多いECサイトが、データ損失を抑えるため数分〜数十分間隔でバックアップし、日次バックアップに加えログも取得している。主に何を決めているか。",
       "choices": [
         "暗号化アルゴリズムだけ",
-        "バックアップの頻度",
         "発電機の燃料種だけ",
+        "バックアップの頻度",
         "プラットフォームのベンダー固定"
       ],
-      "answer": 1,
+      "answer": 2,
       "explain": "重要度や変更頻度に応じてバックアップ間隔を決めるのが頻度（Frequency）。RPOに直結する。",
       "stem_en": "An online store with lots of order data backs up every few minutes to tens of minutes to limit data loss, and captures logs in addition to daily backups. What is mainly being decided?",
       "choices_en": [
         "Only the encryption algorithm",
-        "Backup frequency",
         "Only the generator's fuel type",
+        "Backup frequency",
         "Locking in a platform vendor"
       ],
       "explain_en": "Setting the backup interval by importance and rate of change is frequency, which directly affects RPO.",
       "stem_es": "Una tienda en línea con muchos pedidos hace copias cada pocos minutos o decenas de minutos para limitar la pérdida de datos, y guarda registros además de las copias diarias. ¿Qué se está decidiendo principalmente?",
       "choices_es": [
         "Solo el algoritmo de cifrado",
-        "La frecuencia de las copias",
         "Solo el tipo de combustible del generador",
+        "La frecuencia de las copias",
         "Fijar un proveedor de plataforma"
       ],
       "explain_es": "Fijar el intervalo de copia según la importancia y el ritmo de cambio es la frecuencia, que influye directamente en el RPO."
@@ -2196,25 +2196,25 @@
       "choices": [
         "リカバリ訓練",
         "地理的分散のみ",
-        "バックアップの暗号化",
-        "ウォームサイト"
+        "ウォームサイト",
+        "バックアップの暗号化"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "バックアップデータを暗号化して不正アクセスから守る。オフサイト／クラウド保管でも重要。",
       "stem_en": "So backup media sent to the cloud can't be read even if taken, the policy is to encrypt them when stored. What is this?",
       "choices_en": [
         "Recovery drills",
         "Geographic dispersion only",
-        "Backup encryption",
-        "Warm site"
+        "Warm site",
+        "Backup encryption"
       ],
       "explain_en": "Encrypting backup data protects it from unauthorized access, which matters for offsite and cloud storage too.",
       "stem_es": "Para que las copias enviadas a la nube no puedan leerse aunque alguien se las lleve, la política es cifrarlas al almacenarlas. ¿Qué es?",
       "choices_es": [
         "Simulacros de recuperación",
         "Solo dispersión geográfica",
-        "Cifrado de copias de seguridad",
-        "Sitio templado"
+        "Sitio templado",
+        "Cifrado de copias de seguridad"
       ],
       "explain_es": "Cifrar los datos de las copias los protege del acceso no autorizado, algo importante también en el almacenamiento externo y en la nube."
     },
@@ -2222,27 +2222,27 @@
       "term": "c-4-snapshot",
       "stem": "仮想マシンの時点状態を記録し、変更点を差分保存することでバックアップ負荷を抑え、迅速に元の状態へ戻せるようにした。これはどれか。",
       "choices": [
-        "スナップショット",
         "発電機",
         "コールドサイト",
-        "運営の継続性"
+        "運営の継続性",
+        "スナップショット"
       ],
-      "answer": 0,
+      "answer": 3,
       "explain": "ある時点の状態記録と差分保存・迅速リストアがスナップショットの特徴。",
       "stem_en": "The point-in-time state of a virtual machine is recorded and changes are saved as deltas, reducing backup load and allowing a quick return to the earlier state. What is this?",
       "choices_en": [
-        "Snapshot",
         "Generator",
         "Cold site",
-        "Continuity of operations"
+        "Continuity of operations",
+        "Snapshot"
       ],
       "explain_en": "Recording a point-in-time state, saving deltas and restoring quickly are the hallmarks of a snapshot.",
       "stem_es": "Se registra el estado de una máquina virtual en un momento dado y los cambios se guardan como diferencias, lo que reduce la carga de las copias y permite volver rápido al estado anterior. ¿Qué es?",
       "choices_es": [
-        "Instantánea",
         "Generador",
         "Sitio frío",
-        "Continuidad de las operaciones"
+        "Continuidad de las operaciones",
+        "Instantánea"
       ],
       "explain_es": "Registrar el estado en un momento dado, guardar diferencias y restaurar rápido son los rasgos de una instantánea."
     },
@@ -2278,26 +2278,26 @@
       "term": "c-4-replication",
       "stem": "オンプレのバックアップをクラウドストレージへ同期コピーし、同期間隔と保持期間も設定した。これはどれか。",
       "choices": [
-        "複製（レプリケーション）",
         "机上演習",
         "UPS",
+        "複製（レプリケーション）",
         "キャパシティプランニング（人員）"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "データを別場所へコピー／同期するのが複製。間隔と保持期間の設定もポイント。",
       "stem_en": "On-premises backups are synchronously copied to cloud storage, with a sync interval and retention period configured. What is this?",
       "choices_en": [
-        "Replication",
         "Tabletop exercise",
         "UPS",
+        "Replication",
         "Capacity planning (people)"
       ],
       "explain_en": "Copying or syncing data to another location is replication; setting the interval and retention period also matters.",
       "stem_es": "Las copias locales se replican de forma sincronizada en el almacenamiento en la nube, con un intervalo de sincronización y un periodo de retención configurados. ¿Qué es?",
       "choices_es": [
-        "Replicación",
         "Ejercicio de mesa",
         "SAI (UPS)",
+        "Replicación",
         "Planificación de capacidad (personas)"
       ],
       "explain_es": "Copiar o sincronizar datos en otra ubicación es la replicación; también importa fijar el intervalo y el periodo de retención."
@@ -2336,25 +2336,25 @@
       "choices": [
         "UPSのみ",
         "スナップショット",
-        "発電機",
-        "バックアップ頻度"
+        "バックアップ頻度",
+        "発電機"
       ],
-      "answer": 2,
+      "answer": 3,
       "explain": "停電時に長時間電力を供給する非常用発電装置が発電機。UPSの後段として併用されることが多い。",
       "stem_en": "To prepare for long outages, a data center can supply power from diesel emergency generating equipment. What is this?",
       "choices_en": [
         "UPS only",
         "Snapshot",
-        "Generator",
-        "Backup frequency"
+        "Backup frequency",
+        "Generator"
       ],
       "explain_en": "Emergency equipment that supplies power for long periods during outages is a generator, often used after a UPS.",
       "stem_es": "Para prepararse ante cortes prolongados, un centro de datos puede suministrar energía con equipos de generación de emergencia diésel. ¿Qué es?",
       "choices_es": [
         "Solo SAI (UPS)",
         "Instantánea",
-        "Generador",
-        "Frecuencia de las copias"
+        "Frecuencia de las copias",
+        "Generador"
       ],
       "explain_es": "El equipo de emergencia que suministra energía durante largos periodos en un corte es un generador, que suele usarse tras un SAI."
     },
@@ -2362,26 +2362,26 @@
       "term": "c-4-ups",
       "stem": "停電発生直後、バッテリーでサーバー電源を維持し、安全なシャットダウンや非常用発電機への切替までの時間を稼ぐ装置を導入した。これはどれか。",
       "choices": [
-        "UPS（無停電電源装置）",
         "コールドサイト",
         "マルチクラウド",
+        "UPS（無停電電源装置）",
         "プラットフォームの分散"
       ],
-      "answer": 0,
+      "answer": 2,
       "explain": "停電や電圧変化時に短時間電力を維持し、発電機切替等までの橋渡しをするのがUPS。",
       "stem_en": "Right after an outage, a device keeps servers powered from batteries to buy time for a safe shutdown or the switch to an emergency generator. What is this?",
       "choices_en": [
-        "UPS (uninterruptible power supply)",
         "Cold site",
         "Multi-cloud",
+        "UPS (uninterruptible power supply)",
         "Platform diversity"
       ],
       "explain_en": "A UPS maintains power for a short time during outages or voltage changes, bridging the gap until a generator takes over.",
       "stem_es": "Justo después de un corte, un dispositivo mantiene alimentados los servidores con baterías para ganar tiempo para un apagado seguro o el paso a un generador de emergencia. ¿Qué es?",
       "choices_es": [
-        "SAI (sistema de alimentación ininterrumpida)",
         "Sitio frío",
         "Multinube",
+        "SAI (sistema de alimentación ininterrumpida)",
         "Diversidad de plataformas"
       ],
       "explain_es": "Un SAI mantiene la energía durante poco tiempo ante cortes o variaciones de tensión, hasta que entra un generador."
