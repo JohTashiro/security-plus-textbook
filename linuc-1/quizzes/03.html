@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 03 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 03</span></a>
+  <a class="nav-back" href="../chapters/03.html">← CH 03 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html" class="active">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 03</p>
+        <h1>シェルとコマンドライン</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/03.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "標準出力をファイルへ上書き保存する記号はどれか。", "type": "single", "choices": ["`>>`", "`>`", "`\\|`", "`2>`"], "answer": "B", "explain": "`>` は上書き。`>>` は追記。"}, {"id": "Q2", "stem": "左コマンドの出力を右コマンドの入力にするのはどれか。", "type": "single", "choices": ["`>`", "`<`", "`\\|`", "`&&` のみ"], "answer": "C", "explain": "パイプは `\\"}, {"id": "Q3", "stem": "実行中のフォアグラウンドを一時停止するキーはどれか。", "type": "single", "choices": ["`Ctrl+Z`", "`Ctrl+D` のみが停止", "`Alt+F4`（Linux シェル標準）", "`Esc Esc Esc`"], "answer": "A", "explain": "サスペンドは Ctrl+Z。"}, {"id": "Q4", "stem": "ログアウト後もプロセスを続けやすい古典的手段はどれか。", "type": "single", "choices": ["`nohup command &`", "`rm -rf /`", "`chmod 000 /etc`", "`halt` を繰り返す"], "answer": "A", "explain": "nohup とバックグラウンドが定番。"}, {"id": "Q5", "stem": "tmux の主な利点として最も適切なのはどれか。", "type": "single", "choices": ["ディスクを自動で暗号化しないと使えない", "SSH 切断後もセッションを残して再接続できる", "IP アドレスを自動でルーティングする", "systemd の代替である"], "answer": "B", "explain": "tmux は切断耐性とセッション復帰が強み。"}, {"id": "Q6", "stem": "変数を展開せず文字どおりに扱うのに適しているのはどれか。", "type": "single", "choices": ["ダブルクォートのみ", "シングルクォート", "クォートなしの空白だらけ文字列", "`>` リダイレクト"], "answer": "B", "explain": "シングルクォートは展開しない。"}, {"id": "Q7", "stem": "リダイレクトについて適切なものを選べ。", "type": "multi", "choices": ["`>>` は追記", "`2>` は標準エラー向け", "`2>&1` でエラーを出力と同じ行き先にまとめられる", "`>` は常に追記のみ"], "answer": "A, B, C", "explain": "`>` は上書きであり常に追記ではない。"}, {"id": "Q8", "stem": "作業効率化として適切なものを選べ。", "type": "multi", "choices": ["`Ctrl+R` で履歴検索", "`history` で履歴表示", "危険コマンドでも確認せず `!!` を連打する", "`type` や `which` でコマンドの種類・場所を確認する"], "answer": "A, B, D", "explain": "危険コマンドの無確認再実行は不可。"}, {"id": "Q9", "stem": "ジョブ制御について適切なものを選べ。", "type": "multi", "choices": ["`jobs` で一覧", "`bg` でバックグラウンド再開", "`fg` でフォアグラウンドに戻す", "`&` を付けると必ず root 権限になる"], "answer": "A, B, C", "explain": "`&` は権限を上げない。"}, {"id": "Q10", "stem": "現在のディレクトリを表示するコマンドを書け。", "type": "text", "choices": [], "answer": "`pwd`", "explain": "Print Working Directory。"}, {"id": "Q11", "stem": "`journalctl -u ssh` の出力をページャで見るパイプ例を1つ書け。", "type": "text", "choices": [], "answer": "例: `journalctl -u ssh \\", "explain": "less`"}, {"id": "Q12", "stem": "本番サーバへ SSH し、長時間のログ収集を走らせている。回線が不安定で切れそうだ。最も適切なのはどれか。", "type": "single", "choices": ["tmux（または screen）内で作業し、切れてもアタッチし直せるようにする", "ルートファイルシステムをフォーマットする", "すべてのユーザを削除する", "ファイアウォールを止めっぱなしにする"], "answer": "A", "explain": "不安定回線ではマルチプレクサ内作業が基本。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

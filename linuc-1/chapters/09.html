@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>09 ユーザーとセキュリティ · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 09</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html" class="active">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/09.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 09</p>
+        <h1>ユーザーとセキュリティ</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/09.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="09">09 ユーザーとセキュリティ</h1>
+<p>「誰がログインでき、何を昇格でき、どこから入るか」が崩れると、権限のある侵害になります。この章ではアカウント管理、パスワード方針、sudo、SSH 基礎、不要サービスの抑制を実務単位で押さえます。</p>
+<h2 id="1">1. ユーザとグループ</h2>
+<table>
+<thead>
+<tr>
+<th>ファイル</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/etc/passwd</code></td>
+<td>アカウント本体（UID、ホーム、シェル）</td>
+</tr>
+<tr>
+<td><code>/etc/shadow</code></td>
+<td>パスワードハッシュと期限（root のみ読める想定）</td>
+</tr>
+<tr>
+<td><code>/etc/group</code></td>
+<td>グループ</td>
+</tr>
+<tr>
+<td><code>/etc/gshadow</code></td>
+<td>グループの秘匿情報（環境による）</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">sudo useradd -m -s /bin/bash alice
+sudo passwd alice
+sudo usermod -aG wheel alice      # 配布により sudo グループ名は sudo
+sudo groupadd developers
+id alice
+getent passwd alice
+</code></pre>
+<p>新規ユーザの雛形は <code>/etc/skel</code>。デフォルトは <code>/etc/default/useradd</code> や <code>login.defs</code> も関係します。</p>
+<p>削除・ロック:</p>
+<pre><code class="language-bash">sudo usermod -L alice             # ロック
+sudo usermod -U alice             # 解除
+sudo userdel -r alice             # ホームも削除（慎重に）
+</code></pre>
+<h2 id="2">2. パスワードとログイン制御</h2>
+<pre><code class="language-bash">sudo chage -l alice
+sudo chage -M 90 -W 7 alice       # 最大日数・警告
+sudo passwd -l alice              # ロック寄り
+</code></pre>
+<p>自動ログアウトは <code>TMOUT</code>（シェル）や PAM／ディスプレイマネージャ設定など手段が複数あります。方針として「放置セッションを残さない」が重要です。</p>
+<p>ログイン状況:</p>
+<pre><code class="language-bash">who
+w
+last
+lastb                            # 失敗（権限・環境による）
+</code></pre>
+<h2 id="3-sudo">3. sudo による権限委譲</h2>
+<p>root パスワード共有より、<strong>個人アカウント + sudo</strong> が監査しやすいです。</p>
+<pre><code class="language-bash">sudo -l
+sudo visudo                       # /etc/sudoers を安全に編集
+</code></pre>
+<p><code>/etc/sudoers.d/</code> に断片を置く運用が主流です。</p>
+<pre><code class="language-text">alice ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart nginx
+</code></pre>
+<p>「全員に NOPASSWD: ALL」は便利ですが事故と侵害の両面で危険です。必要最小限にします。</p>
+<h2 id="4-ssh">4. SSH 基礎</h2>
+<pre><code class="language-bash">ssh alice@192.0.2.10
+ssh -i ~/.ssh/id_ed25519 alice@host
+</code></pre>
+<p>鍵認証の定番ファイル:</p>
+<table>
+<thead>
+<tr>
+<th>パス</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/.ssh/id_ed25519</code>（または id_rsa）</td>
+<td>秘密鍵</td>
+</tr>
+<tr>
+<td><code>~/.ssh/id_ed25519.pub</code></td>
+<td>公開鍵</td>
+</tr>
+<tr>
+<td><code>~/.ssh/authorized_keys</code></td>
+<td>サーバ側の許可公開鍵</td>
+</tr>
+<tr>
+<td><code>~/.ssh/known_hosts</code></td>
+<td>接続先ホスト鍵の記憶</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">ssh-keygen -t ed25519 -C &quot;alice@laptop&quot;
+ssh-copy-id alice@host
+</code></pre>
+<p>サーバ側 <code>/etc/ssh/sshd_config</code> の要点例:</p>
+<ul>
+<li><code>PasswordAuthentication no</code>（鍵のみにする場合）</li>
+<li><code>PermitRootLogin no</code>（または prohibit-password）</li>
+<li><code>Port</code> 変更は隠蔽であり本質対策ではない</li>
+</ul>
+<p>切断は <code>exit</code> / <code>logout</code> / <code>Ctrl+D</code>。</p>
+<h2 id="5">5. ホスト／ネットワークサービスの保護</h2>
+<p>攻撃面を減らす基本:</p>
+<ol>
+<li>使っていないサービスを止める・無効化する</li>
+<li>ファイアウォールで必要ポートだけ開ける（詳細は第10章）</li>
+<li>パッケージと SSH を最新寄りに保つ</li>
+</ol>
+<pre><code class="language-bash">systemctl list-units --type=service --state=running
+sudo systemctl disable --now cups    # 例: 不要なら
+</code></pre>
+<p>Version 10.0 は iptables / firewalld の概要、11.0 は <strong>firewalld と ufw の操作</strong> が中心です（次章で手順化）。</p>
+<h2 id="6">6. 現場チェック</h2>
+<ul>
+<li>[ ] <code>useradd</code> / <code>passwd</code> / <code>usermod -aG</code> ができる</li>
+<li>[ ] passwd / shadow / group の役割を説明できる</li>
+<li>[ ] <code>chage</code> で期限を確認・設定できる</li>
+<li>[ ] <code>visudo</code> の意味と最小権限の例を言える</li>
+<li>[ ] 鍵を作り <code>authorized_keys</code> で入れる流れを説明できる</li>
+<li>[ ] 不要サービスを <code>systemctl</code> で止められる</li>
+</ul>
+<p>手元 VM で一般ユーザを作り、鍵 SSH → sudo で限定コマンド、まで通してください。</p>
+<h2 id="_1">次章へ</h2>
+<p>SSH で入れても、IP・DNS・ファイアウォールが誤っていればサービスは届きません。第10章でネットワーク設定と切り分けを扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="08.html">← 08 ストレージとファイルシステム</a><a class="btn btn-primary" href="../quizzes/09.html">小テスト</a><a class="btn btn-ghost" href="10.html">10 ネットワーク設定 →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

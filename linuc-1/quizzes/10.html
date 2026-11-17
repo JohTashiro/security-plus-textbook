@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 10 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 10</span></a>
+  <a class="nav-back" href="../chapters/10.html">← CH 10 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html" class="active">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 10</p>
+        <h1>ネットワーク設定</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/10.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "現行 Linux でアドレス表示の定番に近いのはどれか。", "type": "single", "choices": ["`ip addr`", "`useradd` のみ", "`mkfs` のみ", "`passwd` のみ"], "answer": "A", "explain": "現行は ip addr。"}, {"id": "Q2", "stem": "RHEL 系で接続を操作する定番ツールはどれか。", "type": "single", "choices": ["`nmcli`（NetworkManager）", "だけ `fdisk`", "だけ `chage`", "だけ `tar`"], "answer": "A", "explain": "RHEL 系は nmcli。"}, {"id": "Q3", "stem": "Ubuntu 系で YAML を置き `apply` する仕組みとして適切なのはどれか。", "type": "single", "choices": ["Netplan", "だけ LVM スナップショット名", "だけ SELinux 壁紙", "だけ cron 色"], "answer": "A", "explain": "Ubuntu 系は Netplan。"}, {"id": "Q4", "stem": "firewalld で設定を永続化したあと効かせる定番はどれか。", "type": "single", "choices": ["`firewall-cmd --reload`", "`rm -rf /`", "`chmod 777 /etc/shadow`", "`swapoff -a` のみ"], "answer": "A", "explain": "永続後は --reload。"}, {"id": "Q5", "stem": "Ubuntu 系ホストファイアウォールの定番はどれか。", "type": "single", "choices": ["`ufw`", "だけ `lsblk`", "だけ `du`", "だけ `visudo` が FW そのもの"], "answer": "A", "explain": "Ubuntu FW は ufw。"}, {"id": "Q6", "stem": "待ち受けポート確認の定番に近いのはどれか。", "type": "single", "choices": ["`ss -tlnp`", "だけ `history`", "だけ `alias`", "だけ `uname -r` の色"], "answer": "A", "explain": "待ち受けは ss。"}, {"id": "Q7", "stem": "切り分け順序として適切なものを選べ。", "type": "multi", "choices": ["リンク状態", "アドレスと経路", "名前解決と FW", "いきなりディスク初期化"], "answer": "A, B, C", "explain": "いきなり初期化は不可。"}, {"id": "Q8", "stem": "DNS／名前解決で適切なものを選べ。", "type": "multi", "choices": ["`/etc/hosts` はローカル上書きに使える", "解けないのと届かないを分ける", "`resolvectl` が使える環境がある", "DNS は常に LVM の VG 名"], "answer": "A, B, C", "explain": "DNS≠VG 名。"}, {"id": "Q9", "stem": "ファイアウォール運用として適切なものを選べ。", "type": "multi", "choices": ["必要サービス／ポートだけ許可", "永続化と再読込を意識する", "状態確認コマンドを先に打つ", "全拒否も全開放も考えず常に全開放"], "answer": "A, B, C", "explain": "常時全開放は不適切。"}, {"id": "Q10", "stem": "デフォルトゲートウェイを見る `ip` コマンド例を書け。", "type": "text", "choices": [], "answer": "例: `ip route`", "explain": "経路確認。"}, {"id": "Q11", "stem": "ufw で SSH（22/tcp）を許可する例を書け。", "type": "text", "choices": [], "answer": "例: `ufw allow 22/tcp`", "explain": "SSH 許可。"}, {"id": "Q12", "stem": "ブラウザで名前は解決できるがサイトに届かない。同網 GW へは ping 可。サーバで `ss` は 80 待ち受けあり。次に疑う定番はどれか。", "type": "single", "choices": ["ホスト FW で 80/http が塞がれていないか確認する", "即ルートを mkfs する", "全ユーザを削除する", "SSH を Telnet に戻す"], "answer": "A", "explain": "名前可・待ち受け有なら FW 疑う。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

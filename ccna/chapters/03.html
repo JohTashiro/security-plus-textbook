@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>03 TCP UDPとIPアドレス · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>CH 03</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html" class="active">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/03.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 03</p>
+        <h1>TCP UDPとIPアドレス</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/03.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="03-tcp-udp-ip">03 TCP UDP と IP アドレス</h1>
+<p>通信の「届き方」と「住所の切り方」を扱う章です。サブネットが読めないと ACL もルーティングも設計できません。IPv4 を確実にし、IPv6 の最低限も使える状態を目指します。</p>
+<h2 id="1-tcp-udp">1. TCP と UDP</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>TCP</th>
+<th>UDP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>接続</td>
+<td>コネクション型</td>
+<td>コネクションレス</td>
+</tr>
+<tr>
+<td>信頼性</td>
+<td>再送・順序制御あり</td>
+<td>アプリ側で必要なら実装</td>
+</tr>
+<tr>
+<td>向き</td>
+<td>Web、SSH、メールなど</td>
+<td>DNS（よく使う）、音声・映像、一部監視</td>
+</tr>
+<tr>
+<td>オーバーヘッド</td>
+<td>大きい</td>
+<td>小さい</td>
+</tr>
+</tbody>
+</table>
+<p>実務では「切れても再送すべきか／遅延を嫌うか」で選びます。ファイアウォールではポートだけでなく、状態（TCP の確立済みか）も意識します。</p>
+<h2 id="2-ipv4">2. IPv4 アドレスとサブネット</h2>
+<p>IPv4 は 32 ビット。例: <code>192.168.10.0/24</code> は先頭 24 ビットがネットワーク部。</p>
+<p>よく使うプレフィックス:</p>
+<table>
+<thead>
+<tr>
+<th>プレフィックス</th>
+<th>ホスト数の目安（実用）</th>
+<th>用途例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/30</td>
+<td>2</td>
+<td>ポイントツーポイント</td>
+</tr>
+<tr>
+<td>/24</td>
+<td>254</td>
+<td>アクセス VLAN</td>
+</tr>
+<tr>
+<td>/16</td>
+<td>多い</td>
+<td>まとめ経路や大きな区画</td>
+</tr>
+</tbody>
+</table>
+<p>計算の手順（例: <code>10.1.4.0/22</code>）:</p>
+<ol>
+<li>マスクをビットで把握する（/22 → ネットワーク部が 22 ビット）</li>
+<li>ブロックサイズを求める（ホスト部 10 ビット → 1024 アドレス単位）</li>
+<li>ネットワークアドレス・ブロードキャスト・利用可能ホストを出す</li>
+</ol>
+<p>現場では「この VLAN に何台載るか」から逆算してプレフィックスを決めます。余白を見ない設計はすぐ枯渇します。</p>
+<h3 id="rfc1918">プライベートアドレス（RFC1918）</h3>
+<ul>
+<li><code>10.0.0.0/8</code></li>
+<li><code>172.16.0.0/12</code></li>
+<li><code>192.168.0.0/16</code></li>
+</ul>
+<p>インターネットへ出るときは NAT 等でグローバルに変換するのが一般的です。プライベート同士の拠点接続では重複に注意します。</p>
+<h2 id="3-ipv6">3. IPv6 の最低限</h2>
+<p>IPv6 は 128 ビット。表記は 16 進を <code>:</code> で区切り、連続ゼロは <code>::</code> で省略（1回だけ）。</p>
+<p>主な種類:</p>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>例・特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>リンクローカル</td>
+<td><code>fe80::/10</code>。同一リンク上で必須に近い</td>
+</tr>
+<tr>
+<td>ユニークローカル</td>
+<td><code>fc00::/7</code>（実運用は <code>fd00::/8</code> が多い）。私的利用</td>
+</tr>
+<tr>
+<td>グローバルユニキャスト</td>
+<td>インターネットで経路が広告されるアドレス</td>
+</tr>
+<tr>
+<td>マルチキャスト</td>
+<td><code>ff00::/8</code></td>
+</tr>
+<tr>
+<td>エニーキャスト</td>
+<td>同じアドレスを複数ノードに。近くへ届く</td>
+</tr>
+</tbody>
+</table>
+<p>EUI-64 はインタフェース ID を MAC から作る古典的方法です。プライバシー拡張でランダム ID を使う端末も多いです。</p>
+<p>確認例（Cisco）:</p>
+<pre><code class="language-text">show ipv6 interface brief
+</code></pre>
+<p>クライアント側:</p>
+<pre><code class="language-text">ipconfig          # Windows
+ifconfig / ip a   # macOS / Linux
+</code></pre>
+<h2 id="4-os">4. クライアント OS での確認観点</h2>
+<p>障害時は端末で次を確認します。</p>
+<ul>
+<li>アドレスは付いているか（DHCP 失敗で APIPA <code>169.254.0.0/16</code> になっていないか）</li>
+<li>マスク／プレフィックスは設計どおりか</li>
+<li>デフォルトゲートウェイに届くか（同じ VLAN か）</li>
+<li>DNS は解決できるか</li>
+</ul>
+<p>サーバ側が正しくても、端末の古い静的設定が残っているケースは頻出です。</p>
+<h2 id="5">5. 現場チェック</h2>
+<ul>
+<li>[ ] TCP と UDP の違いを用途付きで説明できる</li>
+<li>[ ] /24 と /30 の使い分けができる</li>
+<li>[ ] プライベート 3 レンジを暗記している</li>
+<li>[ ] IPv6 のリンクローカルとグローバルの違いが分かる</li>
+<li>[ ] 端末の IP 設定確認コマンドを OS 別に知っている</li>
+</ul>
+<p>練習: <code>192.168.10.0/24</code> を 4 つの /26 に分割し、各ネットワーク・先頭ホスト・末尾ホスト・ブロードキャストを書き出してください。</p>
+<h2 id="_1">次章へ</h2>
+<p>アドレスが決まったら、同じ L2 ドメインをどう分けるかです。VLAN・トランク・STP を第04章で扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="02.html">← 02 ケーブルとインタフェース障害</a><a class="btn btn-primary" href="../quizzes/03.html">小テスト</a><a class="btn btn-ghost" href="04.html">04 スイッチング VLAN STP →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

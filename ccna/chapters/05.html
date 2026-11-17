@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>05 無線LAN · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>CH 05</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html" class="active">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/05.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 05</p>
+        <h1>無線LAN</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/05.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="05-lan">05 無線 LAN</h1>
+<p>有線の L2 が整っても、端末の多くは無線で入ります。この章では RF の感覚、SSID／セキュリティ、AP と WLC の役割、チャネル設計を、設定と切り分けの単位で押さえます。</p>
+<h2 id="1-rf">1. 無線の原則（RF）</h2>
+<p>無線は電波で届きます。有線と違い、障害物・干渉・距離が品質を左右します。</p>
+<table>
+<thead>
+<tr>
+<th>用語</th>
+<th>実務ポイント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF（Radio Frequency）</td>
+<td>電波そのもの。減衰・反射・干渉を意識する</td>
+</tr>
+<tr>
+<td>バンド</td>
+<td>主に 2.4 GHz と 5 GHz（環境により 6 GHz も）</td>
+</tr>
+<tr>
+<td>チャネル</td>
+<td>帯域内の区分。隣接チャネル干渉を避ける</td>
+</tr>
+<tr>
+<td>SSID</td>
+<td>ネットワーク名。端末が選ぶ「見える名前」</td>
+</tr>
+<tr>
+<td>RSSI / SNR</td>
+<td>受信強度とノイズ比。弱い・汚い電波は切れやすい</td>
+</tr>
+</tbody>
+</table>
+<p>2.4 GHz は壁を抜けやすいが混雑しやすい。5 GHz は帯域が広く高速向きだが、障害物に弱いことが多い、というのが現場の出発点です。</p>
+<h3 id="_1">非重複チャネル</h3>
+<p>2.4 GHz では <strong>1 / 6 / 11</strong> が非重複の定番です。隣同士（例: 1 と 2）は干渉しやすいので、オフィスではこの3つでセルを組むことがほとんどです。</p>
+<p>v2.0 ではバンド／チャネル選択、干渉要因、セキュリティパラメータの切り分けがより明示的です（「v2.0で特に重視」）。</p>
+<h2 id="2-ssid">2. SSID とセキュリティ</h2>
+<p>SSID は WLAN の論理名です。同じ SSID を複数 AP に載せてローミングさせるのが一般的です。</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>イメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オープン</td>
+<td>認証なし。ゲスト検証用以外では使わない</td>
+</tr>
+<tr>
+<td>WPA2-PSK</td>
+<td>事前共有鍵。中小・SOHO で多い</td>
+</tr>
+<tr>
+<td>WPA2 / WPA3 Enterprise</td>
+<td>802.1X＋RADIUS。企業の定番</td>
+</tr>
+<tr>
+<td>WPA3</td>
+<td>より強い鍵交換。端末対応を確認して導入</td>
+</tr>
+</tbody>
+</table>
+<p>CCNA 範囲では <strong>WPA / WPA2 / WPA3</strong> の位置づけと、GUI で <strong>WPA2-PSK の WLAN</strong> を作れることが中心です。鍵は長くランダムに。SSID を隠してもセキュリティにはなりません。</p>
+<p>クライアント側の失敗例:</p>
+<ul>
+<li>間違った PSK</li>
+<li>企業認証なのに個人用プロファイルで接続</li>
+<li>バンド固定や古いドライバで 5 GHz に乗れない</li>
+</ul>
+<h2 id="3-ap-wlc">3. AP と WLC（アーキテクチャ）</h2>
+<table>
+<thead>
+<tr>
+<th>形態</th>
+<th>特徴</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>スタンドアロン AP</td>
+<td>AP 単体で設定。小規模向き</td>
+</tr>
+<tr>
+<td>コントローラベース（WLC）</td>
+<td>AP を集中管理。SSID・セキュリティ・RF を一括</td>
+</tr>
+</tbody>
+</table>
+<p>エンタープライズでは <strong>Lightweight AP + WLC</strong> が主流です。AP は有線スイッチに接続し、管理用のトンネルで WLC とやり取りします（CAPWAP の概念で十分）。</p>
+<p>物理接続の型:</p>
+<ul>
+<li>AP のアップリンクは多くの場合 <strong>アクセスポート</strong>（特定 VLAN）または <strong>トランク</strong>（複数 SSID＝複数 VLAN）</li>
+<li>WLC はスイッチへ接続。複数リンクを束ねる <strong>LAG</strong> も出る</li>
+<li>端末 VLAN と管理 VLAN を分け、有線側の VLAN／トランク設計と揃える</li>
+</ul>
+<p>AP モード（概要）:</p>
+<ul>
+<li><strong>Local（通常）</strong>: クライアント接続を処理</li>
+<li><strong>Monitor / Sniffer 系</strong>: 監視・調査寄り（詳細名は機種依存）</li>
+<li>現場では「どの AP がクライアントを載せるか」を WLC／GUI で確認する</li>
+</ul>
+<h2 id="4-wlan-gui">4. WLAN の GUI 設定で見るポイント</h2>
+<p>WLC（または同等の管理画面）で WLAN を作るとき、最低限そろえる項目です。</p>
+<ol>
+<li>WLAN / SSID 名と有効化</li>
+<li>セキュリティ（例: WPA2-PSK、鍵）</li>
+<li>インターフェース／VLAN の対応</li>
+<li>QoS プロファイル（音声など優先が必要な場合）</li>
+<li>詳細設定（ブロードキャスト SSID、クライアント制限など）</li>
+</ol>
+<p>確認の型:</p>
+<ul>
+<li>AP が WLC に Join しているか</li>
+<li>WLAN が Enabled か</li>
+<li>クライアント一覧に端末が出るか、拒否理由はないか</li>
+<li>有線側でその VLAN のゲートウェイへ届くか</li>
+</ul>
+<h2 id="5">5. チャネル設計と干渉</h2>
+<table>
+<thead>
+<tr>
+<th>要因</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同一チャネル干渉</td>
+<td>隣の AP が同じチャネル</td>
+</tr>
+<tr>
+<td>隣接チャネル干渉</td>
+<td>2.4 GHz で 1 と 2 など</td>
+</tr>
+<tr>
+<td>非 Wi-Fi 干渉</td>
+<td>電子レンジ、コードレス電話、Bluetooth（特に 2.4）</td>
+</tr>
+<tr>
+<td>障害物</td>
+<td>金属ラック、コンクリート、人体</td>
+</tr>
+</tbody>
+</table>
+<p>対策の基本は「非重複チャネル」「適切な送信出力」「AP 密度の見直し」です。出力を上げすぎるとセルが重なり干渉が増えます。</p>
+<h2 id="6">6. クライアント接続の切り分け</h2>
+<p>有線と共通の層に、無線固有の層が乗ります。</p>
+<ol>
+<li>端末が正しい SSID を選んでいるか（セキュリティ方式一致）</li>
+<li>認証・鍵は通っているか（PSK／802.1X）</li>
+<li>DHCP で IP が付いたか（有線 VLAN 問題と共通）</li>
+<li>ゲートウェイ・DNS へ届くか（<code>ping</code> / ブラウザ）</li>
+<li>RF: 別 AP・別バンド・近い場所で再現するか</li>
+</ol>
+<p>v2.0 では Windows / macOS / Linux 上の IP 設定・到達性・無線セキュリティパラメータのトラブルシュートが明示されています。端末の「接続済みだがインターネットなし」は、まず IP／GW／DNS を疑うのが定石です。</p>
+<h2 id="7">7. 現場チェック</h2>
+<ul>
+<li>[ ] 2.4 GHz の非重複チャネル（1/6/11）を説明できる</li>
+<li>[ ] SSID と WPA2-PSK／Enterprise の使い分けを言える</li>
+<li>[ ] スタンドアロン AP と WLC 管理の違いを説明できる</li>
+<li>[ ] AP の有線接続（アクセス／トランク）と VLAN の関係を図にできる</li>
+<li>[ ] 「電波は届くが IP が付かない」とき、無線と有線のどちらを疑うか順序立てられる</li>
+</ul>
+<p>ラボ例:</p>
+<ul>
+<li>Packet Tracer / 実機で SSID＋WPA2-PSK を作り、端末接続を確認する</li>
+<li>有線側 VLAN をわざとずらして「認証は通るが通信できない」を再現する</li>
+</ul>
+<h2 id="_2">次章へ</h2>
+<p>無線も含め L2／アクセスが整ったら、異なるサブネット間の転送です。第06章でルーティング（静的・OSPF・FHRP）を扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="04.html">← 04 スイッチング VLAN STP</a><a class="btn btn-primary" href="../quizzes/05.html">小テスト</a><a class="btn btn-ghost" href="06.html">06 ルーティング →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>05 テキスト処理 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 05</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html" class="active">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/05.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 05</p>
+        <h1>テキスト処理</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/05.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="05">05 テキスト処理</h1>
+<p>ログや設定の調査は、ほとんどがテキスト処理です。パイプでつなぐ前提（第03章）の上に、フィルタ・正規表現・簡易編集を載せます。</p>
+<h2 id="1">1. 見る・数える・切り出す</h2>
+<pre><code class="language-bash">cat file.txt
+less file.txt          # 長いファイルは less
+head -n 20 file.txt
+tail -n 20 file.txt
+tail -f /var/log/syslog   # 追従（ディストリでパス差あり）
+wc -l file.txt
+</code></pre>
+<p>列の切り出し:</p>
+<pre><code class="language-bash">cut -d: -f1,3 /etc/passwd
+</code></pre>
+<p>並べ替えと重複:</p>
+<pre><code class="language-bash">sort file.txt
+sort -n numbers.txt
+uniq              # 連続する重複行をまとめる（事前に sort が多い）
+sort file.txt | uniq -c | sort -nr
+</code></pre>
+<p>変換:</p>
+<pre><code class="language-bash">tr 'a-z' 'A-Z' &lt; file.txt
+</code></pre>
+<p>Version 10.0 では textutils 系が多く列挙されます。Version 11.0 では実務頻度の高いものへ寄せつつ、<code>hexdump</code> などが見えます（「11.0で特に重視」は現行主流コマンドの習熟）。全部を暗記するより、<strong>よく使う組み合わせ</strong>を手で打つのが先です。</p>
+<h2 id="2-grep">2. grep と正規表現</h2>
+<pre><code class="language-bash">grep 'error' /var/log/syslog
+grep -i 'error' file.txt          # 大文字小文字無視
+grep -R 'Listen' /etc/ssh/
+grep -n 'pattern' file.txt        # 行番号
+grep -v '^#' file.txt             # 一致しない行
+grep -E 'error|warn' file.txt     # 拡張正規表現
+grep -F 'a+b' file.txt            # 固定文字列（メタ文字を解釈しない）
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>記法</th>
+<th>意味の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.</code></td>
+<td>任意の1文字</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>直前の繰り返し</td>
+</tr>
+<tr>
+<td><code>^</code> <code>$</code></td>
+<td>行頭・行末</td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>文字クラス</td>
+</tr>
+<tr>
+<td><code>\|</code></td>
+<td>選択（拡張では <code>grep -E</code>）</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">grep -E '^[0-9]+$' ids.txt
+grep -E 'failed|refused' /var/log/auth.log
+</code></pre>
+<p><code>egrep</code> / <code>fgrep</code> は歴史的別名です。現行では <code>grep -E</code> / <code>grep -F</code> を主に覚えます。</p>
+<h2 id="3-sed">3. sed による置換・削除</h2>
+<pre><code class="language-bash">sed 's/foo/bar/' file.txt           # 各行最初の foo
+sed 's/foo/bar/g' file.txt          # 行内すべて
+sed -i 's/foo/bar/g' file.txt       # ファイルを直接変更（事前バックアップ推奨）
+sed -n '10,20p' file.txt            # 10〜20行を表示
+sed '/^#/d' file.txt                # コメント行削除の例
+</code></pre>
+<p>パイプ例:</p>
+<pre><code class="language-bash">grep 'sshd' /var/log/auth.log | sed -E 's/.*sshd\[[0-9]+\]: //'
+</code></pre>
+<p>本番設定を <code>sed -i</code> する前に、出力だけ確認する癖を付けます。</p>
+<h2 id="4-awk">4. awk の入り口</h2>
+<p>列処理の定番です。LinuC の列挙は sed/grep 中心でも、現場では awk が頻出なので最低限を押さえます。</p>
+<pre><code class="language-bash">awk -F: '{print $1}' /etc/passwd
+ps aux | awk 'NR&gt;1 {print $2, $11}'
+awk '/error/ {print $0}' app.log
+</code></pre>
+<p>「区切り文字を決めて列を出す」ができれば、多くの調査が速くなります。</p>
+<h2 id="5-vi">5. vi の最低限</h2>
+<p>標準で使える編集として <strong>vi / vim</strong> が範囲に入ります。</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>キー</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>挿入開始</td>
+<td><code>i</code> / <code>a</code></td>
+</tr>
+<tr>
+<td>コマンドモードへ</td>
+<td><code>Esc</code></td>
+</tr>
+<tr>
+<td>保存終了</td>
+<td><code>:wq</code></td>
+</tr>
+<tr>
+<td>破棄終了</td>
+<td><code>:q!</code></td>
+</tr>
+<tr>
+<td>検索</td>
+<td><code>/pattern</code> 次は <code>n</code></td>
+</tr>
+<tr>
+<td>行削除</td>
+<td><code>dd</code></td>
+</tr>
+<tr>
+<td>取り消し</td>
+<td><code>u</code></td>
+</tr>
+</tbody>
+</table>
+<p>モードを意識する（挿入とコマンド）ことが最初の関門です。大きな編集は慣れで、試験・現場とも「開いて直して保存」ができれば十分です。</p>
+<h2 id="6">6. 実務パターン</h2>
+<pre><code class="language-bash"># エラー行だけ抜く
+grep -i error app.log | tail -n 50
+
+# アクセス多い IP を集計（ログ形式依存）
+awk '{print $1}' access.log | sort | uniq -c | sort -nr | head
+
+# 設定の有効行だけ
+grep -vE '^\s*#|^\s*$' /etc/ssh/sshd_config
+</code></pre>
+<h2 id="7">7. 現場チェック</h2>
+<ul>
+<li>[ ] <code>head</code> / <code>tail</code> / <code>less</code> / <code>wc</code> を使い分けられる</li>
+<li>[ ] <code>grep -E</code> と簡単な正規表現でログを絞れる</li>
+<li>[ ] <code>sed</code> で置換し、変更前に画面確認できる</li>
+<li>[ ] <code>sort | uniq -c</code> で集計できる</li>
+<li>[ ] vi で開く・直す・保存できる</li>
+</ul>
+<p>手元の Linux で <code>/var/log</code> やサンプルテキストを使い、同じ操作を3回繰り返してください。</p>
+<h2 id="_1">次章へ</h2>
+<p>テキストで原因候補を絞ったら、動いているプロセスを見ます。第06章で ps / top / kill / nice を扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="04.html">← 04 ファイルと権限 FHS</a><a class="btn btn-primary" href="../quizzes/05.html">小テスト</a><a class="btn btn-ghost" href="06.html">06 プロセス管理 →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

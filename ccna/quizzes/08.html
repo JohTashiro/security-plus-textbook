@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 08 · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>Quiz 08</span></a>
+  <a class="nav-back" href="../chapters/08.html">← CH 08 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html" class="active">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 08</p>
+        <h1>セキュリティ基礎</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/08.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "攻撃に使われうる「弱点」そのものを指す用語はどれか。", "type": "single", "choices": ["Vulnerability（脆弱性）", "だけ EtherChannel", "Native VLAN の色", "OSPF エリア ID"], "answer": "A", "explain": "弱点は脆弱性。"}, {"id": "Q2", "stem": "機器の VTY 管理で、平文より推奨されやすいのはどれか。", "type": "single", "choices": ["SSH", "常に Telnet のみ", "だけ CDP 無効化で十分", "パスワード無しコンソールのみ"], "answer": "A", "explain": "管理は SSH 推奨。"}, {"id": "Q3", "stem": "「誰か」を確かめる AAA の要素はどれか。", "type": "single", "choices": ["Authentication", "だけ Queuing", "だけ Spanning Tree", "だけ CAPWAP チャネル"], "answer": "A", "explain": "認証は Authentication。"}, {"id": "Q4", "stem": "送信元・宛先・プロトコル・ポートまで見られることが多い ACL はどれか。", "type": "single", "choices": ["拡張 ACL", "標準 ACL のみ（常に）", "だけ PortFast", "だけ SSID 隠蔽"], "answer": "A", "explain": "拡張 ACL が詳細照合。"}, {"id": "Q5", "stem": "アクセスポートで許可 MAC を制限する機能はどれか。", "type": "single", "choices": ["Port security", "だけ NAT overload", "だけ NTP stratum", "だけ DNS MX"], "answer": "A", "explain": "MAC 制限は port security。"}, {"id": "Q6", "stem": "拠点間を常時つなぐ IPsec VPN の典型呼称はどれか。", "type": "single", "choices": ["Site-to-site", "だけ PortFast", "だけ LACP", "だけ PAT プール名"], "answer": "A", "explain": "拠点間は site-to-site。"}, {"id": "Q7", "stem": "セキュリティプログラムの要素として適切なものを選べ。", "type": "multi", "choices": ["ユーザ意識向上", "訓練", "物理アクセス制御", "ケーブルの色名の暗記のみ"], "answer": "A, B, C", "explain": "色名暗記はプログラムではない。"}, {"id": "Q8", "stem": "レイヤ2セキュリティとして適切なものを選べ。", "type": "multi", "choices": ["DHCP snooping", "Dynamic ARP inspection", "Port security", "ルーティングテーブルのメトリック色"], "answer": "A, B, C", "explain": "メトリック色は無関係。"}, {"id": "Q9", "stem": "ACL 運用として適切なものを選べ。", "type": "multi", "choices": ["上から順に最初の一致が効く", "暗黙の deny があることを意識する", "適用インタフェースと方向（in/out）を確認する", "ACL は常に STP Root だけが読む"], "answer": "A, B, C", "explain": "STP Root 専用ではない。"}, {"id": "Q10", "stem": "AAA のうち「何をしてよいか」を表す英単語を書け。", "type": "text", "choices": [], "answer": "Authorization", "explain": "認可。"}, {"id": "Q11", "stem": "正規でない DHCP サーバの応答を抑止する L2 機能名を書け。", "type": "text", "choices": [], "answer": "DHCP snooping", "explain": "不正 DHCP 抑止。"}, {"id": "Q12", "stem": "ゲスト VLAN から社内 SSH（tcp/22）だけを止め、Web 閲覧は許可したい。最も妥当な初動はどれか。", "type": "single", "choices": ["ゲスト側インタフェースに拡張 ACL で tcp/22 を deny し、他を permit する", "全拠点の OSPF を消す", "すべての SSID をオープンにする", "syslog を止めてディスクを初期化する"], "answer": "A", "explain": "特定ポート拒否は拡張 ACL。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

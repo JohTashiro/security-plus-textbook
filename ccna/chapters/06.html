@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>06 ルーティング · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>CH 06</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html" class="active">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/06.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 06</p>
+        <h1>ルーティング</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/06.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="06">06 ルーティング</h1>
+<p>異なるサブネット間の通信はルータ（または L3 スイッチ）が転送します。この章では経路表の読み方、静的ルート、シングルエリア OSPF、FHRP（HSRP／VRRP）を、設定と切り分けの単位で押さえます。</p>
+<h2 id="1">1. 経路表の読み方</h2>
+<p>ルータは宛先 IP に対し「どこへ出すか」を経路表で決めます。</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>コード</td>
+<td>経路の出どころ（C Connected、S Static、O OSPF など）</td>
+</tr>
+<tr>
+<td>Prefix / Mask</td>
+<td>宛先ネットワーク</td>
+</tr>
+<tr>
+<td>Next hop</td>
+<td>次に渡す隣接アドレス（または出インタフェース）</td>
+</tr>
+<tr>
+<td>AD（Administrative Distance）</td>
+<td>経路情報源の信頼度。小さいほど優先</td>
+</tr>
+<tr>
+<td>Metric</td>
+<td>同一情報源内の「コスト」。小さいほど良いことが多い</td>
+</tr>
+<tr>
+<td>Gateway of last resort</td>
+<td>デフォルトルート（0.0.0.0/0）の行き先</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">show ip route
+show ipv6 route
+</code></pre>
+<p>出力例の読み方（概念）:</p>
+<pre><code class="language-text">S*  0.0.0.0/0 [1/0] via 203.0.113.1
+O   10.10.0.0/24 [110/20] via 10.0.0.2, 00:01:23, GigabitEthernet0/1
+C   10.0.0.0/30 is directly connected, GigabitEthernet0/1
+</code></pre>
+<p><code>S*</code> の <code>*</code> は候補のデフォルト、<code>[AD/metric]</code> が角括弧です。</p>
+<h2 id="2">2. 転送の決め方</h2>
+<p>デフォルトの優先順の考え方:</p>
+<ol>
+<li><strong>最長一致（Longest prefix match）</strong> — <code>/24</code> より <code>/28</code> が勝つ</li>
+<li>プレフィックス長が同じなら <strong>AD が小さい</strong> 情報源</li>
+<li>AD も同じなら <strong>metric が小さい</strong> 方（プロトコル依存）</li>
+</ol>
+<p>接続済み（Connected）は通常 AD が最も小さく、実務でも「直接つながっている網」が最優先です。</p>
+<h2 id="3">3. 静的ルーティング</h2>
+<h3 id="ipv4">IPv4</h3>
+<pre><code class="language-text">ip route 10.20.0.0 255.255.255.0 192.0.2.1
+ip route 0.0.0.0 0.0.0.0 203.0.113.1
+ip route 10.30.0.5 255.255.255.255 192.0.2.1
+ip route 10.40.0.0 255.255.255.0 192.0.2.2 210
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Network route</td>
+<td>網全体（例: /24）</td>
+</tr>
+<tr>
+<td>Host route</td>
+<td>/32（特定ホスト）</td>
+</tr>
+<tr>
+<td>Default route</td>
+<td>0.0.0.0/0</td>
+</tr>
+<tr>
+<td>Floating static</td>
+<td>AD を大きくし、主経路ダウン時の予備</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ipv6">IPv6</h3>
+<pre><code class="language-text">ipv6 unicast-routing
+ipv6 route 2001:db8:20::/64 2001:db8:1::1
+ipv6 route ::/0 2001:db8:1::1
+</code></pre>
+<p>v2.0 では静的の <strong>トラブルシュート</strong> が明示されています（「v2.0で特に重視」）。ネクストホップ到達性、出インタフェース up、マスク誤り、フローティングの AD を疑います。</p>
+<p>確認:</p>
+<pre><code class="language-text">show ip route static
+show ipv6 route static
+ping / traceroute
+</code></pre>
+<h2 id="4-ospf">4. シングルエリア OSPF</h2>
+<p>同一エリア（多くは area 0）内でリンクステートを交換し、最短パスを計算します。</p>
+<h3 id="ospfv2ipv4">OSPFv2（IPv4）</h3>
+<pre><code class="language-text">router ospf 1
+ router-id 1.1.1.1
+ network 10.0.0.0 0.0.0.255 area 0
+!
+interface GigabitEthernet0/1
+ ip ospf 1 area 0
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Router ID</td>
+<td>ルータの識別子。安定した Loopback 由来が多い</td>
+</tr>
+<tr>
+<td>Neighbor</td>
+<td>隣接関係。Hello などで確立</td>
+</tr>
+<tr>
+<td>Point-to-point</td>
+<td>対向1台。DR/BDR 不要</td>
+</tr>
+<tr>
+<td>Broadcast（Ethernet など）</td>
+<td>DR/BDR を選出</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">show ip ospf neighbor
+show ip ospf interface
+show ip route ospf
+</code></pre>
+<p>隣接できない典型原因: エリア不一致、サブネット不一致、Hello/Dead 不一致、パッシブ、ACL、インタフェース down。</p>
+<h3 id="ospfv3ipv6v20">OSPFv3（IPv6）（v2.0で特に重視）</h3>
+<p>IPv6 向けの OSPF です。インタフェースにプロセスを載せる形が一般的です。</p>
+<pre><code class="language-text">ipv6 unicast-routing
+ipv6 router ospf 1
+ router-id 1.1.1.1
+interface GigabitEthernet0/1
+ ipv6 ospf 1 area 0
+</code></pre>
+<pre><code class="language-text">show ipv6 ospf neighbor
+show ipv6 route ospf
+</code></pre>
+<p>v2.0 の公式範囲ではネイバー隣接の <strong>認証は除外</strong> と明記されています。認証設定そのものより、隣接と経路学習を優先して学びます。</p>
+<h2 id="5-fhrp">5. FHRP（ファーストホップ冗長）</h2>
+<p>端末のデフォルトゲートウェイは通常1つです。ルータが落ちると通信が止まるため、<strong>仮想 IP</strong> を複数ルータで共有します。</p>
+<table>
+<thead>
+<tr>
+<th>プロトコル</th>
+<th>位置づけ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HSRP</td>
+<td>Cisco 系で長年使われる</td>
+</tr>
+<tr>
+<td>VRRP</td>
+<td>標準ベース。v2.0 で明示（「v2.0で特に重視」）</td>
+</tr>
+</tbody>
+</table>
+<p>見るポイント:</p>
+<ul>
+<li>Active / Master（転送側）と Standby / Backup</li>
+<li>仮想 IP が端末の GW と一致しているか</li>
+<li>優先度と preempt（切り戻り）</li>
+</ul>
+<pre><code class="language-text">show standby
+show vrrp
+</code></pre>
+<p>障害時は「仮想 IP へ ARP できるか」「誰が Active か」を確認します。</p>
+<h2 id="6">6. 切り分けの型</h2>
+<ol>
+<li><code>show ip route</code> で宛先の最長一致とネクストホップ</li>
+<li>ネクストホップへ <code>ping</code>（自分の出インタフェース／隣接）</li>
+<li>静的ならマスク・AD・書き込み忘れ</li>
+<li>OSPF なら <code>neighbor</code> → <code>interface</code> → <code>route</code></li>
+<li>端末不通なら GW（FHRP 仮想 IP）と ARP</li>
+</ol>
+<p>ラボでは、2 台ルータ＋1 台スイッチで静的と OSPF を切り替え、フローティング静的の切り替わりを見ると理解が速いです。</p>
+<h2 id="7">7. 現場チェック</h2>
+<ul>
+<li>[ ] 経路表の AD と metric、最長一致を説明できる</li>
+<li>[ ] デフォルト／ホスト／フローティング静的を設定・確認できる</li>
+<li>[ ] OSPFv2 の neighbor が Full になる条件を列挙できる</li>
+<li>[ ] OSPFv3 をインタフェースに載せる流れを説明できる</li>
+<li>[ ] HSRP／VRRP の仮想 IP が端末 GW になる理由を言える</li>
+</ul>
+<p>確認コマンド例:</p>
+<pre><code class="language-text">show ip route
+show ip ospf neighbor
+show ipv6 ospf neighbor
+show standby brief
+show vrrp brief
+</code></pre>
+<h2 id="_1">次章へ</h2>
+<p>経路が通ったら、アドレス割り当てや名前解決などの「IP サービス」です。第07章で DHCP、DNS、NAT、NTP、syslog などを扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="05.html">← 05 無線LAN</a><a class="btn btn-primary" href="../quizzes/06.html">小テスト</a><a class="btn btn-ghost" href="07.html">07 IPサービス →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

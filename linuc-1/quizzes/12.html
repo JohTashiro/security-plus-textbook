@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 12 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 12</span></a>
+  <a class="nav-back" href="../chapters/12.html">← CH 12 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html" class="active">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 12</p>
+        <h1>シェルスクリプト</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/12.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "bash スクリプト先頭の `#!/bin/bash` の役割はどれか。", "type": "single", "choices": ["インタプリタ指定（shebang）", "ファイアウォール規則そのもの", "LVM の PV 名そのもの", "DNS の PTR そのもの"], "answer": "A", "explain": "shebang はインタプリタ指定。"}, {"id": "Q2", "stem": "空白を含む値を安全に展開しやすいのはどれか。", "type": "single", "choices": ["`\"$var\"`", "常に未引用の `$var` が最も安全", "`mkfs \"$var\"` が変数の定義", "`userdel` が引用の意味"], "answer": "A", "explain": "引用で空白を保持。"}, {"id": "Q3", "stem": "成功時の慣習的な終了コードはどれか。", "type": "single", "choices": ["0", "必ず 255 のみ", "必ず -1 のみ", "文字列 \"OK\" のみが終了コード"], "answer": "A", "explain": "成功は 0。"}, {"id": "Q4", "stem": "構文チェックに使う定番はどれか。", "type": "single", "choices": ["`bash -n script.sh`", "`rm -rf /`", "`chmod 777 /etc/shadow`", "`swapoff` のみ"], "answer": "A", "explain": "構文は bash -n。"}, {"id": "Q5", "stem": "実行トレースに使う定番はどれか。", "type": "single", "choices": ["`bash -x script.sh`", "`ip route` のみ", "`nmcli` のみ", "`ufw` のみ"], "answer": "A", "explain": "トレースは bash -x。"}, {"id": "Q6", "stem": "全引数を安全に渡す定番はどれか。", "type": "single", "choices": ["`\"$@\"`", "だけ `$#` が実体の全引数配列", "だけ `$0` が全引数", "だけ `$?` が全引数"], "answer": "A", "explain": "全引数は \"$@\"。"}, {"id": "Q7", "stem": "堅牢化として適切なものを選べ。", "type": "multi", "choices": ["`set -euo pipefail` を検討する", "パスを引用する", "秘密を直書きしない", "エラーを無視して常に成功扱いする"], "answer": "A, B, C", "explain": "エラー無視は不適切。"}, {"id": "Q8", "stem": "条件・分岐として適切なものを選べ。", "type": "multi", "choices": ["`[[ -f file ]]`", "`if ...; then ...; fi`", "非0 で失敗を表せる", "終了コードは常に無意味"], "answer": "A, B, C", "explain": "終了コードは意味がある。"}, {"id": "Q9", "stem": "ループとして適切なものを選べ。", "type": "multi", "choices": ["`for f in ...; do ...; done`", "`while read -r line; do ...; done`", "存在しない glob に注意する", "ループはカーネルの唯一のスケジューラ"], "answer": "A, B, C", "explain": "ループ≠カーネルスケジューラ。"}, {"id": "Q10", "stem": "第1引数を変数 `src` に入れる代入例を書け。", "type": "text", "choices": [], "answer": "例: `src=$1` または `src=${1:?}`", "explain": "第1引数。"}, {"id": "Q11", "stem": "ファイルが存在するときだけ中の処理をする `if` の条件例を書け。", "type": "text", "choices": [], "answer": "例: `[[ -f file ]]`", "explain": "ファイル存在。"}, {"id": "Q12", "stem": "スクリプトが「ファイル名に空白があると壊れる」。最も妥当な修正方針はどれか。", "type": "single", "choices": ["変数と引数を適切に引用し、`\"$@\"` や `read -r` を使う", "即 `rm -rf /`", "全ファイル名を禁止するしかない", "shebang を削除すれば解決する"], "answer": "A", "explain": "空白対策は引用。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

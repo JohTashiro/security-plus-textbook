@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>06 プロセス管理 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 06</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html" class="active">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/06.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 06</p>
+        <h1>プロセス管理</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/06.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="06">06 プロセス管理</h1>
+<p>サービスが重い・応答しない・ゾンビが残る——現場の多くはプロセス観察から始まります。監視、優先度、シグナル、ジョブ制御の続きを実務単位でまとめます。</p>
+<h2 id="1">1. プロセスを見る</h2>
+<pre><code class="language-bash">ps aux
+ps -ef
+ps -u alice
+pstree -p
+pgrep -a sshd
+pidof nginx
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ps</code></td>
+<td>スナップショット</td>
+</tr>
+<tr>
+<td><code>top</code> / <code>htop</code></td>
+<td>対話的な監視（htop は環境による）</td>
+</tr>
+<tr>
+<td><code>pgrep</code></td>
+<td>名前などから PID を探す</td>
+</tr>
+<tr>
+<td><code>uptime</code></td>
+<td>負荷平均の手がかり</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">top
+# よく使うキー: q 終了、k kill、P CPU順、M メモリ順（実装差あり）
+</code></pre>
+<p>見るポイント: PID、親（PPID）、CPU％、メモリ、状態（R/S/D/Z）、起動コマンド。</p>
+<h2 id="2">2. フォアグラウンド／バックグラウンド</h2>
+<p>第03章の続きです。</p>
+<pre><code class="language-bash">long_job &amp;
+jobs
+fg %1
+bg %1
+</code></pre>
+<p>ログアウト後も続けたい場合:</p>
+<pre><code class="language-bash">nohup ./job.sh &amp;
+# または tmux / screen 内で実行（11.0でもセッション継続は重視）
+</code></pre>
+<h2 id="3">3. シグナルと終了</h2>
+<pre><code class="language-bash">kill PID
+kill -15 PID          # SIGTERM（丁寧な終了依頼）
+kill -TERM PID
+kill -9 PID           # SIGKILL（強制。最後の手段）
+kill -HUP PID         # 設定再読み込みに使うデーモンも多い
+killall process_name
+pkill -f pattern
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>信号</th>
+<th>典型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TERM (15)</td>
+<td>まずこれ</td>
+</tr>
+<tr>
+<td>KILL (9)</td>
+<td>捕まらない。状態保存なし</td>
+</tr>
+<tr>
+<td>HUP (1)</td>
+<td>再読込や端末切断の文脈</td>
+</tr>
+<tr>
+<td>STOP / CONT</td>
+<td>一時停止と再開</td>
+</tr>
+</tbody>
+</table>
+<p><code>-9</code> を常用しない。アプリのクリーンアップや子プロセス整理を飛ばすためです。</p>
+<h2 id="4-nice-renice">4. 優先度（nice / renice）</h2>
+<p>CPU 時間の分け前に影響する「やさしさ」です。値が大きいほど控えめ（優先度が低い）。</p>
+<pre><code class="language-bash">nice -n 10 ./batch.sh
+renice -n 5 -p PID
+ps -o pid,ni,cmd -p PID
+</code></pre>
+<p>root 以外が優先度を上げる（nice を下げる）には制限があります。バッチ処理を <code>nice</code> 付きで走らせるのが定番パターンです。</p>
+<p>※ Version 10.0 の公式から「実行優先度変更」単独項目は薄まりましたが、プロセス管理の実務として残します。監視・シグナルが主、nice は補助、という比重で十分です。</p>
+<h2 id="5">5. 負荷と切り分け</h2>
+<pre><code class="language-bash">uptime
+free -h
+ps aux --sort=-%cpu | head
+ps aux --sort=-%mem | head
+</code></pre>
+<p>型:</p>
+<ol>
+<li><code>uptime</code> / <code>top</code> で CPU・負荷・待ち</li>
+<li>犯人候補の PID を特定（<code>pgrep</code> / <code>ps</code>）</li>
+<li>ログをテキスト処理（第05章）</li>
+<li>必要なら TERM → 待って → KILL</li>
+<li>再発するならサービス設定・リソース制限・バグを疑う</li>
+</ol>
+<p>D 状態（uninterruptible sleep）が続く場合は、ディスクや NFS など I/O 側を疑うことが多いです。Z（ゾンビ）は親が wait していない印で、親の再起動が効くことがあります。</p>
+<h2 id="6">6. 現場チェック</h2>
+<ul>
+<li>[ ] <code>ps</code> / <code>top</code> / <code>pgrep</code> で対象 PID を特定できる</li>
+<li>[ ] <code>kill</code> で TERM と KILL の違いを説明できる</li>
+<li>[ ] <code>jobs</code> / <code>fg</code> / <code>bg</code> / <code>nohup</code> または tmux を使える</li>
+<li>[ ] <code>nice</code> でバッチを控えめに起動できる</li>
+<li>[ ] CPU 高騰時に「誰が・何を」まで辿れる</li>
+</ul>
+<p>確認例:</p>
+<pre><code class="language-bash">pgrep -a python
+ps -fp $(pgrep -d, nginx)
+kill -0 PID    # 存在確認（シグナルは送らない）
+</code></pre>
+<h2 id="_1">次章へ</h2>
+<p>プロセスの正体がパッケージ由来のバイナリなら、入れ方・更新も必須です。第07章で apt / dnf / rpm を扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="05.html">← 05 テキスト処理</a><a class="btn btn-primary" href="../quizzes/06.html">小テスト</a><a class="btn btn-ghost" href="07.html">07 パッケージ管理 →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

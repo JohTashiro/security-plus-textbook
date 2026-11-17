@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>04 ファイルと権限 FHS · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 04</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html" class="active">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/04.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 04</p>
+        <h1>ファイルと権限 FHS</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/04.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="04-fhs">04 ファイルと権限 FHS</h1>
+<p>Linux 管理の大半は「どのパスに何があり、誰が読めるか」の把握です。この章では FHS の見方、権限ビット、所有者、リンク、検索を実務の操作単位で押さえます。</p>
+<h2 id="1-fhs">1. パスと FHS の見方</h2>
+<p>絶対パスは <code>/</code> から、相対パスはカレントからの位置です。FHS（Filesystem Hierarchy Standard）は、重要なディレクトリの役割を共通化する取り決めです。細かい個別ファイル名の暗記より、「何を置く場所か」を説明できることが目標です。</p>
+<table>
+<thead>
+<tr>
+<th>パス（例）</th>
+<th>役割のイメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>ルート。全体の起点</td>
+</tr>
+<tr>
+<td><code>/etc</code></td>
+<td>ホスト固有の設定</td>
+</tr>
+<tr>
+<td><code>/var</code></td>
+<td>可変データ（ログ、スプールなど）</td>
+</tr>
+<tr>
+<td><code>/home</code></td>
+<td>一般ユーザのホーム</td>
+</tr>
+<tr>
+<td><code>/usr</code></td>
+<td>共有のプログラムやデータ</td>
+</tr>
+<tr>
+<td><code>/tmp</code></td>
+<td>一時ファイル</td>
+</tr>
+<tr>
+<td><code>/proc</code> <code>/sys</code></td>
+<td>カーネル／実行中の情報が見える仮想 FS</td>
+</tr>
+</tbody>
+</table>
+<p>Version 10.0 / 11.0 ともに「重要な位置と目的を知っている」ことが求められます。現場でも「ログは <code>/var/log</code>、設定は <code>/etc</code>」と indirection なく辿れるかが速度に直結します。</p>
+<pre><code class="language-bash">pwd
+cd /var/log
+ls -la
+</code></pre>
+<h2 id="2-ls-l">2. 権限の読み方（ls -l）</h2>
+<pre><code class="language-text">-rw-r--r-- 1 alice develop 1200 Nov 17 10:00 report.txt
+drwxr-xr-x 2 alice develop 4096 Nov 17 10:00 docs
+</code></pre>
+<p>左端の 10 文字:</p>
+<ol>
+<li>種別（<code>-</code> 通常、<code>d</code> ディレクトリ、<code>l</code> シンボリックリンク など）<br>
+2〜4. 所有者（user）の rwx<br>
+5〜7. グループ（group）の rwx<br>
+8〜10. その他（others）の rwx  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>記号</th>
+<th>ファイル</th>
+<th>ディレクトリ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>読み取り</td>
+<td>一覧（エントリ名）</td>
+</tr>
+<tr>
+<td>w</td>
+<td>書き込み</td>
+<td>作成・削除・改名（中身の変更に関わる）</td>
+</tr>
+<tr>
+<td>x</td>
+<td>実行</td>
+<td>そのディレクトリへ <code>cd</code> して中を辿る</td>
+</tr>
+</tbody>
+</table>
+<p>数値モード（例）:</p>
+<table>
+<thead>
+<tr>
+<th>値</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>rwx</td>
+</tr>
+<tr>
+<td>6</td>
+<td>rw-</td>
+</tr>
+<tr>
+<td>5</td>
+<td>r-x</td>
+</tr>
+<tr>
+<td>4</td>
+<td>r--</td>
+</tr>
+<tr>
+<td>0</td>
+<td>---</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">chmod 644 report.txt
+chmod u+x script.sh
+chmod go-w secret.conf
+</code></pre>
+<p>ディレクトリに入れるが一覧できない、一覧できるが中のファイルに辿れない、といった症状は r と x の組み合わせで説明できます。</p>
+<h2 id="3">3. 所有者とグループ</h2>
+<pre><code class="language-bash">ls -l
+chown alice report.txt
+chown alice:develop report.txt
+chgrp develop report.txt
+</code></pre>
+<ul>
+<li>ファイルの「誰のものか」はアクセス制御の第一関門です。</li>
+<li>サービス用ディレクトリは、実行ユーザに必要最小限だけ渡すのが安全側です。</li>
+<li><code>chmod</code> / <code>chown</code> / <code>chgrp</code> は破壊的になり得るので、本番では対象パスを再確認してから実行します。</li>
+</ul>
+<p>特殊ビット（概要だけ）:</p>
+<ul>
+<li><strong>setuid / setgid</strong>: 実行時の実効ユーザ／グループに影響</li>
+<li><strong>sticky（例: <code>/tmp</code>）</strong>: ディレクトリ内で、他人のファイルを消せなくする</li>
+</ul>
+<p>詳細な監査や sudo 委譲は第09章で扱います。ここでは「ビットがおかしいとサービスが読めない／書き込めない」と結び付けてください。</p>
+<h2 id="4">4. ハードリンクとシンボリックリンク</h2>
+<pre><code class="language-bash">ln original.txt hardlink.txt      # ハードリンク
+ln -s /etc/hosts hosts.link       # シンボリックリンク
+ls -li                            # inode を見る
+</code></pre>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ハードリンク</th>
+<th>シンボリックリンク</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>実体</td>
+<td>同じ inode を共有</td>
+<td>パス名を指す別エントリ</td>
+</tr>
+<tr>
+<td>跨ぎ</td>
+<td>通常は同一ファイルシステム</td>
+<td>別 FS やディレクトリも可</td>
+</tr>
+<tr>
+<td>見た目</td>
+<td>通常ファイルと同じ</td>
+<td><code>l</code> で表示、<code>-&gt;</code> 先を示す</td>
+</tr>
+</tbody>
+</table>
+<p>識別の要点:</p>
+<ul>
+<li><code>ls -i</code> で inode が同じならハードリンクの可能性が高い</li>
+<li><code>ls -l</code> で <code>l</code> とリンク先が見えればシンボリックリンク</li>
+<li>シンボリックの参照先を消すと「壊れたリンク」になる</li>
+</ul>
+<h2 id="5-find">5. 検索（find / 名前探し）</h2>
+<pre><code class="language-bash">find /var/log -name '*.log'
+find /home -type f -user alice
+find /etc -type f -mtime -1
+find /tmp -type f -size +10M
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>オプション例</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-name</code></td>
+<td>ファイル名（シェルグロブ）</td>
+</tr>
+<tr>
+<td><code>-type f/d/l</code></td>
+<td>通常／ディレクトリ／シンボリック</td>
+</tr>
+<tr>
+<td><code>-user</code> / <code>-group</code></td>
+<td>所有者／グループ</td>
+</tr>
+<tr>
+<td><code>-mtime</code></td>
+<td>更新日からの日数</td>
+</tr>
+</tbody>
+</table>
+<p>名前だけなら <code>find</code> のほか、locate 系（DB 依存）もありますが、権限と最新性が必要な調査では <code>find</code> が確実です。大きな木を root から無制限に走査すると負荷と時間に注意します。</p>
+<h2 id="6">6. 現場チェック</h2>
+<ul>
+<li>[ ] <code>/etc</code> <code>/var</code> <code>/home</code> <code>/usr</code> <code>/tmp</code> の役割を一言で言える</li>
+<li>[ ] <code>ls -l</code> の権限ビットを user/group/other に分解できる</li>
+<li>[ ] <code>chmod</code> の記号モードと数値モードを両方使える</li>
+<li>[ ] ハードリンクとシンボリックリンクの違いを inode で説明できる</li>
+<li>[ ] <code>find</code> で名前・所有者・種別を絞り込める</li>
+</ul>
+<p>手を動かす例:</p>
+<pre><code class="language-bash">mkdir -p ~/lab04/docs
+echo hello &gt; ~/lab04/a.txt
+chmod 640 ~/lab04/a.txt
+ln ~/lab04/a.txt ~/lab04/a-hard.txt
+ln -s ~/lab04/a.txt ~/lab04/a-sym.txt
+ls -li ~/lab04
+find ~/lab04 -type l
+</code></pre>
+<h2 id="_1">次章へ</h2>
+<p>ファイルの場所と権限が読めたら、中身を加工するテキスト処理です。第05章で grep / sed / awk を扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="03.html">← 03 シェルとコマンドライン</a><a class="btn btn-primary" href="../quizzes/04.html">小テスト</a><a class="btn btn-ghost" href="05.html">05 テキスト処理 →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

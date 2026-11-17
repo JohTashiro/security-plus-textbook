@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>08 ストレージとファイルシステム · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 08</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html" class="active">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/08.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 08</p>
+        <h1>ストレージとファイルシステム</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/08.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="08">08 ストレージとファイルシステム</h1>
+<p>パッケージで入れたソフトも、ログも、ホームもディスク上にあります。この章ではデバイスの見分け、パーティション、ファイルシステム作成、マウント、LVM、容量確認を実務単位で押さえます。</p>
+<h2 id="1">1. ストレージの種類とデバイスの見え方</h2>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>特徴のイメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HDD</td>
+<td>磁気ディスク。安価・大容量寄り</td>
+</tr>
+<tr>
+<td>SSD</td>
+<td>フラッシュ。高速・耐衝撃寄り</td>
+</tr>
+<tr>
+<td>光学</td>
+<td>光学メディア（現場では稀）</td>
+</tr>
+</tbody>
+</table>
+<p>カーネルからは <code>/dev/sda</code>、<code>/dev/nvme0n1</code>、<code>/dev/vda</code>（仮想）などとして見えます。</p>
+<pre><code class="language-bash">lsblk
+lsblk -f
+sudo fdisk -l
+cat /proc/partitions
+</code></pre>
+<p>Version 11.0 では <code>lsblk</code> / <code>blkid</code> / <code>df</code> / <code>du</code> が明示的です（「11.0で特に重視」）。</p>
+<h2 id="2-mbr-gpt">2. パーティション（MBR / GPT）</h2>
+<table>
+<thead>
+<tr>
+<th>形式</th>
+<th>感覚</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MBR</td>
+<td>古め。プライマリ数などに制約</td>
+</tr>
+<tr>
+<td>GPT</td>
+<td>現行主流。UEFI と相性が良い</td>
+</tr>
+</tbody>
+</table>
+<p>UEFI 起動では <strong>ESP（EFI System Partition）</strong> が必要になることが多いです。</p>
+<pre><code class="language-bash">sudo fdisk /dev/sdb          # 対話でパーティション
+sudo gdisk /dev/sdb          # GPT 向け
+sudo parted /dev/sdb print
+</code></pre>
+<p>用途に応じた割り当ての定番:</p>
+<table>
+<thead>
+<tr>
+<th>マウント</th>
+<th>置きたいもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>システム本体</td>
+</tr>
+<tr>
+<td><code>/boot</code></td>
+<td>カーネル・ブート関連</td>
+</tr>
+<tr>
+<td><code>/home</code></td>
+<td>ユーザデータ</td>
+</tr>
+<tr>
+<td><code>/var</code></td>
+<td>ログ・可変データ</td>
+</tr>
+<tr>
+<td>swap</td>
+<td>メモリ不足時の退避</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3">3. ファイルシステムの作成とスワップ</h2>
+<p>代表例:</p>
+<table>
+<thead>
+<tr>
+<th>FS</th>
+<th>メモ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ext4</td>
+<td>汎用で多い</td>
+</tr>
+<tr>
+<td>XFS</td>
+<td>大容量・並列寄り（RHEL 系の root でも多い）</td>
+</tr>
+<tr>
+<td>VFAT / exFAT</td>
+<td>互換・リムーバブル（exFAT は 11.0 で明示）</td>
+</tr>
+<tr>
+<td>Btrfs</td>
+<td>スナップショット等の先進機能</td>
+</tr>
+<tr>
+<td>tmpfs</td>
+<td>メモリ上</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">sudo mkfs.ext4 /dev/sdb1
+sudo mkfs.xfs /dev/sdb1
+sudo mkswap /dev/sdb2
+sudo swapon /dev/sdb2
+sudo swapoff /dev/sdb2
+</code></pre>
+<p>スワップファイル（11.0 で <code>fallocate</code> 等が列挙）:</p>
+<pre><code class="language-bash">sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+</code></pre>
+<h2 id="4-etcfstab">4. マウントと <code>/etc/fstab</code></h2>
+<pre><code class="language-bash">sudo mkdir -p /mnt/data
+sudo mount /dev/sdb1 /mnt/data
+mount | grep data
+sudo umount /mnt/data
+</code></pre>
+<p>永続化は <code>/etc/fstab</code>。デバイス名より <strong>UUID</strong> やラベルが安全です。</p>
+<pre><code class="language-bash">sudo blkid /dev/sdb1
+</code></pre>
+<pre><code class="language-text">UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  /mnt/data  ext4  defaults  0  2
+</code></pre>
+<p>リムーバブルは <code>/media</code> 配下に自動マウントされる環境が多いです。一般ユーザがマウントできるようポリシーを組む話も出題・現場の両方に出ます。</p>
+<p>破損疑いのときはアンマウントしてから <code>fsck</code>（ext 系）など。XFS は <code>xfs_repair</code> 寄りです。本番はバックアップと保守窓を先に。</p>
+<h2 id="5-lvm">5. LVM 概要</h2>
+<table>
+<thead>
+<tr>
+<th>層</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PV（Physical Volume）</td>
+<td>ディスク／パーティションを LVM 化</td>
+</tr>
+<tr>
+<td>VG（Volume Group）</td>
+<td>PV を束ねたプール</td>
+</tr>
+<tr>
+<td>LV（Logical Volume）</td>
+<td>VG から切り出した論理ディスク</td>
+</tr>
+</tbody>
+</table>
+<p>利点: 容量の動的拡張がしやすい。欠点: 層が増え、バックアップ／障害切り分けの手順が一段増える。</p>
+<pre><code class="language-bash">sudo pvcreate /dev/sdb1
+sudo vgcreate vgdata /dev/sdb1
+sudo lvcreate -n lvapp -L 20G vgdata
+sudo mkfs.ext4 /dev/vgdata/lvapp
+</code></pre>
+<p>Version 10.0 はスナップショットにも触れる一方、11.0 草案の列挙は動的拡張・縮小中心です。概念として「薄いコピーを取れる」程度は押さえておくと現場で助かります。</p>
+<h2 id="6-i">6. 容量と i ノード</h2>
+<pre><code class="language-bash">df -h
+df -i
+du -sh /var/log
+du -h --max-depth=1 /var | sort -h
+</code></pre>
+<p>「ディスクは空なのに書き込めない」→ i ノード枯渇（<code>df -i</code>）が定番です。</p>
+<h2 id="7">7. 現場チェック</h2>
+<ul>
+<li>[ ] <code>lsblk</code> / <code>blkid</code> でデバイスと UUID を辿れる</li>
+<li>[ ] GPT と ESP の関係を説明できる</li>
+<li>[ ] <code>mkfs</code> と <code>mkswap</code> / <code>swapon</code> ができる</li>
+<li>[ ] <code>/etc/fstab</code> に UUID で追記し、再起動後もマウントされる</li>
+<li>[ ] PV / VG / LV の関係を図で説明できる</li>
+<li>[ ] <code>df</code> と <code>du</code> の違いを言える</li>
+</ul>
+<p>手元 VM に追加ディスクを1本付け、パーティション → mkfs → fstab → 再起動確認まで一度通してください。</p>
+<h2 id="_1">次章へ</h2>
+<p>ディスクの上に「誰が何をしてよいか」が載ります。第09章でアカウント、sudo、SSH 基礎を扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="07.html">← 07 パッケージ管理</a><a class="btn btn-primary" href="../quizzes/08.html">小テスト</a><a class="btn btn-ghost" href="09.html">09 ユーザーとセキュリティ →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

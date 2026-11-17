@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11 サービスとログ · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 11</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html" class="active">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/11.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 11</p>
+        <h1>サービスとログ</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/11.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="11">11 サービスとログ</h1>
+<p>サービスが「今動いているか」、異常時に「何が起きたか」、相関のために「時刻が合っているか」が運用の三本柱です。この章では systemd ユニット操作、journal / rsyslog、ログローテ、時刻同期を実務単位で押さえます。</p>
+<h2 id="1-systemd">1. systemd でサービスを扱う</h2>
+<p>第02章の続きとして、日常運用コマンドを固めます。</p>
+<pre><code class="language-bash">systemctl status nginx
+sudo systemctl start nginx
+sudo systemctl stop nginx
+sudo systemctl restart nginx
+sudo systemctl reload nginx          # 対応サービスのみ
+sudo systemctl enable nginx          # 起動時有効
+sudo systemctl disable nginx
+systemctl is-active nginx
+systemctl is-enabled nginx
+</code></pre>
+<p>ユニットファイルの場所の感覚:</p>
+<table>
+<thead>
+<tr>
+<th>場所</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/lib/systemd/system/</code> または <code>/usr/lib/systemd/system/</code></td>
+<td>パッケージ配布</td>
+</tr>
+<tr>
+<td><code>/etc/systemd/system/</code></td>
+<td>管理者が優先して置く</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">systemctl cat nginx
+sudo systemctl daemon-reload         # ユニット変更後
+</code></pre>
+<h3 id="110">タイマー（11.0で特に重視）</h3>
+<p>cron に加え、systemd timer が現行の定番になりつつあります。</p>
+<pre><code class="language-bash">systemctl list-timers --all
+systemctl status logrotate.timer
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>ペア</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.timer</code></td>
+<td>いつ起動するか</td>
+</tr>
+<tr>
+<td><code>.service</code></td>
+<td>何を実行するか</td>
+</tr>
+</tbody>
+</table>
+<p>Version 10.0 の cron（<code>crontab</code>、<code>/etc/cron.*</code>）も現場では残るため、両方の存在を知っておきます。主手順は timer と journal 連携を優先してよいです。</p>
+<h2 id="2-journaljournalctl">2. journal（journalctl）</h2>
+<pre><code class="language-bash">journalctl -xe
+journalctl -u nginx
+journalctl -u nginx --since &quot;1 hour ago&quot;
+journalctl -f
+journalctl -p err
+journalctl -b                          # 今回のブート
+</code></pre>
+<p>永続化は <code>/var/log/journal/</code> の有無や <code>journald.conf</code> の <code>Storage=</code> に依存します。ディスクを圧迫したら保持期間やサイズ上限を設計します。</p>
+<h2 id="3-rsyslog">3. rsyslog と従来ログ</h2>
+<p>多くの配布で <code>/var/log/syslog</code> や <code>/var/log/messages</code>、アプリ別ファイルが残ります。</p>
+<pre><code class="language-bash">sudo tail -f /var/log/syslog
+ls /var/log
+</code></pre>
+<p>中央集約のイメージ:</p>
+<ul>
+<li>クライアント: リモートへ転送</li>
+<li>サーバ: 受信を許可し保管</li>
+</ul>
+<p>詳細なテンプレート暗記より、「どこに・何が・どの facility/severity で出るか」を追えることが先です。</p>
+<h2 id="4">4. ログローテーション</h2>
+<pre><code class="language-bash">ls /etc/logrotate.d/
+sudo logrotate -d /etc/logrotate.conf    # ドライラン
+</code></pre>
+<p>ローテ・圧縮・削除を自動化し、ディスク満杯を防ぎます。アプリがファイルハンドルを握ったままなら <code>postrotate</code> で再オープンが必要、という感覚を持ってください。</p>
+<h2 id="5">5. 時刻同期</h2>
+<p>時刻ずれはログ相関・証明書・Kerberos 等を壊します。</p>
+<table>
+<thead>
+<tr>
+<th>系</th>
+<th>現行寄り</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chrony</td>
+<td>RHEL 系などで主流</td>
+</tr>
+<tr>
+<td>systemd-timesyncd</td>
+<td>軽量クライアント寄り</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">chronyc tracking
+chronyc sources -v
+timedatectl
+timedatectl show-timesync
+</code></pre>
+<p>設定例の場所: <code>/etc/chrony.conf</code> または <code>/etc/chrony/chrony.conf</code>。</p>
+<p>Version 10.0 にあった ntpd / ntpdate は 11.0 草案では薄まり、<strong>chrony と timesyncd</strong> が中心です（「11.0で特に重視」）。比較として「昔は ntpd もあった」程度で十分です。</p>
+<pre><code class="language-bash">timedatectl set-timezone Asia/Tokyo
+</code></pre>
+<h2 id="6">6. 現場チェック</h2>
+<ul>
+<li>[ ] start/stop/enable/status を迷わず打てる</li>
+<li>[ ] <code>journalctl -u</code> と <code>--since</code> で追える</li>
+<li>[ ] <code>/var/log</code> と journal の役割分担を説明できる</li>
+<li>[ ] logrotate の存在と目的を言える</li>
+<li>[ ] <code>timedatectl</code> / <code>chronyc</code> で同期状態を確認できる</li>
+<li>[ ] timer と service のペアを説明できる</li>
+</ul>
+<p>手元で nginx や sshd の journal を追い、わざと設定ミス → ログで原因、を一度体験してください。</p>
+<h2 id="_1">次章へ</h2>
+<p>同じ作業の繰り返しはスクリプトにします。第12章で変数、分岐、ループ、実務パターンを扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="10.html">← 10 ネットワーク設定</a><a class="btn btn-primary" href="../quizzes/11.html">小テスト</a><a class="btn btn-ghost" href="12.html">12 シェルスクリプト →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

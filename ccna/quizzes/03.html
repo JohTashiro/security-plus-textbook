@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 03 · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>Quiz 03</span></a>
+  <a class="nav-back" href="../chapters/03.html">← CH 03 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html" class="active">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 03</p>
+        <h1>TCP UDPとIPアドレス</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/03.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "再送や順序制御をプロトコル自身が持つのはどれか。", "type": "single", "choices": ["UDP", "TCP", "ICMP のみ", "ARP のみ"], "answer": "B", "explain": "再送・順序は TCP の特徴。"}, {"id": "Q2", "stem": "`192.168.10.0/24` の利用可能ホスト数に最も近いのはどれか。", "type": "single", "choices": ["2", "14", "254", "65534"], "answer": "C", "explain": "/24 はホスト部8ビット、実用ホストは 254。"}, {"id": "Q3", "stem": "拠点間リンクでよく使う小さいサブネットはどれか。", "type": "single", "choices": ["/8", "/12", "/30", "/32 を数千ホストに割り当てる"], "answer": "C", "explain": "対向リンクは /30 が定番。"}, {"id": "Q4", "stem": "RFC1918 プライベートに含まれないものはどれか。", "type": "single", "choices": ["`10.0.0.0/8`", "`172.16.0.0/12`", "`192.168.0.0/16`", "`8.8.8.0/24`"], "answer": "D", "explain": "`8.8.8.0/24` はプライベートではない。"}, {"id": "Q5", "stem": "IPv6 リンクローカルの特徴として適切なのはどれか。", "type": "single", "choices": ["必ずグローバルインターネットで一意にルーティングされる", "同一リンク上で使われ、`fe80::/10` 系である", "IPv4 の `/30` と同じビット長である", "DNS の代わりになるプロトコル名である"], "answer": "B", "explain": "リンクローカルは fe80::/10、同一リンク向け。"}, {"id": "Q6", "stem": "Windows で IP 設定を確認する定番コマンドはどれか。", "type": "single", "choices": ["`ipconfig`", "`systemctl status`", "`show version`", "`chmod`"], "answer": "A", "explain": "Windows は ipconfig。"}, {"id": "Q7", "stem": "UDP が選ばれやすい用途・理由として適切なものを選べ。", "type": "multi", "choices": ["遅延を嫌うリアルタイム通信", "オーバーヘッドを小さくしたい", "必ずファイル転送の唯一の標準になる", "DNS クエリでよく使われる"], "answer": "A, B, D", "explain": "UDP がファイル転送の唯一標準ではない。"}, {"id": "Q8", "stem": "IPv6 について適切なものを選べ。", "type": "multi", "choices": ["アドレス長は 128 ビット", "`::` によるゼロ圧縮は1回まで", "ユニークローカルは私的利用のイメージ", "IPv6 ではサブネットの考え方が完全に消える"], "answer": "A, B, C", "explain": "IPv6 でもプレフィックス長でサブネットを切る。"}, {"id": "Q9", "stem": "端末が通信できないときの確認として適切なものを選べ。", "type": "multi", "choices": ["アドレスが付いているか", "ゲートウェイと同じ L2/VLAN か", "DNS が解決できるか", "まずデフォルト VLAN を全世界で無効化する"], "answer": "A, B, C", "explain": "全世界で VLAN 無効化は無関係・危険。"}, {"id": "Q10", "stem": "`10.0.0.0/8`、`172.16.0.0/12`、`192.168.0.0/16` を総称して何と呼ぶか。", "type": "text", "choices": [], "answer": "プライベートアドレス（RFC1918）", "explain": "私的利用レンジ。"}, {"id": "Q11", "stem": "`192.168.1.0/24` を等分して `/25` 二つにした場合、2つ目のネットワークアドレスは何か。", "type": "text", "choices": [], "answer": "`192.168.1.128`", "explain": "/25 は 128 アドレス単位。0 と 128。"}, {"id": "Q12", "stem": "新しい PC が社内サーバに届かない。`ipconfig` を見るとアドレスが `169.254.23.10` だった。最も疑うべきことはどれか。", "type": "single", "choices": ["DHCP で正規アドレスを取得できていない", "OSPF のプロセス ID が奇数だから", "光ファイバの波長が 1310nm だから必ず失敗する", "TCP が存在しないプロトコルだから"], "answer": "A", "explain": "169.254/16 は APIPA。DHCP 失敗を疑う。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 04 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 04</span></a>
+  <a class="nav-back" href="../chapters/04.html">← CH 04 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html" class="active">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 04</p>
+        <h1>ファイルと権限 FHS</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/04.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "ホスト固有の設定ファイルが置かれることが多いディレクトリはどれか。", "type": "single", "choices": ["`/etc`", "`/proc` のみ", "`/dev/null`", "スワップ領域の別名"], "answer": "A", "explain": "ホスト設定の定番は `/etc`。"}, {"id": "Q2", "stem": "`ls -l` で先頭が `d` のエントリはどれか。", "type": "single", "choices": ["通常ファイル", "ディレクトリ", "キャラクタデバイス必須", "壊れたハードリンクのみ"], "answer": "B", "explain": "`d` はディレクトリ。"}, {"id": "Q3", "stem": "パーミッション `rw-r--r--` を数値で表すとどれか。", "type": "single", "choices": ["777", "644", "600", "111"], "answer": "B", "explain": "rw-r--r-- は 644。"}, {"id": "Q4", "stem": "ファイルの所有者ユーザを変える基本コマンドはどれか。", "type": "single", "choices": ["`chown`", "`ping`", "`systemctl enable`", "`mkfs`"], "answer": "A", "explain": "所有者変更は `chown`。"}, {"id": "Q5", "stem": "シンボリックリンクを作る典型的なコマンドはどれか。", "type": "single", "choices": ["`ln -s 参照先 リンク名`", "`chmod -s`", "`chgrp -R /`", "`find -delete /`"], "answer": "A", "explain": "シンボリックは `ln -s`。"}, {"id": "Q6", "stem": "名前パターンでファイルを探すのに適したコマンドはどれか。", "type": "single", "choices": ["`find /path -name '*.conf'`", "`passwd`", "`shutdown -h now` のみ", "`useradd`"], "answer": "A", "explain": "名前検索は `find -name`。"}, {"id": "Q7", "stem": "FHS / パスについて適切なものを選べ。", "type": "multi", "choices": ["`/var` はログなど可変データが多い", "`/home` は一般ユーザのホームが多い", "`/tmp` は一時ファイル用として使われやすい", "すべての設定は必ず `/home` 配下だけに置く"], "answer": "A, B, C", "explain": "設定の置き場は `/etc` が中心。すべて `/home` ではない。"}, {"id": "Q8", "stem": "権限について適切なものを選べ。", "type": "multi", "choices": ["ディレクトリの `x` は配下へ辿る（cd）に関わる", "`chmod u+x` は所有者に実行（ディレクトリなら進入）を足せる", "others に書き込みを不用意に付けると危険になりやすい", "`chmod 000` は常にカーネルを削除する"], "answer": "A, B, C", "explain": "`chmod 000` でカーネル削除にはならない。"}, {"id": "Q9", "stem": "リンクについて適切なものを選べ。", "type": "multi", "choices": ["ハードリンクは同一 inode を共有しやすい", "シンボリックリンクは別ファイルシステム上のパスも指せる", "`ls -l` で `l` と `->` が見えればシンボリックの可能性が高い", "ハードリンクは常に別ディスク間で必須作成できる"], "answer": "A, B, C", "explain": "ハードリンクは通常同一 FS 制約がある。"}, {"id": "Q10", "stem": "グループ所有者だけを変更する代表コマンド名を書け。", "type": "text", "choices": [], "answer": "`chgrp`", "explain": "グループ変更。`chown :group` でも可。"}, {"id": "Q11", "stem": "`report.txt` を所有者のみ読み書き（他は不可）にする数値モードの `chmod` 例を1つ書け。", "type": "text", "choices": [], "answer": "例: `chmod 600 report.txt`", "explain": "所有者のみ rw。"}, {"id": "Q12", "stem": "Web アプリが設定ファイルを読めず起動に失敗する。ファイルは `/etc/myapp/app.conf` にあり、所有者は `root:root`、権限は `600`、実行ユーザは `myapp` である。最初に取るべき対処として最も適切なのはどれか。", "type": "single", "choices": ["実行ユーザが読めるよう所有者またはグループ／権限を必要最小限で見直す", "`/` 全体を `chmod -R 777` する", "すぐにディスクを初期化する", "シンボリックリンクをすべて削除する"], "answer": "A", "explain": "最小権限で読めるように所有者／権限を調整する。777 や初期化は不適切。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

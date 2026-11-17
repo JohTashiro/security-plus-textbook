@@ -1,5 +1,5 @@
 (() => {
-  const SETTINGS_KEY = "spt-settings";
+  const SETTINGS_KEY = window.LCERT_SETTINGS_KEY || "cert-study-hub-settings";
   const html = document.documentElement;
 
   function loadSettings() {
@@ -206,3 +206,4 @@
 
   input.addEventListener("input", filter);
 })();
+

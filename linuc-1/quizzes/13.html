@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 13 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 13</span></a>
+  <a class="nav-back" href="../chapters/13.html">← CH 13 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html" class="active">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 13</p>
+        <h1>仮想化とコンテナ入門</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/13.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "ゲストごとにカーネルを持つことが多いのはどれか。", "type": "single", "choices": ["仮想マシン", "だけエイリアス", "だけ umask", "だけ PIPESTATUS"], "answer": "A", "explain": "ゲストカーネルは VM。"}, {"id": "Q2", "stem": "ホストのカーネルを共有してアプリを隔離する寄りなのはどれか。", "type": "single", "choices": ["コンテナ", "だけ GPT パーティション名", "だけ chrony プール名", "だけ logrotate 周期名"], "answer": "A", "explain": "カーネル共有はコンテナ。"}, {"id": "Q3", "stem": "Linux 上のハイパーバイザー技術として適切な例はどれか。", "type": "single", "choices": ["KVM", "だけ `echo`", "だけ `passwd`", "だけ `lsblk` がハイパーバイザーそのもの"], "answer": "A", "explain": "Linux では KVM が代表。"}, {"id": "Q4", "stem": "通常 OS の上に載せる仮想化ソフトの例として近いのはどれか。", "type": "single", "choices": ["VirtualBox（ホスト型の例）", "だけ `/etc/fstab`", "だけ `ufw`", "だけ `nmcli` がハイパーバイザー必須条件"], "answer": "A", "explain": "VirtualBox はホスト型例。"}, {"id": "Q5", "stem": "自分が VM／コンテナ上かを見る定番に近いのはどれか。", "type": "single", "choices": ["`systemd-detect-virt`", "`useradd` のみ", "`chage` のみ", "`visudo` のみ"], "answer": "A", "explain": "detect-virt で検知。"}, {"id": "Q6", "stem": "コンテナを起動する docker の例として適切なのはどれか。", "type": "single", "choices": ["`docker container run ...`", "`mkfs.ext4` のみ", "`fdisk` のみ", "`systemctl isolate` のみ"], "answer": "A", "explain": "起動は container run。"}, {"id": "Q7", "stem": "VM とコンテナの比較として適切なものを選べ。", "type": "multi", "choices": ["コンテナは一般に起動が軽い", "VM は強い隔離向きの場面が多い", "コンテナはホストカーネル共有が基本", "コンテナは必ず別ハードウェアが1台必要"], "answer": "A, B, C", "explain": "別ハード必須ではない。"}, {"id": "Q8", "stem": "docker 操作として適切なものを選べ。", "type": "multi", "choices": ["`docker container ls` で一覧", "イメージとコンテナは役割が違う", "`-p` でポート公開できる", "docker は DNS の MX そのもの"], "answer": "A, B, C", "explain": "docker≠MX。"}, {"id": "Q9", "stem": "クラウド／運用の注意として適切なものを選べ。", "type": "multi", "choices": ["揮発性ストレージは消える前提で扱う", "特権コンテナは隔離を弱め得る", "ネスト仮想化の制約があり得る", "仮想化すればバックアップは不要"], "answer": "A, B, C", "explain": "バックアップ不要にはならない。"}, {"id": "Q10", "stem": "稼働中コンテナ一覧を見る docker コマンド例を書け。", "type": "text", "choices": [], "answer": "例: `docker container ls`", "explain": "一覧。"}, {"id": "Q11", "stem": "CPU の仮想化支援の手がかりを見るコマンド例を書け。", "type": "text", "choices": [], "answer": "例: `lscpu`", "explain": "仮想化支援の手がかり。"}, {"id": "Q12", "stem": "開発用に捨てやすい Web サーバをすぐ立ち上げたい。最も妥当な初手はどれか。", "type": "single", "choices": ["nginx 等のコンテナを `docker container run` で起動しポートを公開する", "即物理ディスクを初期化して辞める", "全ユーザの SSH 鍵を破棄するだけ", "chrony を止めて時刻をずらすだけ"], "answer": "A", "explain": "手早いのはコンテナ起動。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

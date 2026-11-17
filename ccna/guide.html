@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>学習ガイド · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="index.html">CCNA 実務学習<span>学習ガイド</span></a>
+  <a class="nav-back" href="index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="chapters/05.html">05 無線LAN</a>
+<a href="chapters/06.html">06 ルーティング</a>
+<a href="chapters/07.html">07 IPサービス</a>
+<a href="chapters/08.html">08 セキュリティ基礎</a>
+<a href="chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App</p>
+        <h1>学習ガイド</h1>
+      </header>
+      <article class="doc-body"><h1 id="ccna">CCNA 実務学習ガイド</h1>
+<p>試験の配点・日程・受験手続きは扱いません。v1.1 と v2.0 の公式範囲を統合し、現場で使う単位で並べています。重複トピックは1回だけ学びます。</p>
+<h2 id="_1">教材の使い方</h2>
+<ol>
+<li><code>textbook/</code> の章を順に読む（各章末に「現場チェック」あり）</li>
+<li>同番号の <code>quizzes/</code> を解く（答えは見ずに）</li>
+<li><code>quizzes/*_解答.md</code> で採点し、誤った項目だけ本文に戻る</li>
+</ol>
+<p>小テストの形式は本番に寄せています（単一選択・複数選択・穴埋め・シナリオ判断）。ラボ実機が無い場合は、Packet Tracer / CML / 実機のいずれかで章末の操作を再現してください。</p>
+<h2 id="_2">章立て</h2>
+<table>
+<thead>
+<tr>
+<th>章</th>
+<th>ファイル（textbook / quizzes 共通の幹）</th>
+<th>学べること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><code>01_ネットワーク機器と構成</code></td>
+<td>ルータ／スイッチ／FW／AP、トポロジ、仮想化の基礎</td>
+</tr>
+<tr>
+<td>02</td>
+<td><code>02_ケーブルとインタフェース障害</code></td>
+<td>銅線・光ファイバ、二重化／速度不一致、切り分け</td>
+</tr>
+<tr>
+<td>03</td>
+<td><code>03_TCP_UDPとIPアドレス</code></td>
+<td>IPv4 サブネット、プライベート、IPv6、クライアント確認</td>
+</tr>
+<tr>
+<td>04</td>
+<td><code>04_スイッチング_VLAN_STP</code></td>
+<td>VLAN、トランク、EtherChannel、Rapid PVST+、ガード</td>
+</tr>
+<tr>
+<td>05</td>
+<td><code>05_無線LAN</code></td>
+<td>RF、SSID、セキュリティ、AP／WLC、チャネル</td>
+</tr>
+<tr>
+<td>06</td>
+<td><code>06_ルーティング</code></td>
+<td>経路表、静的、OSPF、FHRP、転送判断</td>
+</tr>
+<tr>
+<td>07</td>
+<td><code>07_IPサービス</code></td>
+<td>DHCP、DNS、NAT、NTP、syslog、SNMP、QoS概要</td>
+</tr>
+<tr>
+<td>08</td>
+<td><code>08_セキュリティ基礎</code></td>
+<td>ACL、ポートセキュリティ、AAA、管理アクセス、IPsec概要</td>
+</tr>
+<tr>
+<td>09</td>
+<td><code>09_運用_自動化_AI</code></td>
+<td>Ansible、API／JSON、監視、AI支援の読み方</td>
+</tr>
+</tbody>
+</table>
+<h2 id="v11-v20">対応方針（v1.1 / v2.0）</h2>
+<ul>
+<li>両方に出る内容 → 通常の本文</li>
+<li>v2.0 で強化（トラブルシュート、OSPFv3、VRRP、NAT、agentic AI など） → 本文に含め、欄外で「v2.0で特に重視」と注記</li>
+<li>v1.1 にだけ番号があるが実務で有用なもの → 本文に残す</li>
+<li>試験専用の暗記（配点％など） → 扱わない</li>
+</ul></article>
+    </main>
+  </div>
+  <script src="js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

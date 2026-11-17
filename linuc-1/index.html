@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="index.html">LinuC-1 実務学習<span>Level 1</span></a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="chapters/01.html">01 システムとハードウェア</a>
+<a href="chapters/02.html">02 起動とランレベル systemd</a>
+<a href="chapters/03.html">03 シェルとコマンドライン</a>
+<a href="chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="chapters/05.html">05 テキスト処理</a>
+<a href="chapters/06.html">06 プロセス管理</a>
+<a href="chapters/07.html">07 パッケージ管理</a>
+<a href="chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="chapters/10.html">10 ネットワーク設定</a>
+<a href="chapters/11.html">11 サービスとログ</a>
+<a href="chapters/12.html">12 シェルスクリプト</a>
+<a href="chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ガイド</h2>
+    <a href="guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App</p>
+        <h1>LinuC-1 実務学習</h1>
+        <p>章を選んで読み、小テストで定着させる。配点や日程は扱いません。</p>
+        <div class="meta-row">
+          <span class="chip">全 13 章</span>
+          <span class="chip">実務向け</span>
+        </div>
+      </header>
+      <section class="chapter-grid">
+<a class="chapter-card" href="chapters/01.html">
+  <div class="code">CH 01</div>
+  <h2>システムとハードウェア</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/02.html">
+  <div class="code">CH 02</div>
+  <h2>起動とランレベル systemd</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/03.html">
+  <div class="code">CH 03</div>
+  <h2>シェルとコマンドライン</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/04.html">
+  <div class="code">CH 04</div>
+  <h2>ファイルと権限 FHS</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/05.html">
+  <div class="code">CH 05</div>
+  <h2>テキスト処理</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/06.html">
+  <div class="code">CH 06</div>
+  <h2>プロセス管理</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/07.html">
+  <div class="code">CH 07</div>
+  <h2>パッケージ管理</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/08.html">
+  <div class="code">CH 08</div>
+  <h2>ストレージとファイルシステム</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/09.html">
+  <div class="code">CH 09</div>
+  <h2>ユーザーとセキュリティ</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/10.html">
+  <div class="code">CH 10</div>
+  <h2>ネットワーク設定</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/11.html">
+  <div class="code">CH 11</div>
+  <h2>サービスとログ</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/12.html">
+  <div class="code">CH 12</div>
+  <h2>シェルスクリプト</h2>
+  <p>教科書 · 小テスト</p>
+</a><a class="chapter-card" href="chapters/13.html">
+  <div class="code">CH 13</div>
+  <h2>仮想化とコンテナ入門</h2>
+  <p>教科書 · 小テスト</p>
+</a>
+      </section>
+    </main>
+  </div>
+  <script src="js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

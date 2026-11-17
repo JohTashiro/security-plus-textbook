@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>03 シェルとコマンドライン · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 03</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html" class="active">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/03.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 03</p>
+        <h1>シェルとコマンドライン</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/03.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="03">03 シェルとコマンドライン</h1>
+<p>Linux 管理の中心はシェルです。パイプとリダイレクトが手に馴染むと、調査・一括処理・自動化の速度が一気に上がります。この章では対話操作、入出力、ジョブ制御、tmux を扱います。</p>
+<h2 id="1">1. シェルとは</h2>
+<p>シェルはユーザの入力を解釈し、コマンドを起動するプログラムです。ログインシェルの定番は <strong>bash</strong>（環境により zsh など）。スクリプトも同じ文法で書けます（本格は第12章）。</p>
+<pre><code class="language-bash">echo $SHELL
+bash --version
+</code></pre>
+<h2 id="2">2. パスと移動・確認</h2>
+<pre><code class="language-bash">pwd                 # 現在地
+cd /var/log
+cd ~                # ホーム
+cd -                # 直前のディレクトリ
+ls -la
+which systemctl     # コマンドの実体パス
+type ls             # エイリアスか外部コマンドか
+</code></pre>
+<p>絶対パス（<code>/</code> から）と相対パス（<code>.</code> / <code>..</code>）を混同しないこと。権限エラーは「存在しない」のか「許可がない」のかを切り分けます。</p>
+<h2 id="3">3. リダイレクトとパイプ</h2>
+<table>
+<thead>
+<tr>
+<th>記法</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;</code></td>
+<td>標準出力を上書き保存</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>標準出力を追記</td>
+</tr>
+<tr>
+<td><code>2&gt;</code></td>
+<td>標準エラーをリダイレクト</td>
+</tr>
+<tr>
+<td><code>2&gt;&amp;1</code></td>
+<td>エラーを出力と同じ行き先へ</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>ファイルを標準入力へ</td>
+</tr>
+<tr>
+<td><code>\|</code></td>
+<td>左の出力を右の入力へ</td>
+</tr>
+</tbody>
+</table>
+<p>例:</p>
+<pre><code class="language-bash">ls /etc &gt; /tmp/etc-list.txt
+command_that_fails 2&gt; /tmp/err.txt
+journalctl -u ssh | less
+grep -i error /var/log/syslog | tail -n 20
+</code></pre>
+<p>調査では「絞る → 見る」をパイプでつなぐのが基本です。巨大出力をそのまま端末に流さない。</p>
+<h2 id="4">4. クォートと展開</h2>
+<ul>
+<li>ダブルクォート: 変数展開する（<code>"$HOME"</code>）</li>
+<li>シングルクォート: ほぼ展開しない</li>
+<li>スペースを含む引数は必ずクォートする</li>
+</ul>
+<pre><code class="language-bash">NAME=&quot;Alice&quot;
+echo &quot;Hello $NAME&quot;
+echo 'Hello $NAME'    # 文字どおり $NAME
+</code></pre>
+<h2 id="5-nohup">5. ジョブ制御と nohup</h2>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+C</code></td>
+<td>割り込み（終了シグナル）</td>
+</tr>
+<tr>
+<td><code>Ctrl+Z</code></td>
+<td>サスペンド</td>
+</tr>
+<tr>
+<td><code>jobs</code></td>
+<td>ジョブ一覧</td>
+</tr>
+<tr>
+<td><code>bg</code> / <code>fg</code></td>
+<td>バックグラウンド／フォアグラウンド</td>
+</tr>
+<tr>
+<td><code>command &amp;</code></td>
+<td>最初からバックグラウンド</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">long_task &amp;
+nohup ./batch.sh &gt; /tmp/batch.out 2&gt;&amp;1 &amp;
+</code></pre>
+<p><code>nohup</code> はログアウト後も継続させたいときに使います。Version 11.0 では screen より <strong>tmux / nohup</strong> 側が中心です。</p>
+<h2 id="6-tmux">6. tmux（端末マルチプレクサ）</h2>
+<p>長時間作業や複数ペインでの監視に使います。</p>
+<pre><code class="language-text">tmux                  # 新規セッション
+Ctrl+b → d            # デタッチ（切り離し）
+tmux attach           # 再接続
+Ctrl+b → % または &quot;   # ペイン分割（設定による）
+</code></pre>
+<p>SSH が切れてもセッションを残せるのが最大の利点です。本番作業の定石です。</p>
+<h2 id="7">7. 履歴と効率化</h2>
+<pre><code class="language-bash">history
+Ctrl+R                # 履歴検索
+!!                    # 直前コマンド
+</code></pre>
+<p>危険コマンドの再実行は確認してから。<code>rm</code> やリダイレクト先は特に慎重に。</p>
+<h2 id="8">8. 現場チェック</h2>
+<ul>
+<li>[ ] <code>&gt;</code> と <code>&gt;&gt;</code> と <code>2&gt;</code> の違いを説明できる</li>
+<li>[ ] <code>cmd1 | cmd2 | cmd3</code> で調査できる</li>
+<li>[ ] <code>Ctrl+Z</code> / <code>bg</code> / <code>fg</code> を使える</li>
+<li>[ ] tmux でデタッチ／アタッチできる</li>
+<li>[ ] スペース入りパスをクォートできる</li>
+</ul>
+<h2 id="_1">次章へ</h2>
+<p>シェルが使えたら、次はファイルの所有者・権限・検索です。第04章で FHS と権限を扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="02.html">← 02 起動とランレベル systemd</a><a class="btn btn-primary" href="../quizzes/03.html">小テスト</a><a class="btn btn-ghost" href="04.html">04 ファイルと権限 FHS →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

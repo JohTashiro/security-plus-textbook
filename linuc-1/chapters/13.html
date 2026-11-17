@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>13 仮想化とコンテナ入門 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 13</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html" class="active">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/13.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 13</p>
+        <h1>仮想化とコンテナ入門</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/13.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="13">13 仮想化とコンテナ入門</h1>
+<p>一台の物理資源を分けて使う代表手段が仮想マシンとコンテナです。この章では方式の違い、KVM／ホスト型の概要、docker の基本操作、見分けコマンドを実務単位で押さえます。</p>
+<h2 id="1">1. なぜ仮想化／コンテナか</h2>
+<table>
+<thead>
+<tr>
+<th>目的</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>隔離</td>
+<td>障害・権限の影響範囲を限定</td>
+</tr>
+<tr>
+<td>密度</td>
+<td>1台のハードを複数用途に</td>
+</tr>
+<tr>
+<td>再現</td>
+<td>同じ環境を作り直せる</td>
+</tr>
+<tr>
+<td>移行</td>
+<td>オンプレとクラウドの往復</td>
+</tr>
+</tbody>
+</table>
+<p>パブリッククラウドでは、インスタンス停止で消える <strong>揮発性ストレージ</strong> と、永続ディスクを区別する感覚が重要です（再起動・メンテナンスで消える／残る）。</p>
+<h2 id="2">2. ホスト型とハイパーバイザー型</h2>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>イメージ</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ホスト型</td>
+<td>通常の OS 上に仮想化ソフト</td>
+<td>VirtualBox など</td>
+</tr>
+<tr>
+<td>ハイパーバイザー型</td>
+<td>ハイパーバイザーが VM を直接制御</td>
+<td>KVM、Xen など</td>
+</tr>
+</tbody>
+</table>
+<p>ハードウェア仮想化支援（Intel VT-x / AMD-V）の有無が性能と可否に効きます。</p>
+<pre><code class="language-bash">lscpu | grep -i virtualization
+systemd-detect-virt
+</code></pre>
+<p><code>systemd-detect-virt</code> は「今の OS が VM／コンテナの中か」を見るのに便利です（Version 11.0 で明示、「11.0で特に重視」）。</p>
+<h2 id="3">3. 仮想マシンとコンテナの違い</h2>
+<table>
+<thead>
+<tr>
+<th>観点</th>
+<th>仮想マシン</th>
+<th>コンテナ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>カーネル</td>
+<td>ゲストごとに持つ</td>
+<td>ホストカーネルを共有</td>
+</tr>
+<tr>
+<td>起動</td>
+<td>重い〜中</td>
+<td>軽い</td>
+</tr>
+<tr>
+<td>隔離</td>
+<td>強め</td>
+<td>プロセス／namespace 中心</td>
+</tr>
+<tr>
+<td>向く用途</td>
+<td>別 OS、強い隔離</td>
+<td>アプリ配布、密度</td>
+</tr>
+</tbody>
+</table>
+<p>コンテナは「軽い VM」ではなく、<strong>プロセス隔離＋ファイルシステム層</strong>に近い、と説明できると現場で誤解が減ります。</p>
+<h2 id="4-kvm-virsh">4. KVM / virsh（概要）</h2>
+<p>Linux では KVM がカーネル内の仮想化、QEMU がエミュレーション／デバイス、libvirt（<code>virsh</code>）が管理、という分担が多いです。</p>
+<p>Version 10.0 は <code>virsh</code> での起動停止が列挙されます。11.0 草案は方式名と docker／検知コマンド寄りで、virsh 操作の比重は下がります。両方を知ったうえで、手元に libvirt があれば触ってください。</p>
+<pre><code class="language-bash">virsh list --all
+virsh start vm01
+virsh shutdown vm01
+virsh console vm01
+</code></pre>
+<h2 id="5-docker">5. Docker 基本操作</h2>
+<pre><code class="language-bash">docker version
+docker image ls
+docker container ls -a
+docker container run --rm -it alpine:latest sh
+docker container run -d --name web -p 8080:80 nginx:alpine
+docker container logs web
+docker container stop web
+docker container rm web
+</code></pre>
+<p>Version 11.0 は <code>docker container run</code> / <code>docker container ls</code> が明示されています。旧来の <code>docker run</code> / <code>docker ps</code> も同系統です。</p>
+<p>ポイント:</p>
+<ul>
+<li>イメージ（雛形）とコンテナ（実行インスタンス）</li>
+<li>ポート公開 <code>-p ホスト:コンテナ</code></li>
+<li>データはコンテナ層に書くと消えやすい → ボリューム設計</li>
+</ul>
+<p>ルートレスやオーケストレーション（Kubernetes）はレベル1の入口を越えるため、ここでは「次の学習」として触れないで十分です。</p>
+<h2 id="6">6. 現場での見分けと注意</h2>
+<pre><code class="language-bash">systemd-detect-virt
+cat /proc/1/cgroup | head
+lscpu
+free -h
+</code></pre>
+<p>注意:</p>
+<ul>
+<li>ネスト仮想化の有無（学習用 VM の中でさらに KVM）</li>
+<li>コンテナから見た <code>/</code> はホスト全体ではない</li>
+<li>特権コンテナは隔離を大きく弱める</li>
+</ul>
+<h2 id="7">7. 現場チェック</h2>
+<ul>
+<li>[ ] ホスト型とハイパーバイザー型を説明できる</li>
+<li>[ ] VM とコンテナのカーネル共有の違いを言える</li>
+<li>[ ] <code>systemd-detect-virt</code> / <code>lscpu</code> で仮想化の手がかりを見られる</li>
+<li>[ ] <code>docker container run</code> と <code>ls</code> ができる</li>
+<li>[ ] 揮発性ストレージの意味をクラウド文脈で言える</li>
+</ul>
+<p>手元で alpine または nginx コンテナを起動し、ポートフォワードでページを一度見てください。可能なら <code>virsh list</code> も。</p>
+<h2 id="_1">まとめ</h2>
+<p>01〜13 で、ハードウェアから起動、シェル、ファイル、テキスト、プロセス、パッケージ、ストレージ、ユーザ、ネットワーク、サービス／ログ、スクリプト、仮想化／コンテナまでが一通りつながります。弱い章の小テストを解き直し、実機でコマンドを手に馴染ませてください。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="12.html">← 12 シェルスクリプト</a><a class="btn btn-primary" href="../quizzes/13.html">小テスト</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

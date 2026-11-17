@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>07 パッケージ管理 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 07</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html" class="active">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/07.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 07</p>
+        <h1>パッケージ管理</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/07.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="07">07 パッケージ管理</h1>
+<p>ソフトウェアの導入・更新・調査はパッケージマネージャが中心です。Debian 系（apt / dpkg）と RPM 系（dnf/yum / rpm）の両方を、リポジトリの感覚付きで使えるようにします。</p>
+<h2 id="1">1. リポジトリの考え方</h2>
+<p>パッケージは単体ファイルだけでなく、<strong>リポジトリ</strong>（配布元の索引）から依存関係ごと入れるのが現代の基本です。</p>
+<table>
+<thead>
+<tr>
+<th>系</th>
+<th>高水準</th>
+<th>低水準</th>
+<th>設定の目安</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debian 系</td>
+<td><code>apt</code> / <code>apt-get</code></td>
+<td><code>dpkg</code></td>
+<td><code>/etc/apt/sources.list</code> など</td>
+</tr>
+<tr>
+<td>RPM 系</td>
+<td><code>dnf</code> / <code>yum</code></td>
+<td><code>rpm</code></td>
+<td><code>/etc/yum.repos.d/</code></td>
+</tr>
+</tbody>
+</table>
+<p>高水準が依存解決、低水準が個別 <code>.deb</code> / <code>.rpm</code> の操作、と覚えると迷いにくいです。</p>
+<h2 id="2-debian-apt-dpkg">2. Debian 系（apt / dpkg）</h2>
+<pre><code class="language-bash">sudo apt update
+sudo apt install nginx
+sudo apt remove nginx
+sudo apt purge nginx          # 設定も消す寄り
+sudo apt upgrade
+apt search keyword
+apt show nginx
+apt-cache policy nginx
+apt-file search bin/nginx     # 環境により apt-file 要導入
+</code></pre>
+<p><code>sources.list</code> / <code>sources.list.d/</code> で配布元を管理します。間違った第三リポジトリは供給チェーンリスクになるため、追加は理由を残します。</p>
+<p>dpkg:</p>
+<pre><code class="language-bash">sudo dpkg -i package.deb
+dpkg -l
+dpkg -L nginx                 # 導入済みパッケージのファイル一覧
+dpkg -S /usr/sbin/nginx       # ファイルの所有者パッケージ
+sudo dpkg-reconfigure package
+</code></pre>
+<p>依存が欠けて <code>dpkg -i</code> が失敗したら、<code>apt -f install</code> で修復する流れが典型です。</p>
+<h2 id="3-rpm-dnf-yum-rpm">3. RPM 系（dnf / yum / rpm）</h2>
+<p>現行の RHEL 系クローンでは <strong>dnf</strong> が主流です。Version 10.0 の文言は yum 中心、11.0 でも RPM 系操作は残ります。現場では <code>dnf</code> を主、<code>yum</code> は互換コマンドとして触れます（「11.0で特に重視」＝現行ツール）。</p>
+<pre><code class="language-bash">sudo dnf install nginx
+sudo dnf remove nginx
+sudo dnf update
+dnf search keyword
+dnf info nginx
+dnf provides /usr/sbin/nginx
+</code></pre>
+<p>リポジトリ定義は <code>/etc/yum.repos.d/*.repo</code>。<code>enabled=0/1</code> や baseurl / metalink を確認します。</p>
+<p>rpm（低水準）:</p>
+<pre><code class="language-bash">sudo rpm -ivh package.rpm
+rpm -qa
+rpm -ql nginx
+rpm -qf /usr/sbin/nginx
+rpm -qi nginx
+rpm -V nginx                  # 改ざん・変更の検証寄り
+</code></pre>
+<p>署名や依存の詳細は <code>rpm</code> で調べ、導入は可能なら <code>dnf</code> に任せるのが安全です。</p>
+<h2 id="4">4. 調査の定番質問</h2>
+<table>
+<thead>
+<tr>
+<th>知りたいこと</th>
+<th>Debian 系</th>
+<th>RPM 系</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入っているか</td>
+<td><code>dpkg -l</code> / <code>apt list --installed</code></td>
+<td><code>rpm -qa</code> / <code>dnf list installed</code></td>
+</tr>
+<tr>
+<td>ファイルは誰の？</td>
+<td><code>dpkg -S</code></td>
+<td><code>rpm -qf</code> / <code>dnf provides</code></td>
+</tr>
+<tr>
+<td>パッケージの中身</td>
+<td><code>dpkg -L</code></td>
+<td><code>rpm -ql</code></td>
+</tr>
+<tr>
+<td>情報・依存</td>
+<td><code>apt show</code></td>
+<td><code>dnf info</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="5">5. 更新と本番の注意</h2>
+<ul>
+<li>本番は変更窓・バックアップ・ロールバック手段を先に</li>
+<li><code>upgrade</code> / <code>update</code> 前に何が上がるか確認</li>
+<li>カーネル更新後は再起動が必要なことが多い</li>
+<li>自動更新を入れるなら、再起動ポリシーと監視をセットで</li>
+</ul>
+<h2 id="6">6. 現場チェック</h2>
+<ul>
+<li>[ ] <code>apt update</code> と <code>install</code> / <code>remove</code> ができる</li>
+<li>[ ] <code>dpkg -S</code> / <code>dpkg -L</code> でファイルとパッケージを相互に辿れる</li>
+<li>[ ] <code>dnf install</code> と <code>dnf provides</code> ができる</li>
+<li>[ ] <code>rpm -qf</code> / <code>rpm -ql</code> の意味を説明できる</li>
+<li>[ ] リポジトリ設定ファイルの場所を両系で言える</li>
+</ul>
+<p>手元に AlmaLinux と Debian/Ubuntu のどちらか一方しか無くても、もう一方はコマンド対応表で追えます。可能なら両方のコンテナや VM で一度ずつ打ってください。</p>
+<h2 id="_1">次章へ</h2>
+<p>パッケージで入れたソフトも、置き場所はディスクです。第08章でパーティション、ファイルシステム、LVM、マウントを扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="06.html">← 06 プロセス管理</a><a class="btn btn-primary" href="../quizzes/07.html">小テスト</a><a class="btn btn-ghost" href="08.html">08 ストレージとファイルシステム →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

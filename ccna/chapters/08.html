@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>08 セキュリティ基礎 · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>CH 08</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html" class="active">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/08.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 08</p>
+        <h1>セキュリティ基礎</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/08.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="08">08 セキュリティ基礎</h1>
+<p>接続とサービスが動いても、不正アクセスやなりすましを防げなければ本番は成立しません。この章では脅威の用語、機器の管理アクセス、ACL、レイヤ2セキュリティ、AAA、IPsec VPN の概要を実務単位で押さえます。</p>
+<h2 id="1">1. 脅威・脆弱性・エクスプロイト・緩和</h2>
+<table>
+<thead>
+<tr>
+<th>用語</th>
+<th>意味のイメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threat（脅威）</td>
+<td>害を与えうる主体や状況</td>
+</tr>
+<tr>
+<td>Vulnerability（脆弱性）</td>
+<td>攻撃に使われうる弱点</td>
+</tr>
+<tr>
+<td>Exploit（エクスプロイト）</td>
+<td>脆弱性を突く手法・コード</td>
+</tr>
+<tr>
+<td>Mitigation（緩和）</td>
+<td>リスクを下げる対策</td>
+</tr>
+</tbody>
+</table>
+<p>現場では「完全排除」より、露出を減らし検知・復旧まで含めた緩和が中心です。</p>
+<p>セキュリティプログラムの要素として、ユーザ意識向上・訓練・物理アクセス制御も忘れないでください。強いパスワードでも、カードキー無しのサーバルームや USB の持ち込み放置は別の穴になります。</p>
+<h2 id="2">2. 管理アクセスとパスワード方針</h2>
+<p>機器へのログイン経路はコンソール、SSH（推奨）、（非推奨の）Telnet、HTTPS の GUI、クラウド管理などがあります。</p>
+<pre><code class="language-text">username admin privilege 15 secret ComplexP@ss1
+line vty 0 4
+ login local
+ transport input ssh
+</code></pre>
+<p>パスワード方針の観点:</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>現場での意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>管理</td>
+<td>誰が発行・失効するか</td>
+</tr>
+<tr>
+<td>複雑性</td>
+<td>長さ・文字種・辞書回避</td>
+</tr>
+<tr>
+<td>代替</td>
+<td>MFA、証明書、生体など</td>
+</tr>
+</tbody>
+</table>
+<p>ローカルユーザだけでは規模に限界があるため、次節の AAA と組み合わせます。v2.0 では <strong>ローカルユーザ名と AAA クライアント（TACACS+/RADIUS）としての管理設定</strong> が明示されています（「v2.0で特に重視」）。</p>
+<h2 id="3-aaa">3. AAA（認証・認可・アカウンティング）</h2>
+<table>
+<thead>
+<tr>
+<th>文字</th>
+<th>意味</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authentication</td>
+<td>誰か</td>
+<td>ユーザ／パス、証明書</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>何をしてよいか</td>
+<td>privilege、コマンド許可</td>
+</tr>
+<tr>
+<td>Accounting</td>
+<td>何をしたか</td>
+<td>ログイン時刻、コマンド記録</td>
+</tr>
+</tbody>
+</table>
+<p>TACACS+ は機器管理でよく使われ、RADIUS は無線・VPN のユーザ認証でも多い、という役割分担の感覚で十分です。機器側は「AAA クライアント」、サーバ側が認証基盤です。</p>
+<h2 id="4-acl">4. ACL（アクセス制御リスト）</h2>
+<p>パケットを許可／拒否するフィルタです。インタフェースの in / out 方向と、照合順序（上から最初の一致）が要点です。</p>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>典型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>標準 ACL</td>
+<td>送信元 IP 中心。番号 1–99 など</td>
+</tr>
+<tr>
+<td>拡張 ACL</td>
+<td>送信元・宛先・プロトコル・ポート</td>
+</tr>
+<tr>
+<td>番号付き / 名前付き</td>
+<td>管理しやすさの違い</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">ip access-list extended BLOCK_SSH_FROM_GUEST
+ deny tcp 10.99.0.0 0.0.0.255 any eq 22
+ permit ip any any
+interface GigabitEthernet0/1
+ ip access-group BLOCK_SSH_FROM_GUEST in
+</code></pre>
+<p>暗黙の deny any があること、<code>permit ip any any</code> を最後に置く意図、どこに適用するかを説明できるようにしてください。v2.0 は <strong>標準／拡張／番号付き／名前付き</strong> の設定が明示されています。</p>
+<h2 id="5-2">5. レイヤ2セキュリティ</h2>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>狙い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Port security</td>
+<td>許可 MAC 以外を制限</td>
+</tr>
+<tr>
+<td>DHCP snooping</td>
+<td>正規 DHCP サーバ以外の応答を抑止</td>
+</tr>
+<tr>
+<td>Dynamic ARP Inspection（DAI）</td>
+<td>不正 ARP を抑止（snooping DB と連携）</td>
+</tr>
+<tr>
+<td>Storm control</td>
+<td>ブロードキャスト等の嵐を抑制（v2.0で明示）</td>
+</tr>
+<tr>
+<td>RA guard</td>
+<td>不正な IPv6 RA を抑制（v2.0で明示）</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">interface GigabitEthernet1/0/10
+ switchport mode access
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+</code></pre>
+<p>DHCP snooping では <strong>信頼ポート（アップリンク／サーバ側）</strong> と非信頼ポートの切り分けが典型のつまずきです。v2.0 の L2 セキュリティ一覧に storm control / RA guard が加わります（「v2.0で特に重視」）。</p>
+<h2 id="6-ipsec-vpn">6. IPsec VPN 概要</h2>
+<table>
+<thead>
+<tr>
+<th>形態</th>
+<th>イメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Site-to-site</td>
+<td>拠点間を常時接続</td>
+</tr>
+<tr>
+<td>Remote access</td>
+<td>ノート PC 等から都度接続</td>
+</tr>
+</tbody>
+</table>
+<p>プロトコルとモード（トンネル／トランスポート）の名前と用途の対応ができれば CCNA の説明範囲としては足場になります。詳細な暗号スイート暗記より、「何を守り、どこで終端するか」を優先します。v2.0 は <strong>プロトコルとトランスポートモード</strong> まで言及しています。</p>
+<p>無線の WPA／WPA2／WPA3 は第05章と重複します。ここでは「PSK とエンタープライズ（802.1X）の違い」「WPA3 が現行推奨寄り」程度の復習で十分です。</p>
+<h2 id="7">7. 設定ファイルの安全な転送（運用接点）</h2>
+<p>バックアップや IOS イメージの受け渡しは、平文 TFTP より <strong>SFTP / SCP</strong> が推奨です。v2.0 で明示（「v2.0で特に重視」）。セキュリティ章の延長として、「管理プレーンの通信も暗号化」と覚えてください。</p>
+<h2 id="8">8. 現場チェック</h2>
+<ul>
+<li>[ ] 脅威／脆弱性／エクスプロイト／緩和を自分の言葉で区別できる</li>
+<li>[ ] VTY を SSH のみ・ローカルユーザで固める流れを説明できる</li>
+<li>[ ] AAA の3要素を業務例で言える</li>
+<li>[ ] 標準と拡張 ACL の違いと、適用方向の意味を説明できる</li>
+<li>[ ] ポートセキュリティと DHCP snooping の目的を言える</li>
+<li>[ ] site-to-site と remote access の違いを説明できる</li>
+</ul>
+<p>ラボ例:</p>
+<ul>
+<li>拡張 ACL で特定サブネットから SSH を拒否し、他通信は通す</li>
+<li>アクセスポートに port-security maximum 1 を入れ、別 PC 接続時の violation を観察</li>
+</ul>
+<h2 id="_1">次章へ</h2>
+<p>設定を人手だけで広げるとミスと遅延が増えます。第09章で自動化、API／JSON、監視、AI 支援の読み方を扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="07.html">← 07 IPサービス</a><a class="btn btn-primary" href="../quizzes/08.html">小テスト</a><a class="btn btn-ghost" href="09.html">09 運用 自動化 AI →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

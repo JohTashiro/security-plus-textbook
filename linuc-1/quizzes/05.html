@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 05 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 05</span></a>
+  <a class="nav-back" href="../chapters/05.html">← CH 05 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html" class="active">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 05</p>
+        <h1>テキスト処理</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/05.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "長いファイルをページ単位で読むのに適するのはどれか。", "type": "single", "choices": ["`less`", "`mkfs`", "`systemctl isolate`", "`useradd`"], "answer": "A", "explain": "ページングは less。"}, {"id": "Q2", "stem": "ファイル末尾20行を見る定番はどれか。", "type": "single", "choices": ["`tail -n 20 file`", "`head` の別名だけ", "`chmod 777`", "`ip link`"], "answer": "A", "explain": "末尾は tail -n。"}, {"id": "Q3", "stem": "大文字小文字を無視して検索する grep の典型はどれか。", "type": "single", "choices": ["`grep -i`", "`grep -F` のみで常に無視", "`grep` にオプションは無い", "`kill -9`"], "answer": "A", "explain": "無視は -i。"}, {"id": "Q4", "stem": "拡張正規表現を使う grep の現代的な書き方はどれか。", "type": "single", "choices": ["`grep -E`", "常に `mkfs -E`", "`ping -E`", "`mount -E`"], "answer": "A", "explain": "拡張正規表現は grep -E。"}, {"id": "Q5", "stem": "`sed 's/foo/bar/g'` の `g` の意味に近いのはどれか。", "type": "single", "choices": ["行内の該当をすべて置換", "ファイルを必ず削除", "プロセスを kill", "パッケージを更新"], "answer": "A", "explain": "g は行内グローバル置換。"}, {"id": "Q6", "stem": "vi で挿入モードからコマンドモードへ戻るキーはどれか。", "type": "single", "choices": ["`Esc`", "常に `Ctrl+C` のみ", "`shutdown`", "`fg`"], "answer": "A", "explain": "Esc でコマンドモードへ。"}, {"id": "Q7", "stem": "テキストフィルタとして適切なものを選べ。", "type": "multi", "choices": ["`cut`", "`sort`", "`uniq`", "`fdisk`（パーティション操作用）"], "answer": "A, B, C", "explain": "fdisk はテキストフィルタではない。"}, {"id": "Q8", "stem": "正規表現・検索について適切なものを選べ。", "type": "multi", "choices": ["`^` は行頭のイメージ", "`grep -F` は固定文字列向き", "`grep -v` は不一致行を出せる", "正規表現は常にバイナリ専用"], "answer": "A, B, C", "explain": "正規表現はテキスト検索が主。"}, {"id": "Q9", "stem": "安全な運用として適切なものを選べ。", "type": "multi", "choices": ["`sed -i` の前に出力だけ確認する", "本番設定はバックアップを検討する", "ログ全体を無条件に消してから考える", "`less` で巨大ログを開いてから絞る"], "answer": "A, B, D", "explain": "ログを無条件削除してから考えない。"}, {"id": "Q10", "stem": "行数を数える基本コマンドを書け（オプション付き可）。", "type": "text", "choices": [], "answer": "例: `wc -l`", "explain": "行数カウント。"}, {"id": "Q11", "stem": "ファイル内の `error` を含む行を出す `grep` 例を1つ書け。", "type": "text", "choices": [], "answer": "例: `grep error file`", "explain": "パターン検索。"}, {"id": "Q12", "stem": "Web のアクセスログから、同一 IP の出現回数を多い順に見たい。最も近いパイプラインはどれか。", "type": "single", "choices": ["`awk '{print $1}' access.log | sort | uniq -c | sort -nr | head`", "`chmod -R 777 /`", "`systemctl poweroff`", "`mkfs` をログに対して実行する"], "answer": "A", "explain": "列抽出→sort→uniq -c→再ソート。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

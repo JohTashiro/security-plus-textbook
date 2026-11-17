@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>01 ネットワーク機器と構成 · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>CH 01</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html" class="active">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/01.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 01</p>
+        <h1>ネットワーク機器と構成</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/01.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="01">01 ネットワーク機器と構成</h1>
+<p>ネットワークは「誰が・どの役割で・どうつながっているか」を把握できないと、設定も障害切り分けも始まりません。この章では機器の役割、よくある構成（トポロジ）、仮想化の考え方を押さえます。</p>
+<h2 id="1">1. 機器の役割</h2>
+<h3 id="router">ルータ（Router）</h3>
+<p>異なる IP ネットワーク同士をつなぎ、経路表に従ってパケットを転送します。境界（社内とインターネット、拠点間）に置くことが多く、NAT や ACL もここで扱う場面が増えます。</p>
+<h3 id="2-3">レイヤ2スイッチ / レイヤ3スイッチ</h3>
+<ul>
+<li><strong>L2 スイッチ</strong>: MAC アドレスに基づき同一ブロードキャストドメイン内でフレームを転送する。VLAN で論理分割できる。</li>
+<li><strong>L3 スイッチ</strong>: スイッチングに加え、VLAN 間ルーティングなど IP 転送も行う。アクセスとディストリビューションの境界でよく使う。</li>
+</ul>
+<h3 id="ngfw-ips">次世代ファイアウォール（NGFW）と IPS</h3>
+<ul>
+<li><strong>ファイアウォール</strong>: 許可／拒否のポリシーで通信を制御する。</li>
+<li><strong>IPS</strong>: 攻撃らしき通信パターンを検知・遮断する。</li>
+<li><strong>NGFW</strong>: ポート番号だけでなくアプリケーション識別や脅威情報を組み合わせる製品カテゴリ。設計では「境界で何を見ているか」を文書化する。</li>
+</ul>
+<h3 id="ap">アクセスポイント（AP）とコントローラ</h3>
+<p>AP は無線クライアントを有線 LAN に橋渡しします。コントローラ（WLC やクラウド管理）は複数 AP の設定・認証・電波ポリシーを集中管理します。小規模では AP 単独（自律型）、中大規模ではコントローラ型が一般的です。</p>
+<h3 id="_1">エンドポイントとサーバ</h3>
+<p>PC・スマホ・プリンタなどの端末と、サービスを提供するサーバです。設計・障害時は「端末側の NIC／IP」と「サーバ側の待ち受け」を分けて疑います。</p>
+<h3 id="poepower-over-ethernet">PoE（Power over Ethernet）</h3>
+<p>LAN ケーブル経由で AP・IP 電話・カメラなどに給電します。スイッチの PoE 予算（ワット合計）とケーブル品質を超えると、端末が起動しなくなる・再起動を繰り返す、といった症状になります。</p>
+<h2 id="2">2. よくあるトポロジ</h2>
+<table>
+<thead>
+<tr>
+<th>構成</th>
+<th>特徴</th>
+<th>使いどころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Two-tier（折りたたみコア）</td>
+<td>アクセス＋ディストリ／コア</td>
+<td>中小キャンパス</td>
+</tr>
+<tr>
+<td>Three-tier</td>
+<td>アクセス／ディストリ／コア</td>
+<td>大規模・階層分離したいとき</td>
+</tr>
+<tr>
+<td>Spine-leaf</td>
+<td>leaf が端末やサーバ、spine が葉同士をつなぐ</td>
+<td>データセンター</td>
+</tr>
+<tr>
+<td>WAN</td>
+<td>拠点間を専用線・VPN 等で接続</td>
+<td>多拠点</td>
+</tr>
+<tr>
+<td>SOHO</td>
+<td>ルータ一体型＋少数端末</td>
+<td>在宅・小規模店舗</td>
+</tr>
+<tr>
+<td>On-premises / Cloud</td>
+<td>自社設置かクラウド上か</td>
+<td>ハイブリッド設計の前提</td>
+</tr>
+</tbody>
+</table>
+<p>現場では「どの階層に障害が出たか」で影響範囲が変わります。アクセス障害は局所、コア障害は全体に広がります。</p>
+<h2 id="3">3. 仮想化の基礎</h2>
+<ul>
+<li><strong>サーバ仮想化</strong>: 1台の物理サーバ上で複数 VM を動かす。ハイパーバイザが CPU・メモリ・NIC を割り当てる。</li>
+<li><strong>コンテナ</strong>: OS カーネルを共有し、プロセス単位で隔離する。起動が軽く、アプリ配布に向く。</li>
+<li><strong>VRF</strong>: ルータ／L3 スイッチ上で経路表を論理分割する。同じ機器でもテナントや用途ごとにルートを分ける。</li>
+</ul>
+<p>v2.0 ではハイパーバイザ・VM・コンテナの関係を説明できることが特に重視されます。試験対策というより、「物理 NIC の向こうに仮想スイッチがある」ことをイメージできるかが実務でも効きます。</p>
+<h2 id="4">4. スイッチング概念の入口</h2>
+<p>L2 スイッチは送信元 MAC を学習し、宛先 MAC がテーブルにあればそのポートへ転送、なければフラッディングします。詳細（エージング、VLAN、STP）は第04章で扱います。ここでは「MAC テーブルが壊れる／満杯／不整合だと通信がおかしく見える」と覚えてください。</p>
+<h2 id="5">5. 現場チェック</h2>
+<ul>
+<li>[ ] 自社（または自宅ラボ）の機器を、上の役割名で言い換えられる</li>
+<li>[ ] 構成図を Two-tier / Three-tier / Spine-leaf のどれに近いか説明できる</li>
+<li>[ ] VM とコンテナの違いを、隔離の単位で説明できる</li>
+<li>[ ] PoE 機器が増えたとき、スイッチの給電上限を確認する癖がある</li>
+</ul>
+<p>確認コマンド例（実機またはシミュレータ）:</p>
+<pre><code class="language-text">show version
+show ip interface brief
+show mac address-table
+show power inline
+</code></pre>
+<h2 id="_2">次章へ</h2>
+<p>機器と箱の話の次は、ケーブルとインタフェースの物理層です。リンクが Up にならない・エラーカウンタが増える、といった切り分けは第02章で扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-primary" href="../quizzes/01.html">小テスト</a><a class="btn btn-ghost" href="02.html">02 ケーブルとインタフェース障害 →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

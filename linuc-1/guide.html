@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>学習ガイド · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="index.html">LinuC-1 実務学習<span>学習ガイド</span></a>
+  <a class="nav-back" href="index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="chapters/01.html">01 システムとハードウェア</a>
+<a href="chapters/02.html">02 起動とランレベル systemd</a>
+<a href="chapters/03.html">03 シェルとコマンドライン</a>
+<a href="chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="chapters/05.html">05 テキスト処理</a>
+<a href="chapters/06.html">06 プロセス管理</a>
+<a href="chapters/07.html">07 パッケージ管理</a>
+<a href="chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="chapters/10.html">10 ネットワーク設定</a>
+<a href="chapters/11.html">11 サービスとログ</a>
+<a href="chapters/12.html">12 シェルスクリプト</a>
+<a href="chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App</p>
+        <h1>学習ガイド</h1>
+      </header>
+      <article class="doc-body"><h1 id="linuc-1">LinuC-1 実務学習ガイド</h1>
+<p>試験の配点・日程・受験手続きは扱いません。Version 10.0 と Version 11.0（ベータ草案）の範囲を統合し、現場で使う単位で並べています。重複は1回だけ学びます。</p>
+<h2 id="_1">教材の使い方</h2>
+<ol>
+<li><code>textbook/</code> の章を順に読む</li>
+<li>同番号の <code>quizzes/</code> を解く</li>
+<li><code>quizzes/*_解答.md</code> で採点する</li>
+</ol>
+<p>小テストは本番に寄せています（択一・複数選択・コマンド記述）。手元に Linux（AlmaLinux または Debian 推奨）を用意し、章末の操作を実際に打ってください。</p>
+<h2 id="_2">章立て</h2>
+<table>
+<thead>
+<tr>
+<th>章</th>
+<th>ファイル（textbook / quizzes 共通の幹）</th>
+<th>学べること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><code>01_システムとハードウェア</code></td>
+<td>アーキテクチャ、デバイス、BIOS/UEFI、仮想化の見分け</td>
+</tr>
+<tr>
+<td>02</td>
+<td><code>02_起動とランレベル_systemd</code></td>
+<td>ブートローダ、ユニット、ターゲット、タイマー</td>
+</tr>
+<tr>
+<td>03</td>
+<td><code>03_シェルとコマンドライン</code></td>
+<td>シェル基礎、パイプ、リダイレクト、tmux、ジョブ制御</td>
+</tr>
+<tr>
+<td>04</td>
+<td><code>04_ファイルと権限_FHS</code></td>
+<td>パス、権限、所有者、リンク、検索</td>
+</tr>
+<tr>
+<td>05</td>
+<td><code>05_テキスト処理</code></td>
+<td>cat/grep/sed/awk、正規表現</td>
+</tr>
+<tr>
+<td>06</td>
+<td><code>06_プロセス管理</code></td>
+<td>ps、top、nice、kill、監視</td>
+</tr>
+<tr>
+<td>07</td>
+<td><code>07_パッケージ管理</code></td>
+<td>Debian系、RPM/dnf、リポジトリ</td>
+</tr>
+<tr>
+<td>08</td>
+<td><code>08_ストレージとファイルシステム</code></td>
+<td>パーティション、fsck、LVM、マウント、容量確認</td>
+</tr>
+<tr>
+<td>09</td>
+<td><code>09_ユーザーとセキュリティ</code></td>
+<td>アカウント、sudo、権限、SSH基礎</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>10_ネットワーク設定</code></td>
+<td>ip、NM、Netplan、DNS、firewalld/ufw、切り分け</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>11_サービスとログ</code></td>
+<td>systemd、journal、rsyslog、時刻同期</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>12_シェルスクリプト</code></td>
+<td>変数、分岐、ループ、実務パターン</td>
+</tr>
+<tr>
+<td>13</td>
+<td><code>13_仮想化とコンテナ入門</code></td>
+<td>KVM概要、docker 基本操作、ホスト型とハイパーバイザー</td>
+</tr>
+</tbody>
+</table>
+<h2 id="100-110">対応方針（10.0 / 11.0）</h2>
+<ul>
+<li>両方に出る内容 → 通常の本文</li>
+<li>11.0 で追加・強化（Wayland、Netplan、systemd timer、ufw、chrony 中心など） → 本文に含め「11.0で特に重視」と注記</li>
+<li>10.0 で残るが 11.0 で薄まるもの（X11、iptables概要、ntpd など） → 短い比較として残し、現行主流の手順を主にする</li>
+<li>レベル2へ移る MTA など → レベル1教科書では扱わない（必要なら別冊）</li>
+</ul></article>
+    </main>
+  </div>
+  <script src="js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

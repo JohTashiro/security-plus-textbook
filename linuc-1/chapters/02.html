@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>02 起動とランレベル systemd · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 02</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html" class="active">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/02.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 02</p>
+        <h1>起動とランレベル systemd</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/02.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="02-systemd">02 起動とランレベル systemd</h1>
+<p>電源投入からログインプロンプトが出るまで、Linux はブートローダ → カーネル → init（現在はほぼ systemd）の順で進みます。この章では起動の流れと、サービスの開始／停止／自動起動、タイマーを実務目線で押さえます。</p>
+<h2 id="1">1. 起動の流れ（概要）</h2>
+<ol>
+<li><strong>ファームウェア（BIOS/UEFI）</strong> がディスクやネットワークからブートローダを探す  </li>
+<li><strong>ブートローダ（GRUB など）</strong> がカーネルと initramfs を読み込む  </li>
+<li><strong>カーネル</strong> がハードウェアを初期化し、ルートファイルシステムをマウントする  </li>
+<li><strong>systemd（PID 1）</strong> がターゲットに従ってサービスを起動する  </li>
+</ol>
+<p>「起動しない」ときは、どの段階で止まったか（ファームのブートメニューか、GRUB か、emergency shell か）を切り分けるのが先です。</p>
+<h2 id="2-grub">2. GRUB の実務ポイント</h2>
+<ul>
+<li>設定の実体はディストリにより <code>grub.cfg</code> の生成元が違う（Debian 系は <code>/etc/default/grub</code> など）。</li>
+<li>カーネルパラメータ（例: <code>systemd.unit=rescue.target</code>）でレスキュー起動できる。</li>
+<li>安易な直接編集より、配布の更新手順（<code>update-grub</code> / <code>grub2-mkconfig</code>）に従う。</li>
+</ul>
+<p>詳細なカスタムは現場の手順書に合わせ、ここでは「カーネル選択とレスキュー起動ができる」ことを目標にします。</p>
+<h2 id="3-systemd">3. systemd の基本単位</h2>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>拡張子</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>サービス</td>
+<td><code>.service</code></td>
+<td>デーモンやワンショット処理</td>
+</tr>
+<tr>
+<td>ターゲット</td>
+<td><code>.target</code></td>
+<td>到達したい状態のまとまり（旧ランレベルの相当）</td>
+</tr>
+<tr>
+<td>タイマー</td>
+<td><code>.timer</code></td>
+<td>時間起動（cron の代替・併用）</td>
+</tr>
+<tr>
+<td>ソケット</td>
+<td><code>.socket</code></td>
+<td>待ち受け連動起動</td>
+</tr>
+<tr>
+<td>マウント</td>
+<td><code>.mount</code></td>
+<td>マウント操作</td>
+</tr>
+</tbody>
+</table>
+<p>よく使うターゲット:</p>
+<ul>
+<li><code>multi-user.target</code> … コンソールの通常マルチユーザ（旧 runlevel 3 相当のイメージ）</li>
+<li><code>graphical.target</code> … GUI 付き</li>
+<li><code>rescue.target</code> / <code>emergency.target</code> … 修復用</li>
+</ul>
+<pre><code class="language-bash">systemctl get-default
+systemctl set-default multi-user.target   # 変更は慎重に
+systemctl list-units --type=target
+</code></pre>
+<h2 id="4">4. サービスの操作</h2>
+<pre><code class="language-bash">systemctl status sshd          # または ssh（ディストリ差）
+systemctl start nginx
+systemctl stop nginx
+systemctl restart nginx
+systemctl reload nginx         # 対応サービスのみ
+systemctl enable nginx         # ブート時自動起動
+systemctl disable nginx
+systemctl is-enabled nginx
+systemctl is-active nginx
+</code></pre>
+<p>ログは <code>journalctl -u サービス名</code> が第一候補です（詳細は第11章）。</p>
+<p>失敗したら:</p>
+<pre><code class="language-bash">systemctl status サービス名 -l
+journalctl -u サービス名 -e
+</code></pre>
+<p>依存関係で起動できないこともあるので、<code>systemctl list-dependencies</code> も有用です。</p>
+<h2 id="5-systemd-timer">5. タイマー（systemd timer）</h2>
+<p>Version 11.0 で特に重視される項目です。cron だけに頼らず、<code>.timer</code> と <code>.service</code> のペアで定期実行できます。</p>
+<pre><code class="language-bash">systemctl list-timers --all
+systemctl status logrotate.timer   # 例（環境による）
+</code></pre>
+<p>ポイント:</p>
+<ul>
+<li><code>OnCalendar=</code> でカレンダー起動、<code>OnBootSec=</code> などで相対起動</li>
+<li>実処理は対応する <code>.service</code> 側</li>
+<li>失敗時の再試行やジャーナル連携がしやすい</li>
+</ul>
+<p>従来の cron（<code>crontab -e</code>、<code>/etc/cron.*</code>）もまだ広く使われます。両方の存在を知ったうえで、新規は timer を検討できるとよいです。</p>
+<h2 id="6-sysv-chkconfig">6. 旧 SysV / chkconfig との関係</h2>
+<p>古い資料や一部環境では <code>service</code> コマンドや <code>chkconfig</code>、<code>init.d</code> スクリプトが残ります。現行主流は systemd です。互換レイヤ経由で動いていることも多いので、トラブル時は「実体の unit は何か」を <code>systemctl status</code> で確認します。</p>
+<h2 id="7">7. 現場チェック</h2>
+<ul>
+<li>[ ] 起動の4段階（ファーム→ブートローダ→カーネル→systemd）を説明できる</li>
+<li>[ ] <code>systemctl enable/start/status</code> を使い分けられる</li>
+<li>[ ] デフォルトターゲットの意味が分かる</li>
+<li>[ ] <code>systemctl list-timers</code> で定期実行を確認できる</li>
+</ul>
+<h2 id="_1">次章へ</h2>
+<p>起動後に実際に触るのはシェルです。パイプ、リダイレクト、ジョブ制御、tmux を第03章で扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="01.html">← 01 システムとハードウェア</a><a class="btn btn-primary" href="../quizzes/02.html">小テスト</a><a class="btn btn-ghost" href="03.html">03 シェルとコマンドライン →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

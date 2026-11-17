@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>04 スイッチング VLAN STP · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>CH 04</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html" class="active">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/04.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 04</p>
+        <h1>スイッチング VLAN STP</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/04.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="04-vlan-stp">04 スイッチング VLAN STP</h1>
+<p>同一物理スイッチでも、VLAN で論理セグメントを分けるのが現行キャンパスの基本です。この章ではアクセス／トランク、EtherChannel（LACP）、Rapid PVST+ とガード機能を、設定と切り分けの単位で押さえます。</p>
+<h2 id="1-vlan">1. VLAN の考え方</h2>
+<p>VLAN はブロードキャストドメインを論理分割します。同一 VLAN 内は L2 で届き、別 VLAN 同士はルータまたは L3 スイッチ（SVI など）経由で通信します。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>実務ポイント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通常範囲</td>
+<td>1〜1005（現場でよく使うのは 2〜1001 付近）</td>
+</tr>
+<tr>
+<td>デフォルト VLAN</td>
+<td>多くの環境で VLAN 1。管理・未割当ポートの受け皿になりやすい</td>
+</tr>
+<tr>
+<td>アクセスポート</td>
+<td>端末用。1 つの VLAN に属する</td>
+</tr>
+<tr>
+<td>InterVLAN</td>
+<td>別 VLAN 間通信。ルーティング（ルータ on a stick / SVI）が必要</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">vlan 10
+ name SALES
+interface GigabitEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+</code></pre>
+<p>確認:</p>
+<pre><code class="language-text">show vlan brief
+show interfaces status
+show interfaces GigabitEthernet0/1 switchport
+</code></pre>
+<h2 id="2-8021q">2. トランクと 802.1Q</h2>
+<p>スイッチ間やスイッチ−ルータ間で複数 VLAN を運ぶのがトランクです。タグ方式の主流は <strong>802.1Q</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>用語</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>タグ付きフレーム</td>
+<td>VLAN ID を載せたフレーム</td>
+</tr>
+<tr>
+<td>Native VLAN</td>
+<td>タグなしで運ぶ VLAN。両端で一致させる</td>
+</tr>
+<tr>
+<td>DTP</td>
+<td>トランク交渉。現場では <code>switchport mode trunk</code> 固定が多い</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">interface GigabitEthernet0/24
+ switchport trunk encapsulation dot1q   ! 機種による
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,30,99
+</code></pre>
+<p>Native VLAN 不一致は「一見つながるが特定 VLAN だけおかしい」原因になります。v2.0 でもトランク／アクセス属性の設定検証は中核です。</p>
+<p>確認:</p>
+<pre><code class="language-text">show interfaces trunk
+show interfaces GigabitEthernet0/24 switchport
+</code></pre>
+<h2 id="3-etherchannellacp">3. EtherChannel（LACP）</h2>
+<p>複数の物理リンクを 1 本の論理リンク（port-channel）に束ね、帯域と冗長を得ます。CCNA 範囲では <strong>LACP</strong> が中心です。</p>
+<p>前提（両端で揃える）:</p>
+<ul>
+<li>速度・二重化</li>
+<li>スイッチポートモード（access / trunk）と VLAN／トランク設定</li>
+<li>LACP モード（active / passive など）</li>
+</ul>
+<pre><code class="language-text">interface range GigabitEthernet0/1-2
+ channel-group 1 mode active
+interface Port-channel1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+</code></pre>
+<p>確認:</p>
+<pre><code class="language-text">show etherchannel summary
+show lacp neighbor
+</code></pre>
+<p>片側だけ設定が違うと、メンバーが独立リンクのまま動いたり、ループや負荷偏りが起きたりします。束ねる前に単独リンクで正常なことを確認する癖が効きます。</p>
+<h2 id="4-rapid-pvst">4. Rapid PVST+（スパニングツリー）</h2>
+<p>冗長リンクがあると L2 ループが起き得ます。STP / Rapid PVST+ はループを防ぎつつ、障害時に代替パスへ切り替えます。Cisco キャンパスでは <strong>Rapid PVST+</strong>（VLAN ごと）を理解するのが実務・試験の両方で重要です。</p>
+<h3 id="_1">役割と状態</h3>
+<table>
+<thead>
+<tr>
+<th>役割</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Root bridge</td>
+<td>木の根。Bridge ID（優先度＋MAC）が最良</td>
+</tr>
+<tr>
+<td>Root port</td>
+<td>非ルートスイッチがルート方向へ出すポート</td>
+</tr>
+<tr>
+<td>Designated port</td>
+<td>そのセグメントで転送側になるポート</td>
+</tr>
+<tr>
+<td>Alternate / Backup</td>
+<td>ブロック側（待機）</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>状態（概要）</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Discarding</td>
+<td>転送しない（Blocking 相当）</td>
+</tr>
+<tr>
+<td>Learning</td>
+<td>MAC 学習中</td>
+</tr>
+<tr>
+<td>Forwarding</td>
+<td>転送中</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">spanning-tree mode rapid-pvst
+spanning-tree vlan 10 root primary
+spanning-tree vlan 10 root secondary
+show spanning-tree vlan 10
+show spanning-tree summary
+</code></pre>
+<h3 id="v20">エッジとガード（v2.0 で特に重視）</h3>
+<p>端末接続ポートでは <strong>PortFast</strong>（即 Forwarding）を使い、BPDU が来る想定外の接続から守るのが定石です。</p>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PortFast</td>
+<td>アクセス（エッジ）ポートの高速遷移</td>
+</tr>
+<tr>
+<td>BPDU Guard</td>
+<td>PortFast ポートで BPDU を受けたら err-disable</td>
+</tr>
+<tr>
+<td>Root Guard</td>
+<td>下流から「より良い」BPDU が来てもルートを奪われないようにする</td>
+</tr>
+<tr>
+<td>Loop Guard</td>
+<td>片方向障害などで代替ポートが誤って転送するのを防ぐ</td>
+</tr>
+<tr>
+<td>BPDU Filter</td>
+<td>BPDU 送受信を抑止。誤用するとループ要因になり得る</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">interface GigabitEthernet0/10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+</code></pre>
+<p>v1.1 でもガード群は出ますが、v2.0 では Rapid PVST+ の設定・動作とガードの組み合わせがより明示的です。BPDU Filter は「なぜ使うか」を説明できないなら触らない、が現場の安全側です。</p>
+<h2 id="5">5. 切り分けの型</h2>
+<ol>
+<li><code>show vlan brief</code> / <code>show interfaces status</code> でポートの VLAN とリンク</li>
+<li>トランクなら <code>show interfaces trunk</code> で allowed / native</li>
+<li>冗長経路なら <code>show spanning-tree</code> で root / ブロック</li>
+<li>バンドルなら <code>show etherchannel summary</code> でメンバー状態</li>
+<li>端末だけ不通なら、アクセス VLAN とゲートウェイ（SVI／ルータ）を疑う</li>
+</ol>
+<p>ラボでは、2 台のスイッチを二重接続し、片側を抜いて STP の再計算を見るのが最短の体感です。</p>
+<h2 id="6">6. 現場チェック</h2>
+<ul>
+<li>[ ] アクセスとトランクの違いを、タグの有無で説明できる</li>
+<li>[ ] Native VLAN を両端で一致させる理由を言える</li>
+<li>[ ] LACP で束ねる前に揃える条件を列挙できる</li>
+<li>[ ] Root / Root port / Designated / ブロックの関係を図にできる</li>
+<li>[ ] 端末ポートに PortFast + BPDU Guard を付ける理由を説明できる</li>
+</ul>
+<p>確認コマンド例:</p>
+<pre><code class="language-text">show vlan brief
+show interfaces trunk
+show etherchannel summary
+show spanning-tree vlan 10
+show spanning-tree interface GigabitEthernet0/10 detail
+</code></pre>
+<h2 id="_2">次章へ</h2>
+<p>有線の L2 が整ったら、無線 LAN（SSID、RF、AP／WLC）です。第05章で扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="03.html">← 03 TCP UDPとIPアドレス</a><a class="btn btn-primary" href="../quizzes/04.html">小テスト</a><a class="btn btn-ghost" href="05.html">05 無線LAN →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

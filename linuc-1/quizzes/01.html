@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 01 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 01</span></a>
+  <a class="nav-back" href="../chapters/01.html">← CH 01 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html" class="active">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 01</p>
+        <h1>システムとハードウェア</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/01.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "CPU のコア数や仮想化関連フラグをまとめて確認するのに適したコマンドはどれか。", "type": "single", "choices": ["`chmod`", "`lscpu`", "`useradd`", "`ping`"], "answer": "B", "explain": "CPU 情報の入口は `lscpu`。"}, {"id": "Q2", "stem": "ブロックデバイスとパーティションの関係を木構造で見るのに適しているのはどれか。", "type": "single", "choices": ["`lsblk`", "`grep`", "`systemctl reboot`", "`passwd`"], "answer": "A", "explain": "ディスクとパーティションの俯瞰は `lsblk`。"}, {"id": "Q3", "stem": "UEFI について適切な説明はどれか。", "type": "single", "choices": ["すでに廃止され一切使われない", "現行マシンで主流のファームウェア／ブート方式の一つ", "ディスク暗号化のファイルシステム名", "Docker のネットワークドライバ名"], "answer": "B", "explain": "UEFI は現行の主流ブート方式の一つ。"}, {"id": "Q4", "stem": "`systemd-detect-virt` が `kvm` を返したとき、最も妥当な解釈はどれか。", "type": "single", "choices": ["物理マシンで仮想化支援が無効", "その環境は KVM 上の仮想マシンとして検出された", "必ず VirtualBox である", "カーネルが壊れている"], "answer": "B", "explain": "`kvm` は KVM 上のゲストとして検出されたことを示す。"}, {"id": "Q5", "stem": "コンテナの説明として最も適切なのはどれか。", "type": "single", "choices": ["必ず専用の物理サーバが1台必要", "ホストのカーネルを共有する軽量な隔離手法が多い", "ゲスト OS を必ずフルインストールする点で VM と同じ", "BIOS の設定項目の名前である"], "answer": "B", "explain": "コンテナはホストカーネル共有の軽量隔離が多い。"}, {"id": "Q6", "stem": "`mkfs` を実行する直前に最も重要な確認はどれか。", "type": "single", "choices": ["壁紙の色", "対象デバイス名が意図したものか（例: `lsblk`）", "DNS の TTL", "画面解像度"], "answer": "B", "explain": "破壊的操作の前にデバイス名の再確認が最重要。"}, {"id": "Q7", "stem": "ハードウェア把握に使えるものを選べ。", "type": "multi", "choices": ["`lspci`", "`lsusb`", "`lscpu`", "`userdel -r`"], "answer": "A, B, C", "explain": "`userdel` はアカウント削除でありハードウェア確認ではない。"}, {"id": "Q8", "stem": "仮想化に関する説明として適切なものを選べ。", "type": "multi", "choices": ["ホスト型は一般的なホスト OS 上に仮想化ソフトを載せるイメージがある", "KVM は Linux でのサーバ仮想化の選択肢の一つ", "`systemd-detect-virt` は仮想化の種類の検出に使える", "VRF は Linux のディスクパーティション形式である"], "answer": "A, B, C", "explain": "VRF は経路の論理分割でありディスク形式ではない。"}, {"id": "Q9", "stem": "「ディスクが見えない」ときの一次切り分けとして適切なものを選べ。", "type": "multi", "choices": ["`lsblk` で認識を確認する", "`lspci` でストレージコントローラが見えるか確認する", "いきなり本番ディスクへ `dd` する", "ケーブル／筐体側の接続も疑う"], "answer": "A, B, D", "explain": "本番ディスクへの不用意な `dd` は不可。"}, {"id": "Q10", "stem": "マシンの CPU アーキテクチャ（例: x86_64）を手早く出すコマンドを1つ書け。", "type": "text", "choices": [], "answer": "`uname -m`（または同等）", "explain": "アーキテクチャ表示。`lscpu` でも可。"}, {"id": "Q11", "stem": "PCI バス上の Ethernet コントローラを探しやすい `lspci` の使い方を1つ書け。（パイプやオプション可）", "type": "text", "choices": [], "answer": "例: `lspci \\", "explain": "grep -i ether`"}, {"id": "Q12", "stem": "新しい検証用 VM にログインした。NIC 名やディスク構成が物理サーバと違う気がする。最初にやる確認として最も適切なのはどれか。", "type": "single", "choices": ["本番ファイアウォールをすべて止める", "`systemd-detect-virt` と `lscpu` / `lsblk` で仮想化の有無とデバイス一覧を確認する", "ルートパスワードを空にする", "`/etc` をすべて削除する"], "answer": "B", "explain": "まず仮想化検出とデバイス一覧で環境差を把握する。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>01 システムとハードウェア · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 01</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html" class="active">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/01.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 01</p>
+        <h1>システムとハードウェア</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/01.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="01">01 システムとハードウェア</h1>
+<p>Linux を安定運用するには、「今見ているマシンがどんなハードウェア／仮想環境か」を素早く把握できることが前提です。この章ではアーキテクチャの見方、デバイスの考え方、BIOS/UEFI、情報収集コマンド、仮想化の見分けを扱います。</p>
+<h2 id="1">1. アーキテクチャを読む</h2>
+<p>サーバや PC は、CPU・メモリ・バス・ストレージ・NIC が組み合わさった箱です。障害時はアプリより先に「CPU 飽和か、メモリ不足か、ディスク待ちか、NIC か」を切り分けます。</p>
+<p>確認の入口:</p>
+<pre><code class="language-bash">uname -m          # 例: x86_64, aarch64
+lscpu             # CPU ソケット/コア/スレッド、仮想化フラグなど
+free -h           # メモリとスワップ
+</code></pre>
+<p><code>lscpu</code> の Virtualization やフラグ（<code>vmx</code> / <code>svm</code> など）は、そのホストで KVM 等が使えるかの手がかりになります。</p>
+<h2 id="2">2. デバイスファイルの考え方</h2>
+<p>Linux はハードウェアをファイルとして扱います。ブロックデバイスは <code>/dev/sda</code> や <code>/dev/nvme0n1</code>、パーティションは <code>/dev/sda1</code> のように見えます。キャラクタデバイスは端末や一部の周辺機器です。</p>
+<pre><code class="language-bash">lsblk             # ディスクとパーティションの木構造
+ls -l /dev/disk/by-uuid
+</code></pre>
+<p>「どのディスクがルートか」「追加した SSD はどの名前か」は、作業前に必ず <code>lsblk</code> で確認します。破壊的な <code>mkfs</code> や <code>dd</code> は対象デバイスを取り違えると致命傷です。</p>
+<h2 id="3-bios-uefi">3. BIOS / UEFI とブートの入口</h2>
+<ul>
+<li><strong>BIOS（レガシー）</strong>: 古いブート方式。MBR とセットで語られることが多い。</li>
+<li><strong>UEFI</strong>: 現行の主流。GPT と組み合わせ、セキュアブートなどを扱える。</li>
+</ul>
+<p>OS に入った後でファーム設定そのものは触れませんが、「起動しない」ときはファームのブート順・セキュアブート・仮想化支援（Intel VT-x / AMD-V）を疑います。ブートローダや systemd の詳細は第02章です。</p>
+<h2 id="4">4. ハードウェア情報コマンド</h2>
+<table>
+<thead>
+<tr>
+<th>コマンド</th>
+<th>見ること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lscpu</code></td>
+<td>CPU・アーキテクチャ・仮想化</td>
+</tr>
+<tr>
+<td><code>lspci</code></td>
+<td>PCI デバイス（NIC、GPU、ストレージコントローラ）</td>
+</tr>
+<tr>
+<td><code>lsusb</code></td>
+<td>USB デバイス</td>
+</tr>
+<tr>
+<td><code>lsblk</code></td>
+<td>ブロックデバイス</td>
+</tr>
+<tr>
+<td><code>dmidecode</code></td>
+<td>SMBIOS 情報（権限が必要なことが多い）</td>
+</tr>
+<tr>
+<td><code>ip link</code> / <code>nmcli device</code></td>
+<td>NIC の有無と状態（詳細は第10章）</td>
+</tr>
+</tbody>
+</table>
+<p>例:</p>
+<pre><code class="language-bash">lspci | grep -i ether
+lsusb
+lsblk -f
+</code></pre>
+<p>「NIC が増えない」「ディスクが見えない」ときは、まず OS がデバイスを認識しているかをここで確認します。</p>
+<h2 id="5">5. 仮想化の見分け</h2>
+<h3 id="_1">ホスト型とハイパーバイザー型</h3>
+<ul>
+<li><strong>ホスト型</strong>: 通常のホスト OS の上に仮想化ソフトを載せる（例: VirtualBox をデスクトップに入れるイメージ）。</li>
+<li><strong>ハイパーバイザー型（ベアメタルに近い）</strong>: 仮想化層が中心で、その上にゲストを載せる（KVM や多くのサーバ仮想化）。</li>
+</ul>
+<p>現場では厳密な分類より、「今ログインしているのは物理か、ゲストか」「ネストした仮想化か」が重要です。</p>
+<h3 id="_2">実機か仮想か</h3>
+<pre><code class="language-bash">systemd-detect-virt
+# 例: kvm, oracle, microsoft, vmware, none
+</code></pre>
+<p><code>none</code> なら（検出上は）物理に近い環境です。ゲストでは一部デバイスが仮想化され、時刻ずれや NIC 名の違いが出やすくなります。</p>
+<h3 id="kvm-virtualbox-xen">KVM / VirtualBox / Xen / コンテナ</h3>
+<ul>
+<li><strong>KVM</strong>: Linux カーネルの仮想化。サーバ仮想化の定番候補。</li>
+<li><strong>VirtualBox</strong>: デスクトップ検証でよく使う。</li>
+<li><strong>Xen</strong>: 別系統のハイパーバイザー。</li>
+<li><strong>コンテナ（Docker など）</strong>: カーネルを共有する軽量隔離。<code>docker container ls</code> や <code>docker run</code> は第13章で扱う。ここでは「VM より軽く、アプリ配布に使う」と理解すれば十分。</li>
+</ul>
+<p>Version 11.0 では、仮想化の説明が virsh 操作中心から、ホスト型／ハイパーバイザー型や <code>systemd-detect-virt</code>・<code>lscpu</code>・コンテナ基本へと寄っています。現行主流の見分け方を優先して覚えてください。</p>
+<h2 id="6-acpi">6. 電源・ACPI の実務メモ</h2>
+<p>ノート PC や一部サーバでは ACPI 経由で電源状態を扱います。リモートで落ちない・サスペンドする、といった症状は電源管理ポリシーも疑います。サーバ用途ではまず「突然の電源断がないか」「BMC/iLO 等の遠隔管理はあるか」を確認するのが先です。</p>
+<h2 id="7">7. 現場チェック</h2>
+<ul>
+<li>[ ] <code>lscpu</code> / <code>lsblk</code> / <code>lspci</code> で自分の環境の概要を説明できる</li>
+<li>[ ] <code>systemd-detect-virt</code> の結果を解釈できる</li>
+<li>[ ] VM とコンテナの違いを隔離の単位で説明できる</li>
+<li>[ ] ディスク操作の前にデバイス名を再確認する癖がある</li>
+</ul>
+<h2 id="_3">次章へ</h2>
+<p>ハードウェアと仮想化の見方がついたら、次は起動からサービス起動までの流れ（ブートローダと systemd）です。第02章で扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-primary" href="../quizzes/01.html">小テスト</a><a class="btn btn-ghost" href="02.html">02 起動とランレベル systemd →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

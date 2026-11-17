@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12 シェルスクリプト · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 12</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html" class="active">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/12.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 12</p>
+        <h1>シェルスクリプト</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/12.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="12">12 シェルスクリプト</h1>
+<p>同じ手順を何度も打つなら、スクリプトにして再現性とレビュー可能性を上げます。この章では shebang、変数、引用、分岐、ループ、終了コード、実務で壊れにくい書き方を押さえます。</p>
+<h2 id="1">1. 基本形</h2>
+<pre><code class="language-bash">#!/bin/bash
+set -euo pipefail
+
+echo &quot;hello&quot;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shebang</td>
+<td>どのインタプリタで動かすか</td>
+</tr>
+<tr>
+<td><code>set -e</code></td>
+<td>失敗で止める（例外あり）</td>
+</tr>
+<tr>
+<td><code>set -u</code></td>
+<td>未定義変数をエラーに</td>
+</tr>
+<tr>
+<td><code>set -o pipefail</code></td>
+<td>パイプ途中失敗も拾う</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">chmod +x backup.sh
+./backup.sh
+bash backup.sh
+</code></pre>
+<h2 id="2">2. 変数と引用</h2>
+<pre><code class="language-bash">name=&quot;alice&quot;
+echo &quot;$name&quot;
+echo &quot;${name}_home&quot;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>書き方</th>
+<th>効果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"$var"</code></td>
+<td>空白を保持しつつ展開</td>
+</tr>
+<tr>
+<td><code>'$var'</code></td>
+<td>展開しない</td>
+</tr>
+<tr>
+<td><code>$var</code></td>
+<td>単語分割や glob の罠が起きやすい</td>
+</tr>
+</tbody>
+</table>
+<p>位置パラメータ:</p>
+<pre><code class="language-bash">#!/bin/bash
+# usage: ./greet.sh Alice
+user=${1:?need name}
+echo &quot;hello, $user&quot;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>変数</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$0</code></td>
+<td>スクリプト名</td>
+</tr>
+<tr>
+<td><code>$1</code>…</td>
+<td>引数</td>
+</tr>
+<tr>
+<td><code>$#</code></td>
+<td>引数個数</td>
+</tr>
+<tr>
+<td><code>"$@"</code></td>
+<td>全引数（安全に渡す定番）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3">3. 分岐と終了コード</h2>
+<pre><code class="language-bash">if [[ -f /etc/os-release ]]; then
+  echo &quot;found&quot;
+elif [[ -d /etc ]]; then
+  echo &quot;etc only&quot;
+else
+  echo &quot;missing&quot;
+  exit 1
+fi
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>終了コード</th>
+<th>慣習</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>非0</td>
+<td>失敗</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">command -v curl &gt;/dev/null || { echo &quot;curl missing&quot;; exit 1; }
+</code></pre>
+<p>条件の定番:</p>
+<table>
+<thead>
+<tr>
+<th>式</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-f</code> / <code>-d</code> / <code>-e</code></td>
+<td>ファイル／ディレクトリ／存在</td>
+</tr>
+<tr>
+<td><code>-z</code> / <code>-n</code></td>
+<td>空／非空文字列</td>
+</tr>
+<tr>
+<td><code>==</code> / <code>!=</code></td>
+<td>文字列比較（<code>[[ ]]</code> 内）</td>
+</tr>
+<tr>
+<td><code>-eq</code> 等</td>
+<td>整数比較</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4">4. ループ</h2>
+<pre><code class="language-bash">for f in /var/log/*.log; do
+  [[ -e $f ]] || continue
+  echo &quot;file=$f&quot;
+done
+
+while read -r line; do
+  echo &quot;got:$line&quot;
+done &lt; /etc/hosts
+</code></pre>
+<p>無限ループと <code>sleep</code> で監視風にする例もありますが、本番は systemd timer や監視ツールと役割分担します。</p>
+<h2 id="5">5. 関数とデバッグ</h2>
+<pre><code class="language-bash">log() {
+  echo &quot;[INFO] $*&quot; &gt;&amp;2
+}
+
+log &quot;start&quot;
+</code></pre>
+<pre><code class="language-bash">bash -x script.sh              # 実行トレース
+bash -n script.sh              # 構文チェック
+</code></pre>
+<p>Version 10.0 / 11.0 ともシェルスクリプトの重要度は高いです。試験は短めの記述・選択が中心なので、<strong>引用・終了コード・<code>[[ ]]</code>・<code>for</code>/<code>while</code></strong> を確実にします。</p>
+<h2 id="6">6. 実務パターン（壊れにくい書き方）</h2>
+<pre><code class="language-bash">#!/bin/bash
+set -euo pipefail
+
+src=${1:?usage: $0 SRC DEST}
+dest=${2:?usage: $0 SRC DEST}
+
+mkdir -p &quot;$dest&quot;
+rsync -a --delete &quot;$src&quot;/ &quot;$dest&quot;/
+</code></pre>
+<p>注意:</p>
+<ul>
+<li>パスは常に引用</li>
+<li>一時ファイルは <code>mktemp</code></li>
+<li>秘密情報をスクリプトに直書きしない</li>
+<li>root 必要なら最初にチェックし、必要最小限だけ昇格</li>
+</ul>
+<p>環境カスタム（<code>~/.bashrc</code>、<code>PATH</code>、<code>alias</code>）は第03章の延長です。スクリプトでは alias に頼らず、フルパスや <code>command</code> で明示すると再現性が上がります。</p>
+<h2 id="7">7. 現場チェック</h2>
+<ul>
+<li>[ ] shebang 付き実行ビットのスクリプトを作れる</li>
+<li>[ ] <code>"$var"</code> と <code>$@</code> の理由を説明できる</li>
+<li>[ ] <code>if</code> / <code>for</code> / <code>while read</code> が書ける</li>
+<li>[ ] <code>bash -n</code> と <code>bash -x</code> を使える</li>
+<li>[ ] 引数不足で使い方を出して終了できる</li>
+</ul>
+<p>手元で「指定ディレクトリのディスク使用量を報告する」スクリプトを1本書いてください。</p>
+<h2 id="_1">次章へ</h2>
+<p>最後に、ホスト上の隔離実行環境として仮想マシンとコンテナの入口を押さえます。第13章へ進みます。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="11.html">← 11 サービスとログ</a><a class="btn btn-primary" href="../quizzes/12.html">小テスト</a><a class="btn btn-ghost" href="13.html">13 仮想化とコンテナ入門 →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

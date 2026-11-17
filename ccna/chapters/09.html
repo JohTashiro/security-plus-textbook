@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>09 運用 自動化 AI · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>CH 09</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html" class="active">09 運用 自動化 AI</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/09.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 09</p>
+        <h1>運用 自動化 AI</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/09.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="09-ai">09 運用 自動化 AI</h1>
+<p>手作業の CLI だけでも小規模は回りますが、台数と変更頻度が増えるとミスと遅延が支配的になります。この章では管理アプローチ、コントローラ／SDN の見方、REST／JSON、Ansible、AI 支援の読み方を実務単位で押さえます。</p>
+<h2 id="1">1. 自動化が運用に与える影響</h2>
+<table>
+<thead>
+<tr>
+<th>観点</th>
+<th>人手中心</th>
+<th>自動化寄り</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>再現性</td>
+<td>人によって差</td>
+<td>同じ手順を何度でも</td>
+</tr>
+<tr>
+<td>速度</td>
+<td>台数に比例して遅い</td>
+<td>並行・一括が可能</td>
+</tr>
+<tr>
+<td>監査</td>
+<td>履歴が散らばりやすい</td>
+<td>コード／ジョブとして残せる</td>
+</tr>
+<tr>
+<td>リスク</td>
+<td>打ち間違い</td>
+<td>悪い Playbook の一括適用</td>
+</tr>
+</tbody>
+</table>
+<p>自動化は「人が考えなくてよい」ではなく、<strong>意図をコード化し、検証してから適用する</strong>ための手段です。</p>
+<h2 id="2">2. 管理アプローチの比較</h2>
+<p>v2.0 で明示される管理の切り口（「v2.0で特に重視」）:</p>
+<table>
+<thead>
+<tr>
+<th>アプローチ</th>
+<th>イメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Device-based</td>
+<td>機器ごとにログインして設定</td>
+</tr>
+<tr>
+<td>Cloud-based</td>
+<td>クラウド上の管理面から操作</td>
+</tr>
+<tr>
+<td>Controller-based</td>
+<td>コントローラがポリシーを配布</td>
+</tr>
+<tr>
+<td>Automation-based</td>
+<td>スクリプト／オーケストレータで実行</td>
+</tr>
+<tr>
+<td>Infrastructure as Code（IaC）</td>
+<td>望ましい状態をファイルで定義</td>
+</tr>
+</tbody>
+</table>
+<p>従来型（機器個別）とコントローラベースを対比すると、制御プレーンの集中度と、ポリシーの一貫性が変わります。</p>
+<h2 id="3-sdn">3. コントローラベース／SDN の用語</h2>
+<table>
+<thead>
+<tr>
+<th>用語</th>
+<th>意味のイメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Underlay</td>
+<td>物理・ルーティングの土台</td>
+</tr>
+<tr>
+<td>Overlay</td>
+<td>その上に張る論理ネットワーク</td>
+</tr>
+<tr>
+<td>Fabric</td>
+<td>一体として動くスイッチ群の枠</td>
+</tr>
+<tr>
+<td>Control plane / Data plane</td>
+<td>制御の頭脳と転送の手足</td>
+</tr>
+<tr>
+<td>Northbound API</td>
+<td>コントローラ ← 上位アプリ／オーケストレータ</td>
+</tr>
+<tr>
+<td>Southbound API</td>
+<td>コントローラ → 機器</td>
+</tr>
+</tbody>
+</table>
+<p>「どこが頭脳で、どこが転送か」「誰が誰を API で呼ぶか」を図で説明できれば十分です。</p>
+<h2 id="4-rest-api-json">4. REST API と JSON</h2>
+<p>REST ベース API の感覚:</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP 動詞</td>
+<td>GET（読）／POST（作）／PUT・PATCH（更）／DELETE（削）</td>
+</tr>
+<tr>
+<td>CRUD</td>
+<td>Create / Read / Update / Delete</td>
+</tr>
+<tr>
+<td>認証</td>
+<td>トークン、Basic、証明書など</td>
+</tr>
+<tr>
+<td>データ</td>
+<td>多くが JSON</td>
+</tr>
+</tbody>
+</table>
+<p>JSON の構成要素の読み方:</p>
+<pre><code class="language-json">{
+  &quot;hostname&quot;: &quot;sw-edge-01&quot;,
+  &quot;vlans&quot;: [10, 20, 30],
+  &quot;up&quot;: true
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>オブジェクト</td>
+<td><code>{ ... }</code></td>
+</tr>
+<tr>
+<td>配列</td>
+<td><code>[ ... ]</code></td>
+</tr>
+<tr>
+<td>文字列 / 数値 / 真偽</td>
+<td><code>"sw-edge-01"</code> / <code>10</code> / <code>true</code></td>
+</tr>
+<tr>
+<td>キーと値の組</td>
+<td><code>"hostname": "..."</code></td>
+</tr>
+</tbody>
+</table>
+<p>試験・現場とも、「この JSON の hostname は何か」「vlans は配列か」が読めれば足場になります。</p>
+<h2 id="5-ansible-terraform">5. 構成管理（Ansible / Terraform）</h2>
+<table>
+<thead>
+<tr>
+<th>ツール</th>
+<th>ざっくりした役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ansible</td>
+<td>エージェントレスで手順（Playbook）を実行し設定を当てる</td>
+</tr>
+<tr>
+<td>Terraform</td>
+<td>望ましいインフラ状態を宣言し、差分を適用する（IaC）</td>
+</tr>
+</tbody>
+</table>
+<p>v1.1 は「能力を識別」、v2.0 は <strong>Ansible などでコマンドを実行する</strong>寄りの表現です（「v2.0で特に重視」）。CCNA では深い Jinja やモジュール暗記より、inventory／playbook／冪等性（何度実行しても意図した状態へ）の言葉が使えれば十分です。</p>
+<p>簡易イメージ（概念）:</p>
+<pre><code class="language-yaml">- name: ensure SSH banner
+  hosts: switches
+  tasks:
+    - name: set banner
+      ios_banner:
+        banner: login
+        text: |
+          Authorized only
+</code></pre>
+<h2 id="6-snmp-syslog">6. 監視との接点（SNMP / syslog）</h2>
+<p>第07章の続きとして、運用章では「誰が何を見るか」に焦点を当てます。</p>
+<ul>
+<li>SNMP: 監視サーバが機器状態を取得する枠組み</li>
+<li>syslog: イベントを重大度・ファシリティ付きで送る</li>
+</ul>
+<p>v2.0 は syslog の <strong>内容・severity・facility の解釈</strong> と SNMP の役割を運用ドメインに置いています。</p>
+<h2 id="7-ai">7. AI とネットワーク運用</h2>
+<h3 id="_1">生成型・予測型・機械学習</h3>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>運用でのイメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generative AI</td>
+<td>文章・設定案・要約の生成</td>
+</tr>
+<tr>
+<td>Predictive</td>
+<td>障害予兆や容量の予測</td>
+</tr>
+<tr>
+<td>Machine learning</td>
+<td>データからパターンを学習</td>
+</tr>
+</tbody>
+</table>
+<h3 id="agentic-aiv20">Agentic AI（v2.0で特に重視）</h3>
+<p>単発の回答だけでなく、<strong>目標に向けてツール呼び出しや手順提案を連鎖する AI エージェント</strong>の役割です。試験説明では、agentic AI やデジタルネットワークアシスタントの出力・推奨を評価する設問があり得るとされています。現場でも「提案を鵜呑みにせず、変更前後の根拠と影響範囲を人が検証する」が基本です。</p>
+<h3 id="v20">プロンプトの構成要素（v2.0で特に重視）</h3>
+<p>生成 AI に送る指示を選ぶとき、次を意識します。</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data classification</td>
+<td>社外秘設定を貼らない、マスクする</td>
+</tr>
+<tr>
+<td>Output format</td>
+<td>「表で」「IOS コマンドのみ」</td>
+</tr>
+<tr>
+<td>Persona</td>
+<td>「現場のネットワーク運用者として」</td>
+</tr>
+<tr>
+<td>Instructions</td>
+<td>「変更は提案のみ。適用手順は分けて書く」</td>
+</tr>
+</tbody>
+</table>
+<p>悪い例: 本番の全設定とパスワードをそのまま貼る。<br>
+良い例: 匿名化した <code>show</code> 抜粋と、欲しい出力形式・制約を明示する。</p>
+<h2 id="8">8. 現場チェック</h2>
+<ul>
+<li>[ ] 自動化の利点と一括適用リスクを説明できる</li>
+<li>[ ] device / controller / automation / IaC の違いを言える</li>
+<li>[ ] underlay / overlay、northbound / southbound を図示できる</li>
+<li>[ ] REST の GET と POST の違い、JSON のオブジェクトと配列を読める</li>
+<li>[ ] Ansible が「手順実行」、Terraform が「状態宣言」寄りであることを説明できる</li>
+<li>[ ] 生成 AI プロンプトで機密・形式・役割・指示を分けられる</li>
+<li>[ ] agentic AI の提案を人間が検証する理由を言える</li>
+</ul>
+<p>ラボ／演習例:</p>
+<ul>
+<li>小さな JSON を読み、特定キーの値を口頭で答える</li>
+<li>匿名化したインタフェース障害の症状から、生成 AI 用プロンプトを1つ書く（機密を入れない）</li>
+</ul>
+<h2 id="_2">まとめ</h2>
+<p>01〜09 で、機器・ケーブル・アドレス・スイッチ／無線・ルーティング・サービス・セキュリティ・運用自動化までが一通りつながります。弱い章の小テストを解き直し、ラボで <code>show</code> と設定の往復を繰り返してください。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="08.html">← 08 セキュリティ基礎</a><a class="btn btn-primary" href="../quizzes/09.html">小テスト</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 11 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 11</span></a>
+  <a class="nav-back" href="../chapters/11.html">← CH 11 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html" class="active">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 11</p>
+        <h1>サービスとログ</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/11.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "サービス状態確認の定番はどれか。", "type": "single", "choices": ["`systemctl status`", "`mkfs` のみ", "`useradd` のみ", "`fdisk` のみ"], "answer": "A", "explain": "状態は systemctl status。"}, {"id": "Q2", "stem": "起動時有効化の定番はどれか。", "type": "single", "choices": ["`systemctl enable`", "`chmod 777 /`", "`swapoff -a` のみ", "`history -c` のみ"], "answer": "A", "explain": "自動起動は enable。"}, {"id": "Q3", "stem": "特定ユニットの journal を見る例に近いのはどれか。", "type": "single", "choices": ["`journalctl -u nginx`", "`passwd nginx` のみ", "`ip link set down` のみ", "`visudo` のみ"], "answer": "A", "explain": "ユニット指定は -u。"}, {"id": "Q4", "stem": "ログのローテ・圧縮を担う定番ツールはどれか。", "type": "single", "choices": ["`logrotate`", "だけ `ping`", "だけ `traceroute`", "だけ `nmcli`"], "answer": "A", "explain": "ローテは logrotate。"}, {"id": "Q5", "stem": "RHEL 系で時刻同期の現行主流に近いのはどれか。", "type": "single", "choices": ["chrony（`chronyc`）", "だけ PortFast", "だけ LACP", "だけ WPA チャネル名"], "answer": "A", "explain": "RHEL 系は chrony 寄り。"}, {"id": "Q6", "stem": "systemd timer の説明として適切なのはどれか。", "type": "single", "choices": ["いつ起動するかを定義し、対応する service を動かす", "ファイアウォールそのもの", "LVM の VG 名そのもの", "DNS の MX レコードそのもの"], "answer": "A", "explain": "timer が起動契機。"}, {"id": "Q7", "stem": "systemd 運用として適切なものを選べ。", "type": "multi", "choices": ["`daemon-reload` をユニット変更後に意識する", "`is-active` / `is-enabled` で状態確認", "`/etc/systemd/system/` は管理者上書き寄り", "ユニットを理由なく全部 mask し続ける"], "answer": "A, B, C", "explain": "無差別 mask は不適切。"}, {"id": "Q8", "stem": "ログ調査として適切なものを選べ。", "type": "multi", "choices": ["`journalctl -f` で追跡", "優先度フィルタ（例: `-p err`）", "`/var/log` 配下も見る", "ログを見ずにディスクを初期化する"], "answer": "A, B, C", "explain": "初期化は調査ではない。"}, {"id": "Q9", "stem": "時刻について適切なものを選べ。", "type": "multi", "choices": ["ずれはログ相関を壊す", "`timedatectl` で概況を見られる", "chrony は現行主流の一つ", "時刻はセキュリティに無関係"], "answer": "A, B, C", "explain": "時刻はセキュリティにも影響。"}, {"id": "Q10", "stem": "nginx を再起動する `systemctl` 例を書け。", "type": "text", "choices": [], "answer": "例: `systemctl restart nginx`", "explain": "再起動。"}, {"id": "Q11", "stem": "直近1時間の journal に絞るオプション例を書け（概念で可）。", "type": "text", "choices": [], "answer": "例: `--since \"1 hour ago\"`", "explain": "時間絞り。"}, {"id": "Q12", "stem": "サービスが自動起動しない。`status` は inactive。最も妥当な確認はどれか。", "type": "single", "choices": ["`systemctl is-enabled` とユニットの失敗ログ（journal）を見る", "即 `rm -rf /var`", "全ユーザパスワードを空にする", "ケーブルの色を変える"], "answer": "A", "explain": "enable 状態と journal を見る。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

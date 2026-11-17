@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 01 · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>Quiz 01</span></a>
+  <a class="nav-back" href="../chapters/01.html">← CH 01 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html" class="active">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 01</p>
+        <h1>ネットワーク機器と構成</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/01.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "異なる IP サブネット間の転送を主な役割とする機器はどれか。", "type": "single", "choices": ["L2 スイッチのみ", "ルータ", "ハブ", "アクセスポイント単体（ルーティング機能なし）"], "answer": "B", "explain": "異なる IP ネットワーク間の転送はルータ（または L3 機能）の役割。"}, {"id": "Q2", "stem": "VLAN 間ルーティングを同一筐体で行うことが多いのはどれか。", "type": "single", "choices": ["リピータ", "L3 スイッチ", "モデム", "PoE インジェクタ"], "answer": "B", "explain": "L3 スイッチは VLAN 間ルーティングを筐体内で行うことが多い。"}, {"id": "Q3", "stem": "PoE の説明として最も適切なのはどれか。", "type": "single", "choices": ["無線だけで給電する規格", "光ファイバ経由で給電する規格", "Ethernet ケーブル経由で端末に給電する技術", "サーバの電源冗長化の別名"], "answer": "C", "explain": "PoE は Ethernet ケーブル経由の給電。"}, {"id": "Q4", "stem": "Spine-leaf 構成の説明として正しいものはどれか。", "type": "single", "choices": ["必ず3階層のキャンパス専用である", "leaf 同士が直接フルメッシュになるのが基本である", "leaf がエンドポイント側、spine が leaf 間をつなぐ役割を持つことが多い", "SOHO 向けの家庭用ルータ構成の別名である"], "answer": "C", "explain": "spine-leaf では leaf が端、spine が葉間接続の役割を持つことが多い。"}, {"id": "Q5", "stem": "VRF の主な目的はどれか。", "type": "single", "choices": ["無線チャネルを自動選択する", "ルータ上で経路表を論理分割する", "MAC アドレスを暗号化して隠す", "PoE のワット数を増やす"], "answer": "B", "explain": "VRF は経路表の論理分割。"}, {"id": "Q6", "stem": "コンテナと VM の違いとして最も適切なのはどれか。", "type": "single", "choices": ["コンテナは必ず専用のハードウェアが必要", "VM はカーネルを共有し、コンテナはゲスト OS を必ず持つ", "コンテナはホストのカーネルを共有し、VM はゲスト OS を含むことが多い", "両者に技術的な差はない"], "answer": "C", "explain": "コンテナはホストカーネル共有、VM はゲスト OS を持つ構成が一般的。"}, {"id": "Q7", "stem": "L2 スイッチの動作として適切なものを選べ。", "type": "multi", "choices": ["送信元 MAC を学習する", "宛先 MAC が未知ならフラッディングし得る", "既定で異なる IP ネットワーク間をルーティングする", "MAC アドレステーブルを持つ"], "answer": "A, B, D", "explain": "L2 は既定では IP ルーティングしない（C は不可）。"}, {"id": "Q8", "stem": "NGFW / IPS に関係する説明として適切なものを選べ。", "type": "multi", "choices": ["IPS は攻撃らしき通信の検知・遮断に関わる", "ファイアウォールはポリシーに基づき通信を制御する", "NGFW はアプリケーション識別などを含む製品カテゴリである", "IPS は必ず L2 スイッチの代替になる"], "answer": "A, B, C", "explain": "IPS は L2 スイッチの代替ではない（D は不可）。"}, {"id": "Q9", "stem": "キャンパスの Two-tier（折りたたみコア）について適切なものを選べ。", "type": "multi", "choices": ["アクセス層と、ディストリ／コアをまとめた層で構成されやすい", "中小規模で採用されやすい", "必ずデータセンター専用である", "コア障害の影響範囲はアクセス障害より広くなりやすい"], "answer": "A, B, D", "explain": "Two-tier は DC 専用ではない（C は不可）。"}, {"id": "Q10", "stem": "無線クライアントを有線 LAN に橋渡しする無線機側の装置を何と呼ぶか。（略語可）", "type": "text", "choices": [], "answer": "アクセスポイント（AP）", "explain": "Access Point。"}, {"id": "Q11", "stem": "L2 スイッチが、学習済みでない宛先 MAC のフレームを複数ポートへ送り出す動作を何と呼ぶか。", "type": "text", "choices": [], "answer": "フラッディング（flooding）", "explain": "未知ユニキャスト等で複数ポートへ送出。"}, {"id": "Q12", "stem": "あるフロアで IP 電話と無線 AP を PoE スイッチに接続した。電話は起動するが、AP を追加した直後から電話が断続的に再起動する。最初に疑うべき点として最も適切なのはどれか。", "type": "single", "choices": ["OSPF のエリア設計だけを疑う", "スイッチの PoE 給電予算（電力合計）とケーブル品質を確認する", "インターネットの DNS だけを変更する", "すべての VLAN を削除する"], "answer": "B", "explain": "PoE 端末追加後の再起動は給電不足・ケーブル不良を先に疑う。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

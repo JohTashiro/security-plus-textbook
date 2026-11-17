@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 05 · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>Quiz 05</span></a>
+  <a class="nav-back" href="../chapters/05.html">← CH 05 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html" class="active">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 05</p>
+        <h1>無線LAN</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/05.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "2.4 GHz で非重複としてよく使うチャネルの組み合わせはどれか。", "type": "single", "choices": ["1 / 6 / 11", "1 / 2 / 3", "36 / 40 / 44 のみ（2.4 の話ではない）", "常に全チャネルを同一にする"], "answer": "A", "explain": "2.4 GHz の非重複定番は 1/6/11。"}, {"id": "Q2", "stem": "SSID の説明として最も近いのはどれか。", "type": "single", "choices": ["無線ネットワークの名前（識別子）", "OSPF のエリア ID", "光ファイバのモード", "STP のルート優先度"], "answer": "A", "explain": "SSID は無線ネットワーク名。"}, {"id": "Q3", "stem": "中小規模でよく使う事前共有鍵方式はどれか。", "type": "single", "choices": ["WPA2-PSK", "常にオープンのみ", "Native VLAN", "LACP"], "answer": "A", "explain": "事前共有鍵は WPA2-PSK が典型。"}, {"id": "Q4", "stem": "多数の AP を集中管理する典型構成はどれか。", "type": "single", "choices": ["Lightweight AP + WLC", "ハブのみ", "STP 無効化のみ", "静的ルートだけで無線が動く"], "answer": "A", "explain": "集中管理は AP + WLC。"}, {"id": "Q5", "stem": "AP をスイッチへ接続するとき、複数 SSID（複数 VLAN）を運ぶなら典型はどれか。", "type": "single", "choices": ["トランクポート", "必ず Console のみ", "必ずシリアル PPP", "NAT 必須"], "answer": "A", "explain": "複数 VLAN を運ぶならトランク。"}, {"id": "Q6", "stem": "電子レンジなどが特に影響しやすいバンドはどれか。", "type": "single", "choices": ["2.4 GHz", "シングルモード光ファイバのみ", "OSPFv3 のみ", "VLAN 1 のみ"], "answer": "A", "explain": "電子レンジ等は 2.4 GHz に影響しやすい。"}, {"id": "Q7", "stem": "RF／チャネルについて適切なものを選べ。", "type": "multi", "choices": ["障害物や距離で品質が変わる", "隣接チャネルは干渉しやすい", "出力を上げすぎるとセルが重なり干渉が増え得る", "無線は常に有線より干渉が無い"], "answer": "A, B, C", "explain": "無線は干渉・減衰の影響を受ける。"}, {"id": "Q8", "stem": "無線セキュリティについて適切なものを選べ。", "type": "multi", "choices": ["WPA2 / WPA3 は現行で重要な選択肢", "SSID を隠しただけでは十分ではない", "企業では 802.1X（Enterprise）が多い", "オープン認証が常に最も安全"], "answer": "A, B, C", "explain": "オープンは安全ではない。SSID 隠蔽も十分でない。"}, {"id": "Q9", "stem": "クライアントが「つながったが通信できない」ときに疑うものとして適切なものを選べ。", "type": "multi", "choices": ["DHCP／IP 設定", "ゲートウェイ・DNS", "有線側 VLAN の不一致", "ケーブルの色だけ"], "answer": "A, B, C", "explain": "色は無関係。IP／GW／VLAN を疑う。"}, {"id": "Q10", "stem": "Cisco キャンパスで AP を集中管理するコントローラ装置を一般に何と呼ぶか（略称可）。", "type": "text", "choices": [], "answer": "WLC（Wireless LAN Controller）", "explain": "AP 集中管理。"}, {"id": "Q11", "stem": "WLC などで複数物理リンクを束ねる接続として出題・実務で触れる用語を1つ書け。", "type": "text", "choices": [], "answer": "LAG（リンクアグリゲーション）", "explain": "WLC の冗長・帯域用。"}, {"id": "Q12", "stem": "新オフィスで 2.4 GHz のみの AP を隣接チャネル（1 と 2）で密集配置した。端末は接続できるが速度が極端に落ちる。最も妥当な初動はどれか。", "type": "single", "choices": ["非重複チャネル（1/6/11）へ再設計し、密度と出力も見直す", "STP を全無効化する", "すべての VLAN を消す", "OSPF の Router ID だけ変える"], "answer": "A", "explain": "隣接チャネル密集は干渉の典型。非重複へ再設計。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

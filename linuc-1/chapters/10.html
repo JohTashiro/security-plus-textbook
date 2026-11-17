@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>10 ネットワーク設定 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>CH 10</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html" class="active">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/10.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 10</p>
+        <h1>ネットワーク設定</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/10.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="10">10 ネットワーク設定</h1>
+<p>アドレス・経路・名前解決・ファイアウォールが揃って初めて「届く」状態になります。この章では <code>ip</code>、NetworkManager、Netplan、DNS、firewalld/ufw、切り分け手順を実務単位で押さえます。</p>
+<h2 id="1-tcpip">1. TCP/IP の現場メモ</h2>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>押さえること</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPv4</td>
+<td>アドレス、マスク／CIDR、ゲートウェイ</td>
+</tr>
+<tr>
+<td>IPv6</td>
+<td>リンクローカルとグローバルの感覚</td>
+</tr>
+<tr>
+<td>ポート</td>
+<td>22/ssh、80/http、443/https、53/dns など</td>
+</tr>
+<tr>
+<td>名前解決</td>
+<td>DNS と <code>/etc/hosts</code></td>
+</tr>
+</tbody>
+</table>
+<p>詳細なサブネット計算は CCNA 寄りでも、Linux 側では「この NIC の CIDR と default route」を即座に読めることが重要です。</p>
+<h2 id="2-ip">2. <code>ip</code> コマンド（現行の基本）</h2>
+<pre><code class="language-bash">ip link
+ip -br addr
+ip addr show eth0
+sudo ip addr add 192.0.2.10/24 dev eth0
+sudo ip link set eth0 up
+ip route
+sudo ip route add default via 192.0.2.1
+</code></pre>
+<p>一時設定は再起動で消えることが多いです。永続化は配布の仕組みに任せます。</p>
+<p>旧 <code>ifconfig</code> / <code>route</code> は 10.0 文脈ではまだ見えますが、現場と 11.0 は <strong><code>ip</code> 中心</strong>です（「11.0で特に重視」）。</p>
+<h2 id="3-networkmanager-netplan-ifupdown">3. NetworkManager と Netplan / ifupdown</h2>
+<table>
+<thead>
+<tr>
+<th>系</th>
+<th>典型</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RHEL 系など</td>
+<td>NetworkManager</td>
+<td><code>nmcli</code> / <code>nmtui</code></td>
+</tr>
+<tr>
+<td>Ubuntu 系</td>
+<td>Netplan → 裏で NM 等</td>
+<td><code>/etc/netplan/*.yaml</code> + <code>netplan apply</code></td>
+</tr>
+<tr>
+<td>古い Debian 系</td>
+<td>ifupdown</td>
+<td><code>/etc/network/interfaces</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">nmcli device status
+nmcli connection show
+sudo nmcli connection modify eth0 ipv4.addresses 192.0.2.10/24
+sudo nmcli connection modify eth0 ipv4.gateway 192.0.2.1
+sudo nmcli connection modify eth0 ipv4.dns &quot;192.0.2.53&quot;
+sudo nmcli connection modify eth0 ipv4.method manual
+sudo nmcli connection up eth0
+</code></pre>
+<p>Netplan 例（概念）:</p>
+<pre><code class="language-yaml">network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: false
+      addresses: [192.0.2.10/24]
+      routes:
+        - to: default
+          via: 192.0.2.1
+      nameservers:
+        addresses: [192.0.2.53]
+</code></pre>
+<pre><code class="language-bash">sudo netplan try
+sudo netplan apply
+</code></pre>
+<p>Version 11.0 で Netplan が明示（「11.0で特に重視」）。無線は <code>nmcli</code> や <code>iw</code> でリンク状態を見る、程度で足場になります。</p>
+<h2 id="4-dns">4. DNS と名前解決</h2>
+<pre><code class="language-bash">resolvectl status          # systemd-resolved 環境
+cat /etc/resolv.conf
+getent hosts example.com
+ping -c 3 example.com
+</code></pre>
+<p><code>/etc/hosts</code> はローカル上書き。切り分けでは「名前は解けるが IP に届かない」と「名前が解けない」を分離します。</p>
+<h2 id="5-firewalld-ufw">5. ファイアウォール（firewalld / ufw）</h2>
+<table>
+<thead>
+<tr>
+<th>配布寄り</th>
+<th>ツール</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RHEL 系</td>
+<td>firewalld / <code>firewall-cmd</code></td>
+</tr>
+<tr>
+<td>Ubuntu 系</td>
+<td>ufw</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-bash">sudo firewall-cmd --state
+sudo firewall-cmd --get-default-zone
+sudo firewall-cmd --list-all
+sudo firewall-cmd --add-service=http --permanent
+sudo firewall-cmd --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload
+</code></pre>
+<pre><code class="language-bash">sudo ufw status
+sudo ufw allow 22/tcp
+sudo ufw allow 'Nginx Full'
+sudo ufw enable
+</code></pre>
+<p>Version 10.0 の iptables「概要」は、現行主流（firewalld/ufw）への橋渡しとして短く触れれば十分です。11.0 は操作そのものが範囲です（「11.0で特に重視」）。</p>
+<h2 id="6">6. 切り分けの定石</h2>
+<ol>
+<li>リンク UP か（<code>ip link</code>）</li>
+<li>アドレスとマスクか（<code>ip addr</code>）</li>
+<li>デフォルト経路か（<code>ip route</code>）</li>
+<li>同網・GW へ <code>ping</code></li>
+<li>名前解決か（<code>getent</code> / <code>resolvectl</code>）</li>
+<li>待ち受けと FW か（<code>ss -tlnp</code>、firewall）</li>
+</ol>
+<pre><code class="language-bash">ping -c 3 192.0.2.1
+traceroute 192.0.2.1      # または tracepath
+ss -tlnp
+ip neigh
+</code></pre>
+<h2 id="7">7. 現場チェック</h2>
+<ul>
+<li>[ ] <code>ip addr</code> / <code>ip route</code> で現状を読める</li>
+<li>[ ] nmcli または Netplan で静的 IP を永続化できる</li>
+<li>[ ] DNS 障害と到達性障害を切り分けられる</li>
+<li>[ ] firewalld または ufw でサービス／ポートを許可し永続化できる</li>
+<li>[ ] <code>ss -tlnp</code> で待ち受けを確認できる</li>
+</ul>
+<p>手元 VM で静的 IP → 再起動後も維持 → HTTP 用ポート許可、まで一度通してください。</p>
+<h2 id="_1">次章へ</h2>
+<p>ネットワークの先で動くのがサービスとログです。第11章で systemd、journal、rsyslog、時刻同期を扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="09.html">← 09 ユーザーとセキュリティ</a><a class="btn btn-primary" href="../quizzes/10.html">小テスト</a><a class="btn btn-ghost" href="11.html">11 サービスとログ →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

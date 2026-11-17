@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 09 · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>Quiz 09</span></a>
+  <a class="nav-back" href="../chapters/09.html">← CH 09 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html" class="active">09 運用 自動化 AI</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 09</p>
+        <h1>運用 自動化 AI</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/09.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "望ましいインフラ状態をファイルで定義し差分適用する考え方に近いのはどれか。", "type": "single", "choices": ["Infrastructure as Code", "だけ PortFast", "Native VLAN の色", "ケーブルのメーカー名のみ"], "answer": "A", "explain": "状態定義は IaC。"}, {"id": "Q2", "stem": "コントローラが機器を制御する方向の API として説明されることが多いのはどれか。", "type": "single", "choices": ["Southbound API", "だけ DHCP プール名", "だけ SSID 隠蔽", "だけ STP コスト色"], "answer": "A", "explain": "機器方向は Southbound。"}, {"id": "Q3", "stem": "REST でリソースを取得する典型的な HTTP 動詞はどれか。", "type": "single", "choices": ["GET", "だけ Cable color", "だけ VLAN 削除のみ", "だけ OSPF エリア色"], "answer": "A", "explain": "取得は GET。"}, {"id": "Q4", "stem": "次の JSON で `up` の型として適切な説明はどれか。`{\"up\": true}`", "type": "single", "choices": ["真偽値", "必ず配列", "必ず ACL 番号", "必ず MAC アドレス"], "answer": "A", "explain": "true/false は真偽。"}, {"id": "Q5", "stem": "エージェントレスで Playbook を実行し機器へ設定を当てる代表例はどれか。", "type": "single", "choices": ["Ansible", "だけ EtherChannel 番号", "だけ CDP タイマー色", "だけ WPA チャネル幅名"], "answer": "A", "explain": "Playbook 実行は Ansible。"}, {"id": "Q6", "stem": "生成 AI に本番の平文パスワードをそのまま貼る行為について適切なのはどれか。", "type": "single", "choices": ["データ分類の観点で避けるべき", "常に推奨されるベストプラクティス", "JSON 配列の必須要件", "Southbound API の定義そのもの"], "answer": "A", "explain": "機密は貼らない。"}, {"id": "Q7", "stem": "ネットワーク管理アプローチとして適切なものを選べ。", "type": "multi", "choices": ["Device-based", "Controller-based", "Automation-based", "ケーブル色の暗記のみ"], "answer": "A, B, C", "explain": "色暗記は管理アプローチではない。"}, {"id": "Q8", "stem": "SDN／コントローラ関連で適切なものを選べ。", "type": "multi", "choices": ["Underlay は土台側", "Overlay は論理側", "Northbound は上位アプリ側との接点になりやすい", "Overlay は必ず銅線の色を意味する"], "answer": "A, B, C", "explain": "Overlay≠銅線の色。"}, {"id": "Q9", "stem": "AI 運用で適切なものを選べ。", "type": "multi", "choices": ["生成 AI は要約や設定案の生成に使われ得る", "agentic AI は手順提案やツール連鎖の役割が語られる", "提案は人が影響範囲を検証する", "AI 出力は常に無検証で本番適用すべき"], "answer": "A, B, C", "explain": "無検証の本番適用は不適切。"}, {"id": "Q10", "stem": "CRUD の「Read」に対応しやすい HTTP 動詞を書け。", "type": "text", "choices": [], "answer": "GET", "explain": "Read に対応。"}, {"id": "Q11", "stem": "JSON で複数の値を順に持つ `[]` の構造名を書け。", "type": "text", "choices": [], "answer": "配列（array）", "explain": "`[]` は配列。"}, {"id": "Q12", "stem": "生成 AI に「障害切り分けの手順を表形式で」頼む。設定は匿名化済み。プロンプトに入れると有効な要素の組み合わせとして最も妥当なのはどれか。", "type": "single", "choices": ["出力形式（表）・役割（運用者）・指示（提案のみ／適用は別）を明示する", "本番の全秘密鍵を追加で貼る", "すべての OSPF を消す指示だけを出す", "syslog を止めてディスクを初期化する指示だけを出す"], "answer": "A", "explain": "形式・役割・指示を分ける。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

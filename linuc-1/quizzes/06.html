@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 06 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 06</span></a>
+  <a class="nav-back" href="../chapters/06.html">← CH 06 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html" class="active">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 06</p>
+        <h1>プロセス管理</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/06.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "実行中プロセスのスナップショットを見る定番はどれか。", "type": "single", "choices": ["`ps`", "`mkfs`", "`useradd`", "`chmod` のみ"], "answer": "A", "explain": "スナップショットは ps。"}, {"id": "Q2", "stem": "名前から PID を探すのに適するのはどれか。", "type": "single", "choices": ["`pgrep`", "`fdisk`", "`lsblk` のみ", "`passwd`"], "answer": "A", "explain": "名前検索は pgrep。"}, {"id": "Q3", "stem": "まず試すべき丁寧な終了シグナルとして適切なのはどれか。", "type": "single", "choices": ["SIGTERM（例: `kill -15`）", "常に即 `kill -9` のみ", "`rm -rf /`", "`shutdown` をプロセス PID に対して"], "answer": "A", "explain": "まず TERM。"}, {"id": "Q4", "stem": "`kill -9` の説明として近いのはどれか。", "type": "single", "choices": ["強制終了で、最後の手段になりやすい", "設定の文法チェック専用", "パッケージ更新専用", "常に最も安全で推奨される第一選択"], "answer": "A", "explain": "-9 は強制・最終手段。"}, {"id": "Q5", "stem": "ログアウト後もジョブを続けやすい例はどれか。", "type": "single", "choices": ["`nohup` や tmux 内実行", "必ず `kill -9` してから放置", "`mkfs` する", "`/etc` を消す"], "answer": "A", "explain": "nohup / tmux が定番。"}, {"id": "Q6", "stem": "`nice -n 10 ./job` の意図に近いのはどれか。", "type": "single", "choices": ["優先度を控えめにしてバッチを走らせる", "ディスクを初期化する", "ユーザを削除する", "ファイアウォールを無効化する"], "answer": "A", "explain": "nice で控えめ実行。"}, {"id": "Q7", "stem": "監視に使うものとして適切なものを選べ。", "type": "multi", "choices": ["`top`", "`uptime`", "`ps aux`", "`iptables -F` を無条件実行"], "answer": "A, B, C", "explain": "iptables -F は監視ではない。"}, {"id": "Q8", "stem": "ジョブ制御について適切なものを選べ。", "type": "multi", "choices": ["`&` でバックグラウンド起動できる", "`jobs` で一覧できる", "`fg` / `bg` で切り替えられる", "ジョブ制御はカーネルコンパイル専用"], "answer": "A, B, C", "explain": "ジョブ制御は対話シェルの基本。"}, {"id": "Q9", "stem": "負荷切り分けとして適切なものを選べ。", "type": "multi", "choices": ["CPU／メモリ上位を `ps` で確認する", "ログを grep 等で絞る", "まず全ディスクを mkfs する", "必要なら TERM の後に KILL を検討する"], "answer": "A, B, D", "explain": "mkfs は切り分け初手ではない。"}, {"id": "Q10", "stem": "プロセスツリーを見るコマンド例を1つ書け。", "type": "text", "choices": [], "answer": "例: `pstree -p`", "explain": "ツリー表示。"}, {"id": "Q11", "stem": "PID 1234 に TERM を送るコマンド例を書け。", "type": "text", "choices": [], "answer": "例: `kill -15 1234` または `kill 1234`", "explain": "TERM。"}, {"id": "Q12", "stem": "Web サーバが応答しない。`top` で `httpd` が CPU を占有している。設定変更のあとなので優雅に止めたい。最も妥当な初手はどれか。", "type": "single", "choices": ["該当 PID に `kill`（TERM）し、落ちなければサービス経由の再起動やログ確認へ進む", "即 `mkfs` でルートを消す", "全ユーザを `userdel` する", "ケーブルの色を変えるだけ"], "answer": "A", "explain": "まず TERM／サービス再起動とログ。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

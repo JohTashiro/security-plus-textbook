@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>02 ケーブルとインタフェース障害 · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>CH 02</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html" class="active">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/02.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 02</p>
+        <h1>ケーブルとインタフェース障害</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/02.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="02">02 ケーブルとインタフェース障害</h1>
+<p>リンクが上がらない、速度が遅い、エラーが増える——現場で最初に疑うのは論理設定より物理とインタフェース状態です。この章では媒体の種類、二重化／速度、切り分け手順を押さえます。</p>
+<h2 id="1">1. ケーブルの種類</h2>
+<h3 id="copper">銅線（Copper）</h3>
+<p>UTP / STP の Ethernet ケーブルが中心です。カテゴリ（Cat5e / Cat6 など）と長さ制限（おおむね 100m）を超えると、リンク不安定や誤りが増えます。ストレートとクロスの区別は、現行の Auto-MDIX 付き機器では意識しにくいですが、古い機器や特殊ポートではまだ効きます。</p>
+<h3 id="_1">光ファイバ</h3>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>特徴</th>
+<th>使いどころ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>マルチモード（MMF）</td>
+<td>コアが太い。短〜中距離</td>
+<td>ラック間・フロア間</td>
+</tr>
+<tr>
+<td>シングルモード（SMF）</td>
+<td>コアが細い。長距離</td>
+<td>キャンパス間・WAN 寄り</td>
+</tr>
+</tbody>
+</table>
+<p>光は送受信（Tx/Rx）の向きとコネクタ種別（LC など）、モジュール（SFP/SFP+）の互換が重要です。銅線用ポートに光モジュールを挿しても動きません。</p>
+<h3 id="_2">接続の形態</h3>
+<ul>
+<li><strong>共有メディア</strong>: 昔のハブ的な衝突領域の考え方。現行スイッチではポートごとに独立した衝突ドメイン。</li>
+<li><strong>ポイントツーポイント</strong>: ルータ間や光リンクなど、1対1接続。</li>
+</ul>
+<h2 id="2-duplex">2. 速度と二重化（Duplex）</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>速度</td>
+<td>10/100/1000 Mbps など。両端で一致させる</td>
+</tr>
+<tr>
+<td>全二重（full）</td>
+<td>送受信同時。スイッチ接続の標準</td>
+</tr>
+<tr>
+<td>半二重（half）</td>
+<td>同時送受信しない。衝突（collision）が発生し得る</td>
+</tr>
+</tbody>
+</table>
+<p>一方が auto、他方が固定、あるいは片方が half 固定だと <strong>mismatch duplex</strong> になり、遅い・切れやすい・CRC/collision が増える典型パターンです。v2.0 ではケーブル診断（距離、信号レベル、pin out、タイプ）や duplex 不一致の切り分けがより明示的に問われます。</p>
+<h2 id="3">3. よくある症状と見るカウンタ</h2>
+<p>Cisco IOS 系での確認例:</p>
+<pre><code class="language-text">show interfaces GigabitEthernet0/1
+show interfaces status
+show interfaces GigabitEthernet0/1 counters errors
+</code></pre>
+<p>見るポイント:</p>
+<ul>
+<li><strong>line protocol is down / administratively down</strong>: ケーブル・対向電源・shutdown</li>
+<li><strong>CRC / input errors</strong>: ケーブル不良、ノイズ、二重化不一致</li>
+<li><strong>collisions / late collisions</strong>: 半二重や距離・配線の問題を疑う</li>
+<li><strong>runts / giants</strong>: フレーム長異常。二重化や不良も関連し得る</li>
+<li><strong>speed / duplex</strong>: <code>show interfaces status</code> で実効値を確認</li>
+</ul>
+<p>光リンクでは、光モジュールの有無、Tx/Rx の入れ違い、汚れ、対応波長も疑います。</p>
+<h2 id="4">4. 切り分けの順番（実務）</h2>
+<ol>
+<li>LED / <code>show interfaces status</code> でリンクの有無</li>
+<li>ケーブル交換・別ポート・別パッチ盤で切り分け</li>
+<li>両端の speed/duplex（auto 同士が基本。固定するなら両端そろえる）</li>
+<li>エラーカウンタをクリアして再計測（一時スパイクか継続か）</li>
+<li>それでもダメなら SFP／対向機器／配線経路へ</li>
+</ol>
+<p>ラボで再現するなら、わざと片側だけ 100/full 固定にして症状を観察すると理解が速いです。</p>
+<h2 id="5">5. 現場チェック</h2>
+<ul>
+<li>[ ] 銅線と光の使い分けを説明できる</li>
+<li>[ ] duplex mismatch の典型症状を言える</li>
+<li>[ ] <code>show interfaces</code> で errors / CRC / collisions を読める</li>
+<li>[ ] 「まずケーブルとリンク」から入る癖がある</li>
+</ul>
+<h2 id="_3">次章へ</h2>
+<p>物理が安定したら、その上を流れる TCP/UDP と IP アドレス設計です。第03章でサブネットと IPv6 を扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="01.html">← 01 ネットワーク機器と構成</a><a class="btn btn-primary" href="../quizzes/02.html">小テスト</a><a class="btn btn-ghost" href="03.html">03 TCP UDPとIPアドレス →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

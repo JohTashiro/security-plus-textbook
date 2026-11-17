@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 02 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 02</span></a>
+  <a class="nav-back" href="../chapters/02.html">← CH 02 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html" class="active">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 02</p>
+        <h1>起動とランレベル systemd</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/02.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "現行の多くの Linux で PID 1 として動くのはどれか。", "type": "single", "choices": ["cron だけ", "systemd", "nginx", "sshd のみ"], "answer": "B", "explain": "現行の多くのディストリで PID 1 は systemd。"}, {"id": "Q2", "stem": "ブート時にサービスを自動起動する設定にする基本コマンドはどれか。", "type": "single", "choices": ["`systemctl enable サービス`", "`chmod 777 /`", "`userdel -r root`", "`mkfs` をルートに実行"], "answer": "A", "explain": "自動起動は `systemctl enable`。"}, {"id": "Q3", "stem": "GUI なしの通常サーバ運用でよく使うターゲットはどれか。", "type": "single", "choices": ["`emergency.target` のみ常時", "`multi-user.target`", "`swap.target` だけ", "`shutdown.target` をデフォルトにする"], "answer": "B", "explain": "サーバは `multi-user.target` が定番。"}, {"id": "Q4", "stem": "サービス単位のログを見るのに適したコマンドはどれか。", "type": "single", "choices": ["`journalctl -u サービス名`", "`ping -c 1 127.0.0.1` のみ", "`passwd`", "`lsblk`"], "answer": "A", "explain": "単位ログは `journalctl -u`。"}, {"id": "Q5", "stem": "systemd のタイマーについて適切なのはどれか。", "type": "single", "choices": ["時間起動の仕組みで、対応する service と組で使うことが多い", "ディスクパーティション形式の名前である", "NIC のボンディング専用である", "UEFI の必須パーティション名である"], "answer": "A", "explain": "timer は service と組で時間起動する。"}, {"id": "Q6", "stem": "起動の一般的な順序として正しいものはどれか。", "type": "single", "choices": ["systemd → カーネル → ファームウェア", "ファームウェア → ブートローダ → カーネル → systemd", "アプリ → BIOS → カーネル", "Docker → GRUB → 電源"], "answer": "B", "explain": "ファーム → ブートローダ → カーネル → systemd。"}, {"id": "Q7", "stem": "`systemctl` で行う操作として適切なものを選べ。", "type": "multi", "choices": ["`start` / `stop` / `restart`", "`status` で状態確認", "`enable` / `disable` で自動起動制御", "`mkfs.ext4` の代替になる"], "answer": "A, B, C", "explain": "systemctl は mkfs の代替ではない。"}, {"id": "Q8", "stem": "修復・緊急時に関係しやすいターゲットを選べ。", "type": "multi", "choices": ["`rescue.target`", "`emergency.target`", "`graphical.target` を常に緊急用と呼ぶ", "デフォルトターゲットの確認に `systemctl get-default`"], "answer": "A, B, D", "explain": "graphical は緊急専用ではない。"}, {"id": "Q9", "stem": "タイマー運用について適切なものを選べ。", "type": "multi", "choices": ["`systemctl list-timers` で一覧できる", "cron と併存する環境もある", "Version 11.0 では特に意識しやすい", "タイマーを使うと SSH が不要になる"], "answer": "A, B, C", "explain": "タイマー利用で SSH が不要にはならない。"}, {"id": "Q10", "stem": "現在のデフォルトターゲットを表示するコマンドを書け。", "type": "text", "choices": [], "answer": "`systemctl get-default`", "explain": "デフォルトターゲット表示。"}, {"id": "Q11", "stem": "`sshd`（または `ssh`）サービスが稼働中か確認する `systemctl` コマンド例を1つ書け。", "type": "text", "choices": [], "answer": "例: `systemctl status sshd` または `systemctl is-active ssh`", "explain": "ディストリで単位名が違う点に注意。"}, {"id": "Q12", "stem": "サーバ再起動後に Web サーバが応答しない。プロセスもいない。パッケージは入っている。最初に確認すべきこととして最も適切なのはどれか。", "type": "single", "choices": ["`systemctl status` と `is-enabled` でサービス状態と自動起動を確認する", "すべてのディスクを初期化する", "ルートのパスワードを空にする", "カーネルを毎日再コンパイルする運用に切り替える"], "answer": "A", "explain": "再起動後に落ちる典型は enable 忘れ・起動失敗。status から入る。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

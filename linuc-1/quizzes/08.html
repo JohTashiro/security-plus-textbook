@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 08 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 08</span></a>
+  <a class="nav-back" href="../chapters/08.html">← CH 08 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html">07 パッケージ管理</a>
+<a href="../chapters/08.html" class="active">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 08</p>
+        <h1>ストレージとファイルシステム</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/08.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "ブロックデバイスのツリー表示に使う定番はどれか。", "type": "single", "choices": ["`lsblk`", "`passwd`", "`userdel`", "`chmod 777` のみ"], "answer": "A", "explain": "デバイス一覧は lsblk。"}, {"id": "Q2", "stem": "UEFI 起動で必要になりやすい特別なパーティションはどれか。", "type": "single", "choices": ["ESP（EFI System Partition）", "だけ swap という名前のユーザ", "だけ `/tmp` の色情報", "だけ `PATH` 変数"], "answer": "A", "explain": "UEFI は ESP が典型。"}, {"id": "Q3", "stem": "ext4 を作る典型コマンドはどれか。", "type": "single", "choices": ["`mkfs.ext4`", "`systemctl isolate`", "`tmux`", "`grep`"], "answer": "A", "explain": "ext4 作成は mkfs.ext4。"}, {"id": "Q4", "stem": "スワップを有効化するコマンドはどれか。", "type": "single", "choices": ["`swapon`", "`apt update` のみ", "`kill -9` のみ", "`echo` のみ"], "answer": "A", "explain": "有効化は swapon。"}, {"id": "Q5", "stem": "ブート時の自動マウント設定の中心ファイルはどれか。", "type": "single", "choices": ["`/etc/fstab`", "`/etc/hostname` のフォント", "`/dev/null` の色", "`~/.bashrc` のみが唯一"], "answer": "A", "explain": "永続マウントは fstab。"}, {"id": "Q6", "stem": "LVM で複数 PV を束ねる層はどれか。", "type": "single", "choices": ["VG（Volume Group）", "だけ inode 番号の色", "だけ SELinux の壁紙", "だけ DNS MX"], "answer": "A", "explain": "束ねるのは VG。"}, {"id": "Q7", "stem": "容量調査として適切なものを選べ。", "type": "multi", "choices": ["`df -h`", "`du -sh`", "`df -i`（i ノード）", "ルートを毎回 `mkfs` する"], "answer": "A, B, C", "explain": "ルート mkfs は調査ではない。"}, {"id": "Q8", "stem": "マウント運用として適切なものを選べ。", "type": "multi", "choices": ["`mount` / `umount`", "UUID を fstab に使う", "`blkid` で UUID 確認", "fstab を理由なく空にする"], "answer": "A, B, C", "explain": "fstab を空にするのは危険。"}, {"id": "Q9", "stem": "LVM の利点・概念として適切なものを選べ。", "type": "multi", "choices": ["論理ボリュームの拡張がしやすい", "PV / VG / LV の層がある", "層が増え手順が複雑になり得る", "LVM は DNS の A レコードそのもの"], "answer": "A, B, C", "explain": "LVM≠DNS レコード。"}, {"id": "Q10", "stem": "デバイス `/dev/sdb1` の UUID を見るコマンド例を書け。", "type": "text", "choices": [], "answer": "例: `blkid /dev/sdb1`", "explain": "UUID 確認。"}, {"id": "Q11", "stem": "ディレクトリ使用量を要約表示する `du` 例を書け。", "type": "text", "choices": [], "answer": "例: `du -sh /var/log`", "explain": "使用量要約。"}, {"id": "Q12", "stem": "`df -h` では空きがあるのに新規ファイルが作れない。次に見るべき定番はどれか。", "type": "single", "choices": ["`df -i` で i ノード枯渇を疑う", "即 `rm -rf /`", "全ユーザのパスワードを空にする", "ケーブルの色を変える"], "answer": "A", "explain": "空き有り作成不可は i ノード疑う。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

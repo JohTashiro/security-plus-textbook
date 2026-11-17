@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-ccna">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>07 IPサービス · CCNA 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">CCNA 実務学習<span>CH 07</span></a>
+  <a class="nav-back" href="../index.html">← ホーム</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 ネットワーク機器と構成</a>
+<a href="../chapters/02.html">02 ケーブルとインタフェース障害</a>
+<a href="../chapters/03.html">03 TCP UDPとIPアドレス</a>
+<a href="../chapters/04.html">04 スイッチング VLAN STP</a>
+<a href="../chapters/05.html">05 無線LAN</a>
+<a href="../chapters/06.html">06 ルーティング</a>
+<a href="../chapters/07.html" class="active">07 IPサービス</a>
+<a href="../chapters/08.html">08 セキュリティ基礎</a>
+<a href="../chapters/09.html">09 運用 自動化 AI</a>
+  </nav>
+  <nav class="nav-section">
+    <h2>ツール</h2>
+    <a href='../quizzes/07.html'>この章の小テスト</a>
+    <a href="../guide.html">学習ガイド</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">Personal Study App · CH 07</p>
+        <h1>IPサービス</h1>
+        <div class="action-row">
+          <a class='btn btn-primary' href='../quizzes/07.html'>この章の小テスト</a>
+          <a class="btn btn-ghost" href="../index.html">章一覧</a>
+        </div>
+      </header>
+      <article class="doc-body"><h1 id="07-ip">07 IP サービス</h1>
+<p>経路が通っても、アドレス・名前・時刻・ログが崩れると運用は止まります。この章では DHCP、DNS、NAT、NTP、syslog、SNMP、QoS 概要を実務単位で押さえます。</p>
+<h2 id="1-dhcp">1. DHCP の役割</h2>
+<p>端末に IP・マスク・ゲートウェイ・DNS などを自動配布します。</p>
+<table>
+<thead>
+<tr>
+<th>役割</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DHCP サーバ</td>
+<td>プールからリース</td>
+</tr>
+<tr>
+<td>DHCP クライアント</td>
+<td>要求して受け取る</td>
+</tr>
+<tr>
+<td>DHCP リレー</td>
+<td>別サブネットのサーバへ転送（ヘルパー）</td>
+</tr>
+</tbody>
+</table>
+<p>ルータをクライアントにする例と、リレーの概念:</p>
+<pre><code class="language-text">interface GigabitEthernet0/0
+ ip address dhcp
+!
+interface GigabitEthernet0/1
+ ip helper-address 192.0.2.10
+</code></pre>
+<p>切り分け: 端末が APIPA（169.254）ばかり → サーバ到達性、リレー、VLAN、プール枯渇、snooping の信頼ポート設定を疑う。</p>
+<p>v2.0 では DHCPv4 の <strong>client / server / relay のトラブルシュート</strong> が明示されています（「v2.0で特に重視」）。</p>
+<h2 id="2-dns">2. DNS の役割</h2>
+<p>名前を IP に（または逆に）解決します。アプリ障害の多くは「名前が解けない」です。</p>
+<table>
+<thead>
+<tr>
+<th>レコード</th>
+<th>用途の例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>ホスト名 → IPv4</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td>ホスト名 → IPv6</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>別名</td>
+</tr>
+<tr>
+<td>MX</td>
+<td>メール配送先</td>
+</tr>
+<tr>
+<td>NS</td>
+<td>ゾーンの権威サーバ</td>
+</tr>
+<tr>
+<td>PTR</td>
+<td>IP → 名前（逆引き）</td>
+</tr>
+</tbody>
+</table>
+<p>v2.0 ではこれらレコードの <strong>診断</strong> が明示されています（「v2.0で特に重視」）。クライアントでは <code>nslookup</code> / <code>dig</code>、到達性は DNS サーバへの UDP/53（または DoT 等は範囲外の理解で可）を確認します。</p>
+<h2 id="3-nat-pat">3. NAT / PAT</h2>
+<p>プライベートアドレスをインターネット側で使えるアドレスに変換します。</p>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>イメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Static NAT</td>
+<td>1対1 固定</td>
+</tr>
+<tr>
+<td>Dynamic NAT（プール）</td>
+<td>プールから動的割当</td>
+</tr>
+<tr>
+<td>PAT（オーバーロード）</td>
+<td>多数対1。ポートで識別。最も多い</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-text">access-list 1 permit 10.0.0.0 0.0.0.255
+ip nat inside source list 1 interface GigabitEthernet0/0 overload
+interface GigabitEthernet0/1
+ ip nat inside
+interface GigabitEthernet0/0
+ ip nat outside
+</code></pre>
+<pre><code class="language-text">show ip nat translations
+show ip nat statistics
+</code></pre>
+<p>v2.0 は <strong>IOS XE での NAT/PAT</strong> を明示（「v2.0で特に重視」）。inside/outside の付け間違いと ACL の取りこぼしが典型障害です。</p>
+<h2 id="4-ntp">4. NTP</h2>
+<p>時刻ずれは証明書・ログ相関・認証を壊します。</p>
+<pre><code class="language-text">ntp server 192.0.2.53
+ntp master 3          # ラボ用のサーバ役など
+show ntp status
+show ntp associations
+</code></pre>
+<p>クライアントが上位を参照する構成が基本です。本番は信頼できる時刻源へ。</p>
+<h2 id="5-syslog-snmp">5. syslog と SNMP</h2>
+<h3 id="syslog">syslog</h3>
+<p>機器のイベントをメッセージとして送ります。</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Facility</td>
+<td>メッセージの分類</td>
+</tr>
+<tr>
+<td>Severity</td>
+<td>0 Emergency 〜 7 Debugging の重大度</td>
+</tr>
+</tbody>
+</table>
+<p>数値が小さいほど深刻、という感覚で十分です。遠隔サーバへ送る設定と、バッファ／コンソールのレベルを現場では揃えます。</p>
+<p>v2.0 ではメッセージ内容・severity・ファシリティの <strong>解釈</strong> が明示されています。</p>
+<h3 id="snmp">SNMP</h3>
+<p>監視サーバが機器の状態を取得／（設定によっては）変更する枠組みです。運用では「何を監視しているか」「コミュニティ／ユーザの扱い」が要点です。詳細な MIB 暗記より、役割の説明ができれば CCNA としては足場になります。</p>
+<h2 id="6-qos-phb">6. QoS 概要（PHB）</h2>
+<p>混雑時に「誰を先に通すか」を決める考え方です。</p>
+<table>
+<thead>
+<tr>
+<th>用語</th>
+<th>意味のイメージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Classification</td>
+<td>分類（どのトラフィックか）</td>
+</tr>
+<tr>
+<td>Marking</td>
+<td>DSCP 等で印を付ける</td>
+</tr>
+<tr>
+<td>Queuing</td>
+<td>待ち行列</td>
+</tr>
+<tr>
+<td>Congestion</td>
+<td>輻輳への対処</td>
+</tr>
+<tr>
+<td>Policing</td>
+<td>超過を落とす／マーク</td>
+</tr>
+<tr>
+<td>Shaping</td>
+<td>超過を遅らせて平滑化</td>
+</tr>
+</tbody>
+</table>
+<p>音声は低遅延、バックアップは遅延許容、といった設計意図を言葉にできれば十分です。詳細キューイングの暗記より、用語の対応を優先します。</p>
+<h2 id="7">7. 現場チェック</h2>
+<ul>
+<li>[ ] DHCP サーバ／クライアント／リレーの役割を説明できる</li>
+<li>[ ] A / AAAA / CNAME / MX / NS / PTR の用途を言える</li>
+<li>[ ] PAT が「多数の内部→少ないグローバル」である理由を説明できる</li>
+<li>[ ] NTP ずれの影響を業務例で言える</li>
+<li>[ ] syslog の severity の大小感覚と SNMP の役割を説明できる</li>
+</ul>
+<p>ラボ例:</p>
+<ul>
+<li>ルータを DHCP リレーにし、別網のサーバからアドレスが付くことを確認</li>
+<li>PAT 前後で <code>show ip nat translations</code> を見る</li>
+</ul>
+<h2 id="_1">次章へ</h2>
+<p>サービスが動くほど攻撃面も増えます。第08章で ACL、ポートセキュリティ、AAA、管理アクセスを扱います。</p></article>
+      <div class="doc-nav"><a class="btn btn-ghost" href="06.html">← 06 ルーティング</a><a class="btn btn-primary" href="../quizzes/07.html">小テスト</a><a class="btn btn-ghost" href="08.html">08 セキュリティ基礎 →</a></div>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+
+</body>
+</html>

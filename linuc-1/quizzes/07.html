@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja" class="site-linuc">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小テスト 07 · LinuC-1 実務学習</title>
+  <script>window.LCERT_SETTINGS_KEY="lcert-linuc1-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
+  <link rel="stylesheet" href="../css/doc.css?v=3786d5c5">
+</head>
+<body>
+  <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
+  <div class="app">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="../index.html">LinuC-1 実務学習<span>Quiz 07</span></a>
+  <a class="nav-back" href="../chapters/07.html">← CH 07 本文</a>
+  <nav class="nav-section">
+    <h2>章</h2>
+<a href="../chapters/01.html">01 システムとハードウェア</a>
+<a href="../chapters/02.html">02 起動とランレベル systemd</a>
+<a href="../chapters/03.html">03 シェルとコマンドライン</a>
+<a href="../chapters/04.html">04 ファイルと権限 FHS</a>
+<a href="../chapters/05.html">05 テキスト処理</a>
+<a href="../chapters/06.html">06 プロセス管理</a>
+<a href="../chapters/07.html" class="active">07 パッケージ管理</a>
+<a href="../chapters/08.html">08 ストレージとファイルシステム</a>
+<a href="../chapters/09.html">09 ユーザーとセキュリティ</a>
+<a href="../chapters/10.html">10 ネットワーク設定</a>
+<a href="../chapters/11.html">11 サービスとログ</a>
+<a href="../chapters/12.html">12 シェルスクリプト</a>
+<a href="../chapters/13.html">13 仮想化とコンテナ入門</a>
+  </nav>
+  <section class="nav-section settings" aria-label="設定">
+    <h2>設定</h2>
+    <label class="switch-row">
+      <span>ダークモード</span>
+      <input type="checkbox" role="switch" data-setting="dark">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
+  </section>
+</aside>
+    <main class="main">
+      <header class="hero">
+        <p class="eyebrow">小テスト · CH 07</p>
+        <h1>パッケージ管理</h1>
+        <p>本番寄りの形式です。選ぶとすぐ判定されます（12問）。</p>
+        <div class="action-row">
+          <a class="btn btn-ghost" href="../chapters/07.html">教科書に戻る</a>
+        </div>
+      </header>
+      <div id="quiz"></div>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "Debian 系でインデックス更新に使う定番はどれか。", "type": "single", "choices": ["`apt update`", "`mkfs`", "`userdel`", "`ip link set down`"], "answer": "A", "explain": "索引更新は apt update。"}, {"id": "Q2", "stem": "Debian 系でパッケージを入れる高水準コマンドとして適切なのはどれか。", "type": "single", "choices": ["`apt install`", "常に `fdisk` のみ", "`passwd` のみ", "`kill -9` のみ"], "answer": "A", "explain": "導入は apt install。"}, {"id": "Q3", "stem": "個別の `.deb` を直接扱う低水準ツールはどれか。", "type": "single", "choices": ["`dpkg`", "`systemctl isolate`", "`tmux`", "`grep`"], "answer": "A", "explain": ".deb 直接は dpkg。"}, {"id": "Q4", "stem": "RHEL 系クローンで現行主流になりやすい高水準ツールはどれか。", "type": "single", "choices": ["`dnf`（yum 互換も）", "`apt-get` のみが唯一", "`sed` のみ", "`less` のみ"], "answer": "A", "explain": "現行 RHEL 系は dnf が主流。"}, {"id": "Q5", "stem": "あるファイルがどの RPM パッケージ提供かを調べる例はどれか。", "type": "single", "choices": ["`rpm -qf /path` または `dnf provides`", "`chmod 777 /path` のみ", "`shutdown`", "`passwd`"], "answer": "A", "explain": "rpm -qf / dnf provides。"}, {"id": "Q6", "stem": "Debian 系のリポジトリ設定の代表的な場所はどれか。", "type": "single", "choices": ["`/etc/apt/sources.list`（および `sources.list.d/`）", "`/proc/cpuinfo` のみ", "`/dev/null`", "`/boot` の色情報"], "answer": "A", "explain": "sources.list 系。"}, {"id": "Q7", "stem": "パッケージ調査として適切なものを選べ。", "type": "multi", "choices": ["内容一覧（`dpkg -L` / `rpm -ql`）", "情報表示（`apt show` / `dnf info`）", "ファイルの所有者パッケージ検索", "ルートファイルシステムを毎回 mkfs"], "answer": "A, B, C", "explain": "mkfs は調査手段ではない。"}, {"id": "Q8", "stem": "RPM 系について適切なものを選べ。", "type": "multi", "choices": ["リポジトリ定義は `/etc/yum.repos.d/` にあることが多い", "`rpm` は低水準操作向き", "依存解決は `dnf` に任せると安全なことが多い", "`rpm -qa` はインストール済み一覧に使える"], "answer": "A, B, C, D", "explain": "いずれも適切な理解。"}, {"id": "Q9", "stem": "本番運用として適切なものを選べ。", "type": "multi", "choices": ["更新前に何が変わるか確認する", "変更理由とロールバックを意識する", "理由なく未知の第三リポジトリを大量追加する", "カーネル更新後の再起動要否を確認する"], "answer": "A, B, D", "explain": "未知リポジトリの大量追加は危険。"}, {"id": "Q10", "stem": "導入済み Debian パッケージ一覧の基本コマンドを1つ書け。", "type": "text", "choices": [], "answer": "例: `dpkg -l`", "explain": "一覧。"}, {"id": "Q11", "stem": "RPM 系でパッケージ `nginx` を入れる `dnf` 例を書け。", "type": "text", "choices": [], "answer": "例: `sudo dnf install nginx`", "explain": "導入。"}, {"id": "Q12", "stem": "`dpkg -i app.deb` が依存不足で失敗した。最も妥当な次の一手はどれか。", "type": "single", "choices": ["`apt -f install` などで依存を解決・修復する", "即 `rm -rf /`", "全ユーザのパスワードを空にする", "SELinux を理由にディスクを初期化する"], "answer": "A", "explain": "依存不足は apt -f で修復が定番。"}]</script>
+    </main>
+  </div>
+  <script src="../js/app.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+</body>
+</html>

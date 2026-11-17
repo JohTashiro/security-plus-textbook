@@ -20,3 +20,6 @@ Desktop.ini
 .idea/
 *.swp
 *~
+
+# 引き継ぎ用（公開しない）
+home-handoff/
