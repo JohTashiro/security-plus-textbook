@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>08 セキュリティ基礎 · CCNA 実務学習</title>
-  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s['dim-cisco'])c.add('dim-cisco');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
-  <link rel="stylesheet" href="../css/doc.css?v=521bce18">
+  <link rel="stylesheet" href="../css/doc.css?v=4493a908">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -42,6 +42,11 @@
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <label class="switch-row" data-gen="1">
+      <span>Cisco 固有を薄く表示</span>
+      <input type="checkbox" role="switch" data-setting="dim-cisco">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
   </section>
 </aside>
     <main class="main">
@@ -53,7 +58,7 @@
           <a class="btn btn-ghost" href="../index.html">章一覧</a>
         </div>
       </header>
-      <article class="doc-body"><h1 id="08">08 セキュリティ基礎</h1>
+      <article class="doc-body"><h1 id="08">08 セキュリティ基礎</h1><p class="vendor-legend" data-gen="1"><span class="vendor-badge">Cisco 固有</span>の付いた部分は、Cisco 機器だけの書き方や機能名です。他社製品やクラウドでも通じる考え方を優先し、ここは「Cisco ではこう書く・こう呼ぶ」と押さえれば十分です。</p>
 <p>接続とサービスが動いても、不正アクセスやなりすましを防げなければ本番は成立しません。この章では脅威の用語、機器の管理アクセス、ACL、レイヤ2セキュリティ、AAA、IPsec VPN の概要を実務単位で押さえます。</p>
 <h2 id="1">1. 脅威・脆弱性・エクスプロイト・緩和</h2>
 <table>
@@ -86,7 +91,7 @@
 <p>セキュリティプログラムの要素として、ユーザ意識向上・訓練・物理アクセス制御も忘れないでください。強いパスワードでも、カードキー無しのサーバルームや USB の持ち込み放置は別の穴になります。</p>
 <h2 id="2">2. 管理アクセスとパスワード方針</h2>
 <p>機器へのログイン経路はコンソール、SSH（推奨）、（非推奨の）Telnet、HTTPS の GUI、クラウド管理などがあります。</p>
-<pre><code class="language-text">username admin privilege 15 secret ComplexP@ss1
+<pre data-vendor="cisco"><code class="language-text">username admin privilege 15 secret ComplexP@ss1
 line vty 0 4
  login local
  transport input ssh
@@ -167,7 +172,7 @@ line vty 0 4
 </tr>
 </tbody>
 </table>
-<pre><code class="language-text">ip access-list extended BLOCK_SSH_FROM_GUEST
+<pre data-vendor="cisco"><code class="language-text">ip access-list extended BLOCK_SSH_FROM_GUEST
  deny tcp 10.99.0.0 0.0.0.255 any eq 22
  permit ip any any
 interface GigabitEthernet0/1
@@ -208,7 +213,7 @@ interface GigabitEthernet0/1
 </tr>
 </tbody>
 </table>
-<pre><code class="language-text">interface GigabitEthernet1/0/10
+<pre data-vendor="cisco"><code class="language-text">interface GigabitEthernet1/0/10
  switchport mode access
  switchport port-security
  switchport port-security maximum 2

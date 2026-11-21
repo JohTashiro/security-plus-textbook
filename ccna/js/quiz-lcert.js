@@ -49,6 +49,7 @@
     questions.forEach((q, qi) => {
       const card = document.createElement("article");
       card.className = "quiz-card";
+      if (q.vendor) card.dataset.vendor = q.vendor;
 
       const stem = document.createElement("p");
       stem.className = "quiz-stem";
@@ -57,6 +58,7 @@
         (qi + 1) +
         "</span>" +
         escapeHtml(q.stem) +
+        (q.vendor === "cisco" ? ' <span class="chip chip-vendor">Cisco 固有</span>' : "") +
         (q.type === "multi" ? ' <span class="chip">複数選択</span>' : "") +
         (q.type === "text" ? ' <span class="chip">記述</span>' : "");
       card.appendChild(stem);

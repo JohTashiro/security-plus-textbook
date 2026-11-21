@@ -381,3 +381,105 @@ html.dark .doc-body {
 .net-fig .box-ng { fill: var(--bg-elevated); stroke: var(--net-ng); stroke-width: 2.2; }
 .net-fig .frame { fill: none; stroke: var(--border-strong); stroke-width: 1.2; stroke-dasharray: 5 4; }
 .net-fig .bracket { stroke: var(--text-muted); stroke-width: 1.4; }
+
+/* ---------- Cisco-specific markers (tools/mark_cisco.py) ---------- */
+:root {
+  --vendor-fg: #92400e;
+  --vendor-bg: #fef3c7;
+  --generic-fg: #166534;
+  --generic-bg: rgba(22, 163, 74, 0.07);
+}
+
+html.dark {
+  --vendor-fg: #fcd34d;
+  --vendor-bg: rgba(251, 191, 36, 0.16);
+  --generic-fg: #86efac;
+  --generic-bg: rgba(74, 222, 128, 0.08);
+}
+
+.vendor-badge,
+.doc-body p[data-vendor="cisco"]::before,
+.doc-body li[data-vendor="cisco"]::before,
+.doc-body h2[data-vendor="cisco"]::after,
+.doc-body tr[data-vendor="cisco"] td:first-child::after,
+.doc-body pre[data-vendor="cisco"]::before,
+.chip.chip-vendor {
+  display: inline-block;
+  padding: 0.08em 0.55em;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0;
+  vertical-align: 0.12em;
+  color: var(--vendor-fg);
+  background: var(--vendor-bg);
+  border: 0;
+}
+
+.doc-body p[data-vendor="cisco"]::before,
+.doc-body li[data-vendor="cisco"]::before {
+  content: "Cisco 固有";
+  margin-right: 0.5em;
+}
+
+.doc-body h2[data-vendor="cisco"]::after {
+  content: "Cisco 固有";
+  margin-left: 0.6em;
+}
+
+.doc-body tr[data-vendor="cisco"] td:first-child::after {
+  content: "Cisco";
+  margin-left: 0.45em;
+}
+
+.doc-body pre[data-vendor="cisco"] {
+  position: relative;
+  padding-top: 2.1rem;
+}
+
+.doc-body pre[data-vendor="cisco"]::before {
+  content: "Cisco IOS";
+  position: absolute;
+  top: 0.6rem;
+  left: 1.1rem;
+}
+
+.vendor-note {
+  display: block;
+  margin: 0.35rem 0 0.8rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: var(--generic-fg);
+  background: var(--generic-bg);
+  border-left: 3px solid var(--generic-fg);
+  border-radius: 0 8px 8px 0;
+}
+
+td .vendor-note {
+  margin: 0.4rem 0 0;
+}
+
+.vendor-legend {
+  padding: 0.6rem 0.85rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  background: var(--gray-soft);
+  border-radius: var(--radius-sm);
+}
+
+.vendor-legend .vendor-badge {
+  margin-right: 0.35em;
+}
+
+html.dim-cisco [data-vendor="cisco"] {
+  opacity: 0.42;
+  transition: opacity 0.15s;
+}
+
+html.dim-cisco [data-vendor="cisco"]:hover,
+html.dim-cisco [data-vendor="cisco"]:focus-within {
+  opacity: 1;
+}

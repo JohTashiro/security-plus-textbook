@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>07 IPサービス · CCNA 実務学習</title>
-  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s['dim-cisco'])c.add('dim-cisco');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
-  <link rel="stylesheet" href="../css/doc.css?v=521bce18">
+  <link rel="stylesheet" href="../css/doc.css?v=4493a908">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -42,6 +42,11 @@
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <label class="switch-row" data-gen="1">
+      <span>Cisco 固有を薄く表示</span>
+      <input type="checkbox" role="switch" data-setting="dim-cisco">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
   </section>
 </aside>
     <main class="main">
@@ -53,7 +58,7 @@
           <a class="btn btn-ghost" href="../index.html">章一覧</a>
         </div>
       </header>
-      <article class="doc-body"><h1 id="07-ip">07 IP サービス</h1>
+      <article class="doc-body"><h1 id="07-ip">07 IP サービス</h1><p class="vendor-legend" data-gen="1"><span class="vendor-badge">Cisco 固有</span>の付いた部分は、Cisco 機器だけの書き方や機能名です。他社製品やクラウドでも通じる考え方を優先し、ここは「Cisco ではこう書く・こう呼ぶ」と押さえれば十分です。</p>
 <p>経路が通っても、アドレス・名前・時刻・ログが崩れると運用は止まります。この章では DHCP、DNS、NAT、NTP、syslog、SNMP、QoS 概要を実務単位で押さえます。</p>
 <h2 id="1-dhcp">1. DHCP の役割</h2>
 <p>端末に IP・マスク・ゲートウェイ・DNS などを自動配布します。</p>
@@ -80,7 +85,7 @@
 </tbody>
 </table>
 <p>ルータをクライアントにする例と、リレーの概念:</p>
-<pre><code class="language-text">interface GigabitEthernet0/0
+<pre data-vendor="cisco"><code class="language-text">interface GigabitEthernet0/0
  ip address dhcp
 !
 interface GigabitEthernet0/1
@@ -152,23 +157,23 @@ interface GigabitEthernet0/1
 </tr>
 </tbody>
 </table>
-<pre><code class="language-text">access-list 1 permit 10.0.0.0 0.0.0.255
+<pre data-vendor="cisco"><code class="language-text">access-list 1 permit 10.0.0.0 0.0.0.255
 ip nat inside source list 1 interface GigabitEthernet0/0 overload
 interface GigabitEthernet0/1
  ip nat inside
 interface GigabitEthernet0/0
  ip nat outside
 </code></pre>
-<pre><code class="language-text">show ip nat translations
+<pre data-vendor="cisco"><code class="language-text">show ip nat translations
 show ip nat statistics
 </code></pre>
-<p>v2.0 は <strong>IOS XE での NAT/PAT</strong> を明示（「v2.0で特に重視」）。inside/outside の付け間違いと ACL の取りこぼしが典型障害です。</p>
+<p data-vendor="cisco">v2.0 は <strong>IOS XE での NAT/PAT</strong> を明示（「v2.0で特に重視」）。inside/outside の付け間違いと ACL の取りこぼしが典型障害です。</p>
 <!-- fig:fig-7-2 -->
 <figure class="net-fig" id="fig-7-2"><div class="net-fig-scroll"><svg viewBox="0 0 720 316" role="img" aria-labelledby="fig-7-2-t" xmlns="http://www.w3.org/2000/svg"><title id="fig-7-2-t">PAT（オーバーロード）の変換</title><defs><marker id="fig-7-2-flow-ok-arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" class="arr-flow-ok"/></marker><marker id="fig-7-2-flow-ng-arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" class="arr-flow-ng"/></marker><marker id="fig-7-2-seq-arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" class="arr-seq"/></marker><marker id="fig-7-2-seq-data-arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" class="arr-seq-data"/></marker></defs><rect x="16" y="28" width="344" height="152" rx="14" class="zone"/><text x="28" y="46" class="zone-lbl" text-anchor="start">inside（10.0.0.0/24）</text><rect x="360" y="28" width="344" height="152" rx="14" class="zone zone-out"/><text x="372" y="46" class="zone-lbl" text-anchor="start">outside</text><rect x="40" y="196" width="640" height="110" rx="14" class="legend"/><line x1="85" y1="65" x2="168" y2="96" class="link"/><line x1="85" y1="140" x2="168" y2="106" class="link"/><line x1="212" y1="101" x2="342" y2="101" class="link"/><line x1="378" y1="101" x2="476" y2="101" class="link"/><line x1="564" y1="101" x2="637" y2="101" class="link"/><line x1="52" y1="244" x2="668" y2="244" class="rule"/><text x="330" y="92" class="sub" text-anchor="end">Gi0/1 inside</text><text x="390" y="92" class="sub" text-anchor="start">Gi0/0 outside</text><g><rect x="55" y="52" width="30" height="20" rx="3" class="dev"/><path class="ico" d="M70,72v5M62,78h16"/></g><text x="70" y="93" class="lbl" text-anchor="middle">10.0.0.11</text><g><rect x="55" y="127" width="30" height="20" rx="3" class="dev"/><path class="ico" d="M70,147v5M62,153h16"/></g><text x="70" y="168" class="lbl" text-anchor="middle">10.0.0.12</text><g><rect x="168" y="88" width="44" height="26" rx="5" class="dev"/><path class="ico" d="M179,97h22m-4,-4l4,4l-4,4M201,105h-22m4,-4l-4,4l4,4"/></g><text x="190" y="129" class="lbl" text-anchor="middle">SW</text><g><circle cx="360" cy="101" r="18" class="dev"/><path class="ico" d="M351,97h18m-4,-4l4,4l-4,4M369,105h-18m4,-4l-4,4l4,4"/></g><text x="360" y="134" class="lbl" text-anchor="middle">R1</text><text x="360" y="148" class="sub" text-anchor="middle">外側 203.0.113.2</text><path d="M476,121a16,16 0 0 1 4,-31a22,22 0 0 1 38,-11a19,19 0 0 1 33,8a15,15 0 0 1 13,34z" class="dev cloud"/><text x="520" y="110" class="lbl" text-anchor="middle">インターネット</text><g><rect x="637" y="83" width="26" height="36" rx="3" class="dev"/><path class="ico" d="M642,94h16M642,102h16"/><circle cx="650" cy="111" r="2" class="ico-dot"/></g><text x="650" y="134" class="lbl" text-anchor="middle">Web サーバ</text><text x="650" y="148" class="sub" text-anchor="middle">198.51.100.80</text><text x="60" y="218" class="lbl" text-anchor="start">Inside local</text><text x="60" y="234" class="sub" text-anchor="start">変換前の送信元</text><text x="280" y="218" class="lbl" text-anchor="start">Inside global</text><text x="280" y="234" class="sub" text-anchor="start">変換後の送信元</text><text x="490" y="218" class="lbl" text-anchor="start">Outside global</text><text x="490" y="234" class="sub" text-anchor="start">通信相手</text><text x="60" y="268" class="mono" text-anchor="start">10.0.0.11:51000</text><text x="280" y="268" class="mono mono-code" text-anchor="start">203.0.113.2:1024</text><text x="490" y="268" class="mono" text-anchor="start">198.51.100.80:443</text><text x="60" y="292" class="mono" text-anchor="start">10.0.0.12:51000</text><text x="280" y="292" class="mono mono-code" text-anchor="start">203.0.113.2:1025</text><text x="490" y="292" class="mono" text-anchor="start">198.51.100.80:443</text></svg></div><figcaption><strong>図 7-2</strong>本文の設定例（ACL 1 で 10.0.0.0/24 を許可、Gi0/0 で overload）での変換表。2台の PC が同じ外側アドレスを共有しています。</figcaption><p class="net-fig-point"><span>試験ポイント</span>inside local は変換前のプライベート IP、inside global は変換後のグローバル IP。PAT は送信元ポート番号で区別するので、多数の端末が1つのアドレスを共有できる。</p></figure>
 <!-- /fig:fig-7-2 -->
 <h2 id="4-ntp">4. NTP</h2>
 <p>時刻ずれは証明書・ログ相関・認証を壊します。</p>
-<pre><code class="language-text">ntp server 192.0.2.53
+<pre data-vendor="cisco"><code class="language-text">ntp server 192.0.2.53
 ntp master 3          # ラボ用のサーバ役など
 show ntp status
 show ntp associations
@@ -247,7 +252,7 @@ show ntp associations
 <p>ラボ例:</p>
 <ul>
 <li>ルータを DHCP リレーにし、別網のサーバからアドレスが付くことを確認</li>
-<li>PAT 前後で <code>show ip nat translations</code> を見る</li>
+<li data-vendor="cisco">PAT 前後で <code>show ip nat translations</code> を見る</li>
 </ul>
 <h2 id="_1">次章へ</h2>
 <p>サービスが動くほど攻撃面も増えます。第08章で ACL、ポートセキュリティ、AAA、管理アクセスを扱います。</p></article>

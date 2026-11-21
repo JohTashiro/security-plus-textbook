@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>小テスト 04 · CCNA 実務学習</title>
-  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s['dim-cisco'])c.add('dim-cisco');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
-  <link rel="stylesheet" href="../css/doc.css?v=521bce18">
+  <link rel="stylesheet" href="../css/doc.css?v=4493a908">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -37,6 +37,11 @@
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <label class="switch-row" data-gen="1">
+      <span>Cisco 固有を薄く表示</span>
+      <input type="checkbox" role="switch" data-setting="dim-cisco">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
   </section>
 </aside>
     <main class="main">
@@ -49,10 +54,10 @@
         </div>
       </header>
       <div id="quiz"></div>
-      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "別 VLAN 同士の端末が通信するために必要なものとして最も近いのはどれか。", "type": "single", "choices": ["同じアクセスポートに両端末を挿すだけ", "ルーティング（ルータまたは L3 スイッチの InterVLAN）", "Native VLAN を毎回削除する", "STP を無効化するだけ"], "answer": "B", "explain": "別 VLAN 間は InterVLAN ルーティングが必要。"}, {"id": "Q2", "stem": "端末を接続するポートの典型設定はどれか。", "type": "single", "choices": ["`switchport mode access` とアクセス VLAN", "常に全 VLAN をタグ付きで端末へ送る", "EtherChannel 必須", "Root Guard のみで十分"], "answer": "A", "explain": "端末はアクセスモード＋所属 VLAN が定番。"}, {"id": "Q3", "stem": "802.1Q トランクの Native VLAN について適切なのはどれか。", "type": "single", "choices": ["タグなしで運ぶ VLAN で、両端一致が重要", "必ず VLAN 1005 固定", "光ファイバ専用の概念", "OSPF エリア ID の別名"], "answer": "A", "explain": "Native はタグなし。両端不一致は障害の元。"}, {"id": "Q4", "stem": "複数物理リンクを LACP で 1 論理リンクにする技術はどれか。", "type": "single", "choices": ["NAT", "EtherChannel（port-channel）", "DNS ラウンドロビン", "PortFast のみ"], "answer": "B", "explain": "LACP で束ねるのが EtherChannel。"}, {"id": "Q5", "stem": "Rapid PVST+ で「木の根」となるスイッチの役割名はどれか。", "type": "single", "choices": ["Designated port", "Root bridge", "Native VLAN", "Access point"], "answer": "B", "explain": "木の根は Root bridge。"}, {"id": "Q6", "stem": "端末用ポートで BPDU を受信したときポートを err-disable にしやすい機能はどれか。", "type": "single", "choices": ["BPDU Guard", "DHCP snooping の別名", "Native VLAN", "LACP passive のみ"], "answer": "A", "explain": "BPDU Guard が err-disable 保護の典型。"}, {"id": "Q7", "stem": "VLAN 運用について適切なものを選べ。", "type": "multi", "choices": ["ブロードキャストドメインを論理分割できる", "`show vlan brief` で所属を確認できる", "別 VLAN 間は L2 だけで必ず届く", "デフォルト VLAN は未割当や管理の受け皿になりやすい"], "answer": "A, B, D", "explain": "別 VLAN は L2 だけでは届かない。"}, {"id": "Q8", "stem": "EtherChannel（LACP）で両端を揃えるべきものとして適切なものを選べ。", "type": "multi", "choices": ["速度・二重化", "スイッチポートモードと VLAN／トランク設定", "無作為に異なる Native VLAN のまま束ねる", "LACP のモード設定"], "answer": "A, B, D", "explain": "Native など不揃いのまま束ねない。"}, {"id": "Q9", "stem": "Rapid PVST+ / エッジ保護について適切なものを選べ。", "type": "multi", "choices": ["PortFast は端末ポートの高速遷移に使う", "Root Guard は下流からのルート奪取を抑止しやすい", "BPDU Filter は誤用するとループ要因になり得る", "STP を切れば常に最も安全"], "answer": "A, B, C", "explain": "STP 無効化はループリスクを上げる。"}, {"id": "Q10", "stem": "スイッチ間で複数 VLAN を運ぶポート種別を何と呼ぶか。", "type": "text", "choices": [], "answer": "トランク（trunk）", "explain": "複数 VLAN を運ぶ。"}, {"id": "Q11", "stem": "非ルートスイッチがルートブリッジ方向へ出すポートの役割名を書け。", "type": "text", "choices": [], "answer": "Root port（ルートポート）", "explain": "ルート方向のポート。"}, {"id": "Q12", "stem": "2 台のアクセススイッチを二重ケーブルで接続した。片方のリンクは転送、もう片方はブロックされている。端末ポートに別スイッチを誤接続したところ、そのポートが down（err-disable）になった。最も妥当な説明はどれか。", "type": "single", "choices": ["PortFast 付きポートに BPDU Guard が効き、想定外の BPDU で保護動作した", "Native VLAN が自動で削除されただけ", "EtherChannel が必須なので全ポートが止まる仕様", "IPv6 のみの障害なので L2 は無関係"], "answer": "A", "explain": "エッジ＋BPDU Guard の想定どおりの保護。"}]</script>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "別 VLAN 同士の端末が通信するために必要なものとして最も近いのはどれか。", "type": "single", "choices": ["同じアクセスポートに両端末を挿すだけ", "ルーティング（ルータまたは L3 スイッチの InterVLAN）", "Native VLAN を毎回削除する", "STP を無効化するだけ"], "answer": "B", "explain": "別 VLAN 間は InterVLAN ルーティングが必要。"}, {"id": "Q2", "stem": "端末を接続するポートの典型設定はどれか。", "type": "single", "choices": ["`switchport mode access` とアクセス VLAN", "常に全 VLAN をタグ付きで端末へ送る", "EtherChannel 必須", "Root Guard のみで十分"], "answer": "A", "explain": "端末はアクセスモード＋所属 VLAN が定番。", "vendor": "cisco"}, {"id": "Q3", "stem": "802.1Q トランクの Native VLAN について適切なのはどれか。", "type": "single", "choices": ["タグなしで運ぶ VLAN で、両端一致が重要", "必ず VLAN 1005 固定", "光ファイバ専用の概念", "OSPF エリア ID の別名"], "answer": "A", "explain": "Native はタグなし。両端不一致は障害の元。"}, {"id": "Q4", "stem": "複数物理リンクを LACP で 1 論理リンクにする技術はどれか。", "type": "single", "choices": ["NAT", "EtherChannel（port-channel）", "DNS ラウンドロビン", "PortFast のみ"], "answer": "B", "explain": "LACP で束ねるのが EtherChannel。"}, {"id": "Q5", "stem": "Rapid PVST+ で「木の根」となるスイッチの役割名はどれか。", "type": "single", "choices": ["Designated port", "Root bridge", "Native VLAN", "Access point"], "answer": "B", "explain": "木の根は Root bridge。"}, {"id": "Q6", "stem": "端末用ポートで BPDU を受信したときポートを err-disable にしやすい機能はどれか。", "type": "single", "choices": ["BPDU Guard", "DHCP snooping の別名", "Native VLAN", "LACP passive のみ"], "answer": "A", "explain": "BPDU Guard が err-disable 保護の典型。", "vendor": "cisco"}, {"id": "Q7", "stem": "VLAN 運用について適切なものを選べ。", "type": "multi", "choices": ["ブロードキャストドメインを論理分割できる", "`show vlan brief` で所属を確認できる", "別 VLAN 間は L2 だけで必ず届く", "デフォルト VLAN は未割当や管理の受け皿になりやすい"], "answer": "A, B, D", "explain": "別 VLAN は L2 だけでは届かない。"}, {"id": "Q8", "stem": "EtherChannel（LACP）で両端を揃えるべきものとして適切なものを選べ。", "type": "multi", "choices": ["速度・二重化", "スイッチポートモードと VLAN／トランク設定", "無作為に異なる Native VLAN のまま束ねる", "LACP のモード設定"], "answer": "A, B, D", "explain": "Native など不揃いのまま束ねない。"}, {"id": "Q9", "stem": "Rapid PVST+ / エッジ保護について適切なものを選べ。", "type": "multi", "choices": ["PortFast は端末ポートの高速遷移に使う", "Root Guard は下流からのルート奪取を抑止しやすい", "BPDU Filter は誤用するとループ要因になり得る", "STP を切れば常に最も安全"], "answer": "A, B, C", "explain": "STP 無効化はループリスクを上げる。", "vendor": "cisco"}, {"id": "Q10", "stem": "スイッチ間で複数 VLAN を運ぶポート種別を何と呼ぶか。", "type": "text", "choices": [], "answer": "トランク（trunk）", "explain": "複数 VLAN を運ぶ。"}, {"id": "Q11", "stem": "非ルートスイッチがルートブリッジ方向へ出すポートの役割名を書け。", "type": "text", "choices": [], "answer": "Root port（ルートポート）", "explain": "ルート方向のポート。"}, {"id": "Q12", "stem": "2 台のアクセススイッチを二重ケーブルで接続した。片方のリンクは転送、もう片方はブロックされている。端末ポートに別スイッチを誤接続したところ、そのポートが down（err-disable）になった。最も妥当な説明はどれか。", "type": "single", "choices": ["PortFast 付きポートに BPDU Guard が効き、想定外の BPDU で保護動作した", "Native VLAN が自動で削除されただけ", "EtherChannel が必須なので全ポートが止まる仕様", "IPv6 のみの障害なので L2 は無関係"], "answer": "A", "explain": "エッジ＋BPDU Guard の想定どおりの保護。", "vendor": "cisco"}]</script>
     </main>
   </div>
   <script src="../js/app.js?v=3786d5c5"></script>
-  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=f5203a5f"></script>
 </body>
 </html>

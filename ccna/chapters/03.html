@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>03 TCP UDPとIPアドレス · CCNA 実務学習</title>
-  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s['dim-cisco'])c.add('dim-cisco');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
-  <link rel="stylesheet" href="../css/doc.css?v=521bce18">
+  <link rel="stylesheet" href="../css/doc.css?v=4493a908">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -42,6 +42,11 @@
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <label class="switch-row" data-gen="1">
+      <span>Cisco 固有を薄く表示</span>
+      <input type="checkbox" role="switch" data-setting="dim-cisco">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
   </section>
 </aside>
     <main class="main">
@@ -53,7 +58,7 @@
           <a class="btn btn-ghost" href="../index.html">章一覧</a>
         </div>
       </header>
-      <article class="doc-body"><h1 id="03-tcp-udp-ip">03 TCP UDP と IP アドレス</h1>
+      <article class="doc-body"><h1 id="03-tcp-udp-ip">03 TCP UDP と IP アドレス</h1><p class="vendor-legend" data-gen="1"><span class="vendor-badge">Cisco 固有</span>の付いた部分は、Cisco 機器だけの書き方や機能名です。他社製品やクラウドでも通じる考え方を優先し、ここは「Cisco ではこう書く・こう呼ぶ」と押さえれば十分です。</p>
 <p>通信の「届き方」と「住所の切り方」を扱う章です。サブネットが読めないと ACL もルーティングも設計できません。IPv4 を確実にし、IPv6 の最低限も使える状態を目指します。</p>
 <h2 id="1-tcp-udp">1. TCP と UDP</h2>
 <table>
@@ -171,8 +176,8 @@
 </tbody>
 </table>
 <p>EUI-64 はインタフェース ID を MAC から作る古典的方法です。プライバシー拡張でランダム ID を使う端末も多いです。</p>
-<p>確認例（Cisco）:</p>
-<pre><code class="language-text">show ipv6 interface brief
+<p data-vendor="cisco">確認例（Cisco）:</p>
+<pre data-vendor="cisco"><code class="language-text">show ipv6 interface brief
 </code></pre>
 <p>クライアント側:</p>
 <pre><code class="language-text">ipconfig          # Windows

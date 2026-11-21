@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>02 ケーブルとインタフェース障害 · CCNA 実務学習</title>
-  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s['dim-cisco'])c.add('dim-cisco');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
-  <link rel="stylesheet" href="../css/doc.css?v=521bce18">
+  <link rel="stylesheet" href="../css/doc.css?v=4493a908">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -42,6 +42,11 @@
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <label class="switch-row" data-gen="1">
+      <span>Cisco 固有を薄く表示</span>
+      <input type="checkbox" role="switch" data-setting="dim-cisco">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
   </section>
 </aside>
     <main class="main">
@@ -53,7 +58,7 @@
           <a class="btn btn-ghost" href="../index.html">章一覧</a>
         </div>
       </header>
-      <article class="doc-body"><h1 id="02">02 ケーブルとインタフェース障害</h1>
+      <article class="doc-body"><h1 id="02">02 ケーブルとインタフェース障害</h1><p class="vendor-legend" data-gen="1"><span class="vendor-badge">Cisco 固有</span>の付いた部分は、Cisco 機器だけの書き方や機能名です。他社製品やクラウドでも通じる考え方を優先し、ここは「Cisco ではこう書く・こう呼ぶ」と押さえれば十分です。</p>
 <p>リンクが上がらない、速度が遅い、エラーが増える——現場で最初に疑うのは論理設定より物理とインタフェース状態です。この章では媒体の種類、二重化／速度、切り分け手順を押さえます。</p>
 <h2 id="1">1. ケーブルの種類</h2>
 <h3 id="copper">銅線（Copper）</h3>
@@ -111,8 +116,8 @@
 </table>
 <p>一方が auto、他方が固定、あるいは片方が half 固定だと <strong>mismatch duplex</strong> になり、遅い・切れやすい・CRC/collision が増える典型パターンです。v2.0 ではケーブル診断（距離、信号レベル、pin out、タイプ）や duplex 不一致の切り分けがより明示的に問われます。</p>
 <h2 id="3">3. よくある症状と見るカウンタ</h2>
-<p>Cisco IOS 系での確認例:</p>
-<pre><code class="language-text">show interfaces GigabitEthernet0/1
+<p data-vendor="cisco">Cisco IOS 系での確認例:</p>
+<pre data-vendor="cisco"><code class="language-text">show interfaces GigabitEthernet0/1
 show interfaces status
 show interfaces GigabitEthernet0/1 counters errors
 </code></pre>
@@ -122,12 +127,12 @@ show interfaces GigabitEthernet0/1 counters errors
 <li><strong>CRC / input errors</strong>: ケーブル不良、ノイズ、二重化不一致</li>
 <li><strong>collisions / late collisions</strong>: 半二重や距離・配線の問題を疑う</li>
 <li><strong>runts / giants</strong>: フレーム長異常。二重化や不良も関連し得る</li>
-<li><strong>speed / duplex</strong>: <code>show interfaces status</code> で実効値を確認</li>
+<li data-vendor="cisco"><strong>speed / duplex</strong>: <code>show interfaces status</code> で実効値を確認</li>
 </ul>
 <p>光リンクでは、光モジュールの有無、Tx/Rx の入れ違い、汚れ、対応波長も疑います。</p>
 <h2 id="4">4. 切り分けの順番（実務）</h2>
 <ol>
-<li>LED / <code>show interfaces status</code> でリンクの有無</li>
+<li data-vendor="cisco">LED / <code>show interfaces status</code> でリンクの有無</li>
 <li>ケーブル交換・別ポート・別パッチ盤で切り分け</li>
 <li>両端の speed/duplex（auto 同士が基本。固定するなら両端そろえる）</li>
 <li>エラーカウンタをクリアして再計測（一時スパイクか継続か）</li>
@@ -138,7 +143,7 @@ show interfaces GigabitEthernet0/1 counters errors
 <ul>
 <li>[ ] 銅線と光の使い分けを説明できる</li>
 <li>[ ] duplex mismatch の典型症状を言える</li>
-<li>[ ] <code>show interfaces</code> で errors / CRC / collisions を読める</li>
+<li data-vendor="cisco">[ ] <code>show interfaces</code> で errors / CRC / collisions を読める</li>
 <li>[ ] 「まずケーブルとリンク」から入る癖がある</li>
 </ul>
 <h2 id="_3">次章へ</h2>

@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>小テスト 07 · CCNA 実務学習</title>
-  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s['dim-cisco'])c.add('dim-cisco');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
-  <link rel="stylesheet" href="../css/doc.css?v=521bce18">
+  <link rel="stylesheet" href="../css/doc.css?v=4493a908">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -37,6 +37,11 @@
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <label class="switch-row" data-gen="1">
+      <span>Cisco 固有を薄く表示</span>
+      <input type="checkbox" role="switch" data-setting="dim-cisco">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
   </section>
 </aside>
     <main class="main">
@@ -49,10 +54,10 @@
         </div>
       </header>
       <div id="quiz"></div>
-      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "別サブネットの DHCP サーバへ要求を転送する役割はどれか。", "type": "single", "choices": ["DHCP リレー（ヘルパー）", "常に STP Root のみ", "Native VLAN の別名", "PortFast のみ"], "answer": "A", "explain": "別網サーバへはリレー。"}, {"id": "Q2", "stem": "ホスト名を IPv4 に対応付ける DNS レコードはどれか。", "type": "single", "choices": ["A", "PTR のみ", "MX のみ", "VLAN"], "answer": "A", "explain": "IPv4 正向は A。"}, {"id": "Q3", "stem": "多数の内部ホストを少数のグローバル IP でインターネットへ出す典型はどれか。", "type": "single", "choices": ["PAT（オーバーロード）", "だけ STP", "だけ LACP", "だけ SSID 隠蔽"], "answer": "A", "explain": "多数対1は PAT。"}, {"id": "Q4", "stem": "証明書やログ相関が壊れやすい直接要因として近いのはどれか。", "type": "single", "choices": ["機器間の大きな時刻ずれ", "ケーブルの色", "フォント設定", "コンソールのボーレート表示色"], "answer": "A", "explain": "時刻ずれは認証・ログを壊す。"}, {"id": "Q5", "stem": "syslog の severity について適切な感覚はどれか。", "type": "single", "choices": ["数値が小さいほど深刻なことが多い", "数値が大きいほど常に電源断", "severity は OSPF エリア ID", "severity は SSID 名"], "answer": "A", "explain": "小さい番号ほど深刻。"}, {"id": "Q6", "stem": "監視サーバが機器情報を取得する枠組みとして説明されることが多いのはどれか。", "type": "single", "choices": ["SNMP", "だけ EtherChannel", "だけ PortFast", "だけ CAPWAP チャネル番号"], "answer": "A", "explain": "監視の枠組みは SNMP。"}, {"id": "Q7", "stem": "DHCP 障害で疑うものとして適切なものを選べ。", "type": "multi", "choices": ["リレー／ヘルパー設定", "VLAN 不一致", "プール枯渇", "光ファイバの色名だけ"], "answer": "A, B, C", "explain": "色名は無関係。"}, {"id": "Q8", "stem": "DNS レコードについて適切なものを選べ。", "type": "multi", "choices": ["AAAA は IPv6", "MX はメール", "PTR は逆引き", "CNAME は NAT プールそのもの"], "answer": "A, B, C", "explain": "CNAME は別名であり NAT プールではない。"}, {"id": "Q9", "stem": "QoS の用語として適切なものを選べ。", "type": "multi", "choices": ["Classification（分類）", "Marking（マーキング）", "Shaping（シェーピング）", "Native VLAN の強制削除"], "answer": "A, B, C", "explain": "Native VLAN 削除は QoS 用語ではない。"}, {"id": "Q10", "stem": "NAT で「内部」側インタフェースに付ける典型キーワードを書け（Cisco IOS 系）。", "type": "text", "choices": [], "answer": "`ip nat inside`", "explain": "内部側指定。"}, {"id": "Q11", "stem": "ホスト名の別名を指す DNS レコード種類を書け。", "type": "text", "choices": [], "answer": "CNAME", "explain": "別名レコード。"}, {"id": "Q12", "stem": "支社 VLAN の端末だけが DHCP でアドレスを得られない。本社の DHCP サーバは生きており、他拠点は問題ない。支社ルータのユーザ VLAN インタフェースにヘルパーが無い。最も妥当な初動はどれか。", "type": "single", "choices": ["当該インタフェースへ `ip helper-address`（リレー）を検討する", "全拠点の OSPF を消す", "すべての SSID をオープンにする", "syslog severity を無視してディスクを初期化する"], "answer": "A", "explain": "支社だけならリレー欠落が典型。"}]</script>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "別サブネットの DHCP サーバへ要求を転送する役割はどれか。", "type": "single", "choices": ["DHCP リレー（ヘルパー）", "常に STP Root のみ", "Native VLAN の別名", "PortFast のみ"], "answer": "A", "explain": "別網サーバへはリレー。"}, {"id": "Q2", "stem": "ホスト名を IPv4 に対応付ける DNS レコードはどれか。", "type": "single", "choices": ["A", "PTR のみ", "MX のみ", "VLAN"], "answer": "A", "explain": "IPv4 正向は A。"}, {"id": "Q3", "stem": "多数の内部ホストを少数のグローバル IP でインターネットへ出す典型はどれか。", "type": "single", "choices": ["PAT（オーバーロード）", "だけ STP", "だけ LACP", "だけ SSID 隠蔽"], "answer": "A", "explain": "多数対1は PAT。"}, {"id": "Q4", "stem": "証明書やログ相関が壊れやすい直接要因として近いのはどれか。", "type": "single", "choices": ["機器間の大きな時刻ずれ", "ケーブルの色", "フォント設定", "コンソールのボーレート表示色"], "answer": "A", "explain": "時刻ずれは認証・ログを壊す。"}, {"id": "Q5", "stem": "syslog の severity について適切な感覚はどれか。", "type": "single", "choices": ["数値が小さいほど深刻なことが多い", "数値が大きいほど常に電源断", "severity は OSPF エリア ID", "severity は SSID 名"], "answer": "A", "explain": "小さい番号ほど深刻。"}, {"id": "Q6", "stem": "監視サーバが機器情報を取得する枠組みとして説明されることが多いのはどれか。", "type": "single", "choices": ["SNMP", "だけ EtherChannel", "だけ PortFast", "だけ CAPWAP チャネル番号"], "answer": "A", "explain": "監視の枠組みは SNMP。"}, {"id": "Q7", "stem": "DHCP 障害で疑うものとして適切なものを選べ。", "type": "multi", "choices": ["リレー／ヘルパー設定", "VLAN 不一致", "プール枯渇", "光ファイバの色名だけ"], "answer": "A, B, C", "explain": "色名は無関係。"}, {"id": "Q8", "stem": "DNS レコードについて適切なものを選べ。", "type": "multi", "choices": ["AAAA は IPv6", "MX はメール", "PTR は逆引き", "CNAME は NAT プールそのもの"], "answer": "A, B, C", "explain": "CNAME は別名であり NAT プールではない。"}, {"id": "Q9", "stem": "QoS の用語として適切なものを選べ。", "type": "multi", "choices": ["Classification（分類）", "Marking（マーキング）", "Shaping（シェーピング）", "Native VLAN の強制削除"], "answer": "A, B, C", "explain": "Native VLAN 削除は QoS 用語ではない。"}, {"id": "Q10", "stem": "NAT で「内部」側インタフェースに付ける典型キーワードを書け（Cisco IOS 系）。", "type": "text", "choices": [], "answer": "`ip nat inside`", "explain": "内部側指定。", "vendor": "cisco"}, {"id": "Q11", "stem": "ホスト名の別名を指す DNS レコード種類を書け。", "type": "text", "choices": [], "answer": "CNAME", "explain": "別名レコード。"}, {"id": "Q12", "stem": "支社 VLAN の端末だけが DHCP でアドレスを得られない。本社の DHCP サーバは生きており、他拠点は問題ない。支社ルータのユーザ VLAN インタフェースにヘルパーが無い。最も妥当な初動はどれか。", "type": "single", "choices": ["当該インタフェースへ `ip helper-address`（リレー）を検討する", "全拠点の OSPF を消す", "すべての SSID をオープンにする", "syslog severity を無視してディスクを初期化する"], "answer": "A", "explain": "支社だけならリレー欠落が典型。", "vendor": "cisco"}]</script>
     </main>
   </div>
   <script src="../js/app.js?v=3786d5c5"></script>
-  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=f5203a5f"></script>
 </body>
 </html>

@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>04 スイッチング VLAN STP · CCNA 実務学習</title>
-  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s['dim-cisco'])c.add('dim-cisco');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
-  <link rel="stylesheet" href="../css/doc.css?v=521bce18">
+  <link rel="stylesheet" href="../css/doc.css?v=4493a908">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -42,6 +42,11 @@
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <label class="switch-row" data-gen="1">
+      <span>Cisco 固有を薄く表示</span>
+      <input type="checkbox" role="switch" data-setting="dim-cisco">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
   </section>
 </aside>
     <main class="main">
@@ -53,7 +58,7 @@
           <a class="btn btn-ghost" href="../index.html">章一覧</a>
         </div>
       </header>
-      <article class="doc-body"><h1 id="04-vlan-stp">04 スイッチング VLAN STP</h1>
+      <article class="doc-body"><h1 id="04-vlan-stp">04 スイッチング VLAN STP</h1><p class="vendor-legend" data-gen="1"><span class="vendor-badge">Cisco 固有</span>の付いた部分は、Cisco 機器だけの書き方や機能名です。他社製品やクラウドでも通じる考え方を優先し、ここは「Cisco ではこう書く・こう呼ぶ」と押さえれば十分です。</p>
 <p>同一物理スイッチでも、VLAN で論理セグメントを分けるのが現行キャンパスの基本です。この章ではアクセス／トランク、EtherChannel（LACP）、Rapid PVST+ とガード機能を、設定と切り分けの単位で押さえます。</p>
 <h2 id="1-vlan">1. VLAN の考え方</h2>
 <p>VLAN はブロードキャストドメインを論理分割します。同一 VLAN 内は L2 で届き、別 VLAN 同士はルータまたは L3 スイッチ（SVI など）経由で通信します。</p>
@@ -83,14 +88,14 @@
 </tr>
 </tbody>
 </table>
-<pre><code class="language-text">vlan 10
+<pre data-vendor="cisco"><code class="language-text">vlan 10
  name SALES
 interface GigabitEthernet0/1
  switchport mode access
  switchport access vlan 10
 </code></pre>
 <p>確認:</p>
-<pre><code class="language-text">show vlan brief
+<pre data-vendor="cisco"><code class="language-text">show vlan brief
 show interfaces status
 show interfaces GigabitEthernet0/1 switchport
 </code></pre>
@@ -112,13 +117,13 @@ show interfaces GigabitEthernet0/1 switchport
 <td>Native VLAN</td>
 <td>タグなしで運ぶ VLAN。両端で一致させる</td>
 </tr>
-<tr>
+<tr data-vendor="cisco">
 <td>DTP</td>
-<td>トランク交渉。現場では <code>switchport mode trunk</code> 固定が多い</td>
+<td>トランク交渉。現場では <code>switchport mode trunk</code> 固定が多い<span class="vendor-note" data-gen="1">汎用・標準では：標準の自動交渉はない。両端を trunk に固定するのが汎用的なやり方</span></td>
 </tr>
 </tbody>
 </table>
-<pre><code class="language-text">interface GigabitEthernet0/24
+<pre data-vendor="cisco"><code class="language-text">interface GigabitEthernet0/24
  switchport trunk encapsulation dot1q   ! 機種による
  switchport mode trunk
  switchport trunk native vlan 99
@@ -126,7 +131,7 @@ show interfaces GigabitEthernet0/1 switchport
 </code></pre>
 <p>Native VLAN 不一致は「一見つながるが特定 VLAN だけおかしい」原因になります。v2.0 でもトランク／アクセス属性の設定検証は中核です。</p>
 <p>確認:</p>
-<pre><code class="language-text">show interfaces trunk
+<pre data-vendor="cisco"><code class="language-text">show interfaces trunk
 show interfaces GigabitEthernet0/24 switchport
 </code></pre>
 <!-- fig:fig-4-1 -->
@@ -140,21 +145,21 @@ show interfaces GigabitEthernet0/24 switchport
 <li>スイッチポートモード（access / trunk）と VLAN／トランク設定</li>
 <li>LACP モード（active / passive など）</li>
 </ul>
-<pre><code class="language-text">interface range GigabitEthernet0/1-2
+<pre data-vendor="cisco"><code class="language-text">interface range GigabitEthernet0/1-2
  channel-group 1 mode active
 interface Port-channel1
  switchport mode trunk
  switchport trunk allowed vlan 10,20
 </code></pre>
 <p>確認:</p>
-<pre><code class="language-text">show etherchannel summary
+<pre data-vendor="cisco"><code class="language-text">show etherchannel summary
 show lacp neighbor
 </code></pre>
 <p>片側だけ設定が違うと、メンバーが独立リンクのまま動いたり、ループや負荷偏りが起きたりします。束ねる前に単独リンクで正常なことを確認する癖が効きます。</p>
 <!-- fig:fig-4-2 -->
 <figure class="net-fig" id="fig-4-2"><div class="net-fig-scroll"><svg viewBox="0 0 720 244" role="img" aria-labelledby="fig-4-2-t" xmlns="http://www.w3.org/2000/svg"><title id="fig-4-2-t">EtherChannel</title><defs><marker id="fig-4-2-flow-ok-arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" class="arr-flow-ok"/></marker><marker id="fig-4-2-flow-ng-arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" class="arr-flow-ng"/></marker><marker id="fig-4-2-seq-arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" class="arr-seq"/></marker><marker id="fig-4-2-seq-data-arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" class="arr-seq-data"/></marker></defs><ellipse cx="360" cy="100" rx="130" ry="26" class="bundle"/><rect x="40" y="164" width="640" height="72" rx="14" class="legend"/><line x1="172" y1="93" x2="548" y2="93" class="link"/><line x1="172" y1="107" x2="548" y2="107" class="link"/><g class="pill pill-accent"><rect x="260.6" y="53" width="198.8" height="18" rx="9"/><text x="360" y="65.6" text-anchor="middle">Port-channel1（論理リンク 1 本）</text></g><text x="186" y="88" class="sub" text-anchor="start">Gi0/1</text><text x="186" y="122" class="sub" text-anchor="start">Gi0/2</text><text x="534" y="88" class="sub" text-anchor="end">Gi0/1</text><text x="534" y="122" class="sub" text-anchor="end">Gi0/2</text><g><rect x="128" y="87" width="44" height="26" rx="5" class="dev"/><path class="ico" d="M139,96h22m-4,-4l4,4l-4,4M161,104h-22m4,-4l-4,4l4,4"/></g><text x="150" y="128" class="lbl" text-anchor="middle">SW1</text><text x="150" y="142" class="sub" text-anchor="middle">LACP active</text><g><rect x="548" y="87" width="44" height="26" rx="5" class="dev"/><path class="ico" d="M559,96h22m-4,-4l4,4l-4,4M581,104h-22m4,-4l-4,4l4,4"/></g><text x="570" y="128" class="lbl" text-anchor="middle">SW2</text><text x="570" y="142" class="sub" text-anchor="middle">LACP active / passive</text><text x="58" y="186" class="sub" text-anchor="start">両端で揃える：速度・二重化、access / trunk と許可 VLAN</text><text x="58" y="206" class="sub" text-anchor="start">LACP：active–active か active–passive なら束ねられる（passive 同士では束ならない）</text><text x="58" y="226" class="sub" text-anchor="start">STP からは1本のリンクに見えるので、2本ともブロックされずに使える</text></svg></div><figcaption><strong>図 4-2</strong>2本の物理リンクを Port-channel1 として1本にまとめた例。帯域が増え、1本が切れても通信は続きます。</figcaption><p class="net-fig-point"><span>試験ポイント</span>LACP は active が自分から交渉し、passive は相手を待つだけ。束ねる前に、両端の速度・二重化・トランク設定が一致しているかを確認する。</p></figure>
 <!-- /fig:fig-4-2 -->
-<h2 id="4-rapid-pvst">4. Rapid PVST+（スパニングツリー）</h2>
+<h2 id="4-rapid-pvst" data-vendor="cisco">4. Rapid PVST+（スパニングツリー）</h2><p class="vendor-note" data-gen="1">汎用・標準では：標準は RSTP（IEEE 802.1w）と MSTP（802.1s）。ルートブリッジやポート役割の考え方は共通</p>
 <p>冗長リンクがあると L2 ループが起き得ます。STP / Rapid PVST+ はループを防ぎつつ、障害時に代替パスへ切り替えます。Cisco キャンパスでは <strong>Rapid PVST+</strong>（VLAN ごと）を理解するのが実務・試験の両方で重要です。</p>
 <h3 id="_1">役割と状態</h3>
 <table>
@@ -205,7 +210,7 @@ show lacp neighbor
 </tr>
 </tbody>
 </table>
-<pre><code class="language-text">spanning-tree mode rapid-pvst
+<pre data-vendor="cisco"><code class="language-text">spanning-tree mode rapid-pvst
 spanning-tree vlan 10 root primary
 spanning-tree vlan 10 root secondary
 show spanning-tree vlan 10
@@ -221,29 +226,29 @@ show spanning-tree summary
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr data-vendor="cisco">
 <td>PortFast</td>
-<td>アクセス（エッジ）ポートの高速遷移</td>
+<td>アクセス（エッジ）ポートの高速遷移<span class="vendor-note" data-gen="1">汎用・標準では：標準の呼び方はエッジポート（RSTP の edge port）</span></td>
 </tr>
-<tr>
+<tr data-vendor="cisco">
 <td>BPDU Guard</td>
-<td>PortFast ポートで BPDU を受けたら err-disable</td>
+<td>PortFast ポートで BPDU を受けたら err-disable<span class="vendor-note" data-gen="1">汎用・標準では：他社にも同じ働きの機能があり、名前が違う（BPDU protection など）</span></td>
 </tr>
-<tr>
+<tr data-vendor="cisco">
 <td>Root Guard</td>
 <td>下流から「より良い」BPDU が来てもルートを奪われないようにする</td>
 </tr>
-<tr>
+<tr data-vendor="cisco">
 <td>Loop Guard</td>
 <td>片方向障害などで代替ポートが誤って転送するのを防ぐ</td>
 </tr>
-<tr>
+<tr data-vendor="cisco">
 <td>BPDU Filter</td>
 <td>BPDU 送受信を抑止。誤用するとループ要因になり得る</td>
 </tr>
 </tbody>
 </table>
-<pre><code class="language-text">interface GigabitEthernet0/10
+<pre data-vendor="cisco"><code class="language-text">interface GigabitEthernet0/10
  spanning-tree portfast
  spanning-tree bpduguard enable
 </code></pre>
@@ -253,10 +258,10 @@ show spanning-tree summary
 <!-- /fig:fig-4-3 -->
 <h2 id="5">5. 切り分けの型</h2>
 <ol>
-<li><code>show vlan brief</code> / <code>show interfaces status</code> でポートの VLAN とリンク</li>
-<li>トランクなら <code>show interfaces trunk</code> で allowed / native</li>
-<li>冗長経路なら <code>show spanning-tree</code> で root / ブロック</li>
-<li>バンドルなら <code>show etherchannel summary</code> でメンバー状態</li>
+<li data-vendor="cisco"><code>show vlan brief</code> / <code>show interfaces status</code> でポートの VLAN とリンク</li>
+<li data-vendor="cisco">トランクなら <code>show interfaces trunk</code> で allowed / native</li>
+<li data-vendor="cisco">冗長経路なら <code>show spanning-tree</code> で root / ブロック</li>
+<li data-vendor="cisco">バンドルなら <code>show etherchannel summary</code> でメンバー状態</li>
 <li>端末だけ不通なら、アクセス VLAN とゲートウェイ（SVI／ルータ）を疑う</li>
 </ol>
 <p>ラボでは、2 台のスイッチを二重接続し、片側を抜いて STP の再計算を見るのが最短の体感です。</p>
@@ -269,7 +274,7 @@ show spanning-tree summary
 <li>[ ] 端末ポートに PortFast + BPDU Guard を付ける理由を説明できる</li>
 </ul>
 <p>確認コマンド例:</p>
-<pre><code class="language-text">show vlan brief
+<pre data-vendor="cisco"><code class="language-text">show vlan brief
 show interfaces trunk
 show etherchannel summary
 show spanning-tree vlan 10

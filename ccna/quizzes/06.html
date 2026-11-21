@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>小テスト 06 · CCNA 実務学習</title>
-  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
+  <script>window.LCERT_SETTINGS_KEY="lcert-ccna-settings";try{var s=JSON.parse(localStorage.getItem(window.LCERT_SETTINGS_KEY)||'{}'),c=document.documentElement.classList;if(s.memorize)c.add('memorize');if(s['dim-cisco'])c.add('dim-cisco');if(s.dark===true||(s.dark===undefined&&matchMedia('(prefers-color-scheme: dark)').matches))c.add('dark');}catch(e){}</script>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/app.css?v=3786d5c5">
-  <link rel="stylesheet" href="../css/doc.css?v=521bce18">
+  <link rel="stylesheet" href="../css/doc.css?v=4493a908">
 </head>
 <body>
   <button class="menu-toggle" id="menu-toggle" aria-label="メニュー">☰</button>
@@ -37,6 +37,11 @@
       <input type="checkbox" role="switch" data-setting="dark">
       <span class="switch" aria-hidden="true"></span>
     </label>
+    <label class="switch-row" data-gen="1">
+      <span>Cisco 固有を薄く表示</span>
+      <input type="checkbox" role="switch" data-setting="dim-cisco">
+      <span class="switch" aria-hidden="true"></span>
+    </label>
   </section>
 </aside>
     <main class="main">
@@ -49,10 +54,10 @@
         </div>
       </header>
       <div id="quiz"></div>
-      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "宛先に対し複数候補があるとき、まず効くのはどれか。", "type": "single", "choices": ["最長一致（Longest prefix match）", "ケーブルの色", "SSID 名の長さ", "VLAN 番号が大きい方"], "answer": "A", "explain": "まず最長一致で選ぶ。"}, {"id": "Q2", "stem": "Administrative Distance（AD）の説明として適切なのはどれか。", "type": "single", "choices": ["経路情報源の信頼度で、小さいほど優先されやすい", "必ず MTU と同じ", "無線チャネル番号", "STP のポート役割名"], "answer": "A", "explain": "AD は情報源の信頼度。小さいほど優先。"}, {"id": "Q3", "stem": "`0.0.0.0/0` への静的ルートは何と呼ばれることが多いか。", "type": "single", "choices": ["デフォルトルート", "DR のみ", "Native VLAN", "EtherChannel"], "answer": "A", "explain": "0.0.0.0/0 はデフォルトルート。"}, {"id": "Q4", "stem": "主経路より大きい AD を付けた予備の静的ルートはどれか。", "type": "single", "choices": ["Floating static", "PortFast", "CAPWAP", "sticky ビット"], "answer": "A", "explain": "AD を大きくした予備がフローティング静的。"}, {"id": "Q5", "stem": "シングルエリア OSPFv2 で隣接関係を確認する定番はどれか。", "type": "single", "choices": ["`show ip ospf neighbor`", "`show vlan brief` のみ", "`show spanning-tree` のみ", "`chmod 777`"], "answer": "A", "explain": "隣接は show ip ospf neighbor。"}, {"id": "Q6", "stem": "端末のデフォルトゲートウェイを仮想 IP で冗長化する技術群はどれか。", "type": "single", "choices": ["FHRP（HSRP / VRRP など）", "だけ NAT", "だけ DNS", "だけ LACP"], "answer": "A", "explain": "仮想 GW 冗長は FHRP。"}, {"id": "Q7", "stem": "経路表で読むべき要素として適切なものを選べ。", "type": "multi", "choices": ["Prefix / Mask", "Next hop", "AD と metric", "スイッチのファン回転数だけ"], "answer": "A, B, C", "explain": "ファン回転数は経路判断に使わない。"}, {"id": "Q8", "stem": "OSPF について適切なものを選べ。", "type": "multi", "choices": ["Router ID でルータを識別する", "Broadcast 網では DR/BDR が選ばれ得る", "Point-to-point では DR/BDR が不要なことが多い", "エリアが違っても常に無視して隣接する"], "answer": "A, B, C", "explain": "エリア不一致では隣接しない。"}, {"id": "Q9", "stem": "v2.0 で特に意識するとよいものとして適切なものを選べ。", "type": "multi", "choices": ["OSPFv3（IPv6）", "VRRP を含む FHRP の動作解釈", "静的ルートのトラブルシュート", "配点百分率の暗記だけ"], "answer": "A, B, C", "explain": "配点暗記は本教材の対象外。"}, {"id": "Q10", "stem": "OSPF の経路コードとして `show ip route` に出やすい1文字は何か。", "type": "text", "choices": [], "answer": "O", "explain": "OSPF は O。"}, {"id": "Q11", "stem": "IPv6 のデフォルトルートを表すプレフィックス表記を書け。", "type": "text", "choices": [], "answer": "::/0", "explain": "IPv6 デフォルト。"}, {"id": "Q12", "stem": "本社ルータに社内網への OSPF 経路と、ISP 向けデフォルト静的がある。ある拠点 `/24` への静的を AD 210 で入れた。通常時その `/24` は OSPF で学んでいる。OSPF がその網を失ったあと、通信はどうなるのが期待か。", "type": "single", "choices": ["AD 210 のフローティング静的が使われ、予備経路へ向く", "必ず無線だけになる", "STP がルートを選ぶだけ", "すべての VLAN が消える"], "answer": "A", "explain": "OSPF 喪失後に大きい AD の静的が浮上する。"}]</script>
+      <script type="application/json" id="quiz-data">[{"id": "Q1", "stem": "宛先に対し複数候補があるとき、まず効くのはどれか。", "type": "single", "choices": ["最長一致（Longest prefix match）", "ケーブルの色", "SSID 名の長さ", "VLAN 番号が大きい方"], "answer": "A", "explain": "まず最長一致で選ぶ。"}, {"id": "Q2", "stem": "Administrative Distance（AD）の説明として適切なのはどれか。", "type": "single", "choices": ["経路情報源の信頼度で、小さいほど優先されやすい", "必ず MTU と同じ", "無線チャネル番号", "STP のポート役割名"], "answer": "A", "explain": "AD は情報源の信頼度。小さいほど優先。"}, {"id": "Q3", "stem": "`0.0.0.0/0` への静的ルートは何と呼ばれることが多いか。", "type": "single", "choices": ["デフォルトルート", "DR のみ", "Native VLAN", "EtherChannel"], "answer": "A", "explain": "0.0.0.0/0 はデフォルトルート。"}, {"id": "Q4", "stem": "主経路より大きい AD を付けた予備の静的ルートはどれか。", "type": "single", "choices": ["Floating static", "PortFast", "CAPWAP", "sticky ビット"], "answer": "A", "explain": "AD を大きくした予備がフローティング静的。"}, {"id": "Q5", "stem": "シングルエリア OSPFv2 で隣接関係を確認する定番はどれか。", "type": "single", "choices": ["`show ip ospf neighbor`", "`show vlan brief` のみ", "`show spanning-tree` のみ", "`chmod 777`"], "answer": "A", "explain": "隣接は show ip ospf neighbor。", "vendor": "cisco"}, {"id": "Q6", "stem": "端末のデフォルトゲートウェイを仮想 IP で冗長化する技術群はどれか。", "type": "single", "choices": ["FHRP（HSRP / VRRP など）", "だけ NAT", "だけ DNS", "だけ LACP"], "answer": "A", "explain": "仮想 GW 冗長は FHRP。"}, {"id": "Q7", "stem": "経路表で読むべき要素として適切なものを選べ。", "type": "multi", "choices": ["Prefix / Mask", "Next hop", "AD と metric", "スイッチのファン回転数だけ"], "answer": "A, B, C", "explain": "ファン回転数は経路判断に使わない。"}, {"id": "Q8", "stem": "OSPF について適切なものを選べ。", "type": "multi", "choices": ["Router ID でルータを識別する", "Broadcast 網では DR/BDR が選ばれ得る", "Point-to-point では DR/BDR が不要なことが多い", "エリアが違っても常に無視して隣接する"], "answer": "A, B, C", "explain": "エリア不一致では隣接しない。"}, {"id": "Q9", "stem": "v2.0 で特に意識するとよいものとして適切なものを選べ。", "type": "multi", "choices": ["OSPFv3（IPv6）", "VRRP を含む FHRP の動作解釈", "静的ルートのトラブルシュート", "配点百分率の暗記だけ"], "answer": "A, B, C", "explain": "配点暗記は本教材の対象外。"}, {"id": "Q10", "stem": "OSPF の経路コードとして `show ip route` に出やすい1文字は何か。", "type": "text", "choices": [], "answer": "O", "explain": "OSPF は O。", "vendor": "cisco"}, {"id": "Q11", "stem": "IPv6 のデフォルトルートを表すプレフィックス表記を書け。", "type": "text", "choices": [], "answer": "::/0", "explain": "IPv6 デフォルト。"}, {"id": "Q12", "stem": "本社ルータに社内網への OSPF 経路と、ISP 向けデフォルト静的がある。ある拠点 `/24` への静的を AD 210 で入れた。通常時その `/24` は OSPF で学んでいる。OSPF がその網を失ったあと、通信はどうなるのが期待か。", "type": "single", "choices": ["AD 210 のフローティング静的が使われ、予備経路へ向く", "必ず無線だけになる", "STP がルートを選ぶだけ", "すべての VLAN が消える"], "answer": "A", "explain": "OSPF 喪失後に大きい AD の静的が浮上する。"}]</script>
     </main>
   </div>
   <script src="../js/app.js?v=3786d5c5"></script>
-  <script src="../js/quiz-lcert.js?v=3786d5c5"></script>
+  <script src="../js/quiz-lcert.js?v=f5203a5f"></script>
 </body>
 </html>
