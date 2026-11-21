@@ -230,3 +230,142 @@ html.dark.site-linuc {
   font-weight: 700;
   vertical-align: 0.1em;
 }
+
+/* ---------- Network diagrams (tools/build_diagrams.py) ---------- */
+.doc-body {
+  --net-line: #a1a1aa;
+  --net-ok: #15803d;
+  --net-ng: #dc2626;
+  --net-v10: #7c3aed;
+  --net-v20: #d97706;
+}
+
+html.dark .doc-body {
+  --net-line: #63636e;
+  --net-ok: #4ade80;
+  --net-ng: #f87171;
+  --net-v10: #c4b5fd;
+  --net-v20: #fbbf24;
+}
+
+/* main is a grid item: let wide figures scroll inside instead of widening the page */
+.main {
+  min-width: 0;
+}
+
+.net-fig {
+  margin: 1.4rem 0 1.6rem;
+  padding: 1rem 1rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.net-fig-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.net-fig svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 560px;
+  font-family: var(--font-body);
+}
+
+.net-fig figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.net-fig figcaption strong {
+  margin-right: 0.5em;
+  color: var(--text);
+}
+
+.net-fig-point {
+  margin: 0.6rem 0 0 !important;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  border-radius: var(--radius-sm);
+  background: var(--accent-dimmer);
+}
+
+.net-fig-point span {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0.05em 0.55em;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--on-accent);
+  background: var(--accent);
+}
+
+/* SVG parts */
+.net-fig .dev { fill: var(--bg-elevated); stroke: var(--text-muted); stroke-width: 1.6; }
+.net-fig .cloud { fill: var(--gray-soft); }
+.net-fig .ico { fill: none; stroke: var(--text-muted); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.net-fig .ico-dot { fill: var(--text-muted); }
+.net-fig .tag-bg { fill: var(--accent); }
+.net-fig .tag-txt { fill: var(--on-accent); font-size: 9px; font-weight: 800; }
+.net-fig .in-lbl { fill: var(--text); font-size: 10.5px; font-weight: 700; }
+
+.net-fig text { fill: var(--text); }
+.net-fig .lbl { font-size: 12px; font-weight: 700; }
+.net-fig .lbl-accent { fill: var(--accent); font-size: 13px; }
+.net-fig .sub { fill: var(--text-muted); font-size: 10.5px; }
+.net-fig .zone-lbl { fill: var(--text-muted); font-size: 11px; font-weight: 700; }
+.net-fig .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 12px; }
+.net-fig .mono-muted { fill: var(--text-muted); }
+.net-fig .mono-code { fill: var(--accent); font-weight: 700; }
+.net-fig .ng-mark { fill: var(--net-ng); font-size: 18px; font-weight: 800; text-anchor: middle; }
+
+.net-fig .zone { fill: var(--accent-dimmer); stroke: var(--border-strong); stroke-dasharray: 5 4; }
+.net-fig .zone-accent { fill: var(--accent-dimmer); stroke: var(--accent); }
+.net-fig .zone-out { fill: var(--gray-soft); }
+.net-fig .legend { fill: var(--gray-soft); stroke: var(--border); stroke-dasharray: none; }
+.net-fig .panel { fill: none; stroke: var(--border); stroke-dasharray: none; }
+.net-fig .rule { stroke: var(--border-strong); stroke-width: 1; }
+
+.net-fig .link { fill: none; stroke: var(--net-line); stroke-width: 2; }
+.net-fig .vpn,
+.net-fig .capwap { stroke: var(--accent); stroke-dasharray: 7 5; stroke-width: 2.2; }
+.net-fig .trunk { stroke: var(--accent); stroke-width: 5; }
+.net-fig .v10 { stroke: var(--net-v10); stroke-width: 3; }
+.net-fig .v20 { stroke: var(--net-v20); stroke-width: 3; }
+.net-fig .blocked { stroke: var(--net-ng); stroke-dasharray: 5 5; }
+.net-fig .wifi { stroke-dasharray: 3 4; }
+.net-fig .hello { stroke-dasharray: 4 4; stroke-width: 1.5; }
+.net-fig .active { stroke: var(--accent); stroke-width: 3; }
+.net-fig .flow-ok { stroke: var(--net-ok); stroke-width: 2.5; }
+.net-fig .flow-ng { stroke: var(--net-ng); stroke-width: 2.5; }
+.net-fig .arr-flow-ok { fill: var(--net-ok); }
+.net-fig .arr-flow-ng { fill: var(--net-ng); }
+
+.net-fig .pill rect { fill: var(--bg-elevated); stroke: var(--border-strong); }
+.net-fig .pill text { fill: var(--text); font-size: 10.5px; font-weight: 700; }
+.net-fig .pill-accent rect { fill: var(--accent); stroke: none; }
+.net-fig .pill-accent text { fill: var(--on-accent); }
+.net-fig .pill-ok rect { fill: var(--net-ok); stroke: none; }
+.net-fig .pill-ng rect { fill: var(--net-ng); stroke: none; }
+.net-fig .pill-ok text,
+.net-fig .pill-ng text { fill: var(--bg-card); }
+.net-fig .badge circle { fill: var(--accent); }
+.net-fig .badge text { fill: var(--on-accent); font-size: 10.5px; font-weight: 800; }
+.net-fig .fld { fill: var(--bg-elevated); stroke: var(--border-strong); }
+.net-fig .fld-tag { fill: var(--accent); stroke: var(--accent); }
+.net-fig .fld-txt { font-size: 11px; font-weight: 700; }
+.net-fig .fld-tag-txt { fill: var(--on-accent); }
+.net-fig .lane { stroke: var(--border-strong); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.net-fig .seq { stroke: var(--text-muted); stroke-width: 1.8; }
+.net-fig .seq-data { stroke: var(--accent); stroke-width: 2.4; }
+.net-fig .arr-seq { fill: var(--text-muted); }
+.net-fig .arr-seq-data { fill: var(--accent); }
+.net-fig .bundle { fill: var(--accent-dimmer); stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.net-fig .fld-alt { fill: var(--gray-soft); }
+.net-fig .mono-sm { font-size: 11px; }
